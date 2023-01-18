@@ -90,34 +90,34 @@ focus_tree = {
 		prerequisite = { focus = MAN_five_people_armies }
 		x = 11
 		y = 5
-
+	
 		cost = 10
-
+	
 		ai_will_do = {
 			factor = 1
 		}
-
+	
 		available = {
-
+	
 		}
-
+	
 		bypass = {
-
+	
 		}
-
+	
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
+	
 		
-        search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 			name = JAP_small_arms_modernization
 			bonus = 1.0
 			uses = 1
 			category = infantry_weapons	
-		    }
+			}
 			army_experience = 30
 		}
 	}
