@@ -1,0 +1,82 @@
+on_actions = {
+
+    on_state_control_changed = {
+		effect = {
+			if = { 
+				limit = {
+					FROM = {
+						original_tag = GER
+						has_war = yes
+						has_power_balance = { id = GER_power_balance }
+						is_power_balance_side_active = {
+							id = GER_power_balance
+							side = default_left_side
+						}
+					}
+					FROM.FROM = {
+						is_owned_by = GER
+					}
+				}
+				if = { 
+					limit = {
+						FROM.FROM = {
+							is_core_of = GER
+						}
+					}
+					if = {
+						limit = {
+							FROM = { check_variable = { GER_lost_core = 0 } }
+						}
+						FROM = {
+							set_variable = { GER_lost_core = FROM.FROM }
+							country_event = { id = ger_lost_core.1 hours = 1 }
+						}
+					}
+					else = { 
+						GER_bop_medium_decrease_effect = yes
+						GER_bop_increase_lost_core_modifier = yes
+					}
+					
+				}
+			}
+			else_if = { 
+				limit = {
+					ROOT = {
+						original_tag = GER
+						has_war = yes
+						has_power_balance = { id = GER_power_balance }
+						is_power_balance_side_active = {
+							id = GER_power_balance
+							side = default_right_side
+						}
+					}
+					FROM.FROM = {
+						is_owned_by = GER
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							is_core_of = GER
+						}
+					}
+					if = { 
+						limit = {
+							check_variable = { GER_reclaimed_core = 0 }
+						}
+						
+						set_variable = { GER_reclaimed_core = FROM.FROM }
+						country_event = { id = ger_lost_core.2 hours = 1 }
+					}
+					else = {
+						GER_bop_medium_increase_effect = yes
+						GER_bop_decrease_lost_core_modifier = yes
+					}
+				}
+				else = {
+					GER_bop_very_low_increase_effect = yes
+				}
+			}
+		}
+    }
+}

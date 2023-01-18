@@ -1,0 +1,1143 @@
+       continuous_focus_position = { x = 20 y = 2000 }
+   
+    shared_focus = {
+		id = SS_industry
+		icon = GFX_goal_generic_construction
+		x = -30
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+		} 
+	}
+
+	shared_focus = {
+		id = SS_Inf
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SS_industry } 
+		relative_position_id = SS_industry
+		x = 6
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = SS_Inf_a
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SS_Inf } 
+		relative_position_id = SS_Inf
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Inf_b
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SS_Inf } 
+		relative_position_id = SS_Inf
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Road_to_Berlin
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = SS_Inf_a } 
+		prerequisite = { focus = SS_Inf_b }
+		relative_position_id = SS_Inf
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = SS_Build_Industry
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = SS_industry } 
+		relative_position_id = SS_industry
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = SS_Civilian_Industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SS_Build_Industry } 
+		relative_position_id = SS_Build_Industry
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		    custom_effect_tooltip = SS_consumer_goods_factor_tt
+			set_variable = { SS_consumer_goods_factor = 0.05 }
+		}
+	}
+
+	shared_focus = {
+		id = SS_Civlian_Industry_a
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SS_Civilian_Industry } 
+		relative_position_id = SS_Civilian_Industry
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Civlian_Industry_b
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SS_Civilian_Industry } 
+		relative_position_id = SS_Civilian_Industry
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Civilian_Industry_plan
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = SS_Civlian_Industry_a } 
+		prerequisite = { focus = SS_Civlian_Industry_b }
+		relative_position_id = SS_Civilian_Industry
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		    custom_effect_tooltip = SS_consumer_goods_factor_a_tt
+			set_variable = { SS_consumer_goods_factor = 0.0 }
+		}
+	}
+
+	shared_focus = {
+		id = SS_Arms_Industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SS_Build_Industry } 
+		relative_position_id = SS_Build_Industry
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+    shared_focus = {
+		id = SS_Arms_Industry_a
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SS_Arms_Industry } 
+		relative_position_id = SS_Arms_Industry
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	 shared_focus = {
+		id = SS_Arms_Industry_b
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SS_Arms_Industry } 
+		relative_position_id = SS_Arms_Industry
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Arms_Industry_plan
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = SS_Arms_Industry_a } 
+		prerequisite = { focus = SS_Arms_Industry_b }
+		relative_position_id = SS_Arms_Industry
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}	
+
+	shared_focus = {
+		id = SS_Arms_Industry_War_Eco
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = SS_Arms_Industry_plan } 
+		prerequisite = { focus = SS_Civilian_Industry_plan }
+		relative_position_id = SS_Build_Industry
+		x = 0
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = war_economy
+			hidden_effect = { remove_ideas = Block_WAR_ECO }
+		}
+	}	
+
+	shared_focus = {
+		id = SS_Repair_Home
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SS_industry } 
+		relative_position_id = SS_industry
+		x = -6
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SS_FreeRepair_tt
+			set_variable = { SS_industry_free_repair_factor = 0.15 } 
+		}
+	}
+
+	shared_focus = {
+		id = SS_Fund_Locals
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SS_Repair_Home } 
+		relative_position_id = SS_Repair_Home
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_timed_idea = {
+				idea = SS_Fund_Locals
+				days = 365
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Build_Hospital
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SS_Repair_Home } 
+		relative_position_id = SS_Repair_Home
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Build_School
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = SS_Fund_Locals } 
+		prerequisite = { focus = SS_Build_Hospital }
+		relative_position_id = SS_Repair_Home
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			custom_effect_tooltip = SS_ResearchSpeed_tt
+			set_variable = { SS_research_speed_factor = 0.06 }
+		}
+	}
+
+	shared_focus = {
+		id = SS_Build_University
+		icon = GFX_focus_research
+		prerequisite = { focus = SS_Build_School } 
+		relative_position_id = SS_Repair_Home
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	shared_focus = {
+		id = SS_Axis_Missions
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 0
+		cost = 3
+		ai_will_do = {
+			factor = 12
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	shared_focus = {
+		id = SS_Mission_to_Germany
+		icon = GFX_focus_chi_mission_to_germany 
+		prerequisite = { focus = SS_Axis_Missions } 
+		relative_position_id = SS_Axis_Missions
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SS_Axis_Missions
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Mobile_Warfare
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SS_Mission_to_Germany } 
+		relative_position_id = SS_Mission_to_Germany
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Tank
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = SS_Mobile_Warfare } 
+		mutually_exclusive = { focus = SS_Mobile_Inf }
+		relative_position_id = SS_Mobile_Warfare
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Mobile_Inf
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SS_Mobile_Warfare } 
+		mutually_exclusive = { focus = SS_Tank }
+		relative_position_id = SS_Mobile_Warfare
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Mass_Production
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SS_Tank focus = SS_Mobile_Inf } 
+		relative_position_id = SS_Tank
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Mission_to_Italy
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = SS_Axis_Missions } 
+		relative_position_id = SS_Axis_Missions
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SS_Axis_Missions
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Rebuild_Air
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SS_Mission_to_Germany }
+		prerequisite = { focus = SS_Mission_to_Italy }
+		relative_position_id = SS_Axis_Missions
+		x = -0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	shared_focus = {
+		id = fighter_focusa
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SS_Rebuild_Air }
+		mutually_exclusive = { focus = bomber_focusa }
+		x = -1
+		y = 1
+		relative_position_id = SS_Rebuild_Air
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	shared_focus = {
+		id = bomber_focusa
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SS_Rebuild_Air }
+		mutually_exclusive = { focus = fighter_focusa }
+		x = 1
+		y = 1
+		relative_position_id = SS_Rebuild_Air
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	shared_focus = {
+		id = aviation_effort_2a
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = bomber_focusa focus = fighter_focusa }
+		x = -1
+		y = 1
+		relative_position_id = bomber_focusa
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+    shared_focus = {
+		id = SS_Rebuild_Army
+		icon = GFX_focus_generic_little_entente
+		x = -16
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			army_experience = 50
+		}
+	}	
+
+	shared_focus = {
+		id = SS_Rebuild_Command
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = SS_Adopt_Gorrila_Warfare }
+		prerequisite = { focus = SS_Adopt_Fast_Mobilization }
+		relative_position_id = SS_Rebuild_Army
+		cancelable = no
+		x = 0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Inf_Effort_Main
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = SS_Adopt_Fast_Mobilization }
+		prerequisite = { focus = SS_Army_Research_Department }
+		relative_position_id = SS_Army_Research_Department
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Inf_Effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SS_Inf_Effort_Main }
+		relative_position_id = SS_Inf_Effort_Main
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Inf_Efforta
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SS_Inf_Effort_Main }
+		relative_position_id = SS_Inf_Effort_Main
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Doctrine
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SS_Inf_Effort }
+		prerequisite = { focus = SS_Inf_Efforta }
+		relative_position_id = SS_Inf_Effort_Main
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Adopt_Fast_Mobilization
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SS_Rebuild_Army }
+		relative_position_id = SS_Rebuild_Army
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Adopt_Gorrila_Warfare
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SS_Rebuild_Army }
+		relative_position_id = SS_Rebuild_Army
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Army_Research_Department
+		icon = GFX_focus_prc_infiltration
+		relative_position_id = SS_Rebuild_Army
+		x = 4
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Adaptable_Army
+		icon = GFX_focus_prc_infiltration
+		relative_position_id = SS_Rebuild_Army
+		prerequisite = { focus = SS_Rebuild_Command }
+		x = 1
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_ReOrg_Army
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = SS_Rebuild_Army
+		prerequisite = { focus = SS_Rebuild_Command }
+		x = 0
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Glory_Of_Army
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = SS_Rebuild_Army
+		prerequisite = { focus = SS_ReOrg_Army }
+		prerequisite = { focus = SS_Doctrine }
+		x = 2
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+    shared_focus = {
+		id = SS_ITA_Fleet
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SS_Mission_to_Italy }
+		relative_position_id = SS_Mission_to_Italy 
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+    shared_focus = {
+		id = SS_Air_Fleet
+		icon = GFX_goal_generic_navy_carrier
+		mutually_exclusive = { focus = SS_Fleet_in_being }
+		prerequisite = { focus = SS_ITA_Fleet }
+		relative_position_id = SS_ITA_Fleet 
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Fleet_in_being
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = SS_ITA_Fleet }
+		relative_position_id = SS_ITA_Fleet 
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Support_Ships
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SS_Air_Fleet focus = SS_Fleet_in_being }
+		relative_position_id = SS_ITA_Fleet 
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+
+

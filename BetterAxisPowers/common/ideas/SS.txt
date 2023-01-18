@@ -1,0 +1,47 @@
+ideas = {
+
+	country = {
+		SS_Fund_Locals = {
+
+			picture = man_five_year_plan_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+
+	hidden_ideas = {
+
+		Block_WAR_ECO = {
+
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.01
+			}
+
+		}
+	}
+
+}	
+
+

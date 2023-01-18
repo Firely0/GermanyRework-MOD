@@ -1,0 +1,130 @@
+JAP_historical_plan = {
+	name = "Japan historical plan"
+	desc = "Historical behavior for Japan"
+
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				OR = {
+					not = { has_dlc = "Waking the Tiger" }
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEFAULT
+					}
+				}
+			}
+			has_game_rule = {
+				rule = JAP_ai_behavior
+				option = FASCIST
+			}
+			has_country_flag = JAP_AI_RANDOM_FASCIST
+		}
+	}
+
+	ai_national_focuses = {
+        JAP_secure_china
+		JAP_establish_the_northern_resource_area
+		JAP_exploit_the_southern_resource_area
+		JAP_develop_chinese_resources
+		
+        #1936
+		    JAP_purge_the_kodoha_faction 	
+		    JAP_showa_restoration
+		    JAP_national_research_policy	
+		    JAP_guide_the_zaibatsus
+			JAP_national_mobilization_law
+			JAP_infrastructure
+            JAP_Civil_Foctory
+			JAP_army_expansion_law
+            JAP_Restore_Old_Guns
+            JAP_Imperial_Arms
+			JAP_Imperial_Arms_two			
+		#1937
+		    JAP_liaison_conference 	
+		    JAP_greater_east_asian_co_prosperity_sphere 	
+		    JAP_sign_tripartite_pact
+		    JAP_intervene_in_china			
+		    JAP_national_defense_state
+		    JAP_spiritual_mobilization	 	
+		#1938
+		    JAP_supremacy_of_will
+            JAP_people_owned_mines
+            JAP_fighter_modernization
+		    JAP_agility_focus		
+		    JAP_the_zero
+			JAP_small_arms_modernization
+		    JAP_new_naval_estimates
+		    JAP_carrier_warfare_experiments	
+		#1939
+ 	        JAP_Agency
+            JAP_supremacy_of_technology
+		#1940
+            JAP_supremacy_of_the_battlefleet
+            JAP_the_ultimate_battleship	
+		    JAP_strike_south_doctrine 	
+		    JAP_first_air_fleet	
+		#1941		
+		    JAP_coal_liquification
+			JAP_home_defance_air
+		    JAP_non_aggression_pact_with_the_soviet_union 	
+		    JAP_secure_the_philippines
+            JAP_alliance_with_siam
+			JAP_faction_technological_exchange
+			JAP_modern_escorts
+			JAP_home_defance
+		    JAP_strike_on_the_southern_resource_area 
+			JAP_anti_submarine_focus
+			JAP_warrior_spirit
+			JAP_Integrate_Korea
+			JAP_expand_the_snlf
+			JAP_cruiser_modernization 
+            JAP_long_lance_torpedoes
+            JAP_armored_divisions
+		#1942
+            JAP_the_manchurian_project
+			JAP_expand_the_showa_steel_works
+			JAP_develop_aluminum_sources
+            JAP_expand_manchurian_railways
+            JAP_light_industry_development
+            JAP_heavy_industry_development
+            JAP_japanese_settlement
+		    JAP_modern_artillery 	
+		    JAP_strategic_bomber_effort 	
+		    JAP_modern_escorts 
+		#1943
+		    JAP_warrior_spirit 		
+		    JAP_exploit_the_southern_resource_area 
+		    JAP_secure_china 	
+		    JAP_jet_prototypes
+		    JAP_strengthen_the_divine_wind
+
+			JAP_core_north_korea
+			JAP_core_south_korea
+	}
+
+	research = {
+      decimetric_radar = 1.0
+	}
+
+	ideas = {
+	}
+
+	traits = {
+	   ullusive_gentleman = 1.0
+         prince_of_terror = 1.0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

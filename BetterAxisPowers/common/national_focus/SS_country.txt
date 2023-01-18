@@ -1,0 +1,90 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = SS_SOV_Side_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = UKR
+			is_puppet_of = GER
+		}
+
+        modifier = {
+			add = 100
+			tag = BLR
+			is_puppet_of = GER
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2000 }
+	
+	shared_focus = SS_industry
+    shared_focus = SS_Axis_Missions
+    shared_focus = SS_Rebuild_Army
+	shared_focus = SS_Army_Research_Department
+
+	focus = {
+		id = SS_End_Of_Puppet
+		icon = GFX_goal_generic_military_sphere
+		mutually_exclusive = { focus = SS_New_World_Order }
+		x = 10
+		y = 0
+		cost = 1
+		
+		available = {
+			ROOT = {
+				NOT = { has_war_with = SOV }
+			}
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			custom_effect_tooltip = SS_End_Of_Puppet_tt
+			hidden_effect = {
+			 end_puppet = GER
+			} 
+		} 		
+	}
+
+	focus = {
+		id = SS_New_World_Order
+		icon = GFX_goal_generic_military_sphere
+		mutually_exclusive = { focus = SS_End_Of_Puppet }
+		x = 13
+		y = 0
+		cost = 1
+		
+		available = {
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		  add_political_power = 150
+		} 		
+	}
+}
