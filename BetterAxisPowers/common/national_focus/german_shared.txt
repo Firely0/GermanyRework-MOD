@@ -1235,7 +1235,7 @@
 	}
 
 	shared_focus = {
-		id = GER_extra_tech_slot__a
+		id = GER_extra_tech_slot_a
 		icon = GFX_focus_research
 		text = extra_tech_slot
 		prerequisite = { focus = GER_Civlian_Mobilization focus = GER_Arms_Mobilization }
@@ -1373,7 +1373,7 @@
 	shared_focus = {
 		id = GER_Finish
 		icon = GFX_focus_generic_tank_production
-        prerequisite = { focus = GER_extra_tech_slot__a focus = GER_kdf_wagen_a }
+        prerequisite = { focus = GER_extra_tech_slot_a focus = GER_kdf_wagen_a }
 		x = 4
 		y = 4
 		relative_position_id = GER_grosraumwirtschaft_a
