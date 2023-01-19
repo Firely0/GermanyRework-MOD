@@ -28,6 +28,8 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			set_variable = { SS_production_speed_infrastructure_factor 0.1 }
+			set_variable = { SS_production_speed_rail_way_factor = 0.1 }
 		}
 	}
 
@@ -140,7 +142,7 @@
 			add_tech_bonus = {
 				name = ITA_railway_innovations
 				ahead_reduction = 1.5
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = train_tech
 			}
@@ -178,6 +180,7 @@
 		completion_reward = {
 		    custom_effect_tooltip = SS_consumer_goods_factor_tt
 			set_variable = { SS_consumer_goods_factor = 0.05 }
+			set_variable = { SS_production_speed_industrial_complex_factor = -0.1 }
 		}
 	}
 
@@ -277,6 +280,8 @@
 		completion_reward = {
 			set_variable = { SS_industrial_capacity_dockyard = 0.05 }
 			set_variable = { SS_industrial_capacity_factory = 0.05 }
+			set_variable = { SS_production_speed_arms_factory_factor = -0.1 }
+			set_variable = { SS_production_speed_dockyard_factor = -0.1}
 		}
 	}
 
@@ -600,6 +605,18 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			if = {
+				limit = {
+				 has_completed_focus = SS_Tank
+			    }
+				add_idea = SS_Mass_Production_Idea
+			}
+			if = {
+				limit = {
+				 has_completed_focus = SS_Mobile_Inf
+			    }
+				add_idea = SS_Mass_Production_Idea_a
+			}
 		}
 	}
 
@@ -1051,6 +1068,12 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_tech_bonus = {
+				name = cv_bonus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
 		}
 	}
 
@@ -1067,6 +1090,19 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_tech_bonus = {
+				name = bc_bonus
+				bonus = 1.0
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+				category = shbb_tech
+			}
 		}
 	}
 
@@ -1083,6 +1119,18 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = cl_bonus
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+			}
 		}
 	}
 
