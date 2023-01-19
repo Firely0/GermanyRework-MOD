@@ -917,8 +917,8 @@
 
 	shared_focus = {
 		id = SS_Doctrine
-		icon = GFX_goal_generic_small_arms
-		text = equipment_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		text = doctrine_effort
 		prerequisite = { focus = SS_Inf_Effort }
 		prerequisite = { focus = SS_Inf_Efforta }
 		relative_position_id = SS_Inf_Effort_Main
