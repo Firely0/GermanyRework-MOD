@@ -28,6 +28,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = SS_build_inf_tt
 			set_variable = { SS_production_speed_infrastructure_factor = 0.1 }
 			set_variable = { SS_production_speed_rail_way_factor = 0.1 }
 		}
@@ -281,8 +282,9 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			set_variable = { SS_industrial_capacity_dockyard = 0.05 }
-			set_variable = { SS_industrial_capacity_factory = 0.05 }
+			custom_effect_tooltip = SS_Military_Focus_tt
+			set_variable = { SS_industrial_capacity_dockyard = -0.05 }
+			set_variable = { SS_industrial_capacity_factory = -0.05 }
 			set_variable = { SS_production_speed_arms_factory_factor = -0.1 }
 			set_variable = { SS_production_speed_dockyard_factor = -0.1}
 		}
@@ -364,6 +366,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = SS_Military_Focus_a_tt
 			set_variable = { SS_industrial_capacity_dockyard = 0 }
 			set_variable = { SS_industrial_capacity_factory = 0 }
 			set_variable = { SS_production_speed_arms_factory_factor = 0 }
@@ -666,7 +669,7 @@
 	}
 
 	shared_focus = {
-		id = fighter_focusa
+		id = SS_fighter_focus
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = SS_Rebuild_Air }
 		mutually_exclusive = { focus = bomber_focusa }
@@ -691,7 +694,7 @@
 	}
 
 	shared_focus = {
-		id = bomber_focusa
+		id = SS_bomber_focus
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = SS_Rebuild_Air }
 		mutually_exclusive = { focus = fighter_focusa }
@@ -716,12 +719,12 @@
 	}
 
 	shared_focus = {
-		id = aviation_effort_2a
+		id = SS_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = bomber_focusa focus = fighter_focusa }
+		prerequisite = { focus = SS_bomber_focus focus = SS_fighter_focus }
 		x = -1
 		y = 1
-		relative_position_id = bomber_focusa
+		relative_position_id = SS_bomber_focus
 		cost = 10
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
@@ -842,6 +845,7 @@
 	shared_focus = {
 		id = SS_Inf_Effort_Main
 		icon = GFX_goal_generic_axis_build_infantry
+		text = army_effort
 		prerequisite = { focus = SS_Adopt_Fast_Mobilization }
 		prerequisite = { focus = SS_Army_Research_Department }
 		relative_position_id = SS_Army_Research_Department
@@ -866,6 +870,7 @@
 	shared_focus = {
 		id = SS_Inf_Effort
 		icon = GFX_goal_generic_army_artillery2
+		text = equipment_effort_3
 		prerequisite = { focus = SS_Inf_Effort_Main }
 		relative_position_id = SS_Inf_Effort_Main
 		x = -1
@@ -879,8 +884,8 @@
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				ahead_reduction = 2
+				bonus = 1.0
 				uses = 1
-				category = infantry_weapons
 				category = artillery
 			}
 		}
@@ -889,6 +894,7 @@
 	shared_focus = {
 		id = SS_Inf_Efforta
 		icon = GFX_goal_generic_small_arms
+		text = equipment_effort_1
 		prerequisite = { focus = SS_Inf_Effort_Main }
 		relative_position_id = SS_Inf_Effort_Main
 		x = 1
@@ -901,10 +907,10 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
+				ahead_reduction = 2
 				bonus = 1.0
 				uses = 1
 				category = infantry_weapons
-				category = artillery
 			}
 		}
 	}
@@ -912,6 +918,7 @@
 	shared_focus = {
 		id = SS_Doctrine
 		icon = GFX_goal_generic_small_arms
+		text = equipment_effort_1
 		prerequisite = { focus = SS_Inf_Effort }
 		prerequisite = { focus = SS_Inf_Efforta }
 		relative_position_id = SS_Inf_Effort_Main
