@@ -549,6 +549,9 @@ GER_reichskommissariats = {
 				set_variable = { SS_org_loss_when_moving = 0.1 }
 				set_variable = { SS_army_minimum_training_level = -0.2 }
 				set_variable = { SS_max_command_power  = -50 }
+				set_variable = { SS_army_minimum_training_level = 0.2 }
+				set_variable = { SS_pocket_penalty = -0.2 }
+				set_variable = { SS_training_time_factor = 0.3 }
 				add_dynamic_modifier = { modifier = SS_Army_dynamic_modifier }
 				add_ideas = Block_WAR_ECO
 

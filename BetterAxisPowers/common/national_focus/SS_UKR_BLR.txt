@@ -795,6 +795,8 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			set_variable = { SS_max_command_power = 0 }
+			set_variable = { SS_army_minimum_training_level = 0 }
 		}
 	}
 
@@ -877,6 +879,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			set_variable = { SS_training_time_factor = -0.1 }
 		}
 	}
 
@@ -893,6 +896,12 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -925,12 +934,10 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
+			set_variable = { SS_army_minimum_training_level = 0 }
+			set_variable = { SS_terrain_penalty_reduction = 0.2 }
+	        set_variable = { SS_acclimatization_cold_climate_gain_factor = 0.2 }
+	        set_variable = { SS_acclimatization_hot_climate_gain_factor = 0.2 }
 		}
 	}
 
@@ -939,6 +946,7 @@
 		icon = GFX_focus_generic_military_mission
 		relative_position_id = SS_Rebuild_Army
 		prerequisite = { focus = SS_Rebuild_Command }
+		cancelable = no
 		x = 0
 		y = 4
 		cost = 5
@@ -947,6 +955,8 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			set_variable = { SS_org_loss_when_moving  = -0.1 }
+			set_variable = { SS_training_time_factor = -0.2 }
 		}
 	}
 
