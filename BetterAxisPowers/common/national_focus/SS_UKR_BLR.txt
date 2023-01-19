@@ -28,7 +28,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			set_variable = { SS_production_speed_infrastructure_factor 0.1 }
+			set_variable = { SS_production_speed_infrastructure_factor = 0.1 }
 			set_variable = { SS_production_speed_rail_way_factor = 0.1 }
 		}
 	}
@@ -262,6 +262,7 @@
 		completion_reward = {
 		    custom_effect_tooltip = SS_consumer_goods_factor_a_tt
 			set_variable = { SS_consumer_goods_factor = 0.0 }
+			set_variable = { SS_production_speed_industrial_complex_factor = 0 }
 		}
 	}
 
@@ -363,6 +364,8 @@
 		completion_reward = {
 			set_variable = { SS_industrial_capacity_dockyard = 0 }
 			set_variable = { SS_industrial_capacity_factory = 0 }
+			set_variable = { SS_production_speed_arms_factory_factor = 0 }
+			set_variable = { SS_production_speed_dockyard_factor = 0 }
 		}
 	}	
 
@@ -609,13 +612,13 @@
 				limit = {
 				 has_completed_focus = SS_Tank
 			    }
-				add_idea = SS_Mass_Production_Idea
+				add_ideas = SS_Mass_Production_Idea
 			}
 			if = {
 				limit = {
 				 has_completed_focus = SS_Mobile_Inf
 			    }
-				add_idea = SS_Mass_Production_Idea_a
+				add_ideas = SS_Mass_Production_Idea_a
 			}
 		}
 	}
