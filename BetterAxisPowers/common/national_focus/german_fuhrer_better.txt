@@ -5248,7 +5248,6 @@ focus = {
 	focus = {
 		id = GER_Integrate_Army
 		icon = GFX_focus_generic_military_mission
-		text = GER_Working_on
 		available = {
 			UKR = {
 				is_subject_of = GER
@@ -5256,7 +5255,7 @@ focus = {
 			BLR = {
 				is_subject_of = GER
 			}
-			always = no
+			surrender_progress < 0.01
 		}
 		prerequisite = { focus = GER_Belarus }
 		prerequisite = { focus = GER_Ukraine }
@@ -5269,6 +5268,7 @@ focus = {
 		}
 		
 		completion_reward = {
+			add_country_leader_trait = ReDrawBorders
 		}
 	}
 

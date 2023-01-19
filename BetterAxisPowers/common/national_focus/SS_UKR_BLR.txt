@@ -543,7 +543,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -562,16 +562,16 @@
 		relative_position_id = SS_Mobile_Warfare
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = armor
 			}
 		}
@@ -585,15 +585,15 @@
 		relative_position_id = SS_Mobile_Warfare
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				ahead_reduction = 2
+				bonus = 1.0
 				uses = 1
 				category = motorized_equipment
 			}
@@ -607,11 +607,11 @@
 		relative_position_id = SS_Tank
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
 				limit = {
@@ -662,7 +662,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			air_experience = 50
 		}
@@ -678,7 +677,7 @@
 		relative_position_id = SS_Rebuild_Air
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -727,7 +726,7 @@
 		relative_position_id = SS_bomber_focus
 		cost = 10
 
-		search_filters = {   FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -816,7 +815,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			army_experience = 50
 		}
@@ -835,7 +833,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			set_variable = { SS_max_command_power = 0 }
 			set_variable = { SS_army_minimum_training_level = 0 }
@@ -855,7 +852,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -879,7 +876,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -903,7 +900,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
@@ -928,7 +925,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -950,7 +947,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			set_variable = { SS_training_time_factor = -0.1 }
 		}
@@ -967,7 +963,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -988,7 +984,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1005,7 +1001,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			set_variable = { SS_army_minimum_training_level = 0 }
 			set_variable = { SS_terrain_penalty_reduction = 0.2 }
@@ -1026,7 +1021,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			set_variable = { SS_org_loss_when_moving  = -0.1 }
 			set_variable = { SS_training_time_factor = -0.2 }
@@ -1045,7 +1039,6 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 		}
 	}
@@ -1061,7 +1054,7 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			navy_experience = 50
 		}
@@ -1075,11 +1068,11 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = cv_bonus
@@ -1097,11 +1090,11 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = bc_bonus
@@ -1126,11 +1119,11 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
