@@ -894,7 +894,7 @@
 	shared_focus = {
 		id = SS_Inf_Efforta
 		icon = GFX_goal_generic_small_arms
-		text = equipment_effort_1
+		text = equipment_effort
 		prerequisite = { focus = SS_Inf_Effort_Main }
 		relative_position_id = SS_Inf_Effort_Main
 		x = 1
@@ -918,7 +918,7 @@
 	shared_focus = {
 		id = SS_Doctrine
 		icon = GFX_goal_generic_small_arms
-		text = equipment_effort_1
+		text = equipment_effort_2
 		prerequisite = { focus = SS_Inf_Effort }
 		prerequisite = { focus = SS_Inf_Efforta }
 		relative_position_id = SS_Inf_Effort_Main
