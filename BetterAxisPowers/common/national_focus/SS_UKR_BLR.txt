@@ -162,6 +162,8 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 
@@ -1054,6 +1056,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			navy_experience = 50
 		}
 	}
 
