@@ -1,6 +1,7 @@
 ideas = {
 
 	country = {
+
 		SS_Fund_Locals = {
 
 			picture = man_five_year_plan_industry
@@ -17,6 +18,60 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+
+		SS_Mass_Production_Idea = {
+
+			picture = man_five_year_plan_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.5
+					reliability_factor = 0.5
+				}
+			}
+		}
+
+		SS_Mass_Production_Idea_a = {
+
+			picture = man_five_year_plan_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.5
+					reliability_factor = 0.5
+				}
+				mechanized = {
+					build_cost_ic = -0.5
+					reliability_factor = 0.5
+				}
 			}
 		}
 	}
