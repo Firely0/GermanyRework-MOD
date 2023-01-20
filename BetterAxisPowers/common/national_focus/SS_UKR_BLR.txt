@@ -1091,7 +1091,7 @@
 				}
 				custom_effect_tooltip = SS_UKR_ReOrg_Army_tt
 				set_variable = { SS_UKR_org_loss_when_moving  = -0.1 }
-				set_variable = { SS_UKR_army_speed_factor  = 0.5 } 
+				set_variable = { SS_UKR_army_speed_factor  = 0.05 } 
 			}
 			if = {
 				limit = {
