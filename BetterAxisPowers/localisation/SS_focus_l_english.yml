@@ -12,8 +12,36 @@
  SS_FreeRepair_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \§wFree Repair§!: §G+15%§!"
  SS_ResearchSpeed_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by:\§w Research Speed§!: §G+6%§!"
 
+
+ #UKR Army Idea Tooltip
+ SS_UKR_Adopt_Fast_Mobilization_tt:0 "Modify §Y$SSS_UKR_Army_dynamic_modifier$§! by: \§HTraining Time §!§G-20%§!"
+
+ SS_UKR_rebuild_command_tt:0 "Modify §Y$SSS_UKR_Army_dynamic_modifier$§! by: \§HMaximum Command Power §!§G+25§! §HTraining Time §!§G-10%§! §HMinimum Training §!§G-10%§! "
+
+ SS_UKR_ReOrg_Army_tt:0 "Modify §Y$SSS_UKR_Army_dynamic_modifier$§! by: \§HOrg Lost When Moving §!§G-10%§! §HLand Army Speed §!§G+5%§!"
+
+ SS_UKR_Adaptable_Army_tt:0 "Modify §Y$SSS_UKR_Army_dynamic_modifier$§! by: \§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§ \§HEncircled Penalty §!§G-20%§!\§HExperience Lost in Combat §!§G-10%§!"
+
+ SS_UKR_Glory_Of_Army_tt:0 "Modify §Y$SSS_UKR_Army_dynamic_modifier$§! by: \§HArmy Attack And Defence §!§G+20%§!"
+
+ SS_UKR_Tank_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HArmor Speed  And Army Breakthrough Factor §!§G+5%§!"
+
+ #BLR Army Idea Tooltip
+ SS_BLR_Adopt_Fast_Mobilization_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HTraining Time §!§G-20%§!"
+
+ SS_BLR_rebuild_command_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HMaximum Command Power §!§G+25§! §HTraining Time §!§G-10%§! §HMinimum Training §!§G-10%§! "
+
+ SS_BLR_ReOrg_Army_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HOrg Lost When Moving §!§G-10%§! §HLand Army Speed §!§G+5%§!"
+
+ SS_BLR_Adaptable_Army_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§ \§HEncircled Penalty §!§G-20%§!\§HExperience Lost in Combat §!§G-10%§!"
+
+ SS_BLR_Glory_Of_Army_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HArmy Attack And Defence §!§G+20%§!"
+
+ SS_BLR_Tank_tt:0 "Modify §Y$SSS_BLR_Army_dynamic_modifier$§! by: \§HArmor Speed  And Army Breakthrough Factor §!§G+5%§!"
+
  SS_Eco_dynamic_modifier:0 "Industry Plan"
- SS_Army_dynamic_modifier:0 "Army Forces"
+ SS_UKR_Army_dynamic_modifier:0 "Ukrainian Ground Forces"
+ SS_BLR_Army_dynamic_modifier:0 "Belarusian Ground Forces"
 
  SS_Mass_Production_Idea:0 "Mass Production"
  SS_Mass_Production_Idea_a:0 "Mass Production"
