@@ -1,23 +1,18 @@
-MAN_historical_plan = {
-	name = "SS - Belarus-Ukraine plan"
-	desc = "SS Focus behavior for Ukraine And Belarus"
+SS_Ukraine_plan = {
+	name = "SS-Ukraine"
+	desc = "SS Focus behavior for Ukraine"
 
 	allowed = {
 		original_tag = UKR
-		original_tag = BLR
 	}
 	enable = {
-		OR = {
-			is_puppet_of = GER
-		}
+		is_puppet_of = GER
 	}
 	abort = {
 		NOT = { is_puppet_of = GER }
 	}
 	
 	ai_national_focuses = {
-		SS_Arms_Industry_War_Eco
-
 		SS_Axis_Missions
 		SS_Mission_to_Germany
 		SS_Rebuild_Army
@@ -43,6 +38,7 @@ MAN_historical_plan = {
 		SS_Civlian_Industry_a
 		SS_Civlian_Industry_b
 		SS_Civilian_Industry_plan
+		SS_Arms_Industry_War_Eco
 		SS_Inf_a
 		SS_Inf_b
 		SS_Army_Research_Department
