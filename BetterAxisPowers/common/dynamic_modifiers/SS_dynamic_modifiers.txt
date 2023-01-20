@@ -49,44 +49,64 @@ SS_Eco_dynamic_modifier = {
 	industry_repair_factor = SS_industry_repair_factor 
 
 }
-SS_Army_dynamic_modifier = {
+SS_UKR_Army_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ETH_army
+	icon = GFX_idea_UkraineArmy
 
-	org_loss_when_moving = SS_org_loss_when_moving 
-	minimum_training_level = SS_army_minimum_training_level
-	max_command_power = SS_max_command_power
+	#Rebuild Command
+	max_command_power = SS_UKR_max_command_power
+	minimum_training_level = SS_UKR_army_minimum_training_level
+	training_time_factor = SS_UKR_training_time_factor 
+
+	#Glory of Ukraine Army
+	army_attack_factor = SS_UKR_atack_factor
+	army_defence_factor = SS_UKR_defance_factor
 	
-	pocket_penalty = SS_pocket_penalty
-	training_time_factor = SS_training_time_factor 
+	#Reorg Army
+	org_loss_when_moving = SS_UKR_org_loss_when_moving 
+	army_speed_factor = SS_UKR_army_speed_factor 
 
-	army_speed_factor = SS_army_speed_factor 
-	experience_loss_factor = SS_experience_loss_factor 
-
-	army_armor_speed_factor = SS_army_armor_speed_factor
-	breakthrough_factor = SS_breakthrough_factor 
+	#Tank Bonus & Germany Mission
+	army_armor_speed_factor = SS_UKR_army_armor_speed_factor
+	breakthrough_factor = SS_UKR_breakthrough_factor 
 
 	#Adaptable Army
-	terrain_penalty_reduction = SS_terrain_penalty_reduction
-	acclimatization_cold_climate_gain_factor = SS_acclimatization_cold_climate_gain_factor 
-	acclimatization_hot_climate_gain_factor = SS_acclimatization_hot_climate_gain_factor
+	terrain_penalty_reduction = SS_UKR_terrain_penalty_reduction
+	acclimatization_cold_climate_gain_factor = SS_UKR_acclimatization_cold_climate_gain_factor 
+	acclimatization_hot_climate_gain_factor = SS_UKR_acclimatization_hot_climate_gain_factor
+	pocket_penalty = SS_UKR_pocket_penalty
+	experience_loss_factor = SS_UKR_experience_loss_factor 
 
 }
-SS_Navy_dynamic_modifier = {
+
+SS_BLR_Army_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ETH_army
+	icon = GFX_idea_BelarusArmy
 
-	naval_detection = SS_naval_detection 
-	naval_enemy_fleet_size_ratio_penalty_factor = SS_naval_enemy_fleet_size_ratio_penalty_factor
+	#Rebuild Command
+	max_command_power = SS_BLR_max_command_power
+	minimum_training_level = SS_BLR_army_minimum_training_level
+	training_time_factor = SS_BLR_training_time_factor 
 
-	navy_max_range_factor = SS_navy_max_range_factor 
-	naval_speed_factor = SS_naval_speed_factor 
+	#Glory of Belarus Army
+	army_attack_factor = SS_BLR_atack_factor
+	army_defence_factor = SS_BLR_defance_factor
+	
+	#Reorg Army
+	org_loss_when_moving = SS_BLR_org_loss_when_moving 
+	army_speed_factor = SS_BLR_army_speed_factor 
+	
+	#Tank Bonus & Germany Mission
+	breakthrough_factor = SS_BLR_breakthrough_factor 
+	army_armor_speed_factor = SS_BLR_army_armor_speed_factor
 
-	carrier_traffic = SS_carrier_traffic 
-	carrier_night_traffic = SS_carrier_night_traffic
+	#Adaptable Army
+	terrain_penalty_reduction = SS_BLR_terrain_penalty_reduction
+	acclimatization_cold_climate_gain_factor = SS_BLR_acclimatization_cold_climate_gain_factor 
+	acclimatization_hot_climate_gain_factor = SS_BLR_acclimatization_hot_climate_gain_factor
+	pocket_penalty = SS_BLR_pocket_penalty
+	experience_loss_factor = SS_BLR_experience_loss_factor 
 
-	convoy_retreat_speed = SS_convoy_retreat_speed 
-
-} 
+}

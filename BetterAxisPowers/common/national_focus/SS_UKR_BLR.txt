@@ -574,6 +574,21 @@
 				uses = 1
 				category = armor
 			}
+			custom_effect_tooltip = SS_Tank_tt
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_army_armor_speed_factor = 0.05 }
+				set_variable = { SS_UKR_breakthrough_factor = 0.05 }
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_BLR_army_armor_speed_factor = 0.05 }
+				set_variable = { SS_BLR_breakthrough_factor = 0.05 }
+			}
 		}
 	}
 
@@ -834,8 +849,23 @@
 			factor = 12
 		}
 		completion_reward = {
-			set_variable = { SS_max_command_power = 0 }
-			set_variable = { SS_army_minimum_training_level = 0 }
+			custom_effect_tooltip = SS_rebuild_command_tt
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_max_command_power = 25 }
+				set_variable = { SS_UKR_army_minimum_training_level = -0.1 }
+				set_variable = { SS_UKR_training_time_factor = -0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_BLR_max_command_power = 25 }
+				set_variable = { SS_BLR_army_minimum_training_level = -0.1 }
+				set_variable = { SS_BLR_training_time_factor = -0.1 }  
+			}
 		}
 	}
 
@@ -948,7 +978,19 @@
 			factor = 12
 		}
 		completion_reward = {
-			set_variable = { SS_training_time_factor = -0.1 }
+			custom_effect_tooltip = SS_Adopt_Fast_Mobilization_tt
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_training_time_factor = -0.1 }
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_BLR_training_time_factor = -0.1 }
+			}
 		}
 	}
 
@@ -1002,10 +1044,26 @@
 			factor = 12
 		}
 		completion_reward = {
-			set_variable = { SS_army_minimum_training_level = 0 }
-			set_variable = { SS_terrain_penalty_reduction = 0.2 }
-	        set_variable = { SS_acclimatization_cold_climate_gain_factor = 0.2 }
-	        set_variable = { SS_acclimatization_hot_climate_gain_factor = 0.2 }
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_terrain_penalty_reduction = 0.15 }
+				set_variable = { SS_UKR_acclimatization_cold_climate_gain_factor = 0.15 }
+				set_variable = { SS_UKR_acclimatization_hot_climate_gain_factor = 0.15 } 
+				set_variable = { SS_UKR_pocket_penalty = 0.2 }
+				set_variable = { SS_UKR_experience_loss_factor  = -0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_BLR_terrain_penalty_reduction = 0.15 }
+				set_variable = { SS_BLR_acclimatization_cold_climate_gain_factor = 0.15 }
+				set_variable = { SS_BLR_acclimatization_hot_climate_gain_factor = 0.15 } 
+				set_variable = { SS_BLR_pocket_penalty = 0.2 }
+				set_variable = { SS_BLR_experience_loss_factor  = -0.1 } 
+			}
 		}
 	}
 
@@ -1022,8 +1080,21 @@
 			factor = 12
 		}
 		completion_reward = {
-			set_variable = { SS_org_loss_when_moving  = -0.1 }
-			set_variable = { SS_training_time_factor = -0.2 }
+			custom_effect_tooltip = SS_ReOrg_Army_tt
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_org_loss_when_moving  = -0.1 }
+				set_variable = { SS_UKR_army_speed_factor  = -0.2 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_BLR_org_loss_when_moving  = -0.1 }
+				set_variable = { SS_BLR_army_speed_factor  = 0 } 
+			}
 		}
 	}
 
@@ -1040,6 +1111,21 @@
 			factor = 12
 		}
 		completion_reward = {
+			custom_effect_tooltip = SS_Glory_Of_Army_tt
+			if = {
+				limit = {
+					tag = UKR
+				}
+				set_variable = { SS_UKR_atack_factor  = 0.1 } 
+				set_variable = { SS_UKR_defance_factor  = 0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				set_variable = { SS_UKR_atack_factor  = 0.1 } 
+				set_variable = { SS_UKR_defance_factor  = 0.1 } 
+			}
 		}
 	}
 

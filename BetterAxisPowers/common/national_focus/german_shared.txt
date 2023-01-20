@@ -3721,14 +3721,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			# Balance research bonus to 2 techs in land_doctrine
-			army_experience = 20
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 			if = {
 				limit = {
 					NOT = {
