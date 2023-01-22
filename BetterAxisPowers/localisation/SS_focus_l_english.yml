@@ -4,7 +4,7 @@
 
  SS_consumer_goods_factor_a_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HConsumer Goods Factories§!: §G-5%§! \n§!§HCivilian Factory §!Construction Speed§!: §G+10%§!"
 
- SS_Military_Focus_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HMilitary Factory §!Construction Speed: §G+5%§! \n§HDockyard Factory §!Construction Speed: §G+5%§! \n§HDockyard And Military §!Output§!: §G+5%§!"
+ SS_Military_Focus_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HMilitary Factory §!Construction Speed: §G+5%§! \n§HDockyard Factory §!Construction Speed: §G+5%§! \n§HDockyard §!And §HMilitary §!Output§!: §G+5%§!"
 
  SS_Military_Focus_a_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HMilitary Factory §!Construction Speed: §G+10%§! \n§HDockyard Factory §!Construction Speed: §G+10%§! \n§HDockyard §!And §HMilitary §!Output§!: §G+5%§!"
 
@@ -15,13 +15,13 @@
  #UKR Army Idea Tooltip
  SS_UKR_Adopt_Fast_Mobilization_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HTraining Time §!§G-20%§!"
 
- SS_UKR_rebuild_command_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HMaximum Command Power §!§G+25§! §HTraining Time §!§G-10%§! §HMinimum Training §!§G-10%§! "
+ SS_UKR_rebuild_command_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HMaximum Command Power §!§G+25§! \n§HTraining Time §!§G-10%§! \n§HMinimum Training §!§G-10%§! "
 
- SS_UKR_ReOrg_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HOrg Lost When Moving §!§G-10%§! §HLand Army Speed §!§G+5%§!"
+ SS_UKR_ReOrg_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HOrg Lost When Moving §!§G-10%§! \n§HLand Army Speed §!§G+5%§!"
 
  SS_UKR_Adaptable_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§  \n§HEncircled Penalty §!§G-20%§! \n§HExperience Lost in Combat §!Factor §G-10%§!"
 
- SS_UKR_Glory_Of_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HArmy Attack §!And §HDefence §!Factor §G+20%§!"
+ SS_UKR_Glory_Of_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \nArmy §HAttack §!And §HDefence §!Factor §G+20%§!"
 
  SS_UKR_Tank_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmor Speed §!And §HArmy Breakthrough §!§G+5%§!"
 
@@ -34,9 +34,9 @@
 
  SS_BLR_Adaptable_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§  \n§HEncircled Penalty §!§G-20%§! \n§HExperience Lost in Combat §!§G-10%§!"
 
- SS_BLR_Glory_Of_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmy Attack And Defence §!§G+20%§!"
+ SS_BLR_Glory_Of_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \nArmy §HAttack §!And §HDefence §!Factor §G+20%§!"
 
- SS_BLR_Tank_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmor Speed  And Army Breakthrough Factor §!§G+5%§!"
+ SS_BLR_Tank_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmor Speed §!And §HArmy Breakthrough §!§G+5%§!"
 
  SS_Eco_dynamic_modifier:0 "Industry Plan"
  SS_UKR_Army_dynamic_modifier:0 "Ukrainian Ground Forces"
