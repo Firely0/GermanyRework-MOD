@@ -15,6 +15,18 @@ GER_balance_of_power_category = {
 			GER_bop_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}
+
 		visible = { has_full_control_of_state = 16 }
 		
 	}
@@ -33,6 +45,18 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
 		}
 
 		visible = { has_full_control_of_state = 126 }
@@ -55,6 +79,18 @@ GER_balance_of_power_category = {
 		GER_bop_low_increase_effect = yes
 	}
 
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 10
+			has_political_power = 150
+		}
+		modifier = {
+			factor = 100
+			has_war = no
+		}
+	}
+
 	visible = { has_full_control_of_state = 4 }
 	
     }
@@ -73,6 +109,18 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
 		}
 
 		visible = { has_full_control_of_state = 219 }
@@ -127,13 +175,25 @@ GER_balance_of_power_category = {
 		original_tag = GER
 	}
 
-	cost = 50
+	cost = 0
 
-	fire_only_once = yes
+	days_re_enable = 180
 
 	complete_effect = {
 		GER_bop_low_increase_effect = yes
         ITA = { ITA_bop_very_low_increase_effect = yes }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 1000
+			has_political_power = 1
+		}
+		modifier = {
+			factor = 1000
+			has_war = no
+		}
 	}
 
 	visible = { 2 = { is_fully_controlled_by = ITA } is_ally_with = ITA }
@@ -176,6 +236,21 @@ GER_balance_of_power_category = {
 			GER_bop_very_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
+		}
+
 		visible = { has_completed_focus = GER_Fuhrer  has_war_with_major = yes }
 		
 	}
@@ -196,6 +271,21 @@ GER_balance_of_power_category = {
 			GER_bop_very_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
+		}
+
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
 		
 	}
@@ -214,6 +304,21 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_very_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
 		}
 
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }

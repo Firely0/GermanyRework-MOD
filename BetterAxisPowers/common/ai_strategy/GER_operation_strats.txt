@@ -1,0 +1,40 @@
+ GER_collaboration_on_POL = {
+ 	allowed = {
+ 		tag = GER
+ 	}
+ 	ai_strategy = {
+ 		type = operative_operation
+ 		operation = operation_collaboration_government
+ 		value = 100
+ 		operation_target = POL
+ 	}
+	
+ 	ai_strategy = {
+ 		type = operative_mission
+ 		mission = build_intel_network
+ 		value = 100
+ 		mission_target = POL
+ 	}
+
+  	ai_strategy = {
+ 		type = intelligence_agency_usable_factories
+ 		value = 30
+ 	}
+
+    ai_strategy = {
+        type = intelligence_agency_branch_desire_factor
+        id = branch_defense
+        value = 100
+    }
+
+    ai_strategy = {
+        type = intelligence_agency_branch_desire_factor
+        id = branch_crypto
+        value = 100
+    }
+
+    ai_strategy = {
+        type = operation_equipment_priority
+        value = 10
+    }
+}

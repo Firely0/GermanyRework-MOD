@@ -678,11 +678,7 @@ ss_police = {
 
 
 	ai_will_do = {
-		base = 500
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.3}
-			add = 200
-		}
+		base = 10000
 	}
 }
 
@@ -711,9 +707,5 @@ ss_police_final = {
 
 	ai_will_do = {
 		base = 1000
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.3}
-			add = 200
-		}
 	}
 }
