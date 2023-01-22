@@ -1419,7 +1419,7 @@
 			tooltip = GER_Four_Year_Plan_Finish_tt
 			has_country_flag =  {
 				flag = GER_FOUR_PLAN_FLAG
-				days > 1460
+				days > 1461
 			}
             }
 		}
@@ -2429,6 +2429,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a }
+					}
+				}
+				custom_effect_tooltip = GER_hide_mil_tt
+			}
 			if = {
 			  limit = {
 			    has_idea = Four_Year_Plan_1_autarky
