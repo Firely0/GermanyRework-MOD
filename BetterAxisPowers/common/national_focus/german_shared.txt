@@ -2723,7 +2723,7 @@
 
 	shared_focus = {
 		id = GER_Improve_TAC
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_continuous_air_production
 		x = 3
 		y = 2
 		relative_position_id = GER_air_innovation_a
@@ -2794,7 +2794,7 @@
 
 	shared_focus = {
 		id = GER_Mixed_Bombing
-		icon = GFX_focus_generic_long_range_aircraft
+		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = GER_strategic_air_effort_a }
 		prerequisite = { focus = GER_Improve_Des }
 		x = 0
@@ -3009,7 +3009,7 @@
 
 	shared_focus = {
 		id = GER_strategic_air_effort_a
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_generic_long_range_aircraft
 		text = GER_strategic_air_effort
 		prerequisite = { focus = GER_Strategic_Des }
 		x = -5
@@ -3035,7 +3035,7 @@
 
 	shared_focus = {
 		id = GER_Improve_Des
-		icon = GFX_focus_generic_long_range_aircraft
+		icon = GFX_goal_continuous_air_production
 		prerequisite = { focus = GER_Strategic_Des }
 		x = 1
 		y = 1
@@ -3129,7 +3129,6 @@
 				remove_idea = Wehrmacht_Tank_2
 				add_idea = WehrmachtLightingStrike
 			}
-
 		}
 	}
 
@@ -3287,6 +3286,19 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_tank_warfare }
+						NOT = { has_completed_focus = GER_tank_warfare }
+					}
+					custom_effect_tooltip = GER_staff_tt
+					idea_tooltip = Wehrmacht_Tank_2
+					custom_effect_tooltip = GER_staff_a_tt
+					idea_tooltip = Wehrmacht_INF_2
+					
+				}
+			}
 			if = {
 				limit = {
 				  GER = {
