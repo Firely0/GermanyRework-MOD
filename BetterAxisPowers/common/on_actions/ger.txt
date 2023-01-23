@@ -79,4 +79,61 @@ on_actions = {
 			}
 		}
     }
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = POL
+					GER = {
+						has_completed_focus = GER_danzig_or_war_v
+						has_war_with = POL
+						has_war_with = ENG
+						has_war_with = FRA
+					}
+				}
+				GER = {
+					country_event = ger_around_maginot_event.1 
+				}
+			}
+		}
+	}		
+	
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = { has_country_flag = WTT_support_from_soviet }
+				PRC_soviet_tribute_clear_all = yes
+				clr_country_flag = WTT_support_from_soviet
+			}
+			FROM = {
+				if = {
+					limit = { has_country_flag = WTT_support_from_soviet }
+					PRC_soviet_tribute_clear_all = yes
+					clr_country_flag = WTT_support_from_soviet
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = GER
+							FROM = { tag = SOV }
+						}
+						AND = {
+							tag = SOV
+							FROM = { tag = GER }
+						}
+					}
+					GER = { has_completed_focus = GER_ussr_war_goalV }
+				}
+				hidden_effect = {
+					GER = { 
+						add_timed_idea = { idea = GER_barbarossa days = 180 }
+						activate_mission = GER_barbarossa_mission
+					}
+				}
+			}
+		}
+	}
 }

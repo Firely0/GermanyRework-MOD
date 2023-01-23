@@ -13,6 +13,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
 			add_tech_bonus = {
 				name = GER_four_year_plan
 				bonus = 1.0
@@ -23,8 +24,8 @@
 			show_ideas_tooltip = hjalmar_schacht
 			set_country_flag = GER_FOUR_PLAN_FLAG
 			hidden_effect = {
-			 add_timed_idea = { idea = Four_Year_Plan_1  days = 1460 }
-			}
+				add_timed_idea = { idea = Four_Year_Plan_1  days = 1461 }
+			}	
 		}
 	}
 
@@ -127,7 +128,6 @@
 					type = ship_hull_carrier_1
 					name_group = GER_CV_HISTORICAL
 					parent_version = 0
-					allow_without_tech = yes
 					modules = {
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
@@ -296,18 +296,17 @@
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = GER_pride_of_the_modern_germany
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = bc_tech
-				category = bb_tech
-				category = shbb_tech
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_plan_z_a }
+					}
+				}
+				show_ideas_tooltip = Kriegsmarine_FAKE
+			}
 			if = {
 				limit = {
 					has_idea = Kriegsmarine_PlanZ
@@ -409,6 +408,14 @@
 			factor = 1
 		}
 		completion_reward = {
+		if = {
+			limit = {
+				GER = {
+					NOT = { has_completed_focus = GER_naval_air_effort_a has_completed_focus = GER_pride_of_the_modern_germany_a }
+				}
+			}
+			custom_effect_tooltip = GER_prepare_next_tt
+		}	
 		if = {
 		  limit = {
 		  has_idea = Kriegsmarine_Rebuild_Carriers
@@ -853,23 +860,31 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a}
+					}
+				}
+				custom_effect_tooltip = GER_autarky_tt
+			}
 		    if = {
 				limit = {
-					has_idea = Four_Year_Plan_1_Hide_ARMS
+				 has_idea = Four_Year_Plan_1_Hide_ARMS
 				}
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_1_Hide_ARMS
-				add_idea = Four_Year_Plan_1_autarky_hide_arms
+			    swap_ideas = {
+				 remove_idea = Four_Year_Plan_1_Hide_ARMS
+				 add_idea = Four_Year_Plan_1_autarky_hide_arms
 			    }
 				add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
+				 name = GER_autarky
+				 bonus = 1.0
+				 uses = 2
+				 technology = excavation1
+				 technology = excavation2
+				 technology = excavation3
+				 technology = excavation4
+				 technology = excavation5
 			    }
 			}
 
@@ -1236,7 +1251,7 @@
 	}
 
 	shared_focus = {
-		id = GER_extra_tech_slot__a
+		id = GER_extra_tech_slot_a
 		icon = GFX_focus_research
 		text = extra_tech_slot
 		prerequisite = { focus = GER_Civlian_Mobilization focus = GER_Arms_Mobilization }
@@ -1271,6 +1286,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a has_completed_focus = GER_grosraumwirtschaft_a }
+					}
+				}
+				custom_effect_tooltip = GER_civilian_tt
+			}
 			if = {
 				limit = {
 					has_idea = Four_Year_Plan_2
@@ -1331,6 +1354,14 @@
 		completion_reward = {
 			if = {
 				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a has_completed_focus = GER_grosraumwirtschaft_a}
+					}
+				}
+				custom_effect_tooltip = GER_military_tt
+			}
+			if = {
+				limit = {
 					has_idea = Four_Year_Plan_2
 				}
 				swap_ideas = {
@@ -1374,7 +1405,7 @@
 	shared_focus = {
 		id = GER_Finish
 		icon = GFX_focus_generic_tank_production
-        prerequisite = { focus = GER_extra_tech_slot__a focus = GER_kdf_wagen_a }
+        prerequisite = { focus = GER_extra_tech_slot_a focus = GER_kdf_wagen_a }
 		x = 4
 		y = 4
 		relative_position_id = GER_grosraumwirtschaft_a
@@ -1388,7 +1419,7 @@
 			tooltip = GER_Four_Year_Plan_Finish_tt
 			has_country_flag =  {
 				flag = GER_FOUR_PLAN_FLAG
-				days > 1460
+				days > 1461
 			}
             }
 		}
@@ -1436,7 +1467,7 @@
 		x = 2
 		y = 1
 		relative_position_id = GER_Finish_COPY
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1475,7 +1506,7 @@
 		x = -2
 		y = 1
 		relative_position_id = GER_Finish_COPY
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2399,6 +2430,14 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a }
+					}
+				}
+				custom_effect_tooltip = GER_hide_mil_tt
+			}
+			if = {
 			  limit = {
 			    has_idea = Four_Year_Plan_1_autarky
 			  }
@@ -2582,6 +2621,14 @@
 		completion_reward = {
 			if = {
 				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_four_year_plan_a }
+					}
+				}
+				custom_effect_tooltip = GER_gross_tt
+			}
+			if = {
+				limit = {
 					has_idea = Four_Year_Plan_1_Hide_ARMS
 				}
 				swap_ideas = {
@@ -2724,7 +2771,7 @@
 
 	shared_focus = {
 		id = GER_Improve_TAC
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_continuous_air_production
 		x = 3
 		y = 2
 		relative_position_id = GER_air_innovation_a
@@ -2795,7 +2842,7 @@
 
 	shared_focus = {
 		id = GER_Mixed_Bombing
-		icon = GFX_focus_generic_long_range_aircraft
+		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = GER_strategic_air_effort_a }
 		prerequisite = { focus = GER_Improve_Des }
 		x = 0
@@ -2832,6 +2879,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						NOT = { has_completed_focus = GER_plan_z_a }
+					}
+				}
+				show_ideas_tooltip = Kriegsmarine_FAKE_A
+			}
 			if = {
 				limit = {
 					has_idea = Kriegsmarine_PlanZ
@@ -3010,7 +3065,7 @@
 
 	shared_focus = {
 		id = GER_strategic_air_effort_a
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_generic_long_range_aircraft
 		text = GER_strategic_air_effort
 		prerequisite = { focus = GER_Strategic_Des }
 		x = -5
@@ -3036,7 +3091,7 @@
 
 	shared_focus = {
 		id = GER_Improve_Des
-		icon = GFX_focus_generic_long_range_aircraft
+		icon = GFX_goal_continuous_air_production
 		prerequisite = { focus = GER_Strategic_Des }
 		x = 1
 		y = 1
@@ -3130,7 +3185,6 @@
 				remove_idea = Wehrmacht_Tank_2
 				add_idea = WehrmachtLightingStrike
 			}
-
 		}
 	}
 
@@ -3288,6 +3342,15 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_tank_warfare has_completed_focus = GER_Battle_Plan }
+				}
+				custom_effect_tooltip = GER_staff_tt
+				show_ideas_tooltip = Wehrmacht_Tank_2
+				custom_effect_tooltip = GER_staff_a_tt
+				show_ideas_tooltip = Wehrmacht_INF_2
+			}
 			if = {
 				limit = {
 				  GER = {
@@ -3722,14 +3785,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			# Balance research bonus to 2 techs in land_doctrine
-			army_experience = 20
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 			if = {
 				limit = {
 					NOT = {

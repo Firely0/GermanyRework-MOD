@@ -14,6 +14,8 @@
 
  #Ideas
 
+ GER_BLITZ:0 "Blitzkrieg"
+ GER_OLD_PLAN_IDEA:0 "Central Planning"
  GER_SS_Final:0 "Schutzstaffel"
  GER_SS:0 "Schutzstaffel"
  GER_SS_V1:0 "Schutzstaffel"
@@ -56,6 +58,8 @@
  WehrmachtWarPlana:0 "Wehrmacht"
  WehrmachtWarPlanb:0 "Wehrmacht"
  Kriegsmarine:0 "Kriegsmarine"
+ Kriegsmarine_FAKE:0 "Kriegsmarine"
+ Kriegsmarine_FAKE_A:0 "Kriegsmarine"
  Kriegsmarine_intel:0 "Kriegsmarine"
  Kriegsmarine_PlanZ:0 "Kriegsmarine"
  Kriegsmarine_PlanZ_intel:0 "Kriegsmarine"
@@ -101,6 +105,25 @@
  BismarcksLastDance:0 "Bismarck's Last Dance"
 
  #TT
+ GER_hide_mil_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HDockyard §!And §HMilitary §!Factory Output§!: §G+5%§!"
+
+ GER_gross_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HInfrastructure §!And §HRailway §!Construction Speed§! §G+10%§!"
+
+ GER_civilian_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HCivilian Factory §!Construction Speed§!: §G+20%§!"
+
+ GER_military_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HMilitary Factory §!Construction Speed: §G+20%§! \n§HNaval Dockyard §!Construction Speed: §G+20%§!"
+
+ GER_military_hide_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HMilitary Factory §!Construction Speed: §G+20%§! \n§HNaval Dockyard §!Construction Speed: §G+20%§! \n§HDockyard §!And §HMilitary §!Output§!: §G+5%§!"
+
+ GER_autarky_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HMilitary Factory §!Construction Speed: §G+10%§! \n§HNaval Dockyard §!Construction Speed: §G+10%§! \n§HCivilian Factory §!Construction Speed§!: §G+5%§!"
+
+ GER_prepare_next_tt:0 "Modify §Y$Kriegsmarine$§! by: \n§wConsumer Goods Factories§!: §G-5%§!"
+
+ GER_cap_pol_tt:0 "Focus Auto-Complete After §RCapitulation§! of §RPoland§!"
+
+ GER_Four_Year_Plan_Start_tt:0 "Starts §YFour Year Plan§! for §G1461§! days"
+ GER_staff_tt:0 "if Selected; §RMobile Warfare§!"
+ GER_staff_a_tt:0 "if Selected; §RTrech Warfare§!"
  GER_SS_tt:0 "Unlocks Occupation Law; §YSchutzstaffel§! "
  GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§! "
  GER_Four_Year_Plan_Finish_tt:0 "Available After End Of §RFour Year Plan§!"
@@ -112,6 +135,7 @@
  GER_ECO_1_tt:0 "Current days are: [?GER_ECO_1:days|Y0]"
  dictator_pp:0 "Dictator"
  DealBraker:0 "Deal Breaker"
+ ReDrawBorders:0 "Redraw Borders"
 
  german_Fuhrer_tt:0 "Changes The National Focus Tree To §YRhineland§!"
  german_kaiser_tt:0 "Changes The National Focus Tree To §YOppose Hitler§!"
@@ -141,6 +165,13 @@
  gerb.79.b:0 "We can count on British support, and they can count on us."
  gerb.79.c:0 "If these despots want to take our home, they have to fight for it."
 
+ #Around Moginot Line
+
+ ger_around_maginot_event.1.a:0 "Listen Heinz Guderian`s Plan"
+ ger_around_maginot_event.1.b:0 "Old Plan Just Needs Requires More Preparation"
+
+ GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
+
  #Focus And Others
  GER_Sleep_Well_SOV:0 "Lebensraum Policy"
  GER_Sleep_Well_SOV_desc:0 ""
@@ -150,11 +181,14 @@
  GER_Belarus_desc:0 ""
  GER_Ukraine:0 "Approach Ukraine"
  GER_Ukraine_desc:0 ""
+ GER_Integrate_Army:0 "Redraw Borders"
+ GER_Integrate_Army_desc:0 ""
  GER_His_Ship:0 "Expand Escort Ships"
  GER_His_Ship_desc:0 ""
  GER_TUR_Grant_Claims:0 "Grant Turkish Claims"
  GER_TUR_Grant_Claims_desc:0 ""
  GER_request_qingdao:0 "Request Qingdao"
+ GER_request_qingdao_desc:0 ""
  GER_SS_F:0 "Expand SS Capabilities"
  GER_SS_F_desc:0 ""
  GER_SS_B:0 "Extra Funds for SS"
@@ -259,7 +293,7 @@
  GER_Small_Arms_desc:0 ""
  GER_Arms_Mobilization:0 "Focus On Military Industry"
  GER_Arms_Mobilization_desc:0 ""
- GER_Civlian_Mobilization:0 "Focus On Civil Industry"
+ GER_Civlian_Mobilization:0 "Focus On Civilian Industry"
  GER_Civlian_Mobilization_desc:0 ""
  GER_Finish:0 "End Of Four Year Plan"
  GER_Finish_desc:0 ""
@@ -280,6 +314,7 @@
  GER_Eco_Plan_A_Main_A:0 "Better Build Schemes"
  GER_Eco_Plan_A_Main_A_desc:0 ""
  GER_Eco_Plan_B_Main_A:0 "Better Production Lines"
+ GER_Eco_Plan_B_Main_A_desc:0 ""
  GER_Eco_Plan_A_Main_B:0 "Civilian Industry"
  GER_Eco_Plan_A_Main_B_desc:0 ""
  GER_Eco_Plan_B_Main_B:0 "Wartime Industry"

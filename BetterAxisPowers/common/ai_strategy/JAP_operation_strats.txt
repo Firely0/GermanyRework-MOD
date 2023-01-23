@@ -1,11 +1,46 @@
-
  JAP_collaboration_on_CHI = {
  	allowed = {
  		tag = JAP
  	}
+ 	ai_strategy = {
+ 		type = operative_operation
+ 		operation = operation_collaboration_government
+ 		value = 100
+ 		operation_target = CHI
+ 	}
+	
+ 	ai_strategy = {
+ 		type = operative_mission
+ 		mission = build_intel_network
+ 		value = 100
+ 		mission_target = CHI
+ 	}
+
+  	ai_strategy = {
+ 		type = intelligence_agency_usable_factories
+ 		value = 40
+ 	}
+
+    ai_strategy = {
+        type = intelligence_agency_branch_desire_factor
+        id = branch_defense
+        value = 100
+    }
+
+    ai_strategy = {
+        type = intelligence_agency_branch_desire_factor
+        id = branch_crypto
+        value = 100
+    }
+
+    ai_strategy = {
+        type = operation_equipment_priority
+        value = 100
+    }
+}
 	
 # 	enable = {
-# 		tag = JAPV
+# 		tag = JAP
 # 		CHI = {
 # 			exists = yes
 # 			has_capitulated = no
@@ -39,41 +74,3 @@
 # 			}
 # 		}
 # 	}
-
- 	ai_strategy = {
- 		type = operative_operation
- 		operation = operation_collaboration_government
- 		value = 1200
- 		operation_target = CHI
- 	}
-	
- 	ai_strategy = {
- 		type = operative_mission
- 		mission = build_intel_network
- 		value = 1000
- 		mission_target = CHI
- 	}
-
-  	ai_strategy = {
- 		type = intelligence_agency_usable_factories
- 		value = 40
- 	}
-
-      ai_strategy = {
-            type = intelligence_agency_branch_desire_factor
-            id = branch_defense
-            value = 1000
-  }
-
-      ai_strategy = {
-         type = intelligence_agency_branch_desire_factor
-         id = branch_crypto
-         value = 1000
-
-  }
-
-      ai_strategy = {
-           type = operation_equipment_priority
-           value = 1000
-      }
-}

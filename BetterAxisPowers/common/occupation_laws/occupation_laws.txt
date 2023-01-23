@@ -678,25 +678,7 @@ ss_police = {
 
 
 	ai_will_do = {
-		base = 250
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.3}
-			add = 200
-		}
-
-
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.44}
-
-			set_temp_variable = { requirement_limit = 0.35 }
-			if = {
-				limit = { occupation_law = local_police_force_garrison }
-				set_temp_variable = { requirement_limit = 0.55 }
-			}
-			check_variable = { garrison_min_support_ratio < requirement_limit }
-
-			add = 350
-		}
+		base = 10000
 	}
 }
 
@@ -724,24 +706,6 @@ ss_police_final = {
 
 
 	ai_will_do = {
-		base = 250
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.3}
-			add = 200
-		}
-
-
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.44}
-
-			set_temp_variable = { requirement_limit = 0.35 }
-			if = {
-				limit = { occupation_law = local_police_force_garrison }
-				set_temp_variable = { requirement_limit = 0.55 }
-			}
-			check_variable = { garrison_min_support_ratio < requirement_limit }
-
-			add = 350
-		}
+		base = 1000
 	}
 }

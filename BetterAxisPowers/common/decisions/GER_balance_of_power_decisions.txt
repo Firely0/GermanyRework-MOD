@@ -15,6 +15,18 @@ GER_balance_of_power_category = {
 			GER_bop_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}
+
 		visible = { has_full_control_of_state = 16 }
 		
 	}
@@ -33,6 +45,18 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
 		}
 
 		visible = { has_full_control_of_state = 126 }
@@ -55,6 +79,18 @@ GER_balance_of_power_category = {
 		GER_bop_low_increase_effect = yes
 	}
 
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 10
+			has_political_power = 150
+		}
+		modifier = {
+			factor = 100
+			has_war = no
+		}
+	}
+
 	visible = { has_full_control_of_state = 4 }
 	
     }
@@ -73,6 +109,18 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
 		}
 
 		visible = { has_full_control_of_state = 219 }
@@ -96,6 +144,18 @@ GER_balance_of_power_category = {
 	}
 
 	visible = { has_full_control_of_state = 217 }
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}    
 	
     }
 
@@ -116,6 +176,18 @@ GER_balance_of_power_category = {
 	}
 
 	visible = { has_full_control_of_state = 195 }
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power = 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}
 	
     }
 
@@ -127,13 +199,25 @@ GER_balance_of_power_category = {
 		original_tag = GER
 	}
 
-	cost = 50
+	cost = 0
 
-	fire_only_once = yes
+	days_re_enable = 180
 
 	complete_effect = {
 		GER_bop_low_increase_effect = yes
         ITA = { ITA_bop_very_low_increase_effect = yes }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 1000
+			has_political_power = 1
+		}
+		modifier = {
+			factor = 1000
+			has_war = no
+		}
 	}
 
 	visible = { 2 = { is_fully_controlled_by = ITA } is_ally_with = ITA }
@@ -176,6 +260,21 @@ GER_balance_of_power_category = {
 			GER_bop_very_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
+		}
+
 		visible = { has_completed_focus = GER_Fuhrer  has_war_with_major = yes }
 		
 	}
@@ -196,6 +295,21 @@ GER_balance_of_power_category = {
 			GER_bop_very_low_increase_effect = yes
 		}
 
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
+		}
+
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
 		
 	}
@@ -214,6 +328,21 @@ GER_balance_of_power_category = {
 
 		complete_effect = {
 			GER_bop_very_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = GER_power_balance 
+					value < -0.11
+				}
+			}
+			modifier = {
+				factor = 10
+				has_political_power = 200
+			}
 		}
 
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
@@ -240,6 +369,191 @@ GER_balance_of_power_category = {
 		
 	}
 
+    GER_very_low_decrease_effect_a = {#Panzer Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		date > 1940.01.01
+		has_completed_focus = GER_Lighting_Strike
+	}
+
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 10
+			has_political_power = 110
+		}
+		modifier = {
+			factor = 100
+			random_country_division = {
+				limit = {
+					OR = {
+						division_has_battalion_in_template = medium_armor
+					}
+					division_has_battalion_in_template = motorized
+					is_unit_template_reserves = no
+					unit_strength > 0.5
+				}
+			}	
+		}
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_Panzer_Ace
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = medium_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Elite Panzer Division."
+				subject = "Division Honor"
+				allow = yes
+			}
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}										
+		}
+	}
+	
+    }
+
+    GER_very_low_decrease_effect_b = {#Panzer Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		date > 1940.01.01
+		has_completed_focus = GER_Lighting_Strike
+	}
+
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 10
+			has_political_power = 110
+		}
+		modifier = {
+			factor = 100
+			random_country_division = {
+				limit = {
+					OR = {
+						division_has_battalion_in_template = medium_armor
+					}
+					division_has_battalion_in_template = motorized
+					is_unit_template_reserves = no
+					unit_strength > 0.5
+				}
+			}	
+		}
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_Panzer_Ace
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = medium_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Elite Panzer Division."
+				subject = "Division Honor 1"
+				allow = yes
+			}
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}										
+		}
+	}
+	
+    }
+
+    GER_very_low_decrease_effect_c = {#the Last Tiger Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		date > 1943.06.01
+		has_completed_focus = GER_Lighting_Strike 
+	}
+
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 100
+			random_country_division = {
+				limit = {
+					OR = {
+						division_has_battalion_in_template = heavy_armor
+					}
+					division_has_battalion_in_template = motorized
+					is_unit_template_reserves = no
+					unit_strength > 0.5
+				}
+			}	
+		}
+	}
+
+	cost = 0
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_Tiger_Ace
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = heavy_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Tiger "503" Ace Division."
+				subject = "the King Tiger"
+				allow = yes
+			}	
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_swords_and_diamonds
+			}									
+		}
+	}
+	
+    }
+
 	GER_high_decrease_effect_1 = {
 		priority = 90
 		icon = GFX_decision_ger_military_buildup
@@ -255,15 +569,15 @@ GER_balance_of_power_category = {
 		complete_effect = {
 			custom_effect_tooltip = add_equipment_effect
 			GER_bop_high_decrease_effect = yes
-			add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 1000
-		}
-			add_equipment_to_stockpile = {
-			type = artillery_equipment
-			amount = 250
-		}
-	}
+		    add_equipment_to_stockpile = {
+			 type = infantry_equipment
+			 amount = 1000
+		    }
+		    add_equipment_to_stockpile = {
+			 type = artillery_equipment
+			 amount = 250
+		    }
+	    }
 
 	  visible = { has_completed_focus = GER_form_the_reichskommissariats_a }
 		

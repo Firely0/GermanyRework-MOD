@@ -93,7 +93,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				is_in_faction_with = JAP
 				factor = 0 #GER-sempai has already noticed you!
@@ -147,7 +147,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-		}	
+			factor = 5
+			modifier = {
+				JAP = {
+					controls_state = 743
+				}
+				factor = 50 
+			}
+			modifier = {
+				MAN = {
+					controls_state = 743
+				}
+				factor = 50 
+			}
+		}
+
 		completion_reward = {
 			country_event = ger_request_qingdao.1
 		}
@@ -927,127 +941,113 @@ focus_tree = {
 		prerequisite = { focus = GER_danzig_or_war_v focus = GER_poland_friend_v }
 		
 		available = {
-			OR = {
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { BEL = { is_in_faction_with = GER } }
-				NOT = { LUX = { is_in_faction_with = GER } }
+			custom_trigger_tooltip = {
+				tooltip = GER_cap_pol_tt
+				always = no
 			}
 		}
 
 		bypass = {
-			HOL = {
+			POL = {
 				OR = {
 					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			BEL = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			LUX = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
 				}
 			}
 		}
 
-		historical_ai = {
-			date > 1939.1.1
-			NOT = {
-				any_home_area_neighbor_country = {
-					NOT = { tag = FRA }
-					has_war_with = ROOT
-					surrender_progress < 0.5
-				}
-			}
-		}
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = HOL
 		will_lead_to_war_with = LUX
 		will_lead_to_war_with = FRA
+
 		x = -1
 		y = 2
 		relative_position_id = GER_danzig_or_war_v
 		cost = 4
 		ai_will_do = {
 			factor = 10			
-			modifier = {
-				factor = 0.05
-				date < 1939.1.1
-			}			
-			modifier = {
-				factor = 0.2
-				any_home_area_neighbor_country = {
-					NOT = { tag = FRA }
-					has_war_with = ROOT
-					surrender_progress < 0.5
-				}
-			}
 		}	
 		completion_reward = {
-			#limit wargoals to when it makes sense to give them. No faction, war or non exist
-			if = { 
+			if = {
 				limit = {
-					country_exists = BEL
-					NOT = { BEL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = BEL }
+					has_country_flag = GER_OLD_PLAN
 				}
-				create_wargoal = {
-					type = take_state_focus
-					target = BEL
-					expire = 0
-					generator = { 6 }
-				}
-			}
-			if =  {
-				limit = {
-					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = HOL }
-					NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = HOL
-					expire = 0
-					generator = { 7 }
-				}
-			}
-			if =  {
-				limit = {
-					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = HOL }
-					HOL = { has_completed_focus = HOL_cave_to_the_germans } 
-					NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
-				}
-				HOL = {
-					country_event = { id = mtg_germany.1 hours = 6 }
+				GER = {
+					add_timed_idea = {
+						idea = GER_OLD_PLAN_IDEA
+						days = 120
+					}
 				}
 			}
 			if = {
 				limit = {
-					country_exists = LUX
-					NOT = { LUX = { is_in_faction_with = GER } }
-					NOT = { has_war_with = LUX }
+					has_country_flag = GER_BLITZ
 				}
-				create_wargoal = {
-					type = take_state_focus
-					target = LUX
-					expire = 0
-					generator = { 8 }
-				}			
+				GER = {
+					add_timed_idea = {
+						idea = GER_BLITZ
+						days = 120
+					}
+				}
 			}
-			hidden_effect = {
-				news_event = { hours = 6 id = news.234 }
-			}
+			else_if = {
+				if = { 
+					limit = {
+						country_exists = BEL
+						NOT = { BEL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = BEL }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = BEL
+						expire = 0
+						generator = { 6 }
+					}
+				}
+				if =  {
+					limit = {
+						country_exists = HOL
+						NOT = { HOL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = HOL }
+						NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = HOL
+						expire = 0
+						generator = { 7 }
+					}
+				}
+				if =  {
+					limit = {
+						country_exists = HOL
+						NOT = { HOL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = HOL }
+						HOL = { has_completed_focus = HOL_cave_to_the_germans } 
+						NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+					}
+					HOL = {
+						country_event = { id = mtg_germany.1 hours = 6 }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = LUX
+						NOT = { LUX = { is_in_faction_with = GER } }
+						NOT = { has_war_with = LUX }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = LUX
+						expire = 0
+						generator = { 8 }
+					}			
+				}
+				hidden_effect = {
+					news_event = { hours = 6 id = news.234 }
+				}
+			} 
+
 		}
 	}
 	
@@ -1614,7 +1614,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_danzig_vs_slovakia_v
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_generic_polish_deal
 		text = GER_danzig_vs_slovakia
 		prerequisite = { focus = GER_end_of_czechoslovakia_v }
 		mutually_exclusive = { focus = GER_danzig_or_war_v }
@@ -1702,6 +1702,9 @@ focus_tree = {
 					add_timed_idea = { idea = democratic_influence days = 1095 }
 				}
 				country_event = { id = generic.1 }
+			}
+			GER = {
+				complete_national_focus = GER_around_maginot_v
 			}
 		}
 	}
@@ -3704,7 +3707,7 @@ focus_tree = {
 		x = 26
 		y = 3
 		relative_position_id = GER_Fuhrer
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}	
@@ -3783,14 +3786,17 @@ focus_tree = {
 		y = 1
 
 		cost = 5
+
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
 		ITA = {
           NOT = { has_government = ROOT is_in_faction_with = GER }
 		  }
 		}
+
 		completion_reward = {
 			ITA = { 
 				add_timed_idea = {
@@ -3859,7 +3865,7 @@ focus_tree = {
 					has_completed_focus = GER_china_friend_v
 				}
 			}
-			event_target:WTT_current_china_leader = { 
+			WTT_current_china_leader = { 
 				add_timed_idea = {
 					idea = ITA_stockpiling_fuel
 					days = 120
@@ -4781,8 +4787,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
+			NOT = { is_in_faction_with = GER }
 		}
+
 		completion_reward = {
 			TUR = { 
 				add_timed_idea = {
@@ -4808,8 +4817,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
 		}
+
 		completion_reward = {
 			if = {
 				limit = {
@@ -4862,6 +4873,7 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 			country_exists = TUR
+			NOT = { has_war_with = TUR }
 			NOT = { has_completed_focus = GER_turkey_friend_V }
 		}
 		x = -4
@@ -4947,6 +4959,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				set_technology = { mobile_warfare = 1 popup = no }
+			}
 			add_country_leader_trait = DealBraker
 			set_power_balance = {
 				id = GER_power_balance
@@ -5030,6 +5048,13 @@ focus_tree = {
 		completion_reward = {
 			GER = { remove_ideas = kinder_kuche_kirche }
 			GER = { add_ideas = tot_economic_mobilisation }
+			hidden_effect = {
+				limit = {
+					is_ai = yes
+				}
+				add_stability = 10
+				add_war_support = 15
+			}
 		}
 	}
 
@@ -5042,7 +5067,7 @@ focus_tree = {
 		relative_position_id = GER_SS
 		x = -8
 		y = -0
-		cost = 10
+		cost = 3
 
 		available = {
 			has_government = fascism
@@ -5248,7 +5273,6 @@ focus = {
 	focus = {
 		id = GER_Integrate_Army
 		icon = GFX_focus_generic_military_mission
-		text = GER_Working_on
 		available = {
 			UKR = {
 				is_subject_of = GER
@@ -5256,7 +5280,7 @@ focus = {
 			BLR = {
 				is_subject_of = GER
 			}
-			always = no
+			surrender_progress < 0.01
 		}
 		prerequisite = { focus = GER_Belarus }
 		prerequisite = { focus = GER_Ukraine }
@@ -5269,6 +5293,7 @@ focus = {
 		}
 		
 		completion_reward = {
+			add_country_leader_trait = ReDrawBorders
 		}
 	}
 
@@ -5345,7 +5370,7 @@ focus = {
 		relative_position_id = GER_anti_comitern_pactV
 		cost = 10
 		ai_will_do = {
-			factor = 2.5
+			factor = 0
 			modifier ={
 				factor = 0.1
 				has_idea = SOV_soviet_german_trade_agreement

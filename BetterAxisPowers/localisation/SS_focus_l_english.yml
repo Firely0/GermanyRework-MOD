@@ -1,13 +1,49 @@
 ﻿l_english:
- #TEST_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§!
- #by:\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+5%§! "
 
- SS_consumer_goods_factor_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \§wConsumer Goods Factories§!: §G-5%§!"
- SS_consumer_goods_factor_a_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \§wConsumer Goods Factories§!: §G-5%§!"
- SS_FreeRepair_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \§wFree Repair§!: §G+15%§!"
- SS_ResearchSpeed_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by:\§w Research Speed§!: §G+6%§!"
+ SS_consumer_goods_factor_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§wConsumer Goods Factories§!: §G-5%§! \n§!§HCivilian Factory §!Construction Speed: §G+5%§!"
+
+ SS_consumer_goods_factor_a_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§wConsumer Goods Factories§!: §G-5%§! \n§!§HCivilian Factory §!Construction Speed: §G+10%§!"
+
+ SS_Military_Focus_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HMilitary Factory §!Construction Speed: §G+5%§! \n§HNaval Dockyard §!Construction Speed: §G+5%§! \n§HDockyard §!And §HMilitary §!Output§!: §G+5%§!"
+
+ SS_Military_Focus_a_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HMilitary Factory §!Construction Speed: §G+10%§! \n§HNaval Dockyard §!Construction Speed: §G+10%§! \n§HDockyard §!And §HMilitary §!Output§!: §G+5%§!"
+
+ SS_build_inf_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HInfrastructure §!And §HRailway §!Construction Speed§! §G+10%§!"
+ SS_FreeRepair_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by: \n§HFree Repair§!: §G+15%§!"
+ SS_ResearchSpeed_tt:0 "Modify §Y$SS_Eco_dynamic_modifier$§! by:\n§H Research Speed§!: §G+6%§!"
+
+ #UKR Army Idea Tooltip
+ SS_UKR_Adopt_Fast_Mobilization_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HTraining Time §!§G-20%§!"
+
+ SS_UKR_rebuild_command_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HMaximum Command Power §!§G+25§! \n§HTraining Time §!§G-10%§! \n§HMinimum Training §!§G-10%§! "
+
+ SS_UKR_ReOrg_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HOrg Lost When Moving §!§G-10%§! \n§HLand Army Speed §!§G+5%§!"
+
+ SS_UKR_Adaptable_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \n§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§  \n§HEncircled Penalty §!§G-20%§! \n§HExperience Lost in Combat §!Factor §G-10%§!"
+
+ SS_UKR_Glory_Of_Army_tt:0 "Modify §Y$SS_UKR_Army_dynamic_modifier$§! by: \nArmy §HAttack §!And §HDefence §!Factor §G+20%§!"
+
+ SS_UKR_Tank_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmor Speed §!And §HArmy Breakthrough §!§G+5%§!"
+
+ #BLR Army Idea Tooltip
+ SS_BLR_Adopt_Fast_Mobilization_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HTraining Time §!§G-20%§!"
+
+ SS_BLR_rebuild_command_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HMaximum Command Power §!§G+25§! \n§HTraining Time §!§G-10%§! \n§HMinimum Training §!§G-10%§! "
+
+ SS_BLR_ReOrg_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HOrg Lost When Moving §!§G-10%§! \n§HLand Army Speed §!§G+5%§!"
+
+ SS_BLR_Adaptable_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HTerrain Penalty And Cold Climate & Hot Climate Gain Factor §!§G+15%§  \n§HEncircled Penalty §!§G-20%§! \n§HExperience Lost in Combat §!§G-10%§!"
+
+ SS_BLR_Glory_Of_Army_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \nArmy §HAttack §!And §HDefence §!Factor §G+20%§!"
+
+ SS_BLR_Tank_tt:0 "Modify §Y$SS_BLR_Army_dynamic_modifier$§! by: \n§HArmor Speed §!And §HArmy Breakthrough §!§G+5%§!"
 
  SS_Eco_dynamic_modifier:0 "Industry Plan"
+ SS_UKR_Army_dynamic_modifier:0 "Ukrainian Ground Forces"
+ SS_BLR_Army_dynamic_modifier:0 "Belarusian Ground Forces"
+
+ SS_Mass_Production_Idea:0 "Mass Production"
+ SS_Mass_Production_Idea_a:0 "Mass Production"
  SS_End_Of_Puppet_tt:0 "With This Focus We Become §GFree§!. But Our Focus Tree Chanced to; §RGeneric§!."
 
  SS_Axis_Missions:0 "Axis Missions"
@@ -16,6 +52,39 @@
 
  SS_End_Of_Puppet:0 "For Our Own"
  SS_New_World_Order:0 "Follow The New World Order"
+
+ SS_Mission_to_Germany:0 "Approach Germany"
+ SS_Mission_to_Germany_desc:0 ""
+
+ SS_Mobile_Warfare:0 "Adopt Mobile Warfare Doctrine"
+ SS_Mobile_Warfare_desc:0 ""
+ SS_Tank:0 "Focus on Tanks"
+ SS_Tank_desc:0 ""
+ SS_Mobile_Inf:0 "Focus on Mobile Infantary"
+ SS_Mobile_Inf_desc:0 ""
+ SS_Mass_Production:0 "Mass Production"
+ SS_Mass_Production_desc:0 ""
+
+ SS_Mission_to_Italy:0 "Approach Italy"
+ SS_Mission_to_Italy_desc:0 ""
+
+ SS_Rebuild_Air:0 "Rebuild Air Forces"
+ SS_Rebuild_Air_desc:0 ""
+ SS_fighter_focus:0 "Fighter Focus"
+ SS_fighter_focus_desc:0 ""
+ SS_bomber_focus:0 "Bomber Focus"
+ SS_bomber_focus_desc:0 ""
+ SS_aviation_effort_2:0 "Aviation Effort"
+ SS_aviation_effort_2_desc:0 ""
+
+ SS_ITA_Fleet:0 "Rebuild Navy"
+ SS_ITA_Fleet_desc:0 ""
+ SS_Air_Fleet:0 "Base Strike"
+ SS_Fleet_in_being:0 "Fleet in Being"
+ SS_Fleet_in_beign_desc:0 ""
+ SS_Support_Ships:0 "Develop Support Ships"
+ SS_Support_Ships_desc:0 ""
+
 
  SS_industry:0 "Industry Plan"
  SS_industry_desc:0 ""
@@ -67,3 +136,21 @@
  #No Rush for Berlin 
  SS_Road_to_Berlin:0 "Berlin Railroad"
  SS_Road_to_Berlin_desc:0 ""
+
+ SS_Rebuild_Army:0 "Rebuild Army"
+ SS_Rebuild_Army_desc:0 ""
+ SS_Adopt_Fast_Mobilization:0 "Fast Mobilization Plan"
+ SS_Adopt_Fast_Mobilization_desc:0 ""
+ SS_Adopt_Gorrila_Warfare:0 "Adopt Doctrine"
+ SS_Adopt_Gorrila_Warfare_desc:0 ""
+ SS_Rebuild_Command:0 "Rebuild Military Command"
+ SS_Rebuild_Command_desc:0 ""
+ SS_Adaptable_Army:0 "An Adaptable Army"
+ SS_Adaptable_Army_desc:0 ""
+ SS_ReOrg_Army:0 "Military Reorganization"
+ SS_ReOrg_Army_desc:0 ""
+ SS_Glory_Of_Army:0 "The Glory Of the *"
+ SS_Glory_Of_Army_desc:0 ""
+ SS_Army_Research_Department:0 "Research And Education Department"
+ SS_Army_Research_Department_desc:0 ""
+

@@ -1,6 +1,7 @@
 add_namespace = gerb
 add_namespace = ger_lost_core
 add_namespace = ger_request_qingdao
+add_namespace = ger_around_maginot_event
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -99,7 +100,7 @@ country_event = {
   is_triggered_only = yes
 
 	option = { 
-		name = "Ok"
+		name = "We Will Together Again Soon..."
 
 		GER_bop_medium_decrease_effect = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
@@ -491,6 +492,139 @@ country_event = {
 		hidden_effect = {
 			news_event = { hours = 6 id = news.216 }
 		}
+	}
+}
+
+country_event = {
+  id = ger_around_maginot_event.1
+  title = "War With France"
+  desc = "GER_Around_ds"
+
+  picture = GFX_report_event_german_troops
+
+  is_triggered_only = yes
+
+  will_lead_to_war_with = BEL
+  will_lead_to_war_with = HOL
+  will_lead_to_war_with = LUX
+  will_lead_to_war_with = FRA
+  
+    option = {
+		name = ger_around_maginot_event.1.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 100
+				has_completed_focus = GER_tank_warfare
+			}
+		}
+		if = { 
+			limit = {
+				country_exists = BEL
+				NOT = { BEL = { is_in_faction_with = GER } }
+				NOT = { has_war_with = BEL }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+				expire = 0
+				generator = { 6 }
+			}
+		}
+		if =  {
+			limit = {
+				country_exists = HOL
+				NOT = { HOL = { is_in_faction_with = GER } }
+				NOT = { has_war_with = HOL }
+				NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = HOL
+				expire = 0
+				generator = { 7 }
+			}
+		}
+		if =  {
+			limit = {
+				country_exists = HOL
+				NOT = { HOL = { is_in_faction_with = GER } }
+				NOT = { has_war_with = HOL }
+				HOL = { has_completed_focus = HOL_cave_to_the_germans } 
+				NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+			}
+			HOL = {
+				country_event = { id = mtg_germany.1 hours = 6 }
+			}
+		}
+		if = {
+			limit = {
+				country_exists = LUX
+				NOT = { LUX = { is_in_faction_with = GER } }
+				NOT = { has_war_with = LUX }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LUX
+				expire = 0
+				generator = { 8 }
+			}			
+		}
+		set_country_flag = GER_BLITZ
+		complete_national_focus = GER_around_maginot_v
+		hidden_effect = {
+			news_event = { hours = 6 id = news.234 }
+		}
+	}
+
+    option = {
+	name = ger_around_maginot_event.1.b
+
+	ai_chance = {
+		factor = 0
+    modifier = {
+        factor = 80
+        has_completed_focus = GER_Battle_Plan
+    }
+    modifier = {
+        factor = 100
+        has_completed_focus = GER_better_supply
+    }
+
+	}
+
+		if = { 
+			limit = {
+				country_exists = BEL
+				NOT = { BEL = { is_in_faction_with = GER } }
+				NOT = { has_war_with = BEL }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+				expire = 0
+				generator = { 6 }
+			}
+		}
+		if = {
+			limit = {
+				country_exists = LUX
+				NOT = { LUX = { is_in_faction_with = GER } }
+				NOT = { has_war_with = LUX }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LUX
+				expire = 0
+				generator = { 8 }
+			}			
+		}
+		set_country_flag = GER_OLD_PLAN
+		complete_national_focus = GER_around_maginot_v
+		hidden_effect = {
+			news_event = { hours = 6 id = news.234 }
+		}
+
 	}
 }
 

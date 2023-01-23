@@ -22,12 +22,15 @@
 		relative_position_id = SS_industry
 		x = 6
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = SS_build_inf_tt
+			set_variable = { SS_production_speed_infrastructure_factor = 0.1 }
+			set_variable = { SS_production_speed_rail_way_factor = 0.1 }
 		}
 	}
 
@@ -131,12 +134,19 @@
 		relative_position_id = SS_Inf
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_railway_innovations
+				ahead_reduction = 1.5
+				bonus = 1
+				uses = 1
+				category = train_tech
+			}
 		}
 	}
 
@@ -153,6 +163,8 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 
@@ -163,7 +175,7 @@
 		relative_position_id = SS_Build_Industry
 		x = -2
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -171,6 +183,7 @@
 		completion_reward = {
 		    custom_effect_tooltip = SS_consumer_goods_factor_tt
 			set_variable = { SS_consumer_goods_factor = 0.05 }
+			set_variable = { SS_production_speed_industrial_complex_factor = -0.1 }
 		}
 	}
 
@@ -252,6 +265,7 @@
 		completion_reward = {
 		    custom_effect_tooltip = SS_consumer_goods_factor_a_tt
 			set_variable = { SS_consumer_goods_factor = 0.0 }
+			set_variable = { SS_production_speed_industrial_complex_factor = 0 }
 		}
 	}
 
@@ -262,18 +276,17 @@
 		relative_position_id = SS_Build_Industry
 		x = 2
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
+			custom_effect_tooltip = SS_Military_Focus_tt
+			set_variable = { SS_industrial_capacity_dockyard = -0.05 }
+			set_variable = { SS_industrial_capacity_factory = -0.05 }
+			set_variable = { SS_production_speed_arms_factory_factor = -0.1 }
+			set_variable = { SS_production_speed_dockyard_factor = -0.1}
 		}
 	}
 
@@ -347,18 +360,17 @@
 		relative_position_id = SS_Arms_Industry
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
+			custom_effect_tooltip = SS_Military_Focus_a_tt
+			set_variable = { SS_industrial_capacity_dockyard = 0 }
+			set_variable = { SS_industrial_capacity_factory = 0 }
+			set_variable = { SS_production_speed_arms_factory_factor = 0 }
+			set_variable = { SS_production_speed_dockyard_factor = 0 }
 		}
 	}	
 
@@ -370,7 +382,7 @@
 		relative_position_id = SS_Build_Industry
 		x = 0
 		y = 4
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -388,7 +400,7 @@
 		relative_position_id = SS_industry
 		x = -6
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -457,7 +469,7 @@
 		relative_position_id = SS_Repair_Home
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -474,7 +486,7 @@
 		relative_position_id = SS_Repair_Home
 		x = 0
 		y = 3
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -527,17 +539,17 @@
 		relative_position_id = SS_Mission_to_Germany
 		x = -3
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
-				category = industry
+				category = cat_mobile_warfare
 			}
 		}
 	}
@@ -554,13 +566,29 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = armor_bonus
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = armor
+			}
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_Tank_tt
+				set_variable = { SS_UKR_army_armor_speed_factor = 0.05 }
+				set_variable = { SS_UKR_breakthrough_factor = 0.05 }
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_Tank_tt
+				set_variable = { SS_BLR_army_armor_speed_factor = 0.05 }
+				set_variable = { SS_BLR_breakthrough_factor = 0.05 }
 			}
 		}
 	}
@@ -577,13 +605,13 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = motorized_bonus
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = motorized_equipment
 			}
 		}
 	}
@@ -595,17 +623,23 @@
 		relative_position_id = SS_Tank
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+				 has_completed_focus = SS_Tank
+			    }
+				add_ideas = SS_Mass_Production_Idea
+			}
+			if = {
+				limit = {
+				 has_completed_focus = SS_Mobile_Inf
+			    }
+				add_ideas = SS_Mass_Production_Idea_a
 			}
 		}
 	}
@@ -640,18 +674,17 @@
 		relative_position_id = SS_Axis_Missions
 		x = -0
 		y = 2
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			air_experience = 50
 		}
 	}
 
 	shared_focus = {
-		id = fighter_focusa
+		id = SS_fighter_focus
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = SS_Rebuild_Air }
 		mutually_exclusive = { focus = bomber_focusa }
@@ -660,7 +693,7 @@
 		relative_position_id = SS_Rebuild_Air
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -676,7 +709,7 @@
 	}
 
 	shared_focus = {
-		id = bomber_focusa
+		id = SS_bomber_focus
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = SS_Rebuild_Air }
 		mutually_exclusive = { focus = fighter_focusa }
@@ -701,15 +734,15 @@
 	}
 
 	shared_focus = {
-		id = aviation_effort_2a
+		id = SS_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = bomber_focusa focus = fighter_focusa }
+		prerequisite = { focus = SS_bomber_focus focus = SS_fighter_focus }
 		x = -1
 		y = 1
-		relative_position_id = bomber_focusa
+		relative_position_id = SS_bomber_focus
 		cost = 10
 
-		search_filters = {   FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -794,11 +827,10 @@
 		icon = GFX_focus_generic_little_entente
 		x = -16
 		y = 0
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			army_experience = 50
 		}
@@ -817,13 +849,24 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_rebuild_command_tt
+				set_variable = { SS_UKR_max_command_power = 25 }
+				set_variable = { SS_UKR_army_minimum_training_level = -0.1 }
+				set_variable = { SS_UKR_training_time_factor = -0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_rebuild_command_tt
+				set_variable = { SS_BLR_max_command_power = 25 }
+				set_variable = { SS_BLR_army_minimum_training_level = -0.1 }
+				set_variable = { SS_BLR_training_time_factor = -0.1 }  
 			}
 		}
 	}
@@ -831,22 +874,24 @@
 	shared_focus = {
 		id = SS_Inf_Effort_Main
 		icon = GFX_goal_generic_axis_build_infantry
+		text = army_effort
 		prerequisite = { focus = SS_Adopt_Fast_Mobilization }
 		prerequisite = { focus = SS_Army_Research_Department }
 		relative_position_id = SS_Army_Research_Department
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = infantry_artillery_bonus
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = infantry_weapons
+				category = artillery
 			}
 		}
 	}
@@ -854,6 +899,7 @@
 	shared_focus = {
 		id = SS_Inf_Effort
 		icon = GFX_goal_generic_army_artillery2
+		text = equipment_effort_3
 		prerequisite = { focus = SS_Inf_Effort_Main }
 		relative_position_id = SS_Inf_Effort_Main
 		x = -1
@@ -862,13 +908,14 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = artillery
 			}
 		}
 	}
@@ -876,6 +923,7 @@
 	shared_focus = {
 		id = SS_Inf_Efforta
 		icon = GFX_goal_generic_small_arms
+		text = equipment_effort
 		prerequisite = { focus = SS_Inf_Effort_Main }
 		relative_position_id = SS_Inf_Effort_Main
 		x = 1
@@ -884,36 +932,38 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = infantry_weapons
 			}
 		}
 	}
 
 	shared_focus = {
 		id = SS_Doctrine
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_army_doctrines
+		text = doctrine_effort
 		prerequisite = { focus = SS_Inf_Effort }
 		prerequisite = { focus = SS_Inf_Efforta }
 		relative_position_id = SS_Inf_Effort_Main
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
 				uses = 2
-				category = industry
+				category = land_doctrine
 			}
 		}
 	}
@@ -925,17 +975,24 @@
 		relative_position_id = SS_Rebuild_Army
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_Adopt_Fast_Mobilization_tt
+				set_variable = { SS_UKR_training_time_factor = -0.1 }
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_Adopt_Fast_Mobilization_tt
+				set_variable = { SS_BLR_training_time_factor = -0.1 }
 			}
 		}
 	}
@@ -947,17 +1004,17 @@
 		relative_position_id = SS_Rebuild_Army
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
 				uses = 2
-				category = industry
+				category = land_doctrine
 			}
 		}
 	}
@@ -968,18 +1025,13 @@
 		relative_position_id = SS_Rebuild_Army
 		x = 4
 		y = 0
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
+			add_research_slot = 1
 		}
 	}
 
@@ -994,13 +1046,28 @@
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_Adaptable_Army_tt
+				set_variable = { SS_UKR_terrain_penalty_reduction = 0.15 }
+				set_variable = { SS_UKR_acclimatization_cold_climate_gain_factor = 0.15 }
+				set_variable = { SS_UKR_acclimatization_hot_climate_gain_factor = 0.15 } 
+				set_variable = { SS_UKR_pocket_penalty = -0.2 }
+				set_variable = { SS_UKR_experience_loss_factor  = -0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_Adaptable_Army_tt
+				set_variable = { SS_BLR_terrain_penalty_reduction = 0.15 }
+				set_variable = { SS_BLR_acclimatization_cold_climate_gain_factor = 0.15 }
+				set_variable = { SS_BLR_acclimatization_hot_climate_gain_factor = 0.15 } 
+				set_variable = { SS_BLR_pocket_penalty = -0.2 }
+				set_variable = { SS_BLR_experience_loss_factor  = -0.1 } 
 			}
 		}
 	}
@@ -1010,19 +1077,29 @@
 		icon = GFX_focus_generic_military_mission
 		relative_position_id = SS_Rebuild_Army
 		prerequisite = { focus = SS_Rebuild_Command }
+		cancelable = no
 		x = 0
 		y = 4
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_ReOrg_Army_tt
+				set_variable = { SS_UKR_org_loss_when_moving  = -0.1 }
+				set_variable = { SS_UKR_army_speed_factor  = 0.05 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_ReOrg_Army_tt
+				set_variable = { SS_BLR_org_loss_when_moving  = -0.1 }
+				set_variable = { SS_BLR_army_speed_factor  = 0.05 } 
 			}
 		}
 	}
@@ -1035,17 +1112,26 @@
 		prerequisite = { focus = SS_Doctrine }
 		x = 2
 		y = 5
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_Glory_Of_Army_tt
+				set_variable = { SS_UKR_atack_factor = 0.1 } 
+				set_variable = { SS_UKR_defance_factor = 0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_Glory_Of_Army_tt
+				set_variable = { SS_BLR_atack_factor = 0.1 } 
+				set_variable = { SS_BLR_defance_factor = 0.1 } 
 			}
 		}
 	}
@@ -1057,18 +1143,13 @@
 		relative_position_id = SS_Mission_to_Italy 
 		x = 3
 		y = 1
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
+			navy_experience = 50
 		}
 	}
 
@@ -1080,17 +1161,17 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = cv_bonus
 				bonus = 1.0
 				uses = 2
-				category = industry
+				category = cv_tech
 			}
 		}
 	}
@@ -1102,17 +1183,24 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = bc_bonus
 				bonus = 1.0
-				uses = 2
-				category = industry
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				name = bb_bonus
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+				category = shbb_tech
 			}
 		}
 	}
@@ -1124,17 +1212,23 @@
 		relative_position_id = SS_ITA_Fleet 
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = cl_bonus
 				bonus = 1.0
 				uses = 2
-				category = industry
+				category = cl_tech
 			}
 		}
 	}

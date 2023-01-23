@@ -1,0 +1,75 @@
+SS_Belarus_plan = {
+	name = "SS-Belarus"
+	desc = "SS Focus behavior for Belarus"
+
+	allowed = {
+		original_tag = BLR
+	}
+	enable = {
+		is_puppet_of = GER
+	}
+	abort = {
+		NOT = { is_puppet_of = GER }
+	}
+	
+	ai_national_focuses = {
+		SS_Axis_Missions
+		SS_Mission_to_Germany
+		SS_Rebuild_Army
+		SS_Adopt_Fast_Mobilization
+		SS_Adopt_Gorrila_Warfare
+		SS_Rebuild_Command
+		SS_ReOrg_Army
+		SS_industry
+		SS_Repair_Home
+		SS_Fund_Locals
+		SS_Mission_to_Italy
+		SS_Rebuild_Air
+		SS_Inf
+		SS_Build_Hospital
+		SS_Build_School
+		SS_Build_University
+		SS_Build_Industry
+		SS_Arms_Industry
+		SS_Arms_Industry_a
+		SS_Arms_Industry_b
+		SS_Arms_Industry_plan
+		SS_Civilian_Industry
+		SS_Civlian_Industry_a
+		SS_Civlian_Industry_b
+		SS_Civilian_Industry_plan
+		SS_Arms_Industry_War_Eco
+		SS_Inf_a
+		SS_Inf_b
+		SS_Army_Research_Department
+		SS_Inf_Effort_Main
+		SS_Inf_Effort
+		SS_Inf_Efforta
+		SS_Doctrine
+		SS_Glory_Of_Army
+
+		SS_Road_to_Berlin
+
+	}
+
+	focus_factors = {
+	 SS_End_Of_Puppet = 0
+	}
+
+	research = {
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
