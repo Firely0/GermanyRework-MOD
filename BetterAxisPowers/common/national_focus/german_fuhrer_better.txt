@@ -943,7 +943,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_cap_pol_tt
-				always = no
+				NOT = { has_completed_focus = GER_danzig_or_war_v }
 			}
 		}
 
