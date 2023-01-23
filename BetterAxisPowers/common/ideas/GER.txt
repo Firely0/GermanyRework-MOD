@@ -18,6 +18,48 @@ ideas = {
 			}
 		}
 
+		GER_OLD_PLAN_IDEA = {
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			removal_cost = -1
+				
+			modifier = {
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+				land_night_attack = 0.1
+				combat_width_factor = 0.05
+			}
+		}
+
+		GER_BLITZ = {
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			removal_cost = -1
+				
+			modifier = {
+				breakthrough_factor = 0.1
+				coordination_bonus = 0.05
+				initiative_factor = 0.01
+				org_loss_when_moving = -0.2
+			}
+		}
+
 		kinder_kuche_kirche = {
 			picture = generic_neutrality_drift_bonus
 				

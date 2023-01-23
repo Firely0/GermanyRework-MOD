@@ -982,21 +982,84 @@ focus_tree = {
 		cost = 4
 		ai_will_do = {
 			factor = 10			
-			modifier = {
-				factor = 0.05
-				date < 1939.1.1
-			}			
-			modifier = {
-				factor = 0.2
-				any_home_area_neighbor_country = {
-					NOT = { tag = FRA }
-					has_war_with = ROOT
-					surrender_progress < 0.5
-				}
-			}
 		}	
 		completion_reward = {
-			country_event = ger_around_maginot_event.1 
+			if = {
+				limit = {
+					has_country_flag = GER_OLD_PLAN
+				}
+				add_timed_idea = {
+					idea = GER_OLD_PLAN_IDEA
+					days = 120
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_BLITZ
+				}
+				add_timed_idea = {
+					idea = GER_BLITZ
+					days = 120
+				}
+			}
+			else_if = {
+				if = { 
+					limit = {
+						country_exists = BEL
+						NOT = { BEL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = BEL }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = BEL
+						expire = 0
+						generator = { 6 }
+					}
+				}
+				if =  {
+					limit = {
+						country_exists = HOL
+						NOT = { HOL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = HOL }
+						NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = HOL
+						expire = 0
+						generator = { 7 }
+					}
+				}
+				if =  {
+					limit = {
+						country_exists = HOL
+						NOT = { HOL = { is_in_faction_with = GER } }
+						NOT = { has_war_with = HOL }
+						HOL = { has_completed_focus = HOL_cave_to_the_germans } 
+						NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+					}
+					HOL = {
+						country_event = { id = mtg_germany.1 hours = 6 }
+					}
+				}
+				if = {
+					limit = {
+						country_exists = LUX
+						NOT = { LUX = { is_in_faction_with = GER } }
+						NOT = { has_war_with = LUX }
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = LUX
+						expire = 0
+						generator = { 8 }
+					}			
+				}
+				hidden_effect = {
+					news_event = { hours = 6 id = news.234 }
+				}
+			} 
+
 		}
 	}
 	

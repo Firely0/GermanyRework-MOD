@@ -570,6 +570,7 @@ country_event = {
 				generator = { 8 }
 			}			
 		}
+		set_country_flag = GER_BLITZ
 		hidden_effect = {
 			news_event = { hours = 6 id = news.234 }
 		}
@@ -617,6 +618,7 @@ country_event = {
 				generator = { 8 }
 			}			
 		}
+		set_country_flag = GER_OLD_PLAN
 		hidden_effect = {
 			news_event = { hours = 6 id = news.234 }
 		}
