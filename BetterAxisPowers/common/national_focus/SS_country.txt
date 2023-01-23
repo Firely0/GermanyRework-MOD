@@ -35,6 +35,85 @@ focus_tree = {
 	shared_focus = SS_Army_Research_Department
 
 	focus = {
+		id = SS_War_with_USSR
+		icon = GFX_goal_generic_war_with_comintern
+		x = 6
+		y = 0
+		cost = 1
+		
+		available = {
+			ROOT = {
+				has_war_with = SOV 
+			}
+			always = no
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		} 		
+	}
+
+	focus = {
+		id = SS_Work_with_SS
+		icon = GFX_goal_generic_dangerous_deal
+		x = 3
+		y = 1
+		cost = 1
+		
+		available = {
+			GER = {
+				has_completed_focus = GER_SS_Final_Focus
+			}
+			always = no
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		} 		
+	}
+
+	focus = {
+		id = SS_Voluntiers_for_War
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SS_Work_with_SS }
+		x = 1
+		y = 2
+		cost = 1
+		
+		available = {
+			GER = {
+				has_completed_focus = GER_SS_Final_Focus
+			}
+			always = no
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		} 		
+	}
+
+	focus = {
 		id = SS_End_Of_Puppet
 		icon = GFX_goal_generic_military_sphere
 		mutually_exclusive = { focus = SS_New_World_Order }
@@ -46,6 +125,7 @@ focus_tree = {
 			ROOT = {
 				NOT = { has_war_with = SOV }
 			}
+			always = no
 		}
 
 		bypass = {
@@ -73,6 +153,7 @@ focus_tree = {
 		cost = 1
 		
 		available = {
+			always = no
 		}
 
 		bypass = {

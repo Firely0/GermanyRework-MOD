@@ -369,6 +369,150 @@ GER_balance_of_power_category = {
 		
 	}
 
+    GER_very_low_decrease_effect_a = {#Panzer Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+	}
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			has_political_power = 110
+		}
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_ACE
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = medium_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Elite Panzer Division."
+				subject = "Division Honor"
+				allow = yes
+			}
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}										
+		}
+	}
+
+	visible = { has_completed_focus = GER_Lighting_Strike }
+	
+    }
+
+    GER_very_low_decrease_effect_b = {#Tiger Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+	}
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			has_political_power = 110
+		}
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_ACE
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = heavy_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Elite Panzer Division."
+				subject = "Division Honor"
+				allow = yes
+			}
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}										
+		}
+	}
+
+	visible = { has_completed_focus = GER_Lighting_Strike }
+	
+    }
+
+    GER_very_low_decrease_effect_c = {#the Last Tiger Ace
+	priority = 90
+	icon = GFX_decision_generic_tank
+
+	allowed = {
+		original_tag = GER
+		date = 1943.06.01
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	cost = 0
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_very_low_decrease_effect = yes
+		custom_effect_tooltip = GER_ACE
+		random_country_division = {
+			limit = {
+				OR = {
+					division_has_battalion_in_template = heavy_armor
+				}
+				division_has_battalion_in_template = motorized
+				is_unit_template_reserves = no
+				unit_strength > 0.5
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Elite Panzer Division."
+				subject = "Division Honor"
+				allow = yes
+			}
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}
+			add_history_entry = {
+				key = "This Unit has Been Recognised as an Tiger "503" Ace Division."
+				subject = "Division Honor"
+				allow = yes
+			}	
+			add_unit_medal_to_latest_entry = {
+				unit_medals = knights_cross_oak_leaves
+			}									
+		}
+	}
+
+	visible = { has_completed_focus = GER_Lighting_Strike }
+	
+    }
+
 	GER_high_decrease_effect_1 = {
 		priority = 90
 		icon = GFX_decision_ger_military_buildup
