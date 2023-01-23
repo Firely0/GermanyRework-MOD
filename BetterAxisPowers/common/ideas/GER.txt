@@ -35,7 +35,6 @@ ideas = {
 				max_planning_factor = 0.1
 				planning_speed = 0.1
 				land_night_attack = 0.1
-				combat_width_factor = 0.05
 			}
 		}
 
@@ -55,7 +54,7 @@ ideas = {
 			modifier = {
 				breakthrough_factor = 0.1
 				coordination_bonus = 0.05
-				initiative_factor = 0.01
+				initiative_factor = 0.1
 				org_loss_when_moving = -0.2
 			}
 		}

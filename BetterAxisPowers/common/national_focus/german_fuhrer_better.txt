@@ -948,25 +948,9 @@ focus_tree = {
 		}
 
 		bypass = {
-			HOL = {
+			POL = {
 				OR = {
 					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			BEL = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			LUX = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
 				}
 			}
 		}
