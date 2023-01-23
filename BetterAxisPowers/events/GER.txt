@@ -571,6 +571,7 @@ country_event = {
 			}			
 		}
 		set_country_flag = GER_BLITZ
+		complete_national_focus = GER_around_maginot_v
 		hidden_effect = {
 			news_event = { hours = 6 id = news.234 }
 		}
@@ -619,6 +620,7 @@ country_event = {
 			}			
 		}
 		set_country_flag = GER_OLD_PLAN
+		complete_national_focus = GER_around_maginot_v
 		hidden_effect = {
 			news_event = { hours = 6 id = news.234 }
 		}

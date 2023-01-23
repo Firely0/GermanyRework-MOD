@@ -988,18 +988,22 @@ focus_tree = {
 				limit = {
 					has_country_flag = GER_OLD_PLAN
 				}
-				add_timed_idea = {
-					idea = GER_OLD_PLAN_IDEA
-					days = 120
+				GER = {
+					add_timed_idea = {
+						idea = GER_OLD_PLAN_IDEA
+						days = 120
+					}
 				}
 			}
 			if = {
 				limit = {
 					has_country_flag = GER_BLITZ
 				}
-				add_timed_idea = {
-					idea = GER_BLITZ
-					days = 120
+				GER = {
+					add_timed_idea = {
+						idea = GER_BLITZ
+						days = 120
+					}
 				}
 			}
 			else_if = {
