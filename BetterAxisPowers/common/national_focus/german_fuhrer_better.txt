@@ -941,10 +941,9 @@ focus_tree = {
 		prerequisite = { focus = GER_danzig_or_war_v focus = GER_poland_friend_v }
 		
 		available = {
-			OR = {
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { BEL = { is_in_faction_with = GER } }
-				NOT = { LUX = { is_in_faction_with = GER } }
+			custom_trigger_tooltip = {
+				tooltip = GER_cap_pol_tt
+				always = no
 			}
 		}
 
