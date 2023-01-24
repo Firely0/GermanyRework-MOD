@@ -2726,7 +2726,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = GER_west_wall
 		cost = 10
@@ -3356,7 +3356,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = GER_west_wall
 		cost = 10
@@ -3704,6 +3704,627 @@ focus_tree = {
 							province = 11700
 							instant_build = yes
 						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_prepare_for_airwar
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = GER_west_wall }
+		available = {
+			has_tech = decimetric_radar
+			GER = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 60
+				has_full_control_of_state = 58
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 64 
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 60 
+					}
+				}
+				
+				60 = {
+					add_building_construction = {
+						type = radar_station 
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 58 
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Keep_Warmachine_going
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = GER_prepare_for_airwar }
+		mutually_exclusive = { focus = GER_protect_reichsautobahn }
+		available = {
+			GER = {
+				has_full_control_of_state = 75
+				has_full_control_of_state = 35
+				has_full_control_of_state = 30
+				has_full_control_of_state = 19
+				has_full_control_of_state = 16
+				has_full_control_of_state = 4
+			}
+			any_country = {
+				limit = {
+					tag = GER
+					is_in_faction_with = GER
+				}
+				has_full_control_of_state = 26
+				has_full_control_of_state = 75
+				has_full_control_of_state = 35
+				has_full_control_of_state = 30
+				has_full_control_of_state = 19
+				has_full_control_of_state = 16
+				has_full_control_of_state = 14
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_prepare_for_airwar
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 75 
+					}
+				}
+				75 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 30 
+					}
+				}
+				30 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 26 
+					}
+				}
+				26 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 19 
+					}
+				}
+				19 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 16 
+					}
+				}
+				16 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 14 
+					}
+				}
+				14 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 4 
+					}
+				}
+				4 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_protect_reichsautobahn
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = GER_prepare_for_airwar }
+		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
+		available = {
+			has_tech = decimetric_radar
+			GER = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 60
+				has_full_control_of_state = 59
+				has_full_control_of_state = 54
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_prepare_for_airwar
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 64 
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 60 
+					}
+				}
+				60 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = radar_station 
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 59 
+					}
+				}
+				59 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 54 
+					}
+				}
+				54 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_protect_Berlin
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = GER_Keep_Warmachine_going focus = GER_protect_reichsautobahn }
+		available = {
+			GER = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 68
+				has_full_control_of_state = 66
+				has_full_control_of_state = 65
+				has_full_control_of_state = 63
+				has_full_control_of_state = 62
+				has_full_control_of_state = 61
+				has_full_control_of_state = 58
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_prepare_for_airwar
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 64
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9456
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3499
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6521
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9496
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 375
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11444
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 68
+					}
+				}
+				68 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3572
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 66
+					}
+				}
+				66 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3438
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6595
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 552
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9570
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3485
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 65
+					}
+				}
+				65 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6441
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 514
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 573
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 63
+					}
+				}
+				63 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 6282
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 62
+					}
+				}
+				62 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9388
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 349
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3207
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 61
+					}
+				}
+				61 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9294
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 11305
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 321
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 58
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9320
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9347
+						instant_build = yes
 					}
 				}
 			}
