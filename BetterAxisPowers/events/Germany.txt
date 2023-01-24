@@ -4656,6 +4656,7 @@ country_event = {
 
 	option = {
 		name = germany.82.a
+		set_global_flag = GER_BLOCK_around_moginot
 		create_wargoal = {
 			type = take_state_focus
 			target = POL
@@ -4885,7 +4886,7 @@ country_event = {
 		}
 		GER = {
 			country_event = { id = germany.88 days = 1 }
-			set_country_flag = GER_BLOCK_around_moginot
+			set_global_flag = GER_BLOCK_around_moginot
 			if = {
 				limit = {
 					is_in_faction_with = POL
@@ -6081,6 +6082,7 @@ country_event = {
 		}
 		GER = {
 			country_event = { id = germany.116 days = 1 }
+			set_global_flag = GER_BLOCK_around_moginot
 			effect_tooltip = {
 				declare_war_on = {
 					target = POL

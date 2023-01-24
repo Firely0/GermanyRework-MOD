@@ -742,7 +742,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_demand_memel_v
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10	
 			modifier = {
@@ -943,7 +943,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_cap_pol_tt
-				NOT = { has_country_flag = GER_BLOCK_around_moginot }
+				NOT = { has_global_flag = GER_BLOCK_around_moginot }
 			}
 		}
 
@@ -1652,7 +1652,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_end_of_czechoslovakia_v
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0
 		}	
@@ -1686,7 +1686,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_danzig_vs_slovakia_v
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 0
 		}	
