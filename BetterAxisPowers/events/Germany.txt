@@ -4885,6 +4885,7 @@ country_event = {
 		}
 		GER = {
 			country_event = { id = germany.88 days = 1 }
+			set_country_flag = GER_BLOCK_around_moginot
 			if = {
 				limit = {
 					is_in_faction_with = POL
