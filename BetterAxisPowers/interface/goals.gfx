@@ -6,6 +6,21 @@ spriteTypes = {
 		name = "GFX_goal_Fuhrer"
 		texturefile = "gfx/interface/goals/Fuhrerfocus.dds"			
 	}
+
+	SpriteType = {
+		name = "GFX_goal_BerlinFocus"
+		texturefile = "gfx/interface/goals/GerFlagfort.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_keepsafeheavyindustry"
+		texturefile = "gfx/interface/goals/keepsafeheavyindustry.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_keepwarmachinegoing"
+		texturefile = "gfx/interface/goals/keepwarmachinegoing.dds"		
+	}
 	
 	SpriteType = {
 		name = "GFX_goal_belarus_deal"

@@ -3792,7 +3792,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Keep_Warmachine_going
-		icon = GFX_focus_generic_air_defense
+		icon = GFX_goal_keepwarmachinegoing
 		prerequisite = { focus = GER_prepare_for_airwar }
 		mutually_exclusive = { focus = GER_protect_reichsautobahn }
 		available = {
@@ -3810,15 +3810,6 @@ focus_tree = {
 					has_full_control_of_state = 16
 					has_full_control_of_state = 14
 					has_full_control_of_state = 4
-				}
-			}
-			GER = {
-
-			}
-			any_country = {
-				limit = {
-					tag = GER
-					is_in_faction_with = GER
 				}
 			}
 		}
@@ -3977,7 +3968,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_protect_reichsautobahn
-		icon = GFX_focus_generic_air_defense
+		icon = GFX_goal_keepsafeheavyindustry
 		prerequisite = { focus = GER_prepare_for_airwar }
 		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
 		available = {
@@ -4079,10 +4070,11 @@ focus_tree = {
 
 	focus = {
 		id = GER_protect_Berlin
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_goal_BerlinFocus
 		prerequisite = { focus = GER_Keep_Warmachine_going focus = GER_protect_reichsautobahn }
 		available = {
 			GER = {
+				surrender_progress < 0.25
 				has_full_control_of_state = 64
 				has_full_control_of_state = 68
 				has_full_control_of_state = 66
@@ -4256,6 +4248,12 @@ focus_tree = {
 						province = 6282
 						instant_build = yes
 					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6282
+						instant_build = yes
+					}
 				}
 			}
 			if = {
@@ -4284,6 +4282,12 @@ focus_tree = {
 						type = coastal_bunker
 						level = 2
 						province = 349
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 3440
 						instant_build = yes
 					}
 					add_building_construction = {
