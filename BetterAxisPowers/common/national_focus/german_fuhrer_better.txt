@@ -4074,7 +4074,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Keep_Warmachine_going focus = GER_protect_reichsautobahn }
 		available = {
 			GER = {
-				surrender_progress < 0.25
+				surrender_progress > 0.25
 				has_full_control_of_state = 64
 				has_full_control_of_state = 68
 				has_full_control_of_state = 66
