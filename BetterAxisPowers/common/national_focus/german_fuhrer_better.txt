@@ -3796,26 +3796,30 @@ focus_tree = {
 		prerequisite = { focus = GER_prepare_for_airwar }
 		mutually_exclusive = { focus = GER_protect_reichsautobahn }
 		available = {
+			any_country = {
+				OR = {
+					tag = GER
+					is_in_faction_with = GER
+				}
+				OR = {
+					has_full_control_of_state = 75
+					has_full_control_of_state = 35
+					has_full_control_of_state = 30
+					has_full_control_of_state = 26
+					has_full_control_of_state = 19
+					has_full_control_of_state = 16
+					has_full_control_of_state = 14
+					has_full_control_of_state = 4
+				}
+			}
 			GER = {
-				has_full_control_of_state = 75
-				has_full_control_of_state = 35
-				has_full_control_of_state = 30
-				has_full_control_of_state = 19
-				has_full_control_of_state = 16
-				has_full_control_of_state = 4
+
 			}
 			any_country = {
 				limit = {
 					tag = GER
 					is_in_faction_with = GER
 				}
-				has_full_control_of_state = 26
-				has_full_control_of_state = 75
-				has_full_control_of_state = 35
-				has_full_control_of_state = 30
-				has_full_control_of_state = 19
-				has_full_control_of_state = 16
-				has_full_control_of_state = 14
 			}
 		}
 		x = -1
@@ -3837,6 +3841,23 @@ focus_tree = {
 					}
 				}
 				75 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 35 
+					}
+				}
+				35 = {
 					add_building_construction = {
 						type = anti_air_building 
 						level = 1
@@ -3960,7 +3981,6 @@ focus_tree = {
 		prerequisite = { focus = GER_prepare_for_airwar }
 		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
 		available = {
-			has_tech = decimetric_radar
 			GER = {
 				has_full_control_of_state = 64
 				has_full_control_of_state = 60
