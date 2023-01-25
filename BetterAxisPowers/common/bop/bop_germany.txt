@@ -92,7 +92,7 @@ GER_power_balance = {
 			on_activate = {
 				if = {
 					limit = {
-						    has_idea = { Kaiser_idea }
+						    has_idea = { Kaiser_Idea }
 						}
 					hidden_effect = {
 						country_event = ger_fuhrer_end.1
