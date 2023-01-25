@@ -1095,7 +1095,12 @@ characters={
 			available = {
 				OR = {
 				 has_government = fascism
-				 has_country_flag = GER_Kaiser_in_Country
+				 
+				 custom_trigger_tooltip = {
+					tooltip = GER_Kaiser_in_Country_tt
+					has_country_flag = GER_Kaiser_in_Country
+					has_idea = Fuhrer_Idea
+				 }
 			    }
 			}
 			traits = {
@@ -1189,7 +1194,11 @@ characters={
 				or = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
-					has_country_flag = GER_Kaiser_in_Country
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					}
 				}
 			}
 			traits = {
@@ -1581,7 +1590,11 @@ characters={
 			available = {
 				OR = {
 					has_government = fascism
-					has_country_flag = GER_Kaiser_in_Country
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					}
 				   }
 				if = {
 					limit = {
@@ -1626,7 +1639,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership 
-					has_country_flag = GER_Kaiser_in_Country
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					}
 				}
 			}
 			traits = {
@@ -1659,7 +1676,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership
-					has_country_flag = GER_Kaiser_in_Country 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					} 
 				}
 			}
 			on_add = {
@@ -1688,7 +1709,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership
-					has_country_flag = GER_Kaiser_in_Country 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					} 
 				}
 			}
 			ai_will_do = {
@@ -1717,7 +1742,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership 
-					has_country_flag = GER_Kaiser_in_Country
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					}
 				}
 			}
 			traits = {
@@ -1790,8 +1819,12 @@ characters={
 			}
 			available = {
 				OR = {
-				  has_country_flag = GER_Kaiser_in_Country
 				  has_completed_focus = GER_revive_the_kaiserreich 
+				  custom_trigger_tooltip = {
+					tooltip = GER_Kaiser_in_Country_tt
+					has_country_flag = GER_Kaiser_in_Country
+					has_idea = Fuhrer_Idea
+				  }
 			    }
 			}
 			traits = {
@@ -1819,8 +1852,12 @@ characters={
 			}
 			available = {
 				OR = {
-					has_country_flag = GER_Kaiser_in_Country
 					has_completed_focus = GER_revive_the_kaiserreich 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+						has_idea = Fuhrer_Idea
+					}
 				}
 			}
 			traits = {
