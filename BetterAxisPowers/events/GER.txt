@@ -638,7 +638,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "§REliminate§! Possible Threat."
+		name = ger_kaiser_in_exile.1.a
 		ai_chance = {
 			factor = 0
 		}
@@ -650,7 +650,7 @@ country_event = {
 
 	#Historical
 	option = {
-		name = "§GPrevent§! It From Causing Trouble"
+		name = ger_kaiser_in_exile.1.b
 		ai_chance = {
 			factor = 100
 		}
@@ -661,14 +661,14 @@ country_event = {
 	}
 
 	option = {
-		name = "Remove §RExile§!"
+		name = ger_kaiser_in_exile.1.c
 
 		ai_chance = {
 			factor = 0
 		}
 
 		HOL = {
-			country_event = { ger_kaiser_in_exile.3 }
+			country_event = ger_kaiser_in_exile.3
 		}
 	}
 }
