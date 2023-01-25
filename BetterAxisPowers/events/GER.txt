@@ -811,7 +811,7 @@ country_event = {
 country_event = {
 	id = ger_fuhrer_end.1
 	title = ger_fuhrer_end.1.t
-	desc = ""
+	desc = ger_fuhrer_end.1.d
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
@@ -823,6 +823,8 @@ country_event = {
 		name = "Long Live Kaiser!"
 
 		custom_effect_tooltip = GER_Fuhrer_Deposed_tt
+
+		hidden_effect = { 
 
 		remove_idea = Kaiser_idea
 		add_idea = Fuhrer_idea
@@ -852,9 +854,10 @@ country_event = {
 			promote_leader = yes
 			}
 		}
-		hidden_effect = { 
-			set_cosmetic_tag = GER_neutrality
-			set_country_flag = kaiser_wilhelm_ii
+		
+		set_cosmetic_tag = GER_neutrality
+		set_country_flag = kaiser_wilhelm_ii
+
 		}
 	}
 
