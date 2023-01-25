@@ -826,8 +826,10 @@ country_event = {
 
 		hidden_effect = { 
 
-		remove_idea = Kaiser_idea
-		add_idea = Fuhrer_idea
+		remove_ideas = Kaiser_idea
+		add_ideas = Fuhrer_idea
+
+		remove_power_balance = GER_power_balance
 
 		set_politics = {
 			ruling_party = neutrality
