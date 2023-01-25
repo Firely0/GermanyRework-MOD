@@ -85,31 +85,125 @@ on_actions = {
 			if = {
 				limit = {
 					tag = POL
+					NOT = { has_global_flag = GER_CAP_POL }
 					GER = {
 						has_completed_focus = GER_danzig_or_war_v
 						has_war_with = POL
 						has_war_with = ENG
 						has_war_with = FRA
+						85 = { is_fully_controlled_by = GER }
+						807 = { is_fully_controlled_by = GER }
+						86 = { is_fully_controlled_by = GER }
 					}
 				}
 				GER = {
 					country_event = ger_around_maginot_event.1 
+					set_global_flag = GER_CAP_POL
 				}
 			}
 		}
-	}	
+	}
+	
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = POL
+					NOT = { has_global_flag = GER_CAP_POL }
+					GER = {
+						has_completed_focus = GER_danzig_or_war_v
+						has_war_with = POL
+						has_war_with = ENG
+						has_war_with = FRA
+						85 = { is_fully_controlled_by = GER }
+						807 = { is_fully_controlled_by = GER }
+						86 = { is_fully_controlled_by = GER }
+					}
+				}
+				GER = {
+					country_event = ger_around_maginot_event.1 
+					set_global_flag = GER_CAP_POL
+				}
+			}
+		}
+	}
+
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					tag = POL
+					NOT = { has_global_flag = GER_CAP_POL }
+					GER = {
+						has_completed_focus = GER_danzig_or_war_v
+						has_war_with = POL
+						has_war_with = ENG
+						has_war_with = FRA
+						85 = { is_fully_controlled_by = GER }
+						807 = { is_fully_controlled_by = GER }
+						86 = { is_fully_controlled_by = GER }
+					}
+				}
+				GER = {
+					country_event = ger_around_maginot_event.1 
+					set_global_flag = GER_CAP_POL
+				}
+			}
+		}
+	}
 	
 	on_capitulation = {
 		effect = {
 			if = {
 				limit = {
 					tag = HOL
+					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
 					GER = {
 						has_global_flag = GER_BLOCKED_KAISER
+						has_war_with = HOL
 					}
 				}
 				GER = {
 					country_event = ger_kaiser_in_exile.6 
+					set_global_flag = GER_CAP_HOL_KAISER
+				}
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = HOL
+					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
+					GER = {
+						has_global_flag = GER_BLOCKED_KAISER
+						has_war_with = HOL
+					}
+				}
+				GER = {
+					country_event = ger_kaiser_in_exile.6 
+					set_global_flag = GER_CAP_HOL_KAISER
+				}
+			}
+		}
+	}
+
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					tag = HOL
+					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
+					GER = {
+						has_global_flag = GER_BLOCKED_KAISER
+						has_war_with = HOL
+					}
+				}
+				GER = {
+					country_event = ger_kaiser_in_exile.6 
+					set_global_flag = GER_CAP_HOL_KAISER
 				}
 			}
 		}
