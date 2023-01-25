@@ -789,23 +789,61 @@ country_event = {
 	is_triggered_only = yes
 	
 	#War!
-	#option = {
-	#	ai_chance = {
-	#		factor = 20
-	#	}
-	#	name = wtt_germany.5.a
-	#	declare_war_on = { target = HOL type = puppet_wargoal_focus }
-	#	FRA = { country_event = { id = wtt_germany.28 } }
-	#}
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = wtt_germany.5.a
+
+		set_global_flag = GER_BLOCKED_KAISER
+
+		declare_war_on = { target = HOL type = puppet_wargoal_focus }
+		FRA = { country_event = { id = wtt_germany.28 } }
+	}
 
 	#Back down.
 	option = {
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
 		name = "We Will Deal With Them Later."
 
 		set_global_flag = GER_BLOCKED_KAISER
+	}
+}
+
+#Kaiser returned through war
+country_event = {
+	id = ger_kaiser_in_exile.6
+	title = ger_kaiser_in_exile.6.t
+	desc = ger_kaiser_in_exile.6.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = ger_kaiser_in_exile.6.a
+		
+        add_ideas = Kaiser_Idea
+
+		clr_global_flag = GER_BLOCKED_KAISER
+		set_country_flag = GER_Kaiser_in_Country
+
+		hidden_effect = {
+			GER = {
+				create_corps_commander = {
+					name = "Paul von Lettow-Vorbeck"
+					gfx = GFX_portrait_ger_von_lettow_vorbeck
+					traits = { trickster war_hero media_personality jungle_rat}
+					skill = 4
+					id = 499
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 5
+				}
+			}
+		}
 	}
 }
 
