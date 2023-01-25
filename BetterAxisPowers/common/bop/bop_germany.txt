@@ -88,22 +88,19 @@ GER_power_balance = {
 				army_morale_factor = -0.06
 				political_power_gain = -0.25
 			}
-			
 			on_activate = {
 				if = {
 					limit = {
-						    has_idea = { Kaiser_Idea }
-						}
-					hidden_effect = {
-						country_event = ger_fuhrer_end.1
+						has_idea = { Kaiser_Idea }
 					}
 				}
+				hidden_effect = {
+					country_event = ger_fuhrer_end.1
+				}
 			}
-
 			on_deactivate = {
 				
 			}	
-			
 		}
 	}
 
