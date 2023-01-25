@@ -18,6 +18,62 @@ ideas = {
 			}
 		}
 
+		Kaiser_Idea = {
+			picture = CZE_planning_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = neutrality }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#For My People
+				war_support_factor = 15
+				stability_factor = 15
+
+				#Imperial Connections
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.05
+				economy_cost_factor = -0.05
+
+			}
+		}
+
+		Fuhrer_Idea = {
+			picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = neutrality }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#Problems with Health
+				political_power_gain = -0.05
+
+				#Happy life with Family
+				stability_factor = 5
+
+				#Todo to Moon
+				
+
+				#Beaten, but not Defeated
+				weekly_casualties_war_support = 0.001
+
+			}
+		}
+
 		GER_OLD_PLAN_IDEA = {
 			picture = CZE_planning_bonus
 				

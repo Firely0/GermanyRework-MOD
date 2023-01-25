@@ -2,6 +2,7 @@ add_namespace = gerb
 add_namespace = ger_lost_core
 add_namespace = ger_request_qingdao
 add_namespace = ger_around_maginot_event
+add_namespace = ger_kaiser_in_exile
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -625,6 +626,165 @@ country_event = {
 			news_event = { hours = 6 id = news.234 }
 		}
 
+	}
+}
+
+country_event = { 
+	id = ger_kaiser_in_exile.1
+	title = ger_kaiser_in_exile.1.t
+	desc = ger_kaiser_in_exile.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "§REliminate§! Possible Threat."
+		ai_chance = {
+			factor = 0
+		}
+
+		GER = {
+			GER_bop_medium_increase_effect = yes
+		}
+	}
+
+	#Historical
+	option = {
+		name = "§GPrevent§! It From Causing Trouble"
+		ai_chance = {
+			factor = 100
+		}
+
+		GER = {
+			GER_bop_low_increase_effect = yes
+		}
+	}
+
+	option = {
+		name = "Remove §RExile§!"
+
+		ai_chance = {
+			factor = 0
+		}
+
+		HOL = {
+			country_event = { ger_kaiser_in_exile.3 }
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.3
+	title = wtt_germany.3.t
+	desc = wtt_germany.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = wtt_germany.3.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = GER ratio > 1.5 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = GER ratio > 3 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = GER ratio > 5 }
+			}
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = GER_netherlands_kaiser_accept_opinion
+			}
+			country_event = { id = ger_kaiser_in_exile.4 days = 1 }
+		}
+		FRA = { country_event = { id = wtt_germany.28 } }
+	}
+
+	#refuse
+	option = {
+		name = wtt_germany.3.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = GER ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = GER ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = GER ratio < 0.2 }
+			}
+		}
+		set_country_flag = netherlands_refused_return_kaiser
+		GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = GER_netherlands_kaiser_decline_opinion
+			}
+			country_event = { id = ger_kaiser_in_exile.5 days = 1 }
+			hidden_effect = { news_event = { id = wtt_news.2 hours = 30 } }
+		}
+	}
+}
+
+#Notification event for Germany that the Kaiser is returned
+country_event = {
+	id = ger_kaiser_in_exile.4
+	title = wtt_germany.4.t
+	desc = wtt_germany.4.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		name = "Welcome Back §RKaiser§!."
+		
+        add_ideas = Kaiser_Idea
+
+		hidden_effect = { 
+			news_event = { id = wtt_news.3 hours = 6 }
+		}
+	}
+}
+
+#Netherlands refuses to return the Kaiser!
+country_event = {
+	id = ger_kaiser_in_exile.5
+	title = wtt_germany.5.t
+	desc = wtt_germany.5.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	#War!
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = wtt_germany.5.a
+		declare_war_on = { target = HOL type = puppet_wargoal_focus }
+		FRA = { country_event = { id = wtt_germany.28 } }
+	}
+
+	#Back down.
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = wtt_germany.5.b
 	}
 }
 
