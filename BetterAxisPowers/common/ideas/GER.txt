@@ -261,48 +261,6 @@ ideas = {
 			}
 		}
 
-		GER_autarky_idea = {
-
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_exploit_mines
-
-			modifier = {
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		GER_grosraumwirtschaft = {
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_build_infrastructure
-
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-			}
-		}
-
 		GER_align_hungary = {
 			allowed = {
 				always = no
@@ -561,44 +519,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		GER_rebuild_the_high_seas_fleet = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-
-			equipment_bonus = {
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		GER_prepare_for_the_next_blockade = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			removal_cost = -1
-
-			picture = generic_goods_red_bonus
-
-			modifier = {
-				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -1082,8 +1002,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1108,8 +1027,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1134,8 +1052,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1161,8 +1078,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1188,8 +1104,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1216,8 +1131,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1247,8 +1161,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1274,8 +1187,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1306,8 +1218,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1335,8 +1246,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1365,8 +1275,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1411,8 +1320,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1459,8 +1367,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1496,8 +1403,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1533,8 +1439,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1572,8 +1477,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1612,8 +1516,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1651,8 +1554,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1691,8 +1593,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1731,8 +1632,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1775,8 +1675,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1814,8 +1713,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1858,6 +1756,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1880,6 +1779,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1915,6 +1815,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1950,6 +1851,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1985,6 +1887,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2028,6 +1931,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2066,6 +1970,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2104,6 +2009,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2145,6 +2051,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2183,6 +2090,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2224,6 +2132,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2267,6 +2176,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2313,6 +2223,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2359,6 +2270,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2407,6 +2319,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2454,6 +2367,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2503,6 +2417,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2554,6 +2469,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2591,6 +2507,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2628,6 +2545,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2662,6 +2580,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2703,6 +2622,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2744,6 +2664,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2782,6 +2703,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2816,6 +2738,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2853,6 +2776,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2887,6 +2811,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2931,6 +2856,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2974,6 +2900,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3012,6 +2939,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3053,6 +2981,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3091,6 +3020,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3132,6 +3062,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3173,6 +3104,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3215,6 +3147,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3256,6 +3189,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3298,6 +3232,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3339,6 +3274,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3377,6 +3313,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3418,6 +3355,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3456,6 +3394,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3479,6 +3418,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3503,6 +3443,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3531,6 +3472,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3558,6 +3500,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3589,6 +3532,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3617,6 +3561,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3649,6 +3594,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3680,6 +3626,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3714,6 +3661,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3743,6 +3691,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3775,6 +3724,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3808,6 +3758,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3844,6 +3795,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3870,6 +3822,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3900,6 +3853,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3930,6 +3884,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3964,6 +3919,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3995,6 +3951,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
