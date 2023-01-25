@@ -3,6 +3,7 @@ add_namespace = ger_lost_core
 add_namespace = ger_request_qingdao
 add_namespace = ger_around_maginot_event
 add_namespace = ger_kaiser_in_exile
+add_namespace = ger_fuhrer_end
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -804,5 +805,58 @@ country_event = {
 
 		set_global_flag = GER_BLOCKED_KAISER
 	}
+}
+
+#Bad Ending for Fuhrer.
+country_event = {
+	id = ger_fuhrer_end.1
+	title = ger_fuhrer_end.1.t
+	desc = ""
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Long Live Kaiser!"
+
+		custom_effect_tooltip = GER_Fuhrer_Deposed_tt
+
+		remove_idea = Kaiser_idea
+		add_idea = Fuhrer_idea
+
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+
+		set_popularities = {
+			democratic = 0
+			neutrality = 45
+			fascism = 55
+			communism = 0
+		}
+
+		GER_wilhelm_ii = {
+			add_country_leader_role = {
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					anti_democrat
+					imperial_connections
+				}
+			}
+			promote_leader = yes
+			}
+		}
+		hidden_effect = { 
+			set_cosmetic_tag = GER_neutrality
+			set_country_flag = kaiser_wilhelm_ii
+		}
+	}
+
 }
 

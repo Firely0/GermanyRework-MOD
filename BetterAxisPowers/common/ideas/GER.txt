@@ -19,7 +19,7 @@ ideas = {
 		}
 
 		Kaiser_Idea = {
-			picture = CZE_planning_bonus
+			picture = Kaiser_idea
 
 			allowed = {
 				always = no
@@ -46,7 +46,7 @@ ideas = {
 		}
 
 		Fuhrer_Idea = {
-			picture = CZE_planning_bonus
+			picture = Fuhrer_idea
 			
 			allowed = {
 				always = no
@@ -63,7 +63,7 @@ ideas = {
 				political_power_gain = -0.05
 
 				#Happy life with Family
-				stability_factor = 5
+				stability_factor = 0.05
 
 				#Todo to Moon
 				
