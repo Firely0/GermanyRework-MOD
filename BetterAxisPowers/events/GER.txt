@@ -755,6 +755,8 @@ country_event = {
 		
         add_ideas = Kaiser_Idea
 
+		set_country_flag = GER_Kaiser_in_Country
+
 		hidden_effect = {
 			GER = {
 				create_corps_commander = {
@@ -787,19 +789,19 @@ country_event = {
 	is_triggered_only = yes
 	
 	#War!
-	option = {
-		ai_chance = {
-			factor = 20
-		}
-		name = wtt_germany.5.a
-		declare_war_on = { target = HOL type = puppet_wargoal_focus }
-		FRA = { country_event = { id = wtt_germany.28 } }
-	}
+	#option = {
+	#	ai_chance = {
+	#		factor = 20
+	#	}
+	#	name = wtt_germany.5.a
+	#	declare_war_on = { target = HOL type = puppet_wargoal_focus }
+	#	FRA = { country_event = { id = wtt_germany.28 } }
+	#}
 
 	#Back down.
 	option = {
 		ai_chance = {
-			factor = 80
+			factor = 100
 		}
 		name = "We Will Deal With Them Later."
 
@@ -829,7 +831,9 @@ country_event = {
 		remove_ideas = Kaiser_idea
 		add_ideas = Fuhrer_idea
 
-		remove_power_balance = GER_power_balance
+		remove_power_balance = {
+			id = GER_power_balance
+		}	
 
 		set_politics = {
 			ruling_party = neutrality
