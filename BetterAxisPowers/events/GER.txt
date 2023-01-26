@@ -5,6 +5,7 @@ add_namespace = ger_around_maginot_event
 add_namespace = ger_kaiser_in_exile
 add_namespace = ger_fuhrer_end
 add_namespace = GER_Create_Afrika_Corps_event
+add_namespace = GER_ENG_ETH_event
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -939,11 +940,7 @@ country_event = {
 		name = "Establish as Sub-Branch of Royal Italian Army"
 
 		ITA = { country_event = { id = GER_Create_Afrika_Corps_event.2 days = 1 } }
-		custom_effect_tooltip = GER_ITA_Africacorp_tt
 
-		hidden_effect = {
-			#set_global_flag = AfricaCorps_in_italy
-		}
 	}
 
 }
@@ -961,8 +958,6 @@ country_event = {
 			factor = 100
 		}
 		name = "Fine"
-
-		custom_effect_tooltip = GER_Africacorp_tt
 
 		GER = { country_event = { id = GER_Create_Afrika_Corps_event.3 days = 1 } }
 
@@ -1027,3 +1022,92 @@ country_event = {
 
 }
 
+country_event = {
+	id = GER_ENG_ETH_event.1
+	title = "Demands from Germans!"
+	desc = GER_ENG_ETH_event.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_ENG_ETH_event.2 days = 1 }
+		}
+
+		ENG = {
+			remove_from_faction = ETH
+		}
+
+		ETH = {
+			leave_faction = yes
+			end_exile = yes
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_ENG_ETH_event.3 days = 1 }
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_ENG_ETH_event.2
+	title = "United Kingdom Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+
+}
+
+country_event = {
+	id = GER_ENG_ETH_event.3
+	title = "United Kingdom Not Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Prepare for War"
+
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			expire = 0
+			generator = { 126 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Will Deal With Them Later"
+
+	}
+
+}

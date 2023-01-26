@@ -115,6 +115,24 @@ ideas = {
 			}
 		}
 
+		GER_Interve_Civilwars_idea = {
+			picture = volunteer_only
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+				
+			modifier = {
+				send_volunteer_size = 3
+			}
+		}
+
 		kinder_kuche_kirche = {
 			picture = generic_neutrality_drift_bonus
 				

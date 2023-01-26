@@ -4380,7 +4380,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}	
-		completion_reward = {	
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_Interve_Civilwars_idea days = 1461 
+			}
 		}
 	}
 
@@ -4400,6 +4403,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {	
+			add_political_power = 50
 		}
 	}
 
@@ -4408,18 +4412,16 @@ focus_tree = {
 		icon = GFX_goal_AfrikaCorps
 		prerequisite = { focus = GER_nationalist_spain_ally_v focus = GER_italy_ally_v }
 		available = {
-			NOT = { has_war_with = ITA }
-			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
-			ITA = {
-				has_country_leader = {
-					character = ITA_benito_mussolini
-					ruling_only = yes
+			is_puppet = no
+			OR = {
+				OR = {
+					is_in_faction_with = ITA
+					is_in_faction_with = SPA
+					is_in_faction_with = POR
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+					is_in_faction_with = BEL
 				}
-				is_in_faction_with = GER
-			}
-			GER = {
-				is_in_faction_with = ITA
-				is_puppet = no
 			}
 		}
 
@@ -4447,7 +4449,6 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_Afrika_Corps_Follow_Italy }
 		prerequisite = { focus = GER_Create_Afrika_Corps }
 		available = {
-
 			has_global_flag = AfricaCorps_in_germany
 			GER = {
 				OR = {
@@ -4456,7 +4457,7 @@ focus_tree = {
 					is_in_faction_with = POR
 					is_in_faction_with = ENG
 					is_in_faction_with = FRA
-					is_in_faction_with = BLR
+					is_in_faction_with = BEL
 				}
 				is_puppet = no
 			}
@@ -4571,14 +4572,21 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_ethiopia
 		prerequisite = { focus = GER_italy_ally_v }
 		relative_position_id = GER_italy_ally_v
-		will_lead_to_war_with = POR
+
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = ETH
+
 		available = {
 			ITA = {
 				is_in_faction_with = GER
 				has_war_with = ETH
 			}
-			GER = {
-				is_subject = no
+			ETH = {
+				has_capitulated = yes
+				is_in_faction_with = ENG
+			}
+			ENG = {
+				is_alone_or_in_faction_at_peace_with_GER = yes
 			}
 		}
 		x = -1
@@ -4586,20 +4594,14 @@ focus_tree = {
 
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
+
 		bypass = {
-			NOT = { SPA = { is_in_faction_with = GER } }
 		}
+
 		completion_reward = {
-			ROOT = { 
-				create_wargoal = {
-					type = take_state_focus
-					target = POR
-					expire = 0
-					generator = { 112 }
-				}
-			}
+			ENG = { country_event = { id = GER_ENG_ETH_event.1 days = 1 } }
 		}
 	}
 
@@ -4794,6 +4796,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_JAP_Coal_Search
+		text = GER_Working_on
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = GER_japan_friend_v }
 		available = {
@@ -4808,8 +4811,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-		}	
+		}
+
 		completion_reward = {
+		}
+
+		bypass = {
+			always = yes
 		}
 	}
 
