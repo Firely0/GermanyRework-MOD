@@ -1037,7 +1037,11 @@ country_event = {
 		}
 
 		hidden_effect = {
-			ITA = { annex = ETH }
+			ITA = { 
+				annex_country = {
+					target = ETH
+				}
+			 }
 		}
 	}
 
