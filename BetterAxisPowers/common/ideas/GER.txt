@@ -154,6 +154,26 @@ ideas = {
 			}
 		}
 
+		FundsforProject = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {		
+			} 
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+		}
+
 	    GER_ita_build = {
 			picture = generic_foreign_capital
 			
@@ -2608,26 +2628,6 @@ ideas = {
 				production_speed_dockyard_factor = 0.1
 
 			} 
-		}
-
-		FundsforProject = {
-			picture = HUN_treaty_of_triannon
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-			} 
-
-			modifier = {
-				consumer_goods_factor = 0.03
-			}
 		}
 
 		Four_Year_Plan_1 = {
