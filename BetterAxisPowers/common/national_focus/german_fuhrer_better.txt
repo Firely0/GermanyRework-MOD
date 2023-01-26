@@ -4390,7 +4390,6 @@ focus_tree = {
 	focus = {
 		id = GER_EU_Policy
 		icon = GFX_focus_usa_focus_on_europe
-		text = GER_Axis_Powers_V
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
 		}
@@ -5005,6 +5004,44 @@ focus_tree = {
 					days = 364
 				}
 			 }
+		}
+	}
+
+	focus = {
+		id = GER_Spa_Expand_Army
+		icon = GFX_focus_chi_army_reform
+		text = GER_Spa_Tur_Expand_Army
+		relative_position_id = GER_SPA_build_eco
+		prerequisite = { focus = GER_SPA_build_eco }
+		available = {
+		}
+
+		x = 0
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			SPA = {	
+				add_tech_bonus = {
+					name = armor_bonus
+					bonus = 0.5
+					uses = 1
+					category = armor
+				}
+				add_tech_bonus = {
+					name = JAP_support
+					bonus = 1.0
+					uses = 1
+					category = support_tech	
+				}
+			} 
 		}
 	}
 
@@ -5672,8 +5709,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Spa_Tur_Expand_Army
+		id = GER_Tur_Expand_Army
 		icon = GFX_focus_chi_army_reform
+		text = GER_Spa_Tur_Expand_Army
 		relative_position_id = GER_turkey_friend_V
 		prerequisite = { focus = GER_turkey_friend_V }
 		available = {
@@ -5691,11 +5729,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					SPA = { is_in_faction_with = GER }
-				}
-			SPA = {	
+			TUR = {	
 				add_tech_bonus = {
 					name = armor_bonus
 					bonus = 0.5
@@ -5708,27 +5742,7 @@ focus_tree = {
 					uses = 1
 					category = support_tech	
 				}
-			 } 
-			}
-			if = {
-				limit = {
-					TUR = { is_in_faction_with = GER }
-				}
-			 TUR = {	
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 0.5
-					uses = 1
-					category = armor
-				}
-				add_tech_bonus = {
-					name = support_tech_bonus
-					bonus = 1.0
-					uses = 1
-					category = support_tech	
-				}
-			  }	 
-			}
+			} 
 		}
 	}
 
