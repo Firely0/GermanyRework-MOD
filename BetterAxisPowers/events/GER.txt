@@ -962,7 +962,7 @@ country_event = {
 		GER = { country_event = { id = GER_Create_Afrika_Corps_event.3 days = 1 } }
 
 		hidden_effect = {
-			set_global_flag = AfricaCorps_in_germany
+			set_global_flag = AfricaCorps_in_italy
 		}
 	}
 
@@ -1011,12 +1011,9 @@ country_event = {
 		name = "Seriously? Good luck."
 
 		hidden_effect = {
-			GER = {
-				add_political_power = -31
-			}
+			add_political_power = -31
 		}
 	}
-
 }
 
 country_event = {
