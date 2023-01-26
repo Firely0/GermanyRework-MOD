@@ -1701,22 +1701,6 @@ focus_tree = {
 					}
 					add_timed_idea = { idea = fascist_influence days = 1095 }
 				}
-				if = {
-					limit = {
-						GER = {
-							has_government = communism
-						}
-					}
-					add_timed_idea = { idea = communist_influence days = 1095 }
-				}
-				if = {
-					limit = {
-						GER = {
-							has_government = democratic
-						}
-					}
-					add_timed_idea = { idea = democratic_influence days = 1095 }
-				}
 				country_event = { id = generic.1 }
 			}
 			GER = {
@@ -4365,7 +4349,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 26
+		x = 36
 		y = 3
 		relative_position_id = GER_Fuhrer
 		cost = 3
@@ -4383,10 +4367,158 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Interve_Civilwars
+		icon = GFX_focus_generic_provoke_border_clashes
+		text = GER_Axis_Powers_V
+		prerequisite = { focus = GER_Axis_Powers }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -6
+		y = 1
+		relative_position_id = GER_Axis_Powers
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {	
+		}
+	}
+
+	focus = {
+		id = GER_EU_Policy
+		icon = GFX_focus_usa_focus_on_europe
+		text = GER_Axis_Powers_V
+		prerequisite = { focus = GER_Axis_Powers }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 1
+		relative_position_id = GER_Axis_Powers
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {	
+		}
+	}
+
+	focus = {
+		id = GER_Create_Afrika_Corps
+		text = GER_italy_ally
+		icon = GFX_goal_AfrikaCorps
+		prerequisite = { focus = GER_nationalist_spain_ally_v focus = GER_italy_ally_v }
+		available = {
+			NOT = { has_war_with = ITA }
+			ITA = {
+				has_country_leader = {
+					character = ITA_benito_mussolini
+					ruling_only = yes
+				}
+			}
+			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
+		}
+
+		bypass = {
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = GER_EU_Policy
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Afrika_Corps_Erwin_Rommel
+		text = GER_italy_ally
+		icon = GFX_goal_Erwin_Rommel
+		mutually_exclusive = { focus = GER_Afrika_Corps_Follow_Italy }
+		prerequisite = { focus = GER_Create_Afrika_Corps }
+		available = {
+			NOT = { has_war_with = ITA }
+			ITA = {
+				has_country_leader = {
+					character = ITA_benito_mussolini
+					ruling_only = yes
+				}
+			}
+			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
+		}
+
+		bypass = {
+		}
+
+		x = -2
+		y = 1
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Afrika_Corps_Follow_Italy
+		text = GER_italy_ally
+		icon = GFX_focus_ITA_a_colonial_empire
+		mutually_exclusive = { focus = GER_Afrika_Corps_Erwin_Rommel }
+		prerequisite = { focus = GER_Create_Afrika_Corps }
+		available = {
+			NOT = { has_war_with = ITA }
+			ITA = {
+				has_country_leader = {
+					character = ITA_benito_mussolini
+					ruling_only = yes
+				}
+			}
+			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
+		}
+
+		bypass = {
+		}
+
+		x = 2
+		y = 1
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
+			}
+		}
+	}
+
+	focus = {
 		id = GER_italy_ally_v
 		text = GER_italy_ally
 		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = GER_Axis_Powers }
+		prerequisite = { focus = GER_EU_Policy }
 		available = {
 			NOT = { has_war_with = ITA }
 			ITA = {
@@ -4416,8 +4548,8 @@ focus_tree = {
 			}
 		}
 
-		x = 1
-		y = 1
+		x = 4
+		y = 2
 		relative_position_id = GER_Axis_Powers
 		cost = 10
 		ai_will_do = {
@@ -4434,6 +4566,43 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_ITA_ETH_Demand
+		icon = GFX_focus_generic_attack_ethiopia
+		prerequisite = { focus = GER_italy_ally_v }
+		relative_position_id = GER_italy_ally_v
+		will_lead_to_war_with = POR
+		available = {
+			ITA = {
+				is_in_faction_with = GER
+				has_war_with = ETH
+			}
+			GER = {
+				is_subject = no
+			}
+		}
+		x = -1
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NOT = { SPA = { is_in_faction_with = GER } }
+		}
+		completion_reward = {
+			ROOT = { 
+				create_wargoal = {
+					type = take_state_focus
+					target = POR
+					expire = 0
+					generator = { 112 }
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = GER_ita_build_eco
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = GER_italy_ally_v }
@@ -4443,7 +4612,7 @@ focus_tree = {
 			ITA = { is_free_or_subject_of_root = yes }
 		    ITA = { is_in_faction_with = GER }
 		}
-		x = 0
+		x = 1
 		y = 1
 
 		cost = 5
@@ -4471,7 +4640,7 @@ focus_tree = {
 	focus = {
 		id = GER_stockpiling_fuel
 		icon = GFX_focus_generic_stockpile_fuel
-		prerequisite = { focus = GER_japan_friend_v focus = GER_ita_build_eco  }
+		prerequisite = { focus = GER_ita_build_eco  }
 		relative_position_id = GER_italy_ally_v
 		available = {
 			is_subject = no
@@ -4623,10 +4792,31 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_JAP_Coal_Search
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GER_japan_friend_v }
+		available = {
+			is_subject = no
+			ROOT = { has_completed_focus = GER_coal_liquidization_a }
+		}
+		x = -2
+		y = 0
+		relative_position_id = GER_naval_intel_cooperation
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_naval_expand_project
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = GER_stockpiling_fuel }
 		prerequisite = { focus = GER_naval_intel_cooperation }
+		prerequisite = { focus = GER_JAP_Coal_Search }
 		available = {
 			is_subject = no
 			ROOT = { has_completed_focus = GER_prepare_for_the_next_blockade_a }
@@ -4665,7 +4855,7 @@ focus_tree = {
 		id = GER_nationalist_spain_ally_v
 		text = GER_nationalist_spain_ally
 		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = GER_Axis_Powers }
+		prerequisite = { focus = GER_EU_Policy }
 		available = {
 			if = {
 				limit = {
@@ -4707,8 +4897,8 @@ focus_tree = {
 		#		is_in_faction_with = GER
 		#	}
 		#}
-		x = -1
-		y = 1
+		x = -4
+		y = 2
 		relative_position_id = GER_Axis_Powers
 		cost = 10
 		ai_will_do = {
@@ -4778,7 +4968,7 @@ focus_tree = {
 			SPA = { is_free_or_subject_of_root = yes }
 			SPA = { is_in_faction_with = GER }
 		}
-		x = 0
+		x = -1
 		y = 1
 
 		cost = 5
@@ -4803,15 +4993,15 @@ focus_tree = {
 	focus = {
 		id = GER_SPA_Secure_Tungsten
 		icon = GFX_focus_generic_attack_portugal
-		prerequisite = { focus = GER_SPA_build_eco }
-		relative_position_id = GER_SPA_build_eco
+		prerequisite = { focus = GER_nationalist_spain_ally_v }
+		relative_position_id = GER_nationalist_spain_ally_v
 		will_lead_to_war_with = POR
 		available = {
 			is_subject = no
 			SPA = { is_free_or_subject_of_root = yes }
 			SPA = { is_in_faction_with = GER }
 		}
-		x = 0
+		x = 1
 		y = 1
 
 		cost = 5
@@ -4840,7 +5030,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 7
+		x = 12
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
@@ -4859,7 +5049,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -7
+		x = -12
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
@@ -5441,7 +5631,7 @@ focus_tree = {
 			TUR = { is_free_or_subject_of_root = yes }
 			TUR = { is_in_faction_with = GER }
 		}
-		x = 0
+		x = -1
 		y = 1
 
 		cost = 5
@@ -5466,8 +5656,8 @@ focus_tree = {
 	focus = {
 		id = GER_Spa_Tur_Expand_Army
 		icon = GFX_focus_chi_army_reform
-		relative_position_id = GER_TUR_build_eco
-		prerequisite = { focus = GER_TUR_build_eco focus = GER_SPA_Secure_Tungsten }
+		relative_position_id = GER_turkey_friend_V
+		prerequisite = { focus = GER_turkey_friend_V }
 		available = {
 		}
 
