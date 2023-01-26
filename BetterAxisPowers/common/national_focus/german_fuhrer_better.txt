@@ -4369,7 +4369,6 @@ focus_tree = {
 	focus = {
 		id = GER_Interve_Civilwars
 		icon = GFX_focus_generic_provoke_border_clashes
-		text = GER_Axis_Powers_V
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
 		}
@@ -4406,7 +4405,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_Create_Afrika_Corps
-		text = GER_italy_ally
 		icon = GFX_goal_AfrikaCorps
 		prerequisite = { focus = GER_nationalist_spain_ally_v focus = GER_italy_ally_v }
 		available = {
@@ -4442,7 +4440,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_Afrika_Corps_Erwin_Rommel
-		text = GER_italy_ally
 		icon = GFX_goal_Erwin_Rommel
 		mutually_exclusive = { focus = GER_Afrika_Corps_Follow_Italy }
 		prerequisite = { focus = GER_Create_Afrika_Corps }
@@ -4479,7 +4476,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_Afrika_Corps_Follow_Italy
-		text = GER_italy_ally
 		icon = GFX_focus_ITA_a_colonial_empire
 		mutually_exclusive = { focus = GER_Afrika_Corps_Erwin_Rommel }
 		prerequisite = { focus = GER_Create_Afrika_Corps }
