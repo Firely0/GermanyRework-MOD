@@ -4409,13 +4409,18 @@ focus_tree = {
 		prerequisite = { focus = GER_nationalist_spain_ally_v focus = GER_italy_ally_v }
 		available = {
 			NOT = { has_war_with = ITA }
+			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
 			ITA = {
 				has_country_leader = {
 					character = ITA_benito_mussolini
 					ruling_only = yes
 				}
+				is_in_faction_with = GER
 			}
-			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
+			GER = {
+				is_in_faction_with = ITA
+				is_puppet = no
+			}
 		}
 
 		bypass = {
@@ -4432,9 +4437,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			ITA = {
-				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
-			}
+			country_event = { id = GER_Create_Afrika_Corps_event.1 days = 1 } 
 		}
 	}
 
@@ -4444,14 +4447,19 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_Afrika_Corps_Follow_Italy }
 		prerequisite = { focus = GER_Create_Afrika_Corps }
 		available = {
-			NOT = { has_war_with = ITA }
-			ITA = {
-				has_country_leader = {
-					character = ITA_benito_mussolini
-					ruling_only = yes
+
+			has_global_flag = AfricaCorps_in_germany
+			GER = {
+				OR = {
+					is_in_faction_with = ITA
+					is_in_faction_with = SPA
+					is_in_faction_with = POR
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+					is_in_faction_with = BLR
 				}
+				is_puppet = no
 			}
-			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
 		}
 
 		bypass = {
@@ -4468,8 +4476,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			ITA = {
-				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
+			GER = {
+				add_idea = GER_Afrika_Korps
 			}
 		}
 	}
@@ -4480,14 +4488,11 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_Afrika_Corps_Erwin_Rommel }
 		prerequisite = { focus = GER_Create_Afrika_Corps }
 		available = {
-			NOT = { has_war_with = ITA }
 			ITA = {
-				has_country_leader = {
-					character = ITA_benito_mussolini
-					ruling_only = yes
-				}
+				is_in_faction_with = GER
 			}
 			NOT = { has_country_flag = ENG_ditched_the_italians_flag }
+			has_global_flag = AfricaCorps_in_italy
 		}
 
 		bypass = {
@@ -4505,7 +4510,7 @@ focus_tree = {
 
 		completion_reward = {
 			ITA = {
-				add_opinion_modifier = { target = GER modifier = ger_ita_alliance_focus }
+				add_idea = GER_ITA_Afrika_Korps
 			}
 		}
 	}

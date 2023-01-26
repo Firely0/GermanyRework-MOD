@@ -4,6 +4,7 @@ add_namespace = ger_request_qingdao
 add_namespace = ger_around_maginot_event
 add_namespace = ger_kaiser_in_exile
 add_namespace = ger_fuhrer_end
+add_namespace = GER_Create_Afrika_Corps_event
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -905,6 +906,122 @@ country_event = {
 		set_cosmetic_tag = GER_neutrality
 		set_country_flag = kaiser_wilhelm_ii
 
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.1
+	title = "Establish the German Africa Korps"
+	desc = ""
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Establish as Branch of Wehrmacht"
+
+		custom_effect_tooltip = GER_Africacorp_tt
+
+		hidden_effect = {
+			set_global_flag = AfricaCorps_in_germany
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Establish as Sub-Branch of Royal Italian Army"
+
+		ITA = { country_event = { id = GER_Create_Afrika_Corps_event.2 days = 1 } }
+		custom_effect_tooltip = GER_ITA_Africacorp_tt
+
+		hidden_effect = {
+			#set_global_flag = AfricaCorps_in_italy
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.2
+	title = "Germany Wants Create GER-ITA Africa Korps"
+	desc = "Germany Wants Establish "GER-ITA Africa Korps" Sub-Branch of Royal Italian Army"
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+		custom_effect_tooltip = GER_Africacorp_tt
+
+		GER = { country_event = { id = GER_Create_Afrika_Corps_event.3 days = 1 } }
+
+		hidden_effect = {
+			set_global_flag = AfricaCorps_in_germany
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		GER = { country_event = { id = GER_Create_Afrika_Corps_event.4 days = 1 } }
+
+	}
+
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.3
+	title = "Italy Accepted Our Offer"
+	desc = "Established "GER-ITA Africa Korps" Sub-Branch of Royal Italian Army"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			set_global_flag = AfricaCorps_in_italy
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.4
+	title = "Italy Not Accepted Our Offer"
+	desc = "Waste of Time."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Seriously? Good luck."
+
+		hidden_effect = {
+			ger = {
+				add_political_power = -31
+			}
 		}
 	}
 
