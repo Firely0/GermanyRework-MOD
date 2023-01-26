@@ -1036,9 +1036,8 @@ country_event = {
 			remove_from_faction = ETH
 		}
 
-		ETH = {
-			leave_faction = yes
-			end_exile = yes
+		hidden_effect = {
+			ITA = { annex = ETH }
 		}
 	}
 
