@@ -91,12 +91,12 @@ GER_power_balance = {
 			on_activate = {
 				if = {
 					limit = {
-						has_idea = { Kaiser_Idea }
+						has_idea = Kaiser_Idea
 					}
-				}
-				custom_effect_tooltip = GER_Fuhrer_Deposed_tt
-				hidden_effect = {
-					country_event = ger_fuhrer_end.1
+					custom_effect_tooltip = GER_Fuhrer_Deposed_tt
+					hidden_effect = {
+						country_event = ger_fuhrer_end.1
+					}
 				}
 			}
 			on_deactivate = {
