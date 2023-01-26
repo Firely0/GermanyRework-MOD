@@ -926,8 +926,6 @@ country_event = {
 		}
 		name = "Establish as Branch of Wehrmacht"
 
-		custom_effect_tooltip = GER_Africacorp_tt
-
 		hidden_effect = {
 			set_global_flag = AfricaCorps_in_germany
 		}
