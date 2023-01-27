@@ -4362,7 +4362,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 32
+		x = 38
 		y = 3
 		relative_position_id = GER_Fuhrer
 		cost = 3
@@ -4397,6 +4397,82 @@ focus_tree = {
 			add_timed_idea = {
 				idea = GER_Interve_Civilwars_idea days = 1461 
 			}
+		}
+	}
+
+	focus = {
+		id = GER_Middle_east_diplomacy
+		icon = GFX_focus_TUR_treaty_of_saadabad
+		text = GER_Spa_Tur_Expand_Army
+		relative_position_id = GER_Axis_Powers
+		prerequisite = { focus = GER_Axis_Powers }
+		available = {
+		}
+
+		x = 9
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			TUR = {	
+				add_tech_bonus = {
+					name = armor_bonus
+					bonus = 0.5
+					uses = 1
+					category = armor
+				}
+				add_tech_bonus = {
+					name = JAP_support
+					bonus = 1.0
+					uses = 1
+					category = support_tech	
+				}
+			} 
+		}
+	}
+
+	focus = {
+		id = GER_scandinavia_policy
+		icon = SOV_control_scandinavia
+		text = GER_Spa_Tur_Expand_Army
+		relative_position_id = GER_Axis_Powers
+		prerequisite = { focus = GER_Axis_Powers }
+		available = {
+		}
+
+		x = -9
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			TUR = {	
+				add_tech_bonus = {
+					name = armor_bonus
+					bonus = 0.5
+					uses = 1
+					category = armor
+				}
+				add_tech_bonus = {
+					name = JAP_support
+					bonus = 1.0
+					uses = 1
+					category = support_tech	
+				}
+			} 
 		}
 	}
 
@@ -5350,7 +5426,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 12
+		x = 18
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
@@ -5369,7 +5445,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -12
+		x = -18
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3

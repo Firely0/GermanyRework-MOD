@@ -883,6 +883,9 @@ country_event = {
 		remove_ideas = Kaiser_idea
 		add_ideas = Fuhrer_idea
 
+		set_country_flag = GER_Fuhrer_in_Country
+		clr_country_flag = GER_Kaiser_in_Country
+
 		remove_power_balance = {
 			id = GER_power_balance
 		}	

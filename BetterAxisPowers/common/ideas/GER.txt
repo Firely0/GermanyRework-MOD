@@ -18,6 +18,58 @@ ideas = {
 			}
 		}
 
+		GER_Trade_with_Sweden = {
+			picture = can_wartime_prices_and_trade_board
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = SWE
+			}
+	
+			removal_cost = -1
+				
+            targeted_modifier = {
+				tag = SWE
+				extra_trade_to_target_factor = 0.3
+			}
+
+		}
+
+		GER_Trade_with_Sweden_SWE = {
+			picture = can_wartime_prices_and_trade_board
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = GER
+			}
+	
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+			}
+
+		}
+
 		Kaiser_Idea = {
 			picture = Kaiser_idea
 
@@ -112,6 +164,26 @@ ideas = {
 				coordination_bonus = 0.05
 				initiative_factor = 0.1
 				org_loss_when_moving = -0.2
+			}
+		}
+
+		GER_battle_el_alamein = {
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 
