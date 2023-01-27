@@ -762,17 +762,19 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
-			if = {
-				limit = {
+			hidden_effect = {
+				if = {
+					limit = {
+						ENG = {
+							is_ai = yes
+							has_government = democratic
+						}
+					}
 					ENG = {
-						is_ai = yes
-						has_government = democratic
+						give_guarantee = POL
 					}
 				}
-				ENG = {
-					give_guarantee = POL
-				}
-			}
+			}	
 			if = {
 				limit = {
 					85 = {
@@ -1780,7 +1782,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		will_lead_to_war_with = SWI
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_war_with_france_v
 		cost = 10
@@ -1834,7 +1836,7 @@ focus_tree = {
 		bypass = {
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = GER_war_with_france_v
 		cost = 10
@@ -4380,13 +4382,13 @@ focus_tree = {
 	focus = {
 		id = GER_Interve_Civilwars
 		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = GER_Axis_Powers }
+		prerequisite = { focus = GER_Fuhrer }
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -6
+		x = -2
 		y = 1
-		relative_position_id = GER_Axis_Powers
+		relative_position_id = GER_Fuhrer
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -4427,10 +4429,6 @@ focus_tree = {
 				OR = {
 					is_in_faction_with = ITA
 					is_in_faction_with = SPA
-					is_in_faction_with = POR
-					is_in_faction_with = ENG
-					is_in_faction_with = FRA
-					is_in_faction_with = BEL
 				}
 			}
 		}
@@ -4473,10 +4471,6 @@ focus_tree = {
 				OR = {
 					is_in_faction_with = ITA
 					is_in_faction_with = SPA
-					is_in_faction_with = POR
-					is_in_faction_with = ENG
-					is_in_faction_with = FRA
-					is_in_faction_with = BEL
 				}
 				is_puppet = no
 			}
@@ -4500,6 +4494,275 @@ focus_tree = {
 				add_ideas = GER_Afrika_Korps
 			}
 		}
+	}
+
+	focus = {
+		id = GER_Rush_Suez_Cannal
+		icon = GFX_focus_generic_the_suez
+		prerequisite = { focus = GER_Afrika_Corps_Erwin_Rommel focus = GER_Afrika_Corps_Follow_Italy }
+		available = {
+			452 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+			OR = {
+				ITA = {
+					controls_province = 1071
+					controls_province = 4145
+					controls_province = 992
+				}
+				GER = {
+					controls_province = 1071
+					controls_province = 4145
+					controls_province = 992
+				}
+			}
+				
+		}
+
+		bypass = {
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			1071 = {	
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			4145 = {	
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			992 = {	
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Set_HQ_in_Libya
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = GER_Afrika_Corps_Erwin_Rommel }
+
+		available = {
+			has_idea = AfrikaCorps_idea
+			449 = { is_controlled_by_ROOT_or_ally = yes }
+			448 = { is_controlled_by_ROOT_or_ally = yes }
+			451 = { is_controlled_by_ROOT_or_ally = yes }
+			450 = { is_controlled_by_ROOT_or_ally = yes }
+			663 = { is_controlled_by_ROOT_or_ally = yes }
+			662 = { is_controlled_by_ROOT_or_ally = yes }
+			661 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		bypass = {
+		}
+
+		x = -3
+		y = 2
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		449 = {	
+			add_building_construction = {
+				type = radar_station
+				instant_build = yes
+				level = 3
+			}
+			add_building_construction = {
+				type = anti_air_building
+				instant_build = yes
+				level = 3
+			}
+		}
+		451 = {	
+			add_building_construction = {
+				type = air_base
+				instant_build = yes
+				level = 3
+			}
+		}	
+		663 = {	
+			add_building_construction = {
+				type = air_base
+				instant_build = yes
+				level = 3
+			}
+		}
+		1149 = {	
+			add_building_construction = {
+				type = coastal_bunker 
+				instant_build = yes
+				level = 3
+			}
+		}
+		11954 = {	
+			add_building_construction = {
+				type = coastal_bunker 
+				instant_build = yes
+				level = 3
+			}
+		}
+		1130 = {	
+			add_building_construction = {
+				type = coastal_bunker 
+				instant_build = yes
+				level = 3
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = GER_Battle_of_El_Alamein
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = GER_Set_HQ_in_Libya }
+		
+		available = {
+			has_idea = AfrikaCorps_idea
+			452 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+
+		bypass = {
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Set_HQ_in_Libya
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			10061 = {	
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				start_province = 1130
+				target_province = 10061
+			}
+			add_timed_idea = {
+				id = GER_battle_el_alamein
+				days = 60
+			}
+			GER_erwin_rommel = {
+				add_logistics = 1
+				add_unit_leader_trait = media_personality
+				add_unit_leader_trait = desert_fox
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Libya_war_logistics
+		icon = GFX_focus_generic_develop_libya
+		prerequisite = { focus = GER_Set_HQ_in_Libya }
+		
+		available = {
+			has_idea = AfrikaCorps_idea
+			OR = {
+				ITA = {
+					controls_province = 10117
+				}
+				GER = {
+					controls_province = 10117
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		x = -2
+		y = 1
+		relative_position_id = GER_Set_HQ_in_Libya
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		10117 = {	
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				instant_build = yes
+			} 
+		}
+		12079 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+			}
+		}
+		build_railway = {
+			level = 1
+			build_only_on_allied = yes
+			start_province = 11954
+			target_province = 12079
+		}
+		build_railway = {
+			level = 1
+			build_only_on_allied = yes
+			start_province = 11954
+			target_province = 10117
+		}
+		build_railway = {
+			level = 1
+			build_only_on_allied = yes
+			start_province = 10117
+			target_province = 1149
+		}
+		build_railway = {
+			level = 1
+			build_only_on_allied = yes
+			start_province = 12079
+			target_province = 1130
+		}
+	    }
 	}
 
 	focus = {
@@ -5853,13 +6116,15 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			if = {
-				limit = {
-					is_ai = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_technology = { mobile_warfare = 1 popup = no }
+					add_ideas = i_dont_use_wargoal
 				}
-				set_technology = { mobile_warfare = 1 popup = no }
-				add_ideas = i_dont_use_wargoal
-			}
+			}	
 			add_country_leader_trait = DealBraker
 			set_power_balance = {
 				id = GER_power_balance
@@ -5933,7 +6198,7 @@ focus_tree = {
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
