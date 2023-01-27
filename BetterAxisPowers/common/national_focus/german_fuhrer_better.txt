@@ -764,6 +764,17 @@ focus_tree = {
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {
+					ENG = {
+						is_ai = yes
+						has_government = democratic
+					}
+				}
+				ENG = {
+					give_guarantee = POL
+				}
+			}
+			if = {
+				limit = {
 					85 = {
 						controller = {
 							tag = POL
@@ -5847,6 +5858,7 @@ focus_tree = {
 					is_ai = yes
 				}
 				set_technology = { mobile_warfare = 1 popup = no }
+				add_ideas = i_dont_use_wargoal
 			}
 			add_country_leader_trait = DealBraker
 			set_power_balance = {

@@ -4858,5 +4858,24 @@ ideas = {
 			}
 
 		}
+
+		i_dont_use_wargoal = {
+
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 0.9
+				justify_war_goal_when_in_major_war_time = -0.03
+			}
+
+		}
 	}
 }
