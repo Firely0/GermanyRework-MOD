@@ -4534,14 +4534,6 @@ focus_tree = {
 			SWE = {
 				exists = yes
 				is_subject = no
-				is_in_faction = no
-			}
-
-			SWE = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
 			}
 		}
 
@@ -4557,6 +4549,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		SWE = {
 			if = {
 				limit = {
 					GER = {
@@ -4566,6 +4559,7 @@ focus_tree = {
 				add_timed_idea = { idea = fascist_influence days = 1095 }
 			}
 			country_event = { id = generic.1 }
+		}
 		}
 	}
 
@@ -4580,7 +4574,6 @@ focus_tree = {
 			SWE = {
 				exists = yes
 				is_subject = no
-				is_in_faction = no
 			}
 
 			SWE = {
@@ -4613,6 +4606,14 @@ focus_tree = {
 		relative_position_id = GER_Renew_Sweden_Steel_Trade
 		prerequisite = { focus = GER_Renew_Sweden_Steel_Trade }
 		available = {
+			is_subject = no 
+			NOT = { has_war_with = SWE }
+			is_faction_leader = yes
+			SWE = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
 		}
 
 		x = 0
@@ -4627,7 +4628,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			SWE = { country_event = generic.5 }
 		}
 	}
 
@@ -4637,6 +4638,14 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
+			is_subject = no 
+			NOT = { has_war_with = FIN }
+			FIN = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+
 			FIN = {
 				has_war_with = SOV
 			}
@@ -4709,8 +4718,11 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_influense_finland }
 		available = {
-			is_subject = no 
+			is_subject = no
+			surrender_progress = 0
+			has_war_with = SOV 
 			NOT = { has_war_with = FIN }
+
 			FIN = {
 				exists = yes
 				is_subject = no
@@ -4721,11 +4733,11 @@ focus_tree = {
 				NOT = { has_war_with = SOV }
 			}
 		}
-
 		x = 3
 		y = 3
-
+		
 		cost = 5
+
 		ai_will_do = {
 			factor = 0
 		}
