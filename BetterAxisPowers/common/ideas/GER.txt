@@ -18,6 +18,22 @@ ideas = {
 			}
 		}
 
+		nohelp_denmark = {
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			set_rule = {
+				can_create_factions = no
+			}
+		}
+
 		GER_Trade_with_Sweden = {
 			picture = can_wartime_prices_and_trade_board
 

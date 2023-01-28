@@ -246,4 +246,20 @@ on_actions = {
 			}
 		}
 	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					has_global_flag = GER_nohelp_denmark
+					FROM = { tag = DEN }
+				}
+				DEN = {
+					add_ideas = nohelp_denmark
+				}
+			}
+		}
+	}
+
 }
