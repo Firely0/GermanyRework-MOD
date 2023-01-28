@@ -4609,6 +4609,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			hidden_effect = {
+				set_variable = { GER_army_speed_factor = 0.05 } 
+			}
 			add_building_construction = {
 				type = naval_base
 				level = 1
@@ -4628,6 +4631,27 @@ focus_tree = {
 				level = 2
 				instant_build = yes
 				province = 992
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 447
+						state = 907
+						state = 446
+						state = 457
+						state = 456
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Rush_Suez_dynamic_modifier
+					scope = GER
+					days = 90
+				}
+				add_dynamic_modifier = {
+					modifier = Rush_Suez_dynamic_modifier
+					scope = ITA
+					days = 90
+				}
 			}
 		}
 	}
@@ -4735,6 +4759,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {	
+			hidden_effect = {
+				set_variable = { GER_army_attack_factor = 0.05 }
+				set_variable = { GER_breakthrough_factor = 0.1 }
+				set_variable = { GER_land_night_attack = 0.03 }   
+			}
 			add_building_construction = {
 				type = naval_base
 				level = 1
@@ -4754,11 +4783,14 @@ focus_tree = {
 					}
 				}
 				add_dynamic_modifier = {
-					modifier = ETH_state_local_offensive_dynamic_modifier
+					modifier = El_Alamein_Atack_dynamic_modifier
 					scope = GER
+					days = 30
+				}
+				add_dynamic_modifier = {
+					modifier = El_Alamein_Atack_dynamic_modifier
 					scope = ITA
-					scope = SPA
-					days = 90
+					days = 30
 				}
 			}
 			GER_erwin_rommel = {
