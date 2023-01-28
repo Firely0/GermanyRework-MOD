@@ -5056,18 +5056,21 @@ focus_tree = {
 					scope = GER
 					days = 90
 				}
-				ITA = {
+				custom_effect_tooltip = rush_for_suez_cannal_tt
+				if = {
 					limit = {
+					ITA = {
 						is_in_faction_with = GER
+					}	
 					}
 					add_dynamic_modifier = {
 						modifier = Rush_Suez_dynamic_modifier
 						scope = ITA
 						days = 90
 					}
+					custom_effect_tooltip = rush_for_suez_cannal_tt
 				}
 			}
-			tooltip = rush_for_suez_cannal_tt
 		}
 	}
 
@@ -5197,18 +5200,21 @@ focus_tree = {
 					scope = GER
 					days = 30
 				}
-				ITA = {
+				custom_effect_tooltip = Battle_of_el_alamein_tt
+				if = {
 					limit = {
-						is_in_faction_with = GER
+						ITA = {
+							is_in_faction_with = GER
+						}
 					}
 					add_dynamic_modifier = {
 						modifier = El_Alamein_Atack_dynamic_modifier
 						scope = ITA
 						days = 30
 					}
+					custom_effect_tooltip = Battle_of_el_alamein_tt
 				}
 			}
-			tooltip = Battle_of_el_alamein_tt
 			GER_erwin_rommel = {
 				add_logistics = 1
 				add_unit_leader_trait = media_personality
@@ -5791,11 +5797,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
-		SPA = {
-			NOT = { has_government = ROOT is_in_faction_with = GER }
-		  }
 		}
+
 		completion_reward = {
 			SPA = { 
 				add_timed_idea = {
@@ -5862,9 +5867,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
-			NOT = { SPA = { is_in_faction_with = GER } }
 		}
+
 		completion_reward = {
 			ROOT = { 
 				create_wargoal = {
@@ -6494,7 +6500,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = { is_in_faction_with = GER }
 		}
 
 		completion_reward = {
@@ -6587,8 +6592,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
 		}
+
 		completion_reward = {
 			TUR = { 
 				add_timed_idea = {
