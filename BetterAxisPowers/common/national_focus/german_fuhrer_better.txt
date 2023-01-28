@@ -4428,7 +4428,6 @@ focus_tree = {
 	focus = {
 		id = GER_scandinavia_policy
 		icon = GFX_focus_generic_scandinavian_alliance
-		text = GER_Spa_Tur_Expand_Army
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
@@ -4700,6 +4699,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		FIN = {
 			if = {
 				limit = {
 					GER = {
@@ -4709,6 +4709,7 @@ focus_tree = {
 				add_timed_idea = { idea = fascist_influence days = 1095 }
 			}
 			country_event = { id = generic.1 }
+		}	
 		}
 	}
 
