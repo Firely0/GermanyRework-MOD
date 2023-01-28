@@ -4934,13 +4934,13 @@ focus_tree = {
 				GER = {
 					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
 					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough = 0.1 }
+					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
 					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 } 
 				}
 				ITA = {
 					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
 					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough = 0.1 }
+					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
 					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 }
 				}
 			}
@@ -5056,12 +5056,18 @@ focus_tree = {
 					scope = GER
 					days = 90
 				}
-				add_dynamic_modifier = {
-					modifier = Rush_Suez_dynamic_modifier
-					scope = ITA
-					days = 90
+				ITA = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_dynamic_modifier = {
+						modifier = Rush_Suez_dynamic_modifier
+						scope = ITA
+						days = 90
+					}
 				}
 			}
+			tooltip = rush_for_suez_cannal_tt
 		}
 	}
 
@@ -5191,12 +5197,18 @@ focus_tree = {
 					scope = GER
 					days = 30
 				}
-				add_dynamic_modifier = {
-					modifier = El_Alamein_Atack_dynamic_modifier
-					scope = ITA
-					days = 30
+				ITA = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					add_dynamic_modifier = {
+						modifier = El_Alamein_Atack_dynamic_modifier
+						scope = ITA
+						days = 30
+					}
 				}
 			}
+			tooltip = Battle_of_el_alamein_tt
 			GER_erwin_rommel = {
 				add_logistics = 1
 				add_unit_leader_trait = media_personality
