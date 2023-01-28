@@ -6,6 +6,7 @@ add_namespace = ger_kaiser_in_exile
 add_namespace = ger_fuhrer_end
 add_namespace = GER_Create_Afrika_Corps_event
 add_namespace = GER_ENG_ETH_event
+add_namespace = GER_SWE_renew
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1118,6 +1119,106 @@ country_event = {
 			factor = 100
 		}
 		name = "We Will Deal With Them Later"
+
+	}
+
+}
+
+country_event = {
+	id = GER_SWE_renew.1
+	title = "Germany Wants Renew our Iron Trade"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+		GER = { 
+			country_event = { id = GER_SWE_renew.2 days = 1 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		GER = { 
+			country_event = { id = GER_SWE_renew.3 days = 1 }
+		}
+
+	}
+
+}
+
+country_event = {
+	id = GER_SWE_renew.3
+	title = "Sweden Accepted our Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			GER = {
+				add_ideas = GER_Trade_with_Sweden
+			}
+	
+			SWE = {
+				add_ideas = GER_Trade_with_Sweden_SWE
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = GER_SWE_renew.3
+	title = "Sweden Not Accepted our Trade Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Secure Our Imports"
+
+		GER = { 
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SWE
+				expire = 0
+			}
+		}
 
 	}
 

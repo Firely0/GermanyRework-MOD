@@ -4573,7 +4573,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_alliance_with_sweden
-		icon = GFX_sweden_aliance
+		icon = GFX_goal_sweden_aliance
 		relative_position_id = GER_Renew_Sweden_Steel_Trade
 		prerequisite = { focus = GER_Renew_Sweden_Steel_Trade }
 		available = {
@@ -4647,9 +4647,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			FIN = {
-				country_event = { id = GER_FIN_Support days = 1 }
-			}
 		}
 	}
 
@@ -4677,7 +4674,7 @@ focus_tree = {
 
 		completion_reward = {
 			FIN = {
-				country_event = { id = GER_FIN_Support days = 1 }
+				country_event = { id = GER_FIN_War_Sov days = 1 }
 			}
 		}
 	}
