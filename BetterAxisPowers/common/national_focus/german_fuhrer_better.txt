@@ -1238,7 +1238,7 @@ focus_tree = {
 		}		
 		completion_reward = {
 			GER = {
-				country_event = gerb.5
+				country_event = { id = gerb.5 days = 1 }
 			}
 		}
 	}
@@ -2029,7 +2029,7 @@ focus_tree = {
 		}		
 		completion_reward = {
 			GER = {
-				country_event = gerb.1
+				country_event = { id = gerb.1 days = 1 }
 			}
 		}
 	}
@@ -3709,7 +3709,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_prepare_for_airwar
-		icon = GFX_focus_generic_air_defense
+		icon = GFX_goal_generic_radar
 		prerequisite = { focus = GER_west_wall }
 		available = {
 			has_tech = decimetric_radar
@@ -4386,7 +4386,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 3
@@ -4412,7 +4412,7 @@ focus_tree = {
 		x = 9
 		y = 1
 
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -4421,58 +4421,264 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TUR = {	
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 0.5
-					uses = 1
-					category = armor
-				}
-				add_tech_bonus = {
-					name = JAP_support
-					bonus = 1.0
-					uses = 1
-					category = support_tech	
-				}
-			} 
+			add_political_power = 25
 		}
 	}
 
 	focus = {
 		id = GER_scandinavia_policy
-		icon = GFX_focus_generic_scandinavia_flags
+		icon = GFX_focus_generic_scandinavian_alliance
 		text = GER_Spa_Tur_Expand_Army
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
 		}
 
-		x = -9
+		x = -10
 		y = 1
 
-		cost = 5
+		cost = 2
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		bypass = {
 		}
 
 		completion_reward = {
-			TUR = {	
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 0.5
-					uses = 1
-					category = armor
-				}
-				add_tech_bonus = {
-					name = JAP_support
-					bonus = 1.0
-					uses = 1
-					category = support_tech	
-				}
-			} 
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = GER_denmark_problem
+		icon = GFX_focus_generic_attack_denmark
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_scandinavia_policy }
+		available = {
+		}
+
+		x = -1
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			country_event = { id = GER_denmark_problem days = 1 }
+		}
+	}
+
+	focus = {
+		id = GER_norway_problem
+		icon = GFX_focus_generic_attack_norway
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_scandinavia_policy }
+		available = {
+		}
+
+		x = 1
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			country_event = { id = GER_norway_problem days = 1 }
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_norway_denmark
+		icon = GFX_goal_demand_sudetenland
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_denmark_problem }
+		prerequisite = { focus = GER_norway_problem }
+		available = {
+		}
+
+		x = 0
+		y = 2
+
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			country_event = { id = GER_fate_of_norway_denmark_event days = 1 }
+		}
+	}
+
+	focus = {
+		id = GER_Befriend_Sweden
+		icon = GFX_goal_befriend_sweden
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_scandinavia_policy }
+		available = {
+		}
+
+		x = -3
+		y = 1
+
+		cost = 3
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = GER_Renew_Sweden_Steel_Trade
+		icon = GFX_goal_generic_trade
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_Befriend_Sweden }
+		available = {
+		}
+
+		x = -3
+		y = 2
+
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			SWE = { country_event = { id = GER_SWE_renew days = 1 }  }
+		}
+	}
+
+	focus = {
+		id = GER_alliance_with_sweden
+		icon = GFX_sweden_aliance
+		relative_position_id = GER_Renew_Sweden_Steel_Trade
+		prerequisite = { focus = GER_Renew_Sweden_Steel_Trade }
+		available = {
+		}
+
+		x = 0
+		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = GER_support_finland
+		icon = GFX_focus_invite_finland
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_scandinavia_policy }
+		available = {
+			FIN = {
+				has_war_with = SOV
+			}
+		}
+
+		x = 3
+		y = 1
+
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = GER_FIN_Support days = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_influense_finland
+		icon = GFX_focus_EST_national_pride_in_finland
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_support_finland }
+		available = {
+			FIN = {
+				has_war_with = SOV
+			}
+		}
+
+		x = 3
+		y = 2
+
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = GER_FIN_Support days = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_FIN_war_with_sov
+		icon = GFX_goal_generic_attack_allies
+		relative_position_id = GER_scandinavia_policy
+		prerequisite = { focus = GER_influense_finland }
+		available = {
+			FIN = {
+				has_war_with = SOV
+			}
+		}
+
+		x = 3
+		y = 3
+
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = GER_FIN_Support days = 1 }
+			}
 		}
 	}
 
@@ -4531,6 +4737,12 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				remove_ideas = FundsforProject
+			}
+			hidden_effect = {
+				set_variable = { GER_army_speed_factor = 0.05 } 
+				set_variable = { GER_army_attack_factor = 0.05 }
+				set_variable = { GER_breakthrough_factor = 0.1 }
+				set_variable = { GER_land_night_attack = 0.03 }  
 			}
 			country_event = { id = GER_Create_Afrika_Corps_event.1 days = 1 }
 		}
@@ -4609,9 +4821,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				set_variable = { GER_army_speed_factor = 0.05 } 
-			}
 			add_building_construction = {
 				type = naval_base
 				level = 1
@@ -4759,11 +4968,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {	
-			hidden_effect = {
-				set_variable = { GER_army_attack_factor = 0.05 }
-				set_variable = { GER_breakthrough_factor = 0.1 }
-				set_variable = { GER_land_night_attack = 0.03 }   
-			}
 			add_building_construction = {
 				type = naval_base
 				level = 1
@@ -5468,7 +5672,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 18
+		x = 20
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
@@ -5487,7 +5691,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -18
+		x = -20
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
@@ -6307,7 +6511,7 @@ focus_tree = {
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
-		x = -4
+		x = -1
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
