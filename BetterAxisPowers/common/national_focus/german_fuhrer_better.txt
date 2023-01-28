@@ -4931,10 +4931,18 @@ focus_tree = {
 			}
 
 			hidden_effect = {
-				set_variable = { GER_army_speed_factor = 0.05 } 
-				set_variable = { GER_army_attack_factor = 0.05 }
-				set_variable = { GER_breakthrough_factor = 0.1 }
-				set_variable = { GER_land_night_attack = 0.03 }  
+				GER = {
+					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
+					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
+					set_variable = { El_Alamein_Atack_breakthrough = 0.1 }
+					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 } 
+				}
+				ITA = {
+					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
+					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
+					set_variable = { El_Alamein_Atack_breakthrough = 0.1 }
+					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 }
+				}
 			}
 			country_event = { id = GER_Create_Afrika_Corps_event.1 days = 1 }
 		}

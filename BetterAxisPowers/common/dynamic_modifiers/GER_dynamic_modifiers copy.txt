@@ -30,19 +30,21 @@
 El_Alamein_Atack_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = CZE_planning_bonus
+	icon = GFX_modifiers_generic_military_plans
 	
-	army_attack_factor = GER_army_attack_factor 
-	breakthrough_factor = GER_breakthrough_factor
-	land_night_attack = GER_land_night_attack  
+	army_attack_factor = El_Alamein_Atack_army_attack_factor 
+	breakthrough_factor = El_Alamein_Atack_breakthrough_factor
+	land_night_attack = El_Alamein_Atack_land_night_attack 
+	
+	#El_Alamein_Atack_army_attack_factor El_Alamein_Atack_breakthrough_factor El_Alamein_Atack_land_night_attack Rush_Suez_army_speed_factor
 
 }
 
 Rush_Suez_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = CZE_planning_bonus
+	icon = GFX_modifiers_generic_military_plans
 	
-	army_speed_factor = GER_army_speed_factor   
+	army_speed_factor = Rush_Suez_army_speed_factor   
 
 }
