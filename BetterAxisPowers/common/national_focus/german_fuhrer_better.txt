@@ -4470,7 +4470,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = { id = GER_denmark_problem days = 1 }
+			country_event = { id = GER_denmark_problem.1 days = 1 }
 		}
 	}
 
@@ -4494,7 +4494,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = { id = GER_norway_problem days = 1 }
+			country_event = { id = GER_norway_problem.1 days = 1 }
 		}
 	}
 
@@ -4519,7 +4519,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = { id = GER_fate_of_norway_denmark_event days = 1 }
+			country_event = { id = GER_fate_of_norway_denmark_event.1 days = 1 }
 		}
 	}
 
@@ -4529,6 +4529,20 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
+			is_subject = no 
+			NOT = { has_war_with = SWE }
+			SWE = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+
+			SWE = {
+				custom_trigger_tooltip = {
+					tooltip = GER_alone_or_peace_faction_tt
+					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+			}
 		}
 
 		x = -3
@@ -4543,7 +4557,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = { idea = fascist_influence days = 1095 }
+			}
+			country_event = { id = generic.1 }
 		}
 	}
 
@@ -4552,7 +4574,21 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_Befriend_Sweden }
-		available = {
+		available = {	
+			is_subject = no 
+			NOT = { has_war_with = SWE }
+			SWE = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+
+			SWE = {
+				custom_trigger_tooltip = {
+					tooltip = GER_alone_or_peace_faction_tt
+					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+			}
 		}
 
 		x = -3
@@ -4567,7 +4603,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			SWE = { country_event = { id = GER_SWE_renew days = 1 }  }
+			SWE = { country_event = { id = GER_SWE_renew.1 days = 1 }  }
 		}
 	}
 
@@ -4619,7 +4655,7 @@ focus_tree = {
 
 		completion_reward = {
 			FIN = {
-				country_event = { id = GER_FIN_Support days = 1 }
+				country_event = { id = GER_FIN_Support.1 days = 1 }
 			}
 		}
 	}
@@ -4630,8 +4666,16 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_support_finland }
 		available = {
+			is_subject = no 
+			NOT = { has_war_with = FIN }
 			FIN = {
-				has_war_with = SOV
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+
+			FIN = {
+				NOT = { has_war_with = SOV }
 			}
 		}
 
@@ -4647,6 +4691,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = { idea = fascist_influence days = 1095 }
+			}
+			country_event = { id = generic.1 }
 		}
 	}
 
@@ -4656,8 +4709,16 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_influense_finland }
 		available = {
+			is_subject = no 
+			NOT = { has_war_with = FIN }
 			FIN = {
-				has_war_with = SOV
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+
+			FIN = {
+				NOT = { has_war_with = SOV }
 			}
 		}
 
