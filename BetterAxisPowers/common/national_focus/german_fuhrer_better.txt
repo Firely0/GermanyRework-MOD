@@ -4726,6 +4726,7 @@ focus_tree = {
 			is_subject = no 
 			NOT = { has_war_with = SWE }
 			is_faction_leader = yes
+			has_global_flag = GER_Swe_Trade
 			SWE = {
 				exists = yes
 				is_subject = no
@@ -4867,7 +4868,7 @@ focus_tree = {
 
 		completion_reward = {
 			FIN = {
-				country_event = { id = GER_FIN_War_Sov days = 1 }
+				country_event = { id = GER_FIN_War_Sov.1 days = 1 }
 			}
 		}
 	}
@@ -4928,6 +4929,7 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = FundsforProject
 			}
+
 			hidden_effect = {
 				set_variable = { GER_army_speed_factor = 0.05 } 
 				set_variable = { GER_army_attack_factor = 0.05 }

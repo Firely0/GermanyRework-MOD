@@ -256,7 +256,10 @@ on_actions = {
 					FROM = { tag = DEN }
 				}
 				DEN = {
-					add_ideas = nohelp_denmark
+					add_timed_idea = {
+						idea = nohelp_denmark
+						days = 7
+					}
 				}
 			}
 		}

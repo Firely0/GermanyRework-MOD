@@ -29,9 +29,10 @@ ideas = {
 				always = yes
 			}
 
-			set_rule = {
-				can_create_factions = no
+			rule = {
+				can_join_factions = no 
 			}
+			
 		}
 
 		GER_Trade_with_Sweden = {
