@@ -7,6 +7,10 @@ add_namespace = ger_fuhrer_end
 add_namespace = GER_Create_Afrika_Corps_event
 add_namespace = GER_ENG_ETH_event
 add_namespace = GER_SWE_renew
+add_namespace = GER_denmark_problem
+add_namespace = GER_norway_problem
+add_namespace = GER_support_fin
+add_namespace = GER_FIN_War_Sov
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1222,4 +1226,403 @@ country_event = {
 
 	}
 
+}
+
+country_event = {
+	id = GER_denmark_problem.1
+	title = "Denmark Problem!"
+	desc = "We Must Secure Baltic Sea from Allies or Other Potential Enemy, For This We Must Eliminate Denmark or We Can Always Take Peaceful Approach."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Send Ultimatum"
+
+		DEN = { 
+			country_event = { id = GER_denmark_problem.2 days = 1 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Send Puppet Demand"
+
+		DEN = { 
+          country_event = { id = GER_denmark_problem.3 days = 1 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Pressure Denmark Government"
+
+		GER = {
+			set_global_flag = GER_pressure_denmark_government
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_denmark_problem.2
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Fully Annexation of our Country."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Accept Demands"
+
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark
+			set_global_flag = GER_ultimatum_denkmark_y
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+
+	}
+
+}
+
+country_event = {
+	id = GER_denmark_problem.3
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Become Puppet of Germany."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Accept Demands"
+
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark
+			set_global_flag = GER_ultimatum_denmark_puppet_y
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denmark_puppet_n
+		}
+
+	}
+
+}
+
+country_event = {
+	id = GER_norway_problem.1
+	title = "Norway Problem!"
+	desc = "We Must Secure Baltic Sea from Allies or Other Potential Enemy, For This We Must Eliminate Norway or We Can Always Take Peaceful Approach."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Send Ultimatum"
+
+		DEN = { 
+			country_event = { id = GER_denmark_problem.2 days = 1 }
+		}
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Send Puppet Demand"
+
+		DEN = { 
+          country_event = { id = GER_denmark_problem.3 days = 1 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Pressure Norway Government"
+
+		set_global_flag = GER_pressure_norway_government
+
+	}
+
+}
+
+country_event = {
+	id = GER_norway_problem.2
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Fully Annexation of our Country."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Accept Demands"
+
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway
+			set_global_flag = GER_ultimatum_norway_y
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+
+	}
+
+}
+
+country_event = {
+	id = GER_norway_problem.3
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Become Puppet of Germany."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Accept Demands"
+
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway
+			set_global_flag = GER_ultimatum_norway_puppet_y
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway
+			set_global_flag = GER_ultimatum_norway_puppet_n
+		}
+
+	}
+
+}
+
+country_event = {
+	id = GER_FIN_Support.1
+	title = "Support from Germans"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Yes"
+
+		GER = {
+			country_event = { id = GER_FIN_Support.2 days = 1 }
+		}
+
+		FIN = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 950
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 250
+			}
+		}
+
+		hidden_effect = {
+			set_global_flag = GER_Fin_help_y
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_FIN_Support.3 days = 1 }
+		}
+
+		hidden_effect = {
+			set_global_flag = GER_Fin_help_n
+		}
+
+	}
+
+}
+
+country_event = {
+	id = GER_FIN_Support.2
+	title = "Finland Accepted our Support"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+	}
+
+}
+
+country_event = {
+	id = GER_FIN_Support.3
+	title = "Finland Not Accepted our Support"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good Luck"
+
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.1
+	title = "Request from Germany!"
+	desc = "Germany wants us to join war Against Soviet Union!, They Promised Give our Lost Land Back to us"
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Prepare for War"
+
+        GER = {
+			country_event = { id = GER_FIN_War_Sov.2 }
+		}
+		
+
+		hidden_effect = {
+			GER = {
+				add_to_faction = FIN
+			}
+	
+			FIN = {
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 200
+				}
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_FIN_War_Sov.3 }
+		}
+
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.2
+	title = "Finland Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good."
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.3
+	title = "Finland not Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Nevermind."
+
+	}
 }
