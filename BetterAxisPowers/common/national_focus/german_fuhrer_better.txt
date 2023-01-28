@@ -4382,13 +4382,13 @@ focus_tree = {
 	focus = {
 		id = GER_Interve_Civilwars
 		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = GER_Fuhrer }
+		prerequisite = { focus = GER_rhineland_ab }
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -6
 		y = 1
-		relative_position_id = GER_Fuhrer
+		relative_position_id = GER_rhineland_ab
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -5081,13 +5081,16 @@ focus_tree = {
 
 		available = {
 			has_idea = GER_Afrika_Korps
-			449 = { is_controlled_by_ROOT_or_ally = yes }
-			448 = { is_controlled_by_ROOT_or_ally = yes }
-			451 = { is_controlled_by_ROOT_or_ally = yes }
-			450 = { is_controlled_by_ROOT_or_ally = yes }
-			663 = { is_controlled_by_ROOT_or_ally = yes }
-			662 = { is_controlled_by_ROOT_or_ally = yes }
-			661 = { is_controlled_by_ROOT_or_ally = yes }
+			custom_trigger_tooltip = {
+			tooltip = GER_libyan_in_control_tt
+				449 = { is_controlled_by_ROOT_or_ally = yes }
+				448 = { is_controlled_by_ROOT_or_ally = yes }
+				451 = { is_controlled_by_ROOT_or_ally = yes }
+				450 = { is_controlled_by_ROOT_or_ally = yes }
+				663 = { is_controlled_by_ROOT_or_ally = yes }
+				662 = { is_controlled_by_ROOT_or_ally = yes }
+				661 = { is_controlled_by_ROOT_or_ally = yes }
+			}
 		}
 
 		bypass = {
@@ -5233,6 +5236,7 @@ focus_tree = {
 			OR = {
 				ITA = {
 					controls_province = 10117
+					controls_province = 12079
 				}
 				GER = {
 					controls_province = 10117
@@ -6709,7 +6713,7 @@ focus_tree = {
 			}
 		}		
 		cancel_if_invalid = no
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 10
@@ -6730,7 +6734,7 @@ focus_tree = {
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
