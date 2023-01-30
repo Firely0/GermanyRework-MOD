@@ -4356,6 +4356,27 @@ focus_tree = {
 #Fuhrer Focus Tree
 
 	focus = {
+		id = GER_Interve_Civilwars
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = GER_rhineland_ab }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 1
+		relative_position_id = GER_rhineland_ab
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_Interve_Civilwars_idea days = 1461 
+			}
+		}
+	}
+
+	focus = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_axis
 		text = GER_Axis_Powers_V
@@ -4377,27 +4398,6 @@ focus_tree = {
 			}
 			create_faction = "Axis"
 		    }	
-		}
-	}
-
-	focus = {
-		id = GER_Interve_Civilwars
-		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = GER_Fuhrer }
-		available = {
-		}
-		cancel_if_invalid = no
-		x = -1
-		y = 1
-		relative_position_id = GER_Fuhrer
-		cost = 3
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_Interve_Civilwars_idea days = 1461 
-			}
 		}
 	}
 
@@ -7020,7 +7020,7 @@ focus_tree = {
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
