@@ -302,7 +302,7 @@ focus_tree = {
 			is_puppet = no
 		}
 		cancel_if_invalid = no
-		x = -9
+		x = -10
 		y = 1
 		relative_position_id = GER_rhineland_ab
 		cost = 10
@@ -4383,13 +4383,13 @@ focus_tree = {
 	focus = {
 		id = GER_Interve_Civilwars
 		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = GER_rhineland_ab }
+		prerequisite = { focus = GER_Fuhrer }
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 5
+		x = -1
 		y = 1
-		relative_position_id = GER_rhineland_ab
+		relative_position_id = GER_Fuhrer
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -7020,7 +7020,7 @@ focus_tree = {
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
@@ -7085,9 +7085,9 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		x = -5
+		x = 3
 		y = 1
-		relative_position_id = GER_SS
+		relative_position_id = GER_Sleep_Well_SOV
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -7128,9 +7128,9 @@ focus_tree = {
 		}
 	 } 
 	 cancel_if_invalid = no
-	 x = 3
-	 y = 4
-	 relative_position_id = GER_Sleep_Well_SOV
+	 x = 0
+	 y = 3
+	 relative_position_id = GER_Approach_Soviet
 	 cost = 10
 	 ai_will_do = {
 		factor = 10
@@ -7174,8 +7174,8 @@ focus = {
 		}
 	}
 	x = -1
-	y = 1
-	relative_position_id = GER_mol_rib_pactV
+	y = 4
+	relative_position_id = GER_Approach_Soviet
 	cost = 10
 	ai_will_do = {
 		factor = 0.01
