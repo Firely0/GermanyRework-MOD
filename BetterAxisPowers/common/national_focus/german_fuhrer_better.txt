@@ -4630,7 +4630,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = GER_norway_problem.1 days = 1 }
-			add_threat = 3
 		}
 	}
 
@@ -4827,10 +4826,10 @@ focus_tree = {
 			if = {
 				limit = {
 					GER = {
-						has_government = fascism
+						has_government = neutrality
 					}
 				}
-				add_timed_idea = { idea = fascist_influence days = 1095 }
+				add_timed_idea = { idea = neutrality_influence days = 1095 }
 			}
 			country_event = { id = generic.1 }
 		}
@@ -5544,7 +5543,7 @@ focus_tree = {
 		x = 3
 		y = 3
 		relative_position_id = GER_Create_Afrika_Corps
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -5572,7 +5571,7 @@ focus_tree = {
 		x = 5
 		y = 3
 		relative_position_id = GER_Create_Afrika_Corps
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
