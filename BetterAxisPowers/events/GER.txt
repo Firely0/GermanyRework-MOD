@@ -1372,8 +1372,8 @@ country_event = {
 		}
 		name = "Send Ultimatum"
 
-		DEN = { 
-			country_event = { id = GER_denmark_problem.2 days = 1 }
+		NOR = { 
+			country_event = { id = GER_norway_problem.2 days = 1 }
 		}
 
 		hidden_effect = {
@@ -1388,8 +1388,8 @@ country_event = {
 		}
 		name = "Send Puppet Demand"
 
-		DEN = { 
-          country_event = { id = GER_denmark_problem.3 days = 1 }
+		NOR = { 
+          country_event = { id = GER_norway_problem.3 days = 1 }
 		}
 
 		hidden_effect = {
