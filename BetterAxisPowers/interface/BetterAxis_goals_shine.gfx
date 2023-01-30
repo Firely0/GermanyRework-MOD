@@ -32,8 +32,8 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
-		SpriteType = {
-		name = "GFX_goal_the_axis"
+	SpriteType = {
+		name = "GFX_goal_the_Axis_shine"
 		texturefile = "gfx/interface/goals/Axis_Focus.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -65,7 +65,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_AfrikaCorps"
+		name = "GFX_goal_AfrikaCorps_shine"
 		texturefile = "gfx/interface/goals/AfrikaCorps.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -97,7 +97,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_Erwin_Rommel"
+		name = "GFX_goal_Erwin_Rommel_shine"
 		texturefile = "gfx/interface/goals/Erwin_Rommel.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -129,7 +129,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_BerlinFocus"
+		name = "GFX_goal_BerlinFocus_shine"
 		texturefile = "gfx/interface/goals/GerFlagfort.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -161,7 +161,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_keepsafeheavyindustry"
+		name = "GFX_goal_keepsafeheavyindustry_shine"
 		texturefile = "gfx/interface/goals/keepsafeheavyindustry.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -193,7 +193,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_keepwarmachinegoing"
+		name = "GFX_goal_keepwarmachinegoing_shine"
 		texturefile = "gfx/interface/goals/keepwarmachinegoing.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -289,7 +289,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_befriend_sweden"
+		name = "GFX_goal_befriend_sweden_shine"
 		texturefile = "gfx/interface/goals/befriend_sweden.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -321,7 +321,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_sweden_aliance"
+		name = "GFX_goal_sweden_aliance_shine"
 		texturefile = "gfx/interface/goals/sweden_aliance.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

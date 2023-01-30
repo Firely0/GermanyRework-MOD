@@ -1253,6 +1253,10 @@ country_event = {
 		DEN = { 
 			country_event = { id = GER_denmark_problem.2 days = 1 }
 		}
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_sent
+		}
 	}
 
 	option = {
@@ -1263,6 +1267,10 @@ country_event = {
 
 		DEN = { 
           country_event = { id = GER_denmark_problem.3 days = 1 }
+		}
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_sent
 		}
 	}
 
@@ -1294,7 +1302,7 @@ country_event = {
 		name = "Accept Demands"
 
 		hidden_effect = {
-			clr_global_flag = GER_ultimatum_denkmark
+			clr_global_flag = GER_ultimatum_denkmark_sent
 			set_global_flag = GER_ultimatum_denkmark_y
 		}
 
@@ -1305,6 +1313,10 @@ country_event = {
 			factor = 40
 		}
 		name = "No"
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_n
+		}
 
 	}
 
@@ -1325,7 +1337,7 @@ country_event = {
 		name = "Accept Demands"
 
 		hidden_effect = {
-			clr_global_flag = GER_ultimatum_denkmark
+			clr_global_flag = GER_ultimatum_denkmark_sent
 			set_global_flag = GER_ultimatum_denmark_puppet_y
 		}
 
@@ -1338,6 +1350,7 @@ country_event = {
 		name = "No"
 
 		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark_sent
 			set_global_flag = GER_ultimatum_denmark_puppet_n
 		}
 
@@ -1364,7 +1377,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			set_global_flag = GER_ultimatum_norway
+			set_global_flag = GER_ultimatum_norway_sent
 		}
 
 	}
@@ -1377,6 +1390,10 @@ country_event = {
 
 		DEN = { 
           country_event = { id = GER_denmark_problem.3 days = 1 }
+		}
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway_sent
 		}
 	}
 
@@ -1407,7 +1424,7 @@ country_event = {
 		name = "Accept Demands"
 
 		hidden_effect = {
-			clr_global_flag = GER_ultimatum_norway
+			clr_global_flag = GER_ultimatum_norway_sent
 			set_global_flag = GER_ultimatum_norway_y
 		}
 
@@ -1418,6 +1435,10 @@ country_event = {
 			factor = 40
 		}
 		name = "No"
+
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway_n
+		}
 
 	}
 
@@ -1438,7 +1459,7 @@ country_event = {
 		name = "Accept Demands"
 
 		hidden_effect = {
-			clr_global_flag = GER_ultimatum_norway
+			clr_global_flag = GER_ultimatum_norway_sent
 			set_global_flag = GER_ultimatum_norway_puppet_y
 		}
 
@@ -1451,7 +1472,7 @@ country_event = {
 		name = "No"
 
 		hidden_effect = {
-			clr_global_flag = GER_ultimatum_norway
+			clr_global_flag = GER_ultimatum_norway_sent
 			set_global_flag = GER_ultimatum_norway_puppet_n
 		}
 

@@ -4639,6 +4639,8 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_denmark_problem }
 		prerequisite = { focus = GER_norway_problem }
+		will_lead_to_war_with = NOR
+		will_lead_to_war_with = DEN
 		available = {
 			has_army_manpower = { size > 499999 }
 			is_subject = no
@@ -4704,14 +4706,14 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_global_flag = GER_ultimatum_denkmark
+					has_global_flag = GER_ultimatum_norway_n
 				}
 				create_wargoal = {
 					target = DEN
 					type = annex_everything
 				}
 				add_threat = 3
-				clr_global_flag = GER_ultimatum_denkmark
+				clr_global_flag = GER_ultimatum_norway_n
 				set_global_flag = GER_nohelp_denmark
 			}
 			if = {
@@ -4729,7 +4731,7 @@ focus_tree = {
 				limit = {
 					has_global_flag = GER_pressure_norway_government
 				}
-				DEN = {
+				NOR = {
 					if = {
 						limit = {
 							GER = {
@@ -4767,7 +4769,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_global_flag = GER_ultimatum_norway
+					has_global_flag = GER_ultimatum_denkmark_n
 				}
 				create_wargoal = {
 					target = NOR
