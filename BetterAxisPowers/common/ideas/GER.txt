@@ -141,6 +141,8 @@ ideas = {
 
 				#Beaten, but not Defeated
 				weekly_casualties_war_support = 0.001
+				weekly_convoys_war_support = 0.001 
+				weekly_bombing_war_support = 0.001 
 
 			}
 		}
@@ -483,7 +485,7 @@ ideas = {
 			}
 		}
 
-		GER_align_bulgariaV = {
+		GER_align_bulgaria = {
 			allowed = {
 				always = no
 			}
@@ -499,6 +501,25 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
+			}
+		}
+
+		GER_align_bulgaria_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
 			}
 		}
 
