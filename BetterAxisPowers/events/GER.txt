@@ -910,7 +910,6 @@ country_event = {
 		GER_wilhelm_ii = {
 			add_country_leader_role = {
 			promote_leader = yes
-			picture = GFX_portrait_ger_wilhelm_II_r
 			country_leader = {
 				expire = "1965.1.1"
 				ideology = despotism
@@ -919,8 +918,12 @@ country_event = {
 					imperial_connections
 				}
 			}
-			promote_leader = yes
 			}
+		}
+
+		set_country_leader_portrait = {
+			ideology = despotism
+			portrait = GFX_portrait_ger_wilhelm_II_r
 		}
 		
 		set_cosmetic_tag = GER_neutrality
