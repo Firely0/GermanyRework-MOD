@@ -538,7 +538,25 @@ country_event = {
 
   picture = GFX_report_event_german_troops
 
-  is_triggered_only = yes
+  trigger = {
+	if = {
+		GER = {
+			exists = yes
+			has_capitulated = no
+			has_war_with = ENG
+			86 = { is_controlled_by = GER }
+			85 = { is_controlled_by = GER } 
+			807 = { is_controlled_by = GER }
+		}
+		POL = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+				is_puppet_of = GER
+			}
+		}
+	}
+  }
 
   will_lead_to_war_with = BEL
   will_lead_to_war_with = HOL
@@ -1216,11 +1234,10 @@ country_event = {
 	
 			SWE = {
 				add_ideas = GER_Trade_with_Sweden_SWE
-				add_ai_strategy = {
-					type = alliance
-					id = "GER"
-					value = 200
-				}
+			}
+
+			GER = {
+				give_guarantee = SWE
 			}
 
 			set_global_flag = GER_Swe_Trade
