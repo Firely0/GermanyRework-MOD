@@ -249,6 +249,14 @@ option = {
   GER = { transfer_state = 102 add_state_core = 102 }
   add_to_faction = YUG
 
+  YUG = {
+	add_ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = 200
+	}
+  }
+
 }
 }
 
@@ -390,6 +398,14 @@ country_event = {
 
   GER = { transfer_state = 69 add_state_core = 69 }
   add_to_faction = CZE
+
+  CZE = {
+	add_ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = 200
+	}
+  }
  }
 }
 
@@ -1158,7 +1174,7 @@ country_event = {
 				remove_ideas = neutrality_idea
 				add_ai_strategy = {
 					type = alliance
-					id = GER
+					id = "GER"
 					value = 200
 				}
 			}
@@ -1619,7 +1635,7 @@ country_event = {
 			FIN = {
 				add_ai_strategy = {
 					type = alliance
-					id = GER
+					id = "GER"
 					value = 200
 				}
 			}
