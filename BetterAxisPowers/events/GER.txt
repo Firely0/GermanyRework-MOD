@@ -538,25 +538,7 @@ country_event = {
 
   picture = GFX_report_event_german_troops
 
-  trigger = {
-	if = {
-		GER = {
-			exists = yes
-			has_capitulated = no
-			has_war_with = ENG
-			86 = { is_controlled_by = GER }
-			85 = { is_controlled_by = GER } 
-			807 = { is_controlled_by = GER }
-		}
-		POL = {
-			OR = {
-				has_capitulated = yes
-				exists = no
-				is_puppet_of = GER
-			}
-		}
-	}
-  }
+  is_triggered_only = yes
 
   will_lead_to_war_with = BEL
   will_lead_to_war_with = HOL
@@ -681,6 +663,39 @@ country_event = {
 
 	}
 }
+
+country_event = {
+	id = ger_around_maginot_event.2
+	title = "trigger"
+	desc = ""
+  
+	picture = GFX_report_event_german_troops
+  
+	trigger = {
+	  NOT = { has_global_flag = GER_AROUND_MAGINOT_END_TRI } 
+	  GER = {
+		  exists = yes
+		  has_capitulated = no
+		  has_war_with = ENG
+		  86 = { is_controlled_by = GER }
+		  85 = { is_controlled_by = GER } 
+		  807 = { is_controlled_by = GER }
+	  }
+	  POL = {
+		  OR = {
+			  has_capitulated = yes
+			  exists = no
+			  is_puppet_of = GER
+		  }
+	  }
+	}
+
+	GER = {
+	   country_event = ger_around_maginot_event.1
+	}
+
+	set_global_flag = GER_AROUND_MAGINOT_END_TRI
+  }
 
 country_event = { 
 	id = ger_kaiser_in_exile.1
@@ -1193,7 +1208,7 @@ country_event = {
 				add_ai_strategy = {
 					type = befriend
 					id = "GER"
-					value = 200
+					value = 300
 				}
 			}
 		}
