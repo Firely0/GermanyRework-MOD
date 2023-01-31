@@ -11,6 +11,7 @@ add_namespace = GER_denmark_problem
 add_namespace = GER_norway_problem
 add_namespace = GER_FIN_Support
 add_namespace = GER_FIN_War_Sov
+add_namespace = GER_FIN_lands
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -264,6 +265,7 @@ country_event = {
     ai_chance = { factor = 100 }
     create_wargoal = {
         type = take_state_focus
+		target = controller
         generator = { 102 }
     }
   }
@@ -1150,6 +1152,17 @@ country_event = {
 		GER = { 
 			country_event = { id = GER_SWE_renew.2 days = 1 }
 		}
+
+		hidden_effect = {
+			SWE = {
+				remove_ideas = neutrality_idea
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 200
+				}
+			}
+		}
 	}
 
 	option = {
@@ -1593,8 +1606,11 @@ country_event = {
         GER = {
 			country_event = { id = GER_FIN_War_Sov.2 }
 		}
-		
 
+		hidden_effect = {
+			set_global_flag = GER_FIN_granted_lands
+		}
+		
 		hidden_effect = {
 			GER = {
 				add_to_faction = FIN
@@ -1653,5 +1669,93 @@ country_event = {
 		}
 		name = "Nevermind."
 
+	}
+}
+
+country_event = {
+	id = GER_FIN_lands
+	title = "Request from Finland"
+	desc = "Finland Request Control of Their Pre-Winter War lands."
+	picture = GFX_report_event_finnish_soldiers_snow
+
+	trigger = {
+		has_global_flag = GER_FIN_granted_lands
+		if = {
+			limit = {
+				any_allied_country = {
+					NOT = { is_subject_of = ROOT }
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					NOT = { is_subject_of = ROOT }
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = GER
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine."
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = FIN_Granted_146 }
+				146 = {
+					NOT = { owner = FIN }
+					is_controlled_by_ROOT_or_ally = yes 
+				}
+			}
+			transfer_state = 146 target = FIN
+			set_global_flag = FIN_Granted_146
+		}
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = FIN_Granted_147 }
+				147 = {
+					NOT = { owner = FIN }
+					is_controlled_by_ROOT_or_ally = yes 
+				}
+			}
+			transfer_state = 147 target = FIN
+			set_global_flag = FIN_Granted_147
+		}
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = FIN_Granted_722 }
+				722 = {
+					NOT = { owner = FIN }
+					is_controlled_by_ROOT_or_ally = yes 
+				}
+			}
+			transfer_state = 147 target = FIN
+			set_global_flag = FIN_Granted_722
+		}
+		
 	}
 }
