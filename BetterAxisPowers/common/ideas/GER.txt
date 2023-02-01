@@ -1435,13 +1435,13 @@ ideas = {
 				max_command_power = 20
 				planning_speed = 0.15
 
-				recon_factor = 0.05
-				initiative_factor = 0.05
+				recon_factor = 0.1
+				initiative_factor = 0.1
+				breakthrough_factor = 0.05 
 
                 org_loss_when_moving = -0.1
 				army_org_Factor = 0.05
-                army_armor_speed_factor = 0.1
-				breakthrough_factor = 0.05 	
+                army_armor_speed_factor = 0.1	
 			}
 		}
 
