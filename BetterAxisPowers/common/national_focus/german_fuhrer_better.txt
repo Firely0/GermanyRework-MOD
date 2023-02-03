@@ -5098,21 +5098,7 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = FundsforProject
 			}
-
-			hidden_effect = {
-				GER = {
-					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
-					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
-					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 } 
-				}
-				ITA = {
-					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
-					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
-					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 }
-				}
-			}
+			
 			country_event = { id = GER_Create_Afrika_Corps_event.1 days = 1 }
 		}
 	}
@@ -5231,26 +5217,24 @@ focus_tree = {
 						state = 456
 					}
 				}
-				GER = {
-					add_dynamic_modifier = {
-						modifier = Rush_Suez_dynamic_modifier
-						days = 90
-					}
-					custom_effect_tooltip = rush_for_suez_cannal_tt
+				add_dynamic_modifier = {
+					modifier = Rush_Suez_dynamic_modifier
+					scope = GER
+					days = 90
 				}
+				custom_effect_tooltip = rush_for_suez_cannal_tt
 				if = {
 					limit = {
 					ITA = {
 						is_in_faction_with = GER
 					}	
 					}
-					ITA = {
-						add_dynamic_modifier = {
-							modifier = Rush_Suez_dynamic_modifier
-							days = 90
-						}
-						custom_effect_tooltip = rush_for_suez_cannal_tt
+					add_dynamic_modifier = {
+						modifier = Rush_Suez_dynamic_modifier
+						scope = ITA
+						days = 90
 					}
+					custom_effect_tooltip = rush_for_suez_cannal_tt
 				}
 			}
 		}

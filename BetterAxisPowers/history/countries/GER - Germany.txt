@@ -1,5 +1,11 @@
 ﻿capital = 64
 
+#Africa Front
+set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
+set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
+set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
+set_variable = { El_Alamein_Atack_land_night_attack = 0.03 } 
+
 if = {
 	limit = {
 		NOT = {

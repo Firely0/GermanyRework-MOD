@@ -51,25 +51,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = german_Fuhrer_tt
 			hidden_effect = {
-			set_cosmetic_tag = GER_the_third_reich
+			 set_cosmetic_tag = GER_the_third_reich
 			 load_focus_tree = {
 			  tree = german_fuhrer_better
 			  keep_completed = yes
-			  }
-			}
-			hidden_effect = {
-				GER = {
-					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
-					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
-					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 } 
-				}
-				ITA = {
-					set_variable = { Rush_Suez_army_speed_factor = 0.05 } 
-					set_variable = { El_Alamein_Atack_army_attack_factor = 0.05 }
-					set_variable = { El_Alamein_Atack_breakthrough_factor = 0.1 }
-					set_variable = { El_Alamein_Atack_land_night_attack = 0.03 }
-				}
+			 }
 			}
 		} 		
 	}
