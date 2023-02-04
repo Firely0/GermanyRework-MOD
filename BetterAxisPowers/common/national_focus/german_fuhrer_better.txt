@@ -5523,9 +5523,8 @@ focus_tree = {
 
 	
 	focus = {
-		id = GER_Set_HQ_in_?
+		id = GER_Set_HQ_in_front
 		icon = GFX_goal_generic_construct_military
-		text = GER_Working_on
 		prerequisite = { focus = GER_Afrika_Corps_Follow_Italy }
 
 		available = {
@@ -5868,8 +5867,7 @@ focus_tree = {
 	focus = {
 		id = GER_Planned_Offense
 		icon = GFX_goal_generic_major_war
-		text = GER_Working_on
-		prerequisite = { focus = GER_Set_HQ_in_? }
+		prerequisite = { focus = GER_Set_HQ_in_front }
 
 		available = {
 			OR = {
@@ -6101,10 +6099,9 @@ focus_tree = {
     }
 
 	focus = {
-		id = GER_?_war_logistics
+		id = GER_africa_front_war_logistics
 		icon = GFX_focus_generic_africa_infrastructure
-		text = GER_Working_on
-		prerequisite = { focus = GER_Set_HQ_in_? }
+		prerequisite = { focus = GER_Set_HQ_in_front }
 
 		available = {
 			OR = {
