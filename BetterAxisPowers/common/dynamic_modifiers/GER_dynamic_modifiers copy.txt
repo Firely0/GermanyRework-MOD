@@ -38,6 +38,28 @@ El_Alamein_Atack_dynamic_modifier = {
 	
 }
 
+ITA_LIB_Offensive_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_attack_factor = 0.05 
+	land_night_attack = 0.03
+	heat_attrition_factor = -0.1
+	
+}
+
+ITA_ETH_Offensive_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_attack_factor = 0.05 
+	out_of_supply_factor = -0.1
+	heat_attrition_factor = -0.1 
+	
+}
+
 Rush_Suez_dynamic_modifier = {
 	enable = { always = yes }
 

@@ -147,20 +147,22 @@
  GER_Kaiser_in_Country_tt:0 "Wilhelm II in Country"
  GER_Fuhrer_in_Country:0 "Adolf Hitler in Country"
 
+ #Africa
  AfricaCorps_in_germany:0 "Africa Corps is Sub-Branch of Wehrmacht"
  AfricaCorps_in_italy:0 "Africa Korps Sub-Branch of Royal Italian Army"
-
  GER_libyan_in_control_tt:0 "Libya is Controled by Germany or one of Axis Member"
- 
- #Italy Side
  GER_ITA_libyan_in_control_tt:0 "Libya is Controled by Italy or one of Italy`s Subject Country."
  GER_Erita_in_control_tt:0 "Eritrea is Controled by Italy or one of Italy`s Subject Country. "
  GER_Somoliland_in_control_tt:0 "Samoliland is Controled by Italy or one of Italy`s Subject Country."
  GER_LIB_SIDE_PLAN_tt:0 "if our front is Libya"
  GER_ETH_SIDE_PLAN_tt:0 "if our front is Ethiopia"
+ GER_LIB_SIDE_PLAN:0 "Selected Front; Libya"
+ GER_ETH_SIDE_PLAN:0 "Selected Front; Ethiopia"
 
+ #Remove Later.
  Battle_of_el_alamein_tt:0 "\nDivision Attack: §G+5%§! \nBreakthrough: §G+10%§! \nNight Time Attack: §G+3%§! \n"
  rush_for_suez_cannal_tt:0 "\nArmy Speed: §G+5%§!\n"
+ #
 
  GER_Wilhelm_II_back_tt:0 "Wilhelm II Returns to Germany."
  GER_Fuhrer_Deposed_tt:0 "Wilhelm II Takes Control of Country, And Balance of Power Ends."
@@ -340,6 +342,10 @@
  GER_Set_HQ_in_Libya_desc:0 ""
  GER_Battle_of_El_Alamein:0 "Battle of El-Alamein"
  GER_Battle_of_El_Alamein_desc:0 ""
+ ITA_LIB_Offensive_dynamic_modifier:0 "Local Offensive"
+ ITA_LIB_Offensive_dynamic_modifier_desc:0 ""
+ ITA_ETH_Offensive_dynamic_modifier:0 "Local Offensive"
+ ITA_ETH_Offensive_dynamic_modifier_desc:0 ""
  GER_Libya_war_logistics:0 "War Logistics in Libya"
  GER_Libya_war_logistics_desc:0 ""
  GER_Befriend_Sweden:0 "Befriend Sweden"
