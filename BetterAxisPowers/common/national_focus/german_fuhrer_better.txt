@@ -5934,6 +5934,87 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
+					NOT = { has_global_flag = GER_ETH_SIDE_PLAN }
+					NOT = { has_global_flag = GER_LIB_SIDE_PLAN }
+				}
+				custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
+				every_state = {
+					limit = {
+						OR = {
+							state = 452
+							state = 447
+							state = 907
+							state = 446
+							state = 457
+							state = 456
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = ITA_LIB_Offensive_dynamic_modifier
+						scope = GER
+						days = 90
+					}
+					if = {
+						limit = {
+							ITA = {
+								is_in_faction_with = GER
+							}
+						}
+						add_dynamic_modifier = {
+							modifier = ITA_LIB_Offensive_dynamic_modifier
+							scope = ITA
+							days = 90
+						}
+					}
+				}
+			    custom_effect_tooltip = GER_ETH_SIDE_PLAN
+			every_state = {
+				limit = {
+					OR = {
+						state = 883
+						state = 551
+						state = 886
+						state = 549
+						state = 457
+						state = 884
+						state = 885
+						state = 548
+						state = 904
+						state = 547
+						state = 905
+						state = 903
+						state = 546
+						state = 768
+						state = 769
+						state = 890
+						state = 718
+						state = 660
+						state = 774
+						state = 268
+						state = 269
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = ITA_ETH_Offensive_dynamic_modifier
+					scope = GER
+					days = 120
+				}
+				if = {
+					limit = {
+						ITA = {
+							is_in_faction_with = GER
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = ITA_ETH_Offensive_dynamic_modifier
+						scope = ITA
+						days = 120
+					}
+				}
+			}
+			}
+			if = {
+				limit = {
 					has_global_flag = GER_LIB_SIDE_PLAN
 				}
 				every_state = {
