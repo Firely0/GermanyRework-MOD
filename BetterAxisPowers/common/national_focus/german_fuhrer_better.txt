@@ -5595,268 +5595,110 @@ focus_tree = {
 					NOT = { has_global_flag = GER_LIB_SIDE_PLAN }
 				}
 				custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
-				841 = {	
+				271 = {
 					add_building_construction = {
-						type = supply_node
-						level = 1
+						type = radar_station
 						instant_build = yes
-						province = 1984
+						level = 3
 					}
-				}
-				836 = {	
-					add_building_construction = {
-						type = supply_node
-						instant_build = yes
-						level = 1
-						province = 10775
-					}
-				}
-				271 = {	
 					add_building_construction = {
 						type = air_base
 						instant_build = yes
 						level = 3
 					}
+				}
+				842 = {
 					add_building_construction = {
-						type = radar_station
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
+				}
+				559 = {
+					add_building_construction = {
+						type = air_base
 						instant_build = yes
 						level = 2
 					}
 				}			 
-				build_railway = {
-					level = 1
-					start_province = 5010
-					target_province = 10775
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 5010
-					target_province = 1984
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 13250
-					target_province = 5010
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 12991
-					target_province = 5010
-					build_only_on_allied = yes
-				}
 				custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
-				449 = {	
+				661 = {
+					add_building_construction = {
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
+				}
+				663 = {
+					add_building_construction = {
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
+				}
+				449 = {
 					add_building_construction = {
 						type = radar_station
 						instant_build = yes
-						level = 2
+						level = 3
 					}
-					add_building_construction = {
-						type = anti_air_building
-						instant_build = yes
-						level = 1
-					}
-				}
-				451 = {	
-					add_building_construction = {
-						type = air_base
-						instant_build = yes
-						level = 1
-					}
-				}	
-				663 = {	
-					add_building_construction = {
-						type = air_base
-						instant_build = yes
-						level = 1
-					}
-				}	
-				448 = {	
-				add_building_construction = {
-						type = coastal_bunker 
-						instant_build = yes
-						level = 2
-						province = 1149
-				}	
-				}
-				450 = {
-				add_building_construction = {
-					type = coastal_bunker 
-					instant_build = yes
-					level = 2
-					province = 11954
-				}
-				}
-				451 {	
-				add_building_construction = {
-					type = coastal_bunker 
-					instant_build = yes
-					level = 2
-					province = 1130
-					}
-				}
-				449 = {	
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 10117
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 10117
-					}
-				}	 
-				build_railway = {
-					level = 1
-					start_province = 11954
-					target_province = 10117
-				}
-				build_railway = {
-					level = 1
-					start_province = 10117
-					target_province = 1149
 				}
 			}
 			if = {
 				limit = {
 					has_global_flag = GER_LIB_SIDE_PLAN
 				}
-				449 = {	
+				661 = {
+					add_building_construction = {
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
+				}
+				663 = {
+					add_building_construction = {
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
+				}
+				449 = {
 					add_building_construction = {
 						type = radar_station
 						instant_build = yes
-						level = 2
+						level = 3
 					}
-					add_building_construction = {
-						type = anti_air_building
-						instant_build = yes
-						level = 1
-					}
-				}
-				451 = {	
-					add_building_construction = {
-						type = air_base
-						instant_build = yes
-						level = 1
-					}
-				}	
-				663 = {	
-					add_building_construction = {
-						type = air_base
-						instant_build = yes
-						level = 1
-					}
-				}	
-				448 = {	
-				add_building_construction = {
-						type = coastal_bunker 
-						instant_build = yes
-						level = 2
-						province = 1149
-				}	
-				}
-				450 = {
-				add_building_construction = {
-					type = coastal_bunker 
-					instant_build = yes
-					level = 2
-					province = 11954
-				}
-				}
-				451 {	
-				add_building_construction = {
-					type = coastal_bunker 
-					instant_build = yes
-					level = 2
-					province = 1130
-					}
-				}
-				449 = {	
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 10117
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 10117
-					}
-				}	 
-				build_railway = {
-					level = 1
-					start_province = 11954
-					target_province = 10117
-				}
-				build_railway = {
-					level = 1
-					start_province = 10117
-					target_province = 1149
 				}
 			}
 			if = {
 				limit = {
 					has_global_flag = GER_ETH_SIDE_PLAN
 				}
-				841 = {	
+				271 = {
 					add_building_construction = {
-						type = supply_node
-						level = 1
+						type = radar_station
 						instant_build = yes
-						province = 1984
+						level = 3
 					}
-				}
-				836 = {	
-					add_building_construction = {
-						type = supply_node
-						instant_build = yes
-						level = 1
-						province = 10775
-					}
-				}
-				271 = {	
 					add_building_construction = {
 						type = air_base
 						instant_build = yes
 						level = 3
 					}
+				}
+				842 = {
 					add_building_construction = {
-						type = radar_station
+						type = air_base
 						instant_build = yes
 						level = 2
 					}
-				}			 
-				build_railway = {
-					level = 1
-					start_province = 5010
-					target_province = 10775
-					build_only_on_allied = yes
 				}
-				build_railway = {
-					level = 1
-					start_province = 5010
-					target_province = 1984
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 13250
-					target_province = 5010
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 12991
-					target_province = 5010
-					build_only_on_allied = yes
+				559 = {
+					add_building_construction = {
+						type = air_base
+						instant_build = yes
+						level = 2
+					}
 				}
 			}	
 		}	
@@ -5965,7 +5807,7 @@ focus_tree = {
 						}
 					}
 				}
-			    custom_effect_tooltip = GER_ETH_SIDE_PLAN
+			custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
 			every_state = {
 				limit = {
 					OR = {
@@ -6164,6 +6006,178 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = GER_ETH_SIDE_PLAN }
+						NOT = { has_global_flag = GER_LIB_SIDE_PLAN }
+					}
+					custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
+					841 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 1984
+						}
+					}
+					836 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 10775
+						}
+					}
+					build_railway = {
+						level = 1
+						start_province = 12991
+						target_province = 10775
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 12766
+						target_province = 1984
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 2
+						start_province = 1984
+						target_province = 5010
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 2
+						start_province = 12991
+						target_province = 5010
+						build_only_on_allied = yes
+					}
+					custom_effect_tooltip = GER_LIB_SIDE_PLAN
+					449 = {	
+						add_building_construction = {
+							type = naval_base
+							level = 1
+							instant_build = yes
+							province = 10117
+						}
+					}
+					663 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							instant_build = yes
+							province = 12079
+						}
+					}	 
+					build_railway = {
+						level = 1
+						start_province = 11954
+						target_province = 12079
+					}
+					build_railway = {
+						level = 1
+						start_province = 11954
+						target_province = 10117
+					}
+					build_railway = {
+						level = 1
+						start_province = 10117
+						target_province = 1149
+					}
+					build_railway = {
+						level = 1
+						start_province = 12079
+						target_province = 1130
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = GER_ETH_SIDE_PLAN
+				}
+				841 = {
+					add_building_construction = {
+						type = supply_node
+						instant_build = yes
+						level = 1
+						province = 1984
+					}
+				}
+				836 = {
+					add_building_construction = {
+						type = supply_node
+						instant_build = yes
+						level = 1
+						province = 10775
+					}
+				}
+				build_railway = {
+					level = 1
+					start_province = 12991
+					target_province = 10775
+					build_only_on_allied = yes
+				}
+				build_railway = {
+					level = 1
+					start_province = 12766
+					target_province = 1984
+					build_only_on_allied = yes
+				}
+				build_railway = {
+					level = 2
+					start_province = 1984
+					target_province = 5010
+					build_only_on_allied = yes
+				}
+				build_railway = {
+					level = 2
+					start_province = 12991
+					target_province = 5010
+					build_only_on_allied = yes
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = GER_LIB_SIDE_PLAN
+				}
+				449 = {	
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 10117
+					}
+				}
+				663 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 12079
+					}
+				}	 
+				build_railway = {
+					level = 1
+					start_province = 11954
+					target_province = 12079
+				}
+				build_railway = {
+					level = 1
+					start_province = 11954
+					target_province = 10117
+				}
+				build_railway = {
+					level = 1
+					start_province = 10117
+					target_province = 1149
+				}
+				build_railway = {
+					level = 1
+					start_province = 12079
+					target_province = 1130
+				}
+			}	
 	    }
 
     }
