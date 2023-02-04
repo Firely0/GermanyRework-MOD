@@ -1801,15 +1801,15 @@ country_event = {
 	id = GER_ITA_HQ_LOC.1
 	title = "German - Italian Africa Front"
 	desc = "Where We Should Focus on our Africa Front?."
-	picture = GFX_report_event_finnish_soldiers_snow
+	picture = GFX_report_event_german_italian_pact
 
      is_triggered_only = yes
 
 	option = {
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
-		name = "Libya."
+		name = "Libya"
 
 		set_global_flag = GER_LIB_SIDE_PLAN
 	} 
