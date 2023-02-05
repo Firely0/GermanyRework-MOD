@@ -146,3 +146,12 @@ going_war_with_SOV = {
 		has_wargoal_against = SOV
 	}
 }
+
+is_controlled_by_ITA_or_subject = {
+	CONTROLLER = {
+		OR = {
+			tag = ITA
+			is_subject_of = ITA
+		}
+	}
+}

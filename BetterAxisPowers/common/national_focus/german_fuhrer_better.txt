@@ -5529,53 +5529,53 @@ focus_tree = {
 
 		available = {
 			OR = {
-				OR = {
-					ITA = {
-						has_global_flag = GER_LIB_SIDE_PLAN
-						has_idea = GER_ITA_Afrika_Korps
-						custom_trigger_tooltip = {
-						tooltip = GER_ITA_libyan_in_control_tt
-							449 = { is_controlled_by_ROOT_or_subject = yes }
-							448 = { is_controlled_by_ROOT_or_subject = yes }
-							451 = { is_controlled_by_ROOT_or_subject = yes }
-							450 = { is_controlled_by_ROOT_or_subject = yes }
-							663 = { is_controlled_by_ROOT_or_subject = yes }
-							662 = { is_controlled_by_ROOT_or_subject = yes }
-							661 = { is_controlled_by_ROOT_or_subject = yes }
-						}
+				ITA = {
+					has_global_flag = GER_LIB_SIDE_PLAN
+					has_idea = GER_ITA_Afrika_Korps
+					custom_trigger_tooltip = {
+					tooltip = GER_ITA_libyan_in_control_tt
+						449 = { is_controlled_by_ITA_or_subject = yes }
+						448 = { is_controlled_by_ITA_or_subject = yes }
+						451 = { is_controlled_by_ITA_or_subject = yes }
+						450 = { is_controlled_by_ITA_or_subject = yes }
+						663 = { is_controlled_by_ITA_or_subject = yes }
+						662 = { is_controlled_by_ITA_or_subject = yes }
+						661 = { is_controlled_by_ITA_or_subject = yes }
 					}
 				}
-				OR = {
-					ITA = {
-						has_global_flag = GER_ETH_SIDE_PLAN 
-						has_idea = GER_ITA_Afrika_Korps
-						custom_trigger_tooltip = { #Etiopia
-						tooltip = GER_Etiopia_in_control_tt
-							908 = { is_controlled_by_ROOT_or_subject = yes }
-							842 = { is_controlled_by_ROOT_or_subject = yes }
-							841 = { is_controlled_by_ROOT_or_subject = yes }
-							843 = { is_controlled_by_ROOT_or_subject = yes }
-							840 = { is_controlled_by_ROOT_or_subject = yes }
-							839 = { is_controlled_by_ROOT_or_subject = yes }
-							271 = { is_controlled_by_ROOT_or_subject = yes }
-							835 = { is_controlled_by_ROOT_or_subject = yes }
-							838 = { is_controlled_by_ROOT_or_subject = yes }
-							837 = { is_controlled_by_ROOT_or_subject = yes }
-							836 = { is_controlled_by_ROOT_or_subject = yes }
-							835 = { is_controlled_by_ROOT_or_subject = yes }
-						}
-						custom_trigger_tooltip = { #Erita
-							tooltip = GER_Erita_in_control_tt
-							550 = { is_controlled_by_ROOT_or_subject = yes }
-						}
-						custom_trigger_tooltip = { #Somoliland
-							tooltip = GER_Somoliland_in_control_tt
-							559 = { is_controlled_by_ROOT_or_subject = yes }
-							844 = { is_controlled_by_ROOT_or_subject = yes }
-						}
+				ITA = {
+					has_global_flag = GER_ETH_SIDE_PLAN 
+					has_idea = GER_ITA_Afrika_Korps
+					custom_trigger_tooltip = { #Etiopia
+					tooltip = GER_Etiopia_in_control_tt
+						908 = { is_controlled_by_ITA_or_subject = yes }
+						842 = { is_controlled_by_ITA_or_subject = yes }
+						841 = { is_controlled_by_ITA_or_subject = yes }
+						843 = { is_controlled_by_ITA_or_subject = yes }
+						840 = { is_controlled_by_ITA_or_subject = yes }
+						839 = { is_controlled_by_ITA_or_subject = yes }
+						271 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
+						838 = { is_controlled_by_ITA_or_subject = yes }
+						837 = { is_controlled_by_ITA_or_subject = yes }
+						836 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
 					}
+					custom_trigger_tooltip = { #Erita
+					tooltip = GER_Erita_in_control_tt
+					ITA = {
+						550 = { is_controlled_by_ITA_or_subject = yes }
+					}	
+					}
+					custom_trigger_tooltip = { #Somoliland
+					tooltip = GER_Somoliland_in_control_tt
+					ITA = {
+						559 = { is_controlled_by_ITA_or_subject = yes }
+						844 = { is_controlled_by_ITA_or_subject = yes }
+					}	
 				}
 			}
+		}
 		}
 
 		bypass = {
@@ -5722,13 +5722,13 @@ focus_tree = {
 					has_idea = GER_ITA_Afrika_Korps
 					custom_trigger_tooltip = {
 					tooltip = GER_ITA_libyan_in_control_tt
-						449 = { is_controlled_by_ROOT_or_subject = yes }
-						448 = { is_controlled_by_ROOT_or_subject = yes }
-						451 = { is_controlled_by_ROOT_or_subject = yes }
-						450 = { is_controlled_by_ROOT_or_subject = yes }
-						663 = { is_controlled_by_ROOT_or_subject = yes }
-						662 = { is_controlled_by_ROOT_or_subject = yes }
-						661 = { is_controlled_by_ROOT_or_subject = yes }
+						449 = { is_controlled_by_ITA_or_subject = yes }
+						448 = { is_controlled_by_ITA_or_subject = yes }
+						451 = { is_controlled_by_ITA_or_subject = yes }
+						450 = { is_controlled_by_ITA_or_subject = yes }
+						663 = { is_controlled_by_ITA_or_subject = yes }
+						662 = { is_controlled_by_ITA_or_subject = yes }
+						661 = { is_controlled_by_ITA_or_subject = yes }
 					}
 				}
 				ITA = {
@@ -5736,30 +5736,34 @@ focus_tree = {
 					has_idea = GER_ITA_Afrika_Korps
 					custom_trigger_tooltip = { #Etiopia
 					tooltip = GER_Etiopia_in_control_tt
-						908 = { is_controlled_by_ROOT_or_subject = yes }
-						842 = { is_controlled_by_ROOT_or_subject = yes }
-						841 = { is_controlled_by_ROOT_or_subject = yes }
-						843 = { is_controlled_by_ROOT_or_subject = yes }
-						840 = { is_controlled_by_ROOT_or_subject = yes }
-						839 = { is_controlled_by_ROOT_or_subject = yes }
-						271 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
-						838 = { is_controlled_by_ROOT_or_subject = yes }
-						837 = { is_controlled_by_ROOT_or_subject = yes }
-						836 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
+						908 = { is_controlled_by_ITA_or_subject = yes }
+						842 = { is_controlled_by_ITA_or_subject = yes }
+						841 = { is_controlled_by_ITA_or_subject = yes }
+						843 = { is_controlled_by_ITA_or_subject = yes }
+						840 = { is_controlled_by_ITA_or_subject = yes }
+						839 = { is_controlled_by_ITA_or_subject = yes }
+						271 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
+						838 = { is_controlled_by_ITA_or_subject = yes }
+						837 = { is_controlled_by_ITA_or_subject = yes }
+						836 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
 					}
 					custom_trigger_tooltip = { #Erita
-						tooltip = GER_Erita_in_control_tt
-						550 = { is_controlled_by_ROOT_or_subject = yes }
+					tooltip = GER_Erita_in_control_tt
+					ITA = {
+						550 = { is_controlled_by_ITA_or_subject = yes }
+					}	
 					}
 					custom_trigger_tooltip = { #Somoliland
-						tooltip = GER_Somoliland_in_control_tt
-						559 = { is_controlled_by_ROOT_or_subject = yes }
-						844 = { is_controlled_by_ROOT_or_subject = yes }
-					}
+					tooltip = GER_Somoliland_in_control_tt
+					ITA = {
+						559 = { is_controlled_by_ITA_or_subject = yes }
+						844 = { is_controlled_by_ITA_or_subject = yes }
+					}	
 				}
 			}
+		}
 		}
 
 		bypass = {
@@ -5956,13 +5960,13 @@ focus_tree = {
 					has_idea = GER_ITA_Afrika_Korps
 					custom_trigger_tooltip = {
 					tooltip = GER_ITA_libyan_in_control_tt
-						449 = { is_controlled_by_ROOT_or_subject = yes }
-						448 = { is_controlled_by_ROOT_or_subject = yes }
-						451 = { is_controlled_by_ROOT_or_subject = yes }
-						450 = { is_controlled_by_ROOT_or_subject = yes }
-						663 = { is_controlled_by_ROOT_or_subject = yes }
-						662 = { is_controlled_by_ROOT_or_subject = yes }
-						661 = { is_controlled_by_ROOT_or_subject = yes }
+						449 = { is_controlled_by_ITA_or_subject = yes }
+						448 = { is_controlled_by_ITA_or_subject = yes }
+						451 = { is_controlled_by_ITA_or_subject = yes }
+						450 = { is_controlled_by_ITA_or_subject = yes }
+						663 = { is_controlled_by_ITA_or_subject = yes }
+						662 = { is_controlled_by_ITA_or_subject = yes }
+						661 = { is_controlled_by_ITA_or_subject = yes }
 					}
 				}
 				ITA = {
@@ -5970,30 +5974,34 @@ focus_tree = {
 					has_idea = GER_ITA_Afrika_Korps
 					custom_trigger_tooltip = { #Etiopia
 					tooltip = GER_Etiopia_in_control_tt
-						908 = { is_controlled_by_ROOT_or_subject = yes }
-						842 = { is_controlled_by_ROOT_or_subject = yes }
-						841 = { is_controlled_by_ROOT_or_subject = yes }
-						843 = { is_controlled_by_ROOT_or_subject = yes }
-						840 = { is_controlled_by_ROOT_or_subject = yes }
-						839 = { is_controlled_by_ROOT_or_subject = yes }
-						271 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
-						838 = { is_controlled_by_ROOT_or_subject = yes }
-						837 = { is_controlled_by_ROOT_or_subject = yes }
-						836 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
+						908 = { is_controlled_by_ITA_or_subject = yes }
+						842 = { is_controlled_by_ITA_or_subject = yes }
+						841 = { is_controlled_by_ITA_or_subject = yes }
+						843 = { is_controlled_by_ITA_or_subject = yes }
+						840 = { is_controlled_by_ITA_or_subject = yes }
+						839 = { is_controlled_by_ITA_or_subject = yes }
+						271 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
+						838 = { is_controlled_by_ITA_or_subject = yes }
+						837 = { is_controlled_by_ITA_or_subject = yes }
+						836 = { is_controlled_by_ITA_or_subject = yes }
+						835 = { is_controlled_by_ITA_or_subject = yes }
 					}
 					custom_trigger_tooltip = { #Erita
-						tooltip = GER_Erita_in_control_tt
-						550 = { is_controlled_by_ROOT_or_subject = yes }
+					tooltip = GER_Erita_in_control_tt
+					ITA = {
+						550 = { is_controlled_by_ITA_or_subject = yes }
+					}	
 					}
 					custom_trigger_tooltip = { #Somoliland
-						tooltip = GER_Somoliland_in_control_tt
-						559 = { is_controlled_by_ROOT_or_subject = yes }
-						844 = { is_controlled_by_ROOT_or_subject = yes }
-					}
+					tooltip = GER_Somoliland_in_control_tt
+					ITA = {
+						559 = { is_controlled_by_ITA_or_subject = yes }
+						844 = { is_controlled_by_ITA_or_subject = yes }
+					}	
 				}
 			}
+		}
 		}
 
 		bypass = {
