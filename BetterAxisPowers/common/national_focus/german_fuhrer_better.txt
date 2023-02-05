@@ -5375,7 +5375,7 @@ focus_tree = {
 				add_dynamic_modifier = {
 					modifier = El_Alamein_Atack_dynamic_modifier
 					scope = GER
-					days = 30
+					days = 90
 				}
 				if = {
 					limit = {
@@ -5386,7 +5386,7 @@ focus_tree = {
 					add_dynamic_modifier = {
 						modifier = El_Alamein_Atack_dynamic_modifier
 						scope = ITA
-						days = 30
+						days = 90
 					}
 				}
 			}
@@ -5529,46 +5529,50 @@ focus_tree = {
 
 		available = {
 			OR = {
-				ITA = {
-					has_global_flag = GER_LIB_SIDE_PLAN
-					has_idea = GER_ITA_Afrika_Korps
-					custom_trigger_tooltip = {
-					tooltip = GER_ITA_libyan_in_control_tt
-						449 = { is_controlled_by_ROOT_or_subject = yes }
-						448 = { is_controlled_by_ROOT_or_subject = yes }
-						451 = { is_controlled_by_ROOT_or_subject = yes }
-						450 = { is_controlled_by_ROOT_or_subject = yes }
-						663 = { is_controlled_by_ROOT_or_subject = yes }
-						662 = { is_controlled_by_ROOT_or_subject = yes }
-						661 = { is_controlled_by_ROOT_or_subject = yes }
+				OR = {
+					ITA = {
+						has_global_flag = GER_LIB_SIDE_PLAN
+						has_idea = GER_ITA_Afrika_Korps
+						custom_trigger_tooltip = {
+						tooltip = GER_ITA_libyan_in_control_tt
+							449 = { is_controlled_by_ROOT_or_subject = yes }
+							448 = { is_controlled_by_ROOT_or_subject = yes }
+							451 = { is_controlled_by_ROOT_or_subject = yes }
+							450 = { is_controlled_by_ROOT_or_subject = yes }
+							663 = { is_controlled_by_ROOT_or_subject = yes }
+							662 = { is_controlled_by_ROOT_or_subject = yes }
+							661 = { is_controlled_by_ROOT_or_subject = yes }
+						}
 					}
 				}
-				ITA = {
-					has_global_flag = GER_ETH_SIDE_PLAN 
-					has_idea = GER_ITA_Afrika_Korps
-					custom_trigger_tooltip = { #Etiopia
-					tooltip = GER_Etiopia_in_control_tt
-						908 = { is_controlled_by_ROOT_or_subject = yes }
-						842 = { is_controlled_by_ROOT_or_subject = yes }
-						841 = { is_controlled_by_ROOT_or_subject = yes }
-						843 = { is_controlled_by_ROOT_or_subject = yes }
-						840 = { is_controlled_by_ROOT_or_subject = yes }
-						839 = { is_controlled_by_ROOT_or_subject = yes }
-						271 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
-						838 = { is_controlled_by_ROOT_or_subject = yes }
-						837 = { is_controlled_by_ROOT_or_subject = yes }
-						836 = { is_controlled_by_ROOT_or_subject = yes }
-						835 = { is_controlled_by_ROOT_or_subject = yes }
-					}
-					custom_trigger_tooltip = { #Erita
-						tooltip = GER_Erita_in_control_tt
-						550 = { is_controlled_by_ROOT_or_subject = yes }
-					}
-					custom_trigger_tooltip = { #Somoliland
-						tooltip = GER_Somoliland_in_control_tt
-						559 = { is_controlled_by_ROOT_or_subject = yes }
-						844 = { is_controlled_by_ROOT_or_subject = yes }
+				OR = {
+					ITA = {
+						has_global_flag = GER_ETH_SIDE_PLAN 
+						has_idea = GER_ITA_Afrika_Korps
+						custom_trigger_tooltip = { #Etiopia
+						tooltip = GER_Etiopia_in_control_tt
+							908 = { is_controlled_by_ROOT_or_subject = yes }
+							842 = { is_controlled_by_ROOT_or_subject = yes }
+							841 = { is_controlled_by_ROOT_or_subject = yes }
+							843 = { is_controlled_by_ROOT_or_subject = yes }
+							840 = { is_controlled_by_ROOT_or_subject = yes }
+							839 = { is_controlled_by_ROOT_or_subject = yes }
+							271 = { is_controlled_by_ROOT_or_subject = yes }
+							835 = { is_controlled_by_ROOT_or_subject = yes }
+							838 = { is_controlled_by_ROOT_or_subject = yes }
+							837 = { is_controlled_by_ROOT_or_subject = yes }
+							836 = { is_controlled_by_ROOT_or_subject = yes }
+							835 = { is_controlled_by_ROOT_or_subject = yes }
+						}
+						custom_trigger_tooltip = { #Erita
+							tooltip = GER_Erita_in_control_tt
+							550 = { is_controlled_by_ROOT_or_subject = yes }
+						}
+						custom_trigger_tooltip = { #Somoliland
+							tooltip = GER_Somoliland_in_control_tt
+							559 = { is_controlled_by_ROOT_or_subject = yes }
+							844 = { is_controlled_by_ROOT_or_subject = yes }
+						}
 					}
 				}
 			}
@@ -6033,27 +6037,23 @@ focus_tree = {
 						level = 1
 						start_province = 12991
 						target_province = 10775
-						build_only_on_allied = yes
 					}
 					build_railway = {
 						level = 1
 						start_province = 12766
 						target_province = 1984
-						build_only_on_allied = yes
 					}
 					build_railway = {
 						level = 2
 						start_province = 1984
 						target_province = 5010
-						build_only_on_allied = yes
 					}
 					build_railway = {
 						level = 2
 						start_province = 12991
 						target_province = 5010
-						build_only_on_allied = yes
 					}
-					custom_effect_tooltip = GER_LIB_SIDE_PLAN
+					custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
 					449 = {	
 						add_building_construction = {
 							type = naval_base
