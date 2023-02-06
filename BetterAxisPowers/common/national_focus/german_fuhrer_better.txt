@@ -34,7 +34,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		#prerequisite = { }
 		x = 40
-		y = 0
+		y = 5
 		cost = 5
 		available = {
 			is_subject = no
@@ -7646,7 +7646,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 10
+		x = 40
 		y = 0
 		cost = 5
 		ai_will_do = {
