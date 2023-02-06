@@ -128,6 +128,7 @@
 					type = ship_hull_carrier_1
 					name_group = GER_CV_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes
 					modules = {
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
@@ -3190,7 +3191,7 @@
 
 	shared_focus = {
 		id = GER_Panther
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_generic_army_tanks
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
 		mutually_exclusive = { focus = GER_Anti_Tank }
@@ -3209,7 +3210,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
 			create_equipment_variant = {
-				name = "PzKpfw V"
+				name = "PzKpfw Panther"
 				type = medium_tank_chassis_3
 				parent_version = 0
 				allow_without_tech = yes
@@ -3283,7 +3284,7 @@
 
 	shared_focus = {
 		id = GER_Anti_Tank
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_Anti_tank
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
 		mutually_exclusive = { focus = GER_Panther }
@@ -3302,7 +3303,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 				create_equipment_variant = {
-				name = "Jagdpanzer"
+				name = "Jagdpanther"
 				type = medium_tank_destroyer_chassis_3
 				parent_version = 0
 				allow_without_tech = yes
@@ -3687,7 +3688,7 @@
 	
 	shared_focus = {
 		id = GER_army_innovation_2_a
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_tank_production
 		text = GER_army_innovation_2
 		prerequisite = { focus = GER_soviet_treaty_a }
 		x = -1

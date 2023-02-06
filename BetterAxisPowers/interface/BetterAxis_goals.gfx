@@ -13,6 +13,41 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_Anschlus"
+		texturefile = "gfx/interface/goals/anschlus.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EUinFlames"
+		texturefile = "gfx/interface/goals/EUinflames.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ForOurGlory"
+		texturefile = "gfx/interface/goals/ForOurGlory.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ForOurRevange"
+		texturefile = "gfx/interface/goals/ForOurRevange.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_Anti_tank"
+		texturefile = "gfx/interface/goals/focus_generic_tank_destroyer.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_befriend_cze"
+		texturefile = "gfx/interface/goals/befriend_czech.dds"	
+	}
+
+	SpriteType = {
+		name = "GFX_goal_befriend_yug"
+		texturefile = "gfx/interface/goals/befriend_yugoslavia.dds"	
+	}
+
+	SpriteType = {
 		name = "GFX_goal_AfrikaCorps"
 		texturefile = "gfx/interface/goals/AfrikaCorps.dds"	
 	}
