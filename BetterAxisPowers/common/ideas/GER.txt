@@ -1653,45 +1653,9 @@ ideas = {
 				}
 			}
 
-			#Luftwaffe
+		#Luftwaffe
 
-		Luftwaffe = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.1
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.1
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.1
-				}	
-			} 
-
-			modifier = {
-
-			 air_doctrine_cost_factor = 0.1
-			 air_accidents_factor  = 0.1
-			 air_mission_efficiency = -0.10
- 
-			}
-		}
-
-		 Luftwaffe_UI = {
+		Luftwaffe_UI = {
 			picture = ger_air_ui
 			allowed = {
 				original_tag = GER
@@ -1725,322 +1689,7 @@ ideas = {
 			 air_mission_efficiency = -0.10
  
 			}
-		 } 
-
-		Luftwaffe_SD = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 strategic_bomb_visibility = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_SD_A = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_strategic_bomber_bombing_factor = 0.05
-			 strategic_bomb_visibility = -0.1
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_SDD = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}		
-			} 
-
-			modifier = {
-
-			 strategic_bomb_visibility = -0.05
-			 air_strategic_bomber_bombing_factor = 0.05
-			 air_mission_efficiency = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
- 
-			}
-		}	
-
-		Luftwaffe_SDD_B = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}			
-			} 
-
-			modifier = {
-
-			 strategic_bomb_visibility = -0.1
-			 air_strategic_bomber_bombing_factor = 0.1
-			 air_strategic_bomber_night_penalty = -0.1
-			 air_mission_efficiency = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
- 
-			}
-		 }
-
-		Luftwaffe_CAS = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.15
-				}			
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_close_air_support_defence_factor = 0.05
-			 air_cas_efficiency = 0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.05
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_CAS_R = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}#	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_close_air_support_defence_factor = 0.05
-			 air_cas_efficiency = 0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.05
-			 air_range_factor = 0.1
- 
-			}
-		 }
-
-		Luftwaffe_OI = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}		
-			} 
-
-			modifier = {
-
-			 air_interception_detect_factor = 0.05
-			 air_bombing_targetting = 0.05
-			 air_cas_efficiency = 0.05
-
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_OI_IMP = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				 small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}		
-			} 
-
-			modifier = {
-
-			 air_interception_detect_factor = 0.05
-			 air_bombing_targetting = 0.05
-			 air_cas_efficiency = 0.05
-			 air_escort_efficiency = 0.05
- 
-			}
-		 }
+		} 
 
 		#Kriegsmarine
 
@@ -2137,624 +1786,6 @@ ideas = {
 			 critical_receive_chance = 0.1
 
 			}
-		}
-
-		Kriegsmarine_FAKE = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			}
-		}
-
-		Kriegsmarine_FAKE_A = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
-
-			}
-		}
-
-		Kriegsmarine_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			}
-		} 
-
-		Kriegsmarine_PlanZ = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				ship_hull_carrier = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.05 instant = yes
-				}		
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_PlanZ_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				ship_hull_carrier = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.05 instant = yes
-				}		
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Carrier = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
- 
-			} 
-		}
-
-		Kriegsmarine_Carrier_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
- 
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last_intel_build = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-				production_speed_dockyard_factor = 0.1
-
-			} 
 		}
 
 		Four_Year_Plan_1 = {
@@ -5006,6 +4037,7 @@ ideas = {
 		}
 
 		WehrmachtWarPlana_h = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5038,6 +4070,7 @@ ideas = {
 		}
 
 		WehrmachtWarPlanb_h = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5070,6 +4103,7 @@ ideas = {
 		}
 
 		Wehrmacht_Main_inf = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5092,6 +4126,7 @@ ideas = {
 		}
 
 		Wehrmacht_Main_inf_1 = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5114,6 +4149,7 @@ ideas = {
 		}
 
 		Wehrmacht_Main_Tank = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5136,6 +4172,7 @@ ideas = {
 		}
 
 		Wehrmacht_Main_Tank_1 = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5158,6 +4195,7 @@ ideas = {
 		}
 
 		Wehrmacht_Main_Tank_2 = {
+			picture = ger_army
 
 			allowed = {
 				original_tag = GER
@@ -5177,6 +4215,286 @@ ideas = {
 			modifier = {
 			}
 
+		}
+
+		Kriegsmarine_FAKE = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.1 instant = yes
+				}	
+			} 
+
+		}
+
+		Kriegsmarine_FAKE_Carrier_Buff = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_heavy = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.1 instant = yes
+				}	
+			} 
+
+		}
+
+		Kriegsmarine_FAKE_Buff = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}	
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_SD = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}	
+			} 
+
+			modifier = {
+			}
+		}
+	
+		Luftwaffe_CAS = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.15
+				}			
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_CAS_R = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}	
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_OI = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}		
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_OI_IMP = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				 small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}		
+			} 
+
+			modifier = {
+			}
 		}
 
 	}

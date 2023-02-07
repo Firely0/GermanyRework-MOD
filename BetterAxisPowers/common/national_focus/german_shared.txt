@@ -3032,6 +3032,8 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
+				set_variable = {
+				}
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3061,6 +3063,16 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
+
+				set_variable = {
+					GER_max_command_power = 30
+					GER_army_armor_speed_factor = 0.1
+					GER_org_loss_when_moving = -0.1
+					GER_land_doctrine_cost_factor = -0.1
+					GER_recon_factor = 0.1
+					GER_initiative_factor = 0.1
+					GER_coordination_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -3221,6 +3233,30 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
+				if = {
+					limit = {
+						has_completed_focus = GER_tank_warfare
+					}
+					set_variable = {
+						GER_max_command_power = 20
+						GER_max_planning_factor = 0
+						GER_planning_speed = 0
+						GER_army_armor_speed_factor = 0.05
+						GER_org_loss_when_moving = -0.05
+						GER_land_doctrine_cost_factor = 0.05
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = GER_Battle_Plan
+					}
+					set_variable = {
+						GER_max_command_power = -15
+						GER_max_planning_speed = 0
+						GER_cas_damage_reduction = 0.05
+						GER_land_doctrine_cost_factor = 0.05
+					}
+				}
 			}
 		}
 	}
@@ -3266,6 +3302,12 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
+				set_variable = {
+					GER_air_superiority_bonus_in_combat = 0.1
+	                GER_cas_damage_reduction = 0.05
+	                GER_railway_gun_bombardment_factor = 0.2
+					GER_land_doctrine_cost_factor = 0
+				}
 			}
 		}
 	}
@@ -3381,6 +3423,10 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
+				set_variable = {
+					GER_army_speed_factor = -0.05
+					GER_planning_speed = 0.1
+				}
 			}
 
 			add_doctrine_cost_reduction = {

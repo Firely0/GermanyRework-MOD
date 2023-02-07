@@ -76,37 +76,62 @@ Wehrmacht_dynamic_modifier = {
 
 	#Need Tooltip to remind research bonus modifier { tank -0.15 } and equipment bonus for inf. .
 	
-	#Base Version
+	#We Have Plans Right?
 
-	army_org_Factor = 0.05
-	max_planning_factor = 0.1
+	max_command_power = GER_max_command_power #Base -30
 
-	planning_speed = -0.2
-	minimum_training_level = 0.1
-	army_speed_factor = -0.1
-	land_doctrine_cost_factor = 0.1
+	max_planning_factor = GER_max_planning_factor # Base -20
+	planning_speed = GER_planning_speed #Base -10
+
+	#For Fuhrer v7
+
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army
+
+    #German Steel Good Luck!
+
+	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
+	org_loss_when_moving = GER_org_loss_when_moving # -0.1
+
 	
-	custom_modifier_tooltip = GER_wehrmacht_1_tt
+	#the Blitzkrieg
+	
+	recon_factor = GER_recon_factor # 0.1
+	initiative_factor = GER_initiative_factor # 0.1
+	coordination_bonus = GER_coordination_bonus # 0.05
 
-	#Later Tank
+	breakthrough_factor = GER_breakthrough_factor # 0.1 
 
-	max_command_power = GER_max_command_power #20
+	#Superior Fire Power
 
-	org_loss_when_moving = GER_org_loss_when_moving #-0.1
-    army_armor_speed_factor = GER_army_armor_speed_factor #0.1
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
+	cas_damage_reduction = GER_cas_damage_reduction
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
 
-	recon_factor = GER_recon_factor #0.1
-	initiative_factor = GER_initiative_factor #0.1
-	breakthrough_factor = GER_breakthrough_factor #0.05 
-
-
-	#Later INF - Supply
+	#Supply - Used Later
 
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
 
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.1
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base 0.1
 
 }
 
@@ -115,16 +140,54 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05 #0.05
+	#We Have Plans Right?
 
-	max_planning_factor = 0.1 #0.1
-	planning_speed = -0.2 #-0.1
+	max_command_power = GER_max_command_power # -10
 
-	minimum_training_level = 0.1 #0.05
-	army_speed_factor = -0.1 #-0.05
+	max_planning_factor = GER_max_planning_factor # 0
+	planning_speed = GER_planning_speed # 0
 
-	land_doctrine_cost_factor = 0.1 #0.05
+	#For Fuhrer v7
+
+	minimum_training_level = GER_minimum_training_level
+	special_forces_min = GER_special_forces_min
+
+	#Later
 	
+	command_abilities_cost_factor = GER_command_abilities_cost_factor 
+
+	army_morale_factor = GER_army_morale_factor 
+	army_org_regain = GER_army_org_regain 
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army
+
+    #German Steel Good Luck!
+
+	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
+	org_loss_when_moving = GER_org_loss_when_moving # -0.05
+
+	#the Blitzkrieg
+	
+	recon_factor = GER_recon_factor 
+	initiative_factor = GER_initiative_factor 
+	coordination_bonus = GER_coordination_bonus 
+
+	breakthrough_factor = GER_breakthrough_factor 
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
+	cas_damage_reduction = GER_cas_damage_reduction
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor # 0.05
+
 	custom_modifier_tooltip = GER_wehrmacht_2_tt # Value = 0.05
 
 }
@@ -134,22 +197,53 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 
 	icon = GFX_idea_ger_army
 
-	max_command_power = GER_max_command_power #20
-	army_org_Factor = 0.05 #0.05
-
-	max_planning_factor = 0.1 
-	planning_speed = -0.2 #0.1
-
-	army_speed_factor = -0.1 #0.05
-
-	land_doctrine_cost_factor = 0.1 #0
-
-	#Tank
-
-	org_loss_when_moving = GER_org_loss_when_moving #-0.1
-
-	
 	custom_modifier_tooltip = GER_wehrmacht_2_tt # Value = 10
+
+		#We Have Plans Right?
+
+		max_command_power = GER_max_command_power # 20
+
+		max_planning_factor = GER_max_planning_factor # 0
+		planning_speed = GER_planning_speed # 0
+
+		#So Our Plan is...?
+	
+		land_doctrine_cost_factor = GER_land_doctrine_cost_factor # -0.05		
+	
+		#For Fuhrer v7
+	
+		minimum_training_level = GER_minimum_training_level # 0
+		special_forces_min = GER_special_forces_min # 0
+	
+		#German Steel Good Luck!
+	
+		army_armor_speed_factor = GER_army_armor_speed_factor # 0.05
+		org_loss_when_moving = GER_org_loss_when_moving # -0.05
+	
+		#the Blitzkrieg
+		
+		recon_factor = GER_recon_factor
+		initiative_factor = GER_initiative_factor
+		coordination_bonus = GER_coordination_bonus
+	
+		breakthrough_factor = GER_breakthrough_factor 
+
+		#Later
+		
+		command_abilities_cost_factor = GER_command_abilities_cost_factor
+	
+		army_morale_factor = GER_army_morale_factor
+		army_org_regain = GER_army_org_regain
+			
+		#
+			
+		#Volkssturm
+			
+		conscription = GER_volkssturm_conscription 
+		conscription_factor = GER_volkssturm_conscription_factor 
+		experience_gain_army = GER_volkssturm_experience_gain_army 
+	
+		custom_modifier_tooltip = GER_wehrmacht_2_tt # Value = 0.05
 
 }
 
@@ -158,21 +252,51 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 
 	icon = GFX_idea_ger_army
 
-	max_command_power = GER_max_command_power #20
+			#Lighting Strike 
 
-	max_planning_factor = 0.1 #0
-	planning_speed = -0.1 #0.15
+			max_command_power = GER_max_command_power # 30
 
-	army_speed_factor = -0.1 #0.05
-	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
-
-	army_org_Factor = 0.05 #0.05
-	org_loss_when_moving = GER_org_loss_when_moving #0.05
-
-	recon_factor = GER_recon_factor #0.1
-	initiative_factor = GER_initiative_factor #0.1
-
-	breakthrough_factor = GER_breakthrough_factor #0.05
+			max_planning_factor = GER_max_planning_factor # 0
+			planning_speed = GER_planning_speed # 0
+	
+			#So Our Plan is...?
+		
+			land_doctrine_cost_factor = GER_land_doctrine_cost_factor # -0.1		
+		
+			#For Fuhrer v7
+		
+			minimum_training_level = GER_minimum_training_level # 0
+			special_forces_min = GER_special_forces_min # Base 0
+		
+			#German Steel Good Luck!
+		
+			army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
+			org_loss_when_moving = GER_org_loss_when_moving # -0.1
+		
+			#the Blitzkrieg
+			
+			recon_factor = GER_recon_factor # 0.1
+			initiative_factor = GER_initiative_factor # 0.1
+			coordination_bonus = GER_coordination_bonus # 0.05
+		
+			breakthrough_factor = GER_breakthrough_factor # 0.1 
+	
+			#Later
+			
+			command_abilities_cost_factor = GER_command_abilities_cost_factor 
+		
+			army_morale_factor = GER_army_morale_factor 
+			army_org_regain = GER_army_org_regain 
+				
+			#
+				
+			#Volkssturm
+				
+			conscription = GER_volkssturm_conscription 
+			conscription_factor = GER_volkssturm_conscription_factor 
+			experience_gain_army = GER_volkssturm_experience_gain_army 
+		
+			custom_modifier_tooltip = GER_wehrmacht_2_tt # Value = 0.05
 
 	custom_modifier_tooltip = GER_wehrmacht_3_tt # 15
 
@@ -183,20 +307,46 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05
+	#We Have Plans Right?
 
-	max_planning_factor = 0.1
-	planning_speed = -0.2 #0.1
+	max_command_power = GER_max_command_power #Base -15
 
-	army_speed_factor = -0.1 #-0.05
+	max_planning_factor = GER_max_planning_factor # -05
+	planning_speed = GER_planning_speed # 0
 
-	land_doctrine_cost_factor = 0.1
+	#For Fuhrer v7
 
-	#Supply Focus
-	
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
+	cas_damage_reduction = GER_cas_damage_reduction # 0.05
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
+
+	#Supply - Used Later
+
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base 0.05
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army	
 	
 	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt # -15 Armor Tech
 
@@ -207,20 +357,46 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05
+	#We Have Plans Right?
 
-	max_planning_factor = 0.1
-	planning_speed = -0.2 #0.1
+	max_command_power = GER_max_command_power # 10
 
-	army_speed_factor = -0.1 #-0.05
+	max_planning_factor = GER_max_planning_factor # 0.1
+	planning_speed = GER_planning_speed # 0.1
 
-	land_doctrine_cost_factor = 0.1 #0.05
+	#For Fuhrer v7
 
-	#Supply Focus
-	
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
+	cas_damage_reduction = GER_cas_damage_reduction # 0.05
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
+
+	#Supply - Used Later
+
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base 0
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army	
 	
 	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
 
@@ -231,22 +407,47 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor # 0.1
 
-	max_planning_factor = 0.1
-	planning_speed = -0.2 #0.25
+	#We Have Plans Right?
 
-	army_speed_factor = -0.1 #-0.1
-	org_loss_when_moving = GER_org_loss_when_moving #-0.1
+	max_command_power = GER_max_command_power # 25
 
-	land_doctrine_cost_factor = 0.1 #0
+	max_planning_factor = GER_max_planning_factor # 0.1
+	planning_speed = GER_planning_speed # 0.1
 
-	#Supply Focus
-	
+	#For Fuhrer v7
+
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
+	cas_damage_reduction = GER_cas_damage_reduction # 0.1
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+
+	#Supply - Used Later
+
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base -0.1
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army
 	
 	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
 
@@ -257,22 +458,46 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor # 0.1
+	#We Have Plans Right?
 
-	max_planning_factor = 0.1
-	planning_speed = -0.2 #0.25
+	max_command_power = GER_max_command_power # 25
 
-	army_speed_factor = -0.1 #-0.1
-	org_loss_when_moving = GER_org_loss_when_moving #-0.1
+	max_planning_factor = GER_max_planning_factor # 0.1
+	planning_speed = GER_planning_speed # 0.1
 
-	land_doctrine_cost_factor = 0.1 #0
+	#For Fuhrer v7
 
-	#Supply Focus
-	
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
+	cas_damage_reduction = GER_cas_damage_reduction # 0.1
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+
+	#Supply - Used Later
+
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base -0.1
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army
 	
 	#custom_modifier_tooltip = GER_wehrmacht_inf_3_tt #Armor -20 + Cheeper EQ Focus
 
@@ -283,21 +508,46 @@ Wehrmacht_INF_4_dynamic_modifier = {
 
 	icon = GFX_idea_ger_army
 
-	army_org_Factor = 0.05
+	#We Have Plans Right?
 
-	max_planning_factor = 0.1
-	planning_speed = -0.2 #0.25
+	max_command_power = GER_max_command_power # 25
 
-	army_speed_factor = -0.1 #-0.1
-	org_loss_when_moving = GER_org_loss_when_moving #-0.1
+	max_planning_factor = GER_max_planning_factor # 0.1
+	planning_speed = GER_planning_speed # 0.1
 
-	land_doctrine_cost_factor = 0.1 #0
+	#For Fuhrer v7
 
-	#Supply Focus
-	
+	minimum_training_level = GER_minimum_training_level #Base 0.1
+	special_forces_min = GER_special_forces_min # Base 0
+
+	#Superior Fire Power
+
+	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
+	cas_damage_reduction = GER_cas_damage_reduction # 0.1
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+
+	#Supply - Used Later
+
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
 	supply_factor  = GER_supply_factor #0.1
 	supply_node_range = GER_supply_node_range #0.1
+
+	#So Our Plan is...?
+
+	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base -0.1
+
+	#Later
+
+	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
+
+	army_morale_factor = GER_army_morale_factor # 0.03
+	army_org_regain = GER_army_org_regain # 0.03
+
+	#Volkssturm
+
+	conscription = GER_volkssturm_conscription
+	conscription_factor = GER_volkssturm_conscription_factor
+	experience_gain_army = GER_volkssturm_experience_gain_army
 	
 	#custom_modifier_tooltip = GER_wehrmacht_inf_4_tt #Armor -20 Cheeper Support EQ Focus
 
@@ -310,10 +560,10 @@ Luftwaffe_dynamic_modifier = {
 
     #Base
 
-	air_mission_efficiency = -0.10
-	air_accidents_factor  = 0.1
+	air_mission_efficiency = GER_air_mission_efficiency #-0.10
+	air_accidents_factor  = GER_air_accidents_factor #0.1
 
-	air_doctrine_cost_factor = 0.1
+	air_doctrine_cost_factor = GER_air_doctrine_cost_factor #0.1
 
 	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
 
@@ -455,9 +705,9 @@ Kriegsmarine_dynamic_modifier = {
 
     #Base
 
-	navy_visibility = 0.1
-	sub_retreat_speed = 0.05
-	critical_receive_chance = 0.1
+	navy_visibility = GER_navy_visibility 0.1
+	sub_retreat_speed = GER_sub_retreat_speed 0.05
+	critical_receive_chance = GER_critical_receive_chance 0.1
 
 	#Japan Intel
 
