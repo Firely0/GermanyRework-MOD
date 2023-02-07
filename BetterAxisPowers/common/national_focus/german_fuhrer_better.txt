@@ -6520,61 +6520,13 @@ focus_tree = {
 					add_ideas = Japan_Side_Intel_build
 				}
 			}
-		}		
-		    if = {
-				limit = {
-					has_idea = Kriegsmarine
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine
-					add_idea = Kriegsmarine_intel
-				}
-			}
-		    if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ
-					add_idea = Kriegsmarine_PlanZ_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Carrier
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Carrier
-					add_idea = Kriegsmarine_Carrier_intel
-				}
-			}
-		    if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild 
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild 
-					add_idea = Kriegsmarine_Rebuild_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild_Carriers
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild_Carriers
-					add_idea = Kriegsmarine_Rebuild_Carriers_intel
-				}
-			}
-			 if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild_Carriers_last
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild_Carriers_last
-					add_idea = Kriegsmarine_Rebuild_Carriers_last_intel
-				}
-			}
+		}
+		
+		set_variable = {
+			GER_navy_intel_factor = 0.1
+			GER_decryption_power_factor = 0.05
+		}
+	
 		}
 	}
 
@@ -6612,7 +6564,6 @@ focus_tree = {
 		prerequisite = { focus = GER_JAP_Coal_Search }
 		available = {
 			is_subject = no
-			ROOT = { has_completed_focus = GER_prepare_for_the_next_blockade_a }
 		}
 		x = -1
 		y = 1
@@ -6635,12 +6586,12 @@ focus_tree = {
 		   }
 		 }
 		} 
-		GER = {
-		  swap_ideas = {
-		   remove_idea = Kriegsmarine_Rebuild_Carriers_last_intel
-		   add_idea = Kriegsmarine_Rebuild_Carriers_last_intel_build 
-		   }
-		  }
+
+		set_variable = {
+			GER_production_speed_dockyard_factor = 0.1
+			GER_decryption_power_factor = 0.05
+		}
+
 		}
 	}
 

@@ -725,42 +725,42 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
 				}
@@ -775,28 +775,28 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 				}
@@ -816,42 +816,42 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				}
@@ -867,28 +867,28 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 				}
