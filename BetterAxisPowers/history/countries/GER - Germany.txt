@@ -1,5 +1,11 @@
 ﻿capital = 64
 
+add_dynamic_modifier = {
+	modifier = Wehrmacht_dynamic_modifier
+	modifier = Luftwaffe_dynamic_modifier
+	modifier = Kriegsmarine_dynamic_modifier
+}
+
 if = {
 	limit = {
 		NOT = {

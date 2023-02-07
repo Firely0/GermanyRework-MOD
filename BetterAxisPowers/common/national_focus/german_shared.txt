@@ -300,49 +300,8 @@
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						NOT = { has_completed_focus = GER_plan_z_a }
-					}
-				}
-				show_ideas_tooltip = Kriegsmarine_FAKE
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ
-					add_idea = Kriegsmarine_Rebuild 
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Carrier
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Carrier
-					add_idea = Kriegsmarine_Rebuild_Carriers
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ_intel
-					add_idea = Kriegsmarine_Rebuild_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Carrier_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Carrier_intel
-					add_idea = Kriegsmarine_Rebuild_Carriers_intel
-				}
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -409,33 +368,10 @@
 			factor = 1
 		}
 		completion_reward = {
-		if = {
-			limit = {
-				GER = {
-					NOT = { has_completed_focus = GER_naval_air_effort_a has_completed_focus = GER_pride_of_the_modern_germany_a }
-				}
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
 			}
-			custom_effect_tooltip = GER_prepare_next_tt
 		}	
-		if = {
-		  limit = {
-		  has_idea = Kriegsmarine_Rebuild_Carriers
-		  }
-		  swap_ideas = {
-			remove_idea = Kriegsmarine_Rebuild_Carriers
-			add_idea = Kriegsmarine_Rebuild_Carriers_last
-		  }
-		}
-		if = {
-		  limit = {
-		  has_idea = Kriegsmarine_Rebuild_Carriers_intel
-		  }
-		  swap_ideas = {
-			remove_idea = Kriegsmarine_Rebuild_Carriers_intel
-			add_idea = Kriegsmarine_Rebuild_Carriers_last_intel
-		  }
-		}
-		}
 	}
 
 	shared_focus = {
@@ -599,23 +535,8 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		if = {
-		    limit = {
-			has_idea = Kriegsmarine
-			}
-			swap_ideas = {
-				remove_idea = Kriegsmarine
-				add_idea = Kriegsmarine_PlanZ
-			}
-		}
-		if = {
-		    limit = {
-			has_idea = Kriegsmarine_intel
-			}
-			swap_ideas = {
-			 remove_idea = Kriegsmarine_intel
-			 add_idea = Kriegsmarine_PlanZ_intel	
-			 }
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -2784,9 +2705,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_OI
-				add_idea = Luftwaffe_OI_IMP 
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -2856,9 +2776,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {	
-			swap_ideas = {
-				remove_idea = Luftwaffe_SDD
-				add_idea = Luftwaffe_SDD_B
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}	
 	}
@@ -2880,49 +2799,8 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						NOT = { has_completed_focus = GER_plan_z_a }
-					}
-				}
-				show_ideas_tooltip = Kriegsmarine_FAKE_A
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ
-					add_idea = Kriegsmarine_Carrier
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild
-					add_idea = Kriegsmarine_Rebuild_Carriers
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ_intel
-					add_idea = Kriegsmarine_Carrier_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild_intel
-					add_idea = Kriegsmarine_Rebuild_Carriers_intel
-				}
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
 			}
 			add_tech_bonus = {
 				name = nav_bomber_bonus
@@ -2952,9 +2830,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_SD
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -3031,9 +2908,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_CAS
-				add_idea = Luftwaffe_CAS_R
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}	
 	}
@@ -3104,9 +2980,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_SD
-				add_idea = Luftwaffe_SDD
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -3152,9 +3027,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht
-				add_idea = Wehrmacht_Tank_1
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3182,9 +3056,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht_Tank_2
-				add_idea = WehrmachtLightingStrike
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3343,47 +3216,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_tank_warfare has_completed_focus = GER_Battle_Plan }
-				}
-				custom_effect_tooltip = GER_staff_tt
-				show_ideas_tooltip = Wehrmacht_Tank_2
-				custom_effect_tooltip = GER_staff_a_tt
-				show_ideas_tooltip = Wehrmacht_INF_2
-			}
-			if = {
-				limit = {
-				  GER = {
-					has_idea = Wehrmacht_INF_1
-					}
-			    }
-				swap_ideas = {
-				remove_idea = Wehrmacht_INF_1
-				add_idea = Wehrmacht_INF_2
-			    }	
-			}
-		    if = {
-				limit = {
-					GER = {
-					    has_idea = Wehrmacht_INF_1_SUPPLY
-					}
-				}
-				swap_ideas = {
-				 remove_idea = Wehrmacht_INF_1_SUPPLY
-				 add_idea = Wehrmacht_INF_2_SUPPLY
-			    }
-			}
-			if = {
-				limit = {
-				 GER = {	
-					has_idea = Wehrmacht_Tank_1
-					}
-				}
-				swap_ideas = {
-				remove_idea = Wehrmacht_Tank_1
-				add_idea = Wehrmacht_Tank_2
-			    }	
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3401,25 +3235,14 @@
 		}
 
 		available_if_capitulated = yes
-		completion_reward = {	
-        if = {
-		 limit = {	
-			GER = {
-				has_completed_focus = GER_staff
+		completion_reward = {
+			hidden_effect = {
+				set_variable = {
+					GER_truck_attrition_factor = -0.1
+					GER_supply_factor = 0.1
+					GER_supply_node_range = 0.1
+				}
 			}
-		 }
-		 	swap_ideas = {
-				remove_idea = Wehrmacht_INF_2
-				add_idea = Wehrmacht_INF_2_Supply
-			}	
-		}
-		else_if = {
-			swap_ideas = {
-				remove_idea = Wehrmacht_INF_1
-				add_idea = Wehrmacht_INF_1_SUPPLY
-			}
-		}
-
 		}
 	}
 
@@ -3438,9 +3261,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-				swap_ideas = {
-				remove_idea = Wehrmacht_INF_2_Supply
-				add_idea = WehrmachtWarPlan
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3460,9 +3282,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = { 
-				swap_ideas = {
-				remove_idea = WehrmachtWarPlan
-				add_idea = WehrmachtWarPlana
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3506,9 +3327,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = WehrmachtWarPlan
-				add_idea = WehrmachtWarPlanb
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3556,9 +3376,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht
-				add_idea = Wehrmacht_INF_1
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 
 			add_doctrine_cost_reduction = {

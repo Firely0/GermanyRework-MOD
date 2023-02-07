@@ -147,7 +147,18 @@
  GER_Kaiser_in_Country_tt:0 "Wilhelm II in Country"
  GER_Fuhrer_in_Country:0 "Adolf Hitler in Country"
 
- GER_wehrmacht_1_tt:0 "$research_icon$§YResearch Bonus§!: Armor Tech -15 "
+#Wehrmacht Tank Side TT
+
+ GER_wehrmacht_1_tt:0 "$armor_research$: §R+5%§!"
+ GER_wehrmacht_2_tt:0 "$armor_research$: §R+10%§!"
+ GER_wehrmacht_3_tt:0 "$armor_research$: §R+15%§!"
+
+#Wehrmacht INF Side TT
+
+ GER_wehrmacht_inf_1_tt:0 "$armor_research$: §R-15%§!"
+ GER_wehrmacht_inf_2_tt:0 "$armor_research$: §R-20%§!"
+ GER_wehrmacht_inf_3_tt:0 "$armor_research$: §R-20%§!"
+ 
 
  #Africa
  AfricaCorps_in_germany:0 "Africa Corps is Sub-Branch of Wehrmacht"
