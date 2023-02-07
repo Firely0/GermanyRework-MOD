@@ -1655,6 +1655,42 @@ ideas = {
 
 		#Luftwaffe
 
+		Luftwaffe = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}	
+			} 
+
+			modifier = {
+
+			 air_doctrine_cost_factor = 0.1
+			 air_accidents_factor  = 0.1
+			 air_mission_efficiency = -0.10
+ 
+			}
+		}
+
 		Luftwaffe_UI = {
 			picture = ger_air_ui
 			allowed = {

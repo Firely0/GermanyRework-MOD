@@ -86,7 +86,6 @@ Wehrmacht_dynamic_modifier = {
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
 
 	#Later
 
@@ -150,7 +149,6 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level
-	special_forces_min = GER_special_forces_min
 
 	#Later
 	
@@ -213,7 +211,6 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 		#For Fuhrer v7
 	
 		minimum_training_level = GER_minimum_training_level # 0
-		special_forces_min = GER_special_forces_min # 0
 	
 		#German Steel Good Luck!
 	
@@ -266,7 +263,6 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 			#For Fuhrer v7
 		
 			minimum_training_level = GER_minimum_training_level # 0
-			special_forces_min = GER_special_forces_min # Base 0
 		
 			#German Steel Good Luck!
 		
@@ -317,7 +313,6 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
 
 	#Superior Fire Power
 
@@ -367,7 +362,6 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
 
 	#Superior Fire Power
 
@@ -418,7 +412,6 @@ Wehrmacht_INF_2_dynamic_modifier = {
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
 
 	#Superior Fire Power
 
@@ -468,7 +461,6 @@ Wehrmacht_INF_3_dynamic_modifier = {
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
 
 	#Superior Fire Power
 
@@ -518,8 +510,7 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
-	special_forces_min = GER_special_forces_min # Base 0
-
+	
 	#Superior Fire Power
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1

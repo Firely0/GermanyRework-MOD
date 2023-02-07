@@ -2858,12 +2858,9 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-				swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_CAS
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ernst_udet
 		}
 	}
 
@@ -2936,9 +2933,8 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_OI
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
