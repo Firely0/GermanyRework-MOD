@@ -2,13 +2,12 @@ on_actions = {
 
 
 	on_startup = {
-		if = {
-			limit = {
-				original_tag = GER
+		effect = {
+			GER = {
+				remove_ideas = Wehrmacht
+				remove_ideas = Luftwaffe
+				remove_ideas = Kriegsmarine
 			}
-			remove_idea = Wehrmacht
-			remove_idea = Luftwaffe
-			remove_idea = Kriegsmarine
 		}
 	}
 

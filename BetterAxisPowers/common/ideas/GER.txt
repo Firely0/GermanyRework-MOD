@@ -1655,7 +1655,7 @@ ideas = {
 
 			#Luftwaffe
 
-			Luftwaffe = {
+		Luftwaffe = {
 			picture = ger_air
 			allowed = {
 				original_tag = GER
@@ -1689,7 +1689,7 @@ ideas = {
 			 air_mission_efficiency = -0.10
  
 			}
-		 }
+		}
 
 		 Luftwaffe_UI = {
 			picture = ger_air_ui
@@ -5004,5 +5004,180 @@ ideas = {
 			}
 
 		}
+
+		WehrmachtWarPlana_h = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.20 }
+
+			equipment_bonus = {
+				 infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				 }
+				 support_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				 }
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		WehrmachtWarPlanb_h = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.20 }
+
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				}
+				anti_air_equipment = {
+				 instant = yes
+				 build_cost_ic = -0.10
+				 reliability = 0.05
+				}
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_inf = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.10 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_inf_1 = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.15 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.05 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank_1 = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.1 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank_2 = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.15 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
 	}
 }

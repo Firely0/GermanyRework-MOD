@@ -370,6 +370,9 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
+				set_variable = {
+					GER_consumer_goods_factor = 0.03
+				}
 			}
 		}	
 	}
