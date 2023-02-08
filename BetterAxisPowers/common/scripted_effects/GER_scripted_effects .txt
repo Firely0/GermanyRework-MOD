@@ -847,7 +847,7 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 				swap_ideas = {
-					remove_idea = Luftwaffe
+					remove_idea = Luftwaffe_debuff
 					add_idea = Luftwaffe_SD
 				}
 			}
@@ -873,7 +873,7 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 				swap_ideas = {
-					remove_idea = Luftwaffe
+					remove_idea = Luftwaffe_debuff
 					add_idea = Luftwaffe_CAS
 				}
 			}
@@ -896,7 +896,7 @@ GER_upgrade_wehrmacht_effect = {
 				remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 				swap_ideas = {
-					remove_idea = Luftwaffe
+					remove_idea = Luftwaffe_debuff
 					add_idea = Luftwaffe_OI
 				}
 			}

@@ -94,8 +94,6 @@ Wehrmacht_dynamic_modifier = {
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
-	#
-
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -232,8 +230,6 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 		army_morale_factor = GER_army_morale_factor
 		army_org_regain = GER_army_org_regain
 			
-		#
-			
 		#Volkssturm
 			
 		conscription = GER_volkssturm_conscription 
@@ -249,51 +245,47 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 
 	icon = GFX_idea_ger_army
 
-			#Lighting Strike 
+	 #Lighting Strike 
 
-			max_command_power = GER_max_command_power # 30
+	 max_command_power = GER_max_command_power # 30
 
-			max_planning_factor = GER_max_planning_factor # 0
-			planning_speed = GER_planning_speed # 0
+	 max_planning_factor = GER_max_planning_factor # 0
+	 planning_speed = GER_planning_speed # 0
 	
-			#So Our Plan is...?
+	 #So Our Plan is...?
 		
-			land_doctrine_cost_factor = GER_land_doctrine_cost_factor # -0.1		
+	 land_doctrine_cost_factor = GER_land_doctrine_cost_factor # -0.1		
 		
-			#For Fuhrer v7
+	 #For Fuhrer v7
 		
-			minimum_training_level = GER_minimum_training_level # 0
+	 minimum_training_level = GER_minimum_training_level # 0
 		
-			#German Steel Good Luck!
+	 #German Steel Good Luck!
 		
-			army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
-			org_loss_when_moving = GER_org_loss_when_moving # -0.1
+	 army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
+	 org_loss_when_moving = GER_org_loss_when_moving # -0.1
 		
-			#the Blitzkrieg
+	 #the Blitzkrieg
 			
-			recon_factor = GER_recon_factor # 0.1
-			initiative_factor = GER_initiative_factor # 0.1
-			coordination_bonus = GER_coordination_bonus # 0.05
+	 recon_factor = GER_recon_factor # 0.1
+	 initiative_factor = GER_initiative_factor # 0.1
+	 coordination_bonus = GER_coordination_bonus # 0.05
 		
-			breakthrough_factor = GER_breakthrough_factor # 0.1 
+	 breakthrough_factor = GER_breakthrough_factor # 0.1 
 	
-			#Later
+	 #Later
 			
-			command_abilities_cost_factor = GER_command_abilities_cost_factor 
+	 command_abilities_cost_factor = GER_command_abilities_cost_factor 
 		
-			army_morale_factor = GER_army_morale_factor 
-			army_org_regain = GER_army_org_regain 
+	 army_morale_factor = GER_army_morale_factor 
+	 army_org_regain = GER_army_org_regain 
 				
-			#
+	 #Volkssturm
 				
-			#Volkssturm
-				
-			conscription = GER_volkssturm_conscription 
-			conscription_factor = GER_volkssturm_conscription_factor 
-			experience_gain_army = GER_volkssturm_experience_gain_army 
+	 conscription = GER_volkssturm_conscription 
+	 conscription_factor = GER_volkssturm_conscription_factor 
+	 experience_gain_army = GER_volkssturm_experience_gain_army 
 		
-			custom_modifier_tooltip = GER_wehrmacht_2_tt # Value = 0.05
-
 	custom_modifier_tooltip = GER_wehrmacht_3_tt # 15
 
 }
@@ -696,9 +688,27 @@ Kriegsmarine_dynamic_modifier = {
 
     #Base
 
-	navy_visibility = GER_navy_visibility 0.1
-	sub_retreat_speed = GER_sub_retreat_speed 0.05
-	critical_receive_chance = GER_critical_receive_chance 0.1
+	navy_visibility = GER_navy_visibility # 0.1
+	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
+	critical_receive_chance = GER_critical_receive_chance # 0.1
+	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
+
+	#Plan Z
+
+	positioning = GER_positioning # 0.05
+	screening_efficiency = GER_screening_efficiency # 0.05
+
+	#Carrier
+
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor	# 0.2
+	carrier_night_traffic = GER_carrier_night_traffic # 0.2
+
+	carrier_capacity_penalty_reduction = GER_carrier_capacity_penalty_reduction # 0.1
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor # 0.1
+
+	navy_carrier_air_attack_factor = GER_navy_carrier_air_attack_factor # 0.05
+	navy_carrier_air_agility_factor = GER_navy_carrier_air_agility_factor # 0.05
+	navy_carrier_air_targetting_factor = GER_navy_carrier_air_targetting_factor # 0.05
 
 	#Japan Intel
 
@@ -706,30 +716,9 @@ Kriegsmarine_dynamic_modifier = {
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
 
-	custom_modifier_tooltip = GER_Kriegsmarine_tt #equipment bonus
+	#Last Focus
 
-}
-
-Kriegsmarine_PlanZ_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_ger_navy
-
-	naval_speed_factor = 0.1
-	positioning = 0.1
-	navy_visibility = -0.1
-
-	critical_receive_chance = -0.1
-
-	convoy_escort_efficiency = 0.1
-
-	sub_retreat_speed = 0.1
-
-	#Japan Intel
-
-	navy_intel_factor = GER_navy_intel_factor #0.1
-	decryption_power_factor = GER_decryption_power_factor #0.05
-	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
+	consumer_goods_factor = GER_consumer_goods_factor #-0.03
 
 	custom_modifier_tooltip = GER_Kriegsmarine_PlanZ_tt #equipment bonus
 
@@ -740,30 +729,39 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 
 	icon = GFX_idea_ger_navy
 
-	naval_speed_factor = 0.1
-	navy_visibility = -0.1
-	positioning = 0.1
-	critical_receive_chance = -0.1
+    #Base
 
-	convoy_escort_efficiency = 0.1
+	navy_visibility = GER_navy_visibility # 0.1
+	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
+	critical_receive_chance = GER_critical_receive_chance # 0.1
+	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
 
-	sub_retreat_speed = 0.1
+	#Plan Z
+
+	positioning = GER_positioning # 0.05
+	screening_efficiency = GER_screening_efficiency # 0.05
 
 	#Carrier
 
-	navy_carrier_air_targetting_factor = 0.1
-	navy_carrier_air_attack_factor = 0.1
-	navy_carrier_air_agility_factor = 0.1
-	carrier_traffic = 0.2
-	carrier_night_traffic = 0.2
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor	# 0.2
+	carrier_night_traffic = GER_carrier_night_traffic # 0.2
 
-	air_nav_efficiency = 0.1
+	carrier_capacity_penalty_reduction = GER_carrier_capacity_penalty_reduction # 0.1
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor # 0.1
+
+	navy_carrier_air_attack_factor = GER_navy_carrier_air_attack_factor # 0.05
+	navy_carrier_air_agility_factor = GER_navy_carrier_air_agility_factor # 0.05
+	navy_carrier_air_targetting_factor = GER_navy_carrier_air_targetting_factor # 0.05
 
 	#Japan Intel
 
 	navy_intel_factor = GER_navy_intel_factor #0.1
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
+
+	#Last Focus
+
+	consumer_goods_factor = GER_consumer_goods_factor #-0.03
 
 	custom_modifier_tooltip = GER_Kriegsmarine_Carrier_tt #equipment bonus
 
@@ -774,20 +772,39 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 
 	icon = GFX_idea_ger_navy
 
-	naval_speed_factor = 0.1
-	navy_visibility = -0.1
-	positioning = 0.1
-	critical_receive_chance = -0.1
+    #Base
 
-	convoy_escort_efficiency = 0.1
+	navy_visibility = GER_navy_visibility # 0.1
+	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
+	critical_receive_chance = GER_critical_receive_chance # 0.1
+	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
 
-	sub_retreat_speed = 0.1
+	#Plan Z
+
+	positioning = GER_positioning # 0.05
+	screening_efficiency = GER_screening_efficiency # 0.05
+
+	#Carrier
+
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor	# 0.2
+	carrier_night_traffic = GER_carrier_night_traffic # 0.2
+
+	carrier_capacity_penalty_reduction = GER_carrier_capacity_penalty_reduction # 0.1
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor # 0.1
+
+	navy_carrier_air_attack_factor = GER_navy_carrier_air_attack_factor # 0.05
+	navy_carrier_air_agility_factor = GER_navy_carrier_air_agility_factor # 0.05
+	navy_carrier_air_targetting_factor = GER_navy_carrier_air_targetting_factor # 0.05
 
 	#Japan Intel
 
 	navy_intel_factor = GER_navy_intel_factor #0.1
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
+
+	#Last Focus
+
+	consumer_goods_factor = GER_consumer_goods_factor #-0.03
 
 	custom_modifier_tooltip = GER_Kriegsmarine_GloryofModernGer_tt #equipment bonus
 
@@ -798,24 +815,29 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 
 	icon = GFX_idea_ger_navy
 
-	naval_speed_factor = 0.1
-	navy_visibility = -0.1
-	positioning = 0.1
-	critical_receive_chance = -0.1
+    #Base
 
-	convoy_escort_efficiency = 0.1
+	navy_visibility = GER_navy_visibility # 0.1
+	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
+	critical_receive_chance = GER_critical_receive_chance # 0.1
+	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
 
-	sub_retreat_speed = 0.1
+	#Plan Z
+
+	positioning = GER_positioning # 0.05
+	screening_efficiency = GER_screening_efficiency # 0.05
 
 	#Carrier
 
-	navy_carrier_air_targetting_factor = 0.1
-	navy_carrier_air_attack_factor = 0.1
-	navy_carrier_air_agility_factor = 0.1
-	carrier_traffic = 0.2
-	carrier_night_traffic = 0.2
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor	# 0.2
+	carrier_night_traffic = GER_carrier_night_traffic # 0.2
 
-	air_nav_efficiency = 0.1
+	carrier_capacity_penalty_reduction = GER_carrier_capacity_penalty_reduction # 0.1
+	air_carrier_night_penalty_reduction_factor = GER_air_carrier_night_penalty_reduction_factor # 0.1
+
+	navy_carrier_air_attack_factor = GER_navy_carrier_air_attack_factor # 0.05
+	navy_carrier_air_agility_factor = GER_navy_carrier_air_agility_factor # 0.05
+	navy_carrier_air_targetting_factor = GER_navy_carrier_air_targetting_factor # 0.05
 
 	#Japan Intel
 

@@ -371,7 +371,7 @@
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {
-					GER_consumer_goods_factor = 0.03
+					GER_consumer_goods_factor = -0.03
 				}
 			}
 		}	
@@ -3028,8 +3028,12 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
-				set_variable = {
-				}
+				set_variable = { GER_max_command_power = -10 }
+				set_variable = { GER_max_planning_factor = 0 }
+				set_variable = { GER_planning_speed = 0 }
+				set_variable = { GER_army_armor_speed_factor = 0.1 }
+				set_variable = { GER_org_loss_when_moving = -0.05 }
+				set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3060,15 +3064,13 @@
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 
-				set_variable = {
-					GER_max_command_power = 30
-					GER_army_armor_speed_factor = 0.1
-					GER_org_loss_when_moving = -0.1
-					GER_land_doctrine_cost_factor = -0.1
-					GER_recon_factor = 0.1
-					GER_initiative_factor = 0.1
-					GER_coordination_bonus = 0.05
-				}
+				set_variable = { GER_breakthrough_factor = 0.1 }
+				set_variable = { GER_recon_factor = 0.1 }
+				set_variable = { GER_initiative_factor = 0.1 }
+				set_variable = { GER_coordination_bonus = 0.05 }
+				set_variable = { GER_org_loss_when_moving = -0.1 }
+				set_variable = { GER_army_armor_speed_factor = 0.1 }
+				set_variable = { GER_land_doctrine_cost_factor = -0.1 }
 			}
 		}
 	}
@@ -3233,14 +3235,8 @@
 					limit = {
 						has_completed_focus = GER_tank_warfare
 					}
-					set_variable = {
-						GER_max_command_power = 20
-						GER_max_planning_factor = 0
-						GER_planning_speed = 0
-						GER_army_armor_speed_factor = 0.05
-						GER_org_loss_when_moving = -0.05
-						GER_land_doctrine_cost_factor = 0.05
-					}
+					set_variable = { GER_max_command_power = 20 }
+					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 				}
 				if = {
 					limit = {
@@ -3274,7 +3270,11 @@
 			hidden_effect = {
 				set_variable = {
 					GER_truck_attrition_factor = -0.1
+				}
+				set_variable = {
 					GER_supply_factor = 0.1
+				}
+				set_variable = {
 					GER_supply_node_range = 0.1
 				}
 			}
@@ -3300,8 +3300,14 @@
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
 					GER_air_superiority_bonus_in_combat = 0.1
+				}
+				set_variable = {
 	                GER_cas_damage_reduction = 0.05
+				}
+				set_variable = {
 	                GER_railway_gun_bombardment_factor = 0.2
+				}
+				set_variable = {
 					GER_land_doctrine_cost_factor = 0
 				}
 			}
