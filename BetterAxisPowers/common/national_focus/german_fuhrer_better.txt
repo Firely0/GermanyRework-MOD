@@ -4394,8 +4394,8 @@ focus_tree = {
 		}	
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = sour_loser_our_honor 
-				add_idea = sour_loser_our_honor_for_glory
+				remove_idea = sour_loser
+				add_idea = sour_loser_our_honor
 			}
 		}
 	}
@@ -7930,8 +7930,8 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			add_stability = 5
-			add_war_support = 5
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 
