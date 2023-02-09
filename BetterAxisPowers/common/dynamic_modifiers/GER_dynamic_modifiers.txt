@@ -130,6 +130,8 @@ Wehrmacht_dynamic_modifier = {
 
 	land_doctrine_cost_factor = GER_land_doctrine_cost_factor #Base 0.1
 
+	custom_modifier_tooltip = GER_wehrmacht_1_tt # Value 0.10
+
 }
 
 Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
@@ -565,7 +567,7 @@ Luftwaffe_SD_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 	
-	custom_modifier_tooltip = GER_Luftwaffe_SD_1_tt #equipment bonus
+	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
 
@@ -622,7 +624,7 @@ Luftwaffe_CAS_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 
-	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
+	custom_modifier_tooltip = GER_CAS_tt #equipment bonus
 
 }
 
@@ -642,7 +644,7 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 
 	air_range_factor = 0.1
 
-	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
+	custom_modifier_tooltip = GER_CAS_R_tt #equipment bonus
 
 }
 
@@ -653,6 +655,8 @@ Luftwaffe_OI_dynamic_modifier = {
 
     #Base
 
+	air_mission_efficiency = -0.05
+	air_accidents_factor  = 0.05
 	air_interception_detect_factor = 0.05
 
 	air_bombing_targetting = 0.05
@@ -660,7 +664,7 @@ Luftwaffe_OI_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 
-	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
+	custom_modifier_tooltip = GER_OI_tt #equipment bonus
 
 }
 
@@ -677,7 +681,7 @@ Luftwaffe_OI_A_dynamic_modifier = {
 	air_cas_efficiency = 0.05
 	air_escort_efficiency = 0.05
 
-	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
+	custom_modifier_tooltip = GER_OI_IMP_tt #equipment bonus
 
 }
 
@@ -691,7 +695,7 @@ Kriegsmarine_dynamic_modifier = {
 	navy_visibility = GER_navy_visibility # 0.1
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
-	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
+	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
 	#Plan Z
 
@@ -734,7 +738,7 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 	navy_visibility = GER_navy_visibility # 0.1
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
-	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
+	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
 	#Plan Z
 
@@ -777,7 +781,7 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 	navy_visibility = GER_navy_visibility # 0.1
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
-	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
+	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
 	#Plan Z
 
@@ -820,7 +824,7 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	navy_visibility = GER_navy_visibility # 0.1
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
-	navy_doctrine_cost_factor = GER_navy_doctrine_cost_factor # 0.1
+	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
 	#Plan Z
 
