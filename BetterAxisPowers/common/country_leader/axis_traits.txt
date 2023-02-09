@@ -91,7 +91,10 @@ leader_traits = {
 	Mercedes_1_trait = {
 	    random = no
 		equipment_bonus = {
-			small_plane_airframe_fighter = {
+			small_plane_airframe = {
+				air_agility = 0.1 thrust = 0.05
+			}
+			cv_small_plane_airframe = {
 				air_agility = 0.1 thrust = 0.05
 			}
 		}
@@ -103,7 +106,7 @@ leader_traits = {
 	Volkswagen_trait = {
 		random = no
 		equipment_bonus = {
-			motorized_equipment = {
+			motorized = {
 				build_cost_ic = -0.05 reliability = 0.05 
 			}
 			mechanized = {
@@ -131,7 +134,10 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			armor = {
-				hg_armor_piercing = 0.1 reliability = 0.05 
+				ap_attack = 0.1 hardness = 0.05 reliability = 0.03 
+			}
+			mechanized = {
+				hardness = 0.01 reliability = 0.03
 			}
 		}
 		ai_will_do = {
@@ -144,11 +150,9 @@ leader_traits = {
 		equipment_bonus = {
 		}
 
-		modifier = {
-			industrial_capacity_factory = 0.03
-			industrial_capacity_dockyard = 0.03
-		}
-
+		industrial_capacity_factory = 0.03
+		industrial_capacity_dockyard = 0.03
+		
 		ai_will_do = {
 			factor = 1
 		}
