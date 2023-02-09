@@ -3618,6 +3618,85 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		GER_Volkswagen = {
+
+			picture = volkswagen
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Volkswagen_1_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GER_Mercedes = {
+
+			picture = Mercedes
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Mercedes_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GER_skoda = {
+
+			picture = CZE_skoda_works
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				has_idea = GER_skoda_t
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Skoda_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 	}
 	
 	naval_manufacturer = { 
@@ -3867,7 +3946,33 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
+		
+		GER_Mercedes_t = {
+
+			picture = Mercedes
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Mercedes_1_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 	industrial_concern = {
@@ -3979,7 +4084,31 @@ ideas = {
 			
 	    traits = { electronics_concern_focus }
 		
-	   }		
+	   }	
+	   
+	   GER_skoda_t = {
+		picture = CZE_skoda_works
+			
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		500 = {
+			is_fully_controlled_by = ROOT 
+		}		
+		}
+		
+		research_bonus = {
+			industry = 0.1
+		}
+		
+		traits = { Skoda_1_trait }
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	}
 
 	materiel_manufacturer = {
@@ -4032,6 +4161,31 @@ ideas = {
 			}
 			
 			traits = { motorized_equipment_manufacturer }
+		}
+
+		GER_Volkswagen_t = {
+
+			picture = volkswagen
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Volkswagen_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 

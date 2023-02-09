@@ -7850,6 +7850,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			set_rule = { can_use_kamikaze_pilots = yes }
 		}
 	}
 
