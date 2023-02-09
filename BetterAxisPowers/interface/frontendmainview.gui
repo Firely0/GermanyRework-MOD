@@ -314,20 +314,7 @@ guiTypes = {
 		Orientation = UPPER_LEFT
 		origo = left
 		
-		instantTextBoxType={
-				name = "Version Name"
-				font = "garamond_24"
-				position = { x=70 y=-250 }
-				text = "Version Name :Schwarzer Adler Schwebt!"
-				maxWidth = 300
-				maxHeight = 160
-				alwaysTransparent = yes
-				format = center
-				Orientation = UPPER_LEFT
-			}
-		
-		iconType =
-		{
+		iconType = {
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 20 y = -440 }
