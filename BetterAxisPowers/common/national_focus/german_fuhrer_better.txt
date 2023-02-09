@@ -414,7 +414,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_anschluss_v
-		icon = GFX_goal_Anschlus
+		icon = GFX_goal_Anschlus_1
 		text = GER_anschluss
 		prerequisite = { focus = GER_rhineland_ab }
 		available_if_capitulated = no
@@ -4393,8 +4393,9 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_Interve_Civilwars_idea days = 1461 
+			swap_ideas = {
+				remove_idea = sour_loser_our_honor 
+				add_idea = sour_loser_our_honor_for_glory
 			}
 		}
 	}
@@ -4415,9 +4416,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_Interve_Civilwars_idea days = 1461 
+			swap_ideas = {
+				remove_idea = sour_loser
+				add_idea = sour_loser_revange
 			}
+			remove_country_leader_trait = dictator_pp
+			add_country_leader_trait = dictator_pp_v1
 		}
 	}
 
@@ -4436,8 +4440,14 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = sour_loser_revange
+				add_idea = sour_loser_revange_never_surrender
+			}
 		}
-	}	focus = {
+	}	
+
+	focus = {
 		id = GER_for_glory
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = GER_for_our_honor }
@@ -4452,6 +4462,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = sour_loser_our_honor
+				add_idea = sour_loser_our_honor_for_glory
+			}
 		}
 	}
 
@@ -7720,6 +7734,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			set_variable = {
+				GER_volkssturm_conscription = 0.3
+			}
+			add_to_variable = {
+			   GER_volkssturm_experience_gain_army = -0.1
+			}
 		}
 	}
 
@@ -7738,6 +7758,15 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_to_variable = {
+				GER_volkssturm_experience_gain_army = -0.1
+			}
+			add_to_variable = {
+				GER_minimum_training_level = -0.1
+			}
+			add_to_variable = {
+				GER_volkssturm_conscription_factor = 0.1
+			}
 		}
 	}
 
@@ -7757,6 +7786,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_to_variable = {
+				GER_volkssturm_experience_gain_army = -0.05
+			}
+			add_to_variable = {
+				GER_volkssturm_conscription_factor = 0.05
+			}
 		}
 	}
 
@@ -7775,6 +7810,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			set_variable = {
+				GER_army_org_regain = 0.01
+			}
+			set_variable = {
+				GER_army_morale_factor = 0.01
+			}
 		}
 	}
 
@@ -7811,6 +7852,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = reroute_supplies_tt
+			hidden_effect = {
+				
+			}
 		}
 	}
 
@@ -7829,6 +7874,22 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 50
+			}
 		}
 	}
 
@@ -7869,10 +7930,8 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = GER.
-				add_idea = GER
-			}
+			add_stability = 5
+			add_war_support = 5
 		}
 	}
 
@@ -7891,15 +7950,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			GER = { remove_ideas = kinder_kuche_kirche }
-			GER = { add_ideas = tot_economic_mobilisation }
-			hidden_effect = {
-				limit = {
-					is_ai = yes
-				}
-				add_stability = 10
-				add_war_support = 15
-			}
 		}
 	}
 
@@ -8120,13 +8170,7 @@ focus = {
 		icon = GFX_focus_generic_military_mission
 		text = GER_Working_on
 		available = {
-			UKR = {
-				is_subject_of = GER
-				}
-			BLR = {
-				is_subject_of = GER
-			}
-			surrender_progress < 0.01
+			always = no
 		}
 		prerequisite = { focus = GER_Belarus }
 		prerequisite = { focus = GER_Ukraine }
@@ -8139,7 +8183,6 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_country_leader_trait = ReDrawBorders
 		}
 	}
 

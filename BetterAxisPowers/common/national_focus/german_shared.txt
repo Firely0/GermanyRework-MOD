@@ -3034,6 +3034,7 @@
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
 				set_variable = { GER_org_loss_when_moving = -0.05 }
 				set_variable = { GER_land_doctrine_cost_factor = -0.05 }
+				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3237,6 +3238,8 @@
 					}
 					set_variable = { GER_max_command_power = 20 }
 					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
+					set_variable = { GER_minimum_training_level = 0 }
+					set_variable = { GER_minimum_training_level = 0.05 }
 				}
 				if = {
 					limit = {
@@ -3244,10 +3247,17 @@
 					}
 					set_variable = {
 						GER_max_command_power = -15
+					}
+					set_variable = {
 						GER_max_planning_speed = 0
+					}
+					set_variable = {
 						GER_cas_damage_reduction = 0.05
+					}
+					set_variable = {
 						GER_land_doctrine_cost_factor = 0.05
 					}
+					set_variable = { GER_minimum_training_level = 0.05 }
 				}
 			}
 		}
@@ -3310,6 +3320,7 @@
 				set_variable = {
 					GER_land_doctrine_cost_factor = 0
 				}
+				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 		}
 	}
@@ -3427,6 +3438,8 @@
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
 					GER_army_speed_factor = -0.05
+				}
+				set_variable = {
 					GER_planning_speed = 0.1
 				}
 			}

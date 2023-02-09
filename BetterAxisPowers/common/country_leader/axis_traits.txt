@@ -225,6 +225,19 @@ leader_traits = {
 		}
 	}
 
+	dictator_pp_v1 = {
+		random = no
+		political_power_gain = 0.1
+		weekly_casualties_war_support = 0.001
+		weekly_convoys_war_support = 0.001 
+		weekly_bombing_war_support = 0.001 
+		ai_desired_divisions_factor = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	DealBraker = {
 		random = no
 		enemy_justify_war_goal_time = 0.05

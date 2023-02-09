@@ -15,6 +15,96 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
+
+				stability_factor = -0.04
+				war_support_factor = -0.04
+
+				surrender_limit = -0.15
+			}
+		}
+
+		sour_loser_our_honor = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		sour_loser_our_honor_for_glory = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				stability_factor = 0.1
+				war_support_factor = -0.1
+
+				command_abilities_cost_factor = -0.2
+			}
+		}
+
+		sour_loser_revange = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				war_support_factor = 0.1
+			}
+		}
+
+		sour_loser_revange_never_surrender = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				war_support_factor = 0.1
+				surrender_limit = 0.15
 			}
 		}
 
@@ -3631,7 +3721,7 @@ ideas = {
 		    }
 
 			available = {
-
+				has_completed_focus = GER_Fuhrer_Dream_Car
 			}
 			
 			research_bonus = {
@@ -4175,6 +4265,7 @@ ideas = {
 		    }
 
 			available = {
+				has_completed_focus = GER_Fuhrer_Dream_Car
 			}
 			
 			research_bonus = {
