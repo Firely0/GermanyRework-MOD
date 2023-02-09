@@ -92,10 +92,10 @@ leader_traits = {
 	    random = no
 		equipment_bonus = {
 			small_plane_airframe = {
-				air_agility = 0.1 thrust = 0.05
+				air_agility = 0.1 thrust = 0.1
 			}
 			cv_small_plane_airframe = {
-				air_agility = 0.1 thrust = 0.05
+				air_agility = 0.1 thrust = 0.1
 			}
 		}
 		ai_will_do = {
@@ -122,7 +122,7 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			armor = {
-			 hardness = 0.05 reliability = 0.05 
+			 hardness = 0.1 reliability = 0.05 
 			}
 		}
 		ai_will_do = {
@@ -137,7 +137,7 @@ leader_traits = {
 				ap_attack = 0.1 hardness = 0.05 reliability = 0.03 
 			}
 			mechanized = {
-				hardness = 0.01 reliability = 0.03
+				hardness = 0.1 reliability = 0.03
 			}
 		}
 		ai_will_do = {

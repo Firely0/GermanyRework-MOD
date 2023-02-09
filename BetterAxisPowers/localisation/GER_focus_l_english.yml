@@ -502,12 +502,12 @@
  
  Ger_Luftwaffe_Mod_tt:0 "Modify §Y$Luftwaffe_dynamic_modifier$§! by"
 
- GER_Luftwaffe_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §G+10.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+10.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G+10.0%§! \n\n"
- GER_SD_production_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §G+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G-5.0%§! \n\n"
- GER_CAS_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §G+5.00%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G+15.00%§! \n\n"
- GER_CAS_R_tt:0 "§YClose Air Support§!: £production_cost Production Cost: §G-5.0%§! \n§YMedium Air Frame§!: £production_cost Production Cost: §G+5.00%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G+15.0%§! \n\n"
- GER_OI_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §G+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G+10.0%§! \n\n"
- GER_OI_IMP_tt:0 "§YFighter§!: £production_cost Production Cost: §G-5.0%§! \n§YMedium Air Frame§!: £production_cost Production Cost: §G+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §G+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G+10.0%§! \n\n"
+ GER_Luftwaffe_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+10.0%§! \n§RLarge Air Frame§!: £production_cost Production Cost: §G+10.0%§! \n\n"
+ GER_SD_production_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§RLarge Air Frame§!: £production_cost Production Cost: §G-5.0%§! \n\n"
+ GER_CAS_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+5.00%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+15.00%§! \n\n"
+ GER_CAS_R_tt:0 "§YClose Air Support§!: £production_cost Production Cost: §G-5.0%§! \n§YMedium Air Frame§!: £production_cost Production Cost: §R+5.00%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+15.0%§! \n\n"
+ GER_OI_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n\n"
+ GER_OI_IMP_tt:0 "§YFighter§!: £production_cost Production Cost: §G-5.0%§! \n§YMedium Air Frame§!: £production_cost Production Cost: §R+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n\n"
 
  GER_SD_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£home_defence_texticon Air Home Defence: §G+10.00%§! \n£strat_bombing_visibility_texticon   Strategic Bombing Visibility: §G-0.05%§!\n £strat_bombing_texticon   Strategic Bombing: §G-0.05%§! \nAir Doctrine Cost: §G-0.05%§! \n\n"
  GER_SD_A_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£home_defence_texticon Air Home Defence: §G+10.00%§! \n£strat_bombing_visibility_texticon   Strategic Bombing Visibility: §G-0.05%§!\n £strat_bombing_texticon   Strategic Bombing: §G-0.05%§! £strat_bombing_visibility_texticon  \nStrategic Bombing Visibility: §G-0.01%§! \nAir Doctrine Cost: §G-0.05%§! \n\n"
