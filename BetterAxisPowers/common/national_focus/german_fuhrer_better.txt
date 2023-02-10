@@ -107,7 +107,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_establish_abwehr
-		text = GER_rhineland
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = { focus = GER_rhineland_ab }
 		x = 20
@@ -497,7 +496,8 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.05
-			add_state_claim = 69      
+			add_state_claim = 69  
+			add_state_claim = 4  
 			add_state_claim = 848
 			add_state_claim = 153
 			add_state_claim = 152
@@ -6627,6 +6627,8 @@ focus_tree = {
 		
 		set_variable = {
 			GER_navy_intel_factor = 0.1
+		}
+		set_variable = {
 			GER_decryption_power_factor = 0.05
 		}
 	
@@ -6692,7 +6694,6 @@ focus_tree = {
 
 		set_variable = {
 			GER_production_speed_dockyard_factor = 0.1
-			GER_decryption_power_factor = 0.05
 		}
 
 		}
