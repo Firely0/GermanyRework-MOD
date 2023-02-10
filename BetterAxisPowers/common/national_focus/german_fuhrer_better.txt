@@ -7953,11 +7953,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Volkssturm_tt
 			set_variable = {
 				GER_volkssturm_conscription = 0.03
 			}
 			add_to_variable = {
-			   GER_volkssturm_experience_gain_army = -0.1
+			   GER_volkssturm_experience_gain_army_factor = -0.1
 			}
 		}
 	}
@@ -7982,8 +7983,9 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Minimizes_Training_tt
 			add_to_variable = {
-				GER_volkssturm_experience_gain_army = -0.1
+				GER_volkssturm_experience_gain_army_factor = -0.1
 			}
 			add_to_variable = {
 				GER_minimum_training_level = -0.1
@@ -8015,11 +8017,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Basic_Training_tt
 			add_to_variable = {
-				GER_volkssturm_experience_gain_army = -0.05
+				GER_volkssturm_experience_gain_army_factor = -0.05
 			}
 			add_to_variable = {
-				GER_volkssturm_conscription_factor = 0.05
+				GER_volkssturm_conscription_factor = 0.02
 			}
 		}
 	}
@@ -8044,6 +8047,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_No_Step_Back_tt
 			set_variable = {
 				GER_army_org_regain = 0.06
 			}

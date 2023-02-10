@@ -540,7 +540,10 @@
  Wehrmacht_Main_Tank_2:0 "Wehrmacht"
 
  GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
- ENG_army_rearmament_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£army_experience  Army Experience Gain: §G+5.00%§! \n£army_experience  Land Doctrine Cost: §G-5.00%§! \n£mobilisation_texticon  Mobilization speed: §G+5.00%§! \n\n"
+ GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon conscription: §G+3.00%§! \n£army_experience Army Experience Gain §R-10.00%§!"
+ GER_Basic_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-5.00%§! \n£manpower_texticon Conscription Factor: §Y+20.00%§!"
+ GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.00%§! \n£training_speed_texticon Minimum Training Level: §R-10.00%§! \n£manpower_texticon Conscription Factor: §Y+10.00%§! "
+ GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.00%§! \n£organization_gain_texticon Army Morale: §Y+10.00%§!"
 
  #Luftwaffe
 
