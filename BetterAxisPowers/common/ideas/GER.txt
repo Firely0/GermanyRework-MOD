@@ -278,8 +278,8 @@ ideas = {
 			}
 		}
 
-		GER_battle_el_alamein = {
-			picture = CZE_planning_bonus
+		GER_Last_Strike = {
+			picture = generic_purge
 				
 			allowed = {
 				always = no
@@ -291,10 +291,10 @@ ideas = {
 	
 			removal_cost = -1
 
-			targeted_modifier = {
-				tag = ENG
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+			modifier = {
+				breakthrough_factor = 0.1
+				army_armor_speed_factor = 0.1
+				org_loss_at_low_org_factor = -0.2
 			}
 		}
 

@@ -7759,6 +7759,7 @@ focus_tree = {
 		prerequisite = { focus = GER_the_peoples_car }
 		icon = GFX_goal_all_shall_serve
 		available = {
+			has_war = yes
 			date > 1943.01.01
 		}
 		cancel_if_invalid = no
@@ -7817,27 +7818,9 @@ focus_tree = {
 	focus = {
 		id = GER_the_Supreme_Commander
 		prerequisite = { focus = GER_Total_War focus = GER_underground_factories }
-		icon = GFX_goal_undergroundfactory
+		icon = GFX_goal_supremefuhrer
 		available = {
-		OR = {
 			date > 1943.01.01
-			OR = {
-				OR = {
-					GER = { controls_state = 126 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 126
-					}
-				}
-				OR = {
-					GER = { controls_state = 16 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 16
-					}
-				}
-			}
-		}	
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -7989,6 +7972,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_timed_idea = {
+				idea = GER_Last_Strike
+				days = 183
+			}
 		}
 	}
 
