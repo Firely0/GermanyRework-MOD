@@ -2029,8 +2029,11 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = dornier_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = junkers_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = messerschmitt_focus 
 
 			hidden_effect = {
@@ -2083,7 +2086,9 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = siemens_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = krupp_idea_focus
 	    hidden_effect = {
 		if = {
@@ -2126,9 +2131,13 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designerv
 			show_ideas_tooltip = porsche_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = henschel_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_MAN_Focus 
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = krupp
 			hidden_effect = {
 			if = {

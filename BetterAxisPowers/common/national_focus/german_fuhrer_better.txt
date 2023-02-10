@@ -7696,7 +7696,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_Kaiser_in_exile
-		text = GER_improve_national_spirit
 		prerequisite = { focus = GER_Fuhrer }
 		icon = GFX_goal_Kaiserinaxile
 		available = {
@@ -8057,7 +8056,9 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {	
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_Volkswagen
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_Volkswagen_t
 			random_owned_controlled_state = {
 				prioritize = { 64 }
