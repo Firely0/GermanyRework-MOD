@@ -4544,14 +4544,6 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
-			VIC = { 
-				exists = yes
-				NOT = { has_war_with = GER }
-				677 = { is_controlled_by = VIC }
-				680 = { is_controlled_by = VIC }
-				554 = { is_controlled_by = VIC }
-				553 = { is_controlled_by = VIC }
-			}
 		}
 
 		x = 11

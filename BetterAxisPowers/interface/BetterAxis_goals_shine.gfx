@@ -33,7 +33,39 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_lastoffensive"
+		name = "GFX_goal_supremefuhrer_shine"
+		texturefile = "gfx/interface/goals/supremefuhrer.dds"
+				effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/supremefuhrer.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/supremefuhrer.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_lastoffensive_shine"
 		texturefile = "gfx/interface/goals/lastoffensive.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -65,7 +97,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_all_shall_serve"
+		name = "GFX_goal_all_shall_serve_shine"
 		texturefile = "gfx/interface/goals/all_shall_serve.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -97,7 +129,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_undergroundfactory"
+		name = "GFX_goal_undergroundfactory_shine"
 		texturefile = "gfx/interface/goals/undergroundfactory.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -129,7 +161,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_betterreich"
+		name = "GFX_goal_betterreich_shine"
 		texturefile = "gfx/interface/goals/r56_goal_GER_european_reich.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -161,7 +193,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_thepeoplescar"
+		name = "GFX_goal_thepeoplescar_shine"
 		texturefile = "gfx/interface/goals/thepeoplescar.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -193,7 +225,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_Kaiserinaxile"
+		name = "GFX_goal_Kaiserinaxile_shine"
 		texturefile = "gfx/interface/goals/Kaiserinaxile.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -225,7 +257,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_Volkssturm"
+		name = "GFX_goal_Volkssturm_shine"
 		texturefile = "gfx/interface/goals/Volkssturm.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -257,7 +289,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_Anschlus_1"
+		name = "GFX_goal_Anschlus_1_shine"
 		texturefile = "gfx/interface/goals/anschlus.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -289,7 +321,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_Anti_tank"
+		name = "GFX_goal_Anti_tank_shine"
 		texturefile = "gfx/interface/goals/focus_generic_tank_destroyer.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -321,7 +353,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_befriend_cze"
+		name = "GFX_goal_befriend_cze_shine"
 		texturefile = "gfx/interface/goals/befriend_czech.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -353,7 +385,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_befriend_yug"
+		name = "GFX_goal_befriend_yug_shine"
 		texturefile = "gfx/interface/goals/befriend_yugoslavia.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -385,7 +417,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_EUinFlames"
+		name = "GFX_goal_EUinFlames_shine"
 		texturefile = "gfx/interface/goals/EUinflames.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -417,7 +449,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_ForOurGlory"
+		name = "GFX_goal_ForOurGlory_shine"
 		texturefile = "gfx/interface/goals/ForOurGlory.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -449,7 +481,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_ForOurRevange"
+		name = "GFX_goal_ForOurRevange_shine"
 		texturefile = "gfx/interface/goals/ForOurRevange.dds"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
