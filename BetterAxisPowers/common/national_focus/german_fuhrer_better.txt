@@ -4519,6 +4519,7 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
+			is_faction_leader = yes
 		}
 
 		x = 11
@@ -4676,6 +4677,7 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
+			is_faction_leader = yes
 		}
 
 		x = -11
@@ -5166,6 +5168,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_europe
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
+			is_faction_leader = yes
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -5341,7 +5344,6 @@ focus_tree = {
 					scope = GER
 					days = 90
 				}
-				custom_effect_tooltip = rush_for_suez_cannal_tt
 				if = {
 					limit = {
 					ITA = {
@@ -5353,7 +5355,6 @@ focus_tree = {
 						scope = ITA
 						days = 90
 					}
-					custom_effect_tooltip = rush_for_suez_cannal_tt
 				}
 			}
 		}
@@ -6826,6 +6827,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_asia
 		prerequisite = { focus = GER_Axis_Powers }		
 		available = {
+			is_faction_leader = yes
 		}
 		cancel_if_invalid = no
 		x = 22
@@ -6845,6 +6847,7 @@ focus_tree = {
 		icon = GFX_focus_generic_balkans_focus
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
+			is_faction_leader = yes
 		}
 		cancel_if_invalid = no
 		x = -22
@@ -7640,7 +7643,7 @@ focus_tree = {
 		id = GER_National_sprit
 		text = GER_improve_national_spirit
 		prerequisite = { focus = GER_Fuhrer }
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_betterreich
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_improve_national_spirit_tooltip
@@ -7692,21 +7695,48 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Total_War
+		id = GER_Kaiser_in_exile
+		text = GER_improve_national_spirit
 		prerequisite = { focus = GER_Fuhrer }
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_Kaiserinaxile
 		available = {
-			date > 1943.01.01
+			HOL = {
+				is_alone_or_in_faction_at_peace_with_GER = yes
+				NOT = { has_completed_focus = HOL_the_only_man_in_the_dutch_government }
+			}
 		}
+		cancel = {
+		}		
 		cancel_if_invalid = no
 		x = -3
 		y = 1
 		relative_position_id = GER_Fuhrer
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			country_event = { id = ger_kaiser_in_exile.1 days = 1 }
+		}
+	}
+
+	focus = {
+		id = GER_Total_War
+		prerequisite = { focus = GER_the_peoples_car }
+		icon = GFX_goal_all_shall_serve
+		available = {
+			date > 1943.01.01
+		}
+		cancel_if_invalid = no
+		x = -1
+		y = 1
+		relative_position_id = GER_the_peoples_car
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			has_war = yes
 			GER = { remove_ideas = kinder_kuche_kirche }
 			GER = { add_ideas = tot_economic_mobilisation }
 			hidden_effect = {
@@ -7720,10 +7750,43 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_underground_factories
+		prerequisite = { focus = GER_the_peoples_car }
+		icon = GFX_goal_undergroundfactory
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		relative_position_id = GER_the_peoples_car
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			64 = { 
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			52 = { 
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+
+	focus = {
 		id = GER_Volkssturm
 		prerequisite = { focus = GER_Fuhrer }
 		icon = GFX_goal_Volkssturm
 		available = {
+			has_war = yes
+			surrender_progress > 0.25
 		}
 		cancel_if_invalid = no
 		x = -6
@@ -7748,6 +7811,11 @@ focus_tree = {
 		prerequisite = { focus = GER_Volkssturm }
 		icon = GFX_goal_continuous_reduce_training_time
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1200000
+			}
 		}
 		cancel_if_invalid = no
 		x = -5
@@ -7776,6 +7844,11 @@ focus_tree = {
 		icon = GFX_focus_prc_infiltration
 		mutually_exclusive = { focus = GER_minimize_training }
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1200000
+			}
 		}
 		cancel_if_invalid = no
 		x = -7
@@ -7800,6 +7873,11 @@ focus_tree = {
 		prerequisite = { focus = GER_Basic_Training focus = GER_minimize_training }
 		icon = GFX_goal_BerlinFocus
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1500000
+			}
 		}
 		cancel_if_invalid = no
 		x = -6
@@ -7822,8 +7900,13 @@ focus_tree = {
 	focus = {
 		id = GER_the_last_offensive
 		prerequisite = { focus = GER_No_Step_Back }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_lastoffensive
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1500000
+			}
 		}
 		cancel_if_invalid = no
 		x = -4
@@ -7842,6 +7925,11 @@ focus_tree = {
 		prerequisite = { focus = GER_No_Step_Back }
 		icon = GFX_focus_SOV_the_road_of_life
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1500000
+			}
 		}
 		cancel_if_invalid = no
 		x = -8
@@ -7854,7 +7942,16 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = reroute_supplies_tt
 			hidden_effect = {
-				
+				every_core_state = {
+					limit = {
+						is_core_of = GER
+					}
+					add_dynamic_modifier = {
+						modifier = GER_Resupply_dynamic_modifier
+						scope = GER
+						days = 365
+					}
+				}
 			}
 		}
 	}
@@ -7864,6 +7961,11 @@ focus_tree = {
 		prerequisite = { focus = GER_No_Step_Back }
 		icon = GFX_focus_generic_concessions
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.30
+				casualties >1500000
+			}
 		}
 		cancel_if_invalid = no
 		x = -6
@@ -7875,7 +7977,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_2
+				type = infantry_equipment
 				amount = 5000
 			}
 			add_equipment_to_stockpile = {
@@ -7901,6 +8003,11 @@ focus_tree = {
 		prerequisite = { focus = GER_reroute_supplies }
 
 		available = {
+			has_war = yes
+			OR = {
+				surrender_progress > 0.45
+				casualties >2000000
+			}
 		}
 		cancel_if_invalid = no
 		x = -7
@@ -7936,9 +8043,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Fuhrer_Dream_Car
+		id = GER_the_peoples_car
 		prerequisite = { focus = GER_Fuhrer }
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_thepeoplescar
 		available = {
 		}
 		cancel_if_invalid = no
@@ -7952,6 +8059,22 @@ focus_tree = {
 		completion_reward = {	
 			show_ideas_tooltip = GER_Volkswagen
 			show_ideas_tooltip = GER_Volkswagen_t
+			random_owned_controlled_state = {
+				prioritize = { 64 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}	
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
