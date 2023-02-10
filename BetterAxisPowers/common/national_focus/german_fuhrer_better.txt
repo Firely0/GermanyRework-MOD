@@ -7689,8 +7689,51 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			remove_ideas = sour_loser
-			add_ideas = triumphant_will
+		if = {
+			limit = {
+				has_idea = sour_loser
+			}
+			swap_ideas = {
+				remove_idea = sour_loser
+				add_idea = triumphant_will
+			}
+		}
+		if = {
+			limit = {
+				has_idea = sour_loser_our_honor
+			}
+			swap_ideas = {
+				remove_idea = sour_loser_our_honor
+				add_idea = triumphant_will
+			}
+		}
+		if = {
+			limit = {
+				has_idea = sour_loser_our_honor_for_glory
+			}
+			swap_ideas = {
+				remove_idea = sour_loser_our_honor_for_glory
+				add_idea = triumphant_will
+			}
+		}
+		if = {
+			limit = {
+				has_idea = sour_loser_revange
+			}
+			swap_ideas = {
+				remove_idea = sour_loser_revange
+				add_idea = triumphant_will
+			}
+		}
+		if = {
+			limit = {
+				has_idea = sour_loser_revange_never_surrender
+			}
+			swap_ideas = {
+				remove_idea = sour_loser_revange_never_surrender
+				add_idea = triumphant_will
+			}
+		}	
 		}
 	}
 
@@ -7780,6 +7823,44 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_the_Supreme_Commander
+		prerequisite = { focus = GER_Total_War focus = GER_underground_factories }
+		icon = GFX_goal_undergroundfactory
+		available = {
+		OR = {
+			date > 1943.01.01
+			OR = {
+				OR = {
+					GER = { controls_state = 126 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 126
+					}
+				}
+				OR = {
+					GER = { controls_state = 16 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 16
+					}
+				}
+			}
+		}	
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		relative_position_id = GER_the_peoples_car
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			recruit_character = GER_SUPREM_adolf_hitler
+		}
+	}
+
+	focus = {
 		id = GER_Volkssturm
 		prerequisite = { focus = GER_Fuhrer }
 		icon = GFX_goal_Volkssturm
@@ -7797,7 +7878,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			set_variable = {
-				GER_volkssturm_conscription = 0.3
+				GER_volkssturm_conscription = 0.03
 			}
 			add_to_variable = {
 			   GER_volkssturm_experience_gain_army = -0.1
@@ -7888,10 +7969,10 @@ focus_tree = {
 		}	
 		completion_reward = {
 			set_variable = {
-				GER_army_org_regain = 0.01
+				GER_army_org_regain = 0.06
 			}
 			set_variable = {
-				GER_army_morale_factor = 0.01
+				GER_army_morale_factor = 0.1
 			}
 		}
 	}

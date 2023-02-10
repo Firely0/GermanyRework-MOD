@@ -14,6 +14,23 @@ characters={
 		}
 	}
 
+	GER_SUPREM_adolf_hitler={
+		name=GER_adolf_hitler
+		portraits={
+			civilian={
+				large=GFX_portrait_Supreme_Adolf_Hitler
+			}
+		}
+		field_marshal={
+			traits={  politically_connected  offensive_doctrine old_guard}
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
 	GER_konrad_adenauer={
 		name=GER_konrad_adenauer
 		portraits={
