@@ -33,7 +33,7 @@ focus_tree = {
 		text = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
 		#prerequisite = { }
-		x = 20
+		x = 60
 		y = 0
 		cost = 5
 		available = {
@@ -109,7 +109,8 @@ focus_tree = {
 		id = GER_establish_abwehr
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = { focus = GER_rhineland_ab }
-		x = 20
+		relative_position_id = GER_rhineland_ab
+		x = 0
 		y = 1
 		cost = 1
 		available = {
@@ -7701,11 +7702,12 @@ focus_tree = {
 		id = GER_Fuhrer
 		icon = GFX_goal_Fuhrer
 		prerequisite = { focus = GER_establish_abwehr }
+		relative_position_id = GER_establish_abwehr
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 20
-		y = 3
+		x = 0
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10

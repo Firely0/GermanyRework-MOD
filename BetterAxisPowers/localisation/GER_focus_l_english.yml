@@ -64,42 +64,6 @@
 
  nohelp_denmark:0 "On Our Own"
 
- Wehrmacht_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_1_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_2_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_1_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_2_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_3_dynamic_modifier:0 "Wehrmacht"
-
- Wehrmacht_Main_inf:0 "Wehrmacht"
- Wehrmacht_Main_inf_1:0 "Wehrmacht"
- WehrmachtWarPlanb_h:0 "Wehrmacht"
- WehrmachtWarPlana_h:0 "Wehrmacht"
- Wehrmacht_Main_Tank:0 "Wehrmacht"
- Wehrmacht_Main_Tank_1:0 "Wehrmacht"
- Wehrmacht_Main_Tank_2:0 "Wehrmacht"
-
- Luftwaffe_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_SD_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_SD_A_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_SD_B_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_CAS_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_CAS_A_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_OI_dynamic_modifier:0 "Luftwaffe"
- Luftwaffe_OI_A_dynamic_modifier:0 "Luftwaffe"
- 
- Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
- Kriegsmarine_PlanZ_dynamic_modifier:0 "Kriegsmarine"
- Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
- Kriegsmarine_Gloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
- Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
-
- Kriegsmarine_FAKE_Buff:0 "Kriegsmarine"
- Kriegsmarine_FAKE:0 "Kriegsmarine"
- Kriegsmarine_FAKE_Carrier_Buff:0 "Kriegsmarine"
-
  Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms:0 "Four Year Plan"
  Four_Year_Plan_Civilian_Mobilization_autarky:0 "Four Year Plan"
  Four_Year_Plan_Civilian_Mobilization_hide_arms:0 "Four Year Plan"
@@ -556,8 +520,39 @@
  GER_Working_on:0 "This Focus Not Ready / WIP "
  GER_Working_on_desc:0 "This Focus Not Ready OR Does Nothing."
 
- #Luftwaffe Tooltips
- 
+ #Wehrmacht
+
+ Wehrmacht_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_Tank_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_Tank_1_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_Tank_2_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_INF_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_INF_1_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_INF_2_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_INF_3_dynamic_modifier:0 "Wehrmacht"
+
+ Wehrmacht_Main_inf:0 "Wehrmacht"
+ Wehrmacht_Main_inf_1:0 "Wehrmacht"
+ WehrmachtWarPlanb_h:0 "Wehrmacht"
+ WehrmachtWarPlana_h:0 "Wehrmacht"
+ Wehrmacht_Main_Tank:0 "Wehrmacht"
+ Wehrmacht_Main_Tank_1:0 "Wehrmacht"
+ Wehrmacht_Main_Tank_2:0 "Wehrmacht"
+
+ GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
+ ENG_army_rearmament_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£army_experience  Army Experience Gain: §G+5.00%§! \n£army_experience  Land Doctrine Cost: §G-5.00%§! \n£mobilisation_texticon  Mobilization speed: §G+5.00%§! \n\n"
+
+ #Luftwaffe
+
+ Luftwaffe_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_A_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_B_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_CAS_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_CAS_A_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_OI_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_OI_A_dynamic_modifier:0 "Luftwaffe"
+
  Ger_Luftwaffe_Mod_tt:0 "Modify §Y$Luftwaffe_dynamic_modifier$§! by"
 
  GER_Luftwaffe_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+10.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n\n"
@@ -578,30 +573,21 @@
 
  #
 
+ Kriegsmarine_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_PlanZ_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Gloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
+
+ Kriegsmarine_FAKE_Buff:0 "Kriegsmarine"
+ Kriegsmarine_FAKE:0 "Kriegsmarine"
+ Kriegsmarine_FAKE_Carrier_Buff:0 "Kriegsmarine"
+
  GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
- GER_Kriegsmarine_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §R+10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
- GER_Kriegsmarine_Carrierfocus_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
- GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.00%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.00%§! \n\n"
+ GER_Kriegsmarine_tt:0 "\n§YCarrier§!: £production_cost Production Cost: §R+10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
+ GER_Kriegsmarine_Carrierfocus_tt:0 "\n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
+ GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "\n§YCarrier§!: £production_cost Production Cost: §G-10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.00%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.00%§! \n\n"
 
- GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
- ENG_army_rearmament_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£army_experience  Army Experience Gain: §G+5.00%§! \n£army_experience  Land Doctrine Cost: §G-5.00%§! \n£mobilisation_texticon  Mobilization speed: §G+5.00%§! \n\n"
- ENG_old_army_doctrines_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£planning_speed_texticon  Planning Speed: §G+5.00%§! \n£planning_max_texticon  Max planning: §G+5.00%§! \n\n"
- ENG_tank_focus_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£planning_speed_texticon  Planning Speed: §G+5.00%§! \n£org_loss_when_moving_texticon  Org Loss when Moving: §G-10.00%§! \n§YMedium Tank§!: £production_cost Production Cost: §R+5.00%§! \n§YMedium Tank§!: £repairing  Reliability: §G+5%§! \n§YMedium Tank§!: £soft_attack_texticon  Soft attack: §G+5%§! \n\n"
- ENG_special_air_service_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£army_experience  Army Experience Gain: §G+5.00%§! \n£army_experience  Land Doctrine Cost: §G-10.00%§! \n\n"
- ENG_motorized_focus_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n§YTruck§!: £production_cost Production Cost: §G-5.00%§! \n"
- ENG_infantry_weapons_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n§YInfantry Equipment§!: £production_cost Production Cost: §G-5.00%§! \n§YInfantry Equipment§!: £repairing  Reliability: §R-5%§! \n\n"
- ENG_artillery_weapons_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n§YTowed Artillery§!: £production_cost Production Cost: §G-5.00%§! \n"
- ENG_small_arms_focus_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n§YInfantry Equipment§!: £production_cost Production Cost: §G-5.00%§! \n§YInfantry Equipment§!: £repairing  Reliability: §G+5%§! \n"
- ENG_small_arms_focus_ns2_tt:0 "$ENG_modify_ra_ns_intro$ \n§YTowed Artillery§!: £production_cost Production Cost: §G-5.00%§! \n\n"
-
- ENG_ra_dynamic_mwrf_tt:0 "§YTruck§!: £production_cost Production Cost: §G-5.00%§! \n"
- ENG_ra_dynamic_mwrf2_tt:0 "§YTruck§!: £production_cost Production Cost: §G-5.00%§! \n§YMedium Tank§!: £production_cost Production Cost: §G+5.00%§! \n§YMedium Tank§!: £repairing  Reliability: §G+5%§! \n§YMedium Tank§!: £soft_attack_texticon  Soft attack: §G+5%§! \n\n"
- ENG_ra_dynamic_mwrf3_tt:0 "§YTruck§!: £production_cost Production Cost: §G-5.00%§! \n§YMedium Tank§!: £production_cost Production Cost: §R+5.00%§! \n§YMedium Tank§!: £repairing  Reliability: §G+5%§! \n§YMedium Tank§!: £soft_attack_texticon  Soft attack: §G+5%§! \n§YTowed Artillery§!: £production_cost Production Cost: §G-5.00%§! \n\n"
- ENG_ra_dynamic_gbp_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §G-5.00%§! \n§YInfantry Equipment§!: £repairing  Reliability: §R-5%§! \n\n"
- ENG_ra_dynamic_gbp2_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §G-5.00%§! \n§YInfantry Equipment§!: £repairing  Reliability: §R-5%§! \n§YTowed Artillery§!: £production_cost Production Cost: §G-5.00%§! \n\n"
- ENG_ra_dynamic_gbp3_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §G-10.00%§! \n§YTowed Artillery§!: £production_cost Production Cost: §G-5.00%§! \n\n"
-
- ENG_housing_2_tt:0 "Bonuses for completing the §YSolve the Housing Problem§! focus:"
- ENG_steel_industry_tt:0 "Bonuses for completing the §YSteel Industry§! focus:"
 
  
