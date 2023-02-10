@@ -164,7 +164,7 @@
  GER_Kaiser_in_Country_tt:0 "Wilhelm II in Country"
  GER_Fuhrer_in_Country:0 "Adolf Hitler in Country"
 
- rhineland_remilitarized:0 "Rhineland is Remilitarized"
+ rhineland_remilitarized:0 "Rhineland is §RNOT§! Remilitarized"
 
 #Wehrmacht Tank Side TT
 
@@ -302,7 +302,7 @@
  GER_foregin_affairs:0 "Foreign Affairs"
  GER_foregin_affairs_desc:0 ""
  GER_establish_abwehr:0 "Establish Abwehr"
- GER_establish_abwehr:0 ""
+ GER_establish_abwehr_desc:0 ""
  GER_the_Supreme_Commander:0 "Supreme Commander"
  GER_the_Supreme_Commander_desc:0 ""
  GER_Kaiser_in_exile:0 "Kaiser in Exile"
@@ -578,25 +578,12 @@
 
  #
 
- ENG_rn_dynamic_modifier:0 "Royal Navy"
- ENG_modify_navy_ns_intro:0 "Modify §Y$ENG_rn_dynamic_modifier$§! by"
- ENG_naval_rearmament_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£coordination_texticon  Fleet Coordination: §G+5.00%§! \n£navy_experience  Naval Doctrine Cost: §G-5.00%§! \n\n"
- ENG_waves_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£coordination_texticon  Fleet Coordination: §G+5.00%§! \n£navy_experience  Naval Doctrine Cost: §G-5.00%§! \n£attack_texticon Attack when in combat alongside the §YPride of the Fleet§!: §G+5.00%§! \n\n"
- ENG_destroyer_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£spotting  Spotting Speed: §G+5.00%§! \n\n"
- ENG_convoy_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£attack_texticon  Screen Attack: §G+5.00%§! \n\n"
- ENG_anti_submarine_training_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£navy_experience   Destroyer Combat Experience Gain: §G+10.00%§! \n£navy_experience  Destroyer Training Experience Gain: §G+10.00%§! \n\n"
- ENG_battleship_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£org_loss_when_moving_texticon  Strike Force Org Loss: §G-5.00%§! \n\n"
- ENG_carrier_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£sortie_efficiency_texticon  Sortie efficiency: §G+5.00%§! \n\n"
- ENG_amphibious_focus_ns_tt:0 "$ENG_modify_navy_ns_intro$ \n£naval_invasion_texticon  Invasion Preparation Time: §G-10.00%§! \n£naval_invasion_texticon  Naval Invasion Capacity: §G+10§! \n\n"
+ GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
+ GER_Kriegsmarine_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §R+10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
+ GER_Kriegsmarine_Carrierfocus_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.00%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.00%§! \n\n"
+ GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-10.00%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.00%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.00%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.00%§! \n\n"
 
- ENG_ra_dynamic_modifier:0 "Royal Army"
- ENG_ra_dynamic_mwrf_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_ra_dynamic_mwrf2_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_ra_dynamic_mwrf3_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_ra_dynamic_gbp_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_ra_dynamic_gbp2_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_ra_dynamic_gbp3_modifier:0 "$ENG_ra_dynamic_modifier$"
- ENG_modify_ra_ns_intro:0 "Modify §Y$ENG_ra_dynamic_modifier$§! by"
+ GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
  ENG_army_rearmament_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£army_experience  Army Experience Gain: §G+5.00%§! \n£army_experience  Land Doctrine Cost: §G-5.00%§! \n£mobilisation_texticon  Mobilization speed: §G+5.00%§! \n\n"
  ENG_old_army_doctrines_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£planning_speed_texticon  Planning Speed: §G+5.00%§! \n£planning_max_texticon  Max planning: §G+5.00%§! \n\n"
  ENG_tank_focus_ns_tt:0 "$ENG_modify_ra_ns_intro$ \n£planning_speed_texticon  Planning Speed: §G+5.00%§! \n£org_loss_when_moving_texticon  Org Loss when Moving: §G-10.00%§! \n§YMedium Tank§!: £production_cost Production Cost: §R+5.00%§! \n§YMedium Tank§!: £repairing  Reliability: §G+5%§! \n§YMedium Tank§!: £soft_attack_texticon  Soft attack: §G+5%§! \n\n"
