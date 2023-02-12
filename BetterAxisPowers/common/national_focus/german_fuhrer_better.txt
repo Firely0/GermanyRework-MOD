@@ -126,7 +126,7 @@ focus_tree = {
 		completion_reward = {	
 			create_intelligence_agency = {
 				name = "Abwehr"
-				icon = GFX_intelligence_agency_logo_agency
+				icon = GFX_intelligence_agency_logo_ger 
 			}
 		}
 	}
@@ -478,7 +478,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = GER_Fuhrer }
+		#prerequisite = { focus = GER_Fuhrer }
 		relative_position_id = GER_Fuhrer
 		x = -30
 		y = 1
@@ -510,6 +510,8 @@ focus_tree = {
 			add_state_claim = 102
 			add_state_claim = 39
 			add_state_claim = 850
+			add_state_claim = 28
+			add_state_claim = 8
 		}
 	}
 
@@ -5734,7 +5736,9 @@ focus_tree = {
 	focus = {
 		id = GER_Set_HQ_in_front
 		icon = GFX_goal_generic_construct_military
+		text = GetAfricacorpsfront
 		prerequisite = { focus = GER_Afrika_Corps_Follow_Italy }
+		dynamic = yes
 
 		available = {
 			ITA = { is_in_faction_with = GER }
@@ -6162,6 +6166,8 @@ focus_tree = {
 	focus = {
 		id = GER_africa_front_war_logistics
 		icon = GFX_focus_generic_africa_infrastructure
+		text = GetAfricacorpsfrontlogistics
+		dynamic = yes
 		prerequisite = { focus = GER_Set_HQ_in_front }
 
 		available = {
@@ -8251,8 +8257,36 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_foregin_affairs }
 		relative_position_id = GER_foregin_affairs
-		x = -5
+		x = -6
 		y = 1
+		cost = 3
+
+		available = {
+			has_government = fascism
+		}
+
+		bypass = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GER_Dynamic_SOV
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		prerequisite = { focus = GER_Sleep_Well_SOV }
+		relative_position_id = GER_foregin_affairs
+		allow_branch = {
+			NOT = { always = yes } # has_country_flag = GER_HIDE_Dynamic_SOV
+		}
+		x = -5
+		y = 2
 		cost = 3
 
 		available = {
@@ -8274,6 +8308,7 @@ focus_tree = {
 	focus = {
 		id = GER_Approach_Soviet
 		icon = GFX_focus_chi_mission_to_the_soviet_union
+		allow_branch = { always = no } # NOT = { has_completed_focus = GER_ussr_war_goalV }
 		available = {
 			SOV = {
 				NOT = { has_war_with = GER }
@@ -8408,6 +8443,7 @@ focus = {
 			add_ideas = soviet_german_friendship
 			country_event = germany.89
 		}
+		set_country_flag = GER_HIDE_Dynamic_SOV
 	}
 }
 
@@ -8417,10 +8453,10 @@ focus = {
 		available = {
 			has_completed_focus = GER_form_the_reichskommissariats_a
 		}
-		prerequisite = { focus = GER_Sleep_Well_SOV }
+		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = 1
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Local_Police_force_in_soviet
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -8442,10 +8478,10 @@ focus = {
 		available = {
 			has_completed_focus = GER_form_the_reichskommissariats_a
 		}
-		prerequisite = { focus = GER_Sleep_Well_SOV }
+		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = -1
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Local_Police_force_in_soviet
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -8457,16 +8493,16 @@ focus = {
 	}
 
 	focus = {
-		id = GER_Integrate_Army
+		id = GER_Local_Police_force_in_soviet
 		icon = GFX_focus_generic_military_mission
 		text = GER_Working_on
 		available = {
 			always = no
 		}
-		prerequisite = { focus = GER_Belarus }
-		prerequisite = { focus = GER_Ukraine }
-		x = 0
-		y = 2
+		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
+		prerequisite = { focus = GER_Sleep_Well_SOV }
+		x = 4
+		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 10
 		ai_will_do = {
@@ -8477,11 +8513,33 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
+		id = GER_Russia_Glory_Army
+		icon = GFX_focus_generic_military_mission
+		text = GER_Working_on
+		available = {
+			always = no
+		}
+		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
+		prerequisite = { focus = GER_Sleep_Well_SOV }
+		x = -4
+		y = 1
+		relative_position_id = GER_Sleep_Well_SOV
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		}
+	}
+
+    focus = {
 		id = GER_anti_comitern_pactV
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_comitern_pact
 		prerequisite = { focus = GER_Sleep_Well_SOV  }
+		allow_branch = { always = no } #NOT = { has_completed_focus = GER_ussr_war_goalV }
 		x = -3
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
@@ -8532,7 +8590,7 @@ focus = {
 		}
 	}
 
-focus = {
+    focus = {
 		id = GER_anti_soviet_pactV
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_soviet_pact
@@ -8582,7 +8640,7 @@ focus = {
 		}
 	}
 
-focus = {
+    focus = {
 		id = GER_ussr_war_goalV
 		icon = GFX_goal_generic_war_with_comintern
 		text = GER_ussr_war_goal
@@ -8639,6 +8697,7 @@ focus = {
 			}
 		}	
 		completion_reward = {
+			set_country_flag = GER_HIDE_Dynamic_SOV
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {

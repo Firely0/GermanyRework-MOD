@@ -125,7 +125,7 @@
 		completion_reward = {
 			create_equipment_variant = {
 					name = "Graf Zeppelin"
-					type = ship_hull_carrier_1
+					type = ship_hull_carrier_conversion_bb
 					name_group = GER_CV_HISTORICAL
 					parent_version = 0
 					allow_without_tech = yes
@@ -136,12 +136,12 @@
 						fixed_ship_radar_slot = empty
 						fixed_ship_engine_slot = carrier_ship_engine_2
 						fixed_ship_secondaries_slot = ship_secondaries_2
-						front_1_custom_slot = ship_deck_space
+						front_1_custom_slot = ship_armor_carrier_deck
 					}
 			}
 			add_equipment_production = {
 				equipment = {
-					type = ship_hull_carrier_1
+					type = ship_hull_carrier_conversion_bb
 					creator = "GER"
 					version_name = "Graf Zeppelin"
 				}
@@ -368,6 +368,7 @@
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = GER_prepare_next_tt
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {
@@ -603,12 +604,6 @@
 				bonus = 1.0
 				uses = 1
 				category = ss_tech
-			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				set_technology = { cruiser_submarines = 1 }
 			}
 		}
 		
@@ -955,7 +950,7 @@
 	shared_focus = {
 		id = GER_hermann_goring_werke_a
 		icon = GFX_goal_generic_construct_civ_factory
-		text = GER_hermann_goring_werke
+		text = GetHermannGoringWerkeName
 		dynamic = yes
 		prerequisite = { focus = GER_autarky_a }
 		x = 0
@@ -1035,7 +1030,7 @@
 	shared_focus = {
 		id = GER_kdf_wagen_a
 		icon = GFX_goal_generic_construct_civ_factory
-		text = GER_kdf_wagen
+		text = GetKdfWagenName
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke_a }
 		x = 0
@@ -3438,7 +3433,7 @@
 		}
 
 		available = {
-			has_tech = trench_warfare
+			has_tech = superior_firepower
 		}
 
 		available_if_capitulated = yes

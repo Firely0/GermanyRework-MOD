@@ -381,10 +381,18 @@
  GER_Afrika_Corps_Follow_Italy_desc:0 ""
  GER_Set_HQ_in_front:0 "Create HQ in ITA-GER Front"
  GER_Set_HQ_in_front_desc:0 ""
+ GER_Set_HQ_in_ETH_front:0 "Create HQ in Ethiopia"
+ GER_Set_HQ_in_ETH_front_desc:0 ""
+ GER_Set_HQ_in_LIB_front:0 "Create HQ in Libya"
+ GER_Set_HQ_in_LIB_front_desc:0 ""
  GER_Planned_Offense:0 "Planned Offensive"
  GER_Planned_Offense_desc:0 ""
  GER_africa_front_war_logistics:0 "War Logistics in ITA-GER Front"
  GER_africa_front_war_logistics_desc:0 ""
+ GER_ETH_front_war_logistics:0 "War Logistics in Ethiopia Front"
+ GER_ETH_front_war_logistics_desc:0 ""
+ GER_LIB_front_war_logistics:0 "War Logistics in Libya Front"
+ GER_LIB_front_war_logistics_desc:0 ""
  GER_TUR_Grant_Claims:0 "Grant Turkish Claims"
  GER_TUR_Grant_Claims_desc:0 ""
  GER_request_qingdao:0 "Request Qingdao"
@@ -540,10 +548,10 @@
  Wehrmacht_Main_Tank_2:0 "Wehrmacht"
 
  GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
- GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon conscription: §G+3.00%§! \n£army_experience Army Experience Gain §R-10.00%§!"
+ GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon Conscription: §G+3.00§! \n£army_experience Army Experience Gain §R-10.00%§!"
  GER_Basic_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-5.00%§! \n£manpower_texticon Conscription Factor: §Y+20.00%§!"
  GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.00%§! \n£training_speed_texticon Minimum Training Level: §R-10.00%§! \n£manpower_texticon Conscription Factor: §Y+10.00%§! "
- GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.00%§! \n£organization_gain_texticon Army Morale: §Y+10.00%§!"
+ GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.00%§! \n£army_morale_texticon Army Morale: §Y+10.00%§!"
 
  #Luftwaffe
 
