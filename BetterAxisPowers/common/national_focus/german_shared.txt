@@ -950,7 +950,7 @@
 	shared_focus = {
 		id = GER_hermann_goring_werke_a
 		icon = GFX_goal_generic_construct_civ_factory
-		text = GetHermannGoringWerkeName
+		text = GER_hermann_goring_werke
 		dynamic = yes
 		prerequisite = { focus = GER_autarky_a }
 		x = 0
@@ -1030,7 +1030,7 @@
 	shared_focus = {
 		id = GER_kdf_wagen_a
 		icon = GFX_goal_generic_construct_civ_factory
-		text = GetKdfWagenName
+		text = GER_kdf_wagen
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke_a }
 		x = 0

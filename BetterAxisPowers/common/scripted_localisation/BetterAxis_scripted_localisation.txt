@@ -12,14 +12,12 @@ defined_text = { # Country
 	name = GetAfricacorpsfront
 	text = {
 		trigger = {
-			original_tag = GER
 			has_global_flag = GER_LIB_SIDE_PLAN
 		}
 		localization_key = GER_Set_HQ_in_LIB_front
 	}
 	text = {
 		trigger = {
-			original_tag = GER
 			has_global_flag = GER_ETH_SIDE_PLAN
 		}
 		localization_key = GER_Set_HQ_in_ETH_front
@@ -33,19 +31,17 @@ defined_text = { # Country
 	name = GetAfricacorpsfrontlogistics
 	text = {
 		trigger = {
-			original_tag = GER
 			has_global_flag = GER_LIB_SIDE_PLAN
 		}
 		localization_key = GER_LIB_front_war_logistics
 	}
 	text = {
 		trigger = {
-			original_tag = GER
 			has_global_flag = GER_ETH_SIDE_PLAN
 		}
 		localization_key = GER_ETH_front_war_logistics
 	}
 	text = {
-		localization_key = GER_LIB_front_war_logistics
+		localization_key = GER_africa_front_war_logistics1
 	}
 }
