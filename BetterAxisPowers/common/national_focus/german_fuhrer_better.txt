@@ -8724,6 +8724,11 @@ focus = {
 		icon = GFX_goal_andreyvlasovinfield
 		available = {
 			NOT = { has_country_flag = vlasov_in_ss_flag }
+			random_controlled_state = {
+				limit = {
+					is_core_of = SOV
+				}
+			}	
 		}
 		prerequisite = { focus = GER_Russia_Glory_Army }
 		x = -5
