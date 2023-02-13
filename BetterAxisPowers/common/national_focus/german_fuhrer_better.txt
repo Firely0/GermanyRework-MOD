@@ -8420,7 +8420,6 @@ focus_tree = {
 			OR = {
 				has_war_with = SOV
 				NOT = { country_exists = SOV }
-				has_global_flag = beck_ribbentrop_signed
 			}
 		}
 		prerequisite = { focus = GER_Sleep_Well_SOV }
@@ -8445,6 +8444,7 @@ focus_tree = {
 	 id = GER_mol_rib_pactV
 	 icon = GFX_goal_molotov_ribbentrop_pact
 	 text = GER_mol_rib_pact
+	 allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 	 prerequisite = { focus = GER_Approach_Soviet }
 	 available = {
 		is_subject = no
@@ -8822,6 +8822,7 @@ focus = {
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comitern_pactV }
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 849999 } #ca 90 div
@@ -8871,6 +8872,7 @@ focus = {
 		id = GER_ussr_war_goalV
 		icon = GFX_focus_attack_soviet
 		text = GER_ussr_war_goal
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 		prerequisite = { focus = GER_anti_comitern_pactV }
 		mutually_exclusive = { focus = GER_soviet_allyV }
 		available_if_capitulated = no
