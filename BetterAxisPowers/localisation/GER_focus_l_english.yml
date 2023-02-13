@@ -11,8 +11,18 @@
  #Occupation Laws
  ss_police_final:0 "Schutzstaffel"
  ss_police:0 "Schutzstaffel"
+ ss_police_final_sov:0 "Schutzstaffel"
+
+ #Operation Barbarossa
+ GER_Operation_Barbarossa:0 "Operation Barbarossa"
+ GER_conquer_Leningrad:0 "Conquer Leningrad"
+ GER_conquer_Moscow:0 "Conquer Moscow"
+ GER_conquer_Stalingrad:0 "Conquer Stalingrad"
+ 
 
  #Ideas
+
+ SS_Fake_tooltip_idea:0 "Schutzstaffel"
 
  sour_loser_our_honor:0 "Bitter Loser"
  sour_loser_our_honor_desc:0 "Bitterness over defeat in the Great War dominates the politics of this nation."
@@ -172,7 +182,8 @@
  GER_staff_tt:0 "if Selected; §RMobile Warfare§!"
  GER_staff_a_tt:0 "if Selected; §RTrech Warfare§!"
  GER_SS_tt:0 "Unlocks Occupation Law; §YSchutzstaffel§! "
- GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§! "
+ GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§!"
+ GER_SS_Soviet_tt:0 "Unlocks Occupation Law in §YSoviet Union§! States"
  GER_Four_Year_Plan_Finish_tt:0 "Available After End Of §RFour Year Plan§!"
  GER_align_bulgaria:0 "Align Bulgaria"
  GER_align_bulgaria_unaligned:0 "Align Bulgaria"
@@ -263,6 +274,8 @@
  GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
 
  #Focus And Others
+ GER_Local_Police_force_in_soviet:0 "Local Police Force"
+ GER_Local_Police_force_in_soviet_desc:0 ""
  GER_foregin_affairs:0 "Foreign Affairs"
  GER_foregin_affairs_desc:0 ""
  GER_establish_abwehr:0 "Establish Abwehr"
@@ -458,7 +471,7 @@
  GER_Lighting_Strike_desc:0 ""
  GER_Panther:0 "PzKpfw Panther"
  GER_Panther_desc:0 ""
- GER_Anti_Tank:0 "Jagdpanzer"
+ GER_Anti_Tank:0 "Jagdpanther"
  GER_Anti_Tank_desc:0 ""
  GER_King_Tiger:0 "PzKpfw Tiger Ausf. B"
  GER_King_Tiger_desc:0 ""

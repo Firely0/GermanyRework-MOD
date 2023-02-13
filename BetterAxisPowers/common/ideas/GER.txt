@@ -1,6 +1,29 @@
 ideas = {
 
 	country = {
+		
+		SS_Fake_tooltip_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.25
+				compliance_gain = -0.03
+				required_garrison_factor = -0.2
+				local_factories = 0.1
+				local_resources = 0.15
+				resistance_damage_to_garrison = -0.4
+			}
+		}
+
 		sour_loser = {
 			
 			allowed = {
@@ -1072,6 +1095,11 @@ ideas = {
 				tag = SOV
 				attack_bonus_against = 0.10
 				defense_bonus_against = 0.05
+			}
+
+			on_remove = {
+				clr_global_flag = GER_Operation_Barbarossa_running
+				set_global_flag = GER_Operation_Barbarossa_Failed
 			}
 
 		}

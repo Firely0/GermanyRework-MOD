@@ -667,6 +667,7 @@ ss_police = {
 		original_tag = GER
 		has_completed_focus = GER_SS_A
 		NOT = { has_completed_focus = GER_SS_Final_Focus }
+		FROM = { NOT = { original_tag = SOV } }
 	}
 
 	state_modifier = {
@@ -691,6 +692,7 @@ ss_police_final = {
 	visible = {
 		original_tag = GER
 		has_completed_focus = GER_SS_Final_Focus
+		FROM = { NOT = { original_tag = SOV } }
 	}
 
 	state_modifier = {
@@ -702,6 +704,34 @@ ss_police_final = {
 		resistance_damage_to_garrison	= -0.45
 		enemy_operative_detection_chance_over_occupied_tag = 1
 		enemy_intel_network_gain_factor_over_occupied_tag = -0.35 
+	}
+
+
+	ai_will_do = {
+		base = 1000
+	}
+}
+
+ss_police_final_sov = {
+	icon = 4
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	fallback_law = secret_police_oversight
+
+	visible = {
+		original_tag = GER
+		has_completed_focus = GER_SS
+		has_completed_focus = GER_Local_Police_force_in_soviet
+		FROM = { original_tag = SOV }
+	}
+
+	state_modifier = {
+		resistance_target 				= -0.25
+		compliance_gain 				= -0.03
+		required_garrison_factor 		= -0.2
+		local_factories 				= 0.1
+		local_resources 				= 0.15
+		resistance_damage_to_garrison	= -0.4
 	}
 
 

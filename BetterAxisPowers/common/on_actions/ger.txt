@@ -238,9 +238,40 @@ on_actions = {
 					GER = { has_completed_focus = GER_ussr_war_goalV }
 				}
 				hidden_effect = {
-					GER = { 
-						add_timed_idea = { idea = GER_barbarossa days = 180 }
-						activate_mission = GER_barbarossa_mission
+					set_global_flag = GER_Operation_Barbarossa_running
+					if = {
+						limit = {
+							GER = {
+								has_completed_focus = GER_tank_warfare
+							}
+						}
+						GER = { 
+							add_timed_idea = { idea = GER_barbarossa days = 180 }
+							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Moscow
+							activate_mission = GER_conquer_Stalingrad
+						}
+					}
+					if = {
+						limit = {
+							GER = {
+								has_completed_focus = GER_Battle_Plan
+							}
+						}
+						GER = { 
+							add_timed_idea = { idea = GER_barbarossa days = 365 }
+							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Moscow
+							activate_mission = GER_conquer_Stalingrad
+						}
+					}
+					else = {
+						GER = { 
+							add_timed_idea = { idea = GER_barbarossa days = 180 }
+							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Moscow
+							activate_mission = GER_conquer_Stalingrad
+						}
 					}
 				}
 			}
