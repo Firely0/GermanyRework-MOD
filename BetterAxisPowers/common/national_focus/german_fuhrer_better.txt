@@ -8444,7 +8444,6 @@ focus_tree = {
 	 id = GER_mol_rib_pactV
 	 icon = GFX_goal_molotov_ribbentrop_pact
 	 text = GER_mol_rib_pact
-	 allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 	 prerequisite = { focus = GER_Approach_Soviet }
 	 available = {
 		is_subject = no
@@ -8658,7 +8657,7 @@ focus = {
 			if = {
 				limit = {
 					SOV = {
-						neutrality > 0.1
+						neutrality < 0.1
 					}
 				}
 				add_popularity = {
@@ -8681,7 +8680,7 @@ focus = {
 			if = {
 				limit = {
 					SOV = {
-						neutrality < 0.45
+						neutrality > 0.45
 					}
 				}
 				SOV = {
@@ -8822,7 +8821,6 @@ focus = {
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comitern_pactV }
-		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 849999 } #ca 90 div
@@ -8872,7 +8870,6 @@ focus = {
 		id = GER_ussr_war_goalV
 		icon = GFX_focus_attack_soviet
 		text = GER_ussr_war_goal
-		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 		prerequisite = { focus = GER_anti_comitern_pactV }
 		mutually_exclusive = { focus = GER_soviet_allyV }
 		available_if_capitulated = no
@@ -8927,6 +8924,7 @@ focus = {
 		}	
 		completion_reward = {
 			complete_national_focus = GER_Attack_SOV
+			mark_focus_tree_layout_dirty = yes
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {

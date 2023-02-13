@@ -247,6 +247,7 @@ on_actions = {
 						}
 						GER = { 
 							add_timed_idea = { idea = GER_barbarossa days = 180 }
+							set_variable = { GER_Operation_Barb_time = 180 }
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
@@ -260,6 +261,7 @@ on_actions = {
 						}
 						GER = { 
 							add_timed_idea = { idea = GER_barbarossa days = 365 }
+							set_variable = { GER_Operation_Barb_time = 365 }
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
@@ -268,6 +270,7 @@ on_actions = {
 					else = {
 						GER = { 
 							add_timed_idea = { idea = GER_barbarossa days = 180 }
+							set_variable = { GER_Operation_Barb_time = 365 }
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
