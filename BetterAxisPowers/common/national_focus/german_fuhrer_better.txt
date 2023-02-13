@@ -8376,34 +8376,6 @@ focus_tree = {
 		}
 	}
 
-	#focus = {
-		id = GER_Dynamic_SOV
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		prerequisite = { focus = GER_Sleep_Well_SOV }
-		relative_position_id = GER_foregin_affairs
-		allow_branch = {
-			NOT = { has_country_flag = GER_HIDE_Dynamic_SOV }
-		}
-		x = -6
-		y = 2
-		cost = 3
-
-		available = {
-			has_government = fascism
-		}
-
-		bypass = {
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			add_political_power = 50
-		}
-	#}
-
 	focus = {
 		id = GER_Ultimatom_Soviet_Union
 		icon = GFX_focus_SOV_the_last_purge
