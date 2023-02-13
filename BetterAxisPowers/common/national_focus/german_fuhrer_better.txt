@@ -4644,6 +4644,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		text = GER_Working_on
 		available = {
+			always = no
 		}
 
 		x = 11
@@ -4658,7 +4659,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			VIC = { country_event = { id = GER_VIC_Syria.1 days = 1 } }
+			#VIC = { country_event = { id = GER_VIC_Syria.1 days = 1 } }
 		}
 	}
 
@@ -8282,7 +8283,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Sleep_Well_SOV }
 		relative_position_id = GER_foregin_affairs
 		allow_branch = {
-			always = yes #has_completed_focus = GER_ussr_war_goalV
+			has_completed_focus = GER_ussr_war_goalV
 		}
 		x = -6
 		y = 4
@@ -8375,15 +8376,15 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	#focus = {
 		id = GER_Dynamic_SOV
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Sleep_Well_SOV }
 		relative_position_id = GER_foregin_affairs
 		allow_branch = {
-			NOT = { always = yes } # has_country_flag = GER_HIDE_Dynamic_SOV
+			NOT = { has_country_flag = GER_HIDE_Dynamic_SOV }
 		}
-		x = -5
+		x = -6
 		y = 2
 		cost = 3
 
@@ -8401,7 +8402,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 		}
-	}
+	#}
 
 	focus = {
 		id = GER_Ultimatom_Soviet_Union
@@ -8435,7 +8436,7 @@ focus_tree = {
 	focus = {
 		id = GER_Approach_Soviet
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		allow_branch = { always = no } # NOT = { has_completed_focus = GER_ussr_war_goalV }
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } }
 		available = {
 			SOV = {
 				NOT = { has_war_with = GER }
@@ -8625,7 +8626,7 @@ focus = {
 		available = {
 			has_completed_focus = GER_SS_A
 		}
-		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
+		allow_branch = {has_completed_focus = GER_ussr_war_goalV}
 		prerequisite = { focus = GER_Sleep_Well_SOV }
 		x = 4
 		y = 1
@@ -8647,7 +8648,7 @@ focus = {
 		available = {
 			has_country_flag = vlasov_in_ss_flag
 		}
-		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
+		allow_branch = { has_completed_focus = GER_ussr_war_goalV }
 		prerequisite = { focus = GER_Sleep_Well_SOV }
 		x = -4
 		y = 1
@@ -8667,7 +8668,7 @@ focus = {
 		icon = GFX_focus_SOV_panslavic_nationalism
 		available = {
 			SOV = {
-				neutrality < 0.1
+				neutrality > 0.1
 				NOT = { has_government = neutrality }
 			}
 			NOT = { has_country_flag = vlasov_in_ss_flag }
@@ -8682,16 +8683,22 @@ focus = {
 		}
 		
 		completion_reward = {
-			SOV = {
+			if = {
+				limit = {
+					SOV = {
+						neutrality > 0.1
+					}
+				}
 				add_popularity = {
 					ideology = neutrality 
-					popularity = 0.15
+					popularity = 0.05
 				}
 			}
 			if = {
 				limit = {
 					SOV = {
 						neutrality < 0.3
+						neutrality > 0.45
 					}
 				}
 				add_popularity = {
@@ -8782,7 +8789,7 @@ focus = {
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_comitern_pact
 		prerequisite = { focus = GER_Sleep_Well_SOV  }
-		allow_branch = { always = no } #NOT = { has_completed_focus = GER_ussr_war_goalV }
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goalV } } 
 		x = -3
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
@@ -8940,7 +8947,6 @@ focus = {
 			}
 		}	
 		completion_reward = {
-			set_country_flag = GER_HIDE_Dynamic_SOV
 			complete_national_focus = GER_Attack_SOV
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
