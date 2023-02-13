@@ -97,6 +97,14 @@ GER_Operation_Barbarossa_V = {
 	
 		complete_effect = { 
 			complete_national_focus = GER_Moscow_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
 		}
 	}
 	
@@ -145,6 +153,14 @@ GER_Operation_Barbarossa_V = {
 	
 		complete_effect = { 
 		 complete_national_focus = GER_Stalingrad_mission
+		 SOV = {
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.05
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
 		}
 	}
 }

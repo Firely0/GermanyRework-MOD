@@ -8641,7 +8641,6 @@ focus = {
 		icon = GFX_focus_SOV_panslavic_nationalism
 		available = {
 			SOV = {
-				neutrality > 0.1
 				NOT = { has_government = neutrality }
 			}
 			NOT = { has_country_flag = vlasov_in_ss_flag }
