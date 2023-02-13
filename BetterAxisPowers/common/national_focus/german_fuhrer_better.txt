@@ -115,7 +115,6 @@ focus_tree = {
 		cost = 1
 		available = {
 			is_subject = no
-			has_global_flag = rhineland_remilitarized
 		}
 		bypass = {
 		}
@@ -8325,6 +8324,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			set_global_flag = GER_Leningrad_win
 		}
 	}
 
@@ -8349,6 +8349,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			set_global_flag = GER_Moscow_win
 		}
 	}
 
@@ -8373,6 +8374,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			set_global_flag = GER_Stalingrad_win
 		}
 	}
 
@@ -8400,7 +8402,7 @@ focus_tree = {
 		
 		completion_reward = {
 			SOV = {
-				country_event = { id = GER_sov days = 1 }
+				country_event = { id = GER_SOV_ultimatom.1 days = 1 }
 			}
 		}
 	}

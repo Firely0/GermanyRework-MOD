@@ -1098,8 +1098,18 @@ ideas = {
 			}
 
 			on_remove = {
-				clr_global_flag = GER_Operation_Barbarossa_running
-				set_global_flag = GER_Operation_Barbarossa_Failed
+				if = {
+					limit = {
+						has_global_flag = GER_Leningrad_win
+						has_global_flag = GER_Moscow_win
+						has_global_flag = GER_Stalingrad_win
+					}
+					add_ideas = GER_barbarossa
+				}
+				else = {
+					clr_global_flag = GER_Operation_Barbarossa_running
+					set_global_flag = GER_Operation_Barbarossa_Failed
+				}
 			}
 
 		}

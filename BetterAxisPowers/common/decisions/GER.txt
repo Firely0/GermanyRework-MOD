@@ -36,19 +36,20 @@ GER_Operation_Barbarossa_V = {
 		cancel_effect = {
 		}
 	
-		timeout_effect = { #MISSION FAILS
+		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
 		}
 	
-		complete_effect = { #MISSION SUCCEEDS
-			if = {
-				limit = {
-					triggers = {
-						controls_province = 3151
-					}
+		complete_effect = { 
+			complete_national_focus = GER_Leningrad_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.05
 				}
-				complete_national_focus = GER_Leningrad_mission
+				add_war_support = -0.05
+				add_stability = -0.05
 			}
 		}
 	}
@@ -61,7 +62,7 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		available = { #GOAL
-			217 = { is_controlled_by_ROOT_or_ally = yes }
+			219 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	
 		activation = {
@@ -81,7 +82,7 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		cancel_if_not_visible = yes
-		is_good = no #Tooltip purposes
+		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
 		days_mission_timeout = GER_Operation_Barb_time
@@ -89,20 +90,13 @@ GER_Operation_Barbarossa_V = {
 		cancel_effect = {
 		}
 	
-		timeout_effect = { #MISSION FAILS
+		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
 		}
 	
-		complete_effect = { #MISSION SUCCEEDS
-			if = {
-				limit = {
-					triggers = {
-						controls_province = 6380
-					}
-				}
-				complete_national_focus = GER_Leningrad_mission
-			}
+		complete_effect = { 
+			complete_national_focus = GER_Moscow_mission
 		}
 	}
 	
@@ -113,7 +107,7 @@ GER_Operation_Barbarossa_V = {
 			tag = GER
 		}
 	
-		available = { #GOAL
+		available = {
 			217 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	
@@ -134,7 +128,7 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		cancel_if_not_visible = yes
-		is_good = no #Tooltip purposes
+		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
 		days_mission_timeout = GER_Operation_Barb_time
@@ -142,24 +136,15 @@ GER_Operation_Barbarossa_V = {
 		cancel_effect = {
 		}
 	
-		timeout_effect = { #MISSION FAILS
+		timeout_effect = {
 			hidden_effect = {
 				add_stability = -0.05
 				add_war_support = -0.05
 			}
 		}
 	
-		complete_effect = { #MISSION SUCCEEDS
-			hidden_effect = {
-				if = {
-					limit = {
-						triggers = {
-							controls_province = 3529
-						}
-					}
-					complete_national_focus = GER_Leningrad_mission
-				}
-			}
+		complete_effect = { 
+		 complete_national_focus = GER_Stalingrad_mission
 		}
 	}
 }

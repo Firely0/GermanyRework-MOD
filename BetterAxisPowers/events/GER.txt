@@ -14,6 +14,7 @@ add_namespace = GER_FIN_Support
 add_namespace = GER_FIN_War_Sov
 add_namespace = GER_FIN_lands
 add_namespace = GER_fate_of_andrey
+add_namespace = GER_SOV_ultimatom
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1928,6 +1929,32 @@ country_event = {
 
 country_event = {
 	id = GER_fate_of_andrey.1
+	title = "Fate of Andrey Vlasov"
+	desc = "What Should We Do With Andrey Vlasov?"
+	picture = GFX_report_event_german_italian_pact
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Any ally against Bolshevism is welcome."
+		d75 = {
+			SOV_andrey_vlasov = {
+				set_nationality = GER
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Leave his Fate to SS"
+		retire_character = SOV_andrey_vlasov
+	}
+} 
+
+country_event = {
+	id = GER_SOV_ultimatom.1
 	title = "Fate of Andrey Vlasov"
 	desc = "What Should We Do With Andrey Vlasov?"
 	picture = GFX_report_event_german_italian_pact
