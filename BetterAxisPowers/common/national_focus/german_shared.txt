@@ -3048,6 +3048,7 @@
 			}
 			custom_effect_tooltip = available_political_advisor 
 			show_ideas_tooltip = erwin_rommel
+			custom_effect_tooltip = GER_tank_warfare_modify_tt
 		}
 	}
 
@@ -3066,6 +3067,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_Lighting_Strike_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 
@@ -3240,26 +3242,27 @@
 					limit = {
 						has_completed_focus = GER_tank_warfare
 					}
+					custom_effect_tooltip = GER_Staff_tank_modify_tt
 					set_variable = { GER_max_command_power = 20 }
 					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 					set_variable = { GER_minimum_training_level = 0 }
-					set_variable = { GER_minimum_training_level = 0.05 }
 				}
 				if = {
 					limit = {
 						has_completed_focus = GER_Battle_Plan
 					}
+					custom_effect_tooltip = GER_staff_modify_tt
 					set_variable = {
-						GER_max_command_power = -15
+						GER_max_command_power = 15
 					}
 					set_variable = {
-						GER_max_planning_speed = 0
+						GER_max_planning_speed = 0.05
 					}
 					set_variable = {
 						GER_cas_damage_reduction = 0.05
 					}
 					set_variable = {
-						GER_land_doctrine_cost_factor = 0.05
+						GER_land_doctrine_cost_factor = -0.05
 					}
 					set_variable = { GER_minimum_training_level = 0.05 }
 				}
@@ -3281,6 +3284,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_better_supply_modify_tt
 			hidden_effect = {
 				set_variable = {
 					GER_truck_attrition_factor = -0.1
@@ -3310,6 +3314,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_War_Plan_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
@@ -3343,7 +3348,8 @@
 		}
 
 		available_if_capitulated = yes
-		completion_reward = { 
+		completion_reward = {
+			custom_effect_tooltip = GER_Cheap_EQ_modify_tt 
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 			}
@@ -3389,6 +3395,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_Cheep_SUP_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 			}
@@ -3438,6 +3445,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_Battle_Plan_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
