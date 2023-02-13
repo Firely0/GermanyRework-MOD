@@ -13,6 +13,8 @@ add_namespace = GER_norway_problem
 add_namespace = GER_FIN_Support
 add_namespace = GER_FIN_War_Sov
 add_namespace = GER_FIN_lands
+add_namespace = GER_fate_of_andrey
+
 country_event = {
 	id = ger_request_qingdao.1
 	title = "Demand Qingdao"
@@ -1921,5 +1923,31 @@ country_event = {
 		}
 		name = "Ethiopia"
 		set_global_flag = GER_ETH_SIDE_PLAN
+	}
+}
+
+country_event = {
+	id = GER_fate_of_andrey.1
+	title = "Fate of Andrey Vlasov"
+	desc = "What Should We Do With Andrey Vlasov?"
+	picture = GFX_report_event_german_italian_pact
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Any ally against Bolshevism is welcome."
+		d75 = {
+			SOV_andrey_vlasov = {
+				set_nationality = GER
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Leave his Fate to SS"
+		retire_character = SOV_andrey_vlasov
 	}
 }

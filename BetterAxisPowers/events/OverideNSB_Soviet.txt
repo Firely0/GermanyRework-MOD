@@ -1,0 +1,43 @@
+add_namespace = NSB_soviet_fascist_tsarist
+
+# Event for GER: Vlasov captured/collaborates
+country_event = {
+	id = NSB_soviet_fascist_tsarist.32
+	title = NSB_soviet_fascist_tsarist.32.t
+	desc = NSB_soviet_fascist_tsarist.32.desc
+	picture = GFX_report_event_soviet_soldiers
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = GER
+		has_war_with = SOV
+		SOV = {
+			has_government = communism
+			has_country_leader = { character = SOV_iosif_stalin ruling_only = yes }
+			surrender_progress > 0.25
+		}
+		has_dlc = "No Step Back"
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	option = {
+		name = "We Cant Trust him."
+		hidden_effect = {
+			SOV = {
+				SOV_andrey_vlasov = {
+					set_nationality = d75
+				}
+			}
+		}
+		SOV = {
+			clr_country_flag = vlasov_owner_flag
+			country_event = { id = NSB_soviet_fascist_tsarist.33 hours = 12 }
+		}
+		set_country_flag = vlasov_owner_flag
+		set_country_flag = vlasov_in_ss_flag
+	}
+}

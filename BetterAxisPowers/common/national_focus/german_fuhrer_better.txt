@@ -6166,7 +6166,6 @@ focus_tree = {
 	focus = {
 		id = GER_africa_front_war_logistics
 		icon = GFX_focus_generic_africa_infrastructure
-		text = GetAfricacorpsfrontlogistics
 		dynamic = yes
 		prerequisite = { focus = GER_Set_HQ_in_front }
 
@@ -8301,7 +8300,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
 		}
 	}
 
@@ -8310,9 +8308,6 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
 		relative_position_id = GER_foregin_affairs
-		allow_branch = {
-			always = yes #has_completed_focus = GER_ussr_war_goalV
-		}
 		x = -9
 		y = 5
 		cost = 3
@@ -8322,8 +8317,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = SOV
-			195 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 
 		ai_will_do = {
@@ -8331,18 +8324,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
 		}
 	}
 
 	focus = {
 		id = GER_Moscow_mission
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { focus = GER_Attack_SOV }
 		relative_position_id = GER_foregin_affairs
-		allow_branch = {
-			always = yes #has_completed_focus = GER_ussr_war_goalV
-		}
 		x = -6
 		y = 5
 		cost = 3
@@ -8352,10 +8341,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = SOV
-			219 = {
-				is_controlled_by_ROOT_or_ally = yes
-			}
 		}
 
 		ai_will_do = {
@@ -8363,7 +8348,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
 		}
 	}
 
@@ -8372,9 +8356,6 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
 		relative_position_id = GER_foregin_affairs
-		allow_branch = {
-			always = yes #has_completed_focus = GER_ussr_war_goalV
-		}
 		x = -3
 		y = 5
 		cost = 3
@@ -8384,10 +8365,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = SOV
-			217 = {
-				is_controlled_by_ROOT_or_ally = yes
-			}
 		}
 
 		ai_will_do = {
@@ -8395,7 +8372,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
 		}
 	}
 
@@ -8434,9 +8410,6 @@ focus_tree = {
 		prerequisite = { focus = GER_Moscow_mission }
 		prerequisite = { focus = GER_Stalingrad_mission }
 		relative_position_id = GER_foregin_affairs
-		allow_branch = {
-			always = yes #has_completed_focus = GER_ussr_war_goalV
-		}
 		x = -6
 		y = 6
 		cost = 3
@@ -8650,7 +8623,7 @@ focus = {
 		id = GER_Local_Police_force_in_soviet
 		icon = GFX_focus_generic_self_management
 		available = {
-			always = no
+			has_completed_focus = GER_SS_A
 		}
 		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
 		prerequisite = { focus = GER_Sleep_Well_SOV }
@@ -8670,37 +8643,35 @@ focus = {
 
 	focus = {
 		id = GER_Russia_Glory_Army
-		icon = GFX_focus_generic_military_mission
-		text = GER_Working_on
+		icon = GFX_goal_andreyvlasov
 		available = {
-			always = no
+			has_country_flag = vlasov_in_ss_flag
 		}
 		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
 		prerequisite = { focus = GER_Sleep_Well_SOV }
 		x = -4
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
+			country_event = { id = ger_fate_of_andrey.1 days = 1 }
 		}
 	}
 
 	focus = {
 		id = GER_tring_again_Russia
-		icon = GFX_focus_generic_military_mission
-		text = GER_Working_on
+		icon = GFX_focus_SOV_panslavic_nationalism
 		available = {
 			SOV = {
-				anarchism < 0.05
+				neutrality < 0.1
 				NOT = { has_government = neutrality }
 			}
-			always = no
+			NOT = { has_country_flag = vlasov_in_ss_flag }
 		}
-		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
 		prerequisite = { focus = GER_Russia_Glory_Army }
 		x = -3
 		y = 2
@@ -8713,25 +8684,25 @@ focus = {
 		completion_reward = {
 			SOV = {
 				add_popularity = {
-					ideology = anarchism 
+					ideology = neutrality 
 					popularity = 0.15
 				}
 			}
 			if = {
 				limit = {
 					SOV = {
-						anarchism < 0.3
+						neutrality < 0.3
 					}
 				}
 				add_popularity = {
-					ideology = anarchism 
+					ideology = neutrality 
 					popularity = 0.2
 				}
 			}
 			if = {
 				limit = {
 					SOV = {
-						anarchism < 0.45
+						neutrality < 0.45
 					}
 				}
 				SOV = {
@@ -8743,22 +8714,66 @@ focus = {
 
 	focus = {
 		id = GER_Allow_Andrey_Vlasov
-		icon = GFX_focus_generic_military_mission
-		text = GER_Working_on
+		icon = GFX_goal_andreyvlasovinfield
 		available = {
-			always = no
+			NOT = { has_country_flag = vlasov_in_ss_flag }
 		}
-		allow_branch = { always = yes } # has_completed_focus = GER_ussr_war_goalV
 		prerequisite = { focus = GER_Russia_Glory_Army }
 		x = -5
 		y = 2
 		relative_position_id = GER_Sleep_Well_SOV
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
+			division_template = {
+				name = "Russische Freiwilligendivision"
+				template_counter = 4
+				is_locked = yes
+				division_names_group = GER_Inf_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = SOV
+				}
+				create_unit = {
+					division = "name = \"600. (russ.) Infanterie-Division\" division_template = \"Russische Freiwilligendivision\" start_experience_factor = 0.3"
+					owner = GER
+				}
+				create_unit = {
+					division = "name = \"650. (russ.) Infanterie-Division\" division_template = \"Russische Freiwilligendivision\" start_experience_factor = 0.3"
+					owner = GER
+				}
+				create_unit = {
+					division = "name = \"700. (russ.) Infanterie-Division\" division_template = \"Russische Freiwilligendivision\" start_experience_factor = 0.3"
+					owner = GER
+				}
+				create_unit = {
+					division = "name = \"800. (russ.) Infanterie-Division\" division_template = \"Russische Freiwilligendivision\" start_experience_factor = 0.3"
+					owner = GER
+				}
+				create_unit = {
+					division = "name = \"900. (russ.) Infanterie-Division\" division_template = \"Russische Freiwilligendivision\" start_experience_factor = 0.3"
+					owner = GER
+				}
+			}
 		}
 	}
 
@@ -8926,6 +8941,7 @@ focus = {
 		}	
 		completion_reward = {
 			set_country_flag = GER_HIDE_Dynamic_SOV
+			complete_national_focus = GER_Attack_SOV
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {
