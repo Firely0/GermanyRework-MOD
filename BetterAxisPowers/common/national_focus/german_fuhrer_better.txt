@@ -32,7 +32,7 @@ focus_tree = {
 		id = GER_rhineland_ab
 		text = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
-		x = 100
+		x = 60
 		y = 0
 		cost = 5
 		available = {
@@ -64,7 +64,7 @@ focus_tree = {
 			}		
 		}
 	}
-	
+
 	focus = {
 		id = GER_establish_abwehr
 		icon = GFX_focus_generic_secret_service_agency
@@ -6643,9 +6643,9 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = { has_war_with = JAP }
+			has_war_with = JAP
 			JAP = {
-				has_government = root
+				NOT = { has_government = root }
 			}
 		}
 	}
@@ -8272,7 +8272,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			always = no
 		}
 
 		bypass = {
@@ -8908,6 +8907,7 @@ focus = {
 			}
 		}	
 		completion_reward = {
+			complete_national_focus = GER_Attack_SOV
 			mark_focus_tree_layout_dirty = yes
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
