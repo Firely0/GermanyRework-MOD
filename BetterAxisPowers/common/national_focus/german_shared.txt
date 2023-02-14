@@ -114,6 +114,7 @@
 		id = GER_Graf_Zeppelin
 		icon = GFX_goal_generic_navy_carrier
 		relative_position_id = GER_carrier_war
+		mutually_exclusive = { focus = GER_Convert_Civilian_Ships }
 		prerequisite = { focus = GER_carrier_war }
 		x = 1
 		y = 1
@@ -2922,7 +2923,7 @@
 		id = GER_Operational_Integratiy
 		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = { focus = GER_air_innovation_a }
-		mutually_exclusive = { focus = GER_Strategic_Des }
+		mutually_exclusive = { focus = GER_Strategic_Des focus = GER_CAS }
 		x = 4
 		y = 1
 		relative_position_id = GER_air_innovation_a

@@ -32,7 +32,6 @@ focus_tree = {
 		id = GER_rhineland_ab
 		text = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
-		#prerequisite = { }
 		x = 100
 		y = 0
 		cost = 5
@@ -8385,7 +8384,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			SOV = {
+			GER = {
 				country_event = { id = GER_SOV_ultimatom.1 days = 1 }
 			}
 		}
