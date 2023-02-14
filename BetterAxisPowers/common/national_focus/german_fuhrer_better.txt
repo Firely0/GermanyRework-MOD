@@ -65,46 +65,7 @@ focus_tree = {
 			}		
 		}
 	}
-
-	focus = {
-		id = GER_Deposite_adolf_hitler
-		text = GER_rhineland
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = GER_rhineland_ab }
-		allow_branch = { has_global_flag = GER_rhineland_chlangeced }
-		x = 10
-		y = 1
-		cost = 5
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			42 = { is_demilitarized_zone = no }
-			51 = { is_demilitarized_zone = no }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			set_global_flag = rhineland_remilitarized
-			custom_effect_tooltip = GER_rhineland_ultimatum
-			add_country_leader_trait = DealBraker
-			add_political_power = 120
-			army_experience = 5
-			add_named_threat = { threat = 5 name = GER_rhineland }
-			if = {
-				limit = { FRA = { is_subject = no } }
-				FRA = {
-					country_event = { id = germany.60 }
-					custom_effect_tooltip = may_provoke_hostility
-				}
-			}		
-		}
-	}
-
+	
 	focus = {
 		id = GER_establish_abwehr
 		icon = GFX_focus_generic_secret_service_agency
@@ -258,9 +219,9 @@ focus_tree = {
 		relative_position_id = GER_Asian_Policy
 		cost = 10
 		ai_will_do = {
-			factor = 0.5
+			factor = 0
 			modifier = {
-				is_in_faction_with = JAP
+				is_in_faction_with = CHI
 				factor = 0
 			}
 		}
@@ -6661,10 +6622,32 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			JAP = {
+				country_event = { id = GER_jap_coal_trade.1 hours = 6 }
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = needs_approval
+				JAP = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 2
+						category = { 	
+						 cat_synth_rubber
+						 cat_synth_oil 
+					    }
+					}
+				}
+				GER = {
+					custom_effect_tooltip = GER_JAP_Coal_Search
+				}
+			}
 		}
 
 		bypass = {
-			always = yes
+			NOT = { has_war_with = JAP }
+			JAP = {
+				has_government = root
+			}
 		}
 	}
 
@@ -8290,6 +8273,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			always = no
 		}
 
 		bypass = {
@@ -8684,8 +8668,9 @@ focus = {
 						neutrality > 0.45
 					}
 				}
-				SOV = {
-					country_event = { id = GER_sov days = 1 }
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.2
 				}
 			}
 		}
@@ -8924,7 +8909,6 @@ focus = {
 			}
 		}	
 		completion_reward = {
-			complete_national_focus = GER_Attack_SOV
 			mark_focus_tree_layout_dirty = yes
 			IF = {
 				limit = { SOV = { has_civil_war = no } }

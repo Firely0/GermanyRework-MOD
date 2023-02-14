@@ -1938,9 +1938,10 @@ country_event = {
 			factor = 100
 		}
 		name = "Any ally against Bolshevism is welcome."
-		d75 = {
-			SOV_andrey_vlasov = {
-				set_nationality = GER
+		recruit_character = SOV_andrey_vlasov
+		SOV_andrey_vlasov = {
+			add_trait = {
+				trait = brilliant_strategist
 			}
 		}
 	}
@@ -1951,30 +1952,75 @@ country_event = {
 		name = "Leave his Fate to SS"
 		retire_character = SOV_andrey_vlasov
 	}
-} 
+}
 
 country_event = {
 	id = GER_SOV_ultimatom.1
-	title = "Fate of Andrey Vlasov"
-	desc = "What Should We Do With Andrey Vlasov?"
-	picture = GFX_report_event_german_italian_pact
+	title = "Ultimatom For Soviet Union!"
+	desc = "After Reaching our Goals We Must Decide Fate of Soviet Union."
+	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
-	option = {
+
+	option = { #German
 		ai_chance = {
 			factor = 100
 		}
-		name = "Any ally against Bolshevism is welcome."
-		d75 = {
-			SOV_andrey_vlasov = {
-				set_nationality = GER
-			}
-		}
+		name = "Our Lands"
+
+		country_event = GER_SOV_ultimatom.11
+		set_country_flag = GER_SOV_Demanded
+
 	}
-	option = {
+
+	option = { #Japan
 		ai_chance = {
 			factor = 0
 		}
-		name = "Leave his Fate to SS"
-		retire_character = SOV_andrey_vlasov
+		name = "Japan Always Wanted Their Land in Soviet`s"
+
+		country_event = GER_SOV_ultimatom.2
+		set_country_flag = GER_SOV_JAP_Demanded
+
+		trigger = {
+			has_completed_focus = GER_japan_friend_v
+		}
+	}	
+
+	option = { #Finland
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Keep our Promise"
+
+		country_event = GER_SOV_ultimatom.3
+		set_country_flag = GER_SOV_FIN_Demanded
+
+		trigger = {
+			FIN = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			has_completed_focus = GER_FIN_granted_lands
+			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
+		}
 	}
+
+	option = { #Romania
+		ai_chance = {
+			factor = 0
+		}
+		name = "Maybe Romania Wants Their Pre-War Borders "
+
+		trigger = {
+			ROM = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
+		}
+
+		country_event = GER_SOV_ultimatom.4
+		set_country_flag = GER_SOV_ROM_Demanded
+	}
+	
 }
