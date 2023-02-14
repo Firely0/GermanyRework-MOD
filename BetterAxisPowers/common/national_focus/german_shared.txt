@@ -3723,35 +3723,3 @@
 			}
 		}
 	}
-
-	#shared_focus = {
-		id = GER_Supremercy_in_skyies
-		icon = GFX_goal_generic_air_fighter2 
-		prerequisite = { focus = GER_air_innovation_2_a }
-		x = 1
-		y = 1
-		relative_position_id = GER_rocketry_focus_a
-		cost = 10
-		ai_will_do = {
-			factor = 0
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			create_equipment_variant = {
-				name = "Me 262 Schwalbe"
-				type = modern_small_airframe
-				allow_without_tech = yes
-				modules = {
-					fixed_main_weapon_slot = aircraft_cannon_2_2x
-					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_2x
-					fixed_auxiliary_weapon_slot_2 = aircraft_cannon_1_2x
-					engine_type_slot = jet_engine_2x
-					special_type_slot_1 = drop_tanks
-					special_type_slot_2 = fuel_tanks_small
-				}
-				icon = "GFX_GER_jet_plane_1_medium"
-			}
-		}
-	#}
