@@ -8736,8 +8736,9 @@ focus = {
 						neutrality > 0.45
 					}
 				}
-				SOV = {
-					country_event = { id = GER_sov days = 1 }
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.2
 				}
 			}
 		}

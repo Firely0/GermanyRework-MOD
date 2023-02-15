@@ -2227,9 +2227,9 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		name = "Japan Always Wanted Their Land in Soviet`s"
+		name = "Japan Always Wanted Their Land in Soviet"
 
-		country_event = GER_SOV_ultimatom.2
+		country_event = GER_SOV_ultimatom.1
 		set_country_flag = GER_SOV_JAP_Demanded
 
 		trigger = {
@@ -2243,7 +2243,7 @@ country_event = {
 		}
 		name = "We Must Keep our Promise"
 
-		country_event = GER_SOV_ultimatom.3
+		country_event = GER_SOV_ultimatom.1
 		set_country_flag = GER_SOV_FIN_Demanded
 
 		trigger = {
@@ -2270,8 +2270,186 @@ country_event = {
 			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
 		}
 
-		country_event = GER_SOV_ultimatom.4
+		country_event = GER_SOV_ultimatom.1
 		set_country_flag = GER_SOV_ROM_Demanded
 	}
+
+	option = { #Turkey
+		ai_chance = {
+			factor = 0
+		}
+		name = "Let's Give Turkey's Requests."
+
+		trigger = {
+			TUR = {
+				OR = {
+					is_in_faction_with = GER
+					is_puppet_of = ROOT
+				}
+				has_war_with = SOV
+			}
+			NOT = { has_country_flag = GER_SOV_TUR_Demanded }
+		}
+
+		country_event = GER_SOV_ultimatom.1
+		set_country_flag = GER_SOV_ROM_Demanded
+	}
+
+	option = { #END
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Should Sent our Demands."
+
+		trigger = {
+		}
+
+		country_event = GER_SOV_ultimatom.2
+	}
 	
+}
+
+country_event = {
+	id = GER_SOV_ultimatom.2
+	title = "Peace Deal From German Reich!"
+	desc = ""
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+
+	option = { 
+		ai_chance = {
+			base = 40
+			modifier = {
+				NOT = { has_completed_focus = SOV_desperate_measures }
+				factor = 100
+			}
+			modifier = {
+				surrender_progress = 0.40
+				factor = 60
+			}
+		}
+		name = "Fine, "
+
+		GER = {
+			country_event = { id = GER_SOV_ultimatom.3 hours = 12 }
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "No! We Keep Our Homeland!"
+
+		GER = {
+			country_event = { id = GER_SOV_ultimatom.4 hours = 12 }
+		}
+	}	
+}
+
+country_event = {
+	id = GER_SOV_ultimatom.3
+	title = "Soviet Union Accepted our Peace Deal"
+	desc = ""
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+
+	option = { 
+		ai_chance = {
+			base = 100
+		}
+		name = "Good"
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_JAP_Demanded
+				408 = { owner = SOV }
+				409 = { owner = SOV }
+				655 = { owner = SOV }
+			}
+			JAP = {
+				transfer_state = 408
+				transfer_state = 409
+				transfer_state = 655
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_FIN_Demanded
+				213 = { owner = SOV }
+				215 = { owner = SOV }
+				216 = { owner = SOV }
+				146 = { owner = SOV }
+				147 = { owner = SOV }
+				722 = { owner = SOV }
+			}
+			FIN = {
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 216
+				transfer_state = 146
+				transfer_state = 147
+				transfer_state = 722
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_ROM_Demanded
+				80 = { owner = SOV }
+				78 = { owner = SOV }
+				766 = { owner = SOV }
+			}
+			ROM = {
+				transfer_state = 80
+				transfer_state = 78
+				transfer_state = 766
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_TUR_Demanded
+				231 = { owner = SOV }
+				229 = { owner = SOV }
+				230 = { owner = SOV }
+			}
+			TUR = {
+				transfer_state = 231
+				transfer_state = 229
+				transfer_state = 230
+			}
+		}
+
+		if = {
+			limit = {
+				any_controlled_state = {
+					is_core_of = SOV
+					is_owned_by = SOV
+				}
+			}
+			add_claim_by = GER
+		}
+
+		if = {
+			limit = {
+				any_controlled_state = {
+					is_owned_by = SOV
+					is_claimed_by = GER
+				}
+			}
+			transfer_state_to = GER
+		}
+
+		GER = {
+			start_peace_conference = {
+				tag = SOV
+				score_factor = 0
+				message = my_peace_tt
+			}
+		}
+		
+	}	
 }
