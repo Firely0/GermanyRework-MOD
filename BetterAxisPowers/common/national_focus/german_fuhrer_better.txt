@@ -8296,7 +8296,10 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = GER_auto_our_operation_start_tt
+				always = no
+			}
 		}
 
 		bypass = {
@@ -8442,7 +8445,12 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = GER_req_our_advance_tt
+				has_global_flag = GER_Leningrad_win
+				has_global_flag = GER_Moscow_win
+				has_global_flag = GER_Stalingrad_win
+			}
 		}
 
 		bypass = {
@@ -8714,9 +8722,11 @@ focus = {
 						neutrality < 0.1
 					}
 				}
-				add_popularity = {
-					ideology = neutrality 
-					popularity = 0.05
+				SOV = {
+					add_popularity = {
+						ideology = neutrality 
+						popularity = 0.05
+					}
 				}
 			}
 			if = {
@@ -8726,9 +8736,11 @@ focus = {
 						neutrality > 0.45
 					}
 				}
-				add_popularity = {
-					ideology = neutrality 
-					popularity = 0.2
+				SOV = {
+					add_popularity = {
+						ideology = neutrality 
+						popularity = 0.2
+					}
 				}
 			}
 			if = {
@@ -8737,9 +8749,11 @@ focus = {
 						neutrality > 0.45
 					}
 				}
-				add_popularity = {
-					ideology = neutrality 
-					popularity = 0.2
+				SOV = {
+					add_popularity = {
+						ideology = neutrality 
+						popularity = 0.2
+					}
 				}
 			}
 		}
