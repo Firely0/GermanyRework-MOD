@@ -990,5 +990,108 @@ GER_upgrade_wehrmacht_effect = {
 			}
 		}
 	}
+
+	GER_Lands_in_Soviet = {
+		every_state = {
+			limit = { 
+				has_state_flag = GER_Claim_lands
+				is_controlled_by = GER
+			} 
+			transfer_state_to = GER
+		}
+	}
+
+	JAP_Lands_in_Soviet = {
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_JAP_Demanded
+				408 = { is_owned_by = SOV }
+				409 = { is_owned_by = SOV }
+				655 = { is_owned_by = SOV }
+			}
+			JAP = {
+				transfer_state = 408
+				transfer_state = 409
+				transfer_state = 655
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = GER_Fate_of_SOV
+				}
+			}
+		}
+	}
+
+	ROM_Lands_in_Soviet = {
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_ROM_Demanded
+				80 = { is_owned_by = SOV }
+				78 = { is_owned_by = SOV }
+				766 = { is_owned_by = SOV }
+			}
+			ROM = {
+				transfer_state = 80
+				transfer_state = 78
+				transfer_state = 766
+			}
+			ROM = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = GER_Fate_of_SOV
+				}
+			}
+		}
+	}
+
+	FIN_Lands_in_Soviet = {
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_FIN_Demanded
+				146 = { is_owned_by = SOV }
+				147 = { is_owned_by = SOV }
+				722 = { is_owned_by = SOV }
+			}
+			FIN = {
+				transfer_state = 146
+				transfer_state = 147
+				transfer_state = 722
+			}
+			FIN = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = GER_Fate_of_SOV
+				}
+			}
+		}
+	}
+
+	TUR_Lands_in_Soviet = {
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_TUR_Demanded
+				231 = { is_owned_by = SOV }
+				229 = { is_owned_by = SOV }
+				230 = { is_owned_by = SOV }
+			}
+			TUR = {
+				transfer_state = 231
+				transfer_state = 229
+				transfer_state = 230
+			}
+			TUR = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = GER_Fate_of_SOV
+				}
+			}
+		}
+	}
+
+
+
+
+
 	
 		

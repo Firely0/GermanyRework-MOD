@@ -8453,6 +8453,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = GER_Keep_occpy_land
 			GER = {
 				country_event = { id = GER_SOV_ultimatom.1 days = 1 }
 			}

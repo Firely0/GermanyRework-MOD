@@ -240,6 +240,12 @@ on_actions = {
 				hidden_effect = {
 					set_global_flag = GER_Operation_Barbarossa_running
 					complete_national_focus = GER_Attack_SOV
+					every_state = {
+						limit = { 
+							is_owned_and_controlled_by = SOV 
+						} 
+						set_state_flag = GER_Claim_lands
+					}
 					if = {
 						limit = {
 							GER = {

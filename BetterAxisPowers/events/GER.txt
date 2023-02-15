@@ -2218,7 +2218,7 @@ country_event = {
 		}
 		name = "Our Lands"
 
-		country_event = GER_SOV_ultimatom.11
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_Demanded
 
 	}
@@ -2229,7 +2229,7 @@ country_event = {
 		}
 		name = "Japan Always Wanted Their Land in Soviet"
 
-		country_event = GER_SOV_ultimatom.1
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_JAP_Demanded
 
 		trigger = {
@@ -2243,7 +2243,7 @@ country_event = {
 		}
 		name = "We Must Keep our Promise"
 
-		country_event = GER_SOV_ultimatom.1
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_FIN_Demanded
 
 		trigger = {
@@ -2270,7 +2270,7 @@ country_event = {
 			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
 		}
 
-		country_event = GER_SOV_ultimatom.1
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_ROM_Demanded
 	}
 
@@ -2304,7 +2304,10 @@ country_event = {
 		trigger = {
 		}
 
-		country_event = GER_SOV_ultimatom.2
+		SOV = {
+			country_event = { id = GER_SOV_ultimatom.2 hours = 3 } 
+		}
+		
 	}
 	
 }
@@ -2364,91 +2367,60 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = GER_SOV_JAP_Demanded
-				408 = { owner = SOV }
-				409 = { owner = SOV }
-				655 = { owner = SOV }
-			}
-			JAP = {
-				transfer_state = 408
-				transfer_state = 409
-				transfer_state = 655
-			}
-		}
-
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_FIN_Demanded
-				213 = { owner = SOV }
-				215 = { owner = SOV }
-				216 = { owner = SOV }
-				146 = { owner = SOV }
-				147 = { owner = SOV }
-				722 = { owner = SOV }
-			}
-			FIN = {
-				transfer_state = 213
-				transfer_state = 215
-				transfer_state = 216
-				transfer_state = 146
-				transfer_state = 147
-				transfer_state = 722
-			}
-		}
-
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_ROM_Demanded
-				80 = { owner = SOV }
-				78 = { owner = SOV }
-				766 = { owner = SOV }
-			}
-			ROM = {
-				transfer_state = 80
-				transfer_state = 78
-				transfer_state = 766
-			}
-		}
-
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_TUR_Demanded
-				231 = { owner = SOV }
-				229 = { owner = SOV }
-				230 = { owner = SOV }
-			}
-			TUR = {
-				transfer_state = 231
-				transfer_state = 229
-				transfer_state = 230
-			}
-		}
-
-		if = {
-			limit = {
-				any_controlled_state = {
-					is_core_of = SOV
-					is_owned_by = SOV
+				JAP = {
+					NOT = { has_war_with = GER }
 				}
 			}
-			add_claim_by = GER
+			JAP_Lands_in_Soviet = yes
 		}
 
 		if = {
 			limit = {
-				any_controlled_state = {
-					is_owned_by = SOV
-					is_claimed_by = GER
+				FIN = {
+					is_in_faction_with = GER
+					has_war_with = SOV
 				}
 			}
-			transfer_state_to = GER
+			FIN_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				ROM = {
+					is_in_faction_with = GER
+					has_war_with = SOV
+				}
+			}
+			ROM_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				TUR = {
+					is_in_faction_with = GER
+					has_war_with = SOV
+				}
+			}
+			TUR_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_Demanded
+			}
+			GER_Lands_in_Soviet = yes
 		}
 
 		GER = {
 			start_peace_conference = {
 				tag = SOV
 				score_factor = 0
-				message = my_peace_tt
+				message = ger_sov_treaty_in_berlin
 			}
+		}
+
+		hidden_effect = {
+			add_threat = 50
 		}
 		
 	}	
