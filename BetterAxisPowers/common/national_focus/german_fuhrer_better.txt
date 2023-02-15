@@ -8291,7 +8291,10 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = GER_auto_our_advance_tt
+				always = no
+			}
 		}
 
 		bypass = {
@@ -8328,7 +8331,10 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = GER_auto_our_advance_tt
+				always = no
+			}
 		}
 
 		bypass = {
@@ -8365,7 +8371,10 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = GER_auto_our_advance_tt
+				always = no
+			}
 		}
 
 		bypass = {
