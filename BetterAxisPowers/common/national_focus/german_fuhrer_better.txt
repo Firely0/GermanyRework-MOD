@@ -6614,9 +6614,11 @@ focus_tree = {
 				limit = {
 					NOT = { has_war_with = GER }
 				}
-				add_ideas = Japan_Side_Intel_build
+				add_ideas = Japan_Side_Intel
 			}
 		}
+
+		custom_effect_tooltip = GER_naval_intel_tt
 		
 		set_variable = {
 			GER_navy_intel_factor = 0.1
@@ -6690,16 +6692,18 @@ focus_tree = {
 		}	
 		completion_reward = {
 		if = {
-		limit = {
-		  NOT = { JAP = { has_war_with = GER } }
-        }
-		JAP = {
-		  swap_ideas = {
-		   remove_idea = Japan_Side_Intel
-		   add_idea = Japan_Side_Intel_build
-		   }
+		 limit = {
+		   NOT = { JAP = { has_war_with = GER } }
+          }
+		 JAP = {
+			swap_ideas = {
+				remove_idea = Japan_Side_Intel
+				add_idea = Japan_Side_Intel_build
+			}
+		 }
 		}
-		} 
+		
+		custom_effect_tooltip = GER_naval_expand_tt
 
 		set_variable = {
 			GER_production_speed_dockyard_factor = 0.1
