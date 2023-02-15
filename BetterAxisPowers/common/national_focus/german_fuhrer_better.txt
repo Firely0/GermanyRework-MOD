@@ -4603,10 +4603,8 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
-		text = GER_Working_on
 		available = {
-			FRA = {
-				has_government = fascism
+			event_target:vichy_france = {
 				controls_state = 677
 				controls_state = 680
 				controls_state = 554
@@ -4626,15 +4624,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_other_country = {
-				limit = {
-					original_tag = FRA
-					has_government = fascism
-					NOT = { has_war = no }
-				}
-				event_target:vichy_france = {
-					country_event = { id = GER_VIC_Syria.1 hours = 12 }
-				}
+			event_target:vichy_france = {
+				country_event = { id = GER_VIC_Syria.1 hours = 12 }
 			}
 		}
 	}
@@ -4644,9 +4635,10 @@ focus_tree = {
 		icon = GFX_focus_TUR_support_the_golden_square
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
-		text = GER_Working_on
 		available = {
-			always = no
+			IRQ = {
+				NOT = { has_war_with = root }
+			}
 		}
 
 		x = 9
@@ -4671,6 +4663,15 @@ focus_tree = {
 					add_timed_idea = { idea = fascist_influence days = 1095 }
 				}
 				country_event = { id = generic.1 }
+				if = {
+					limit = {
+						GER = {
+							has_government = neutrality
+						}
+					}
+					add_timed_idea = { idea = neutrality_influence days = 1095 }
+				}
+				country_event = { id = generic.1 }
 			}
 			IRQ = { country_event = { id = GER_offer_support_irq.1 hours = 6 } }
 		}
@@ -4680,7 +4681,6 @@ focus_tree = {
 		id = GER_Support_golden_square
 		icon = GFX_goal_generic_military_deal
 		relative_position_id = GER_Axis_Powers
-		text = GER_Working_on
 		prerequisite = { focus = GER_Prepare_for_golden_square }
 		mutually_exclusive = {
 			focus = GER_interve_golden_square
@@ -4690,6 +4690,8 @@ focus_tree = {
 			IRQ = {
 				is_in_faction = no
 				NOT = { has_government = fascism }
+				NOT = { is_puppet = yes }
+				is_ai = yes
 			}
 		}
 
@@ -4705,7 +4707,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			IRQ = { country_event = { id = GER days = 1 } }
+			IRQ = { 
+				start_civil_war = {
+					ruling_party = fascism
+					ideology = ROOT
+					size = 0.5
+				}
+			}
 		}
 	}
 
@@ -4713,7 +4721,6 @@ focus_tree = {
 		id = GER_interve_golden_square
 		icon = GFX_goal_generic_demand_territory
 		relative_position_id = GER_Axis_Powers
-		text = GER_Working_on
 		mutually_exclusive = {
 			focus = GER_Support_golden_square
 		}

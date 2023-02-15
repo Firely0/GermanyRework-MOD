@@ -16,6 +16,7 @@ add_namespace = GER_FIN_lands
 add_namespace = GER_fate_of_andrey
 add_namespace = GER_VIC_Syria
 add_namespace = GER_offer_support_irq
+add_namespace = GER_jap_coal_trade
 add_namespace = GER_SOV_ultimatom
 
 country_event = {
@@ -2074,6 +2075,8 @@ country_event = {
 
 		hidden_effect = {
 			give_guarantee = IRQ
+			ENG = { remove_resource_rights = 676 }
+			ENG = { remove_resource_rights = 291 }
 			IRQ = {
 				add_ai_strategy = {
 					type = alliance
@@ -2084,8 +2087,6 @@ country_event = {
 					target = GER
 					modifier = offered_support
 				}
-				remove_resource_rights = 676
-				remove_resource_rights = 291
 				give_resource_rights = {
 					receiver = GER
 					state = 676
@@ -2138,6 +2139,69 @@ country_event = {
 		add_state_claim = 676
 		add_state_claim = 291
 
+	}
+} 
+
+country_event = {
+	id = GER_jap_coal_trade.1
+	title = "Germany Wants Research Tready!"
+	desc = "They offered us their research on Synthetic Resource, in return they asked for information on our aircraft carriers."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
+		}
+
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 2
+			category = synth_resources
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_jap_coal_trade.2
+	title = "Japan Accepted our Research Tready!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_jap_coal_trade.3
+	title = "Japan Not Accepted our Research Tready!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
 	}
 }
 
