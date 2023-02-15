@@ -4579,7 +4579,6 @@ focus_tree = {
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
 			is_faction_leader = yes
-			always = no
 		}
 
 		x = 11
@@ -4661,8 +4660,9 @@ focus_tree = {
 						}
 					}
 					add_timed_idea = { idea = fascist_influence days = 1095 }
+					country_event = { id = generic.1 }
 				}
-				country_event = { id = generic.1 }
+				
 				if = {
 					limit = {
 						GER = {
@@ -4670,8 +4670,9 @@ focus_tree = {
 						}
 					}
 					add_timed_idea = { idea = neutrality_influence days = 1095 }
+					country_event = { id = generic.1 }
 				}
-				country_event = { id = generic.1 }
+
 			}
 			IRQ = { country_event = { id = GER_offer_support_irq.1 hours = 6 } }
 		}
@@ -6629,10 +6630,10 @@ focus_tree = {
 
 	focus = {
 		id = GER_JAP_Coal_Search
-		text = GER_Working_on
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = GER_japan_friend }
 		available = {
+			NOT = { has_war_with = JAP }
 			is_subject = no
 			ROOT = { has_completed_focus = GER_coal_liquidization_a }
 		}
@@ -6666,10 +6667,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			NOT = { has_war_with = JAP }
-			JAP = {
-				has_government = root
-			}
 		}
 	}
 
@@ -6680,6 +6677,7 @@ focus_tree = {
 		prerequisite = { focus = GER_JAP_Coal_Search }
 		available = {
 			is_subject = no
+			NOT = { has_war_with = jap }
 		}
 		x = -1
 		y = 1
