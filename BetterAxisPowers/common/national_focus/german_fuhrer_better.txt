@@ -237,6 +237,9 @@ focus_tree = {
 			JAP = {
 				add_opinion_modifier = { target = GER modifier = supported_the_chinese }
 			}
+			MAN = {
+				add_opinion_modifier = { target = GER modifier = supported_the_chinese }
+			}
 		}
 	}
 
@@ -4602,7 +4605,13 @@ focus_tree = {
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		text = GER_Working_on
 		available = {
-			always = no
+			FRA = {
+				has_government = fascism
+				controls_state = 677
+				controls_state = 680
+				controls_state = 554
+				controls_state = 553
+			}
 		}
 
 		x = 11
@@ -4617,7 +4626,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#VIC = { country_event = { id = GER_VIC_Syria.1 days = 1 } }
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+					NOT = { has_war = no }
+				}
+				event_target:vichy_france = {
+					country_event = { id = GER_VIC_Syria.1 hours = 12 }
+				}
+			}
 		}
 	}
 
@@ -4654,7 +4672,7 @@ focus_tree = {
 				}
 				country_event = { id = generic.1 }
 			}
-			IRQ = { country_event = { id = GER_golden_square days = 1 } }
+			IRQ = { country_event = { id = GER_offer_support_irq.1 hours = 6 } }
 		}
 	}
 
@@ -4668,7 +4686,11 @@ focus_tree = {
 			focus = GER_interve_golden_square
 		}
 		available = {
-			always = no
+			NOT = { has_war_with = IRQ }
+			IRQ = {
+				is_in_faction = no
+				NOT = { has_government = fascism }
+			}
 		}
 
 		x = 8
@@ -4697,7 +4719,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_Prepare_for_golden_square }
 		available = {
-			always = no
+			NOT = { has_war_with = IRQ }
 		}
 
 		x = 10
@@ -6584,9 +6606,7 @@ focus_tree = {
 				limit = {
 					NOT = { has_war_with = GER }
 				}
-				add_ideas = {
-					add_ideas = Japan_Side_Intel_build
-				}
+				add_ideas = Japan_Side_Intel_build
 			}
 		}
 		
@@ -6665,15 +6685,15 @@ focus_tree = {
 		}	
 		completion_reward = {
 		if = {
-		 limit = {
+		limit = {
 		  NOT = { JAP = { has_war_with = GER } }
-         }
+        }
 		JAP = {
 		  swap_ideas = {
 		   remove_idea = Japan_Side_Intel
 		   add_idea = Japan_Side_Intel_build
 		   }
-		 }
+		}
 		} 
 
 		set_variable = {
@@ -8267,7 +8287,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			has_government = fascism
+			always = no
 		}
 
 		bypass = {
@@ -8424,7 +8444,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			SOV = {
+			GER = {
 				country_event = { id = GER_SOV_ultimatom.1 days = 1 }
 			}
 		}

@@ -14,6 +14,8 @@ add_namespace = GER_FIN_Support
 add_namespace = GER_FIN_War_Sov
 add_namespace = GER_FIN_lands
 add_namespace = GER_fate_of_andrey
+add_namespace = GER_VIC_Syria
+add_namespace = GER_offer_support_irq
 add_namespace = GER_SOV_ultimatom
 
 country_event = {
@@ -1951,6 +1953,191 @@ country_event = {
 		}
 		name = "Leave his Fate to SS"
 		retire_character = SOV_andrey_vlasov
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.1
+	title = "Germany Demands Syria"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine, They Cause Problem Anyway."
+
+		GER = {
+			country_event = { id = GER_VIC_Syria.2 hours = 6 }
+		}
+
+		GER = {
+			set_state_owner = 677
+			set_state_owner = 680
+			set_state_owner = 554
+			set_state_owner = 553
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		
+		GER = {
+			country_event = { id = GER_VIC_Syria.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.2
+	title = "Vicht France Not Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.3
+	title = "Vicht France Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			GER = {
+				set_state_owner = 677
+				set_state_owner = 680
+				set_state_owner = 554
+				set_state_owner = 553
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.1
+	title = "Germany Offer Support"
+	desc = "Germany Offer Support Against United Kingdom, And Wants to Help Us Nationalize Our Resources. In return they want some oil to flow to them."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = "Better Than Nothing."
+
+		GER = {
+			country_event = { id = GER_offer_support_irq.2 hours = 3 }
+		}
+		
+		ENG = {
+			country_event = { id = GER_offer_support_irq.4 hours = 3 }
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+		
+		GER = {
+			country_event = { id = GER_offer_support_irq.3 hours = 3 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.2
+	title = "Iraq Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			give_guarantee = IRQ
+			IRQ = {
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 200
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = offered_support
+				}
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+				give_resource_rights = {
+					receiver = GER
+					state = 676
+					resources = { oil }
+				}
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.3
+	title = "Iraq Not Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good Luck."
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.4
+	title = "Iraq Nationalized our oil!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Prepare for War!"
+
+		create_wargoal = {
+			target = IRQ
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = "We Will Deal With Them Later."
+
+		add_state_claim = 676
+		add_state_claim = 291
+
 	}
 }
 
