@@ -3237,7 +3237,6 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				if = {
 					limit = {
@@ -3267,7 +3266,6 @@
 					}
 					set_variable = { GER_minimum_training_level = 0.05 }
 				}
-			}
 		}
 	}
 
