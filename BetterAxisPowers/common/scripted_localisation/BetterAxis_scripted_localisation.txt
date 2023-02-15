@@ -8,7 +8,7 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
-defined_text = { # Country
+defined_text = {
 	name = GetAfricacorpsfront
 	text = {
 		trigger = {
@@ -27,7 +27,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetAfricacorpsfrontlogistics
 	text = {
 		trigger = {
@@ -43,5 +43,24 @@ defined_text = { # Country
 	}
 	text = {
 		localization_key = GER_africa_front_war_logistics1
+	}
+}
+
+defined_text = {
+	name = GetSSUkrainevBelarus
+	text = {
+		trigger = {
+			tag = UKR
+		}
+		localization_key = SS_Glory_Of_Army_UKR
+	}
+	text = {
+		trigger = {
+			tag = BLR
+		}
+		localization_key = SS_Glory_Of_Army_BLR
+	}
+	text = {
+		localization_key = SS_Glory_Of_Army
 	}
 }

@@ -1107,6 +1107,7 @@
 	shared_focus = {
 		id = SS_Glory_Of_Army
 		icon = GFX_focus_generic_military_mission
+		dynamic = yes
 		relative_position_id = SS_Rebuild_Army
 		prerequisite = { focus = SS_ReOrg_Army }
 		prerequisite = { focus = SS_Doctrine }
