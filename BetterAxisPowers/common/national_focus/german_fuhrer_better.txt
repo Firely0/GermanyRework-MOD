@@ -909,7 +909,6 @@ focus_tree = {
 		text = GER_weserubung
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_denmark_friend }
 		will_lead_to_war_with = DEN 
 		will_lead_to_war_with = NOR
 
@@ -6624,8 +6623,8 @@ focus_tree = {
 			JAP = {
 				country_event = { id = GER_jap_coal_trade.1 hours = 6 }
 			}
+			custom_effect_tooltip = needs_approval
 			effect_tooltip = {
-				custom_effect_tooltip = needs_approval
 				JAP = {
 					add_tech_bonus = {
 						bonus = 0.5
