@@ -6623,20 +6623,17 @@ focus_tree = {
 			JAP = {
 				country_event = { id = GER_jap_coal_trade.1 hours = 6 }
 			}
-			custom_effect_tooltip = needs_approval
 			effect_tooltip = {
 				JAP = {
+					custom_effect_tooltip = needs_approval
 					add_tech_bonus = {
-						bonus = 0.5
+						bonus = 1.0
 						uses = 2
-						category = { 	
-						 cat_synth_rubber
-						 cat_synth_oil 
-						}
+						category = synth_resources
 					}
 				}
 				GER = {
-					custom_effect_tooltip = GER_JAP_Coal_Search
+					custom_effect_tooltip = GER_JAP_Coal_Search_tt
 				}
 			}
 		}
@@ -8306,6 +8303,18 @@ focus_tree = {
 		
 		completion_reward = {
 			set_global_flag = GER_Leningrad_win
+			modify_timed_idea = {
+				idea = GER_barbarossa
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Moscow
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Stalingrad
+				days = 60
+			}
 		}
 	}
 
@@ -8331,6 +8340,18 @@ focus_tree = {
 		
 		completion_reward = {
 			set_global_flag = GER_Moscow_win
+			modify_timed_idea = {
+				idea = GER_barbarossa
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Leningrad
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Stalingrad
+				days = 60
+			}
 		}
 	}
 
@@ -8356,6 +8377,18 @@ focus_tree = {
 		
 		completion_reward = {
 			set_global_flag = GER_Stalingrad_win
+			modify_timed_idea = {
+				idea = GER_barbarossa
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Moscow
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Leningrad
+				days = 60
+			}
 		}
 	}
 
@@ -8905,7 +8938,6 @@ focus = {
 			}
 		}	
 		completion_reward = {
-			complete_national_focus = GER_Attack_SOV
 			mark_focus_tree_layout_dirty = yes
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
