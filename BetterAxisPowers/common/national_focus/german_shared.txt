@@ -124,6 +124,7 @@
 		}
 		
 		completion_reward = {
+			unlock_decision_tooltip = GER_Visit_Graf_Zeppelin
 			create_equipment_variant = {
 					name = "Graf Zeppelin"
 					type = ship_hull_carrier_conversion_bb
@@ -542,7 +543,14 @@
 		completion_reward = {
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
+				set_variable = {
+					GER_positioning = 0.5
+				}
+				set_variable = {
+					GER_screening_efficiency = 0.5
+				}
 			}
+			custom_effect_tooltip = GER_PLAN_Z_modify
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0

@@ -4603,7 +4603,8 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
-			event_target:vichy_france = {
+			VIC = {
+				exists = yes
 				controls_state = 677
 				controls_state = 680
 				controls_state = 554
@@ -4623,7 +4624,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			event_target:vichy_france = {
+			VIC = {
 				country_event = { id = GER_VIC_Syria.1 hours = 12 }
 			}
 		}
@@ -5113,7 +5114,7 @@ focus_tree = {
 					add_ai_strategy = {
 						type = alliance
 						id = "GER"
-						value = 300
+						value = 1000
 					}
 				}
 			}
@@ -8605,7 +8606,6 @@ focus = {
 			add_ideas = soviet_german_friendship
 			country_event = germany.89
 		}
-		set_country_flag = GER_HIDE_Dynamic_SOV
 	}
 }
 
@@ -8993,6 +8993,7 @@ focus = {
 		}	
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = GER_Attack_SOV_Chance_tt
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {

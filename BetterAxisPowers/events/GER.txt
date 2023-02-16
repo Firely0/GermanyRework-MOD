@@ -1972,13 +1972,7 @@ country_event = {
 		GER = {
 			country_event = { id = GER_VIC_Syria.2 hours = 6 }
 		}
-
-		GER = {
-			set_state_owner = 677
-			set_state_owner = 680
-			set_state_owner = 554
-			set_state_owner = 553
-		}
+		
 	}
 	option = {
 		ai_chance = {
@@ -1992,22 +1986,9 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = GER_VIC_Syria.2
-	title = "Vicht France Not Accepted our Demands!"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Fine"
-	}
-}
 
 country_event = {
-	id = GER_VIC_Syria.3
+	id = GER_VIC_Syria.2
 	title = "Vicht France Accepted our Demands!"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
@@ -2026,6 +2007,20 @@ country_event = {
 				set_state_owner = 553
 			}
 		}
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.3
+	title = "Vicht France Not Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
 	}
 }
 
@@ -2218,6 +2213,10 @@ country_event = {
 		}
 		name = "Our Lands"
 
+		trigger = {
+			NOT = { has_country_flag = GER_SOV_Demanded }
+		}
+
 		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_Demanded
 
@@ -2227,7 +2226,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		name = "Japan Always Wanted Their Land in Soviet"
+		name = "Grant Japan Claims"
 
 		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_JAP_Demanded
