@@ -163,6 +163,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = GER }
+				has_war_with = GER
 			}
 			
 			modifier = {
@@ -191,6 +192,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = GER }
+				has_war_with = GER
 			}
 			
 			modifier = {
@@ -218,6 +220,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -256,6 +259,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -290,6 +294,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -330,6 +335,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -366,6 +372,7 @@ ideas = {
 
 			cancel = {
 				has_war_with = SWE
+				NOT = { country_exists = SWE }
 			}
 			
             targeted_modifier = {
@@ -391,6 +398,7 @@ ideas = {
 
 			cancel = {
 				has_war_with = GER
+				NOT = { country_exists = GER }
 			}
 	
 			modifier = {
