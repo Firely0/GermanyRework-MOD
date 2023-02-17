@@ -5326,7 +5326,7 @@ focus_tree = {
 		prerequisite = { focus = GER_influense_finland }
 		available = {
 			is_subject = no
-			surrender_progress = 0
+			surrender_progress = 1
 			has_war_with = SOV 
 			NOT = { has_war_with = FIN }
 			has_global_flag = GER_Fin_help_y
