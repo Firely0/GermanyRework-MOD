@@ -1,0 +1,255 @@
+﻿add_namespace = ger_f_news
+
+# Netherlands refuses to let Kaiser go, danger of war
+news_event = {
+	id = ger_f_news.1
+	title = ger_f_news.5.t
+	desc = ger_f_news.5.d
+	picture = GFX_news_event_german_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Then War."
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = "Again? Never!"
+		trigger = { 
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+# Kaiser returned
+news_event = {
+	id = ger_f_news.3
+	title = ger_f_news.3.t
+	desc = ger_f_news.3.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger_kaiser_in_exile.4.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = "Germany Creates Problems Again..."
+		trigger = { 
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+# Kaiser returned through war
+news_event = {
+	id = wtt_news.4
+	title = wtt_news.4.t
+	desc = wtt_news.4.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.4.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.4.b
+		trigger = { 
+			NOT = { original_tag = GER }
+			NOT = { original_tag = HOL }
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = wtt_news.4.c
+		trigger = { 
+			original_tag = HOL
+		}
+	}
+	option = {
+		name = wtt_news.3.d
+		trigger = { 
+			OR = {
+				original_tag = ENG
+				original_tag = FRA
+			}
+		}
+	}
+}
+
+# Poland returns Danzig for guarantees
+news_event = {
+	id = wtt_news.7
+	title = wtt_news.7.t
+	desc = wtt_news.7.desc
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.7.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.7.b
+		trigger = { 
+			original_tag = POL
+		}
+	}
+	option = {
+		name = wtt_news.7.c
+		trigger = { 
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = wtt_news.7.d
+		trigger = { 
+			NOT = { 
+				original_tag = GER
+				original_tag = POL 
+				original_tag = SOV
+			}
+		}
+	}
+}
+
+# France and Britain go to war upon return of the Kaiser
+news_event = {
+	id = wtt_news.12
+	title = wtt_news.12.t
+	desc = wtt_news.12.desc
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.12.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.12.b
+		trigger = {
+			OR = {
+				original_tag = FRA
+				original_tag = ENG
+			}
+		}
+	}
+	option = {
+		name = wtt_news.12.c
+		trigger = { 
+			NOT = { 
+				original_tag = GER
+				original_tag = FRA
+				original_tag = ENG
+			}
+		}
+	}
+}
+
+# France goes to war upon return of the Kaiser
+news_event = {
+	id = wtt_news.14
+	title = wtt_news.12.t
+	desc = wtt_news.14.desc
+	picture = GFX_news_event_german_inspect_troops
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.12.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.12.b
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = wtt_news.14.c
+		trigger = {
+			original_tag = ENG
+		}
+	}
+	option = {
+		name = wtt_news.14.d
+		trigger = { 
+			NOT = { 
+				original_tag = GER
+				original_tag = FRA
+				original_tag = ENG
+			}
+		}
+	}
+}
+
+# Poland returns Danzig/Poznan to Germany when under attack by SOV
+news_event = {
+	id = wtt_news.19
+	title = wtt_news.19.t
+	desc = wtt_news.19.desc
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.19.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.19.b
+		trigger = {
+			original_tag = POL
+		}
+	}
+	option = {
+		name = wtt_news.19.c
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = wtt_news.19.d
+		trigger = {
+			NOT = {
+				original_tag = GER
+				original_tag = POL
+				original_tag = SOV
+			}
+		}
+	}
+}

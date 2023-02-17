@@ -1,6 +1,29 @@
 ideas = {
 
 	country = {
+		
+		SS_Fake_tooltip_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.25
+				compliance_gain = -0.03
+				required_garrison_factor = -0.2
+				local_factories = 0.1
+				local_resources = 0.15
+				resistance_damage_to_garrison = -0.4
+			}
+		}
+
 		sour_loser = {
 			
 			allowed = {
@@ -15,6 +38,436 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
+
+				stability_factor = -0.04
+				war_support_factor = -0.04
+
+				surrender_limit = -0.15
+			}
+		}
+
+		sour_loser_our_honor = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				stability_factor = 0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		sour_loser_our_honor_for_glory = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				stability_factor = 0.1
+				war_support_factor = -0.1
+
+				command_abilities_cost_factor = -0.2
+			}
+		}
+
+		sour_loser_revange = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				war_support_factor = 0.1
+			}
+		}
+
+		sour_loser_revange_never_surrender = {
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+
+				war_support_factor = 0.1
+				surrender_limit = 0.15
+			}
+		}
+
+		nohelp_denmark = {
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			rule = {
+				can_join_factions = no 
+			}
+			
+		}
+
+		CHI_production_lines = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = GER }
+				has_war_with = GER
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+			research_bonus = { 
+				infantry_weapons = 0.05
+				artillery = 0.05
+			}
+
+		}
+
+		CHI_tank_production_lines = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = GER }
+				has_war_with = GER
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+			research_bonus = { 
+				armor = 0.1
+			}
+
+		}
+
+		GER_production_lines = {
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = CHI }
+				has_war_with = CHI
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			
+            targeted_modifier = {
+				tag = CHI
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+
+		GER_tank_production_lines = {
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = CHI }
+				has_war_with = CHI
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			
+            targeted_modifier = {
+				tag = CHI
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+
+		GER_production_lines_manpower = {
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = CHI }
+				has_war_with = CHI
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				conscription = 0.01
+				weekly_manpower = 1000
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			
+            targeted_modifier = {
+				tag = CHI
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+
+		GER_tank_production_lines_manpower = {
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				NOT = { country_exists = CHI }
+				has_war_with = CHI
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				conscription = 0.01
+				weekly_manpower = 1000
+			}
+
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			
+            targeted_modifier = {
+				tag = CHI
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+
+		GER_Trade_with_Sweden = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = SWE
+				NOT = { country_exists = SWE }
+			}
+			
+            targeted_modifier = {
+				tag = SWE
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_Sweden_SWE = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = GER
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		Kaiser_Idea = {
+			picture = Kaiser_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = neutrality }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#For My People
+				war_support_factor = 0.15
+				stability_factor = 0.15
+
+				#Imperial Connections
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.05
+				economy_cost_factor = -0.05
+
+			}
+		}
+
+		Fuhrer_Idea = {
+			picture = Fuhrer_idea
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = neutrality }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#Problems with Health
+				political_power_gain = -0.05
+
+				#Happy life with Family
+				stability_factor = 0.05
+
+				#Todo to Moon
+				
+
+				#Beaten, but not Defeated
+				weekly_casualties_war_support = 0.001
+				weekly_convoys_war_support = 0.001 
+				weekly_bombing_war_support = 0.001 
+
 			}
 		}
 
@@ -59,6 +512,44 @@ ideas = {
 			}
 		}
 
+		GER_Last_Strike = {
+			picture = generic_purge
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			removal_cost = -1
+
+			modifier = {
+				breakthrough_factor = 0.1
+				army_armor_speed_factor = 0.1
+				org_loss_at_low_org_factor = -0.2
+			}
+		}
+
+		GER_Interve_Civilwars_idea = {
+			picture = generic_manpower_bonus
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+				
+			modifier = {
+				send_volunteer_size = 3
+			}
+		}
+
 		kinder_kuche_kirche = {
 			picture = generic_neutrality_drift_bonus
 				
@@ -77,6 +568,26 @@ ideas = {
 				industrial_capacity_factory = -0.05
 				industrial_capacity_dockyard = -0.05
 				research_speed_factor = -0.01
+			}
+		}
+
+		FundsforProject = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {		
+			} 
+
+			modifier = {
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -261,48 +772,6 @@ ideas = {
 			}
 		}
 
-		GER_autarky_idea = {
-
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_exploit_mines
-
-			modifier = {
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		GER_grosraumwirtschaft = {
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_build_infrastructure
-
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-			}
-		}
-
 		GER_align_hungary = {
 			allowed = {
 				always = no
@@ -340,7 +809,7 @@ ideas = {
 			}
 		}
 
-		GER_align_bulgariaV = {
+		GER_align_bulgaria = {
 			allowed = {
 				always = no
 			}
@@ -356,6 +825,25 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
+			}
+		}
+
+		GER_align_bulgaria_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
 			}
 		}
 
@@ -561,44 +1049,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		GER_rebuild_the_high_seas_fleet = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-
-			equipment_bonus = {
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		GER_prepare_for_the_next_blockade = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			removal_cost = -1
-
-			picture = generic_goods_red_bonus
-
-			modifier = {
-				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -858,6 +1308,21 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = GER_Leningrad_win
+						has_global_flag = GER_Moscow_win
+						has_global_flag = GER_Stalingrad_win
+					}
+					add_ideas = GER_barbarossa
+				}
+				else = {
+					clr_global_flag = GER_Operation_Barbarossa_running
+					set_global_flag = GER_Operation_Barbarossa_Failed
+				}
+			}
+
 		}
 		GER_dismantle_maginot = {
 			allowed = {
@@ -1075,15 +1540,14 @@ ideas = {
 
 		#Wehrmacht
 
-		Wehrmacht = {
-			picture = ger_army
+		Wehrmacht_UI = {
+			picture = ger_army_ui
 			allowed = {
 				original_tag = GER
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1101,15 +1565,14 @@ ideas = {
 			}
 		}
 
-		Wehrmacht_UI = {
-			picture = ger_army_ui
+		Wehrmacht = {
+			picture = ger_army
 			allowed = {
 				original_tag = GER
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1134,8 +1597,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1145,12 +1607,14 @@ ideas = {
 			modifier = {
 
 				army_org_Factor = 0.05
-				max_planning = 0.1
 
+				max_planning = 0.1
 				planning_speed = -0.1
-                land_doctrine_cost_factor = 0.05
+
 				minimum_training_level = 0.05
                 army_speed_factor = -0.05
+
+				land_doctrine_cost_factor = 0.05
 			}
 		}
 
@@ -1161,8 +1625,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1173,6 +1636,7 @@ ideas = {
 
 				max_command_power = 20
 				army_org_Factor = 0.05
+
 				planning_speed = 0.1
 				max_planning_factor = 0.1
 
@@ -1188,8 +1652,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1201,6 +1664,7 @@ ideas = {
 				land_doctrine_cost_factor = 0.1
 
 				army_org_Factor = 0.05
+				
 				planning_speed = 0.1
 				max_planning_factor = 0.1
 
@@ -1216,8 +1680,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1247,8 +1710,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1274,8 +1736,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1306,8 +1767,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1318,13 +1778,13 @@ ideas = {
 				max_command_power = 20
 				planning_speed = 0.15
 
-				recon_factor = 0.05
-				initiative_factor = 0.05
+				recon_factor = 0.1
+				initiative_factor = 0.1
+				breakthrough_factor = 0.05 
 
                 org_loss_when_moving = -0.1
 				army_org_Factor = 0.05
-                army_armor_speed_factor = 0.1
-				breakthrough_factor = 0.05 	
+                army_armor_speed_factor = 0.1	
 			}
 		}
 
@@ -1335,8 +1795,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1358,15 +1817,15 @@ ideas = {
 				supply_node_range = 0.1
 			}
 		}
-			WehrmachtWarPlana = {
+
+		WehrmachtWarPlana = {
 			picture = ger_army
 			allowed = {
 				original_tag = GER
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1411,8 +1870,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1450,17 +1908,100 @@ ideas = {
 			    }
 			}
 
-			#Luftwaffe
 
-			Luftwaffe = {
+			#Ger Afrika Korps
+
+			GER_Afrika_Korps = {
+				picture = AfrikaCorps_idea
+				allowed = {
+					original_tag = GER
+					original_tag = ITA
+				}
+	
+				allowed_civil_war = {
+					always = yes
+				}
+
+				cancel = {
+					448 = { is_controlled_by_ROOT_or_ally = no }
+					661 = { is_controlled_by_ROOT_or_ally = no }
+					449 = { is_controlled_by_ROOT_or_ally = no }
+					662 = { is_controlled_by_ROOT_or_ally = no }
+					450 = { is_controlled_by_ROOT_or_ally = no }
+					663 = { is_controlled_by_ROOT_or_ally = no }
+					451 = { is_controlled_by_ROOT_or_ally = no }
+				}
+				
+				removal_cost = -1
+	
+				equipment_bonus = {
+					infantry_equipment = {
+						instant = yes
+						build_cost_ic = -0.03
+						reliability = -0.05
+					}	
+				}
+		
+	
+				modifier = {
+	
+					max_planning_factor = 0.03 
+					planning_speed = 0.03
+
+					supply_node_range = 0.1
+					truck_attrition_factor = -0.05
+
+					acclimatization_hot_climate_gain_factor = 0.1
+
+				}
+			}
+
+			GER_ITA_Afrika_Korps = {
+				picture = AfrikaCorps_idea
+				allowed = {
+					original_tag = GER
+					original_tag = ITA
+				}
+	
+				allowed_civil_war = {
+					always = no
+				}
+				
+				removal_cost = -1
+	
+				equipment_bonus = {
+					infantry_equipment = {
+						instant = yes
+						build_cost_ic = -0.03
+						reliability = -0.05
+					}	
+				}
+		
+	
+				modifier = {
+	
+					planning_speed = 0.03
+					land_night_attack = 0.03
+					recon_factor = 0.03
+
+					truck_attrition_factor = -0.05
+
+					acclimatization_cold_climate_gain_factor = 0.05
+					acclimatization_hot_climate_gain_factor = 0.05
+
+				}
+			}
+
+		#Luftwaffe
+
+		Luftwaffe = {
 			picture = ger_air
 			allowed = {
 				original_tag = GER
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1487,17 +2028,16 @@ ideas = {
 			 air_mission_efficiency = -0.10
  
 			}
-		 }
+		}
 
-		 Luftwaffe_UI = {
+		Luftwaffe_UI = {
 			picture = ger_air_ui
 			allowed = {
 				original_tag = GER
 			}
 
 			allowed_civil_war = {
-				NOT = {
-				}
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1524,330 +2064,7 @@ ideas = {
 			 air_mission_efficiency = -0.10
  
 			}
-		 } 
-
-		Luftwaffe_SD = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 strategic_bomb_visibility = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_SD_A = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_strategic_bomber_bombing_factor = 0.05
-			 strategic_bomb_visibility = -0.1
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_SDD = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}		
-			} 
-
-			modifier = {
-
-			 strategic_bomb_visibility = -0.05
-			 air_strategic_bomber_bombing_factor = 0.05
-			 air_mission_efficiency = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
- 
-			}
-		}	
-
-		Luftwaffe_SDD_B = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}			
-			} 
-
-			modifier = {
-
-			 strategic_bomb_visibility = -0.1
-			 air_strategic_bomber_bombing_factor = 0.1
-			 air_strategic_bomber_night_penalty = -0.1
-			 air_mission_efficiency = -0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.10
- 
-			}
-		 }
-
-		Luftwaffe_CAS = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.15
-				}			
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_close_air_support_defence_factor = 0.05
-			 air_cas_efficiency = 0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.05
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_CAS_R = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}#	
-			} 
-
-			modifier = {
-
-			 air_mission_efficiency = -0.05
-			 air_close_air_support_defence_factor = 0.05
-			 air_cas_efficiency = 0.05
-			 air_home_defence_factor = 0.05
-			 air_interception_detect_factor = 0.05
-			 air_range_factor = 0.1
- 
-			}
-		 }
-
-		Luftwaffe_OI = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}		
-			} 
-
-			modifier = {
-
-			 air_interception_detect_factor = 0.05
-			 air_bombing_targetting = 0.05
-			 air_cas_efficiency = 0.05
-
-			 air_doctrine_cost_factor = 0.05
- 
-			}
-		 }
-
-		Luftwaffe_OI_IMP = {
-			picture = ger_air
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				NOT = {
-				}
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				 small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.10
-				}		
-			} 
-
-			modifier = {
-
-			 air_interception_detect_factor = 0.05
-			 air_bombing_targetting = 0.05
-			 air_cas_efficiency = 0.05
-			 air_escort_efficiency = 0.05
- 
-			}
-		 }
+		} 
 
 		#Kriegsmarine
 
@@ -1858,6 +2075,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1880,6 +2098,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1904,6 +2123,7 @@ ideas = {
 			 navy_visibility = 0.1
 			 sub_retreat_speed = 0.05
 			 critical_receive_chance = 0.1
+			 naval_doctrine_cost_factor = 0.1
 
 			}
 		}
@@ -1915,6 +2135,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -1939,612 +2160,9 @@ ideas = {
 			 navy_visibility = 0.1
 			 sub_retreat_speed = 0.05
 			 critical_receive_chance = 0.1
+			 naval_doctrine_cost_factor = 0.1
 
 			}
-		}
-
-		Kriegsmarine_FAKE = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			}
-		}
-
-		Kriegsmarine_FAKE_A = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
-
-			}
-		}
-
-		Kriegsmarine_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_carrier = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 navy_visibility = 0.1
-			 sub_retreat_speed = 0.05
-			 critical_receive_chance = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			}
-		} 
-
-		Kriegsmarine_PlanZ = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				ship_hull_carrier = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.05 instant = yes
-				}		
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_PlanZ_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {
-				ship_hull_carrier = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.05 instant = yes
-				}		
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Carrier = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
- 
-			} 
-		}
-
-		Kriegsmarine_Carrier_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {	
-				ship_hull_heavy = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = 0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = 0.1 instant = yes
-				}	
-			} 
-
-			modifier = {
-
-			 naval_speed_factor = 0.1
-			 navy_visibility = -0.1
-			 sub_retreat_speed = 0.1
-			 critical_receive_chance = -0.1
-			 convoy_escort_efficiency = 0.1
-			 positioning = 0.1
-
-			 navy_carrier_air_targetting_factor = 0.1
-			 navy_carrier_air_attack_factor = 0.1
-			 navy_carrier_air_agility_factor = 0.1
-			 carrier_traffic = 0.2
-			 carrier_night_traffic = 0.2
-
-			 air_nav_efficiency = 0.1
-
-			 navy_intel_factor = 0.1
-			 decryption_power_factor = 0.05
- 
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last_intel = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-			} 
-		}
-
-		Kriegsmarine_Rebuild_Carriers_last_intel_build = {
-			picture = ger_navy
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			equipment_bonus = {		
-				ship_hull_carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_heavy = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			} 
-
-			modifier = {
-				consumer_goods_factor = -0.03
-
-				naval_speed_factor = 0.1
-				navy_visibility = -0.1
-				sub_retreat_speed = 0.1
-				critical_receive_chance = -0.1
-				convoy_escort_efficiency = 0.1
-				positioning = 0.1
-   
-				navy_carrier_air_targetting_factor = 0.1
-				navy_carrier_air_attack_factor = 0.1
-				navy_carrier_air_agility_factor = 0.1
-				carrier_traffic = 0.2
-				carrier_night_traffic = 0.2
-   
-				air_nav_efficiency = 0.1
-				navy_intel_factor = 0.1
-				decryption_power_factor = 0.05
-
-				production_speed_dockyard_factor = 0.1
-
-			} 
 		}
 
 		Four_Year_Plan_1 = {
@@ -2554,6 +2172,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2591,6 +2210,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2628,6 +2248,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2662,6 +2283,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2703,6 +2325,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2744,6 +2367,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2782,6 +2406,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2816,6 +2441,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2853,6 +2479,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2887,6 +2514,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2931,6 +2559,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -2974,6 +2603,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3012,6 +2642,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3053,6 +2684,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3091,6 +2723,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3132,6 +2765,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3173,6 +2807,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3215,6 +2850,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3256,6 +2892,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3298,6 +2935,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3339,6 +2977,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3377,6 +3016,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3418,6 +3058,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3456,6 +3097,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3479,6 +3121,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3503,6 +3146,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3531,6 +3175,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3558,6 +3203,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3589,6 +3235,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3617,6 +3264,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3649,6 +3297,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3680,6 +3329,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3714,6 +3364,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3743,6 +3394,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3775,6 +3427,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3808,6 +3461,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3844,6 +3498,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3870,6 +3525,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3900,6 +3556,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3930,6 +3587,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3964,6 +3622,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -3995,6 +3654,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				always = yes
 			}
 			
 			removal_cost = -1
@@ -4024,7 +3684,7 @@ ideas = {
 		}
 		
 		GER_SS = {
-			picture = SS_UI
+			picture = SS_idea
 				
 			allowed = {
 				always = no
@@ -4049,7 +3709,7 @@ ideas = {
 		}
 
 		GER_SS_V1 = {
-			picture = SS_UI
+			picture = SS_idea
 				
 			allowed = {
 				always = no
@@ -4078,7 +3738,7 @@ ideas = {
 		}
 
 		GER_SS_Final = {
-			picture = SS_UI
+			picture = SS_idea
 				
 			allowed = {
 				always = no
@@ -4297,6 +3957,85 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		GER_Volkswagen = {
+
+			picture = volkswagen
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				has_completed_focus = GER_the_peoples_car
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Volkswagen_1_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GER_Mercedes = {
+
+			picture = Mercedes
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Mercedes_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		GER_skoda = {
+
+			picture = CZE_skoda_works
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				has_idea = GER_skoda_t
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Skoda_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 	}
 	
 	naval_manufacturer = { 
@@ -4390,6 +4129,7 @@ ideas = {
 			
 			research_bonus = {
 				air_equipment = 0.15
+				jet_technology = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer_2 }
@@ -4546,7 +4286,33 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
+		
+		GER_Mercedes_t = {
+
+			picture = Mercedes
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+
+			traits = { Mercedes_1_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 	industrial_concern = {
@@ -4658,7 +4424,31 @@ ideas = {
 			
 	    traits = { electronics_concern_focus }
 		
-	   }		
+	   }	
+	   
+	   GER_skoda_t = {
+		picture = CZE_skoda_works
+			
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		9 = {
+			is_fully_controlled_by = ROOT 
+		}		
+		}
+		
+		research_bonus = {
+			industry = 0.1
+		}
+		
+		traits = { Skoda_1_trait }
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	}
 
 	materiel_manufacturer = {
@@ -4712,6 +4502,32 @@ ideas = {
 			
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		GER_Volkswagen_t = {
+
+			picture = volkswagen
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+				has_completed_focus = GER_the_peoples_car
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+
+			traits = { Volkswagen_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	hidden_ideas = {
@@ -4733,5 +4549,513 @@ ideas = {
 			}
 
 		}
+
+		i_dont_use_wargoal = {
+
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 0.9
+				justify_war_goal_when_in_major_war_time = -0.03
+			}
+
+		}
+
+		WehrmachtWarPlana_h = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.20 }
+
+			equipment_bonus = {
+				 infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				 }
+				 support_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				 }
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		WehrmachtWarPlanb_h = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.20 }
+
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				}
+				anti_air_equipment = {
+				 instant = yes
+				 build_cost_ic = -0.10
+				 reliability = 0.05
+				}
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_inf = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.10 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_inf_1 = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = -0.15 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.05 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank_1 = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.1 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Wehrmacht_Main_Tank_2 = {
+			picture = ger_army
+
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+           research_bonus = { armor = 0.15 }
+
+			equipment_bonus = {
+			} 
+
+			modifier = {
+			}
+
+		}
+
+		Kriegsmarine_Debuff_Version = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.1 instant = yes
+				}	
+			} 
+		}
+
+		Kriegsmarine_buff_Version_No_Carrier = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+			} 
+		}
+
+		Kriegsmarine_Debuff_Version_Carrier = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.1 instant = yes
+				}	
+			} 
+		}
+
+		Kriegsmarine_Debuff_Version_Last_Version = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+			} 
+		}
+
+		Luftwaffe_debuff = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.1
+				}	
+			} 
+
+			modifier = {
+			}
+			
+		}
+
+		Luftwaffe_SD = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}	
+			} 
+
+			modifier = {
+			}
+		}
+	
+		Luftwaffe_CAS = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.15
+				}			
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_CAS_R = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}	
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_OI = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}		
+			} 
+
+			modifier = {
+			}
+		}
+
+		Luftwaffe_OI_IMP = {
+			picture = ger_air
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {
+				 small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = 0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = 0.10
+				}		
+			} 
+
+			modifier = {
+			}
+		}
+
 	}
 }

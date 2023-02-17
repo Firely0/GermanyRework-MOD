@@ -44,6 +44,11 @@
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_rebuild_the_high_seas_fleet_a_modify
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+			}
+			GER_upgrade_kriegsmarine_idea_effect = yes
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -91,6 +96,11 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_naval_air_effort_a_modify
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+			}
+			GER_upgrade_kriegsmarine_idea_effect = yes
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -114,6 +124,7 @@
 		id = GER_Graf_Zeppelin
 		icon = GFX_goal_generic_navy_carrier
 		relative_position_id = GER_carrier_war
+		mutually_exclusive = { focus = GER_Convert_Civilian_Ships }
 		prerequisite = { focus = GER_carrier_war }
 		x = 1
 		y = 1
@@ -123,11 +134,17 @@
 		}
 		
 		completion_reward = {
+			set_variable = { GER_navy_carrier_air_attack_factor = 0.05 }
+			add_to_variable = { GER_navy_carrier_air_agility_factor = 0.05 }
+			set_variable = { GER_navy_carrier_air_targetting_factor = 0.05 }
+			custom_effect_tooltip = GER_Graf_Zeppelin_Modify
+			unlock_decision_tooltip = GER_Visit_Graf_Zeppelin
 			create_equipment_variant = {
 					name = "Graf Zeppelin"
-					type = ship_hull_carrier_1
+					type = ship_hull_carrier_conversion_bb
 					name_group = GER_CV_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes
 					modules = {
 						fixed_ship_deck_slot_1 = ship_deck_space
 						fixed_ship_deck_slot_2 = ship_deck_space
@@ -135,12 +152,12 @@
 						fixed_ship_radar_slot = empty
 						fixed_ship_engine_slot = carrier_ship_engine_2
 						fixed_ship_secondaries_slot = ship_secondaries_2
-						front_1_custom_slot = ship_deck_space
+						front_1_custom_slot = ship_armor_carrier_deck
 					}
 			}
 			add_equipment_production = {
 				equipment = {
-					type = ship_hull_carrier_1
+					type = ship_hull_carrier_conversion_bb
 					creator = "GER"
 					version_name = "Graf Zeppelin"
 				}
@@ -166,7 +183,10 @@
 			factor = 1
 		}
 		
-		completion_reward = {	
+		completion_reward = {
+			set_variable = { GER_carrier_night_traffic = 0.2 }
+			set_variable = { GER_air_carrier_night_penalty_reduction_factor = 0.2 }
+			custom_effect_tooltip = GER_Convert_Civilian_Ships_modify
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.0
@@ -299,50 +319,6 @@
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						NOT = { has_completed_focus = GER_plan_z_a }
-					}
-				}
-				show_ideas_tooltip = Kriegsmarine_FAKE
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ
-					add_idea = Kriegsmarine_Rebuild 
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Carrier
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Carrier
-					add_idea = Kriegsmarine_Rebuild_Carriers
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ_intel
-					add_idea = Kriegsmarine_Rebuild_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Carrier_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Carrier_intel
-					add_idea = Kriegsmarine_Rebuild_Carriers_intel
-				}
-			}
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -408,33 +384,14 @@
 			factor = 1
 		}
 		completion_reward = {
-		if = {
-			limit = {
-				GER = {
-					NOT = { has_completed_focus = GER_naval_air_effort_a has_completed_focus = GER_pride_of_the_modern_germany_a }
+			custom_effect_tooltip = GER_prepare_next_tt
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+				set_variable = {
+					GER_consumer_goods_factor = -0.03
 				}
 			}
-			custom_effect_tooltip = GER_prepare_next_tt
 		}	
-		if = {
-		  limit = {
-		  has_idea = Kriegsmarine_Rebuild_Carriers
-		  }
-		  swap_ideas = {
-			remove_idea = Kriegsmarine_Rebuild_Carriers
-			add_idea = Kriegsmarine_Rebuild_Carriers_last
-		  }
-		}
-		if = {
-		  limit = {
-		  has_idea = Kriegsmarine_Rebuild_Carriers_intel
-		  }
-		  swap_ideas = {
-			remove_idea = Kriegsmarine_Rebuild_Carriers_intel
-			add_idea = Kriegsmarine_Rebuild_Carriers_last_intel
-		  }
-		}
-		}
 	}
 
 	shared_focus = {
@@ -598,24 +555,16 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		if = {
-		    limit = {
-			has_idea = Kriegsmarine
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+				set_variable = {
+					GER_positioning = 0.1
+				}
+				set_variable = {
+					GER_screening_efficiency = 0.1
+				}
 			}
-			swap_ideas = {
-				remove_idea = Kriegsmarine
-				add_idea = Kriegsmarine_PlanZ
-			}
-		}
-		if = {
-		    limit = {
-			has_idea = Kriegsmarine_intel
-			}
-			swap_ideas = {
-			 remove_idea = Kriegsmarine_intel
-			 add_idea = Kriegsmarine_PlanZ_intel	
-			 }
-			}
+			custom_effect_tooltip = GER_PLAN_Z_modify
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -678,12 +627,6 @@
 				bonus = 1.0
 				uses = 1
 				category = ss_tech
-			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				set_technology = { cruiser_submarines = 1 }
 			}
 		}
 		
@@ -2104,8 +2047,11 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = dornier_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = junkers_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = messerschmitt_focus 
 
 			hidden_effect = {
@@ -2158,7 +2104,9 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = siemens_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = krupp_idea_focus
 	    hidden_effect = {
 		if = {
@@ -2201,9 +2149,13 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = available_designerv
 			show_ideas_tooltip = porsche_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = henschel_focus
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_MAN_Focus 
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = krupp
 			hidden_effect = {
 			if = {
@@ -2781,11 +2733,15 @@
 			factor = 0.25
 		}
 
+		available = {
+			has_tech = force_rotation
+		}
+
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_OI
-				add_idea = Luftwaffe_OI_IMP 
+			custom_effect_tooltip = GER_OI_A_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -2852,12 +2808,15 @@
 		ai_will_do = {
 			factor = 0.1
 		}
+		available = {
+			has_tech = air_superiority
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {	
-			swap_ideas = {
-				remove_idea = Luftwaffe_SDD
-				add_idea = Luftwaffe_SDD_B
+			custom_effect_tooltip = GER_SD_B_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}	
 	}
@@ -2879,50 +2838,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						NOT = { has_completed_focus = GER_plan_z_a }
-					}
-				}
-				show_ideas_tooltip = Kriegsmarine_FAKE_A
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ
-					add_idea = Kriegsmarine_Carrier
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild
-					add_idea = Kriegsmarine_Rebuild_Carriers
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_PlanZ_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_PlanZ_intel
-					add_idea = Kriegsmarine_Carrier_intel
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Rebuild_intel
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Rebuild_intel
-					add_idea = Kriegsmarine_Rebuild_Carriers_intel
-				}
-			}
 			add_tech_bonus = {
 				name = nav_bomber_bonus
 				bonus = 1.0
@@ -2951,9 +2866,9 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_SD
+			custom_effect_tooltip = GER_SD_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -2977,12 +2892,10 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-				swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_CAS
+			custom_effect_tooltip = GER_CAS_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ernst_udet
 		}
 	}
 
@@ -3027,12 +2940,15 @@
 		ai_will_do = {
 			factor = 1
 		}
+	    available = {
+			has_tech = formation_flying
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_CAS
-				add_idea = Luftwaffe_CAS_R
+			custom_effect_tooltip = GER_CAS_A_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}	
 	}
@@ -3041,7 +2957,7 @@
 		id = GER_Operational_Integratiy
 		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = { focus = GER_air_innovation_a }
-		mutually_exclusive = { focus = GER_Strategic_Des }
+		mutually_exclusive = { focus = GER_Strategic_Des focus = GER_CAS }
 		x = 4
 		y = 1
 		relative_position_id = GER_air_innovation_a
@@ -3056,9 +2972,9 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe
-				add_idea = Luftwaffe_OI
+			custom_effect_tooltip = GER_OI_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -3100,12 +3016,15 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = air_superiority
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Luftwaffe_SD
-				add_idea = Luftwaffe_SDD
+			custom_effect_tooltip = GER_SD_A_modifier_tt
+			hidden_effect = {
+				GER_upgrade_luftwaffe_effect = yes
 			}
 		}
 	}
@@ -3151,9 +3070,16 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht
-				add_idea = Wehrmacht_Tank_1
+			custom_effect_tooltip = GER_tank_warfare_modify_tt
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
+				set_variable = { GER_max_command_power = -10 }
+				set_variable = { GER_max_planning_factor = 0 }
+				set_variable = { GER_planning_speed = 0 }
+				set_variable = { GER_army_armor_speed_factor = 0.1 }
+				set_variable = { GER_org_loss_when_moving = -0.05 }
+				set_variable = { GER_land_doctrine_cost_factor = -0.05 }
+				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3178,19 +3104,30 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = mobile_warfare
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht_Tank_2
-				add_idea = WehrmachtLightingStrike
+			custom_effect_tooltip = GER_Lighting_Strike_modify_tt
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
+
+				set_variable = { GER_breakthrough_factor = 0.1 }
+				set_variable = { GER_recon_factor = 0.1 }
+				set_variable = { GER_initiative_factor = 0.1 }
+				set_variable = { GER_coordination_bonus = 0.05 }
+				set_variable = { GER_org_loss_when_moving = -0.1 }
+				set_variable = { GER_army_armor_speed_factor = 0.1 }
+				set_variable = { GER_land_doctrine_cost_factor = -0.1 }
 			}
 		}
 	}
 
 	shared_focus = {
 		id = GER_Panther
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_generic_army_tanks
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
 		mutually_exclusive = { focus = GER_Anti_Tank }
@@ -3203,13 +3140,14 @@
 
 		available = {
 			date > 1942.1.1
+			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
 			create_equipment_variant = {
-				name = "PzKpfw V"
+				name = "PzKpfw Panther"
 				type = medium_tank_chassis_3
 				parent_version = 0
 				allow_without_tech = yes
@@ -3283,7 +3221,7 @@
 
 	shared_focus = {
 		id = GER_Anti_Tank
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_Anti_tank
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
 		mutually_exclusive = { focus = GER_Panther }
@@ -3296,13 +3234,14 @@
 
 		available = {
 			date > 1942.1.1
+			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 				create_equipment_variant = {
-				name = "Jagdpanzer"
+				name = "Jagdpanther"
 				type = medium_tank_destroyer_chassis_3
 				parent_version = 0
 				allow_without_tech = yes
@@ -3339,51 +3278,46 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			OR = {
+				has_tech = mobile_warfare
+				has_tech = superior_firepower
+			}
+		}
 		available_if_capitulated = yes
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_tank_warfare has_completed_focus = GER_Battle_Plan }
-				}
-				custom_effect_tooltip = GER_staff_tt
-				show_ideas_tooltip = Wehrmacht_Tank_2
-				custom_effect_tooltip = GER_staff_a_tt
-				show_ideas_tooltip = Wehrmacht_INF_2
-			}
-			if = {
-				limit = {
-				  GER = {
-					has_idea = Wehrmacht_INF_1
+				GER_upgrade_wehrmacht_effect = yes
+				if = {
+					limit = {
+						has_completed_focus = GER_tank_warfare
 					}
-			    }
-				swap_ideas = {
-				remove_idea = Wehrmacht_INF_1
-				add_idea = Wehrmacht_INF_2
-			    }	
-			}
-		    if = {
-				limit = {
-					GER = {
-					    has_idea = Wehrmacht_INF_1_SUPPLY
-					}
+					custom_effect_tooltip = GER_Staff_tank_modify_tt
+					set_variable = { GER_max_command_power = 20 }
+					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
+					set_variable = { GER_minimum_training_level = 0 }
 				}
-				swap_ideas = {
-				 remove_idea = Wehrmacht_INF_1_SUPPLY
-				 add_idea = Wehrmacht_INF_2_SUPPLY
-			    }
-			}
-			if = {
-				limit = {
-				 GER = {	
-					has_idea = Wehrmacht_Tank_1
+				if = {
+					limit = {
+						has_completed_focus = GER_Battle_Plan
 					}
+					custom_effect_tooltip = GER_staff_modify_tt
+					set_variable = {
+						GER_max_command_power = 15
+					}
+					set_variable = {
+						GER_max_planning_speed = 0.05
+					}
+					set_variable = {
+						GER_land_doctrine_cost_factor = -0.05
+					}
+					set_variable = { GER_minimum_training_level = 0.05 }
 				}
-				swap_ideas = {
-				remove_idea = Wehrmacht_Tank_1
-				add_idea = Wehrmacht_Tank_2
-			    }	
-			}
+				else_if = {
+					custom_effect_tooltip = GER_staff_tt
+					custom_effect_tooltip = GER_Staff_tank_modify_tt
+					custom_effect_tooltip = GER_staff_a_tt
+					custom_effect_tooltip = GER_staff_modify_tt
+				}
 		}
 	}
 
@@ -3398,27 +3332,24 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = superior_firepower
+		}
 
 		available_if_capitulated = yes
-		completion_reward = {	
-        if = {
-		 limit = {	
-			GER = {
-				has_completed_focus = GER_staff
+		completion_reward = {
+			custom_effect_tooltip = GER_better_supply_modify_tt
+			hidden_effect = {
+				set_variable = {
+					GER_truck_attrition_factor = -0.1
+				}
+				set_variable = {
+					GER_supply_factor = 0.1
+				}
+				set_variable = {
+					GER_supply_node_range = 0.1
+				}
 			}
-		 }
-		 	swap_ideas = {
-				remove_idea = Wehrmacht_INF_2
-				add_idea = Wehrmacht_INF_2_Supply
-			}	
-		}
-		else_if = {
-			swap_ideas = {
-				remove_idea = Wehrmacht_INF_1
-				add_idea = Wehrmacht_INF_1_SUPPLY
-			}
-		}
-
 		}
 	}
 
@@ -3434,12 +3365,31 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = superior_firepower
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-				swap_ideas = {
-				remove_idea = Wehrmacht_INF_2_Supply
-				add_idea = WehrmachtWarPlan
+			custom_effect_tooltip = GER_War_Plan_modify_tt
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
+				set_variable = {
+					GER_air_superiority_bonus_in_combat = 0.1
+				}
+				set_variable = {
+	                GER_cas_damage_reduction = 0.05
+				}
+				set_variable = {
+	                GER_railway_gun_bombardment_factor = 0.2
+				}
+				set_variable = {
+					GER_cas_damage_reduction = 0.05
+				}
+				set_variable = {
+					GER_land_doctrine_cost_factor = 0
+				}
+				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 		}
 	}
@@ -3458,10 +3408,10 @@
 		}
 
 		available_if_capitulated = yes
-		completion_reward = { 
-				swap_ideas = {
-				remove_idea = WehrmachtWarPlan
-				add_idea = WehrmachtWarPlana
+		completion_reward = {
+			custom_effect_tooltip = GER_Cheap_EQ_modify_tt 
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3505,9 +3455,9 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = WehrmachtWarPlan
-				add_idea = WehrmachtWarPlanb
+			custom_effect_tooltip = GER_Cheep_SUP_modify_tt
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
 			}
 		}
 	}
@@ -3550,21 +3500,27 @@
 		}
 
 		available = {
-			has_tech = trench_warfare
+			has_tech = superior_firepower
 		}
 
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Wehrmacht
-				add_idea = Wehrmacht_INF_1
+			custom_effect_tooltip = GER_Battle_Plan_modify_tt
+			hidden_effect = {
+				GER_upgrade_wehrmacht_effect = yes
+				set_variable = {
+					GER_army_speed_factor = -0.05
+				}
+				set_variable = {
+					GER_planning_speed = 0.1
+				}
 			}
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.25
 				uses = 4
-				category = cat_grand_battle_plan
+				category = cat_superior_firepower
 			}
 		}
 	}
@@ -3575,10 +3531,10 @@
 		text = GER_soviet_treaty
 		prerequisite = { focus = GER_tank_warfare }
 		available = {
-			NOT = { has_completed_focus = GER_anti_soviet_pact }
 			OR = {
 				NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
 				NOT = { has_completed_focus = GER_the_great_red_menace }
+				NOT = { has_completed_focus = GER_anti_soviet_pact }
 			}
 		}
 		#cancel = { 
@@ -3619,99 +3575,52 @@
 				limit = { 
 					has_dlc = "No Step Back"
 				}
-				if = {
-					limit = {
-						has_tech = basic_medium_tank_chassis
-					}
-					effect_tooltip = {
-						create_equipment_variant = {
-							name = "Panzer III Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_high_velocity_cannon
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 3
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
+				#custom_effect_tooltip = GER_soviet_treaty_research_nsb_tt #Obsolete now
+				effect_tooltip = {
+					create_equipment_variant = {
+						name = "Panzer III Ausf. A"
+						type = medium_tank_chassis_1
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_high_velocity_cannon
+							turret_type_slot = tank_medium_three_man_tank_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = tank_radio_1
+							special_type_slot_2 = smoke_launchers
 						}
-						create_equipment_variant = {
-							name = "Panzer IV Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 1
-							modules = {
-								main_armament_slot = tank_close_support_gun
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 2
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
+						upgrades = {
+							tank_nsb_engine_upgrade = 6
+							tank_nsb_armor_upgrade = 3
 						}
+						icon = "GFX_GER_basic_medium_tank_medium"
 					}
-				}
-				else = {
-					custom_effect_tooltip = GER_soviet_treaty_research_nsb_tt
-					effect_tooltip = {
-						create_equipment_variant = {
-							name = "Panzer III Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 0
-							modules = {
-								main_armament_slot = tank_high_velocity_cannon
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 3
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
+					create_equipment_variant = {
+						name = "Panzer IV Ausf. A"
+						type = medium_tank_chassis_1
+						parent_version = 1
+						modules = {
+							main_armament_slot = tank_close_support_gun
+							turret_type_slot = tank_medium_three_man_tank_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = tank_radio_1
+							special_type_slot_2 = smoke_launchers
 						}
-						create_equipment_variant = {
-							name = "Panzer IV Ausf. A"
-							type = medium_tank_chassis_1
-							parent_version = 1
-							modules = {
-								main_armament_slot = tank_close_support_gun
-								turret_type_slot = tank_medium_three_man_tank_turret
-								suspension_type_slot = tank_bogie_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = tank_radio_1
-								special_type_slot_2 = smoke_launchers
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 6
-								tank_nsb_armor_upgrade = 2
-							}
-							icon = "GFX_GER_basic_medium_tank_medium"
-						}	
+						upgrades = {
+							tank_nsb_engine_upgrade = 6
+							tank_nsb_armor_upgrade = 2
+						}
+						icon = "GFX_GER_basic_medium_tank_medium"
+					}	
+					add_tech_bonus = {
+						name = armor_bonus
+						bonus = 1.0
+						uses = 2
+						category = armor
 					}
-				}
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 1.0
-					uses = 2
-					category = armor
 				}
 			}
 			else = {
@@ -3731,47 +3640,10 @@
 			}
 		}
 	}
-
-	focus = {
-		id = GER_air_innovation_2
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = GER_Improve_Des focus = GER_Improve_CAS_Range focus = GER_Improve_TAC }
-		x = 5
-		y = 4
-		relative_position_id = GER_strategic_air_effort
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = { 
-			air_experience = 50
-
-			add_ideas = GER_air_innovations_2_idea
-			# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
-			add_tech_bonus = {
-				name = radar_tech_bonus
-				bonus = 1.0
-				uses = 1
-				category = radar_tech
-			}
-			if = {
-				limit = {
-					has_opinion_modifier = sov_ger_treaty
-					NOT = { has_war_with = SOV }
-				}
-				SOV = {
-					country_event = { id = germany.78 days = 1 }
-				}
-			}
-		}
-	}
-
+	
 	shared_focus = {
 		id = GER_army_innovation_2_a
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_tank_production
 		text = GER_army_innovation_2
 		prerequisite = { focus = GER_soviet_treaty_a }
 		x = -1
@@ -3817,7 +3689,7 @@
 
 	shared_focus = {
 		id = GER_air_innovation_2_a
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_goal_generic_air_fighter
 		text = GER_air_innovation_2
 		prerequisite = { focus = GER_Improve_Des focus = GER_Improve_CAS_Range focus = GER_Improve_TAC }
 		x = 5

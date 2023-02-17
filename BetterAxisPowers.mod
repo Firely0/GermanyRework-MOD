@@ -6,6 +6,6 @@ tags={
 	"Historical"
 }
 name="Better Axis Powers"
-supported_version="1.12.8"
+supported_version="1.12.9"
 path="C:/Users/Firel/OneDrive/Belgeler/Paradox Interactive/Hearts of Iron IV/mod/BetterAxisPowers"
 remote_file_id="2904370119"

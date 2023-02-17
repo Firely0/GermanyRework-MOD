@@ -1,8 +1,23 @@
 spriteTypes = {	
-	
+
+	spriteType = {
+		name = "GFX_idea_Fuhrer_idea"
+		texturefile = "gfx/interface/ideas/Fuhrer_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Kaiser_idea"
+		texturefile = "gfx/interface/ideas/Wilhelm_II_idea.dds"
+	}
+
 	spriteType = {
 		name = "GFX_idea_ger_army"
 		texturefile = "gfx/interface/ideas/wehrmacht.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_AfrikaCorps_idea"
+		texturefile = "gfx/interface/ideas/AfrikaCorps_idea.dds"
 	}
 
 	spriteType = {
@@ -36,8 +51,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_SS_UI"
+		name = "GFX_idea_SS_idea"
 		texturefile = "gfx/interface/ideas/ss_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Mercedes"
+		texturefile = "gfx/interface/ideas/mercedes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_volkswagen"
+		texturefile = "gfx/interface/ideas/volkswagen.dds"
 	}
 	
 }	

@@ -14,6 +14,23 @@ characters={
 		}
 	}
 
+	GER_SUPREM_adolf_hitler={
+		name=GER_adolf_hitler
+		portraits={
+			civilian={
+				large=GFX_portrait_Supreme_Adolf_Hitler
+			}
+		}
+		field_marshal={
+			traits={  politically_connected  offensive_doctrine old_guard }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
 	GER_konrad_adenauer={
 		name=GER_konrad_adenauer
 		portraits={
@@ -1093,7 +1110,14 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_government = fascism
+				OR = {
+				 has_government = fascism
+				 custom_trigger_tooltip = {
+					tooltip = GER_Kaiser_in_Country_tt
+					has_country_flag = GER_Kaiser_in_Country
+				 }
+				 has_country_flag = GER_Fuhrer_in_Country
+			    }
 			}
 			traits = {
 				army_chief_drill_2
@@ -1186,6 +1210,11 @@ characters={
 				or = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
 			traits = {
@@ -1447,7 +1476,7 @@ characters={
 			available = {
 				has_completed_focus = GER_four_year_plan_a
 				not = {
-					has_completed_focus = GER_demand_sudetenland_v
+					has_completed_focus = GER_demand_sudetenland
 				}
 			}
 			traits = {
@@ -1575,7 +1604,13 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_government = fascism 
+				OR = {
+					has_government = fascism
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+				   }
 				if = {
 					limit = {
 						has_dlc = "Man the Guns"
@@ -1619,6 +1654,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
 			traits = {
@@ -1650,7 +1690,13 @@ characters={
 			available = {
 				OR = {
 					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_country_flag = GER_reinstated_nazi_leadership
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
+					 
 				}
 			}
 			on_add = {
@@ -1678,7 +1724,12 @@ characters={
 			available = {
 				OR = {
 					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_country_flag = GER_reinstated_nazi_leadership
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					} 
+					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
 			ai_will_do = {
@@ -1707,6 +1758,11 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
 			traits = {
@@ -1752,7 +1808,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_oppose_hitler 
+				has_completed_focus = GER_oppose_hitler_a
 			}
 			traits = {
 				anti_fascist_agent 
@@ -1778,7 +1834,14 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_revive_the_kaiserreich 
+				OR = {
+				  has_completed_focus = GER_revive_the_kaiserreich 
+				  custom_trigger_tooltip = {
+					tooltip = GER_Kaiser_in_Country_tt
+					has_country_flag = GER_Kaiser_in_Country
+				  }
+				  has_country_flag = GER_Fuhrer_in_Country
+			    }
 			}
 			traits = {
 				monarchist_media_mogul 
@@ -1804,7 +1867,14 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_revive_the_kaiserreich 
+				OR = {
+					has_completed_focus = GER_revive_the_kaiserreich 
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
+				}
 			}
 			traits = {
 				economist 

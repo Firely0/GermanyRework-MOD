@@ -2,23 +2,41 @@ add_namespace = gerb
 add_namespace = ger_lost_core
 add_namespace = ger_request_qingdao
 add_namespace = ger_around_maginot_event
+add_namespace = ger_kaiser_in_exile
+add_namespace = ger_fuhrer_end
+add_namespace = GER_Create_Afrika_Corps_event
+add_namespace = GER_ITA_HQ_LOC
+add_namespace = GER_ENG_ETH_event
+add_namespace = GER_SWE_renew
+add_namespace = GER_denmark_problem
+add_namespace = GER_norway_problem
+add_namespace = GER_FIN_Support
+add_namespace = GER_FIN_War_Sov
+add_namespace = GER_FIN_lands
+add_namespace = GER_fate_of_andrey
+add_namespace = GER_VIC_Syria
+add_namespace = GER_offer_support_irq
+add_namespace = GER_jap_coal_trade
+add_namespace = GER_CHI_Cooperation
+add_namespace = GER_SOV_ultimatom
 
 country_event = {
 	id = ger_request_qingdao.1
 	title = "Demand Qingdao"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-
-  is_triggered_only = yes
-  
-	option = { 
+	is_triggered_only = yes
+	option = {
 		name = "Demand it"
-    random_country = {
-      limit = {
-        owns_state = 743
-      }
-      country_event = { id = ger_request_qingdao.2 days = 1 }
-    }
+		random_country = {
+			limit = {
+				owns_state = 743
+			}
+			country_event = {
+				id = ger_request_qingdao.2
+				days = 1
+			}
+		}
 	}
 }
 
@@ -27,33 +45,77 @@ country_event = {
 	title = "Germany Demands Qingdao"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-
-  set_from = ROOT
-
-  is_triggered_only = yes
-
-	option = { 
+	set_from = ROOT
+	is_triggered_only = yes
+	option = {
 		name = "Fine"
-    ai_chance = { base = 40 
-    modifier = { tag = JAP GER = { has_completed_focus = GER_japan_friend_v } factor = 80 }
-    modifier = { tag = CHI GER = { has_completed_focus = GER_china_friend_v } factor = 80 }
-    modifier = { tag = MAN GER = { has_completed_focus = GER_japan_friend_v } factor = 100 }
-    modifier = { is_major = yes add = 1 }
-    }
-    GER = {
-      country_event = { id = ger_request_qingdao.4 days = 1 }
-    }
+		ai_chance = {
+			base = 40
+			modifier = {
+				tag = JAP
+				GER = {
+					has_completed_focus = GER_japan_friend
+				}
+				factor = 80
+			}
+			modifier = {
+				tag = CHI
+				GER = {
+					has_completed_focus = GER_china_friend
+				}
+				factor = 80
+			}
+			modifier = {
+				tag = MAN
+				GER = {
+					has_completed_focus = GER_japan_friend
+				}
+				factor = 100
+			}
+			modifier = {
+				is_major = yes
+				add = 1
+			}
+		}
+		GER = {
+			country_event = {
+				id = ger_request_qingdao.4
+				days = 1
+			}
+		}
 	}
-
-  option = { 
+	option = {
 		name = "No"
-    ai_chance = { base = 40 
-    modifier = { tag = JAP GER = { has_completed_focus = GER_china_friend_v } factor = 20 }
-    modifier = { tag = CHI GER = { has_completed_focus = GER_japan_friend_v } factor = 30 }
-    modifier = { tag = MAN GER = { has_completed_focus = GER_china_friend_v } factor = 0 }}
-    GER = {
-      country_event = { id = ger_request_qingdao.3 days = 1 }
-    }
+		ai_chance = {
+			base = 40
+			modifier = {
+				tag = JAP
+				GER = {
+					has_completed_focus = GER_china_friend
+				}
+				factor = 20
+			}
+			modifier = {
+				tag = CHI
+				GER = {
+					has_completed_focus = GER_japan_friend
+				}
+				factor = 30
+			}
+			modifier = {
+				tag = MAN
+				GER = {
+					has_completed_focus = GER_china_friend
+				}
+				factor = 0
+			}
+		}
+		GER = {
+			country_event = {
+				id = ger_request_qingdao.3
+				days = 1
+			}
+		}
 	}
 }
 
@@ -62,17 +124,17 @@ country_event = {
 	title = "They Forced Our Hand"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-
-  is_triggered_only = yes
-
-	option = { 
+	is_triggered_only = yes
+	option = {
 		name = "Prepare for War"
-    create_wargoal = {
-      type = take_state_focus
-      target = from
-      generator = { 743 }
-    }
-    add_state_claim = 743
+		create_wargoal = {
+			type = take_state_focus
+			target = from
+			generator = {
+				743
+			}
+		}
+		add_state_claim = 743
 	}
 }
 
@@ -81,13 +143,12 @@ country_event = {
 	title = "They Acepted Our Request"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-
-  is_triggered_only = yes
-
-	option = { 
+	is_triggered_only = yes
+	option = {
 		name = "Good"
-    transfer_state = 743 target = GER
-    add_state_core = 743
+		transfer_state = 743
+		target = GER
+		add_state_core = 743
 	}
 }
 
@@ -96,300 +157,394 @@ country_event = {
 	title = "Fuhrer Worried About Lost Lands "
 	desc = ""
 	picture = GFX_report_event_generic_soldiers_surrendering
-
-  is_triggered_only = yes
-
-	option = { 
+	is_triggered_only = yes
+	option = {
 		name = "We Will Together Again Soon..."
-
 		GER_bop_medium_decrease_effect = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
-
 	}
-}  
+}
 
 country_event = {
 	id = ger_lost_core.2
 	title = "We Have Recaptured Germany"
 	desc = ""
 	picture = GFX_report_event_german_troops
-	
 	is_triggered_only = yes
-
 	fire_only_once = yes
-
 	# ok
-	option = { 
+	option = {
 		name = BBA_italy_bop.3.a
-
-		GER_bop_medium_increase_effect = yes	
-		custom_effect_tooltip = ITA_reclaiming_cores_tt	
+		GER_bop_medium_increase_effect = yes
+		custom_effect_tooltip = ITA_reclaiming_cores_tt
 	}
 }
 
 #Yugoslavia Germany Events
 country_event = {
-    id = gerb.1
-    title = "Demands For Yugoslavia!"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
- option = {
-    name = "Demand Slovenia"
-    ai_chance = { factor = 20 }
-	random_country = {
-		limit = {
-			owns_state = 102 
+	id = gerb.1
+	title = "Demands For Yugoslavia!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Demand Slovenia"
+		ai_chance = {
+			factor = 20
 		}
-		country_event = { id = gerb.2 days = 1 }
-	}
- }
-
-  option = {
-    name = "Slovenia for Membership"
-    ai_chance = { factor = 80 }
-
-	random_country = {
-		limit = {
-			owns_state = 102
+		random_country = {
+			limit = {
+				owns_state = 102
+			}
+			country_event = {
+				id = gerb.2
+				days = 1
+			}
 		}
-		country_event = { id = gerb.21 days = 1 }
 	}
-  }
-}
-
-country_event = {
-    id = gerb.2
-    title = "Germany Demands Slovenia!"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
- option = {
-    name = "Accept"
-    ai_chance = { base = 40 
-    modifier = { tag = ROOT ROOT = { has_idea = fascist_influence } factor = 60 }
-    }
-    GER = { country_event = { id = gerb.3 days = 1 } }   
- }
-
-  option = {
-    name = "No"
-    ai_chance = { base = 60
-    }
-    GER = { country_event = { id = gerb.4 days = 1 } }   
- }
-}
-
-country_event = {
-  id = gerb.21
-  title = "Germany Demands Slovenia!"
-  desc = ""
-  picture = GFX_report_event_chinese_army_training
-
-  is_triggered_only = yes
-
-option = {
-  name = "Accept"
-  ai_chance = { factor = 80 }
-  GER = { country_event = { id = gerb.31 days = 1 } }   
-}
-
-option = {
-  name = "No"
-  ai_chance = { factor = 20 }
-  GER = { country_event = { id = gerb.4 days = 1 } }   
-}
-}
-
-country_event = {
-    id = gerb.3
-    title = "Yugoslavia Accepted Our Request"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
-  option = {
-    name = "Good"
-    ai_chance = { factor = 100 }
-    GER = { transfer_state = 102 add_state_core = 102 }
-  }
-}
-
-country_event = {
-  id = gerb.31
-  title = "Yugoslavia Accepted Our Request"
-  desc = ""
-  picture = GFX_report_event_chinese_army_training
-
-  is_triggered_only = yes
-
-option = {
-  name = "Good"
-  ai_chance = { factor = 100 }
-
-  GER = { transfer_state = 102 add_state_core = 102 }
-  add_to_faction = YUG
-
-}
-}
-
-country_event = {
-    id = gerb.4
-    title = "Yugoslavia Not Accepted Our Request"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
-  option = {
-    name = "They Forced Our Hand"
-    ai_chance = { factor = 100 }
-    create_wargoal = {
-        type = take_state_focus
-        generator = { 102 }
-    }
-  }
-}
-
-country_event = {
-    id = gerb.5
-    title = "Demands For Czechoslovakia!"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
- option = {
-    name = "Demand Sudetenland"
-    ai_chance = { factor = 20 }
-	random_country = {
-		limit = {
-			owns_state = 69 
+	option = {
+		name = "Slovenia for Membership"
+		ai_chance = {
+			factor = 80
 		}
-		country_event = { id = gerb.6 days = 1 }
-	}
- }
-
-  option = {
-    name = "Sudetenland for Membership"
-    ai_chance = { factor = 80 }
-	random_country = {
-		limit = {
-			owns_state = 102
+		trigger = {
+			has_completed_focus = GER_Axis_Powers
 		}
-		country_event = { id = gerb.61 days = 1 }
-    set_global_flag = ger_sud_membership
+		random_country = {
+			limit = {
+				owns_state = 102
+			}
+			country_event = {
+				id = gerb.21
+				days = 1
+			}
+		}
 	}
-  }
 }
 
 country_event = {
-    id = gerb.6
-    title = "Germany Demands Sudetenland!"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
- option = {
-    name = "Accept"
-    ai_chance = { base = 40 
-    modifier = { tag = ROOT ROOT = { has_idea = fascist_influence } factor = 50 }
-    }
-    GER = { country_event = { id = gerb.7 days = 1 } }   
- }
-
-  option = {
-    name = "No"
-    ai_chance = { factor = 60
-    modifier = {
-        factor = 40
-        has_idea = fascist_influence
-    }
-    }
-    GER = { country_event = { id = gerb.8 days = 1 } }   
- }
+	id = gerb.2
+	title = "Germany Demands Slovenia!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Accept"
+		ai_chance = {
+			base = 40
+			modifier = {
+				tag = ROOT
+				ROOT = {
+					has_idea = fascist_influence
+				}
+				factor = 60
+			}
+		}
+		GER = {
+			country_event = {
+				id = gerb.3
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = "No"
+		ai_chance = {
+			base = 60
+		}
+		GER = {
+			country_event = {
+				id = gerb.4
+				days = 1
+			}
+		}
+	}
 }
 
 country_event = {
-  id = gerb.61
-  title = "Germany Demands Sudetenland!"
-  desc = ""
-  picture = GFX_report_event_chinese_army_training
-
-  is_triggered_only = yes
-
-option = {
-  name = "Accept"
-  ai_chance = { base = 60 
-  modifier = { tag = ROOT ROOT = { has_idea = fascist_influence } factor = 80 }
-  }
-  GER = { country_event = { id = gerb.71 days = 1 } }
-}
-
-option = {
-  name = "No"
-  ai_chance = { factor = 40
-  }
-  GER = { country_event = { id = gerb.8 days = 1 } }   
-}
-}
-
-country_event = {
-    id = gerb.7
-    title = "Czechoslovakia Accepted Our Request"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
-
-    is_triggered_only = yes
-
-   option = {
-    name = "Good"
-    ai_chance = { factor = 100 }
-
-    GER = { transfer_state = 69 add_state_core = 69 }
-  }
+	id = gerb.21
+	title = "Germany Demands Slovenia!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Accept"
+		ai_chance = {
+			factor = 80
+		}
+		GER = {
+			country_event = {
+				id = gerb.31
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = "No"
+		ai_chance = {
+			factor = 20
+		}
+		GER = {
+			country_event = {
+				id = gerb.4
+				days = 1
+			}
+		}
+	}
 }
 
 country_event = {
-  id = gerb.71
-  title = "Czechoslovakia Accepted Our Request"
-  desc = ""
-  picture = GFX_report_event_chinese_army_training
-
-  is_triggered_only = yes
-
- option = {
-  name = "Good"
-  ai_chance = { factor = 100 }
-
-  GER = { transfer_state = 69 add_state_core = 69 }
-  add_to_faction = CZE
- }
+	id = gerb.3
+	title = "Yugoslavia Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Good"
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 102
+			add_state_core = 102
+		}
+	}
 }
 
 country_event = {
-    id = gerb.8
-    title = "Czechoslovakia Not Accepted Our Request"
-    desc = ""
-    picture = GFX_report_event_chinese_army_training
+	id = gerb.31
+	title = "Yugoslavia Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Good"
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 102
+			add_state_core = 102
+		}
+		add_to_faction = YUG
+		YUG = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = 200
+			}
+		}
+	}
+}
 
-    is_triggered_only = yes
+country_event = {
+	id = gerb.4
+	title = "Yugoslavia Not Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "They Forced Our Hand"
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = controller
+			generator = {
+				102
+			}
+		}
+	}
+}
 
-  option = {
-    name = "They Forced Our Hand"
-    ai_chance = { factor = 100 }
-    create_wargoal = {
-        type = take_state_focus
-        target = CZE
-        generator = { 69 }
-    }
-  }
+country_event = {
+	id = gerb.5
+	title = "Demands For Czechoslovakia!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Demand Sudetenland"
+		ai_chance = {
+			factor = 20
+		}
+		random_country = {
+			limit = {
+				owns_state = 69
+			}
+			country_event = {
+				id = gerb.6
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = "Sudetenland for Membership"
+		ai_chance = {
+			factor = 80
+		}
+		trigger = {
+			has_completed_focus = GER_Axis_Powers
+		}
+		random_country = {
+			limit = {
+				owns_state = 69
+			}
+			country_event = {
+				id = gerb.61
+				days = 1
+			}
+			set_global_flag = ger_sud_membership
+		}
+	}
+}
+
+country_event = {
+	id = gerb.6
+	title = "Germany Demands Sudetenland!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Accept"
+		ai_chance = {
+			base = 40
+			modifier = {
+				tag = ROOT
+				ROOT = {
+					has_idea = fascist_influence
+				}
+				factor = 50
+			}
+		}
+		GER = {
+			country_event = {
+				id = gerb.7
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = "No"
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 40
+				has_idea = fascist_influence
+			}
+		}
+		GER = {
+			country_event = {
+				id = gerb.8
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gerb.61
+	title = "Germany Demands Sudetenland!"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Accept"
+		ai_chance = {
+			base = 60
+			modifier = {
+				tag = ROOT
+				ROOT = {
+					has_idea = fascist_influence
+				}
+				factor = 80
+			}
+		}
+		GER = {
+			country_event = {
+				id = gerb.71
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = "No"
+		ai_chance = {
+			factor = 40
+		}
+		GER = {
+			country_event = {
+				id = gerb.8
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gerb.7
+	title = "Czechoslovakia Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Good"
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 69
+			add_state_core = 69
+		}
+	}
+}
+
+country_event = {
+	id = gerb.71
+	title = "Czechoslovakia Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "Good"
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 69
+			add_state_core = 69
+		}
+		add_to_faction = CZE
+		CZE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gerb.8
+	title = "Czechoslovakia Not Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = "They Forced Our Hand"
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = CZE
+			generator = {
+				69
+			}
+		}
+	}
 }
 
 # Ultimatum from Germany (Turkey)
@@ -398,28 +553,33 @@ country_event = {
 	title = gerb.79.t
 	desc = gerb.79.d
 	picture = GFX_report_event_german_turkish_pact
-
 	is_triggered_only = yes
-
 	option = {
 		name = gerb.79.a
 		ai_chance = {
 			factor = 70
 			modifier = {
-				NOT = { BUL = { is_in_faction_with = GER } }
+				NOT = {
+					BUL = {
+						is_in_faction_with = GER
+					}
+				}
 				factor = 0.5
 			}
 		}
-		GER = { puppet = TUR }
+		GER = {
+			puppet = TUR
+		}
 	}
-
 	option = {
 		name = gerb.79.b
 		ai_chance = {
 			factor = 10
 			modifier = {
-				GER = { surrender_progress > 0.25 }
-				factor = 5 #seems safe
+				GER = {
+					surrender_progress > 0.25
+				}
+				factor = 5				#seems safe
 			}
 			modifier = {
 				has_government = democratic
@@ -443,7 +603,9 @@ country_event = {
 				is_faction_leader = yes
 			}
 		}
-		ENG = { add_to_faction = TUR }
+		ENG = {
+			add_to_faction = TUR
+		}
 		TUR = {
 			add_ai_strategy = {
 				type = alliance
@@ -452,7 +614,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = gerb.79.c
 		ai_chance = {
@@ -464,7 +625,6 @@ country_event = {
 				factor = 5
 			}
 			modifier = {
-
 				AND = {
 					ENG = {
 						has_capitulated = no
@@ -479,8 +639,7 @@ country_event = {
 						has_war_with = GER
 					}
 				}
-
-				factor = 5 #lol come at me bro
+				factor = 5				#lol come at me bro
 			}
 		}
 		GER = {
@@ -490,26 +649,26 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.216 }
+			news_event = {
+				hours = 6
+				id = news.216
+			}
 		}
 	}
 }
 
 country_event = {
-  id = ger_around_maginot_event.1
-  title = "War With France"
-  desc = "GER_Around_ds"
-
-  picture = GFX_report_event_german_troops
-
-  is_triggered_only = yes
-
-  will_lead_to_war_with = BEL
-  will_lead_to_war_with = HOL
-  will_lead_to_war_with = LUX
-  will_lead_to_war_with = FRA
-  
-    option = {
+	id = ger_around_maginot_event.1
+	title = "War With France"
+	desc = "GER_Around_ds"
+	picture = GFX_report_event_german_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	will_lead_to_war_with = BEL
+	will_lead_to_war_with = HOL
+	will_lead_to_war_with = LUX
+	will_lead_to_war_with = FRA
+	option = {
 		name = ger_around_maginot_event.1.a
 		ai_chance = {
 			factor = 60
@@ -518,113 +677,1865 @@ country_event = {
 				has_completed_focus = GER_tank_warfare
 			}
 		}
-		if = { 
+		if = {
 			limit = {
 				country_exists = BEL
-				NOT = { BEL = { is_in_faction_with = GER } }
-				NOT = { has_war_with = BEL }
+				NOT = {
+					BEL = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = BEL
+				}
 			}
 			create_wargoal = {
 				type = take_state_focus
 				target = BEL
 				expire = 0
-				generator = { 6 }
+				generator = {
+					6
+				}
 			}
 		}
-		if =  {
+		if = {
 			limit = {
 				country_exists = HOL
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { has_war_with = HOL }
-				NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+				NOT = {
+					HOL = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = HOL
+				}
+				NOT = {
+					HOL = {
+						has_completed_focus = HOL_cave_to_the_germans
+					}
+				}
 			}
 			create_wargoal = {
 				type = take_state_focus
 				target = HOL
 				expire = 0
-				generator = { 7 }
+				generator = {
+					7
+				}
 			}
 		}
-		if =  {
+		if = {
 			limit = {
 				country_exists = HOL
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { has_war_with = HOL }
-				HOL = { has_completed_focus = HOL_cave_to_the_germans } 
-				NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+				NOT = {
+					HOL = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = HOL
+				}
+				HOL = {
+					has_completed_focus = HOL_cave_to_the_germans
+				}
+				NOT = {
+					HOL = {
+						has_completed_focus = HOL_the_netherlands_first
+					}
+				}
 			}
 			HOL = {
-				country_event = { id = mtg_germany.1 hours = 6 }
+				country_event = {
+					id = mtg_germany.1
+					hours = 6
+				}
 			}
 		}
 		if = {
 			limit = {
 				country_exists = LUX
-				NOT = { LUX = { is_in_faction_with = GER } }
-				NOT = { has_war_with = LUX }
+				NOT = {
+					LUX = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = LUX
+				}
 			}
 			create_wargoal = {
 				type = take_state_focus
 				target = LUX
 				expire = 0
-				generator = { 8 }
-			}			
+				generator = {
+					8
+				}
+			}
 		}
 		set_country_flag = GER_BLITZ
-		complete_national_focus = GER_around_maginot_v
+		complete_national_focus = GER_around_maginot
 		hidden_effect = {
-			news_event = { hours = 6 id = news.234 }
+			news_event = {
+				hours = 6
+				id = news.234
+			}
 		}
 	}
-
-    option = {
-	name = ger_around_maginot_event.1.b
-
-	ai_chance = {
-		factor = 0
-    modifier = {
-        factor = 80
-        has_completed_focus = GER_Battle_Plan
-    }
-    modifier = {
-        factor = 100
-        has_completed_focus = GER_better_supply
-    }
-
-	}
-
-		if = { 
+	option = {
+		name = ger_around_maginot_event.1.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 80
+				has_completed_focus = GER_Battle_Plan
+			}
+			modifier = {
+				factor = 100
+				has_completed_focus = GER_better_supply
+			}
+		}
+		if = {
 			limit = {
 				country_exists = BEL
-				NOT = { BEL = { is_in_faction_with = GER } }
-				NOT = { has_war_with = BEL }
+				NOT = {
+					BEL = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = BEL
+				}
 			}
 			create_wargoal = {
 				type = take_state_focus
 				target = BEL
 				expire = 0
-				generator = { 6 }
+				generator = {
+					6
+				}
 			}
 		}
 		if = {
 			limit = {
 				country_exists = LUX
-				NOT = { LUX = { is_in_faction_with = GER } }
-				NOT = { has_war_with = LUX }
+				NOT = {
+					LUX = {
+						is_in_faction_with = GER
+					}
+				}
+				NOT = {
+					has_war_with = LUX
+				}
 			}
 			create_wargoal = {
 				type = take_state_focus
 				target = LUX
 				expire = 0
-				generator = { 8 }
-			}			
+				generator = {
+					8
+				}
+			}
 		}
 		set_country_flag = GER_OLD_PLAN
-		complete_national_focus = GER_around_maginot_v
+		complete_national_focus = GER_around_maginot
 		hidden_effect = {
-			news_event = { hours = 6 id = news.234 }
+			news_event = {
+				hours = 6
+				id = news.234
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.1
+	title = ger_kaiser_in_exile.1.t
+	desc = ger_kaiser_in_exile.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = ger_kaiser_in_exile.1.a
+		ai_chance = {
+			factor = 0
+		}
+		GER = {
+			GER_bop_medium_increase_effect = yes
+		}
+	}
+	#Historical
+	option = {
+		name = ger_kaiser_in_exile.1.b
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			GER_bop_low_increase_effect = yes
+		}
+	}
+	option = {
+		name = ger_kaiser_in_exile.1.c
+		ai_chance = {
+			factor = 0
+		}
+		HOL = {
+			country_event = ger_kaiser_in_exile.3
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.3
+	title = wtt_germany.3.t
+	desc = wtt_germany.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	#accept
+	option = {
+		name = wtt_germany.3.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = GER
+					ratio > 1.5
+				}
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = {
+					tag = GER
+					ratio > 3
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = GER
+					ratio > 5
+				}
+			}
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = GER_netherlands_kaiser_accept_opinion
+			}
+			country_event = {
+				id = ger_kaiser_in_exile.4
+				days = 1
+			}
+		}
+		FRA = {
+			country_event = {
+				id = wtt_germany.28
+			}
+		}
+	}
+	#refuse
+	option = {
+		name = wtt_germany.3.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = GER
+					ratio < 1
+				}
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = {
+					tag = GER
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = GER
+					ratio < 0.2
+				}
+			}
+		}
+		set_country_flag = netherlands_refused_return_kaiser
+		GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = GER_netherlands_kaiser_decline_opinion
+			}
+			country_event = {
+				id = ger_kaiser_in_exile.5
+				days = 1
+			}
+			hidden_effect = {
+				news_event = {
+					id = ger_f_news.1
+					hours = 30
+				}
+			}
+		}
+	}
+}
+
+#Notification event for Germany that the Kaiser is returned
+country_event = {
+	id = ger_kaiser_in_exile.4
+	title = wtt_germany.4.t
+	desc = wtt_germany.4.d
+	picture = GFX_report_event_royal_parade
+	is_triggered_only = yes
+	#accept
+	option = {
+		name = ger_kaiser_in_exile.4.a
+		custom_effect_tooltip = GER_Wilhelm_II_back_tt
+		set_country_flag = GER_Kaiser_in_Country
+		hidden_effect = {
+			GER = {
+				add_ideas = Kaiser_Idea
+				create_corps_commander = {
+					name = "Paul von Lettow-Vorbeck"
+					gfx = GFX_portrait_ger_von_lettow_vorbeck
+					traits = {
+						trickster
+						war_hero
+						media_personality
+						jungle_rat
+					}
+					skill = 4
+					id = 499
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 5
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = ger_f_news.3
+				hours = 6
+			}
+		}
+	}
+}
+
+#Netherlands refuses to return the Kaiser!
+country_event = {
+	id = ger_kaiser_in_exile.5
+	title = ger_f_news.5.t
+	desc = ger_f_news.5.d
+	picture = GFX_report_event_german_troops
+	is_triggered_only = yes
+	#War!
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = wtt_germany.5.a
+		set_global_flag = GER_BLOCKED_KAISER
+		declare_war_on = {
+			target = HOL
+			type = puppet_wargoal_focus
+		}
+		FRA = {
+			country_event = {
+				id = wtt_germany.28
+			}
+		}
+	}
+	#Back down.
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "We Will Deal With Them Later."
+		set_global_flag = GER_BLOCKED_KAISER
+	}
+}
+
+#Kaiser returned through war
+country_event = {
+	id = ger_kaiser_in_exile.6
+	title = ger_kaiser_in_exile.6.t
+	desc = ger_kaiser_in_exile.6.d
+	picture = GFX_report_event_royal_parade
+	is_triggered_only = yes
+	option = {
+		name = ger_kaiser_in_exile.6.a
+		custom_effect_tooltip = GER_Wilhelm_II_back_tt
+		clr_global_flag = GER_BLOCKED_KAISER
+		set_country_flag = GER_Kaiser_in_Country
+		hidden_effect = {
+			GER = {
+				add_ideas = Kaiser_Idea
+				create_corps_commander = {
+					name = "Paul von Lettow-Vorbeck"
+					gfx = GFX_portrait_ger_von_lettow_vorbeck
+					traits = {
+						trickster
+						war_hero
+						media_personality
+						jungle_rat
+					}
+					skill = 4
+					id = 499
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 5
+				}
+			}
+		}
+	}
+}
+
+#Bad Ending for Fuhrer.
+country_event = {
+	id = ger_fuhrer_end.1
+	title = ger_fuhrer_end.1.t
+	desc = ger_fuhrer_end.1.d
+	picture = GFX_report_event_german_troops
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Long Live Kaiser!"
+		custom_effect_tooltip = GER_Fuhrer_Deposed_tt
+		hidden_effect = {
+			remove_ideas = Kaiser_idea
+			add_ideas = Fuhrer_idea
+			set_country_flag = GER_Fuhrer_in_Country
+			clr_country_flag = GER_Kaiser_in_Country
+			remove_power_balance = {
+				id = GER_power_balance
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 0
+				neutrality = 45
+				fascism = 55
+				communism = 0
+			}
+			GER_wilhelm_ii = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+							anti_democrat
+							imperial_connections
+						}
+					}
+				}
+			}
+			set_country_leader_portrait = {
+				ideology = despotism
+				portrait = GFX_portrait_ger_wilhelm_II_r
+			}
+			set_cosmetic_tag = GER_neutrality
+			set_country_flag = kaiser_wilhelm_ii
+		}
+	}
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.1
+	title = "Establish the German Africa Korps"
+	desc = ""
+	picture = GFX_report_event_german_troops
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Establish as Branch of Wehrmacht"
+		hidden_effect = {
+			set_global_flag = AfricaCorps_in_germany
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Establish as Sub-Branch of Royal Italian Army"
+		trigger = {
+			has_completed_focus = GER_Axis_Powers
+			ITA = {
+				is_in_faction_with = GER
+			}
+		}
+		ITA = {
+			country_event = {
+				id = GER_Create_Afrika_Corps_event.2
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.2
+	title = "Germany Wants Create GER-ITA Africa Korps"
+	desc = GER_Create_Afrika_Corps_event.2.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+		GER = {
+			country_event = {
+				id = GER_Create_Afrika_Corps_event.3
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = AfricaCorps_in_italy
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_Create_Afrika_Corps_event.4
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.3
+	title = "Italy Accepted Our Offer"
+	desc = GER_Create_Afrika_Corps_event.3.d
+	picture = GFX_report_event_german_troops
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_Create_Afrika_Corps_event.4
+	title = "Italy Not Accepted Our Offer"
+	desc = "Waste of Time."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Seriously? Good luck."
+		hidden_effect = {
+			add_political_power = -31
+		}
+	}
+}
+
+country_event = {
+	id = GER_ENG_ETH_event.1
+	title = "Demands from Germans!"
+	desc = GER_ENG_ETH_event.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine"
+		GER = {
+			country_event = {
+				id = GER_ENG_ETH_event.2
+				days = 1
+			}
+		}
+		ENG = {
+			remove_from_faction = ETH
+		}
+		hidden_effect = {
+			ITA = {
+				annex_country = {
+					target = ETH
+				}
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_ENG_ETH_event.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_ENG_ETH_event.2
+	title = "United Kingdom Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_ENG_ETH_event.3
+	title = "United Kingdom Not Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Prepare for War"
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			expire = 0
+			generator = {
+				126
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We Will Deal With Them Later"
+	}
+}
+
+country_event = {
+	id = GER_SWE_renew.1
+	title = "Germany Wants Renew our Iron Trade"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+		GER = {
+			country_event = {
+				id = GER_SWE_renew.2
+				days = 1
+			}
+		}
+		hidden_effect = {
+			SWE = {
+				remove_ideas = neutrality_idea
+				add_ai_strategy = {
+					type = befriend
+					id = "GER"
+					value = 300
+				}
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_SWE_renew.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_SWE_renew.2
+	title = "Sweden Accepted our Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+		hidden_effect = {
+			GER = {
+				add_ideas = GER_Trade_with_Sweden
+			}
+			SWE = {
+				add_ideas = GER_Trade_with_Sweden_SWE
+			}
+			GER = {
+				give_guarantee = SWE
+			}
+			set_global_flag = GER_Swe_Trade
+		}
+	}
+}
+
+country_event = {
+	id = GER_SWE_renew.3
+	title = "Sweden Not Accepted our Trade Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Secure Our Imports"
+		GER = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SWE
+				expire = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_denmark_problem.1
+	title = "Denmark Problem!"
+	desc = "We Must Secure Baltic Sea from Allies or Other Potential Enemy, For This We Must Eliminate Denmark or We Can Always Take Peaceful Approach."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Send Ultimatum"
+		DEN = {
+			country_event = {
+				id = GER_denmark_problem.2
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_sent
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Send Puppet Demand"
+		DEN = {
+			country_event = {
+				id = GER_denmark_problem.3
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_sent
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Pressure Denmark Government"
+		GER = {
+			set_global_flag = GER_pressure_denmark_government
+		}
+	}
+}
+
+country_event = {
+	id = GER_denmark_problem.2
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Fully Annexation of our Country."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Accept Demands"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark_sent
+			set_global_flag = GER_ultimatum_denkmark_y
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_denkmark_n
+		}
+	}
+}
+
+country_event = {
+	id = GER_denmark_problem.3
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Become Puppet of Germany."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Accept Demands"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark_sent
+			set_global_flag = GER_ultimatum_denmark_puppet_y
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_denkmark_sent
+			set_global_flag = GER_ultimatum_denmark_puppet_n
+		}
+	}
+}
+
+country_event = {
+	id = GER_norway_problem.1
+	title = "Norway Problem!"
+	desc = "We Must Secure Baltic Sea from Allies or Other Potential Enemy, For This We Must Eliminate Norway or We Can Always Take Peaceful Approach."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Send Ultimatum"
+		NOR = {
+			country_event = {
+				id = GER_norway_problem.2
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway_sent
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Send Puppet Demand"
+		NOR = {
+			country_event = {
+				id = GER_norway_problem.3
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway_sent
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Pressure Norway Government"
+		set_global_flag = GER_pressure_norway_government
+	}
+}
+
+country_event = {
+	id = GER_norway_problem.2
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Fully Annexation of our Country."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Accept Demands"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway_sent
+			set_global_flag = GER_ultimatum_norway_y
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		hidden_effect = {
+			set_global_flag = GER_ultimatum_norway_n
+		}
+	}
+}
+
+country_event = {
+	id = GER_norway_problem.3
+	title = "Ultimatum from Germany!"
+	desc = "They Demanding Become Puppet of Germany."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Accept Demands"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway_sent
+			set_global_flag = GER_ultimatum_norway_puppet_y
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+		hidden_effect = {
+			clr_global_flag = GER_ultimatum_norway_sent
+			set_global_flag = GER_ultimatum_norway_puppet_n
+		}
+	}
+}
+
+country_event = {
+	id = GER_FIN_Support.1
+	title = "Support from Germans"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Yes"
+		GER = {
+			country_event = {
+				id = GER_FIN_Support.2
+				days = 1
+			}
+		}
+		FIN = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 950
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 250
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_Fin_help_y
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_FIN_Support.3
+				days = 1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_Fin_help_n
+		}
+	}
+}
+
+country_event = {
+	id = GER_FIN_Support.2
+	title = "Finland Accepted our Support"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_FIN_Support.3
+	title = "Finland Not Accepted our Support"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good Luck"
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.1
+	title = "Request from Germany!"
+	desc = "Germany wants us to join war Against Soviet Union!, They Promised Give our Lost Land Back to us"
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Prepare for War"
+		GER = {
+			country_event = {
+				id = GER_FIN_War_Sov.2
+			}
+		}
+		hidden_effect = {
+			set_global_flag = GER_FIN_granted_lands
+		}
+		hidden_effect = {
+			GER = {
+				add_to_faction = FIN
+			}
+			FIN = {
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_FIN_War_Sov.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.2
+	title = "Finland Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good."
+	}
+}
+
+country_event = {
+	id = GER_FIN_War_Sov.3
+	title = "Finland not Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Nevermind."
+	}
+}
+
+country_event = {
+	id = GER_FIN_lands.1
+	title = "Request from Finland"
+	desc = "Finland Request Control of Their Pre-Winter War lands."
+	picture = GFX_report_event_finnish_soldiers_snow
+	trigger = {
+		original_tag = GER
+		has_global_flag = GER_FIN_granted_lands
+		country_exists = FIN
+		FIN = {
+			has_capitulated = NO
+			is_in_faction_with = GER
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		150 = {
+			is_controlled_by = FIN
+		}
+		149 = {
+			is_controlled_by = FIN
+		}
+		148 = {
+			is_controlled_by = FIN
+		}
+		111 = {
+			is_controlled_by = FIN
+		}
+		if = {
+			limit = {
+				any_allied_country = {
+					NOT = {
+						is_subject_of = ROOT
+					}
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					NOT = {
+						is_subject_of = ROOT
+					}
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = GER
+					OR = {
+						controls_state = 146
+						controls_state = 147
+						controls_state = 722
+					}
+				}
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine."
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = FIN_Granted_146
+				}
+				146 = {
+					NOT = {
+						owner = FIN
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			FIN = {
+				transfer_state = 146
+			}
+			set_global_flag = FIN_Granted_146
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = FIN_Granted_147
+				}
+				147 = {
+					NOT = {
+						owner = FIN
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			FIN = {
+				transfer_state = 147
+			}
+			set_global_flag = FIN_Granted_147
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = FIN_Granted_722
+				}
+				722 = {
+					NOT = {
+						owner = FIN
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			FIN = {
+				transfer_state = 722
+			}
+			set_global_flag = FIN_Granted_722
+		}
+	}
+}
+
+country_event = {
+	id = GER_ITA_HQ_LOC.1
+	title = "German - Italian Africa Front"
+	desc = "Where We Should Focus on our Africa Front?."
+	picture = GFX_report_event_german_italian_pact
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "Libya"
+		set_global_flag = GER_LIB_SIDE_PLAN
+	}
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "Ethiopia"
+		set_global_flag = GER_ETH_SIDE_PLAN
+	}
+}
+
+country_event = {
+	id = GER_fate_of_andrey.1
+	title = "Fate of Andrey Vlasov"
+	desc = "What Should We Do With Andrey Vlasov?"
+	picture = GFX_report_event_german_italian_pact
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Any ally against Bolshevism is welcome."
+		recruit_character = SOV_andrey_vlasov
+		SOV_andrey_vlasov = {
+			add_trait = {
+				trait = brilliant_strategist
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Leave his Fate to SS"
+		retire_character = SOV_andrey_vlasov
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.1
+	title = "Germany Demands Syria"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine, They Cause Problem Anyway."
+
+		GER = {
+			country_event = { id = GER_VIC_Syria.2 hours = 6 }
+		}
+		
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+		name = "No"
+		
+		GER = {
+			country_event = { id = GER_VIC_Syria.3 hours = 6 }
+		}
+	}
+}
+
+
+country_event = {
+	id = GER_VIC_Syria.2
+	title = "Vicht France Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			GER = {
+				set_state_owner = 677
+				set_state_owner = 680
+				set_state_owner = 554
+				set_state_owner = 553
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_VIC_Syria.3
+	title = "Vicht France Not Accepted our Demands!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.1
+	title = "Germany Offer Support"
+	desc = "Germany Offer Support Against United Kingdom, And Wants to Help Us Nationalize Our Resources. In return they want some oil to flow to them."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = "Better Than Nothing."
+
+		GER = {
+			country_event = { id = GER_offer_support_irq.2 hours = 3 }
+		}
+		
+		ENG = {
+			country_event = { id = GER_offer_support_irq.4 hours = 3 }
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+		
+		GER = {
+			country_event = { id = GER_offer_support_irq.3 hours = 3 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.2
+	title = "Iraq Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		hidden_effect = {
+			give_guarantee = IRQ
+			ENG = { remove_resource_rights = 676 }
+			ENG = { remove_resource_rights = 291 }
+			IRQ = {
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 200
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = offered_support
+				}
+				give_resource_rights = {
+					receiver = GER
+					state = 676
+					resources = { oil }
+				}
+			}
 		}
 
 	}
 }
 
+country_event = {
+	id = GER_offer_support_irq.3
+	title = "Iraq Not Accepted Our Request"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good Luck."
+	}
+}
+
+country_event = {
+	id = GER_offer_support_irq.4
+	title = "Iraq Nationalized our oil!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "Prepare for War!"
+
+		create_wargoal = {
+			target = IRQ
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = "We Will Deal With Them Later."
+
+		add_state_claim = 676
+		add_state_claim = 291
+
+	}
+} 
+
+country_event = {
+	id = GER_jap_coal_trade.1
+	title = "Germany Wants Research Tready!"
+	desc = "They offered us their research on Synthetic Resource, in return they asked for information on our aircraft carriers."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
+		}
+
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 2
+			category = synth_resources
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_jap_coal_trade.2
+	title = "Japan Accepted our Research Tready!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		add_to_variable = { GER_navy_carrier_air_agility_factor = 0.1 }
+	}
+}
+
+country_event = {
+	id = GER_jap_coal_trade.3
+	title = "Japan Not Accepted our Research Tready!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.1
+	title = "Germany Wants to Create Production Lines!"
+	desc = "They want to do some of their production here, they will give economic support in return. In addition, we can learn about certain things.."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		trigger = {
+			GER = {
+				has_completed_focus = GER_expand_defance
+			}
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
+		}
+
+		add_ideas = G
+	}
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		trigger = {
+			GER = {
+				has_completed_focus = GER_support_china
+			}
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_CHI_Cooperation.2 hours = 6 }
+		}
+
+		if = {
+			limit = {
+				has_global_flag = GER_INF_REQ
+			}
+			add_ideas = CHI_production_lines
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_TANK_REQ
+			}
+			add_ideas = CHI_tank_production_lines
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = GER
+			value = 300
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_CHI_Cooperation.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.2
+	title = "China Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		if = {
+			limit = {
+				has_global_flag = GER_INF_REQ
+			}
+			add_ideas = GER_production_lines
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_TANK_REQ
+			}
+			add_ideas = GER_tank_production_lines
+		}
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.3
+	title = "China Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_SOV_ultimatom.1
+	title = "Ultimatom For Soviet Union!"
+	desc = "After Reaching our Goals We Must Decide Fate of Soviet Union."
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+
+	option = { #German
+		ai_chance = {
+			factor = 100
+		}
+		name = "Our Lands"
+
+		trigger = {
+			NOT = { has_country_flag = GER_SOV_Demanded }
+		}
+
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		set_country_flag = GER_SOV_Demanded
+
+	}
+
+	option = { #Japan
+		ai_chance = {
+			factor = 0
+		}
+		name = "Grant Japan Claims"
+
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		set_country_flag = GER_SOV_JAP_Demanded
+
+		trigger = {
+			has_completed_focus = GER_japan_friend
+		}
+	}	
+
+	option = { #Finland
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Keep our Promise"
+
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		set_country_flag = GER_SOV_FIN_Demanded
+
+		trigger = {
+			FIN = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			has_completed_focus = GER_FIN_granted_lands
+			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
+		}
+	}
+
+	option = { #Romania
+		ai_chance = {
+			factor = 0
+		}
+		name = "Maybe Romania Wants Their Pre-War Borders "
+
+		trigger = {
+			ROM = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
+		}
+
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		set_country_flag = GER_SOV_ROM_Demanded
+	}
+
+	option = { #Turkey
+		ai_chance = {
+			factor = 0
+		}
+		name = "Let's Give Turkey's Requests."
+
+		trigger = {
+			TUR = {
+				OR = {
+					is_in_faction_with = GER
+					is_puppet_of = ROOT
+				}
+				has_war_with = SOV
+			}
+			NOT = { has_country_flag = GER_SOV_TUR_Demanded }
+		}
+
+		country_event = GER_SOV_ultimatom.1
+		set_country_flag = GER_SOV_ROM_Demanded
+	}
+
+	option = { #END
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Should Sent our Demands."
+
+		trigger = {
+		}
+
+		SOV = {
+			country_event = { id = GER_SOV_ultimatom.2 hours = 3 } 
+		}
+		
+	}
+	
+}
+
+country_event = {
+	id = GER_SOV_ultimatom.2
+	title = "Peace Deal From German Reich!"
+	desc = ""
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+
+	option = { 
+		ai_chance = {
+			base = 40
+			modifier = {
+				NOT = { has_completed_focus = SOV_desperate_measures }
+				factor = 100
+			}
+			modifier = {
+				surrender_progress = 0.40
+				factor = 60
+			}
+		}
+		name = "Fine, "
+
+		GER = {
+			country_event = { id = GER_SOV_ultimatom.3 hours = 12 }
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "No! We Keep Our Homeland!"
+
+		GER = {
+			country_event = { id = GER_SOV_ultimatom.4 hours = 12 }
+		}
+	}	
+}
+
+country_event = {
+	id = GER_SOV_ultimatom.3
+	title = "Soviet Union Accepted our Peace Deal"
+	desc = ""
+	picture = GFX_report_event_german_troops_paris
+	is_triggered_only = yes
+
+	option = { 
+		ai_chance = {
+			base = 100
+		}
+		name = "Good"
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_JAP_Demanded
+				JAP = {
+					NOT = { has_war_with = GER }
+				}
+			}
+			JAP_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				FIN = {
+					is_in_faction_with = GER
+					has_war_with = SOV
+				}
+			}
+			FIN_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				ROM = {
+					is_in_faction_with = GER
+					has_war_with = SOV
+				}
+			}
+			ROM_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				TUR = {
+					is_in_faction_with = GER
+					has_war_with = SOV
+				}
+			}
+			TUR_Lands_in_Soviet = yes
+		}
+
+		if = {
+			limit = {
+				has_country_flag = GER_SOV_Demanded
+			}
+			GER_Lands_in_Soviet = yes
+		}
+
+		GER = {
+			start_peace_conference = {
+				tag = SOV
+				score_factor = 0
+				message = ger_sov_treaty_in_berlin
+			}
+		}
+
+		hidden_effect = {
+			add_threat = 50
+		}
+		
+	}	
+}
