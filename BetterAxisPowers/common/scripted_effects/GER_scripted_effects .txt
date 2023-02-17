@@ -956,36 +956,31 @@ GER_upgrade_wehrmacht_effect = {
 			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+					has_completed_focus = GER_naval_air_effort_a
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-			}
-			else_if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 			}
 			else_if = {
 				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
+					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+					has_completed_focus = GER_pride_of_the_modern_germany_a
 				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
+				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-			}
-			else_if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 			}
 			else_if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+				}
+				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 			}
 		}

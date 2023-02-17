@@ -72,7 +72,7 @@ focus_tree = {
 		prerequisite = { focus = GER_rhineland_ab }
 		relative_position_id = GER_rhineland_ab
 		x = 0
-		y = 1
+		y = 2
 		cost = 1
 		available = {
 			is_subject = no
@@ -115,7 +115,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = GER_Asian_Policy
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -217,7 +217,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_Asian_Policy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -325,7 +325,7 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = GER_Fuhrer }
+		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
 			is_puppet = no
@@ -333,7 +333,7 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = -14
 		y = 1
-		relative_position_id = GER_Fuhrer
+		relative_position_id = GER_establish_abwehr
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -441,8 +441,8 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = GER_Fuhrer }
-		relative_position_id = GER_Fuhrer
+		prerequisite = { focus = GER_establish_abwehr }
+		relative_position_id = GER_establish_abwehr
 		x = -30
 		y = 1
 		cost = 3
@@ -2671,10 +2671,10 @@ focus_tree = {
 	focus = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = GER_Fuhrer }
+		prerequisite = { focus = GER_establish_abwehr }
 		x = 12
 		y = 1
-		relative_position_id = GER_Fuhrer
+		relative_position_id = GER_establish_abwehr
 		cost = 10
 		ai_will_do = {
 			factor = 8
@@ -4534,6 +4534,20 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = GER_never_surrender focus = GER_for_glory }
 		available = {
+			OR = {
+				GER = { controls_state = 126 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 126
+				}
+			}
+			OR = {
+				GER = { controls_state = 16 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 16
+				}
+			}
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -4549,15 +4563,36 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_for_Greater_Reich
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = GER_the_Supreme_Commander }
+		prerequisite = { focus = GER_redraw_borders focus = GER_Europe_in_flames }
+		text = GER_Working_on
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 3
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_Axis
-		prerequisite = { focus = GER_Fuhrer }
+		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 		}
 		cancel_if_invalid = no
 		x = 44
 		y = 1
-		relative_position_id = GER_Fuhrer
+		relative_position_id = GER_establish_abwehr
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -7482,8 +7517,7 @@ focus_tree = {
 		text = GER_turkey_friend
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = GER_BALKAN }
-
-
+		
 		available = { 
 			is_subject = no 
 			NOT = { has_war_with = TUR }
@@ -7564,7 +7598,7 @@ focus_tree = {
 		relative_position_id = GER_turkey_friend
 		available = {
 			is_subject = no
-			TUR = { is_free_or_subject_of_root = yes }
+			TUR = { is_subject = no }
 			TUR = { is_in_faction_with = GER }
 		}
 		x = -1
@@ -7595,6 +7629,9 @@ focus_tree = {
 		relative_position_id = GER_turkey_friend
 		prerequisite = { focus = GER_turkey_friend }
 		available = {
+			is_subject = no
+			TUR = { is_subject = no }
+			TUR = { is_in_faction_with = GER }
 		}
 
 		x = 1
@@ -7720,7 +7757,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 2
+		y = 3
 		cost = 5
 		ai_will_do = {
 			factor = 10
