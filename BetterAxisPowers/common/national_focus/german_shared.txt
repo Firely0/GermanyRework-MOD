@@ -44,6 +44,11 @@
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_rebuild_the_high_seas_fleet_a_modify
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+			}
+			GER_upgrade_kriegsmarine_idea_effect = yes
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -91,6 +96,11 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_naval_air_effort_a_modify
+			hidden_effect = {
+				GER_upgrade_kriegsmarine_effect = yes
+			}
+			GER_upgrade_kriegsmarine_idea_effect = yes
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -124,6 +134,10 @@
 		}
 		
 		completion_reward = {
+			set_variable = { GER_navy_carrier_air_attack_factor = 0.05 }
+			add_to_variable = { GER_navy_carrier_air_agility_factor = 0.05 }
+			set_variable = { GER_navy_carrier_air_targetting_factor = 0.05 }
+			custom_effect_tooltip = GER_Graf_Zeppelin_Modify
 			unlock_decision_tooltip = GER_Visit_Graf_Zeppelin
 			create_equipment_variant = {
 					name = "Graf Zeppelin"
@@ -169,7 +183,10 @@
 			factor = 1
 		}
 		
-		completion_reward = {	
+		completion_reward = {
+			set_variable = { GER_carrier_night_traffic = 0.2 }
+			set_variable = { GER_air_carrier_night_penalty_reduction_factor = 0.2 }
+			custom_effect_tooltip = GER_Convert_Civilian_Ships_modify
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.0
@@ -302,9 +319,6 @@
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			hidden_effect = {
-				GER_upgrade_kriegsmarine_effect = yes
-			}
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -544,10 +558,10 @@
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {
-					GER_positioning = 0.5
+					GER_positioning = 0.1
 				}
 				set_variable = {
-					GER_screening_efficiency = 0.5
+					GER_screening_efficiency = 0.1
 				}
 			}
 			custom_effect_tooltip = GER_PLAN_Z_modify
@@ -2721,6 +2735,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_OI_A_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2792,6 +2807,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {	
+			custom_effect_tooltip = GER_SD_B_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2815,9 +2831,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			hidden_effect = {
-				GER_upgrade_kriegsmarine_effect = yes
-			}
 			add_tech_bonus = {
 				name = nav_bomber_bonus
 				bonus = 1.0
@@ -2846,6 +2859,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_SD_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2871,6 +2885,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_CAS_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2921,6 +2936,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_CAS_A_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2946,6 +2962,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_OI_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}
@@ -2992,6 +3009,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_SD_A_modifier_tt
 			hidden_effect = {
 				GER_upgrade_luftwaffe_effect = yes
 			}

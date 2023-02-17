@@ -956,7 +956,7 @@ GER_upgrade_wehrmacht_effect = {
 			if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-					has_completed_focus = GER_naval_air_effort_a
+					has_completed_focus = GER_carrier_war
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
@@ -964,7 +964,7 @@ GER_upgrade_wehrmacht_effect = {
 			else_if = {
 				limit = {
 					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-					has_completed_focus = GER_pride_of_the_modern_germany_a
+					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
 				}
 				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
@@ -984,6 +984,49 @@ GER_upgrade_wehrmacht_effect = {
 				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 			}
 		}
+	}
+
+	GER_upgrade_kriegsmarine_idea_effect = {
+			if = {
+				limit = {
+					has_idea = Kriegsmarine_Debuff_Version
+					has_completed_focus = GER_carrier_war
+				}
+				swap_ideas = {
+					remove_idea = Kriegsmarine_Debuff_Version
+					add_idea = Kriegsmarine_FAKE_Carrier_Buff
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Kriegsmarine_FAKE
+					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				}
+				swap_ideas = {
+					remove_idea = Kriegsmarine_FAKE
+					add_idea = Kriegsmarine_buff_Version_No_Carrier
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Kriegsmarine_FAKE_Carrier_Buff
+					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				}
+				swap_ideas = {
+					remove_idea = Kriegsmarine_FAKE_Carrier_Buff
+					add_idea = Kriegsmarine_Debuff_Version_Last_Version
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Kriegsmarine_buff_Version_No_Carrier
+					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				}
+				swap_ideas = {
+					remove_idea = Kriegsmarine_buff_Version_No_Carrier
+					add_idea = Kriegsmarine_Debuff_Version_Last_Version
+				}
+			}
 	}
 
 	GER_Lands_in_Soviet = {

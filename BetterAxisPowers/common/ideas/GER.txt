@@ -4539,7 +4539,7 @@ ideas = {
 
 		}
 
-		Kriegsmarine_FAKE = {
+		Kriegsmarine_Debuff_Version = {
 			picture = ger_navy
 			allowed = {
 				original_tag = GER
@@ -4565,10 +4565,9 @@ ideas = {
 					build_cost_ic = 0.1 instant = yes
 				}	
 			} 
-
 		}
 
-		Kriegsmarine_FAKE_Carrier_Buff = {
+		Kriegsmarine_buff_Version_No_Carrier = {
 			picture = ger_navy
 			allowed = {
 				original_tag = GER
@@ -4581,6 +4580,37 @@ ideas = {
 			removal_cost = -1
 	
 			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = 0.1 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}	
+			} 
+		}
+
+		Kriegsmarine_Debuff_Version_Carrier = {
+			picture = ger_navy
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			equipment_bonus = {	
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 instant = yes
+				}
 				ship_hull_heavy = {
 					build_cost_ic = 0.1 instant = yes
 				}
@@ -4591,10 +4621,9 @@ ideas = {
 					build_cost_ic = 0.1 instant = yes
 				}	
 			} 
-
 		}
 
-		Kriegsmarine_FAKE_Buff = {
+		Kriegsmarine_Debuff_Version_Last_Version = {
 			picture = ger_navy
 			allowed = {
 				original_tag = GER
@@ -4618,11 +4647,8 @@ ideas = {
 				}
 				ship_hull_light = {
 					build_cost_ic = -0.1 instant = yes
-				}
+				}	
 			} 
-
-			modifier = {
-			}
 		}
 
 		Luftwaffe_debuff = {
