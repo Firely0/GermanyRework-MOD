@@ -288,7 +288,6 @@ focus_tree = {
 		prerequisite = { focus = GER_china_friend }
 		mutually_exclusive = { focus = GER_support_china }
 		available = {
-			always = no
 			is_subject = no
 			AND = {
 				country_exists = CHI
@@ -327,7 +326,6 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = GER_expand_defance focus = GER_support_china }
 		available = {
-			always = no
 			is_subject = no
 			AND = {
 				country_exists = CHI
@@ -4731,6 +4729,8 @@ focus_tree = {
 		available = {
 			IRQ = {
 				NOT = { has_war_with = root }
+				NOT = { is_puppet = yes }
+				exists = yes
 			}
 		}
 
@@ -4821,7 +4821,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_Prepare_for_golden_square }
 		available = {
-			NOT = { has_war_with = IRQ }
+			IRQ = {
+				NOT = { has_war_with = root }
+				NOT = { is_puppet = yes }
+				exists = yes
+			}
 		}
 
 		x = 10
@@ -9049,6 +9053,7 @@ focus = {
 		
 		available = {
 			is_subject = no
+			NOT = { has_war_with = SOV }
 		}
 		x = 1
 		y = 4

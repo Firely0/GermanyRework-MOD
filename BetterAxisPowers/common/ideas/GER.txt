@@ -227,11 +227,11 @@ ideas = {
 			equipment_bonus = {
 				infantry_equipment = {
 					instant = yes
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 				}
 				artillery_equipment = {
 					instant = yes
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 				}
 			}
 			
@@ -265,7 +265,7 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = 0.1
+					build_cost_ic = -0.1
 				}
 			}
 			
@@ -294,18 +294,18 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.03
-				conscription = 0.1
+				conscription = 0.01
 				weekly_manpower = 1000
 			}
 
 			equipment_bonus = {
 				infantry_equipment = {
 					instant = yes
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 				}
 				artillery_equipment = {
 					instant = yes
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 				}
 			}
 			
@@ -334,14 +334,14 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.03
-				conscription = 0.1
+				conscription = 0.01
 				weekly_manpower = 1000
 			}
 
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = 0.1
+					build_cost_ic = -0.1
 				}
 			}
 			
