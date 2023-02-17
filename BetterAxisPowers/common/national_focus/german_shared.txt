@@ -1531,6 +1531,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_Supply
+					}					
+				}
+			}
 			if = {
 				limit = {
 					has_idea = German_Eco_Plan_A
@@ -1617,13 +1625,21 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_A_B
+					}					
+				}
+			}
 			if = {
 				limit = {
 					has_idea = German_Eco_Plan_A
 				}
 				swap_ideas = {
 					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_A_B
+					add_idea = cc
 				}
 				clr_country_flag = GER_ECO_1
 			    set_country_flag = GER_ECO_1
@@ -1693,6 +1709,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B
+						add_idea = German_Eco_Plan_A_C
+					}					
+				}
+			}
 			if = {
 				limit = {
 					has_idea = German_Eco_Plan_A_B
@@ -1798,6 +1822,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_A
+						add_idea = German_Eco_Plan_B_B
+					}					
+				}
+			}
 			if = {
 				limit = {
 					has_idea = German_Eco_Plan_B_A
@@ -1852,6 +1884,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_B
+						add_idea = German_Eco_Plan_B_C
+					}					
+				}
+			}
 			if = {
 				limit = {
 					has_idea = German_Eco_Plan_B_B
@@ -1916,6 +1956,14 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_OIL
+					}					
+				}
+			}
 			if = {
 			 limit = {
 				has_idea = German_Eco_Plan_A
@@ -2149,7 +2197,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = available_designerv
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = porsche_focus
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = henschel_focus

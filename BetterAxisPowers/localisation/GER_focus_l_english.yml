@@ -137,8 +137,6 @@
 
  GER_autarky_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HMilitary Factory §!Construction Speed: §G+10%§! \n§HNaval Dockyard §!Construction Speed: §G+10%§! \n§HCivilian Factory §!Construction Speed§!: §G+5%§!"
 
- GER_prepare_next_tt:0 "Modify §Y$Kriegsmarine$§! by: \n§wConsumer Goods Factories§!: §G-3%§!"
-
  GER_cap_pol_tt:0 "Focus Auto-Complete After §RCapitulation§! of §RPoland§!"
 
  GER_Kaiser_in_Country_tt:0 "Wilhelm II in Country"
@@ -624,7 +622,7 @@
  GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.0%§! \n£army_morale_texticon Army Morale: §Y+10.00%§! \n\n"
  GER_tank_warfare_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power: §Y+10§! \n£planning_max_texticon Max Planning Factor: §Y+20.0%§! \n£planning_speed_texticon Planning Speed: §R-10.0%§! \n£speed_tank_texticon Armor Speed Factor: §Y+10.0%§! \n£org_loss_when_moving_texticon Org Loss When Moving: §Y-5.0%§! \n£training_texticon Minimum Training Level: §Y-5.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_Staff_tank_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power: §Y+10.0§! \n£training_texticon Minimum Training Level: §Y-5.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5%§! \n\n"
- GER_Lighting_Strike_modify_tt:0 "$GER_Wehrmacht_tt$ \n£breakthrough_texticon Breakthrough: §Y+10.0%§! \n£recon_texticon Recon Factor §Y+10.0%§! \n£initiative_texticon Initiative Factor §Y+10%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n£org_loss_when_moving_texticon Org Loss When Moving: §Y-10%§! \n£speed_tank_texticon Armor Speed Factor: §Y+10%§! \n£army_doctrine_cost_texticonLand Doctrine Factor: §Y-10%§! \n\n" 
+ GER_Lighting_Strike_modify_tt:0 "$GER_Wehrmacht_tt$ \n£breakthrough_texticon Breakthrough: §Y+10.0%§! \n£recon_texticon Recon Factor §Y+10.0%§! \n£initiative_texticon Initiative Factor §Y+10%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n£org_loss_when_moving_texticon Org Loss When Moving: §Y-10%§! \n£speed_tank_texticon Armor Speed Factor: §Y+10%§! \n£army_doctrine_cost_texticon Land Doctrine Factor: §Y-10%§! \n\n" 
 
  GER_Battle_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+10.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §R-5.0%§! \n£planning_max_texticon Max Planning Factor: §Y+10.0%§! \n\n"
  GER_better_supply_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-10.0%§! \n\n"
@@ -686,7 +684,7 @@
 
  GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
  GER_Kriegsmarine_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
- GER_Kriegsmarine_Carrierfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! §YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
+ GER_Kriegsmarine_Carrierfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n\n"
 
  GER_PLAN_Z_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£ships_contact_texticon Positioning: §Y+10.0%§! \n£armor_texticon Screening Efficiency §Y+10.0%§! \n\n"
@@ -694,3 +692,4 @@
  GER_Convert_Civilian_Ships_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£night_texticon  Carrier Night Penalty Reduction: §G+20%§! \n£carrier_texticon  Carrier Night Traffic: §G+20%§! \n\n"
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n\n"
+ GER_prepare_next_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£consumer_goods_texticon Consumer Goods Factories§!: §G-3%§!"
