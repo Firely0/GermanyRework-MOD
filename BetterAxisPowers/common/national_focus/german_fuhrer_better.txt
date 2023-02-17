@@ -326,6 +326,21 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = GER_expand_defance focus = GER_support_china }
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_CHI_Accepted_our_co-op
+				GER = {
+					OR = {
+						has_idea = GER_production_lines
+						has_idea = GER_tank_production_lines
+					}
+				}
+				CHI = {
+					OR = {
+						has_idea = CHI_production_lines
+						has_idea = CHI_tank_production_lines
+					}
+				}
+			}
 			is_subject = no
 			AND = {
 				country_exists = CHI
