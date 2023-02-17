@@ -5438,7 +5438,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Rush_Suez_Cannal
-		icon = GFX_focus_generic_the_suez #to-do new update icon
+		icon = GFX_goal_rush_for_suez
 		prerequisite = { focus = GER_Afrika_Corps_Erwin_Rommel focus = GER_Afrika_Corps_Follow_Italy }
 		available = {
 			452 = {
