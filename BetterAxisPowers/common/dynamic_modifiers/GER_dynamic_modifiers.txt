@@ -598,7 +598,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 	
-	custom_modifier_tooltip = GER_Luftwaffe_SD_tt #equipment bonus
+	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
 
@@ -611,11 +611,11 @@ Luftwaffe_SD_B_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_home_defence_factor = 0.05
 
-	air_strategic_bomber_bombing_factor = 0.05
+	air_strategic_bomber_bombing_factor = 0.1
 	air_strategic_bomber_night_penalty = -0.1
 	strategic_bomb_visibility = -0.1
 
-	custom_modifier_tooltip = GER_Luftwaffe_SD_tt #equipment bonus
+	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
 
