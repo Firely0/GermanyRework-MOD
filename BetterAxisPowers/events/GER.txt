@@ -17,6 +17,7 @@ add_namespace = GER_fate_of_andrey
 add_namespace = GER_VIC_Syria
 add_namespace = GER_offer_support_irq
 add_namespace = GER_jap_coal_trade
+add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
 
 country_event = {
@@ -2191,6 +2192,118 @@ country_event = {
 country_event = {
 	id = GER_jap_coal_trade.3
 	title = "Japan Not Accepted our Research Tready!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.1
+	title = "Germany Wants to Create Production Lines!"
+	desc = "They want to do some of their production here, they will give economic support in return. In addition, we can learn about certain things.."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		trigger = {
+			GER = {
+				has_completed_focus = GER_expand_defance
+			}
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
+		}
+
+		add_ideas = G
+	}
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		trigger = {
+			GER = {
+				has_completed_focus = GER_support_china
+			}
+		}
+		name = "Fine"
+
+		GER = {
+			country_event = { id = GER_CHI_Cooperation.2 hours = 6 }
+		}
+
+		if = {
+			limit = {
+				has_global_flag = GER_INF_REQ
+			}
+			add_ideas = CHI_production_lines
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_TANK_REQ
+			}
+			add_ideas = CHI_tank_production_lines
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = GER
+			value = 300
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "No"
+
+		GER = {
+			country_event = { id = GER_CHI_Cooperation.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.2
+	title = "China Accepted our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		if = {
+			limit = {
+				has_global_flag = GER_INF_REQ
+			}
+			add_ideas = GER_production_lines
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_TANK_REQ
+			}
+			add_ideas = GER_tank_production_lines
+		}
+	}
+}
+
+country_event = {
+	id = GER_CHI_Cooperation.3
+	title = "China Accepted our Request!"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes

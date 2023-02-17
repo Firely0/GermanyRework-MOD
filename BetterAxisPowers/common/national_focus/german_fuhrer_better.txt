@@ -245,11 +245,11 @@ focus_tree = {
 
 	focus = {
 		id = GER_support_china
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_tank_production
 		text = GER_Working_on
 		prerequisite = { focus = GER_china_friend }
+		mutually_exclusive = { focus = GER_expand_defance }
 		available = {
-			always = no
 			is_subject = no
 			AND = {
 				country_exists = CHI
@@ -266,14 +266,29 @@ focus_tree = {
 		ai_will_do = {
 		}	
 		completion_reward = {
+			set_global_flag = GER_TANK_REQ
+			event_target:WTT_current_china_leader = {
+				country_event = { id = GER_CHI_Cooperation.1 hours = 6 }
+			}
+			effect_tooltip = {
+				event_target:WTT_current_china_leader = {
+					custom_effect_tooltip = needs_approval
+					add_ideas = CHI_tank_production_lines
+				}
+
+				GER = {
+					add_ideas = GER_tank_production_lines
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GER_expand_defance
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		text = GER_Working_on
 		prerequisite = { focus = GER_china_friend }
+		mutually_exclusive = { focus = GER_support_china }
 		available = {
 			always = no
 			is_subject = no
@@ -292,12 +307,26 @@ focus_tree = {
 		ai_will_do = {
 		}	
 		completion_reward = {
+			event_target:WTT_current_china_leader = {
+				country_event = { id = GER_CHI_Cooperation.1 hours = 6 }
+			}
+			effect_tooltip = {
+				event_target:WTT_current_china_leader = {
+					custom_effect_tooltip = needs_approval
+					add_ideas = CHI_production_lines
+				}
+
+				GER = {
+					add_ideas = GER_production_lines
+				}
+			}
+			set_global_flag = GER_INF_REQ
 		}
 	}
 
 	focus = {
 		id = GER_china_workers
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_manpower
 		text = GER_Working_on
 		prerequisite = { focus = GER_expand_defance focus = GER_support_china }
 		available = {
@@ -318,6 +347,38 @@ focus_tree = {
 		ai_will_do = {
 		}	
 		completion_reward = {
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = GER_production_lines
+						add_idea = GER_production_lines_manpower
+					}					
+				}
+			}
+			hidden_effect = {
+			if = {
+				limit = {
+					has_idea = GER_production_lines
+				}
+				GER = {
+					swap_ideas = {
+						remove_idea = GER_production_lines
+						add_idea = GER_production_lines_manpower
+					}					
+				}
+			}
+			if = {
+				limit = {
+					has_idea = GER_tank_production_lines
+				}
+				GER = {
+					swap_ideas = {
+						remove_idea = GER_tank_production_lines
+						add_idea = GER_tank_production_lines_manpower
+					}					
+				}
+			}	
+			}
 		}
 	}
 
@@ -6654,7 +6715,9 @@ focus_tree = {
 			}
 		}
 
-		custom_effect_tooltip = GER_naval_intel_tt
+		GER = {
+			custom_effect_tooltip = GER_naval_intel_tt
+		}
 		
 		set_variable = {
 			GER_navy_intel_factor = 0.1
@@ -6698,6 +6761,7 @@ focus_tree = {
 						category = synth_resources
 					}
 				}
+
 				GER = {
 					custom_effect_tooltip = GER_JAP_Coal_Search_tt
 				}
