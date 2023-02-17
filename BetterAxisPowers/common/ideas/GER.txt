@@ -163,7 +163,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = GER }
-				NOT = { has_war_with = GER }
+				has_war_with = GER
 			}
 			
 			modifier = {
@@ -192,7 +192,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = GER }
-				NOT = { has_war_with = GER }
+				has_war_with = GER
 			}
 			
 			modifier = {
@@ -220,7 +220,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
-				NOT = { has_war_with = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -259,7 +259,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
-				NOT = { has_war_with = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -294,7 +294,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
-				NOT = { has_war_with = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -335,7 +335,7 @@ ideas = {
 
 			cancel = {
 				NOT = { country_exists = CHI }
-				NOT = { has_war_with = CHI }
+				has_war_with = CHI
 			}
 
 			modifier = {
@@ -371,7 +371,7 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { has_war_with = SWE }
+				has_war_with = SWE
 				NOT = { country_exists = SWE }
 			}
 			
@@ -397,7 +397,7 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { has_war_with = SWE }
+				has_war_with = SWE
 				NOT = { country_exists = GER }
 			}
 	

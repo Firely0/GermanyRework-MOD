@@ -2214,28 +2214,6 @@ country_event = {
 		ai_chance = {
 			factor = 60
 		}
-		trigger = {
-			GER = {
-				has_completed_focus = GER_expand_defance
-			}
-		}
-		name = "Fine"
-
-		GER = {
-			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
-		}
-
-		add_ideas = G
-	}
-	option = {
-		ai_chance = {
-			factor = 60
-		}
-		trigger = {
-			GER = {
-				has_completed_focus = GER_support_china
-			}
-		}
 		name = "Fine"
 
 		GER = {
