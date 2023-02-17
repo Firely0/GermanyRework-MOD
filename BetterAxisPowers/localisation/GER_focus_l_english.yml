@@ -192,7 +192,7 @@
  vlasov_in_ss_flag:0 "Andrey Vlasov Imprisoned"
  GER_Four_Year_Plan_Start_tt:0 "Starts §YFour Year Plan§! for §G1461§! days"
  GER_staff_tt:0 "if Selected; §RMobile Warfare§!"
- GER_staff_a_tt:0 "if Selected; §RTrech Warfare§!"
+ GER_staff_a_tt:0 "if Selected; §RSuperior Firepower§!"
  GER_SS_tt:0 "Unlocks Occupation Law; §YSchutzstaffel§! "
  GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§!"
  GER_SS_Soviet_tt:0 "Unlocks Occupation Law in §YSoviet Union§! States;"
@@ -614,8 +614,8 @@
 
  GER_Battle_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+10%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §R-5%§! \n£planning_max_texticon Max Planning Factor: §Y+10%§! \n\n"
  GER_better_supply_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10%§! \n £supply_texticon Supply Factor: §Y+10%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-10%§! \n\n"
- GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5%§! \n£cas_texticon Cas Damage Reduction §Y+5§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5§! \n\n"
- GER_War_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£air_superiority_texticon Air Superiority Bonus In Combat §Y+10%§! \n£railway_gun_texticon Railway Gun Bombardment Factor §Y+20§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5§! \n\n"
+ GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5§! \n\n"
+ GER_War_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£air_superiority_texticon Air Superiority Bonus In Combat §Y+10%§! \n£cas_texticon Cas Damage Reduction §Y+5§! \n£railway_gun_texticon Railway Gun Bombardment Factor §Y+20§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5§! \n\n"
  GER_Cheap_EQ_modify_tt:0 "$GER_Wehrmacht_tt$ \n§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_Cheep_SUP_modify_tt:0 "$GER_Wehrmacht_tt$ \n§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
 
@@ -643,7 +643,7 @@
  GER_OI_IMP_tt:0 "§YFighter§!: £production_cost Production Cost: §G-5.0%§! \n§YMedium Air Frame§!: £production_cost Production Cost: §R+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n\n"
 
  GER_SD_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£home_defence_texticon Air Home Defence: §G+10.00%§! \n£strat_bombing_visibility_texticon Strategic Bombing Visibility: §G-5%§!\n £strat_bombing_texticon Strategic Bombing: §G-5%§! \nAir Doctrine Cost: §G-5%§! \n\n"
- GER_SD_A_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£home_defence_texticon Air Home Defence: §G+10.00%§! \n£strat_bombing_visibility_texticon Strategic Bombing Visibility: §G-5%§!\n £strat_bombing_texticon Strategic Bombing: §G-5%§! \n£air_doctrine_cost_texticon Air Doctrine Cost: §G-5%§! \n\n"
+ GER_SD_A_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£home_defence_texticon Air Home Defence: §G+10.00%§! \n£strat_bombing_visibility_texticon Strategic Bombing Visibility: §G-5%§!\n £strat_bombing_texticon Strategic Bombing: §G5%§! \n£air_doctrine_cost_texticon Air Doctrine Cost: §G-5%§! \n\n"
  GER_SD_B_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£strat_bombing_texticon Strategic Bombing: §G+10%§! \n\n"
 
  GER_CAS_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_efficiency_texticon  Air Mission Efficiency: §G+5.0%§! \n£home_defence_texticon Air Home Defence: §G+5.00%§! \n£air_interception_efficiency_texticon Air Interception Factor: §G+5.00%§! \n£defence_cas_texticon   Close Air Support Defence: §G+5.0%§! \n£cas_texticon   Close Air Support Efficiency: §G+5.0%§! \n£air_doctrine_cost_texticon   Air Doctrine Cost: §G-5.0%§! \n\n"

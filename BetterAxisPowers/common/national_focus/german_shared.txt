@@ -2733,6 +2733,10 @@
 			factor = 0.25
 		}
 
+		available = {
+			has_tech = force_rotation
+		}
+
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = GER_OI_A_modifier_tt
@@ -2803,6 +2807,9 @@
 		cost = 10
 		ai_will_do = {
 			factor = 0.1
+		}
+		available = {
+			has_tech = air_superiority
 		}
 
 		available_if_capitulated = yes
@@ -2933,6 +2940,9 @@
 		ai_will_do = {
 			factor = 1
 		}
+	    available = {
+			has_tech = formation_flying
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -3006,6 +3016,9 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = air_superiority
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -3057,6 +3070,7 @@
 
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = GER_tank_warfare_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = { GER_max_command_power = -10 }
@@ -3075,7 +3089,6 @@
 			}
 			custom_effect_tooltip = available_political_advisor 
 			show_ideas_tooltip = erwin_rommel
-			custom_effect_tooltip = GER_tank_warfare_modify_tt
 		}
 	}
 
@@ -3090,6 +3103,9 @@
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
@@ -3124,6 +3140,7 @@
 
 		available = {
 			date > 1942.1.1
+			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
@@ -3217,6 +3234,7 @@
 
 		available = {
 			date > 1942.1.1
+			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
@@ -3260,7 +3278,12 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			OR = {
+				has_tech = mobile_warfare
+				has_tech = superior_firepower
+			}
+		}
 		available_if_capitulated = yes
 		completion_reward = {
 				GER_upgrade_wehrmacht_effect = yes
@@ -3285,12 +3308,15 @@
 						GER_max_planning_speed = 0.05
 					}
 					set_variable = {
-						GER_cas_damage_reduction = 0.05
-					}
-					set_variable = {
 						GER_land_doctrine_cost_factor = -0.05
 					}
 					set_variable = { GER_minimum_training_level = 0.05 }
+				}
+				else_if = {
+					custom_effect_tooltip = GER_staff_tt
+					custom_effect_tooltip = GER_Staff_tank_modify_tt
+					custom_effect_tooltip = GER_staff_a_tt
+					custom_effect_tooltip = GER_staff_modify_tt
 				}
 		}
 	}
@@ -3305,6 +3331,9 @@
 		cost = 10
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			has_tech = superior_firepower
 		}
 
 		available_if_capitulated = yes
@@ -3336,6 +3365,9 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_tech = superior_firepower
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -3350,6 +3382,9 @@
 				}
 				set_variable = {
 	                GER_railway_gun_bombardment_factor = 0.2
+				}
+				set_variable = {
+					GER_cas_damage_reduction = 0.05
 				}
 				set_variable = {
 					GER_land_doctrine_cost_factor = 0
