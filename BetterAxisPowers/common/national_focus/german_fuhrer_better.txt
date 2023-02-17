@@ -266,11 +266,11 @@ focus_tree = {
 		}	
 		completion_reward = {
 			set_global_flag = GER_TANK_REQ
-			event_target:WTT_current_china_leader = {
+			CHI = {
 				country_event = { id = GER_CHI_Cooperation.1 hours = 6 }
 			}
 			effect_tooltip = {
-				event_target:WTT_current_china_leader = {
+				CHI = {
 					custom_effect_tooltip = needs_approval
 					add_ideas = CHI_tank_production_lines
 				}
@@ -304,11 +304,11 @@ focus_tree = {
 		ai_will_do = {
 		}	
 		completion_reward = {
-			event_target:WTT_current_china_leader = {
+			CHI = {
 				country_event = { id = GER_CHI_Cooperation.1 hours = 6 }
 			}
 			effect_tooltip = {
-				event_target:WTT_current_china_leader = {
+				CHI = {
 					custom_effect_tooltip = needs_approval
 					add_ideas = CHI_production_lines
 				}
@@ -774,6 +774,9 @@ focus_tree = {
 			188 = { is_owned_by = GER }
 			85 = { is_owned_by = GER }
 			86 = { is_owned_by = GER }
+			LIT = {
+				NOT = { exists = yes }
+			}
 		}
 		ai_will_do = {
 			factor = 10	
