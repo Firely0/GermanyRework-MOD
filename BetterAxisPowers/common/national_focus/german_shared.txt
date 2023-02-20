@@ -3392,10 +3392,8 @@
 				}
 				if = {
 					limit = {
-						OR = {
-							NOT = {has_completed_focus = GER_tank_warfare}
-							NOT = {has_completed_focus = GER_Battle_Plan}
-						}
+						NOT = {has_completed_focus = GER_tank_warfare}
+						NOT = {has_completed_focus = GER_Battle_Plan}
 					}
 					custom_effect_tooltip = GER_staff_tt
 					custom_effect_tooltip = GER_Staff_tank_modify_tt
@@ -3602,7 +3600,7 @@
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.25
+				cost_reduction = 0.40
 				uses = 4
 				category = cat_superior_firepower
 			}
