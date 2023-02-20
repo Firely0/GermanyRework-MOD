@@ -626,7 +626,7 @@
 
  GER_Battle_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+10.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §R-5.0%§! \n£planning_max_texticon Max Planning Factor: §Y+10.0%§! \n\n"
  GER_better_supply_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-10.0%§! \n\n"
- GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
+ GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5.0%§! \nplanning_max_texticon  Max planning factor §Y+20.0§! \n£training_speed_texticon  Division training time: §Y-10.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_War_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£air_superiority_texticon Air Superiority Bonus In Combat §Y+10.0%§! \n£cas_texticon Cas Damage Reduction §Y+5.0%§! \n£railway_gun_texticon Railway Gun Bombardment Factor §Y+20.0§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_Cheap_EQ_modify_tt:0 "$GER_Wehrmacht_tt$ \n§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_Cheep_SUP_modify_tt:0 "$GER_Wehrmacht_tt$ \n§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
@@ -689,6 +689,9 @@
 
  GER_PLAN_Z_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£ships_contact_texticon Positioning: §Y+10.0%§! \n£armor_texticon Screening Efficiency §Y+10.0%§! \n\n"
  GER_Graf_Zeppelin_Modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£attack_texticon Naval Air Attacks from Carriers: §G+5.0%§! \n£naval_strike_targetting_texticon Naval Air Targeting from Carriers: §G+5.0%§! \n£attacker_speed_texticon Naval Air Agility from Carriers: §G+5.0%§! \n\n"
+ GER_Bismarck_Modify:0 "$GER_Kriegsmarine_Mod_tt$  £critical_hit_texticon Chance to Receive Critical Hit §G-15%§! \n£spotting Visibility §G-5%§! \n\n"
+ GER_navy_visibility_modify:0 "$GER_Kriegsmarine_Mod_tt$ £spotting Visibility §G-5%§! \n\n"
+ GER_doctrine_cost_modify:0 "$GER_Kriegsmarine_Mod_tt$ £navy_doctrine_cost_texticon Naval Doctrine Cost §G-5%§! \n\n"
  GER_Convert_Civilian_Ships_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£night_texticon  Carrier Night Penalty Reduction: §G+20%§! \n£carrier_texticon  Carrier Night Traffic: §G+20%§! \n\n"
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n\n"
