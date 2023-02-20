@@ -3151,12 +3151,8 @@
 			custom_effect_tooltip = GER_tank_warfare_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
-				set_variable = { GER_max_command_power = -10 }
-				set_variable = { GER_max_planning_factor = 0 }
-				set_variable = { GER_planning_speed = 0 }
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
 				set_variable = { GER_org_loss_when_moving = -0.05 }
-				set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 			add_doctrine_cost_reduction = {
@@ -3198,7 +3194,7 @@
 				set_variable = { GER_coordination_bonus = 0.05 }
 				set_variable = { GER_org_loss_when_moving = -0.1 }
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
-				set_variable = { GER_land_doctrine_cost_factor = -0.1 }
+				set_variable = { GER_land_doctrine_cost_factor = 0 }
 			}
 		}
 	}
@@ -3373,6 +3369,9 @@
 					set_variable = { GER_max_command_power = 20 }
 					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 					set_variable = { GER_minimum_training_level = 0 }
+					set_variable = { GER_max_planning_factor = 0 }
+					set_variable = { GER_planning_speed = 0 }
+					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 				}
 				if = {
 					limit = {
@@ -3391,7 +3390,13 @@
 					set_variable = { GER_minimum_training_level = 0 }
 					set_variable = { GER_max_planning_factor = 0 }
 				}
-				else_if = {
+				if = {
+					limit = {
+						OR = {
+							NOT = {has_completed_focus = GER_tank_warfare}
+							NOT = {has_completed_focus = GER_Battle_Plan}
+						}
+					}
 					custom_effect_tooltip = GER_staff_tt
 					custom_effect_tooltip = GER_Staff_tank_modify_tt
 					custom_effect_tooltip = GER_staff_a_tt
