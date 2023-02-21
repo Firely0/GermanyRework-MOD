@@ -30,7 +30,6 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland_ab
-		text = GER_rhineland
 		icon = GFX_goal_generic_military_sphere
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
@@ -89,6 +88,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 			add_named_threat = { threat = 5 name = GER_rhineland }
+			set_country_flag = GER_rhineland_challenge_met
 			add_stability = -0.1
 			add_war_support = -0.05	
 			add_popularity = {
@@ -166,7 +166,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_communism_near_me
-				has_completed_focus = GER_rhineland_demilitarized
+				has_country_flag = GER_rhineland_challenge_met
 				any_neighbor_country = {
 					has_government = communism
 				}
@@ -492,7 +492,7 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		allow_branch = { has_government = fascism }
+		#allow_branch = { has_government = fascism }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
@@ -609,7 +609,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		allow_branch = { has_government = fascism }
+		#allow_branch = { has_government = fascism }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
 		x = 50
@@ -618,7 +618,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_completed_focus = GER_Fuhrer
+			has_country_flag = GER_side_with_fascism
 		}
 
 		bypass = {
@@ -4763,11 +4763,11 @@ focus_tree = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_Axis
 		prerequisite = { focus = GER_establish_abwehr }
-		allow_branch = { has_government = fascism }
+		#allow_branch = { has_government = fascism }
 		available = {
 			is_puppet = no
 			has_government = fascism
-			has_completed_focus = GER_Fuhrer
+			has_country_flag = GER_side_with_fascism
 		}
 		cancel_if_invalid = no
 		x = 92
@@ -7992,7 +7992,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_fascism_is_wrong
 				has_government = fascism
-				NOT = { has_country_flag = GER_fascism_is_wrong }
+				NOT = { has_completed_focus = GER_against_fuhrer }
 			}
 		}
 		cancel_if_invalid = no
@@ -8003,28 +8003,15 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = { mobile_warfare = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}	
-			add_country_leader_trait = DealBraker
-			set_power_balance = {
-				id = GER_power_balance
-				left_side = default_left_side 
-				right_side = default_right_side 
-				set_value = 0
-			}
+			set_country_flag = GER_side_with_fascism
 		}
 	}
 
 	focus = {
 		id = GER_grant_power_to_ss
 		icon = GFX_goal_unknown
+		mutually_exclusive = { focus = GER_stay_with_grand_council }
+		mutually_exclusive = { focus = GER_grant_power_to_wehrmacht }
 		prerequisite = { focus = GER_grand_counchil }
 		relative_position_id = GER_grand_counchil
 		available = {
@@ -8037,22 +8024,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = { mobile_warfare = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}	
-			add_country_leader_trait = DealBraker
-			set_power_balance = {
-				id = GER_power_balance
-				left_side = default_left_side 
-				right_side = default_right_side 
-				set_value = 0
-			}
 		}
 	}
 
@@ -8060,6 +8031,8 @@ focus_tree = {
 		id = GER_stay_with_grand_council
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GER_grand_counchil }
+		mutually_exclusive = { focus = GER_grant_power_to_ss }
+		mutually_exclusive = { focus = GER_grant_power_to_wehrmacht }
 		relative_position_id = GER_grand_counchil
 		available = {
 		}
@@ -8071,22 +8044,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = { mobile_warfare = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}	
-			add_country_leader_trait = DealBraker
-			set_power_balance = {
-				id = GER_power_balance
-				left_side = default_left_side 
-				right_side = default_right_side 
-				set_value = 0
-			}
 		}
 	}
 
@@ -8123,6 +8080,8 @@ focus_tree = {
 	focus = {
 		id = GER_grant_power_to_wehrmacht
 		icon = GFX_goal_unknown
+		mutually_exclusive = { focus = GER_stay_with_grand_council }
+		mutually_exclusive = { focus = GER_grant_power_to_ss }
 		prerequisite = { focus = GER_grand_counchil }
 		relative_position_id = GER_grand_counchil
 		available = {
@@ -8135,22 +8094,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = { mobile_warfare = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}	
-			add_country_leader_trait = DealBraker
-			set_power_balance = {
-				id = GER_power_balance
-				left_side = default_left_side 
-				right_side = default_right_side 
-				set_value = 0
-			}
 		}
 	}
 
@@ -8164,7 +8107,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_fascism_is_wrong
 				has_government = fascism
-				NOT = { has_country_flag = GER_fascism_is_wrong }
+				NOT = { has_completed_focus = GER_against_fuhrer }
 			}
 		}
 		cancel_if_invalid = no
@@ -8183,7 +8126,8 @@ focus_tree = {
 					set_technology = { mobile_warfare = 1 popup = no }
 					add_ideas = i_dont_use_wargoal
 				}
-			}	
+			}
+			set_country_flag = GER_side_with_fascism	
 			add_country_leader_trait = DealBraker
 			set_power_balance = {
 				id = GER_power_balance
