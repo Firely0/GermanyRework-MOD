@@ -2521,7 +2521,7 @@ country_event = {
 
 country_event = {
 	id = GER_request_help.1
-	title = "Rhineland Questin!"
+	title = "Rhineland Question!"
 	desc = "Germany Needs to Militarize Rhineland Against Communism."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
@@ -2558,5 +2558,35 @@ country_event = {
 				popularity = 0.1
 			}
 		}
+	}
+}
+
+country_event = {
+	id = GER_request_help.2
+	title = "United Kingdom Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+	}
+}
+
+country_event = {
+	id = GER_request_help.3
+	title = "United Kingdom Not Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We See You When You Invaded by Communists."
+		
 	}
 }
