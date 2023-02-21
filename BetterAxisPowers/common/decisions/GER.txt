@@ -175,8 +175,7 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		available = {
-			42 = { is_demilitarized_zone = yes }
-			51 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = no }
 		}
 	
 		activation = {
@@ -184,13 +183,11 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		visible = {
-			NOT = { has_country_flag = GER_Rhineland_Problem_FIX }
 		}
 	
 		highlight_states = {
 			highlight_state_targets = {
 				state = 51 #Rhineland
-				state = 42 #Moselland
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -201,6 +198,7 @@ GER_Rhineland_demilitarized = {
 		fire_only_once = no
 		selectable_mission = no
 		days_mission_timeout = 70
+		priority = 100
 	
 		cancel_effect = {
 		}
@@ -236,6 +234,49 @@ GER_Rhineland_demilitarized = {
 	}
 
 	GER_Rhineland_demilitarized_b = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			42 = { is_demilitarized_zone = no }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 42 #Moselland
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = no
+		days_mission_timeout = 70
+		priority = 90
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+		}
+	
+		complete_effect = {
+		}
+	}
+
+	GER_Rhineland_demilitarized_c = {
 
 		allowed = {
 			original_tag = GER
@@ -247,6 +288,7 @@ GER_Rhineland_demilitarized = {
 		}
 
 		cost = 35
+		priority = 80
 
 		fire_only_once = yes
 
