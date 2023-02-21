@@ -1,6 +1,24 @@
 ideas = {
 
 	country = {
+
+		GER_purge_comunist_support_idea = {
+
+			picture = generic_oppression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = -0.04
+			}
+		}
 		
 		SS_Fake_tooltip_idea = {
 			
@@ -794,6 +812,7 @@ ideas = {
 				fascism_acceptance = 85
 			}
 		}
+
 		GER_align_romania = {
 			allowed = {
 				always = no

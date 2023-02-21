@@ -155,3 +155,12 @@ is_controlled_by_ITA_or_subject = {
 		}
 	}
 }
+
+GER_side_with_fascism = {
+	ROOT = {
+		OR = {
+			has_government = fascism
+			NOT = { has_country_flag = GER_Block_the_Axis }
+		}
+	}
+}
