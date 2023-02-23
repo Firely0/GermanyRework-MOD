@@ -130,7 +130,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		relative_position_id = GER_establish_abwehr
-		x = 2
+		x = 4
 		y = 1
 		cost = 2
 		available = {
@@ -154,6 +154,9 @@ focus_tree = {
 	focus = {
 		id = GER_rhineland_england
 		icon = GFX_focus_chi_british_cooperation
+		mutually_exclusive = {
+			focus = GER_rhineland_france
+		}
 		prerequisite = {
 			focus = GER_establish_abwehr
 		}
@@ -166,9 +169,58 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_communism_near_me
 				has_country_flag = GER_rhineland_challenge_met
+				OR = {
+					any_neighbor_country = {
+						has_government = communism
+					}
+					ENG = {
+						has_government = communism
+					}
+				}
+			}
+			ENG = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { has_government = Communism }
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			ENG = { country_event = { id = GER_request_help.1 hours = 6 } }
+		}
+	}
+
+	focus = {
+		id = GER_rhineland_france
+		icon = GFX_focus_chi_reach_out_to_france
+		mutually_exclusive = {
+			focus = GER_rhineland_england
+		}
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		relative_position_id = GER_establish_abwehr
+		x = -4
+		y = 1
+		cost = 5
+		available = {
+			has_completed_focus = GER_rhineland_demilitarized
+			custom_trigger_tooltip = {
+				tooltip = GER_communism_near_me
+				has_country_flag = GER_rhineland_challenge_met
 				any_neighbor_country = {
 					has_government = communism
 				}
+			}
+			FRA = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { has_government = Communism }
 			}
 		}
 		bypass = {
@@ -491,8 +543,7 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		allow_branch = { always = no }
-		#allow_branch = { has_government = fascism }
+		allow_branch = { has_government = fascism }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
@@ -609,7 +660,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		#allow_branch = { has_government = fascism }
+		allow_branch = { has_government = fascism }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
 		x = 50
@@ -4763,7 +4814,7 @@ focus_tree = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_Axis
 		prerequisite = { focus = GER_establish_abwehr }
-		#allow_branch = { has_government = fascism }
+		allow_branch = { has_government = fascism }
 		available = {
 			is_puppet = no
 			has_government = fascism
@@ -7997,7 +8048,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 22
+		x = 20
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -8052,7 +8103,7 @@ focus_tree = {
 		id = GER_prepare_for_innovative_f
 		icon = GFX_goal_support_communism
 		relative_position_id = GER_establish_abwehr
-		x = -13
+		x = -8
 		y = 1
 		cost = 10
 		#allow_branch = {
@@ -8171,7 +8222,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_prepare_for_innovative
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		mutually_exclusive = {
 			focus = GER_assassinate_adolf_hitler
 		}
@@ -8203,6 +8254,235 @@ focus_tree = {
 		relative_position_id = GER_against_fuhrer
 		x = 0
 		y = 4
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Home_of_Revelation
+		icon = GFX_goal_Trotsky
+		mutually_exclusive = {
+			focus = GER_Follow_Moscow
+		}
+		prerequisite = {
+			focus = GER_the_German_Republic 
+		}
+		relative_position_id = GER_against_fuhrer
+		x = -6
+		y = 5
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Home_of_Revelation_Side
+		icon = GFX_focus_SOV_merge_plants
+		mutually_exclusive = {
+			focus = GER_balanced_approach focus = GER_Soviet_Side
+		}
+		prerequisite = {
+			focus = GER_Home_of_Revelation 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -4
+		y = 2
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Rebuild_Home
+		icon = GFX_goal_generic_construction2
+		mutually_exclusive = {
+			
+		}
+		prerequisite = {
+			focus = GER_Home_of_Revelation_Side focus = GER_balanced_approach
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -2
+		y = 3
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_balanced_approach
+		icon = GFX_focus_generic_improve_the_administration
+		mutually_exclusive = {
+			focus = GER_Home_of_Revelation_Side focus = GER_Soviet_Side
+		}
+		prerequisite = {
+			focus = GER_the_German_Republic 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_foregin_affairs_kom
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		prerequisite = {
+			focus = GER_the_German_Republic focus = GER_Soviet_Side focus = GER_Home_of_Revelation_Side
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 0
+		y = 3
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			add_war_support = 0.05
+			add_state_claim = 69  
+			add_state_claim = 4  
+			add_state_claim = 848
+			add_state_claim = 153
+			add_state_claim = 152
+			add_state_claim = 653
+			add_state_claim = 86
+			add_state_claim = 807
+			add_state_claim = 85
+			add_state_claim = 188
+			add_state_claim = 102
+			add_state_claim = 39
+			add_state_claim = 850
+			add_state_claim = 28
+			add_state_claim = 8
+		}
+	}
+
+	focus = {
+		id = GER_Follow_Moscow
+		icon = GFX_focus_generic_join_comintern
+		mutually_exclusive = {
+			focus = GER_Home_of_Revelation
+		}
+		prerequisite = {
+			focus = GER_the_German_Republic 
+		}
+		relative_position_id = GER_against_fuhrer
+		x = 6
+		y = 5
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Soviet_Side
+		icon = GFX_goal_generic_soviet_construction
+		mutually_exclusive = {
+			focus = GER_balanced_approach focus = GER_Home_of_Revelation_Side
+		}
+		prerequisite = {
+			focus = GER_Follow_Moscow 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 4
+		y = 2
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Long_term_plan
+		icon = GFX_goal_generic_construction
+		mutually_exclusive = {
+			
+		}
+		prerequisite = {
+			focus = GER_Soviet_Side focus = GER_balanced_approach
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 2
+		y = 3
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
@@ -8279,7 +8559,10 @@ focus_tree = {
 	focus = {
 		id = GER_National_sprit
 		text = GER_improve_national_spirit
-		prerequisite = { focus = GER_Fuhrer focus = GER_grand_counchil }
+		allow_branch = {
+			has_government = fascism
+		}
+		prerequisite = { focus = GER_establish_abwehr }
 		icon = GFX_goal_betterreich
 		available = {
 			custom_trigger_tooltip = {
@@ -8318,9 +8601,9 @@ focus_tree = {
 			}
 		}		
 		cancel_if_invalid = no
-		x = 10
+		x = 2
 		y = 1
-		relative_position_id = GER_Fuhrer
+		relative_position_id = GER_establish_abwehr
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -8371,6 +8654,71 @@ focus_tree = {
 				add_idea = triumphant_will
 			}
 		}	
+		}
+	}
+
+	focus = {
+		id = GER_National_sprit_a
+		text = GER_improve_national_spirit
+		allow_branch = {
+			has_government = communism
+		}
+		prerequisite = { focus = GER_establish_abwehr }
+		icon = GFX_focus_ger_great_red_menace
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_improve_national_spirit_tooltip
+				OR = {
+					GER = { controls_state = 126 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 126
+					}
+				}
+				OR = {
+					GER = { controls_state = 16 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 16
+					}
+				}
+			}
+		}
+		cancel = {
+			AND = {
+				has_war = no
+				126 = {
+					owner = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+				16 = {
+					owner = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+			}
+		}		
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		relative_position_id = GER_establish_abwehr
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		if = {
+			limit = {
+				has_idea = sour_loser
+			}
+			swap_ideas = {
+				remove_idea = sour_loser
+				add_idea = triumphant_will
+			}
+		}
 		}
 	}
 
@@ -8513,7 +8861,7 @@ focus_tree = {
 			surrender_progress > 0.25
 		}
 		cancel_if_invalid = no
-		x = -6
+		x = -7
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5
@@ -8543,9 +8891,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -5
-		y = 2
-		relative_position_id = GER_Fuhrer
+		x = 1
+		y = 1
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8577,9 +8925,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -7
-		y = 2
-		relative_position_id = GER_Fuhrer
+		x = -1
+		y = 1
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8607,9 +8955,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -6
-		y = 3
-		relative_position_id = GER_Fuhrer
+		x = 0
+		y = 2
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8664,9 +9012,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -7
-		y = 4
-		relative_position_id = GER_Fuhrer
+		x = -1
+		y = 3
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8700,9 +9048,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -5
-		y = 4
-		relative_position_id = GER_Fuhrer
+		x = 1
+		y = 3
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8742,9 +9090,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -6
-		y = 5
-		relative_position_id = GER_Fuhrer
+		x = 0
+		y = 4
+		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8761,7 +9109,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 6
+		x = 7
 		y = 1
 		relative_position_id = GER_Fuhrer
 		cost = 5

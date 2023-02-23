@@ -197,7 +197,7 @@ GER_Rhineland_demilitarized = {
 		is_good = no 
 		fire_only_once = no
 		selectable_mission = no
-		days_mission_timeout = 70
+		days_mission_timeout = 140
 		priority = 100
 	
 		cancel_effect = {
@@ -225,7 +225,7 @@ GER_Rhineland_demilitarized = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.03
+				popularity = -0.15
 			}
 		}
 	
@@ -263,7 +263,7 @@ GER_Rhineland_demilitarized = {
 		is_good = no 
 		fire_only_once = no
 		selectable_mission = no
-		days_mission_timeout = 70
+		days_mission_timeout = 140
 		priority = 90
 	
 		cancel_effect = {
@@ -297,10 +297,13 @@ GER_Rhineland_demilitarized = {
 		}
 
 		visible = {
+			has_active_mission = GER_Rhineland_demilitarized_a
 		}
 
 		complete_effect = {
-			complete_national_focus = GER_rhineland_ab
+			hidden_effect = {
+				complete_national_focus = GER_rhineland_ab
+			}
             set_global_flag = rhineland_remilitarized
             custom_effect_tooltip = GER_rhineland_ultimatum
 			if = {

@@ -20,6 +20,7 @@ add_namespace = GER_jap_coal_trade
 add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
 add_namespace = GER_request_help
+add_namespace = GER_request_fra_help
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -2533,6 +2534,14 @@ country_event = {
 
 		GER = { country_event = { id = GER_request_help.2 } }
 
+		if = {
+			limit = {
+				NOT = { has_government = communism }
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+
 		hidden_effect = {
 			42 = { set_demilitarized_zone = no }
             51 = { set_demilitarized_zone = no } 
@@ -2579,6 +2588,86 @@ country_event = {
 country_event = {
 	id = GER_request_help.3
 	title = "United Kingdom Not Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We See You When You Invaded by Communists."
+		
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.1
+	title = "Rhineland Question!"
+	desc = "Germany Needs to Militarize Rhineland Against Communism."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+		GER = { country_event = { id = GER_request_fra_help.2 } }
+
+		if = {
+			limit = {
+				NOT = { has_government = communism }
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+
+		hidden_effect = {
+			42 = { set_demilitarized_zone = no }
+            51 = { set_demilitarized_zone = no } 
+			clr_country_flag = GER_rhineland_challenge_met
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		GER = { country_event = { id = GER_request_fra_help.3 } }
+
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.2
+	title = "France Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.3
+	title = "France Not Accepted Our Request!"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
