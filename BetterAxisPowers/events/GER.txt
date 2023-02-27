@@ -21,6 +21,7 @@ add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
 add_namespace = GER_request_help
 add_namespace = GER_request_fra_help
+add_namespace = GER_rhineland_n
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -2676,6 +2677,192 @@ country_event = {
 			factor = 100
 		}
 		name = "We See You When You Invaded by Communists."
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.1
+	title = "We Spotted German Troops in Rhineland!"
+	desc = "Our Soldiers Have Seen German Soldiers in the Rhineland and are Standing for Possible Intervention."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Not a Significant Problem."
+		
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "The British Should Be Aware Of This Situation"
+
+		ENG = { country_event = { id = GER_rhineland_n.2 hours = 6 } }
+
+		add_war_support = 0.05
+
+		add_stability = -0.05
+		add_political_power = -25
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.2
+	title = "France Spotted German Troops in Rhineland!"
+	desc = "France informed us that German soldiers appeared within the borders of the Rhineland and were waiting for support for a joint intervention."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Not a Significant Problem."
+
+		add_stability = 0.05
+
+		FRA = { country_event = { id = GER_rhineland_n.3 hours = 6 } }
+		
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "To Keep the Peace, We Must Prepare for Possible War."
+
+		FRA = { country_event = { id = GER_rhineland_n.4 hours = 6 } }
+
+		add_war_support = 0.1
+
+		add_stability = -0.1
+		add_political_power = -200
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.3
+	title = "The British Didn't Support Us!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We Must be back down "
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Let's Take Necessary Measures Against Germany"
+
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		} 
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Can Lead This War Alone."
+
+		add_stability = -0.1
+		
+		add_ai_strategy = {
+			type = alliance
+			id = ENG
+			value = -300
+		}
+		
+		ENG = {
+			add_ai_strategy = {
+				type = alliance
+				id = FRA
+				value = -300
+			} 
+		}
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GER
+		}
+
+		FRA = { 
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_political_power = -100
+		}
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.4
+	title = "British Support With Us!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Prepare for the Inevitable War!"
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GER
+		}
+
+		FRA = { 
+			add_stability = -0.1
+			add_political_power = -100
+		}
+
+		ENG = { 
+			add_to_faction = FRA
+			add_stability = -0.1
+			add_political_power = -100
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Let's Take Necessary Measures Against Germany"
+
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		} 
+
+		ENG = { 
+			add_to_faction = FRA
+			add_stability = 0.05
+			add_political_power = -5
+			send_embargo = GER 
+			add_opinion_modifier = {
+				target = GER
+				modifier = protest_action
+			} 
+		}
 		
 	}
 }

@@ -297,7 +297,7 @@ GER_Rhineland_demilitarized = {
 		}
 
 		visible = {
-			has_active_mission = GER_Rhineland_demilitarized_a
+			NOT = { has_decision = GER_Rhineland_demilitarized_d }
 		}
 
 		complete_effect = {
@@ -312,6 +312,37 @@ GER_Rhineland_demilitarized = {
 					country_event = { id = germany.60 }
 					custom_effect_tooltip = may_provoke_hostility
 				}
+			}
+		}
+	}
+
+	GER_Rhineland_demilitarized_d = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 35
+		priority = 70
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			army_experience = 5
+			hidden_effect = {
+				FRA = { country_event = { id = GER_rhineland_n.1 hours = 3 } }
 			}
 		}
 	}
