@@ -20,6 +20,24 @@ ideas = {
 			}
 		}
 
+		GER_purge_comunist_support_idea = {
+
+			picture = generic_oppression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = -0.04
+			}
+		}
+
 		GER_fascism_for_our_glory_idea = {
 
 			picture = generic_oppression

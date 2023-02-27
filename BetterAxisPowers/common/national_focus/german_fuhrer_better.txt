@@ -65,7 +65,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland_demilitarized
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
@@ -126,6 +126,9 @@ focus_tree = {
 	focus = {
 		id = GER_purge_comunist_support
 		icon = GFX_goal_anti_comintern_pact
+		allow_branch = {
+			has_government = fascism
+		}
 		prerequisite = {
 			focus = GER_establish_abwehr
 		}
@@ -152,6 +155,37 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_purge_fascism_support
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		allow_branch = {
+			has_government = communism
+		}
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		relative_position_id = GER_establish_abwehr
+		x = 4
+		y = 1
+		cost = 2
+		available = {
+			is_subject = no
+			NOT = { has_government = fascism }
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_purge_fascism_support_idea
+				days = 365
+			}	
+		}
+	}
+
+	focus = {
 		id = GER_rhineland_england
 		icon = GFX_focus_chi_british_cooperation
 		mutually_exclusive = {
@@ -169,13 +203,8 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_communism_near_me
 				has_country_flag = GER_rhineland_challenge_met
-				OR = {
-					any_neighbor_country = {
-						has_government = communism
-					}
-					ENG = {
-						has_government = communism
-					}
+				any_neighbor_country = {
+					has_government = communism
 				}
 			}
 			ENG = {
@@ -213,8 +242,13 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_communism_near_me
 				has_country_flag = GER_rhineland_challenge_met
-				any_neighbor_country = {
-					has_government = communism
+				OR = {
+					any_neighbor_country = {
+						has_government = communism
+					}
+					ENG = {
+						has_government = communism
+					}
 				}
 			}
 			FRA = {
@@ -230,7 +264,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			ENG = { country_event = { id = GER_request_help.1 hours = 6 } }
+			FRA = { country_event = { id = GER_request_help.1 hours = 6 } }
 		}
 	}
 
@@ -8103,7 +8137,7 @@ focus_tree = {
 		id = GER_prepare_for_innovative_f
 		icon = GFX_goal_support_communism
 		relative_position_id = GER_establish_abwehr
-		x = -8
+		x = -13
 		y = 1
 		cost = 10
 		#allow_branch = {
@@ -8385,7 +8419,7 @@ focus_tree = {
 		}
 		relative_position_id = GER_the_German_Republic
 		x = 0
-		y = 3
+		y = 4
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
