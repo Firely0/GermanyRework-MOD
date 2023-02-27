@@ -297,7 +297,7 @@ GER_Rhineland_demilitarized = {
 		}
 
 		visible = {
-			NOT = { has_decision = GER_Rhineland_demilitarized_d }
+			has_global_flag = GER_NO_WAR
 		}
 
 		complete_effect = {

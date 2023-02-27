@@ -2713,20 +2713,9 @@ country_event = {
 country_event = {
 	id = GER_rhineland_n.2
 	title = "France Spotted German Troops in Rhineland!"
-	desc = "France informed us that German soldiers appeared within the borders of the Rhineland and were waiting for support for a joint intervention."
+	desc = "France informed us that German soldiers appeared within the borders of the Rhineland and France Seeks Support for a Joint Response."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Not a Significant Problem."
-
-		add_stability = 0.05
-
-		FRA = { country_event = { id = GER_rhineland_n.3 hours = 6 } }
-		
-	}
 
 	option = {
 		ai_chance = {
@@ -2739,9 +2728,22 @@ country_event = {
 		add_war_support = 0.1
 
 		add_stability = -0.1
-		add_political_power = -200
+		add_political_power = -100
 		
 	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Not a Significant Problem."
+
+		add_stability = 0.05
+
+		FRA = { country_event = { id = GER_rhineland_n.3 hours = 6 } }
+		
+	}
+
 }
 
 country_event = {
@@ -2756,6 +2758,8 @@ country_event = {
 		}
 		name = "We Must be back down "
 
+		set_global_flag = GER_NO_WAR
+
 	}
 
 	option = {
@@ -2763,6 +2767,8 @@ country_event = {
 			factor = 0
 		}
 		name = "Let's Take Necessary Measures Against Germany"
+
+		set_global_flag = GER_NO_WAR
 
 		add_stability = 0.05
 		add_political_power = -5
@@ -2844,6 +2850,8 @@ country_event = {
 			factor = 100
 		}
 		name = "Let's Take Necessary Measures Against Germany"
+
+		set_global_flag = GER_NO_WAR
 
 		add_stability = 0.05
 		add_political_power = -5
