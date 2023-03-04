@@ -1,0 +1,778 @@
+﻿l_english:
+ MINIMIZE_EVENT:0 "§GClick§! to Minimize. Event will be placed in the Event Queue under §HEvents and Decisions§!."
+ 
+ mrpact_initial.1.t:0 "Preparation Of a German-Soviet Pact Proposal"
+ mrpact_initial.1.d:0 "A pact between us and the USSR, in spite of its unnatural appearance, is not as insane as one might think;\n\nIt could allow us to avoid any Soviet intervention in the event of an inevitable conflict with the West, thus containing this potential threat, while at the same time allowing us to have first-hand access to Soviet exports, which could be of capital importance in the event of a British blockade.\nThe Russians on the other hand would have everything to gain, this would allow them to expand their precious sphere of influence undisturbed, and given how much they fear a conflict with us they will no doubt be thrilled by such a diplomatic rapprochement... Hopefully."
+ mrpact_initial.1.a:0 "Realpolitik in action."
+ 
+ mrpact_sphere_changes_tt:0 "§RThe territorial clauses can be renegociated following the way the invasion of Poland unfolds.§!"
+ 
+ mrpact_negociation_chain_sov_tt:0 "§RShould these negotiations stall, the Soviet Union can decide to withdraw!§!"
+ 
+ mrpact_this_can_stop_negociations_tt:0 "§RThe territorial clauses can be renegociated following the way the invasion of Poland unfolds.§!"
+ 
+ coming_soon_tt:0 "§RNOT YET FULLY COMPLETED - COMING VERY SOON! Sorry for the inconvenience§!"
+ 
+
+ mrpact.1.t:0 "The Molotov-Ribbentrop Pact"
+ mrpact.1.d:0 "The Germans have just approached us, proposing a pact between our two nations. This treaty, in addition to greatly increasing our mutual trade, aims at a non-aggression and non-interference agreement between our two countries.\n\nAn additional secret protocol, still to be negotiated, suggests the possibility of a division of Eastern Europe between two spheres of Soviet and German influence and even a coordinated attack on Poland.\n\nWhile the fascists in Berlin may not be trustworthy, this pact could allow us to deal with Finland, the Baltic States, Romania and maybe even Poland without fear of outside interference."
+ mrpact.1.a:0 "Tell them we're in."
+ mrpact.1.a.tt:1 "§RWhile the pact is in effect, the Closed Economy trade policy will be unavailable.§!\n"
+ SOV_mr_pact_estonia_tt:0 "The §YSoviet Union§! will gain claims on §YEstonian territories§!.\n"
+ SOV_mr_pact_latvia_tt:0 "The §YSoviet Union§! will gain claims on §YLatvian territories§!.\n"
+ SOV_mr_pact_finland_tt:0 "The §YSoviet Union§! will gain claims on §YFinnish territories§!.\n"
+ SOV_mr_pact_eastern_poland_tt:0 "The §YSoviet Union§! will gain claims on §YEastern Polish territories§!.\n"
+ SOV_mr_pact_bessarabia_tt:0 "The §YSoviet Union§! will gain claims on §Ythe territories of Bessarabia§!.\n"
+ SOV_mr_pact_lithuania_tt:0 "The §YSoviet Union§! will gain claims on §YLithuanian territories§!.\n"
+ GER_mr_pact_lithuania_tt:0 "The §YGerman Reich§! will gain claims on §YLithuanian territories§!.\n"
+ GER_mr_pact_western_poland_tt:0 "The §YGerman Reich§! will gain claims on §YWestern Polish territories§!.\n"
+ GER_mr_pact_western_and_central_poland_tt:0 "The §YGerman Reich§! will gain claims on §YWestern and Central Polish territories§!.\n"
+ mrpact.1.b:0 "No deals with the fascists!"
+ 
+ SOV_mr_pact_estonia_influence_tt:0 "§YEstonia§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ SOV_mr_pact_latvia_influence_tt:0 "§YLatvia§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ SOV_mr_pact_finland_influence_tt:0 "§YFinland§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ SOV_mr_pact_eastern_poland_influence_tt:0 "§YEastern Poland§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ SOV_mr_pact_bessarabia_influence_tt:0 "§YBessarabia§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ SOV_mr_pact_lithuania_influence_tt:0 "§YLithuania§! will be assigned to the §YSoviet sphere of influence§!.\n"
+ 
+ 
+ GER_mr_pact_estonia_influence_tt:0 "§YEstonia§! will be assigned to the §YGerman sphere of influence§!.\n"
+ GER_mr_pact_latvia_influence_tt:0 "§YLatvia§! will be assigned to the §YGerman sphere of influence§!.\n"
+ GER_mr_pact_finland_influence_tt:0 "§YFinland§! will be assigned to the §YGerman sphere of influence§!.\n"
+ GER_mr_pact_lithuania_influence_tt:0 "§YLithuania§! will be assigned to the §YGerman sphere of influence§!.\n"
+ GER_mr_pact_western_poland_influence_tt:0 "§YWestern Poland§! will be assigned to the §YGerman sphere of influence§!.\n"
+ GER_mr_pact_western_and_central_poland_influence_tt:0 "§YWestern and Central Poland§! will be assigned to the §YGerman sphere of influence§!.\n"
+ 
+ 
+ SOV_mr_pact_lithuania_if_transfer_tt:0 "If the §YSoviet Union§! agrees, §YLithuania§! will be transferred to the §YSoviet sphere of influence§! and we will be allowed to keep the contested territories."
+ SOV_mr_pact_lithuania_transfer_tt:0 "§YLithuania§! will be transferred to the §YSoviet sphere of influence§! and in exchange §YGermany§! will be granted the contested territories."
+ 
+ mrpact_non_aggression_tt:1 "§YWill enter in a non-aggression pact with the Soviet Union.§!\n"
+ 
+ mr_pact_into_german_sphere_of_influence: "§YThe Molotov-Ribbentrop Pact§! has included this country in the §YGerman sphere of influence§!"
+ 
+ 
+ mrpact_initial.2.t:0 "Moscow Accepts the Offer"
+ mrpact_initial.2.d:0 "The Soviet Union has let us know that they are very pleased by our proposal, and have already agreed to most of the clauses that we have submitted for their consideration. All that remains now is to negotiate the borders of our spheres of influence."
+ mrpact_initial.2.a:0 "Wonderful."
+ 
+ mrpact_initial.3.t:0 "Moscow Rejects the Offer"
+ mrpact_initial.3.d:0 "The Soviet Union has refused to sign our non-aggression pact! This complicates matters, since we cannot deal decisively with Poland or France without the risk of the Bolsheviks getting themselves involved."
+ mrpact_initial.3.a:0 "Curse them!"
+ 
+ 
+ ###############################################
+ #FINLAND NEGOCIATIONS
+ 
+ mrpact_negociations_finland.1.t:0 "Spheres of Influence - Finland"
+ mrpact_negociations_finland.1.d:0 "The only interest of Finland in our eyes would be its geographical situation which could be advantageous in case of war against the Soviet Union, mostly given its proximity to Leningrad and its large openings on the Baltic Sea.\n\nThe Soviets, however, have already had their eyes on the country for some time and have very strong claims on it, so unless we are sure of its usefulness, it is better to leave it to them."
+ mrpact_negociations_finland.1.a:0 "They can have it."
+ mrpact_negociations_finland.1.b:0 "It's risky, but let's claim it."
+ 
+ mrpact_negociations_finland.2.t:0 "Spheres of Influence - Finland"
+ mrpact_negociations_finland.2.d:0 "Of all the territories we lost after the Great War, Finland is probably the most significant. It has a large strategic opening to the Baltic Sea, but above all threatens Leningrad dangerously by its proximity to the city.\n\nThe Germans, recognizing our very strong claims on the country, conceded us straight away its attachment to our sphere of influence."
+ mrpact_negociations_finland.2.a:0 "Very good."
+ mrpact_negociations_finland.2.b:0 "What if we gave it to the Germans instead? Better them than the Finish at our doorstep."
+ 
+ mrpact_negociations_finland.3.t:0 "Spheres of Influence - Finland"
+ mrpact_negociations_finland.3.d:0 "Of all the territories we lost after the Great War, Finland is probably the most significant. It has a large strategic opening to the Baltic Sea, but above all threatens Leningrad dangerously by its proximity to the city.\n\nThe Germans, despite their awareness of our strong claims over the country, have expressed that they want it to be included in their sphere of influence. Accepting this could be a two-way street, as it would give a strategic location to the ally... or potential enemy that Germany constitutes."
+ mrpact_negociations_finland.3.a:0 "Let them know that Finland belongs to us!"
+ mrpact_negociations_finland.3.b:0 "We trust the Germans to take care of this frozen wasteland that is our neighbor."
+ 
+ mrpact_negociations_finland.4.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_finland.4.d:0 "Unsurprisingly, the Soviets expressed no objections when we directly suggested to include Finland in their sphere of influence."
+ mrpact_negociations_finland.4.a:0 "Well, that's it for the matter of Finland."
+ 
+ mrpact_negociations_finland.5.t:0 "The Soviet Union is Not Interested in Finland"
+ mrpact_negociations_finland.5.d:0 "To our greatest surprise, the Soviets stated that they were not interested in Finland, declaring that 'it makes no difference whether we or an ally controls this frozen wasteland we call a country.' and proposed that it be included into our sphere of influence instead."
+ mrpact_negociations_finland.5.a:0 "Oh well, can't argue with that."
+ 
+ mrpact_negociations_finland.6.t:0 "The Soviets Protest"
+ mrpact_negociations_finland.6.d:0 "It was to be expected. When we told the Soviets about our decision to claim Finland, they vigorously argued that the country was theirs, further stating that there was no debate to be done on this subject."
+ mrpact_negociations_finland.6.a:0 "We will not give in!"
+ mrpact_negociations_finland.6.b:0 "Fine they can have it."
+ 
+ mrpact_negociations_finland.7.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_finland.7.d:0 "Surprisingly, and in spite of their significant claims on Finland, the Soviets did not object when we expressed our desire to include the country in our own sphere of influence. Even declaring that 'it makes no difference whether we or an ally controls this frozen wasteland of a country.'"
+ mrpact_negociations_finland.7.a:0 "Well, that's it for the matter of Finland then."
+ 
+ mrpact_negociations_finland.8.t:0 "The Germans Insist"
+ mrpact_negociations_finland.8.d:0 "Despite our strong objections to the German demands over Finland, the latter stoically reiterated them. It is clear that this debate will not lead to anything, we now have to either shamefuly give in to the Germans or withdraw from this farce."
+ mrpact_negociations_finland.8.a:0 "Fine! They can have it!"
+ mrpact_negociations_finland.8.b:0 "To think we were foolish enough to believe we could have gotten along with the Germans."
+ 
+ mrpact_negociations_finland.9.t:0 "The Soviets Folds to Our Demands"
+ mrpact_negociations_finland.9.d:0 "Following our repeated requests to include Finland in our own sphere of influence, the Soviets finally gave in to our demands."
+ mrpact_negociations_finland.9.a:0 "A great diplomatic victory!"
+ 
+ mrpact_negociations_finland.10.t:0 "The Soviets Leave the Negotiations"
+ mrpact_negociations_finland.10.d:0 "Following our repeated requests to include Finland in our own sphere of influence, the Soviets have announced their withdrawal from the negotiations, obviously very frustrated by the way they have turned out. Thus any hope of a German-Soviet pact is now gone."
+ mrpact_negociations_finland.10.a:0 "Maybe we were a bit too harsh?"
+ 
+ mrpact_negociations_finland.11.t:0 "The Germans Folds to Our Objections"
+ mrpact_negociations_finland.11.d:0 "Following our strong objections to the integration of Finland into the German sphere of influence, the latter finally gave in, and this country, which is rightfully ours, was brought into our sphere of influence."
+ mrpact_negociations_finland.11.a:0 "One good thing done."
+ 
+ ###############################################
+ #ESTONIA NEGOCIATIONS
+ 
+ mrpact_negociations_estonia.1.t:0 "Spheres of Influence - Estonia"
+ mrpact_negociations_estonia.1.d:0 "We do not, except perhaps in the light of an advanced base in the Baltic See, have much interest in Estonia. Quite the sharp opposite of the Soviets, for whom the country's independence is an insult and who dream of reintegrating it into their nation, as such many think that it would be better to leave it to them."
+ mrpact_negociations_estonia.1.a:0 "They can have it."
+ mrpact_negociations_estonia.1.b:0 "It's risky, but let's claim it."
+ 
+ mrpact_negociations_estonia.2.t:0 "Spheres of Influence - Estonia"
+ mrpact_negociations_estonia.2.d:0 "The loss of the Baltic States after the Great War is probably one of the greatest outrages to our nation, that is after the independence of Poland.\n\nThe Germans, recognizing our strong claims on the country, conceded us straight away its attachment to our sphere of influence."
+ mrpact_negociations_estonia.2.a:0 "Very good."
+ 
+ mrpact_negociations_estonia.3.t:0 "Spheres of Influence - Estonia"
+ mrpact_negociations_estonia.3.d:0 "The loss of the Baltic States after the Great War is probably one of the greatest outrages to our nation, that is after the independence of Poland.\n\nThe Germans, despite their awareness of our strong claims over the country, have expressed that they want it to be included in their sphere of influence. Accepting this could be a two-way street, as it would give a strategic location to the ally... or potential enemy that Germany constitutes."
+ mrpact_negociations_estonia.3.a:0 "Let them know that Estonia belongs to us!"
+ mrpact_negociations_estonia.3.b:0 "We trust the Germans to take care of this small piece of land."
+ 
+ mrpact_negociations_estonia.4.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_estonia.4.d:0 "Unsurprisingly, the Soviets expressed no objections when we directly suggested to include Estonia in their sphere of influence."
+ mrpact_negociations_estonia.4.a:0 "Well, that's it for the matter of Estonia."
+ 
+ mrpact_negociations_estonia.6.t:0 "The Soviets Protest"
+ mrpact_negociations_estonia.6.d:0 "It was to be expected. When we told the Soviets about our decision to claim Estonia, they vigorously argued that the country was theirs, further stating that there was no debate to be done on this subject."
+ mrpact_negociations_estonia.6.a:0 "We will not give in!"
+ mrpact_negociations_estonia.6.b:0 "Fine they can have it."
+ 
+ mrpact_negociations_estonia.7.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_estonia.7.d:0 "Surprisingly, and in spite of their significant claims on Estonia, the Soviets did not object when we expressed our desire to include the country in our own sphere of influence. Even declaring that 'it makes no difference whether we or an ally controls this small piece of land.'"
+ mrpact_negociations_estonia.7.a:0 "Well, that's it for the matter of Estonia then."
+ 
+ mrpact_negociations_estonia.8.t:0 "The Germans Insist"
+ mrpact_negociations_estonia.8.d:0 "Despite our strong objections to the German demands over Estonia, the latter stoically reiterated them. It is clear that this debate will not lead to anything, we now have to either shamefuly give in to the Germans or withdraw from this farce."
+ mrpact_negociations_estonia.8.a:0 "Fine! They can have it!"
+ mrpact_negociations_estonia.8.b:0 "To think we were foolish enough to believe we could have gotten along with the Germans."
+ 
+ mrpact_negociations_estonia.9.t:0 "The Soviets Folds to Our Demands"
+ mrpact_negociations_estonia.9.d:0 "Following our repeated requests to include Estonia in our own sphere of influence, the Soviets finally gave in to our demands."
+ mrpact_negociations_estonia.9.a:0 "A great diplomatic victory!"
+ 
+ mrpact_negociations_estonia.10.t:0 "The Soviets Leave the Negotiations"
+ mrpact_negociations_estonia.10.d:0 "Following our repeated requests to include Estonia in our own sphere of influence, the Soviets have announced their withdrawal from the negotiations, obviously very frustrated by the way they have turned out. Thus any hope of a German-Soviet pact is now gone."
+ mrpact_negociations_estonia.10.a:0 "Maybe we were a bit too harsh?"
+ 
+ mrpact_negociations_estonia.11.t:0 "The Germans Folds to Our Objections"
+ mrpact_negociations_estonia.11.d:0 "Following our strong objections to the integration of Estonia into the German sphere of influence, the latter finally gave in, and this country, which is rightfully ours, was brought into our sphere of influence."
+ mrpact_negociations_estonia.11.a:0 "One good thing done."
+ 
+ ###############################################
+ #LATVIA NEGOCIATIONS
+ 
+ mrpact_negociations_latvia.1.t:0 "Spheres of Influence - Latvia"
+ mrpact_negociations_latvia.1.d:0 "We do not have, except perhaps in the perspective of an advanced base in the Baltic See, much interest in Latvia. Quite the opposite of the Soviets, for whom the country's independence is an insult and who are eager to reintegrate it into their nation, so much so that many stated that it would be better to leave the country to them."
+ mrpact_negociations_latvia.1.a:0 "They can have it."
+ mrpact_negociations_latvia.1.b:0 "It's risky, but let's claim it."
+ 
+ mrpact_negociations_latvia.2.t:0 "Spheres of Influence - Latvia"
+ mrpact_negociations_latvia.2.d:0 "The loss of the Baltic States after the Great War is probably one of the greatest outrages to our nation, that is after the independence of Poland.\n\nThe Germans, recognizing our strong claims over the country, granted straight away its attachment to our sphere of influence."
+ mrpact_negociations_latvia.2.a:0 "Very good."
+ 
+ mrpact_negociations_latvia.3.t:0 "Spheres of Influence - Latvia"
+ mrpact_negociations_latvia.3.d:0 "The loss of the Baltic States after the Great War is probably one of the greatest outrages to our nation, that is after the independence of Poland.\n\nThe Germans, despite their awareness of our strong claims over the country, have expressed that they want it to be included in their sphere of influence. Accepting this could be a two-way street, as it would give a strategic location to the ally... or potential enemy that Germany constitutes."
+ mrpact_negociations_latvia.3.a:0 "Let them know that Latvia belongs to us!"
+ mrpact_negociations_latvia.3.b:0 "We trust the Germans to take care of this small piece of land."
+ 
+ mrpact_negociations_latvia.4.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_latvia.4.d:0 "Unsurprisingly, the Soviets expressed no objections when we directly suggested to include Latvia in their sphere of influence."
+ mrpact_negociations_latvia.4.a:0 "Well, that's it for the matter of Latvia."
+ 
+ mrpact_negociations_latvia.6.t:0 "The Soviets Protest"
+ mrpact_negociations_latvia.6.d:0 "It was to be expected. When we told the Soviets about our decision to claim Latvia, they vigorously argued that the country was theirs, further stating that there was no debate to be done on this subject."
+ mrpact_negociations_latvia.6.a:0 "We will not give in!"
+ mrpact_negociations_latvia.6.b:0 "Fine they can have it."
+ 
+ mrpact_negociations_latvia.7.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_latvia.7.d:0 "Surprisingly, and in spite of their significant claims on Latvia, the Soviets did not object when we expressed our desire to include the country in our own sphere of influence. Even declaring that 'it makes no difference whether we or an ally controls this small piece of land.'"
+ mrpact_negociations_latvia.7.a:0 "Well, that's it for the matter of Latvia then."
+ 
+ mrpact_negociations_latvia.8.t:0 "The Germans Insist"
+ mrpact_negociations_latvia.8.d:0 "Despite our strong objections to the German demands over Latvia, the latter stoically reiterated them. It is clear that this debate will not lead to anything, we now have to either shamefuly give in to the Germans or withdraw from this farce."
+ mrpact_negociations_latvia.8.a:0 "Fine! They can have it!"
+ mrpact_negociations_latvia.8.b:0 "To think we were foolish enough to believe we could have gotten along with the Germans."
+ 
+ mrpact_negociations_latvia.9.t:0 "The Soviets Folds to Our Demands"
+ mrpact_negociations_latvia.9.d:0 "Following our repeated requests to include Latvia in our own sphere of influence, the Soviets finally gave in to our demands."
+ mrpact_negociations_latvia.9.a:0 "A great diplomatic victory!"
+ 
+ mrpact_negociations_latvia.10.t:0 "The Soviets Leave the Negotiations"
+ mrpact_negociations_latvia.10.d:0 "Following our repeated requests to include Latvia in our own sphere of influence, the Soviets have announced their withdrawal from the negotiations, obviously very frustrated by the way they have turned out. Thus any hope of a German-Soviet pact is now gone."
+ mrpact_negociations_latvia.10.a:0 "Maybe we were a bit too harsh?"
+ 
+ mrpact_negociations_latvia.11.t:0 "The Germans Folds to Our Objections"
+ mrpact_negociations_latvia.11.d:0 "Following our strong objections to the integration of Latvia into the German sphere of influence, the latter finally gave in, and this country, which is rightfully ours, was brought into our sphere of influence."
+ mrpact_negociations_latvia.11.a:0 "One good thing done."
+ 
+ ###############################################
+ #LITHUANIA NEGOCIATIONS
+ 
+ mrpact_negociations_lithuania.1.t:0 "Spheres of Influence - Lithuania"
+ mrpact_negociations_lithuania.1.d:0 "Unlike the other countries bordering the Baltic Sea, we have some interests in Lithuania, mainly because we share a common border, and have done for a long time. The Soviets however also have claims on the country, for whom it's independence is an insult and who are eager to reintegrate it into their union."
+ mrpact_negociations_lithuania.1.a:0 "They can have it."
+ mrpact_negociations_lithuania.1.b:0 "Lithuania is ours."
+ 
+ mrpact_negociations_lithuania.2.t:0 "Spheres of Influence - Lithuania"
+ mrpact_negociations_lithuania.2.d:0 "The case of Lithuania is particular, indeed we have significant claims on it since the country was for a long time part of the Russian Empire, while the Germans on their side controlled it during part of the Great War and have territorial and political interests there.\n\nThe Germans, recognizing our stronger claims over the country, granted straight away its attachment to our sphere of influence."
+ mrpact_negociations_lithuania.2.a:0 "Very good."
+ 
+ mrpact_negociations_lithuania.3.t:0 "Spheres of Influence - Lithuania"
+ mrpact_negociations_lithuania.3.d:0 "The case of Lithuania is particular, indeed we have significant claims on it since the country was for a long time part of the Russian Empire, while the Germans on their side controlled it during part of the Great War and have territorial and political interests there.\n\nThe Germans have thus already declared that they would like Lithuania to belong to their sphere of influence."
+ mrpact_negociations_lithuania.3.a:0 "Let them know that Lithuania belongs to us!"
+ mrpact_negociations_lithuania.3.b:0 "They can have it."
+ 
+ mrpact_negociations_lithuania.4.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_lithuania.4.d:0 "Unsurprisingly, the Soviets expressed no objections when we directly suggested to include Lithuania in their sphere of influence."
+ mrpact_negociations_lithuania.4.a:0 "Well, that's it for the matter of Lithuania."
+ 
+ mrpact_negociations_lithuania.6.t:0 "The Soviets Protest"
+ mrpact_negociations_lithuania.6.d:0 "When we told the Soviets about our decision to claim Lithuania, they vigorously argued that the country was theirs, further stating that there was no debate to be done on this subject."
+ mrpact_negociations_lithuania.6.a:0 "We will not give in!"
+ mrpact_negociations_lithuania.6.b:0 "Fine they can have it."
+ 
+ mrpact_negociations_lithuania.7.t:0 "The Soviet Union Raises No Objection"
+ mrpact_negociations_lithuania.7.d:0 "Upon declaring that we wanted to integrate Lithuania into our sphere of influence, the Soviets fortunately did not object and acknowledged our claims over the country."
+ mrpact_negociations_lithuania.7.a:0 "Well, that's it for the matter of Lithuania then."
+ 
+ mrpact_negociations_lithuania.8.t:0 "The Germans Insist"
+ mrpact_negociations_lithuania.8.d:0 "Despite our strong objections to the German demands over Lithuania, the latter stoically reiterated them. It is clear that this debate will not lead to anything, we now have to either shamefuly give in to the Germans or withdraw from this farce."
+ mrpact_negociations_lithuania.8.a:0 "Fine! They can have it!"
+ mrpact_negociations_lithuania.8.b:0 "To think we were foolish enough to believe we could have gotten along with the Germans."
+ 
+ mrpact_negociations_lithuania.9.t:0 "The Soviets Folds to Our Demands"
+ mrpact_negociations_lithuania.9.d:0 "Following our repeated requests to include Lithuania in our own sphere of influence, the Soviets finally gave in to our demands."
+ mrpact_negociations_lithuania.9.a:0 "A great diplomatic victory!"
+ 
+ mrpact_negociations_lithuania.10.t:0 "The Soviets Leave the Negotiations"
+ mrpact_negociations_lithuania.10.d:0 "Following our repeated requests to include Lithuania in our own sphere of influence, the Soviets have announced their withdrawal from the negotiations, obviously very frustrated by the way they have turned out. Thus any hope of a German-Soviet pact is now gone."
+ mrpact_negociations_lithuania.10.a:0 "Maybe we were a bit too harsh?"
+ 
+ mrpact_negociations_lithuania.11.t:0 "The Germans Folds to Our Objections"
+ mrpact_negociations_lithuania.11.d:0 "Following our strong objections to the integration of Lithuania into the German sphere of influence, the latter finally gave in, and this country, which is rightfully ours, was brought into our sphere of influence."
+ mrpact_negociations_lithuania.11.a:0 "One good thing done."
+ 
+ ###############################################
+ #(CENTRAL) POLAND NEGOCIATIONS
+ 
+ mrpact_negociations_poland.1.t:0 "Spheres of Influence - Poland"
+ mrpact_negociations_poland.1.d:0 "The division of Poland is a rather delicate subject, we have already managed to agree on the distribution of the territories in the western and eastern parts of the country, which will logically go to Germany and the USSR respectively.\n\nThe fate of some territories in the center of the country, however, is still under debate."
+ mrpact_negociations_poland.1.a:0 "The Soviets can have these."
+ mrpact_negociations_poland.1.b:0 "Let the Soviets know that we will have them."
+ 
+ mrpact_negociations_poland.2.t:0 "Spheres of Influence - Poland"
+ mrpact_negociations_poland.2.d:0 "The division of Poland was a very delicate issue, but despite that our diplomats managed to agree on the borders of our spheres of influence there. Germany shall have the territories in the West, while we will have those in the East and in the center of the country."
+ mrpact_negociations_poland.2.a:0 "Very good."
+ 
+ mrpact_negociations_poland.3.t:0 "Spheres of Influence - Poland"
+ mrpact_negociations_poland.3.d:0 "The division of Poland is a rather delicate subject, we have already managed to agree on the distribution of the territories in the western and eastern parts of the country, which will logically go to Germany and the USSR respectively.\n\nThe fate of some territories in the center of the country, however, is still under debate. The Germans are ardently requesting that these be included in their sphere of influence, and our diplomats, unsure about the position to take, are anxiously waiting for direct orders on this matter."
+ mrpact_negociations_poland.3.a:0 "Let them know those territories belongs to us!"
+ mrpact_negociations_poland.3.b:0 "They can have these."
+ 
+ mrpact_negociations_poland.4.t:0 "The Soviet Union Agrees"
+ mrpact_negociations_poland.4.d:0 "The division of Poland was a very delicate issue, but despite that our diplomats managed to agree on the borders of our spheres of influence there. We shall get the territories in the West, while the Soviets will have those in the East and in the center of the country."
+ mrpact_negociations_poland.4.a:0 "Well, that's it for the matter of Poland."
+ 
+ mrpact_negociations_poland.6.t:0 "The Soviets Claim the Territories of Central Poland"
+ mrpact_negociations_poland.6.d:0 "Our decision to claim the territories of central Poland did not please the Soviets, who firmly retorted that these territories were theirs by right, given 'the number of Ukrainian and White Russian minorities present there'."
+ mrpact_negociations_poland.6.a:0 "We will not give in!"
+ mrpact_negociations_poland.6.b:0 "Fine they can have these."
+ 
+ mrpact_negociations_poland.7.t:0 "The Soviet Union Leaves us the Territories"
+ mrpact_negociations_poland.7.d:0 "At the end of an intensive debate about the fate of the few territories in the center of Poland, the Soviets ended up allowing their integration into our sphere of influence."
+ mrpact_negociations_poland.7.a:0 "A nice diplomatic victory!"
+ 
+ mrpact_negociations_poland.8.t:0 "The Germans Insist"
+ mrpact_negociations_poland.8.d:0 "Despite our strong objections to the German demands over Central Poland, the latter stoically reiterated them. It is clear that this debate will not lead to anything, we now have to either shamefuly give in to the Germans or withdraw from this farce."
+ mrpact_negociations_poland.8.a:0 "Fine! They can have these territories!"
+ mrpact_negociations_poland.8.b:0 "To think we were foolish enough to believe we could have gotten along with the Germans."
+ 
+ mrpact_negociations_poland.9.t:0 "The Soviets Folds to Our Demands"
+ mrpact_negociations_poland.9.d:0 "At the end of an intensive debate about the fate of the few territories in the center of Poland, the Soviets ended up allowing their integration into our sphere of influence."
+ mrpact_negociations_poland.9.a:0 "A great diplomatic victory!"
+ 
+ mrpact_negociations_poland.10.t:0 "The Soviets Leave the Negotiations"
+ mrpact_negociations_poland.10.d:0 "Following our repeated requests to include the few contested territories of Central Poland in our own sphere of influence, the Soviets have announced their withdrawal from the negotiations, obviously very frustrated by the way they have turned out. Thus any hope of a German-Soviet pact is now gone."
+ mrpact_negociations_poland.10.a:0 "Maybe we were a bit too harsh?"
+ 
+ mrpact_negociations_poland.11.t:0 "The Germans Folds to Our Objections"
+ mrpact_negociations_poland.11.d:0 "Following our strong objections to the integration of the few contested territories of Central Poland into the German sphere of influence, the latter finally gave in, and these, which are rightfully ours, were brought into our sphere of influence."
+ mrpact_negociations_poland.11.a:0 "A great diplomatic victory!"
+ 
+ ###############################################################################
+ ###############################################################################
+ 
+ mrpact_final.1.t:0 "Signing of the Molotov-Ribbentrop Pact"
+ mrpact_final.1.d:0 "All the details of the German-Soviet pact having been agreed upon, it is now time to close the debates and officially sign it, and thus begin a new great period of prosperity between our two nations! "
+ mrpact_final.1.a:0 "To a new long and fruitful relationship!"
+ 
+ mrpact_final.2.t:0 "Signing of the Molotov-Ribbentrop Pact"
+ mrpact_final.2.d:0 "All the details of the German-Soviet pact having been agreed upon, Soviets and Germans diplomats finally closed the debates by signing the pact. Thus formalizing a new partnership between two giants that the world shall not soon forget!"
+ mrpact_final.2.a:0 "To a fruitful relationship!"
+ 
+ ###############################
+ 
+ mrpact.4.t:0 "Proposals For a Mutual Assistance Treaty"
+ mrpact.4.d:0 "Following the announcement of the Molotov-Ribbentrop pact between Germany and the USSR, the idea of a mutual assistance agreement between the United Kingdom and Poland has been proposed. This treaty would consist mainly of a show of solidarity to discourage any German action, and contains promises to intervene if either country is attacked by a third party.\n\nA secret protocol, however, stipulates that we shall only intervene directly on the Poles' side if Germany specifically attacks them; in the event that another country goes to war with Poland, an intervention can and will be subject to prior deliberation."
+ mrpact.4.a:0 "Great, let's sign it."
+ mrpact.4.b:0 "We should not seek confrontation."
+ 
+ mrpact.5.t:0 "The UK Proposes a Mutual Assistance Treaty"
+ mrpact.5.d:0 "Following the announcement of the Molotov-Ribbentrop pact between Germany and the USSR, the British, apparently determined to support us, approached us with the idea of a mutual assistance treaty between our two countries. This treaty consist mainly of a show of solidarity to discourage any German action, and contains promises to intervene if either country is attacked by a third party.\n\nA secret protocol, however, stipulates that they shall only intervene directly on our side if Germany specifically attacks us; in the event that another country goes to war with us, 'an intervention can and will be subject to prior deliberation'."
+ mrpact.5.a:0 "Great, let's sign it."
+ mrpact.5.b:0 "We don't need their help."
+ 
+ mrpact.6.t:0 "The British Strengthen Their Support To The Polish"
+ mrpact.6.d:0 "In response to the Molotov-Ribbentrop Pact signed a short time ago, the British decided to strengthen their support for Poland by signing a mutual assistance pact between the two countries. There was still a slight hope that the British would back down if we decided to invade Poland, but not anymore.\n\nWhile the Führer wishes to resort to arms as soon as possible, he has been advised to make one last diplomatic attempt."
+ mrpact.6.a:0 "It doesn't hurt to try."
+ mrpact.6.b:0 "It's no longer the time for negotiations."
+
+ mrpact.7.t:0 "Ultimatum To Poland"
+ mrpact.7.d:0 "The preparations for the invasion were stopped, and the Führer agreed to try to settle the Polish problem 'diplomatically'.\n\nAfter a few secret diplomatic exchanges between us and the allied powers, we decided it was time to slam our fist on the table once and for all. The British ambassador in Berlin will be summoned and Ribbentrop will submit a sixteen-points protocol to him, asking that it be handed over to Poland, which in turn will have to send an emissary with the authority to sign it within 24 hours.\n\nOur demands are as follows: the organization of a referendum of self-determination among the population of the Danzig corridor, under the control of an international commission composed of representatives of the United Kingdom, France, Russia and Italy. Then, depending on the outcome, in the best case we would be ceded the whole territory of the corridor, and in the worst case we would be ceded Danzig and be granted permission for an infrastructure network linking Germany and East Prussia through the corridor to be built.\n\nIf the Poles and/or the British refuse to comply with the ultimatum, then we will have no choice but to take what is due to us by force."
+ mrpact.7.a:0 "Let's do that."
+ mrpact.7.b:0 "On second thought... Maybe we should just invade now."
+ 
+ ger_ultimatum.1.t:0 "German Ultimatum To Poland"
+ ger_ultimatum.1.d:0 "Our ambassador in Berlin was summoned today by the Reich government. In the person of Ribbentrop, Germany has presented us with an ultimatum addressed to Poland, requesting us to hand it over to our ally.\n\nThe clauses of said ultimatum are the following: the organization of a referendum of self-determination among the population of the Danzig corridor, under the control of an international commission composed of representatives of the United Kingdom, France, Russia and Italy.\n\nThey have furthermore let us know that a Polish plenipotentiary was required to come to Berlin within 24 hours.\n\nIn principle we are open to any negotiation, however it is obvious that this ultimatum is nothing but a show, and if we concede the Germans will ultimately come back with new ultimatums to get more and more. This led some to propose a drastic and a bit unethical solution; we could ..accidentally.. hand over the ultimatum a little too late. After all the deadline is so short that even without us interfering the Poles might exceeded the time limit before even being able to respond."
+ ger_ultimatum.1.a:0 "Sorry old friends, you'll thank us later."
+ ger_ultimatum.1.b:0 "Hell what? We're not going to lower ourselves to the level of the Germans."
+ 
+ ger_ultimatum.2.t:0 "German Ultimatum"
+ ger_ultimatum.2.d:0 "Our allies have just delivered to us an ultimatum from Germany. The clauses of said ultimatum are the following: the organization of a referendum of self-determination among the population of the Danzig corridor, under the control of an international commission composed of representatives of the United Kingdom, France, Russia and Italy.\n\nWe were then made aware that we have... no. Had until... a few hours ago to respond?! It would seems that the British somehow took too long to deliver the message, this is a disaster!\n\nIf we decide to accept the German ultimatum, we will have to send an emissary to Berlin as a matter of urgency, otherwise war is at our doors...\n\nAfter having issued the ultimatum, the British representatives have let us know once again of the full support of their nation against the Germans, right before proceeding to leave."
+ ger_ultimatum.2.a:0 "This is a fait accomplis now, a war is inevitable."
+ ger_ultimatum.2.b:0 "Send a representative to Berlin! Hurry! Anyone!"
+ 
+ ger_ultimatum.3.t:0 "German Ultimatum"
+ ger_ultimatum.3.d:0 "Our allies have just delivered to us an ultimatum from Germany. The clauses of said ultimatum are the following: the organization of a referendum of self-determination among the population of the Danzig corridor, under the control of an international commission composed of representatives of the United Kingdom, France, Russia and Italy.\n\nWe were then made aware that we have about 24 hours to send a plenipotentiary to Berlin in order to approve the ultimatum.\n\nAfter having issued the ultimatum, the representatives that handed us the ultimatum have let us know once again of the full support of their nation against the Germans, right before proceeding to leave."
+ ger_ultimatum.3.a:0 "Do not answer the ultimatum."
+ ger_ultimatum.3.b:0 "Fine, let's send them Beck. Anything to avoid war."
+ 
+ ger_ultimatum.4.t:0 "No Answer From The Polish"
+ ger_ultimatum.4.d:0 "More than 24h have passed without the slightest response from the Polish Government who continue to mobilize.\n\nOnly almost a day after the end of the ultimatum, the Polish Ambassador Józef Lipski appeared at the Foreign Office and sought an audience with Ribbentrop. Five hours later he was shown in, but since he did not have the negotiating authority demanded, he was briefly dismissed.\n\nThis overall silence from the Polish State has of course been interpreted as a refusal of our ultimatum, which means that since diplomacy has ultimately failed it is now time to recover our territories by force of arms.\n\nAll we have to do is to set up a pretext, no matter how blunt, to finally launch the invasion of Poland."
+ ger_ultimatum.4.a:0 "The Reich will soon extend well beyond Danzig."
+ operation_himmler_incoming_tt: "§RWe will take a few days to set up a pretext to declare war on Poland. Our troops must be ready to intervene as soon as hostilities are initiated!§!"
+ operation_himmler_incoming_new_tt: "§RWe will set up a pretext to declare war on Poland. Our troops must be ready to intervene as soon as hostilities are initiated!§!"
+ 
+ ##################################################################
+ 
+ ger_ultimatum.5.t:0 "The Poles Comply With The Ultimatum"
+ ger_ultimatum.5.d:0 "Faced with the threat of an imminent invasion, it would appear that the Poles have seen reason. A Polish representative with the necessary powers to sign the ultimatum, as we had stipulated, travelled to Berlin in a hurry and filled out all the documents we had laid out for him without any objection.\n\nThe Italians, the Soviets, the French and the British quickly agreed to supervise the referendum for which the German people have waited so long, and it is now only a matter of days before Danzig is finally reunited with the Vaterland!"
+ ger_ultimatum.5.a:0 "Poland has avoided war... for now."
+ 
+ danzig_referendum.1.t:0 "Organization Of The Referendum"
+ danzig_referendum.1.d:0 "Following our agreement for a referendum signed a few days ago, an international delegation has arrived and is now demanding that it be held.\nAll we have to do is to perform the final formalities and in a few days we will finally be informed of the will of the residents of the corridor."
+ danzig_referendum.1.a:0 "So much for peace."
+ ger_the_referendum_will_be_held_tt: "§YThe referendum will be held within a few days.§!"
+ 
+ danzig_referendum.2.t:0 "Holding Of The Referendum"
+ danzig_referendum.2.d:0 "This is an event for a releasable country, if you are reading this what the hell are you doing here exactly?\n\nYou know what, nevermind, just vote okay?"
+ danzig_referendum.2.a:0 "Danzig will join the Reich, but not Gdansk."
+ danzig_referendum.2.b:0 "Both Danzig and Gdansk will join the Reich."
+ 
+ danzig_referendum.3.t:0 "Referendum Results - Danzig Joins Germany"
+ danzig_referendum.3.d:0 "The results of the referendum on the reunification with Germany are in. Unsurprisingly, the population of Danzig voted overwhelmingly in favor, while the population of the rest of the corridor, however, decided to remain with Poland.\n\nThe territory of Danzig has thus been handed over to the Reich, and egotiations for the construction of a transnational infrastructure network linking West Prussia to the rest of Germany have begun, as requested in the ultimatum."
+ danzig_referendum.3.a:0 "It could have been worse."
+ danzig_referendum.3.b:0 "Welcome home!"
+ danzig_infrastructure_tt: "§YWithin one year, an infrastructure network connecting Germany to East Prussia through the remaining part of the corridor will be built.§!"
+ 
+ danzig_referendum.4.t:0 "Referendum Results - Danzig And Gdansk Joins Germany"
+ danzig_referendum.4.d:0 "The results of the referendum on the reunification with Germany are in. The population of not only Danzig, but of the whole corridor, voted overwhelmingly in favor.\n\nThe territories were thus handed over to the Reich, and the Wehrmacht quickly crossed the former German-Polish border and entered Danzig under the cheers."
+ danzig_referendum.4.a:0 "Welp. Here goes our access to the sea."
+ danzig_referendum.4.b:0 "Welcome home!"
+ 
+ ################################################################
+ 
+ poland_invasion.1.t:0 "Operation Himmler"
+ poland_invasion.1.d:0 "A few days ago, following the conclusion of a meeting of the Reich Defense Council, Himmler, head of the SS and the Führer's loyal henchman, was given full initiative in setting up an operation to serve as a pretext for an invasion of Poland.\n\nThis operation was to consist of a false Polish aggression against Germany. It was originally planned that a German commando in Polish uniforms would capture a radio transmitter in Gleiwitz, Silesia, and broadcast on the German national airwaves a call to the people of Silesia to rise up against Germany, in the form of a provocative message insulting the National-Sozialist regime.\n\nThe general organization of the plan was smoothly carried out, 6 men of the Sicherheitsdienst were selected by Himmler's subordinates and the head of the Gestapo took care of providing 12 criminals to be left for dead at the place of the operation, finally an industrialist with connections in the Abwehr took care of providing us with Polish weapons and uniforms.\n\nOn the day of the operation, the 6 SDs and 12 prisoners took control of the transmitter station, despite an unexpected problem that prevented the message from being diffused over the entire country, the operation went as planned and at the end the prisoners were shot and left behind.\n\nSeveral journalists were then quickly summoned to report on the attack, and it was immediately used as a pretext to start the invasion."
+ poland_invasion.1.a:0 "For the Vaterland!"
+ 
+ bypass_danzig:0 "Has already begun negotiations for Danzig or preparations for an invasion of Poland."
+ 
+ ################################################################
+ #SOVIET INTERVENTION AND INTERACTIONS
+ 
+ poland_invasion_preparations_event.1.t:0 "Intervention In Poland"
+ poland_invasion_preparations_event.1.d:0 "The treaty we signed with Germany a short time ago guaranteed us the eastern territories of Poland, and we agreed with them on a joint operation of the invasion of the country by our two armed forces.\nThe Germans have finally launched the invasion, and as such it is time to prepare ourselves to intervene too as soon as possible."
+ poland_invasion_preparations_event.1.a:0 "Let's not miss the party!"
+ 
+ SOV_poland_invasion_preparations_flag: "The Germans have launched the invasion of Poland"
+ 
+ you_really_should_intervene_tt: "§RThe decision not to intervene as agreed is likely to generate tensions with Germany!§!"
+ 
+ poland_invasion.2.t:0 "Intervention In Poland"
+ poland_invasion.2.d:0 "The treaty we signed with Germany a short time ago guaranteed us the eastern territories of Poland, and we agreed with the Germans on a joint operation of the invasion of the country by our two armed forces.\n\nWe are now fully ready to launch the operation, and Germany having made some advances already, it would be time to rush for our rightfull territories before the Germans end up doing all the work."
+ poland_invasion.2.d_2:0 "The treaty we signed with Germany a short time ago guaranteed us the eastern territories of Poland, and we agreed with the Germans on a joint operation of the invasion of the country by our two armed forces.\n\nWe are now fully ready to launch the operation, but the Reich seem to have gotten bogged down in the conflict with Poland, and some in the high command think that invading too could lead us to the same unenviable situation."
+ poland_invasion.2.a:0 "For the Motherland!"
+ poland_invasion.2.b:0 "Let the Germans do the dirty work."
+ poland_invasion.2.c:0 "They are right, we should stay out of it."
+ 
+ beware_germany_can_claim_some_tt: "§RIf the Germans take over Polish territories in our sphere of influence, there is a chance that they will try to keep them afterwards!§!"
+ 
+ 
+ poland_invasion.3.t:0 "The Soviet Union Declared War On Poland!"
+ poland_invasion.3.d:0 "To the general astonishment, while the Poles were fighting valiantly in the West against the German invader, the Soviets have now crossed the border to the East.\n\nAt first uncertain of their intentions the Polish first thought that they were coming to their assistance, before realizing with horror that they had in fact launched an invasion of the country. We have received panicked calls from the Polish, who are now in a critical situation, caught between the two giants.\n\nThis puts us in a rather delicate situation, Poland is our ally, but a war against both Germany and the USSR is lost in advance. Many suggest that we should remain passive in the face of this invasion until the German problem has been solved."
+ poland_invasion.3.a:0 "The Polish are counting on us."
+ poland_invasion.3.b:0 "We can't do anything about it anyway."
+ remained_passive_to_the_soviet_invasion: "Remained passive to the Soviet invasion."
+ 
+ pol_sov_reaction.1.t:0 "The Soviet Union Declared War On Poland - Britain Wants To Stay Back"
+ pol_sov_reaction.1.d:0 "To the general astonishment, while the Poles were fighting valiantly in the West against the German invader, the Soviets have now crossed the border to the East.\n\nAt first uncertain of their intentions the Polish first thought that they were coming to their assistance, before realizing with horror that they had in fact launched an invasion of the country. We have received panicked calls from the Polish, who are now in a critical situation, caught between the two giants.\n\nThis puts us in a rather delicate situation and according to Britain, while Poland is our ally, a war against both Germany and the USSR is lost in advance. They have thus declared that they would remain passive in the face of this invasion 'Until the German problem has been solved'."
+ #, as allowed by the secret clause of the Anglo-Polish military agreement,
+ pol_sov_reaction.1.a:0 "Very well, they are right."
+ pol_sov_reaction.1.b:0 "Ridiculous! We have to stand for our allies."
+ 
+ pol_sov_reaction.2.t:0 "The Soviet Union Declared War On Poland - Britain Wants To Declare On Them"
+ pol_sov_reaction.2.d:0 "To the general astonishment, while the Poles were fighting valiantly in the West against the German invader, the Soviets have now crossed the border to the East.\n\nAt first uncertain of their intentions the Polish first thought that they were coming to their assistance, before realizing with horror that they had in fact launched an invasion of the country. We have received panicked calls from the Polish, who are now in a critical situation, caught between the two giants.\n\nThis puts us in a rather delicate situation and according to Britain, while Poland is our ally, a war against both Germany and the USSR is lost in advance. They have thus declared that they would remain passive in the face of this invasion 'Until the German problem has been solved'."
+ pol_sov_reaction.2.a:0 "Of course! There's no debate to have!"
+ pol_sov_reaction.2.b:0 "The British have gone mad."
+ 
+ 
+ ######################################################
+ 
+ pol_soviet_retrayal.1.t:0 "The Polish Offensive Turns Into Fiasco"
+ pol_soviet_retrayal.1.d:0 "Despite a combined attack by German and Soviet armed forces, Poland still seems to be holding out. We had never envisaged such an incredibly fierce level of resistance, and if the conflict continue to drags on, the Allies forces may at any moment be forced to intervene and declare war on us under the popular pressure.\n\nAll we can do now is to accept our failure and order a ceasefire with Poland and the withdrawal of our forces from the country, this will be a major international humiliation but what choice do we have? Of course we could still order our troops to continue the offensive but is it really worth it anymore?"
+ pol_soviet_retrayal.1.a:0 "We will never recover from this..."
+ pol_soviet_retrayal.1.b:0 "Screw it all! We can't afford another humiliation!"
+ poland_will_not_be_alone_anymore_tt: "§RPoland may very soon be joined by its Allies!§!"
+ 
+ pol_soviet_retrayal.2.t:0 "The Soviets withdraw from Poland"
+ pol_soviet_retrayal.2.d:0 "Despite a combined attack by German and Soviet armed forces, Poland still seems to be holding out. Such an incredibly fierce level of resistance had never been envisaged, and if the conflict continue to drags on, the Allies forces may at any moment be forced to intervene and declare war on the Soviets under the popular pressure.\n\nIn this regard, the Soviets informed us of their decision to withdraw from the conflict in Poland and to sign a separate peace with the Poles."
+ pol_soviet_retrayal.2.a:0 "Great. All we needed was for our allies to lost their guts."
+ 
+ pol_soviet_retrayal.3.t:0 "The Soviets Wish to Withdraw From the Conflict"
+ pol_soviet_retrayal.3.d:0 "Despite a disloyal combined attack on us by both German and Soviet armed forces, we have been able to hold out and repel a complete occupation of the country so far.\n\nThe Soviets obviously did not expect such resistance from us, and to our great surprise approached us almost begging to accept a separate peace with them, no matter the price.\n\nOf course we would be trilled to do so given the conditions we are in and we already signed an armistice while waiting for the opening of the negotiations, but now what should be our conditions in return?\n\nWe have already set the first one which would be an assurance of non-aggression between our two nations to prevent yet another war in the future, although we hope they have definitely learned their lesson this time.\n\nAs a second condition we could ask for the transfer of a few territories that we did not demand at the end of the first Soviet-Polish war, or perhaps for them to pay us some war reparations? Or both? In any case, it would be better not to be too harsh, as to not push our luck too much."
+ pol_soviet_retrayal.3.a:0 "Ask for territorial compensations."
+ pol_soviet_retrayal.3.b:0 "Ask for war reparations."
+ pol_soviet_retrayal.3.c:0 "Ask for both!"
+ 
+ pol_soviet_retrayal.4.t:0 "Poland Asks For Territorial Compensations"
+ pol_soviet_retrayal.4.d:0 "Following our request for a separate peace between us and the Poles, the latter unsurprisingly quickly let us know that they would be more than happy to do so, but they did present us a few conditions;\n\nThe first one would be to sign a new non-aggression pact between our two nations, and the second one, much more important, would be the transfer to Poland of some territories in the border region of Podolia as a token of 'territorial compensation'."
+ pol_soviet_retrayal.4.a:0 "Fine, it could've been worse..."
+ pol_soviet_retrayal.4.b:0 "No way, this peace request in itself is already enough of a humiliation!"
+ 
+ pol_soviet_retrayal.5.t:0 "Poland Requests That we Pay War Reparations"
+ pol_soviet_retrayal.5.d:0 "Following our request for a separate peace between us and the Poles, the latter unsurprisingly quickly let us know that they would be more than happy to do so, but they did present us a few conditions;\n\nThe first one would be to sign a new non-aggression pact between our two nations, and the second one, much more important, would be the payment of war reparations to Poland, which would put us in debt to them for a small while."
+ pol_soviet_retrayal.5.a:0 "Fine, it could've been worse..."
+ pol_soviet_retrayal.5.b:0 "No way, this peace request in itself is already enough of a humiliation!"
+ 
+ pol_soviet_retrayal.6.t:0 "Poland Requests Territorial And Ecnomical Compensations"
+ pol_soviet_retrayal.6.d:0 "Following our request for a separate peace between us and the Poles, the latter unsurprisingly quickly let us know that they would be more than happy to do so, but they did present us a few conditions;\n\nThe first one would be to sign a new non-aggression pact between our two nations, while a second one would be the transfer to Poland of some territories in the border region of Podolia as a token of 'territorial compensation', and finally a third one would be the payment of war reparations, which would put us in debt to them for a small while."
+ pol_soviet_retrayal.6.a:0 "Ugh, fine..."
+ pol_soviet_retrayal.6.b:0 "What?! This peace request in itself is already enough of a humiliation!"
+ 
+ pol_soviet_retrayal.7.t:0 "The Soviets Agree to Our Demands"
+ pol_soviet_retrayal.7.d:0 "The Soviet emissaries with whom we were negociating made us know, with a very uncomfortable expression, that Moscow had agreed to our conditions and that it only remained to sign the last formalities for the territorial transfer."
+ pol_soviet_retrayal.7.a:0 "Wonderful!"
+ 
+ pol_soviet_retrayal.8.t:0 "The Soviets Agree to Our Demands"
+ pol_soviet_retrayal.8.d:0 "The Soviet emissaries with whom we were negociating made us know, with a very uncomfortable expression, that Moscow had agreed to our conditions and that it only remained to sign the last formalities to settle the cost of the war reparations."
+ pol_soviet_retrayal.8.a:0 "Wonderful!"
+ 
+ pol_soviet_retrayal.9.t:0 "The Soviets Agree to Our Demands"
+ pol_soviet_retrayal.9.d:0 "The Soviet emissaries with whom we were negociating made us know, with a very uncomfortable expression, that Moscow had agreed to our conditions and that it only remained to sign the last formalities to settle the territorial transfer and the cost of the war reparations."
+ pol_soviet_retrayal.9.a:0 "The big Russian Bear isn't so scary anymore!"
+ 
+ pol_soviet_retrayal.10.t:0 "The Soviets Rejects Our Demands"
+ pol_soviet_retrayal.10.d:0 "The Soviet emissary to whom we had given our conditions informed us in a rather dramatic way that they were outrageous and that Moscow has categorically refused to sign them.\n\nAs far as we're concerned, it was not us who came asking for peace, and they should have expected that we would not be satisfied with a simple armistice. What should we do now? accept a simple white peace and put an end to this story, or let these hypocrites see what we are made of?"
+ pol_soviet_retrayal.10.a:0 "Well at least this conflict has been resolved."
+ pol_soviet_retrayal.10.b:0 "If they thought they could still scare us, they've missed the mark."
+ 
+ pol_soviet_retrayal.11.t:0 "Premature End of the Soviet War Reparations"
+ pol_soviet_retrayal.11.d:0 "Quite unsurprisingly given the recent turn of events, the Soviets have lately completely discontinued the payment of war reparations that we had demanded of them in the treaty of the Second Soviet-Polish War, premasubly permanantly."
+ pol_soviet_retrayal.11.a:0 "It was good while it lasted."
+ 
+ pol_soviet_retrayal.12.t:0 "Premature End of the War Reparations to the Polish"
+ pol_soviet_retrayal.12.d:0 "Quite unsurprisingly given the recent turn of events, the payment of war reparations that the Poles had demanded of us in the treaty of the Second Soviet-Polish War were completely discontinued; permanantly as far as we're concerned."
+ pol_soviet_retrayal.12.a:0 "We certainly won't miss this period."
+ 
+ 
+ 
+ 
+ #########################################################
+ 
+ ps_ceazefire.1.t:0 "End Of Hostilities In Poland"
+ ps_ceazefire.1.d:0 "The last Polish resistance was crushed, and except for a semblance of guerrilla warfare that quickly took form in some places, all large-scale fighting in Polish territory has ceased.\n\nOur invasion of Poland alongside the Germans did not provoke much reaction from the Allies, who did not even declare war on us in return. Which means that we will be able to comfortably enjoy our rightful share of the country, and probably that we should be able to continue our territorial expansions for the glory of the motherland without suffering any Western interference whatsoever for the time being."
+ ps_ceazefire.1.a:0 "Our forces have acquitted themselves well."
+ 
+ pol_partitionning.1.t:0 "The Partitioning of Poland"
+ pol_partitionning.1.d:0 "Poland is ours, but the eastern parts fall under the [SOU.GetAdjective] sphere of influence according to the stipulations of the Molotov-Ribbentrop Pact. Should we withdraw our forces and let the [SOU.GetAdjective]s occupy this territory? Failure to do so would render our treaty void."
+ pol_partitionning.1.a:0 "Yes. Treaty stipulations must be obeyed."
+ pol_partitionning.1.b:0 "No! All of Poland belongs to the Vaterland!"
+ 
+ 
+ ##################################################
+ #NEWS EVENTS
+ 
+ pco_news.1.t:0 "The Molotov-Ribbentrop Pact"
+ pco_news.1.desc:0 "Diplomats from Germany and the [SOV.GetName] concluded what observers are describing as a historic agreement today with the signing of the Molotov-Ribbentrop Pact.\n\nNamed after German foreign minister Joachim von Ribbentrop and his [SOV.GetAdjective] counterpart, Vyacheslav Molotov, this non-aggression pact stipulates that neither side will ally itself to nor aid an enemy of the other.\n\nForeign diplomats warn that this treaty effectively gives Germany a free hand to wage war in Europe without having to fear Soviet intervention."
+ pco_news.1.a:0 "This can't be good..."
+ pco_news.1.b:0 "A toast to our new Bolshevik friends!"
+ pco_news.1.c:0 "A toast to our new German friends!"
+ pco_news.1.d:0 "Here's to a long and beneficial friendship!"
+ 
+ pco_news.2.t:0 "The Soviet Union Invade Poland"
+ pco_news.2.desc:0 "To the general surprise, the Soviet government notified the Polish ambassador in Moscow this morning that in order to assure its interests and 'the protection of white Russian and Ukrainian minorities' in the territories of Eastern Poland it had ordered its army to cross the border.\n\nThey further stated that this decision does not affect their position of neutrality in the European conflict, and added that the treaties with Poland were no longer valid as its government 'collapsed' following German invasion."
+ pco_news.2.a:0 "A likely story!"
+ pco_news.2.b:0 "The Poles are done for!"
+ pco_news.2.c:0 "Onward comrades!"
+ 
+ pco_news.3.t:0 "Poland Complies With the German Ultimatum"
+ pco_news.3.desc:0 "Following the presentation of a [GER.GetAdjective] ultimatum to [From.GetNameDef], [From.GetLeader] and the [From.GetAdjective] government have decided to comply with every demand rather than face war.\n\nIt is their hope that with the loss of Danzig, [From.GetNameDef] will be safe from further German territorial ambitions. The situation remains tense, however, and it is telling that Polish border forces have not yet received the order to stand down"
+ pco_news.3.a:0 "[GER.GetLeader] cannot be allowed to keep making demands of Europe!"
+ pco_news.3.b:0 "This is an acknowledgement of the power of the [GER.GetFactionName]"
+ pco_news.3.c:0 "German expansion continues"
+ pco_news.3.e:0 "It is clear that the "democracies" of Europe are incapable of stopping the fascist menace."
+ 
+ pco_news.4.t:0 "Germany Invades Poland"
+ pco_news.4.desc:0 "In a large-scale military operation, which, there is no longer any doubt, had been planned for a time Germany launched an invasion of Poland this morning without an official declaration of war, justifying a pre-emptive operation because of a supposed incident involving a Polish provocation.\n\nAfter an ultimatum and secret talks between various nations, it seemed for a moment that a diplomatic solution could be found, but the semblance of diplomacy adopted by Germany was probably only to justify itself to its population."
+ pco_news.4.a:0 "Germany has ignored every warning!"
+ pco_news.4.b:0 "We shall crush this pathetic thing they call a country."
+ pco_news.4.c:0 "Together we must stop this aggressor!"
+ pco_news.4.d:0 "This is a grave situation."
+ pco_news.4.e:0 "Let's get ready to strike too."
+ 
+ 
+#####################################################################
+#####################################################################
+#####################################################################
+
+#EVENTS FOR THE PARTITIONNING OF Poland
+
+#######################
+
+#EVENTS IF HISTORICAL MR PACT AND GER HAS CONQUERED SOV-ASSIGNED TERRITORIES (92 and/or 97)
+
+ this_will_cancel_the_pact_tt: "§RDoing this will effectively end the pact!§!"
+ 
+ pol_par_initial.1.title:0 "Victory In Poland"
+ pol_par_initial.1.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic way."
+ pol_par_initial.1.a:0 "Our forces did well."
+ pol_par_initial.1.b:0 "Our forces did well."
+ pol_par_initial.1.c:0 "Our forces did well."
+ pol_par_initial.1.d:0 "Our forces did well."
+ pol_par_initial.1.e:0 "Our forces did well."
+ 
+ 
+ pol_par_his_nothing.1.title:0 "Victory In Poland -bis-"
+ pol_par_his_nothing.1.desc:0 "In spite of this, however, the delimitations foreseen by the Molotov-Ribbentrop pact were more or less respected. And after the celebrations and even joint military parades in some cities, the time came to organize the occupation of the country and to transfer the possible small pieces of land that one could have grabbed in the sphere of influence of the other, as to ultimately come precisely to the planned borders."
+ pol_par_his_nothing.1.a:0 "Feels good when everything goes according to plan."
+ 
+ pol_par_his_nothing.2.title:0 "Organization of the Occupation"
+ pol_par_his_nothing.2.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic way, but which still more or less came to respect the borders that were established by the Molotov-Ribbentrop pact.\n\nAnd after the celebrations and even joint military parades in some cities, the time came to organize the occupation of the country and to transfer the possible small pieces of land that one could have grabbed in the sphere of influence of the other, as to ultimately come precisely to the planned borders."
+ pol_par_his_nothing.2.a:0 "Well, everything went as planned."
+ pol_par_his_nothing.2.b:0 "Well, everything went as planned."
+ pol_par_his_nothing.2.c:0 "Well, everything went as planned."
+ pol_par_his_nothing.2.d:0 "Well, everything went as planned."
+ 
+ 
+
+
+ pol_par_his_ger.1.title:0 "Victory In Poland -bis-"
+ pol_par_his_ger.1.desc:0 "After the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, the Germans ended up capturing some territories that had been assigned to our sphere of influence, it would be completely out of the question to leave out the easternmost territories, since that is where almost all the minorities of Poland we are officially supposed to protect are located, the territories of central Poland however are of lesser importance to us.\n\nWe could ask the Germans to withdraw our two armies from the territories assigned to each other in good order so as to begin the occupation that had been foreseen by the Molotov-Ribbentrop pact. But we could also request a renegotiation of the treaty in order to redraw the borders of our spheres of influence, for example by offering the Germans to exchange the territories in central Poland that they captured for something else?"
+ pol_par_his_ger.1.desc_2:0 "After the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, the Germans ended up capturing some territories that had been assigned to our sphere of influence.\nMany consider that it would be completely out of the question to leave these out, since that is where almost all the minorities of Poland we are officially supposed to protect are located. Therefore, all we have to do now is ask the Germans to hand over the territories to us."
+ pol_par_his_ger.1.a:0 "We'll fulfill the pact as planned."
+ pol_par_his_ger.1.b:0 "Let's request a renegotiation of the treaty."
+ pol_par_his_ger.1.c:0 "Whatever. They can just keep them."
+ 
+ pol_par_his_ger.2.title:0 "The Soviets Ask us to Hand Over Their Territories"
+ pol_par_his_ger.2.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic way.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the Soviet sphere of influence.\n\nAs such the Soviets have approached us asking that we transfer to them their claimed territories in exchange for them to transfer ours."
+ pol_par_his_ger.2.a:0 "Of course."
+ pol_par_his_ger.2.b:0 "Finders keepers!"
+
+ pol_par_his_ger.3.title:0 "Germany Transfers the Territories"
+ pol_par_his_ger.3.desc:0 "Germany promptly complied with our request and transferred the contested territories under our authority after having evacuated them in good order."
+ pol_par_his_ger.3.a:0 "Great, now we just have to evacuate theirs too."
+ pol_par_his_ger.3.b:0 "Great."
+ pol_par_his_ger.3.c:0 "Great, now we just have to evacuate theirs too."
+ pol_par_his_ger.3.d:0 "Great."
+ 
+ pol_par_his_ger.4.title:0 "Germany Refuses to Transfer the Territories"
+ pol_par_his_ger.4.desc:0 "Following our request, the Germans informed us that they had no intention of evacuating the territories that had previously been granted to us by the Molotov-Ribbentrop Pact. Such an outrage therefore renders the pact null and void."
+ pol_par_his_ger.4.a:0 "To think that we were foolish enough to trust them!"
+ 
+ pol_par_his_ger.5.title:0 "The Soviet Union Wishes to Renegotiate the Territorial Clauses of the Pact"
+ pol_par_his_ger.5.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic manner.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the Soviet sphere of influence.\n\nAs such the Soviets have approached us asking if it would be possible to renegotiate the territorial clauses of the pact accordingly, informing us that they are mostly interested in the easternmost territories, and that therefore they would be willing to exchange us a few territories closer to the center."
+ pol_par_his_ger.5.a:0 "Sure, let's propose them Lithuania in exchange for the contested territories."
+ pol_par_his_ger.5.b:0 "It's not in our interest, we'll just transfer them the claimed territories."
+ pol_par_his_ger.5.c:0 "We'll keep these territories, finders keepers!"
+ 
+ pol_par_his_ger.6.title:0 "Germany Offers to Exchange Lithuania For the Contested Territories"
+ pol_par_his_ger.6.desc:0 "The Germans reacted quite positively to our offer of renegotiation, and proposed the following solution: Lithuania will be transferred to our sphere of influence, and in exchange Germany gets to keep the territories we claim."
+ pol_par_his_ger.6.a:0 "Seems like a good deal."
+ pol_par_his_ger.6.b:0 "We would rather have the agreed on Polish territories after all."
+ 
+ pol_par_his_ger.7.title:0 "The Soviets Reject Our Offer"
+ pol_par_his_ger.7.desc:0 "Our offer to exchange Lithuania for the Polish territories did not seem to suit the Soviets, and they declared that in the absence of a better offer they would limit themselves to the previously agreed borders."
+ pol_par_his_ger.7.a:0 "Very well then."
+ pol_par_his_ger.7.b:0 "If they can't make up their mind then we'll keep it all!"
+ 
+ pol_par_his_ger.8.title:0 "The Germans Transfer the Agreed Territories"
+ pol_par_his_ger.8.desc:0 "The Germans have informed us that they did not wish to go back on the territorial clauses of the treaty and promptly evacuated the territories that had been prevouisly agreed upon, transferring them to our jurisdiction, and furthermore requesting that we do the same."
+ pol_par_his_ger.8.a:0 "Too bad."
+ pol_par_his_ger.8.b:0 "Too bad."
+ pol_par_his_ger.8.c:0 "Too bad."
+ pol_par_his_ger.8.d:0 "Too bad."
+ 
+ pol_par_his_ger.9.title:0 "Germany Refuses And Retains the Territories"
+ pol_par_his_ger.9.desc:0 "Following our proposal, the Germans informed us that they had no intention of renegotiating further the territorial clauses of the treaty. When we asked them to transfer the territories, they let us know that they intended to keep them entirely, and this in total disregard of our agreements, making them therefore null and void."
+ pol_par_his_ger.9.a:0 "What?! To think that we were foolish enough to trust them!"
+ 
+ pol_par_his_ger.10.title:0 "The Soviet Union Offers us the Conquered Territories"
+ pol_par_his_ger.10.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic manner.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the Soviet sphere of influence.\n\nWe were about to negotiate with the Soviets the transfer of these territories, when they suddenly halted us, declaring without further explanation and to the absolute surprise of our staff that we could keep them."
+ pol_par_his_ger.10.a:0 "Well... It would be rude to refuse."
+ 
+ ############################
+ 
+ pol_par_his_sov.1.title:0 "Victory In Poland -bis-"
+ pol_par_his_sov.1.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic way.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, the Soviets ended up capturing some territories that had been assigned to our sphere of influence."
+ pol_par_his_sov.1.a:0 "Let's ask them to hand over our territories."
+ pol_par_his_sov.1.b:0 "They can keep it."
+ 
+ pol_par_his_sov.2.title:0 "The Germans Ask us to Hand Them Their Territories Over"
+ pol_par_his_sov.2.desc:0 "After the initial celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the German sphere of influence, and the latter are now asking us to hand these over to them."
+ pol_par_his_sov.2.a:0 "Sure."
+ pol_par_his_sov.2.b:0 "Finders keepers!"
+ 
+ pol_par_his_sov.3.title:0 "The Soviet Union Transfers the Territories"
+ pol_par_his_sov.3.desc:0 "The Soviets promptly complied with our request and transferred the contested territories under our authority after having evacuated them in good order.\n\nIt would seem, moreover, that the Polish resistance seized the opportunity to take control over some of those territories, an incident that shall only be momentary..."
+ pol_par_his_ger.3.a:0 "Great."
+ pol_par_his_ger.3.b:0 "Great."
+ pol_par_his_ger.3.c:0 "Great."
+ pol_par_his_ger.3.d:0 "Great."
+ 
+ pol_par_his_sov.4.title:0 "The Soviet Union Refuses to Transfer the Territories"
+ pol_par_his_sov.4.desc:0 "Following our request, the Soviets informed us that they had no intention of evacuating the territories that had previously been granted to us by the Molotov-Ribbentrop Pact. Such an outrage therefore renders the pact null and void."
+ pol_par_his_ger.4.a:0 "How dare they?!"
+ 
+ pol_par_his_sov.5.title:0 "The Germans Offer us the Conquered Territories"
+ pol_par_his_sov.5.desc:0 "After the initial celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the German sphere of influence. To our absolute surprise, however, the latter declared that we could keep these territories."
+ pol_par_his_sov.5.a:0 "Oh. Well, that's generous."
+ 
+ ##########################
+ 
+ pol_par_his_both.1.title:0 "Victory In Poland -bis-"
+ pol_par_his_both.1.desc:0 "After the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, the Germans ended up capturing some territories that had been assigned to our sphere of influence and vice versa.\n\nWe could ask the Germans to withdraw our two armies from the territories assigned to each other in good order so as to begin the occupation that had been foreseen by the Molotov-Ribbentrop pact. Or we could decide to keep the territories we have each captured and redraw our spheres of influence in Poland in this regard."
+ pol_par_his_both.1.a:0 "Request the occupation of Poland as planned."
+ pol_par_his_both.1.b:0 "Let's ask to redraw the borders."
+ 
+ pol_par_his_both.2.title:0 "The Soviets Request an Exchange of Territory"
+ pol_par_his_both.2.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic manner.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the Soviet sphere of influence, and the Soviets ended up conquering territories that had been assigned to us.\n\nAs such the latter have approached us requesting an exchange of territory to take place in order to respect the territorial clauses of the pact."
+ pol_par_his_both.2.a:0 "Of course, we must respect our commitments."
+ pol_par_his_both.2.b:0 "Why? It's just fine the way it is."
+ 
+ pol_par_his_both.3.title:0 "The Territories Are Transferred"
+ pol_par_his_both.3.desc:0 "The Germans promptly complied with our request and transferred the contested territories under our authority after having evacuated them in good order, this followed by the evacuation of our forces from their territories."
+ pol_par_his_both.3.a:0 "Great."
+ 
+ pol_par_his_both.4.title:0 "The Germans Refuses to Proceed With the Exchange"
+ pol_par_his_both.4.desc:0 "Following our request, the Soviets informed us that they had no intention of evacuating the territories that had previously been granted to us by the Molotov-Ribbentrop Pact. Such an outrage therefore renders the pact null and void."
+ pol_par_his_both.4.a:0 "How dare they?!"
+ 
+ pol_par_his_both.5.title:0 "The Soviets Want to Rearrange Our Spheres of Influence in Poland"
+ pol_par_his_both.5.desc:0 "The Polish campaign was a resounding success, the combined forces of our two nations quickly overcame the pathetic little Polish army. And as the fighting ended, our two armies eventually came to face each others, cutting the country in two in a rather archaic manner.\n\nAfter the celebrations and even joint military parades in some cities, the time for negotiations eventually came again. Indeed, during the campaign, we ended up capturing some territories that had been assigned to the Soviet sphere of influence, and the Soviets ended up conquering territories that had been assigned to us.\n\nAs such the latter have approached us asking if it would be possible to renegotiate the territorial clauses of the pact accordingly, proposing that each one keep the territories it has conquered in the other's sphere of influence."
+ pol_par_his_both.5.a:0 "Sure, why not."
+ pol_par_his_both.5.b:0 "We're not interested, we shall honour the original agreements."
+ 
+ pol_par_his_both.6.title:0 "The Germans Accept the Rearrangement"
+ pol_par_his_both.6.desc:0 "The Germans reacted quite positively to our idea, the rearrangement of the territorial clauses was quickly carried out and everything was organized to begin in good order the occupation of Poland."
+ pol_par_his_both.6.a:0 "Fantastic!"
+ 
+ pol_par_his_both.7.title:0 "The Germans Reject our Proposal"
+ pol_par_his_both.7.desc:0 "The Germans declared that they were not interested in our proposal, the organization of the occupation of Poland was therefore followed as dictated by the original clauses of the pact, and our two armies withdrew in good order from each other's territories"
+ pol_par_his_both.7.a:0 "Too bad."
+ 
+ 
+ 
+ ########################################################################################################################
+ 
+ 
+ ger_lithuania.1.title:0 "The Fate of Lithuania"
+ ger_lithuania.1.desc:0 "Our small Lithuanian neighbor is not necessarily of great interest to us, even ideologically, since if we don't count the southern coastal territories, it contains only a very small German minority. However, if we think about it, it could allow us to lay the foundations of a large puppet state in the East, or even simply serve as a small buffer between East Prussia and the Soviet Union.\n\nWith such vague ambitions, it goes without saying that the Reich government is quite divided on the subject. That is, for the few who have any opinion on it.\n\nA first suggestion given would be simply to take control of the country and make it a puppet state, a second one proposes the same operation but with the annexation of the territories West of the Vilnia river, and finally a more radical one suggests an outright annexation of the whole country.\n\nGiven the general inability to find a solution, the personal choice of the Führer will be decisive. So, shall should we do?"
+ ger_lithuania.1.a:0 "Puppet the country."
+ ger_lithuania.1.b:0 "Annex the territories West of the Vilnia River and puppet the rest."
+ ger_lithuania.1.c:0 "Annex everything."
+ 
+ ger_lithuania.2.title:0 "German Ultimatum"
+ ger_lithuania.2.desc:0 "The Germans have just issued us an ultimatum, demanding that we allow their troops to be stationed in our country and requesting the dissolution of the current Lithuanian government. This is basically a coup d'état, and many are arguing that we have no choice but to comply with the German giant."
+ ger_lithuania.2.a:0 "What choice do we have?"
+ ger_lithuania.2.b:0 "On my dead body!"
+ 
+ ger_lithuania.3.title:0 "German Ultimatum"
+ ger_lithuania.3.desc:0 "The Germans have just issued us an ultimatum, requesting that we allow their troops to be stationed in our country, the dissolution of the current Lithuanian government, and the annexation of the territories west of the Vilnia River to East Prussia. This is basically a coup d'état, and many are arguing that we have no choice but to comply with the German giant."
+ ger_lithuania.3.a:0 "What choice do we have?"
+ ger_lithuania.3.b:0 "On my dead body!"
+ 
+ ger_lithuania.4.title:0 "German Ultimatum"
+ ger_lithuania.4.desc:0 "The Germans have just issued us an ultimatum, demanding that we allow their troops to be stationed in our country and requesting the dissolution of the current Lithuanian government. This is basically a coup d'état, and many are arguing that we have no choice but to comply with the German giant."
+ ger_lithuania.4.a:0 "What choice do we have?"
+ ger_lithuania.4.b:0 "On my dead body!"
+ 
+ ger_lithuania.5.title:0 "Lithuania Folds"
+ ger_lithuania.5.desc:0 "Following our ultimatum, the Lithuanians rapidly saw reason, they realized that it was futile to resist us and quickly complied with our demands."
+ ger_lithuania.5.a:0 "A great day for our two countries."
+ ger_lithuania.5.b:0 "A great day for our two countries."
+ ger_lithuania.5.c:0 "Wise decision."
+ 
+ ger_lithuania.6.title:0 "Lithuania Rejects Our Demands"
+ ger_lithuania.6.desc:0 "The Lithuanians, in spite of their total inferiority in front of the German machine, decided to stand up to us and publically rejected all our demands."
+ ger_lithuania.6.a:0 "There is only one way to punish such insolence!"
+ 
+ ger_lithuania.7.title:0 "Germany Offers Vilnius"
+ ger_lithuania.7.desc:0 "Being at the moment in possession of the Polish territory of Vilnius, on which we have claims, the Germans have surprisingly just sent us a declaration stating that they would like to hand it over to us."
+ ger_lithuania.7.a:0 "With pleasure!"
+ ger_lithuania.7.b:0 "This must be a trap somehow."
+ 
+ ger_lithuania.8.title:0 "Lithuania Accepts Our Offer"
+ ger_lithuania.8.desc:0 "The Lithuanians have declared to be enchanted by our proposal and were quick to annex the territory that we offered to them."
+ ger_lithuania.8.a:0 "Feels weird to give away territories."
+ 
+ ger_lithuania.9.title:0 "Lithuania Rejects Our Offer"
+ ger_lithuania.9.desc:0 "The Lithuanians politely informed us that they were not interested in our proposal of transferring Vilnius to them."
+ ger_lithuania.9.a:0 "Heh. Too bad."
+ 
+ ###################################################
+ 
+ pol_par_no_sov.1.title:0 "Fate of Poland"
+ pol_par_no_sov.1.desc:0 "The Germans finally defeated Poland on their own, contrary to what was agreed upon when the Molotov-Ribbentrop Pact was signed. \n\nIt is obvious that they must have had a bad reaction to our decision to stay away, and to ask them now to give us our agreed share of Poland could be received negatively."
+ pol_par_no_sov.1.a:0 "Whatever, we want these territories!"
+ pol_par_no_sov.1.b:0 "Better not to trigger a diplomatic incident."
+ 
+ pol_par_no_sov.2.title:0 "The Soviets Ask For Their Share of Poland"
+ pol_par_no_sov.2.desc:0 "The Soviets, after not intervening with us in Poland as we had agreed to do when the Molotov-Ribbentrop Pact was signed and letting us do all the work, have now approached us requesting that we transfer their share of Polish territory to them."
+ pol_par_no_sov.2.a:0 "As if. Don't they have any shame?!"
+ pol_par_no_sov.2.b:0 "Let's respect the pact. They had their reasons."
+ 
+ pol_par_no_sov.3.title:0 "The Germans Refuse"
+ pol_par_no_sov.3.desc:0 "It was to be expected. When we sent our request to the Germans, the latter immediately answered very curtly and negatively.\n\nThe official answer from Berlin furthermore included the following; 'The Reich did all the work, and now that the dust has settled you have come to ask for your <<due>>? What due? [...] We had an agreement, you didn't follow it, you have only yourselves to blame.'"
+ pol_par_no_sov.3.a:0 "Welp, we had it coming."
+ pol_par_no_sov.3.b:0 "Oh it's like that? Tell them we're withdrawing from the pact!"
+ 
+ pol_par_no_sov.4.title:0 "The Soviets Don't Push the Conflict Further"
+ pol_par_no_sov.4.desc:0 "Despite strong initial protests, it seems that the Soviet government decided not to escalate further the conflict over Poland. They were obviously impressed by our firm stand, and so we are now free to occupy the whole Polish territory."
+ pol_par_no_sov.4.a:0 "What a bunch of cowards."
+ 
+ pol_par_no_sov.5.title:0 "The Soviets Withdraw From the Molotov-Ribbentrop Pact"
+ pol_par_no_sov.5.desc:0 "Following our refusal to accept the intolerable Soviet demands, the latter has now declared that they will withdraw from the Molotov-Ribbentrop Pact, thus marking an end to it."
+ pol_par_no_sov.5.a:0 "Nothing but a big bunch of kids throwing a tantrum."
+ 
+ pol_par_no_sov.6.title:0 "The Germans Transfer Our Share of Poland"
+ pol_par_no_sov.6.desc:0 "Following our request, the Germans, despite some protests, handed over the eastern part of Poland that had been assigned to us. In the end, we didn't even have to get our hands dirty to acquire these territories."
+ pol_par_no_sov.6.a:0 "And a big thanks to the Germans!"
+ 
+ pol_par_no_sov.7.title:0 "The Soviets Offer us Their Share of Poland"
+ pol_par_no_sov.7.desc:0 "The Soviets, having not intervened with us in Poland as we had agreed to do when the Molotov-Ribbentrop Pact was signed and letting us do all the work, have at our astonishment let us know that they were embarrassed by the way things turned out and that since we did all the work we are free to occupy the whole of Poland."
+ pol_par_no_sov.7.a:0 "Don't mind if I do!"
+ pol_par_no_sov.7.b:0 "It's fine, they can have these territories."
+ 
+ pol_par_no_sov.8.title:0 "The Germans Welcome Our Humility"
+ pol_par_no_sov.8.desc:0 "The Germans, naturally, did not reject our offer. And right before our diplomats left, even added with a slight grin that they were 'caught off guard by our humility'."
+ pol_par_no_sov.8.a:0 "Yeah yeah."
+ 
+ pol_par_no_sov.9.title:0 "The Germans Reject Our Offer"
+ pol_par_no_sov.9.desc:0 "The Germans, obviously startled by our offer, have, in an even more surprising move, decided to turn it down.\n\nThey declared that even thought we failed to take part in the Polish campaign, we could have our share of the territory, and then immediately began the transfer."
+ pol_par_no_sov.9.a:0 "...What?"
+
+

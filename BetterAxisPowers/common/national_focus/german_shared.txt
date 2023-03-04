@@ -230,7 +230,7 @@
 
 	shared_focus = {
 		id = GER_Bismarck
-		icon = GFX_goal_Bismarck
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		x = 1
@@ -284,7 +284,7 @@
 
 	shared_focus = {
 		id = GER_last_battle_of_bismarck
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_generic_wolf_pack
 		relative_position_id = GER_Bismarck
 		prerequisite = { focus = GER_Bismarck }
 		x = 1
@@ -306,7 +306,7 @@
 
 	shared_focus = {
 		id = GER_pride_of_the_modern_germany_a
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		text = GER_pride_of_the_modern_germany
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		prerequisite = { focus = GER_Bismarck focus = GER_His_Ship }
@@ -556,7 +556,7 @@
 
 	shared_focus= {
 		id = GER_plan_z_a
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_Bismarck
 		text = GER_plan_z
 		prerequisite = { focus = GER_naval_rearmament_a }
 		x = -6

@@ -1,0 +1,18 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			IF = {
+				limit = {
+					date > 1939.1.1
+				}
+				GER = { #-1 DAY; M-R PACT WAS SIGNED THE 23th; add -1 days because of how long it takes to complete the mr pact aggreements
+					country_event = { id = mrpact_initial.1 days = 7 } #MR Pact
+				}
+			}
+		}
+	}
+}
+
+
+
+
