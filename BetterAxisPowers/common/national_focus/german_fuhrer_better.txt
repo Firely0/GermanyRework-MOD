@@ -9506,11 +9506,14 @@ focus_tree = {
 		}
 	 }	
 	 completion_reward = {
-		
-		SOV = {
-			country_event = { id = germany.11 days = 1 }
-			custom_effect_tooltip = GER_mol_rib_pact_tt
-			custom_effect_tooltip = needs_approval
+		completion_reward = {
+			GER = {
+				country_event = mrpact_initial.1
+			}
+			custom_effect_tooltip = mrpact_non_aggression_tt
+			SOV = {
+				custom_effect_tooltip = needs_approval
+			}
 		}
 	}
 }
