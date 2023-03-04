@@ -43,7 +43,6 @@ focus_tree = {
 				always = no
 			}
 		}
-		cancelable = no
 		bypass = {
 			42 = { is_demilitarized_zone = no }
 			51 = { is_demilitarized_zone = no }
@@ -79,7 +78,6 @@ focus_tree = {
 				always = no
 			}
 		}
-		cancelable = no
 		ai_will_do = {
 			factor = 10
 		}
@@ -1382,6 +1380,7 @@ focus_tree = {
 						NOT = { HOL = { is_in_faction_with = GER } }
 						NOT = { has_war_with = HOL }
 						NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
+						NOT = { has_country_flag = GER_OLD_PLAN }
 					}
 					create_wargoal = {
 						type = take_state_focus
@@ -1397,6 +1396,7 @@ focus_tree = {
 						NOT = { has_war_with = HOL }
 						HOL = { has_completed_focus = HOL_cave_to_the_germans } 
 						NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
+						NOT = { has_country_flag = GER_OLD_PLAN }
 					}
 					HOL = {
 						country_event = { id = mtg_germany.1 hours = 6 }
@@ -2067,7 +2067,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_war_with_france
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_france
 		text = GER_war_with_france
 		prerequisite = { focus = GER_around_maginot focus = GER_weserubung }
 		available = {
@@ -2113,7 +2113,7 @@ focus_tree = {
 	focus = {
 		id = GER_operation_tannenbaum
 		text = GER_operation_tannenbaum
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_attack_switzerland
 		prerequisite = { focus = GER_war_with_france }
 		available = {
 			is_subject = no
@@ -8584,6 +8584,7 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = fascism
+			has_country_leader = GER_adolf_hitler
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -9506,14 +9507,12 @@ focus_tree = {
 		}
 	 }	
 	 completion_reward = {
-		completion_reward = {
-			GER = {
-				country_event = mrpact_initial.1
-			}
-			custom_effect_tooltip = mrpact_non_aggression_tt
-			SOV = {
-				custom_effect_tooltip = needs_approval
-			}
+		GER = {
+			country_event = mrpact_initial.1
+		}
+		custom_effect_tooltip = mrpact_non_aggression_tt
+		SOV = {
+			custom_effect_tooltip = needs_approval
 		}
 	}
 }
