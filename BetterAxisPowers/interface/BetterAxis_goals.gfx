@@ -1,11 +1,14 @@
 spriteTypes = {	
 
-	#### Generic continuous goal icons
-
 	SpriteType = {
 		name = "GFX_goal_Fuhrer"
 		texturefile = "gfx/interface/goals/Fuhrerfocus.dds"			
-	} 
+	}  
+
+	SpriteType = {
+		name = "GFX_goal_tr_puppet"
+		texturefile = "gfx/interface/goals/tr_puppet.dds"			
+	}
 	
 	SpriteType = {
 		name = "GFX_goal_FateofAdolfHitler"
@@ -110,6 +113,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_befriend_yug"
 		texturefile = "gfx/interface/goals/befriend_yugoslavia.dds"	
+	} 
+
+	SpriteType = {
+		name = "GFX_goal_Poland_befriend"
+		texturefile = "gfx/interface/goals/Poland_befriend.dds"	
 	}
 
 	SpriteType = {
@@ -155,7 +163,12 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_sweden_aliance"
 		texturefile = "gfx/interface/goals/sweden_aliance.dds"			
-	}
+	} 
+
+	SpriteType = {
+		name = "GFX_goal_war_with_scandinavia"
+		texturefile = "gfx/interface/goals/war_with_scandinavia.dds"			
+	} 
 
 	SpriteType = {
 		name = "GFX_goal_Bismarck"

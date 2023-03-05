@@ -136,7 +136,7 @@ focus_tree = {
 		cost = 2
 		available = {
 			is_subject = no
-			NOT = { has_government = communism }
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		bypass = {
 		}
@@ -701,7 +701,11 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_flag = GER_side_with_fascism
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_grand_counchil
+			}
+			
 		}
 
 		bypass = {
@@ -1189,7 +1193,7 @@ focus_tree = {
 	focus = {
 		id = GER_weserubung
 		text = GER_weserubung
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_war_with_scandinavia
 		prerequisite = { focus = GER_danzig_or_war }
 		will_lead_to_war_with = DEN 
 		will_lead_to_war_with = NOR
@@ -1291,7 +1295,7 @@ focus_tree = {
 	focus = {
 		id = GER_around_maginot
 		text = GER_around_maginot
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_SWI_fortify_border_with_france
 		prerequisite = { focus = GER_danzig_or_war focus = GER_poland_friend }
 		
 		available = {
@@ -1913,7 +1917,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_second_vienna_award
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_YUG_autonomous_transylvania
 		text = GER_second_vienna_award
 		prerequisite = { focus = GER_request_sudetenland focus = GER_end_of_czechoslovakia }
 		x = 0
@@ -2022,7 +2026,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_poland_friend
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_Poland_befriend
 		text = GER_poland_friend
 		prerequisite = { focus = GER_danzig_vs_slovakia }
 		available = {
@@ -4875,7 +4879,10 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = fascism
-			has_country_flag = GER_side_with_fascism
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_grand_counchil
+			}
 		}
 		cancel_if_invalid = no
 		x = 92
@@ -8006,7 +8013,7 @@ focus_tree = {
 	focus = {
 		id = GER_turkey_puppet
 		text = GER_turkey_puppet
-		icon = GFX_focus_generic_attack_turkey
+		icon = GFX_goal_tr_puppet
 		will_lead_to_war_with = TUR
 		prerequisite = { focus = GER_BALKAN }
 		available = {
@@ -8341,8 +8348,6 @@ focus_tree = {
 		y = 5
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8368,8 +8373,6 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8437,8 +8440,6 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8461,8 +8462,6 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8490,8 +8489,6 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8514,8 +8511,6 @@ focus_tree = {
 		y = 5
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8564,9 +8559,7 @@ focus_tree = {
 			factor = 10
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-			add_war_support = 0.05
-			add_state_claim = 69  
+		completion_reward = { 
 		}
 	}
 
@@ -8592,8 +8585,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			add_war_support = 0.05
-			add_state_claim = 69  
 		}
 	}
 
@@ -8619,8 +8610,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			add_war_support = 0.05
-			add_state_claim = 69  
 		}
 	}
 
@@ -8660,8 +8649,6 @@ focus_tree = {
 		y = 5
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8709,8 +8696,6 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8762,8 +8747,6 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8789,8 +8772,6 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available = {
-			NOT = {has_completed_focus = GER_Fuhrer}
-			NOT = {has_completed_focus = GER_grand_counchil}
 		}
 		bypass = {
 		}
@@ -8831,7 +8812,8 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = fascism
-			has_country_leader = GER_adolf_hitler
+			has_country_leader = adolf_hitler
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -8887,6 +8869,7 @@ focus_tree = {
 					}
 				}
 			}
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		cancel = {
 			AND = {
