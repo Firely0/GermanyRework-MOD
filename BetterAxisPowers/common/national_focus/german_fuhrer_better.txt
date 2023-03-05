@@ -125,7 +125,7 @@ focus_tree = {
 		id = GER_purge_comunist_support
 		icon = GFX_goal_anti_comintern_pact
 		allow_branch = {
-			has_government = fascism
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		prerequisite = {
 			focus = GER_establish_abwehr
@@ -156,7 +156,7 @@ focus_tree = {
 		id = GER_purge_fascism_support
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		allow_branch = {
-			has_government = communism
+			has_completed_focus = GER_against_fuhrer
 		}
 		prerequisite = {
 			focus = GER_establish_abwehr
@@ -692,7 +692,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		allow_branch = { has_government = fascism }
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
 		x = 50
@@ -705,7 +705,6 @@ focus_tree = {
 				has_completed_focus = GER_Fuhrer
 				has_completed_focus = GER_grand_counchil
 			}
-			
 		}
 
 		bypass = {
@@ -2756,7 +2755,7 @@ focus_tree = {
 		text = GER_second_ljubljana_award
 		mutually_exclusive = { focus = GER_war_with_greece } 
 		prerequisite = { focus = GER_fate_of_yugoslavia focus = GER_request_slovenia }
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_GRE_bedrock_of_balkan_stability
 		available = {
 			is_subject = no
 			GRE = { 
@@ -2904,7 +2903,7 @@ focus_tree = {
 		text = GER_war_with_greece
 		prerequisite = { focus = GER_fate_of_yugoslavia focus = GER_request_slovenia }
 		mutually_exclusive = { focus = GER_second_ljubljana_award } 
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_greece
 		will_lead_to_war_with = GRE
 		available = {
 			GRE = { 
@@ -4875,7 +4874,7 @@ focus_tree = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_Axis
 		prerequisite = { focus = GER_establish_abwehr }
-		allow_branch = { has_government = fascism }
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		available = {
 			is_puppet = no
 			has_government = fascism
@@ -8847,7 +8846,7 @@ focus_tree = {
 		id = GER_National_sprit
 		text = GER_improve_national_spirit
 		allow_branch = {
-			has_government = fascism
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		prerequisite = { focus = GER_establish_abwehr }
 		icon = GFX_goal_betterreich
@@ -8949,7 +8948,7 @@ focus_tree = {
 		id = GER_National_sprit_a
 		text = GER_improve_national_spirit
 		allow_branch = {
-			has_government = communism
+			has_completed_focus = GER_against_fuhrer
 		}
 		prerequisite = { focus = GER_establish_abwehr }
 		icon = GFX_focus_ger_great_red_menace
@@ -9663,7 +9662,7 @@ focus_tree = {
 	focus = {
 		id = GER_Approach_Soviet
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } has_government = fascism }
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } NOT = { has_completed_focus = GER_against_fuhrer } }
 		available = {
 			SOV = {
 				NOT = { has_war_with = GER }
@@ -10026,7 +10025,7 @@ focus = {
 		icon = GFX_goal_anti_comintern_pact
 		text = GER_anti_comitern_pact
 		prerequisite = { focus = GER_Sleep_Well_SOV  }
-		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } has_government = fascism } 
+		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } NOT = { has_completed_focus = GER_against_fuhrer } } 
 		x = -3
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
