@@ -8160,7 +8160,7 @@ focus_tree = {
 		id = GER_prepare_for_innovative_f
 		icon = GFX_goal_support_communism
 		relative_position_id = GER_establish_abwehr
-		x = -13
+		x = -16
 		y = 1
 		cost = 10
 		allow_branch = {
@@ -8235,7 +8235,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		relative_position_id = GER_establish_abwehr
-		x = -20
+		x = -24
 		y = 1
 		cost = 10
 		available = {
@@ -8323,12 +8323,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
 	focus = {
 		id = GER_Home_of_Revelation
-		icon = GFX_goal_Trotsky
+		icon = GFX_goal_support_fourth_int
 		mutually_exclusive = {
 			focus = GER_Follow_Moscow
 		}
@@ -8336,7 +8337,7 @@ focus_tree = {
 			focus = GER_the_German_Republic 
 		}
 		relative_position_id = GER_against_fuhrer
-		x = -6
+		x = -8
 		y = 5
 		cost = 5
 		available = {
@@ -8363,7 +8364,7 @@ focus_tree = {
 			focus = GER_Home_of_Revelation 
 		}
 		relative_position_id = GER_the_German_Republic
-		x = -4
+		x = -6
 		y = 2
 		cost = 5
 		available = {
@@ -8381,17 +8382,59 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_return_for_new_order
+		icon = GFX_goal_Trotsky
+		prerequisite = {
+			focus = GER_Home_of_Revelation 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -10
+		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}	
+
+	focus = {
 		id = GER_Rebuild_Home
 		icon = GFX_goal_generic_construction2
-		mutually_exclusive = {
-			
-		}
 		prerequisite = {
 			focus = GER_Home_of_Revelation_Side focus = GER_balanced_approach
 		}
 		relative_position_id = GER_the_German_Republic
-		x = -2
+		x = -3
 		y = 3
+		cost = 5
+		available = {
+			NOT = { has_completed_focus = GER_Long_term_plan }
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_militarism
+		icon = GFX_focus_generic_military_mission
+		prerequisite = {
+			focus = GER_Rebuild_Home
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -4
+		y = 4
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
@@ -8406,6 +8449,32 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	focus = {
+		id = GER_a_way_better_germany
+		icon = GFX_goal_generic_construction
+		prerequisite = {
+			focus = GER_Rebuild_Home
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -2
+		y = 4
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+
 
 	focus = {
 		id = GER_balanced_approach
@@ -8436,13 +8505,13 @@ focus_tree = {
 
 	focus = {
 		id = GER_foregin_affairs_kom
-		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		prerequisite = {
 			focus = GER_the_German_Republic focus = GER_Soviet_Side focus = GER_Home_of_Revelation_Side
 		}
 		relative_position_id = GER_the_German_Republic
 		x = 0
-		y = 4
+		y = 5
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
@@ -8475,6 +8544,109 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_reorg_air
+		icon = r56_goal_GER_luftwaffe
+		prerequisite = {
+			focus = GER_foregin_affairs_kom
+		}
+		mutually_exclusive = {
+			focus = GER_reorg_army focus = GER_reorg_air
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 3
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			add_war_support = 0.05
+			add_state_claim = 69  
+		}
+	}
+
+	focus = {
+		id = GER_reorg_army
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = {
+			focus = GER_foregin_affairs_kom
+		}
+		mutually_exclusive = {
+			focus = GER_reorg_navy focus = GER_reorg_air
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -3
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			add_war_support = 0.05
+			add_state_claim = 69  
+		}
+	}
+
+	focus = {
+		id = GER_reorg_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = {
+			focus = GER_foregin_affairs_kom
+		}
+		mutually_exclusive = {
+			focus = GER_reorg_army focus = GER_reorg_air
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			add_war_support = 0.05
+			add_state_claim = 69  
+		}
+	}
+
+	focus = {
+		id = GER_Road_to_New_World
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		prerequisite = {
+			focus = GER_reorg_navy focus = GER_reorg_army focus = GER_reorg_air
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_Follow_Moscow
 		icon = GFX_focus_generic_join_comintern
 		mutually_exclusive = {
@@ -8484,12 +8656,34 @@ focus_tree = {
 			focus = GER_the_German_Republic 
 		}
 		relative_position_id = GER_against_fuhrer
-		x = 6
+		x = 8
 		y = 5
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
 			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_A
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = {
+			focus = GER_Follow_Moscow 
+		}
+		relative_position_id = GER_against_fuhrer
+		x = 10
+		y = 6
+		cost = 5
+		available = {
 		}
 		bypass = {
 		}
@@ -8511,7 +8705,7 @@ focus_tree = {
 			focus = GER_Follow_Moscow 
 		}
 		relative_position_id = GER_the_German_Republic
-		x = 4
+		x = 6
 		y = 2
 		cost = 5
 		available = {
@@ -8538,8 +8732,61 @@ focus_tree = {
 			focus = GER_Soviet_Side focus = GER_balanced_approach
 		}
 		relative_position_id = GER_the_German_Republic
-		x = 2
+		x = 3
 		y = 3
+		cost = 5
+		available = {
+			NOT = { has_completed_focus = GER_Rebuild_Home }
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_focus_on_mines
+		icon = GFX_goal_reichsautobahn
+		prerequisite = {
+			focus = GER_Long_term_plan
+		}
+		mutually_exclusive = {
+			focus = GER_superior_tech
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 4
+		y = 4
+		cost = 5
+		available = {
+			NOT = {has_completed_focus = GER_Fuhrer}
+			NOT = {has_completed_focus = GER_grand_counchil}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_superior_tech
+		icon = GFX_goal_continuous_research
+		prerequisite = {
+			focus = GER_Long_term_plan
+		}
+		mutually_exclusive = {
+			focus = GER_focus_on_mines
+		}
+		relative_position_id = GER_the_German_Republic
+		x = 2
+		y = 4
 		cost = 5
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}

@@ -7,5 +7,5 @@ tags={
 }
 name="Better Axis Powers"
 supported_version="1.12.10"
-path="C:/Users/Firel/OneDrive/Belgeler/Paradox Interactive/Hearts of Iron IV/mod/BetterAxisPowers"
+path="C:/Users/Aybars/Documents/Paradox Interactive/Hearts of Iron IV/mod/BetterAxisPowers"
 remote_file_id="2904370119"
