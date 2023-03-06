@@ -8032,6 +8032,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			TUR = {
+				add_idea = GER_Trade_with_Turkey
+			}
 		}
 	}
 
@@ -8114,12 +8117,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TUR = { 
-				add_timed_idea = {
-					idea = GER_ita_build
-					days = 364
-				}
-			 }
+			give_resource_rights = {
+				receiver = GER
+				state = 339
+			}
+			TUR = { add_idea = GER_Turkey_mine }
 		}
 	}
 
