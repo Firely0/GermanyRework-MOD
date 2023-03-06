@@ -8011,7 +8011,6 @@ focus_tree = {
 	focus = {
 		id = GER_Tur_Trade
 		icon = GFX_goal_generic_positive_trade_relations
-		text = GER_Spa_Tur_Expand_Army
 		relative_position_id = GER_turkey_friend
 		prerequisite = { focus = GER_TUR_build_eco focus = GER_Tur_Expand_Army }
 		available = {
@@ -8033,7 +8032,7 @@ focus_tree = {
 
 		completion_reward = {
 			TUR = {
-				add_idea = GER_Trade_with_Turkey
+				add_ideas = GER_Trade_with_Turkey
 			}
 		}
 	}
@@ -8098,7 +8097,6 @@ focus_tree = {
 	focus = {
 		id = GER_build_better_mines
 		icon = GFX_goal_generic_trade
-		text = GER_TUR_build_eco
 		relative_position_id = GER_turkey_puppet
 		prerequisite = { focus = GER_TUR_build_eco_2 focus = GER_TUR_Grant_Claims }
 		available = {
@@ -8121,7 +8119,7 @@ focus_tree = {
 				receiver = GER
 				state = 339
 			}
-			TUR = { add_idea = GER_Turkey_mine }
+			TUR = { add_ideas = GER_Turkey_mine }
 		}
 	}
 
@@ -8163,9 +8161,7 @@ focus_tree = {
 		relative_position_id = GER_establish_abwehr
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = GER_fascism_is_wrong
 				has_government = fascism
-				has_country_flag = GER_allow_grand
 				NOT = { has_completed_focus = GER_against_fuhrer }
 			}
 		}
