@@ -7339,7 +7339,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_align_hungary
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_befriend_hungary
 		text = GER_align_hungary
 		prerequisite = { focus = GER_BALKAN }
 		x = 0
@@ -7397,7 +7397,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_align_romania
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_GerRom_Flag
 		text = GER_align_romania
 		prerequisite = { focus = GER_BALKAN }
 		x = -2
@@ -7455,7 +7455,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_align_bulgaria
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_GerBul_Flag
 		prerequisite = { focus = GER_BALKAN }
 		x = 2
 		y = 1
