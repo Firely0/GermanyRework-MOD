@@ -8009,6 +8009,33 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Tur_Trade
+		icon = GFX_goal_generic_positive_trade_relations
+		text = GER_Spa_Tur_Expand_Army
+		relative_position_id = GER_turkey_friend
+		prerequisite = { focus = GER_TUR_build_eco focus = GER_Tur_Expand_Army }
+		available = {
+			is_subject = no
+			TUR = { is_subject = no }
+			TUR = { is_in_faction_with = GER }
+		}
+
+		x = 0
+		y = 2
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_turkey_puppet
 		text = GER_turkey_puppet
 		icon = GFX_goal_tr_puppet
@@ -8046,6 +8073,37 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			TUR = { 
+				add_timed_idea = {
+					idea = GER_ita_build
+					days = 364
+				}
+			 }
+		}
+	}
+
+	focus = {
+		id = GER_build_better_mines
+		icon = GFX_goal_generic_trade
+		text = GER_TUR_build_eco
+		relative_position_id = GER_turkey_puppet
+		prerequisite = { focus = GER_TUR_build_eco_2 focus = GER_TUR_Grant_Claims }
+		available = {
+			is_subject = no
+			TUR = { is_subject_of = GER }
+		}
+		x = 0
+		y = 2
 
 		cost = 5
 		ai_will_do = {
@@ -8403,7 +8461,107 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 		}
-	}	
+	}
+	
+	focus = {
+		id = GER_claim_new_home_of_brave_new_world
+		icon = GFX_goal_Trotsky
+		prerequisite = {
+			focus = GER_return_for_new_order 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -10
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = SOV }
+				add_claim_by = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = GER_strike_union
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = {
+			focus = GER_claim_new_home_of_brave_new_world 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -10
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = SOV }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = GER_german_union
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = {
+			focus = GER_claim_new_home_of_brave_new_world 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -10
+		y = 7
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = SOV }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = GER_revolution_agents
+		icon = GFX_focus_generic_vatican_agents
+		prerequisite = {
+			focus = GER_return_for_new_order 
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -8
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
 
 	focus = {
 		id = GER_Rebuild_Home
@@ -8621,6 +8779,210 @@ focus_tree = {
 		relative_position_id = GER_foregin_affairs_kom
 		x = 0
 		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_support_spain
+		icon = GFX_focus_generic_befriend_communist_spain_focus
+		prerequisite = {
+			focus = GER_Road_to_New_World
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -3
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_offer_protection
+		icon = GFX_focus_generic_befriend_communist_spain_focus
+		prerequisite = {
+			focus = GER_support_spain
+		}
+		mutually_exclusive = {
+			focus = GER_safe_from_threat
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -4
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_safe_from_threat
+		icon = GFX_focus_generic_attack_communist_spain_focus
+		prerequisite = {
+			focus = GER_support_spain
+		}
+		mutually_exclusive = {
+			focus = GER_offer_protection
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -2
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_baltic
+		icon = GFX_focus_SOV_baltic_security
+		prerequisite = {
+			focus = GER_Road_to_New_World
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -6
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_united_in_red
+		icon = GFX_goal_Anschlus_1
+		prerequisite = {
+			focus = GER_Road_to_New_World
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 0
+		y = 5
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_demand_slovenia_com
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = GER_united_in_red
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -2
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_demand_sudetenland_com
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = {
+			focus = GER_united_in_red
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 2
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_demand_menel_again
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {
+			focus = GER_united_in_red
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 0
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_danzig_or_death
+		icon = GFX_focus_POL_clamp_down_on_danzig
+		prerequisite = {
+			focus = GER_demand_menel_again
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 0
+		y = 8
 		cost = 5
 		available = {
 		}
