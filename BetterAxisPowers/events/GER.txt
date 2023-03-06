@@ -1946,6 +1946,7 @@ country_event = {
 			factor = 100
 		}
 		name = "Any ally against Bolshevism is welcome."
+		clr_country_flag = vlasov_in_ss_flag
 		recruit_character = SOV_andrey_vlasov
 		SOV_andrey_vlasov = {
 			add_trait = {

@@ -68,7 +68,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
-		#prerequisite = { }
 		x = 59
 		y = 0
 		cost = 5
@@ -8247,6 +8246,7 @@ focus_tree = {
 		available = {
 			NOT = {has_completed_focus = GER_Fuhrer}
 			NOT = {has_completed_focus = GER_grand_counchil}
+			has_completed_focus = GER_rhineland_demilitarized
 		}
 		bypass = {
 		}
@@ -8811,7 +8811,10 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = fascism
-			has_country_leader = adolf_hitler
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		cancel_if_invalid = no
@@ -8831,14 +8834,30 @@ focus_tree = {
 					add_ideas = i_dont_use_wargoal
 				}
 			}
-			set_country_flag = GER_side_with_fascism	
-			add_country_leader_trait = DealBraker
-			set_power_balance = {
-				id = GER_power_balance
-				left_side = default_left_side 
-				right_side = default_right_side 
-				set_value = 0
+			set_country_flag = GER_side_with_fascism
+			if = {
+				limit = {
+					has_completed_focus = GER_rhineland_ab
+				}
+				add_country_leader_trait = DealBraker
+				set_power_balance = {
+					id = GER_power_balance
+					left_side = default_left_side 
+					right_side = default_right_side 
+					set_value = 20
+				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = GER_rhineland_demilitarized
+				}
+				set_power_balance = {
+					id = GER_power_balance
+					left_side = default_left_side 
+					right_side = default_right_side 
+					set_value = -20
+				}
+			}	
 		}
 	}
 
