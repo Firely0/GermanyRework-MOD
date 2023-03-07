@@ -11,8 +11,8 @@ spriteTypes = {
 	} 
 
 	SpriteType = {
-		name = "GFX_goal_Ger-Sov_Flag"
-		texturefile = "gfx/interface/goals/Ger-Sov_Flag.dds"			
+		name = "GFX_goal_Ger_Sov_Flag"
+		texturefile = "gfx/interface/goals/Ger_Sov_Flag.dds"			
 	} 
 
 	SpriteType = {
@@ -28,6 +28,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_czeflagdown"
 		texturefile = "gfx/interface/goals/czeflagdown.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_anschluskom"
+		texturefile = "gfx/interface/goals/anschluskom.dds"			
 	}
 	
 	SpriteType = {

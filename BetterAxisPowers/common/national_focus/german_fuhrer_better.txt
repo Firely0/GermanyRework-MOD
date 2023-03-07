@@ -8368,7 +8368,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_German_Republic
-		icon = GFX_focus_gercomflag
+		icon = GFX_goal_gercomflag
 		prerequisite = {
 			focus = GER_prepare_for_innovative focus = GER_assassinate_adolf_hitler
 		}
@@ -8697,7 +8697,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_reorg_air
-		icon = r56_goal_GER_luftwaffe
+		icon = GFX_goal_r56_goal_GER_luftwaffe
 		prerequisite = {
 			focus = GER_foregin_affairs_kom
 		}
@@ -8888,7 +8888,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_united_in_red
-		icon = GFX_goal_Anschlus_1
+		icon = GFX_goal_anschluskom
 		prerequisite = {
 			focus = GER_Road_to_New_World
 		}
@@ -10220,7 +10220,7 @@ focus_tree = {
 
 focus = {
 	id = GER_soviet_ally
-	icon = GFX_goal_Ger-Sov_Flag
+	icon = GFX_goal_Ger_Sov_Flag
 	text = GER_soviet_ally
 	prerequisite = { focus = GER_Approach_Soviet }
 	available = {
