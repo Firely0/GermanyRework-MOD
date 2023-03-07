@@ -905,6 +905,25 @@ ideas = {
 			}
 		}
 
+		GER_align_hungary_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = cavetogermansnon
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
+			}
+		}
+
 		GER_align_romania = {
 			allowed = {
 				always = no
@@ -921,6 +940,25 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
+			}
+		}
+
+		GER_align_romania_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = cavetogermansnon
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
 			}
 		}
 
@@ -954,7 +992,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_neutrality_drift_bonus
+			picture = cavetogermansnon
 
 			modifier = {
 				neutrality_drift = 0.2

@@ -8022,7 +8022,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -8106,7 +8106,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -8115,9 +8115,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			give_resource_rights = {
-				receiver = GER
-				state = 339
+			TUR = {
+				give_resource_rights = {
+					receiver = GER
+					state = 339
+				}
 			}
 			TUR = { add_ideas = GER_Turkey_mine }
 		}
@@ -8366,7 +8368,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_German_Republic
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_gercomflag
 		prerequisite = {
 			focus = GER_prepare_for_innovative focus = GER_assassinate_adolf_hitler
 		}
@@ -8463,7 +8465,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_claim_new_home_of_brave_new_world
-		icon = GFX_goal_Trotsky
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		prerequisite = {
 			focus = GER_return_for_new_order 
 		}
@@ -8797,7 +8799,7 @@ focus_tree = {
 			focus = GER_Road_to_New_World
 		}
 		relative_position_id = GER_foregin_affairs_kom
-		x = -3
+		x = 3
 		y = 3
 		cost = 5
 		available = {
@@ -8821,9 +8823,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_safe_from_threat
 		}
-		relative_position_id = GER_foregin_affairs_kom
-		x = -4
-		y = 4
+		relative_position_id = GER_support_spain
+		x = -1
+		y = 1
 		cost = 5
 		available = {
 		}
@@ -8846,9 +8848,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_offer_protection
 		}
-		relative_position_id = GER_foregin_affairs_kom
-		x = -2
-		y = 4
+		relative_position_id = GER_support_spain
+		x = 1
+		y = 1
 		cost = 5
 		available = {
 		}
@@ -8929,14 +8931,58 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_fate_of_yug
+		icon = GFX_goal_yugflagdown
+		prerequisite = {
+			focus = GER_demand_slovenia_com
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -2
+		y = 8
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_demand_sudetenland_com
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = {
 			focus = GER_united_in_red
 		}
 		relative_position_id = GER_foregin_affairs_kom
 		x = 2
 		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_cze
+		icon = GFX_goal_czeflagdown
+		prerequisite = {
+			focus = GER_demand_sudetenland_com
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 2
+		y = 8
 		cost = 5
 		available = {
 		}
@@ -8980,7 +9026,54 @@ focus_tree = {
 		}
 		relative_position_id = GER_foregin_affairs_kom
 		x = 0
-		y = 8
+		y = 9
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_offer_support_poland
+		icon = GFX_goal_Poland_befriend
+		prerequisite = {
+			focus = GER_danzig_or_death
+		}
+		mutually_exclusive = {
+			focus = GER_support_polish_communism
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -1
+		y = 10
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_support_polish_communism
+		icon = GFX_focus_generic_polish_deal
+		prerequisite = {
+			focus = GER_danzig_or_death
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = 1
+		y = 10
 		cost = 5
 		available = {
 		}
@@ -10127,7 +10220,7 @@ focus_tree = {
 
 focus = {
 	id = GER_soviet_ally
-	icon = GFX_goal_generic_dangerous_deal
+	icon = GFX_goal_Ger-Sov_Flag
 	text = GER_soviet_ally
 	prerequisite = { focus = GER_Approach_Soviet }
 	available = {
@@ -10457,7 +10550,7 @@ focus = {
 
     focus = {
 		id = GER_anti_soviet_pact
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		text = GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comitern_pact }
 		available = {
