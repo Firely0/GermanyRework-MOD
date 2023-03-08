@@ -19,6 +19,10 @@ add_namespace = GER_offer_support_irq
 add_namespace = GER_jap_coal_trade
 add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
+add_namespace = GER_request_help
+add_namespace = GER_request_fra_help
+add_namespace = GER_rhineland_n
+add_namespace = GER_rhineland
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -226,7 +230,7 @@ country_event = {
 	id = gerb.2
 	title = "Germany Demands Slovenia!"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Accept"
@@ -265,7 +269,7 @@ country_event = {
 	id = gerb.21
 	title = "Germany Demands Slovenia!"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Accept"
@@ -297,7 +301,7 @@ country_event = {
 	id = gerb.3
 	title = "Yugoslavia Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Good"
@@ -315,7 +319,7 @@ country_event = {
 	id = gerb.31
 	title = "Yugoslavia Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Good"
@@ -341,7 +345,7 @@ country_event = {
 	id = gerb.4
 	title = "Yugoslavia Not Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GGFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "They Forced Our Hand"
@@ -404,7 +408,7 @@ country_event = {
 	id = gerb.6
 	title = "Germany Demands Sudetenland!"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Accept"
@@ -447,7 +451,7 @@ country_event = {
 	id = gerb.61
 	title = "Germany Demands Sudetenland!"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Accept"
@@ -486,7 +490,7 @@ country_event = {
 	id = gerb.7
 	title = "Czechoslovakia Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Good"
@@ -504,7 +508,7 @@ country_event = {
 	id = gerb.71
 	title = "Czechoslovakia Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "Good"
@@ -530,7 +534,7 @@ country_event = {
 	id = gerb.8
 	title = "Czechoslovakia Not Accepted Our Request"
 	desc = ""
-	picture = GFX_report_event_chinese_army_training
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = "They Forced Our Hand"
@@ -1182,7 +1186,7 @@ country_event = {
 
 country_event = {
 	id = GER_Create_Afrika_Corps_event.2
-	title = "Germany Wants Create GER-ITA Africa Korps"
+	title = "Germany Wants Create German Africa Korps"
 	desc = GER_Create_Afrika_Corps_event.2.d
 	picture = GFX_report_event_generic_sign_treaty2
 	is_triggered_only = yes
@@ -1738,7 +1742,7 @@ country_event = {
 				add_ai_strategy = {
 					type = alliance
 					id = "GER"
-					value = 200
+					value = 500
 				}
 			}
 		}
@@ -1942,6 +1946,7 @@ country_event = {
 			factor = 100
 		}
 		name = "Any ally against Bolshevism is welcome."
+		clr_country_flag = vlasov_in_ss_flag
 		recruit_character = SOV_andrey_vlasov
 		SOV_andrey_vlasov = {
 			add_trait = {
@@ -2213,28 +2218,6 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 60
-		}
-		trigger = {
-			GER = {
-				has_completed_focus = GER_expand_defance
-			}
-		}
-		name = "Fine"
-
-		GER = {
-			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
-		}
-
-		add_ideas = G
-	}
-	option = {
-		ai_chance = {
-			factor = 60
-		}
-		trigger = {
-			GER = {
-				has_completed_focus = GER_support_china
-			}
 		}
 		name = "Fine"
 
@@ -2539,3 +2522,663 @@ country_event = {
 		
 	}	
 }
+
+country_event = {
+	id = GER_request_help.1
+	title = "Rhineland Question!"
+	desc = "Germany Needs to Militarize Rhineland Against Communism."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+		GER = { country_event = { id = GER_request_help.2 } }
+
+		if = {
+			limit = {
+				NOT = { has_government = communism }
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+
+		hidden_effect = {
+			42 = { set_demilitarized_zone = no }
+            51 = { set_demilitarized_zone = no } 
+			clr_country_flag = GER_rhineland_challenge_met
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		GER = { country_event = { id = GER_request_help.3 } }
+
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_request_help.2
+	title = "United Kingdom Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+	}
+}
+
+country_event = {
+	id = GER_request_help.3
+	title = "United Kingdom Not Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We See You When You Invaded by Communists."
+		
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.1
+	title = "Rhineland Question!"
+	desc = "Germany Needs to Militarize Rhineland Against Communism."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+
+		GER = { country_event = { id = GER_request_fra_help.2 } }
+
+		if = {
+			limit = {
+				NOT = { has_government = communism }
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+
+		hidden_effect = {
+			42 = { set_demilitarized_zone = no }
+            51 = { set_demilitarized_zone = no } 
+			clr_country_flag = GER_rhineland_challenge_met
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+
+		GER = { country_event = { id = GER_request_fra_help.3 } }
+
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.2
+	title = "France Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+	}
+}
+
+country_event = {
+	id = GER_request_fra_help.3
+	title = "France Not Accepted Our Request!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We See You When You Invaded by Communists."
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.1
+	title = "We Spotted German Troops in Rhineland!"
+	desc = "Our Soldiers Have Seen German Soldiers in the Rhineland and are Standing for Possible Intervention."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Not a Significant Problem."
+
+		set_global_flag = GER_RH_N_NP
+		
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "The British Should Be Aware Of This Situation"
+
+		ENG = { country_event = { id = GER_rhineland_n.2 hours = 6 } }
+
+		add_war_support = 0.05
+
+		add_stability = -0.05
+		add_political_power = -25
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.2
+	title = "France Spotted German Troops in Rhineland!"
+	desc = "France informed us that German soldiers appeared within the borders of the Rhineland and France Seeks Support for a Joint Response."
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "To Keep the Peace, We Must Prepare for Possible War."
+
+		FRA = { country_event = { id = GER_rhineland_n.4 hours = 6 } }
+
+		add_war_support = 0.1
+
+		add_stability = -0.1
+		add_political_power = -100
+		
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Not a Significant Problem."
+
+		add_stability = 0.05
+
+		FRA = { country_event = { id = GER_rhineland_n.3 hours = 6 } }
+		
+	}
+
+}
+
+country_event = {
+	id = GER_rhineland_n.3
+	title = "The British Didn't Support Us!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "We Must be back down "
+
+		set_global_flag = GER_RH_N_NP
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "Let's Take Necessary Measures Against Germany"
+
+		set_global_flag = GER_NO_WAR
+
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
+		
+		set_global_flag = GER_RH_N_NP
+	}
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Can Lead This War Alone."
+
+		add_stability = -0.1
+		
+		ENG = {
+			add_ai_strategy = {
+				type = alliance
+				id = FRA
+				value = -1000
+			} 
+		}
+
+		declare_war_on = {
+			target = GER
+		}
+
+		FRA = { 
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_political_power = -100
+		}
+
+		if = {
+			limit = {
+				has_idea = FRA_disjointed_government
+				NOT = { has_government = communism }
+			}
+			custom_effect_tooltip = germany.60.a.tt
+			effect_tooltip = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.3
+				}
+			}
+		}
+		
+		if = { #you're not getting around that, comrade
+			limit = {
+				has_idea = FRA_disjointed_government
+				has_government = communism
+			}
+			custom_effect_tooltip = germany.60.a.tt
+			effect_tooltip = {
+				start_civil_war = {
+					ideology = democratic
+					size = 0.3
+				}
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = GER_rhineland_n.4
+	title = "British Support With Us!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Prepare for the Inevitable War!"
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GER
+		}
+
+		FRA = { 
+			add_stability = -0.1
+			add_political_power = -100
+		}
+
+		if = {
+			limit = {
+				has_idea = FRA_disjointed_government
+				NOT = { has_government = communism }
+			}
+			custom_effect_tooltip = germany.60.a.tt
+			effect_tooltip = {
+				start_civil_war = {
+					ideology = communism
+					size = 0.3
+				}
+			}
+		}
+
+		if = { #you're not getting around that, comrade
+			limit = {
+				has_idea = FRA_disjointed_government
+				has_government = communism
+			}
+			custom_effect_tooltip = germany.60.a.tt
+			effect_tooltip = {
+				start_civil_war = {
+					ideology = democratic
+					size = 0.3
+				}
+			}
+		}
+
+		ENG = { 
+			add_to_faction = FRA
+			add_stability = -0.1
+			add_political_power = -100
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Let's Take Necessary Measures Against Germany"
+
+		set_global_flag = GER_NO_WAR
+
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		} 
+
+		ENG = { 
+			add_to_faction = FRA
+			add_stability = 0.05
+			add_political_power = -5
+			send_embargo = GER 
+			add_opinion_modifier = {
+				target = GER
+				modifier = protest_action
+			} 
+		}
+
+		set_global_flag = GER_RH_N_NP
+		
+	}
+}
+
+country_event = { #Event For France
+	id = GER_rhineland.1
+	title = "German Troops Enter Rhineland Again!"
+	desc = germany.60.d
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 #ENG = { country_event = GER_rhineland.3 hours = 3 }
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+    }
+
+	option = {
+	name = "We Should Cut Trades With Germany"
+	ai_chance = {
+		factor = 0
+	}
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+			}
+			ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
+			effect_tooltip = {
+				ENG = {
+					custom_effect_tooltip = needs_approval
+					add_to_faction = FRA
+					add_stability = 0.05
+					add_political_power = -5
+					send_embargo = GER
+					add_opinion_modifier = {
+						target = GER
+						modifier = protest_action
+					}
+				}
+			}
+		}
+    }
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Ensure the Security of Benelux."
+
+		ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
+
+		HOL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = HOL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		BEL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = BEL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		LUX = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = LUX
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+			}
+			effect_tooltip = {
+				ENG = {
+					custom_effect_tooltip = needs_approval
+					add_to_faction = FRA
+					diplomatic_relation = {
+						country = HOL
+						relation = guarantee
+						active = no
+					}
+					diplomatic_relation = {
+						country = BEL
+						relation = guarantee
+						active = no
+					}
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = no
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "We Always Have Other Ways"
+		ai_chance = {
+			factor = 0
+		}
+		country_event = { id = GER_rhineland.2 } 
+			add_political_power = -5
+		}
+}
+
+country_event = { #Event For France / Not Diplo Side
+	id = GER_rhineland.2
+	title = "German Troops Enter Rhineland Again!"
+	desc = germany.60.d
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = {
+	name = "We Always Have Other Plans"
+	ai_chance = {
+		factor = 0
+	}
+	country_event = { id = GER_rhineland.1 } 
+		add_political_power = -5
+    }
+
+	option = {
+	name = "Let's isolate Germany"
+	ai_chance = {
+		factor = 0
+	}
+	trigger = {
+		NOT = { has_global_flag = ISO_GER_Y }
+	}
+	if = {
+		limit = { NOT = {} }
+	}
+	ENG = { country_event = { id = G hours = 3 } }
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_political_power = -350
+    }
+
+	option = { 
+	name = "Issue Ultimatum"
+	ai_chance = {
+		factor = 0
+	}
+	ENG = { country_event = { id = G hours = 3 } }
+		add_stability = -0.1
+		add_political_power = -200
+    }
+
+    option = { # This means war!
+	name = germany.60.a
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 20
+			strength_ratio = {
+				tag = GER
+				ratio > 0.7
+			}
+			NOT = { has_idea = FRA_disjointed_government }
+		}
+
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes
+		}
+	}
+	add_political_power = -150
+	add_stability = -0.1
+	if = {
+		limit = {
+			ENG = {
+				is_puppet = no
+				NOT = { has_war_with = FRA }
+			}
+		}
+		ENG = {
+			country_event = germany.61
+			custom_effect_tooltip = needs_approval
+			effect_tooltip = { add_to_faction = FRA }
+		}
+	}
+	if = {
+		limit = {
+			has_idea = FRA_disjointed_government
+			NOT = { has_government = communism }
+		}
+		custom_effect_tooltip = germany.60.a.tt
+		effect_tooltip = {
+			start_civil_war = {
+				ideology = communism
+				size = 0.3
+			}
+		}
+	}
+	if = { #you're not getting around that, comrade
+		limit = {
+			has_idea = FRA_disjointed_government
+			has_government = communism
+		}
+		custom_effect_tooltip = germany.60.a.tt
+		effect_tooltip = {
+			start_civil_war = {
+				ideology = democratic
+				size = 0.3
+			}
+		}
+	}
+    }
+}
+
+
+
+
+
+

@@ -165,6 +165,191 @@ GER_Operation_Barbarossa_V = {
 	}
 }
 
+GER_Rhineland_demilitarized = {
+
+	GER_Rhineland_demilitarized_a = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			51 = { is_demilitarized_zone = no }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 51 #Rhineland
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = no
+		days_mission_timeout = 140
+		priority = 100
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			if = {
+				limit = { NOT = { has_country_flag = GER_RHINELAND_a } }
+				set_country_flag = GER_RHINELAND_a
+			}
+			if = {
+				limit = { has_country_flag = GER_RHINELAND_a }
+				clr_country_flag = GER_RHINELAND_a
+				set_country_flag = GER_RHINELAND_b
+			}
+			if = {
+				limit = { has_country_flag = GER_RHINELAND_b }
+				clr_country_flag = GER_RHINELAND_b
+				set_country_flag = GER_RHINELAND_c
+			}
+			if = {
+				limit = { has_country_flag = GER_RHINELAND_c }
+				clr_country_flag = GER_RHINELAND_c
+				complete_national_focus = GER_rhineland_demilitarized
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+		}
+	
+		complete_effect = {
+		}
+	}
+
+	GER_Rhineland_demilitarized_b = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			42 = { is_demilitarized_zone = no }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 42 #Moselland
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = no
+		days_mission_timeout = 140
+		priority = 90
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+		}
+	
+		complete_effect = {
+		}
+	}
+
+	GER_Rhineland_demilitarized_c = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 35
+		priority = 80
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_global_flag = GER_RH_N_NP
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				complete_national_focus = GER_rhineland_ab
+			}
+            set_global_flag = rhineland_remilitarized
+            custom_effect_tooltip = GER_rhineland_ultimatum
+			if = {
+				limit = { FRA = { is_subject = no } }
+				FRA = {
+					country_event = { id = germany.60 }
+					custom_effect_tooltip = may_provoke_hostility
+				}
+			}
+		}
+	}
+
+	GER_Rhineland_demilitarized_d = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 35
+		priority = 70
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_active_mission = GER_Rhineland_demilitarized_b
+		}
+
+		complete_effect = {
+			army_experience = 5
+			hidden_effect = {
+				FRA = { country_event = { id = GER_rhineland_n.1 hours = 3 } }
+			}
+		}
+	}
+
+}
+
 GER_case_anton_category = {
 
 	GER_case_anton = {

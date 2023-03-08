@@ -1,10 +1,43 @@
 spriteTypes = {	
 
-	#### Generic continuous goal icons
-
 	SpriteType = {
 		name = "GFX_goal_Fuhrer"
 		texturefile = "gfx/interface/goals/Fuhrerfocus.dds"			
+	}  
+
+	SpriteType = {
+		name = "GFX_goal_tr_puppet"
+		texturefile = "gfx/interface/goals/tr_puppet.dds"			
+	} 
+
+	SpriteType = {
+		name = "GFX_goal_Ger_Sov_Flag"
+		texturefile = "gfx/interface/goals/Ger_Sov_Flag.dds"			
+	} 
+
+	SpriteType = {
+		name = "GFX_goal_gercomflag"
+		texturefile = "gfx/interface/goals/gercomflag.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_yugflagdown"
+		texturefile = "gfx/interface/goals/yugflagdown.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_czeflagdown"
+		texturefile = "gfx/interface/goals/czeflagdown.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_anschluskom"
+		texturefile = "gfx/interface/goals/anschluskom.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_FateofAdolfHitler"
+		texturefile = "gfx/interface/goals/FateofAdolfHitler.dds"			
 	}
 
 	SpriteType = {
@@ -30,6 +63,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_lastoffensive"
 		texturefile = "gfx/interface/goals/lastoffensive.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_r56_goal_GER_luftwaffe"
+		texturefile = "gfx/interface/goals/r56_goal_GER_luftwaffe.dds"
 	} 
 
 	SpriteType = { 
@@ -100,6 +138,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_befriend_yug"
 		texturefile = "gfx/interface/goals/befriend_yugoslavia.dds"	
+	} 
+
+	SpriteType = {
+		name = "GFX_goal_Poland_befriend"
+		texturefile = "gfx/interface/goals/Poland_befriend.dds"	
 	}
 
 	SpriteType = {
@@ -143,8 +186,38 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_befriend_hungary"
+		texturefile = "gfx/interface/goals/befriend_hungary.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_GerBul_Flag"
+		texturefile = "gfx/interface/goals/GerBul_Flag.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_GerRom_Flag"
+		texturefile = "gfx/interface/goals/GerRom_Flag.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_goal_sweden_aliance"
 		texturefile = "gfx/interface/goals/sweden_aliance.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_War_with_scandavia"
+		texturefile = "gfx/interface/goals/War_with_scandavia.dds"			
+	} 	
+
+	SpriteType = {
+		name = "GFX_goal_Bismarck"
+		texturefile = "gfx/interface/goals/Bismarck.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_Trotsky"
+		texturefile = "gfx/interface/goals/Trotsky.dds"			
 	}
 
 }

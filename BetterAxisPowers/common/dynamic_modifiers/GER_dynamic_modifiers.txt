@@ -157,6 +157,8 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	max_planning_factor = GER_max_planning_factor # 0
 	planning_speed = GER_planning_speed # 0
 
+	army_speed_factor = GER_army_speed_factor
+
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level
@@ -215,6 +217,8 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 		max_planning_factor = GER_max_planning_factor # 0
 		planning_speed = GER_planning_speed # 0
 
+		army_speed_factor = GER_army_speed_factor
+
 		#So Our Plan is...?
 	
 		land_doctrine_cost_factor = GER_land_doctrine_cost_factor # -0.05		
@@ -264,6 +268,8 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 
 	 max_planning_factor = GER_max_planning_factor # 0
 	 planning_speed = GER_planning_speed # 0
+
+	 army_speed_factor = GER_army_speed_factor
 	
 	 #So Our Plan is...?
 		
@@ -315,6 +321,8 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	max_planning_factor = GER_max_planning_factor # -05
 	planning_speed = GER_planning_speed # 0
 
+	army_speed_factor = GER_army_speed_factor
+
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
@@ -348,7 +356,7 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	conscription_factor = GER_volkssturm_conscription_factor
 	experience_gain_army_factor = GER_volkssturm_experience_gain_army_factor	
 	
-	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt # -15 Armor Tech
+	custom_modifier_tooltip = GER_wehrmacht_inf_1_tt # -15 Armor Tech
 
 }
 
@@ -363,6 +371,8 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+
+	army_speed_factor = GER_army_speed_factor
 
 	#For Fuhrer v7
 
@@ -397,7 +407,7 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	conscription_factor = GER_volkssturm_conscription_factor
 	experience_gain_army_factor = GER_volkssturm_experience_gain_army_factor	
 	
-	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
+	custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
 
 }
 
@@ -413,6 +423,8 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+
+	army_speed_factor = GER_army_speed_factor
 
 	#For Fuhrer v7
 
@@ -447,7 +459,7 @@ Wehrmacht_INF_2_dynamic_modifier = {
 	conscription_factor = GER_volkssturm_conscription_factor
 	experience_gain_army_factor = GER_volkssturm_experience_gain_army_factor
 	
-	#custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
+	custom_modifier_tooltip = GER_wehrmacht_inf_1_tt #Armor -15
 
 }
 
@@ -462,6 +474,8 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+
+	army_speed_factor = GER_army_speed_factor
 
 	#For Fuhrer v7
 
@@ -513,6 +527,8 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
 
+	army_speed_factor = GER_army_speed_factor
+
 	#For Fuhrer v7
 
 	minimum_training_level = GER_minimum_training_level #Base 0.1
@@ -547,7 +563,7 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	experience_gain_army_factor = GER_volkssturm_experience_gain_army_factor
 	
 	custom_modifier_tooltip = GER_Cheep_sup_tt
-	custom_modifier_tooltip = GER_wehrmacht_inf_4_tt #Armor -20 Cheeper Support EQ Focus
+	custom_modifier_tooltip = GER_wehrmacht_inf_3_tt #Armor -20 Cheeper Support EQ Focus
 
 }
 
@@ -598,7 +614,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 	
-	custom_modifier_tooltip = GER_Luftwaffe_SD_tt #equipment bonus
+	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
 
@@ -611,11 +627,11 @@ Luftwaffe_SD_B_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_home_defence_factor = 0.05
 
-	air_strategic_bomber_bombing_factor = 0.05
+	air_strategic_bomber_bombing_factor = 0.1
 	air_strategic_bomber_night_penalty = -0.1
 	strategic_bomb_visibility = -0.1
 
-	custom_modifier_tooltip = GER_Luftwaffe_SD_tt #equipment bonus
+	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
 

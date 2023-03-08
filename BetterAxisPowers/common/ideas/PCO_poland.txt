@@ -1,0 +1,238 @@
+ideas = {
+
+	country = {
+
+		POL_the_ultimate_struggle = {
+
+			allowed = {
+				original_tag = POL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_guns_shield
+
+			modifier = {
+				surrender_limit = 0.20
+			}
+		}
+
+		POL_soviet_surprise_attack = {
+
+			allowed = {
+				original_tag = POL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.4
+			}
+
+			picture = PolandArmyProblems
+
+			modifier = {
+				army_speed_factor = -0.15
+			}
+		}
+		POL_the_ultimate_struggle_2 = { #New idea for poland (after eng said no)
+
+			allowed = {
+				original_tag = POL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_guns_shield
+
+			modifier = {
+				surrender_limit = 0.20
+				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
+			}
+		}
+		POL_the_ultimate_struggle_3 = {
+
+			allowed = {
+				original_tag = POL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_guns_shield
+
+			modifier = {
+				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
+			}
+		}
+		POL_passive_to_the_soviet_invasion = { #idea for countries in fac with poland (before eng said no)
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+
+			modifier = {
+				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
+			}
+		}
+		POL_passive_to_the_soviet_invasion_2 = { #idea for countries in fac with poland (after eng said no)
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+
+			modifier = {
+				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
+			}
+		}
+		POL_focused_on_the_eastern_front = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.05
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.05
+			}
+			
+			picture = generic_planning
+
+			modifier = {
+				justify_war_goal_time = 0.5
+			}
+		}
+		SOV_molotov_ribbentrop_pact_new = {
+			removal_cost = -1
+
+			picture = soviet_german_friendship
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			modifier = {
+				fascism_acceptance = 40
+				min_export = 0.05
+				research_speed_factor = 0.05
+				experience_gain_army = 0.05
+				improve_relations_maintain_cost_factor = -0.1
+			}
+		}
+		GER_molotov_ribbentrop_pact = {
+			removal_cost = -1
+
+			picture = soviet_german_friendship
+
+			allowed = {
+				always = no # Added via event
+			}
+			
+			targeted_modifier = {
+				tag = SOV
+				trade_opinion_factor = 0.5
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			modifier = {
+				communism_acceptance = 40
+				improve_relations_maintain_cost_factor = -0.1
+				command_power_gain_mult = -0.05
+			}
+		}
+		SOV_war_reparations_to_pol = {
+			removal_cost = -1
+
+			picture = idea_ETH_customs_barrier_ITA
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+		POL_sov_war_reparations = {
+			removal_cost = -1
+
+			picture = idea_generic_foreign_capital
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+}

@@ -1,6 +1,61 @@
 ideas = {
 
 	country = {
+
+		GER_purge_comunist_support_idea = {
+
+			picture = generic_oppression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = -0.04
+			}
+		}
+
+		GER_purge_fascism_support_idea = {
+
+			picture = generic_oppression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = -0.04
+			}
+		}
+
+		GER_fascism_for_our_glory_idea = {
+
+			picture = generic_oppression
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.04
+				consumer_goods_factor = -0.03
+			}
+		}
 		
 		SS_Fake_tooltip_idea = {
 			
@@ -241,6 +296,7 @@ ideas = {
             targeted_modifier = {
 				tag = CHI
 				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.3
 			}
 		}
 
@@ -276,6 +332,7 @@ ideas = {
             targeted_modifier = {
 				tag = CHI
 				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.3
 			}
 		}
 
@@ -317,6 +374,7 @@ ideas = {
             targeted_modifier = {
 				tag = CHI
 				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.3
 			}
 		}
 
@@ -354,6 +412,7 @@ ideas = {
             targeted_modifier = {
 				tag = CHI
 				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.3
 			}
 		}
 
@@ -397,6 +456,36 @@ ideas = {
 			}
 
 			cancel = {
+				has_war_with = SWE
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_Turkey = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
 				has_war_with = GER
 				NOT = { country_exists = GER }
 			}
@@ -409,6 +498,31 @@ ideas = {
 				tag = GER
 				extra_trade_to_target_factor = 0.3
 				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Turkey_mine = {
+			picture = generic_exploit_mines
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = GER
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.2
 			}
 
 		}
@@ -783,13 +897,33 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_fascism_drift_bonus
+			picture = cavetogermans
 
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
 			}
 		}
+
+		GER_align_hungary_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = cavetogermansnon
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
+			}
+		}
+
 		GER_align_romania = {
 			allowed = {
 				always = no
@@ -801,11 +935,30 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_fascism_drift_bonus
+			picture = cavetogermans
 
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
+			}
+		}
+
+		GER_align_romania_unaligned = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = cavetogermansnon
+
+			modifier = {
+				neutrality_drift = 0.2
+				neutrality_acceptance = 85
 			}
 		}
 
@@ -820,7 +973,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_fascism_drift_bonus
+			picture = cavetogermans
 
 			modifier = {
 				fascism_drift = 0.2
@@ -839,7 +992,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_neutrality_drift_bonus
+			picture = cavetogermansnon
 
 			modifier = {
 				neutrality_drift = 0.2
@@ -5035,7 +5188,7 @@ ideas = {
 			removal_cost = -1
 	
 			equipment_bonus = {
-				 small_plane_airframe = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.05
 				}

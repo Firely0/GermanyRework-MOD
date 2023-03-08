@@ -209,6 +209,10 @@
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = GER_navy_visibility_modify
+			add_to_variable = { 
+				GER_navy_visibility = -0.05 
+			}
 			add_tech_bonus = {
 				name = dd_bonus
 				bonus = 1.0
@@ -237,6 +241,13 @@
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = GER_Bismarck_Modify
+			set_variable = {
+				GER_critical_receive_chance = -0.05
+			}
+			add_to_variable = { 
+				GER_navy_visibility = -0.05 
+			}
 			create_equipment_variant = {
 				name = "Bismarck Class"
 				type 	= ship_hull_heavy_3
@@ -273,7 +284,7 @@
 
 	shared_focus = {
 		id = GER_last_battle_of_bismarck
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_generic_wolf_pack
 		relative_position_id = GER_Bismarck
 		prerequisite = { focus = GER_Bismarck }
 		x = 1
@@ -295,7 +306,7 @@
 
 	shared_focus = {
 		id = GER_pride_of_the_modern_germany_a
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		text = GER_pride_of_the_modern_germany
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		prerequisite = { focus = GER_Bismarck focus = GER_His_Ship }
@@ -319,6 +330,10 @@
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_doctrine_cost_modify
+			add_to_variable = { 
+				GER_naval_doctrine_cost_factor = -0.05 
+			}
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -541,7 +556,7 @@
 
 	shared_focus= {
 		id = GER_plan_z_a
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_Bismarck
 		text = GER_plan_z
 		prerequisite = { focus = GER_naval_rearmament_a }
 		x = -6
@@ -655,12 +670,6 @@
 				bonus = 1.0
 				uses = 1
 				category = ss_tech
-			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				set_technology = { cruiser_submarines = 1 }
 			}
 		}
 	}
@@ -1531,58 +1540,68 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_B_Supply
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_Supply
+					}					
 				}
 			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_Supply
+					}
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C
-					add_idea = German_Eco_Plan_A_C_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B
+						add_idea = German_Eco_Plan_A_B_Supply
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_C
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_C
+						add_idea = German_Eco_Plan_A_C_Supply
+					}
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL
-					add_idea = German_Eco_Plan_OIL_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_OIL
+						add_idea = German_Eco_Plan_OIL_Supply
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B_OIL
+						add_idea = German_Eco_Plan_A_B_OIL_Supply
+					}
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL
-					add_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C_OIL
-					add_idea = German_Eco_Plan_A_C_OIL_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_C_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_C_OIL
+						add_idea = German_Eco_Plan_A_C_OIL_Supply
+					}
 				}
 			}
 		}
@@ -1617,49 +1636,59 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_A_B
+					}					
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_A_B
-				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = cc
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL
-					add_idea = German_Eco_Plan_A_B_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_OIL
+						add_idea = German_Eco_Plan_A_B_OIL
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_Supply
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_Supply
+						add_idea = German_Eco_Plan_A_B_Supply
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_Supply
-					add_idea = German_Eco_Plan_A_B_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_OIL_Supply
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_OIL_Supply
+						add_idea = German_Eco_Plan_A_B_OIL_Supply
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL_Supply
-					add_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
 		}
 	}
@@ -1693,49 +1722,59 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B
+						add_idea = German_Eco_Plan_A_C
+					}					
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_C
-				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B
+						add_idea = German_Eco_Plan_A_C
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL
-					add_idea = German_Eco_Plan_A_C_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B_OIL
+						add_idea = German_Eco_Plan_A_C_OIL
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B_Supply
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B_Supply
+						add_idea = German_Eco_Plan_A_C_Supply
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_Supply
-					add_idea = German_Eco_Plan_A_C_Supply
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_A_B_OIL_Supply
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A_B_OIL_Supply
+						add_idea = German_Eco_Plan_A_C_OIL_Supply
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL_Supply
-					add_idea = German_Eco_Plan_A_C_OIL_Supply
-				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
 		}
 	}
@@ -1798,27 +1837,37 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_A
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_A
+						add_idea = German_Eco_Plan_B_B
+					}					
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A
-					add_idea = German_Eco_Plan_B_B
-				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_A_OIL
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_B_A
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_A
+						add_idea = German_Eco_Plan_B_B
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A_OIL
-					add_idea = German_Eco_Plan_B_B_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_B_A_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_A_OIL
+						add_idea = German_Eco_Plan_B_B_OIL
+					}
+					clr_country_flag = GER_ECO_1
+					set_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
-			    set_country_flag = GER_ECO_1
 			}
 		}
 	}
@@ -1852,25 +1901,35 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_B
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_B
+						add_idea = German_Eco_Plan_B_C
+					}					
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B
-					add_idea = German_Eco_Plan_B_C
-				}
-				clr_country_flag = GER_ECO_1
 			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_B_OIL
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_B_B
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_B
+						add_idea = German_Eco_Plan_B_C
+					}
+					clr_country_flag = GER_ECO_1
 				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B_OIL
-					add_idea = German_Eco_Plan_B_C_OIL
+				if = {
+					limit = {
+						has_idea = German_Eco_Plan_B_B_OIL
+					}
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_B_B_OIL
+						add_idea = German_Eco_Plan_B_C_OIL
+					}
+					clr_country_flag = GER_ECO_1
 				}
-				clr_country_flag = GER_ECO_1
 			}
 		}
 	}
@@ -1916,88 +1975,97 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_A
+			effect_tooltip = {
+				GER = {
+					swap_ideas = {
+						remove_idea = German_Eco_Plan_A
+						add_idea = German_Eco_Plan_OIL
+					}					
 				}
-			 swap_ideas = {
-				remove_idea = German_Eco_Plan_A
-				add_idea = German_Eco_Plan_OIL
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+					   has_idea = German_Eco_Plan_A
+					   }
+					swap_ideas = {
+					   remove_idea = German_Eco_Plan_A
+					   add_idea = German_Eco_Plan_OIL
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_A_B
+					   }
+					swap_ideas = {
+					   remove_idea = German_Eco_Plan_A_B
+					   add_idea = German_Eco_Plan_A_B_OIL
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_A_C
+					   }
+					   swap_ideas = {
+					   remove_idea = German_Eco_Plan_A_C
+					   add_idea = German_Eco_Plan_A_C_OIL
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_Supply
+					   }
+					swap_ideas = {
+					   remove_idea = German_Eco_Plan_Supply
+					   add_idea = German_Eco_Plan_OIL_Supply
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_A_B_Supply
+					   }
+					swap_ideas = {
+					   remove_idea = German_Eco_Plan_A_B_Supply
+					   add_idea = German_Eco_Plan_A_B_OIL_Supply
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_A_C_Supply
+					   }
+					swap_ideas = {
+					   remove_idea = German_Eco_Plan_A_C_Supply
+					   add_idea = German_Eco_Plan_A_C_OIL_Supply
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_B_A 
+					   }
+					   swap_ideas = {
+					   remove_idea = German_Eco_Plan_B_A
+					   add_idea = German_Eco_Plan_B_A_OIL
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_B_B 
+					   }
+					   swap_ideas = {
+					   remove_idea = German_Eco_Plan_B_B 
+					   add_idea = German_Eco_Plan_B_B_OIL
+				   }
+				   }
+				   if = {
+					limit = {
+					   has_idea = German_Eco_Plan_B_C 
+					   }
+					   swap_ideas = {
+					   remove_idea = German_Eco_Plan_B_C  
+					   add_idea = German_Eco_Plan_B_C_OIL
+				   }
+				   }
 			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_A_B
-				}
-			 swap_ideas = {
-				remove_idea = German_Eco_Plan_A_B
-				add_idea = German_Eco_Plan_A_B_OIL
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_A_C
-				}
-				swap_ideas = {
-				remove_idea = German_Eco_Plan_A_C
-				add_idea = German_Eco_Plan_A_C_OIL
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_Supply
-				}
-			 swap_ideas = {
-				remove_idea = German_Eco_Plan_Supply
-				add_idea = German_Eco_Plan_OIL_Supply
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_A_B_Supply
-				}
-			 swap_ideas = {
-				remove_idea = German_Eco_Plan_A_B_Supply
-				add_idea = German_Eco_Plan_A_B_OIL_Supply
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_A_C_Supply
-				}
-			 swap_ideas = {
-				remove_idea = German_Eco_Plan_A_C_Supply
-				add_idea = German_Eco_Plan_A_C_OIL_Supply
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_B_A 
-				}
-				swap_ideas = {
-				remove_idea = German_Eco_Plan_B_A
-				add_idea = German_Eco_Plan_B_A_OIL
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_B_B 
-				}
-				swap_ideas = {
-				remove_idea = German_Eco_Plan_B_B 
-				add_idea = German_Eco_Plan_B_B_OIL
-			}
-			}
-			if = {
-			 limit = {
-				has_idea = German_Eco_Plan_B_C 
-				}
-				swap_ideas = {
-				remove_idea = German_Eco_Plan_B_C  
-				add_idea = German_Eco_Plan_B_C_OIL
-			}
-			}
-
 		}
 	}
 
@@ -2149,7 +2217,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = available_designerv
+			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = porsche_focus
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = henschel_focus
@@ -2838,6 +2906,10 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_doctrine_cost_modify
+			add_to_variable = { 
+				GER_naval_doctrine_cost_factor = -0.05 
+			}
 			add_tech_bonus = {
 				name = nav_bomber_bonus
 				bonus = 1.0
@@ -3073,12 +3145,8 @@
 			custom_effect_tooltip = GER_tank_warfare_modify_tt
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
-				set_variable = { GER_max_command_power = -10 }
-				set_variable = { GER_max_planning_factor = 0 }
-				set_variable = { GER_planning_speed = 0 }
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
 				set_variable = { GER_org_loss_when_moving = -0.05 }
-				set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 			add_doctrine_cost_reduction = {
@@ -3120,7 +3188,7 @@
 				set_variable = { GER_coordination_bonus = 0.05 }
 				set_variable = { GER_org_loss_when_moving = -0.1 }
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
-				set_variable = { GER_land_doctrine_cost_factor = -0.1 }
+				set_variable = { GER_land_doctrine_cost_factor = 0 }
 			}
 		}
 	}
@@ -3295,6 +3363,9 @@
 					set_variable = { GER_max_command_power = 20 }
 					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 					set_variable = { GER_minimum_training_level = 0 }
+					set_variable = { GER_max_planning_factor = 0 }
+					set_variable = { GER_planning_speed = 0 }
+					set_variable = { GER_land_doctrine_cost_factor = -0.05 }
 				}
 				if = {
 					limit = {
@@ -3310,9 +3381,14 @@
 					set_variable = {
 						GER_land_doctrine_cost_factor = -0.05
 					}
-					set_variable = { GER_minimum_training_level = 0.05 }
+					set_variable = { GER_minimum_training_level = 0 }
+					set_variable = { GER_max_planning_factor = 0 }
 				}
-				else_if = {
+				if = {
+					limit = {
+						NOT = {has_completed_focus = GER_tank_warfare}
+						NOT = {has_completed_focus = GER_Battle_Plan}
+					}
 					custom_effect_tooltip = GER_staff_tt
 					custom_effect_tooltip = GER_Staff_tank_modify_tt
 					custom_effect_tooltip = GER_staff_a_tt
@@ -3389,7 +3465,6 @@
 				set_variable = {
 					GER_land_doctrine_cost_factor = 0
 				}
-				set_variable = { GER_minimum_training_level = 0.05 }
 			}
 		}
 	}
@@ -3402,7 +3477,7 @@
 		mutually_exclusive = { Focus = GER_Cheap_SUP }
 		x = 3
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3448,7 +3523,7 @@
 		mutually_exclusive = { Focus = GER_Cheap_EQ }
 		x = 1
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3518,7 +3593,7 @@
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.25
+				cost_reduction = 0.40
 				uses = 4
 				category = cat_superior_firepower
 			}
