@@ -1959,4 +1959,308 @@ characters={
 			}
 		}		
 	}
+
+	GER_erhard_milch={
+		name=GER_erhard_milch
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Erhard_Milch.tga"
+				small="GFX_idea_erhard_milch"
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=810
+		}
+	}
+	
+	GER_ernst_busch={
+		name="Ernst Busch"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Ernst_Busch.tga"
+				small="gfx/interface/ideas/idea_GER_ernst_bernhard_wilhelm_busch.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=811
+		}
+	}
+	
+	GER_friedrich_dollmann={
+		name="Friedrich Dollmann"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Dollmann.tga"
+				small="gfx/interface/ideas/idea_GER_friedrich_dollmann.tga"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=812
+		}
+	}
+	
+	GER_nikolaus_von_falkenhorst={
+		name="Nikolaus von Falkenhorst"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.tga"
+				small="gfx/interface/ideas/idea_GER_nikolaus_von_falkenhorst.tga"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=813
+		}
+	}
+	
+	GER_walter_von_reichenau={
+		name="Walter von Reichenau"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Walter_v._Reichenau.tga"
+				small="gfx/interface/ideas/idea_GER_walter_von_reichenau.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer politically_connected harsh_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=814
+		}
+	}
+	
+	GER_adolf_strauss={
+		name="Adolf Strauss"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_adolf_strauss.tga"
+				small="gfx/interface/ideas/idea_GER_adolf_strauss.tga"
+			}
+		}
+		corps_commander={
+			traits={  }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=815
+		}
+	}
+	
+	GER_Carl_Stulpnagel={
+		name="Carl Stulpnagel"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Carl_Stulpnagel.tga"
+				small="gfx/interface/ideas/idea_GER_Carl_Stulpnagel.tga"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=816
+		}
+	}
+	
+	GER_Eberhard_von_Mackensen={
+		name="Eberhard von Mackensen"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Eberhard_von_Mackensen.tga"
+				small="gfx/interface/ideas/idea_GER_Eberhard_von_Mackensen.tga"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=817
+		}
+	}
+	
+	GER_Erich_Hoepner={
+		name="Erich Hoepner"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Erich_Hoepner.tga"
+				small="gfx/interface/ideas/idea_GER_Erich_Hoepner.tga"
+			}
+		}
+		corps_commander={
+			traits={ trickster armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=818
+		}
+	}
+	
+	GER_Georg_Lindemann={
+		name="Georg Lindemann"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Georg_Lindemann.tga"
+				small="gfx/interface/ideas/idea_GER_Georg_Lindemann.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=819
+		}
+	}
+	
+	GER_Rudolf_Schmidt={
+		name="Rudolf Schmidt"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Schmidt.tga"
+				small="gfx/interface/ideas/idea_GER_Rudolf_Schmidt.tga"
+			}
+		}
+		corps_commander={
+			traits={ career_officer armor_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=820
+		}
+	}
+	
+	GER_Walter_Kuntze={
+		name="Walter Kuntze"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Walter_Kuntze.tga"
+				small="gfx/interface/ideas/idea_GER_Walter_Kuntze.tga"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader infantry_officer }
+			skill= 3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=821
+		}
+	}
+
+	GER_fredinand_schorner={
+		name="Ferdinand Schörner"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Fredinand_Schorner.tga"
+				small="gfx/interface/ideas/idea_GER_fredinand_schorner.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard trait_mountaineer harsh_leader }
+			skill= 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=822
+		}
+	}
+	
+	GER_gustave_von_zangen={
+		name="Gustav von Zangen"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Gustave_von_Zangen.tga"
+				small="gfx/interface/ideas/idea_GER_gustave_von_zangen.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill= 2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=823
+		}
+	}
+	
+	GER_traugott_herr={
+		name="Traugott Herr"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Traugott_Herr.tga"
+				small="gfx/interface/ideas/idea_GER_traugott_herr.tga"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill= 2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=824
+		}
+	}
+
+	GER_eduard_dietl={
+		name="Eduard Dietl"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Eduard_Dietl.tga"
+				small="gfx/interface/ideas/idea_GER_eduard_dietl.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_mountaineer }
+			skill= 2
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=825
+		}
+	}
 }
