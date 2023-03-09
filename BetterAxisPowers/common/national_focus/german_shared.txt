@@ -3355,6 +3355,8 @@
 		available_if_capitulated = yes
 		completion_reward = {
 				GER_upgrade_wehrmacht_effect = yes
+				set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }
+				set_technology = { Fallschirmjager_paratrooper_tech = 1 popup = no }
 				if = {
 					limit = {
 						has_completed_focus = GER_tank_warfare
