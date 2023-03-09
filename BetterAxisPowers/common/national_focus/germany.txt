@@ -59,22 +59,6 @@ focus_tree = {
 			  keep_completed = yes
 			}
 			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 64	
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = Germany_state_dynamic_modifier
-				}
-				add_dynamic_modifier = {
-					modifier = CON_Germany_state_dynamic_modifier
-				}
-				add_dynamic_modifier = {
-					modifier = NON_Germany_state_dynamic_modifier
-				}
-			}
 		} 		
 	}
 

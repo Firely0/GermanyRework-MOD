@@ -8449,6 +8449,22 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			random = {
+				chance = 50
+				country_event = GER_no_focus_ger_com_civilwar.1
+			}
+			else = {
+				kill_country_leader = yes
+				GER_Com_Civilwar = {
+					add_country_leader_role = {
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = leninism 
+						}
+						promote_leader = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -8474,6 +8490,16 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 64	
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Germany_state_dynamic_modifier
+				}
+			}
 		}
 	}
 
