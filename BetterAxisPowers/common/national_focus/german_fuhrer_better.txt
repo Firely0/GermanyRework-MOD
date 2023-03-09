@@ -4883,7 +4883,6 @@ focus_tree = {
 		icon = GFX_goal_presavegermany
 		prerequisite = { focus = GER_for_Greater_Reich }
 		available = {
-			always = no
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -4903,7 +4902,6 @@ focus_tree = {
 		icon = GFX_goal_supremewehrmacht
 		prerequisite = { focus = GER_all_roads_to_berlin }
 		available = {
-			always = no
 		}
 		cancel_if_invalid = no
 		x = -2
@@ -4926,7 +4924,6 @@ focus_tree = {
 		icon = GFX_goal_supremeluftwaffe
 		prerequisite = { focus = GER_all_roads_to_berlin }
 		available = {
-			always = no
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -4949,7 +4946,6 @@ focus_tree = {
 		icon = GFX_goal_supremekriegmarine
 		prerequisite = { focus = GER_all_roads_to_berlin }
 		available = {
-			always = no
 		}
 		cancel_if_invalid = no
 		x = 2
@@ -4972,7 +4968,6 @@ focus_tree = {
 		icon = GFX_goal_gerhegenomy
 		prerequisite = { focus = GER_secure_supremacry focus = GER_secure_supremacry_in_air focus = GER_secure_supremacry_in_navy }
 		available = {
-			always = no
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -8403,78 +8398,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_prepare_for_innovative_f
-		icon = GFX_goal_support_communism
-		relative_position_id = GER_establish_abwehr
-		x = -16
-		y = 1
-		cost = 10
-		allow_branch = {
-			has_completed_focus = GER_prepare_for_innovative
-		}
-		available = {
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_western_germany
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		relative_position_id = GER_prepare_for_innovative_f
-		mutually_exclusive = {
-			focus = GER_eastern_germany
-		}
-		prerequisite = {
-			focus = GER_prepare_for_innovative_f
-		}
-		x = -1
-		y = 1
-		cost = 5
-		available = {
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_eastern_germany
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		prerequisite = {
-			focus = GER_prepare_for_innovative_f
-		}
-		mutually_exclusive = {
-			focus = GER_western_germany
-		}
-		relative_position_id = GER_prepare_for_innovative_f
-		x = 1
-		y = 1
-		cost = 5
-		available = {
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 		}
 	}

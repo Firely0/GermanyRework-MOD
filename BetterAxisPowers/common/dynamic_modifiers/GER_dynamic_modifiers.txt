@@ -26,6 +26,27 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
+NON_Germany_state_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_gerflagnonstate
+	
+}
+
+CON_Germany_state_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_gerflagcomstate
+	
+}
+
+Germany_state_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_gerflagstate
+	
+}
+
 
 El_Alamein_Atack_dynamic_modifier = {
 	enable = { always = yes }
