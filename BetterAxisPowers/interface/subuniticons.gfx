@@ -10,8 +10,8 @@ spriteTypes = {
 	##################################
 	### Large images for DIVISIONS ###
 
-    spriteType = { name = "GFX_unit_Gebirgsjager_mountaineers_icon_medium" 							textureFile = "gfx/interface/counters/divisions_large/unit_mountain_icon.dds" noOfFrames = 2 }
-    spriteType = { name = "GFX_unit_Fallschirmjager_paratrooper_icon_medium" 							textureFile = "gfx/interface/counters/divisions_large/unit_paratroop_icon.dds" noOfFrames = 2 }
+    spriteType = { name = "GFX_unit_Gebirgsjager_mountaineers_icon_medium" 							textureFile = "gfx/interface/counters/divisions_large/unit_Gebirgsjager_mountaineers_icon.dds" noOfFrames = 2 }
+    spriteType = { name = "GFX_unit_Fallschirmjager_paratrooper_icon_medium" 							textureFile = "gfx/interface/counters/divisions_large/unit_Fallschirmjager_paratrooper_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_blackshirt_assault_battalion_icon_medium" 							textureFile = "gfx/interface/counters/divisions_large/unit_blackshirt_assault_battalion_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_militia_icon_medium" 									textureFile = "gfx/interface/counters/divisions_large/unit_militia_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_modern_sp_artillery_brigade_icon_medium" 				textureFile = "gfx/interface/counters/divisions_large/unit_modern_armor_artillery_icon.dds" noOfFrames = 2 }
@@ -85,8 +85,8 @@ spriteTypes = {
 	####################################################
 	### Small images for DIVISIONS (On-map-counters) ###
 
-	spriteType = { name = "GFX_unit_Gebirgsjager_mountaineers_icon_medium" 							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mountain_icon.dds" noOfFrames = 2}
-    spriteType = { name = "GFX_unit_Fallschirmjager_paratrooper_icon_medium" 							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_paratroop_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_Gebirgsjager_mountaineers_icon_medium" 							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_Gebirgsjager_mountaineers_icon.dds" noOfFrames = 2}
+    spriteType = { name = "GFX_unit_Fallschirmjager_paratrooper_icon_medium" 							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_Fallschirmjager_paratrooper_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_unit_blackshirt_assault_battalion_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_blackshirt_assault_battalion_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_militia_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_militia_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_modern_armor_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_modern_armor_icon.dds" noOfFrames = 2}
