@@ -4850,22 +4850,174 @@ focus_tree = {
 
 	focus = {
 		id = GER_for_Greater_Reich
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = GER_the_Supreme_Commander }
 		prerequisite = { focus = GER_redraw_borders focus = GER_Europe_in_flames }
-		text = GER_Working_on
 		available = {
-			always = no
+			is_subject = no
+			has_full_control_of_state = 195
+			has_full_control_of_state = 217
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
 		}
 		cancel_if_invalid = no
 		x = 0
 		y = 3
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			set_cosmetic_tag = GER_greater_german_reich
+			set_province_name = { id = 6521 name = "Germania" }
+			hidden_effect = {
+				set_global_flag = form_greater_german_reich_flag
+			}
+		}
+	}
+
+	focus = {
+		id = GER_all_roads_to_berlin
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_for_Greater_Reich }
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 6
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_ideas = GER_all_roads_to_berlin_idea
+		}
+	}
+
+	focus = {
+		id = GER_secure_supremacry
+		icon = GFX_goal_supremewehrmacht
+		prerequisite = { focus = GER_all_roads_to_berlin }
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 7
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_army
+			}
+		}
+	}
+
+	focus = {
+		id = GER_secure_supremacry_in_air
+		icon = GFX_goal_supremeluftwaffe
+		prerequisite = { focus = GER_all_roads_to_berlin }
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 7
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_air
+			}
+		}
+	}
+
+	focus = {
+		id = GER_secure_supremacry_in_navy
+		icon = GFX_goal_supremekriegmarine
+		prerequisite = { focus = GER_all_roads_to_berlin }
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 7
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_navy
+			}
+		}
+	}
+
+	focus = {
+		id = GER_German_hegemony
+		icon = GFX_goal_gerhegenomy
+		prerequisite = { focus = GER_secure_supremacry focus = GER_secure_supremacry_in_air focus = GER_secure_supremacry_in_navy }
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 8
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GER_all_roads_to_berlin_idea_army
+					add_idea = GER_all_roads_to_berlin_idea_army_last
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_army
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_army
+						add_idea = GER_all_roads_to_berlin_idea_army_last
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_air
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_air
+						add_idea = GER_all_roads_to_berlin_idea_air_last
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_navy
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_navy
+						add_idea = GER_all_roads_to_berlin_idea_navy_last
+					}
+				}
+			}
 		}
 	}
 
@@ -8220,6 +8372,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_fate_of_adolf_hitler
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_grand_counchil }
+		relative_position_id = GER_grand_counchil
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_loyal_to_course
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_grant_power_to_ss focus = GER_stay_with_grand_council }
+		relative_position_id = GER_grand_counchil
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_prepare_for_innovative_f
 		icon = GFX_goal_support_communism
 		relative_position_id = GER_establish_abwehr
@@ -9247,6 +9435,83 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = -8
 		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_superior_battle_plan
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_grant_power_to_wehrmacht focus = GER_stay_with_grand_council }
+		relative_position_id = GER_grand_counchil
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reforms_in_army
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = GER_superior_battle_plan }
+		relative_position_id = GER_grand_counchil
+		mutually_exclusive = {
+			focus = GER_reforms_in_air
+		}
+		available = {
+			has_completed_focus = GER_grant_power_to_wehrmacht
+		}
+		cancel_if_invalid = no
+		x = -5
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reforms_in_air
+		icon = GFX_goal_r56_goal_GER_luftwaffe
+		prerequisite = { focus = GER_superior_battle_plan }
+		relative_position_id = GER_grand_counchil
+		available = {
+			has_completed_focus = GER_grant_power_to_wehrmacht
+		}
+		cancel_if_invalid = no
+		x = -3
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_sea_overlord
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = GER_reforms_in_army focus = GER_reforms_in_air }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10

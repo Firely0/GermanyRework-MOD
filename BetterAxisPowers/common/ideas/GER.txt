@@ -56,6 +56,169 @@ ideas = {
 				consumer_goods_factor = -0.03
 			}
 		}
+
+		GER_all_roads_to_berlin_idea = {
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		GER_all_roads_to_berlin_idea_army = {
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_regain = 0.05
+			}
+		}
+
+		GER_all_roads_to_berlin_idea_army_last = {
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+
+				non_core_manpower = 0.05
+
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_regain = 0.05
+			}
+		}
+
+		GER_all_roads_to_berlin_idea_air = {
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+
+				air_ace_bonuses_factor = 0.1
+				air_agility_factor = 0.05
+				air_range_factor = 0.1
+			}
+		}
+
+		GER_all_roads_to_berlin_idea_air_last = {
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+
+				non_core_manpower = 0.05
+
+				air_ace_bonuses_factor = 0.1
+				air_agility_factor = 0.05
+				air_range_factor = 0.1
+			}
+		}
+
+		GER_all_roads_to_berlin_idea_navy = { #OP
+
+			picture = gerallroadstoberlin
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+
+				navy_max_range_factor  = 0.1
+				navy_weather_penalty  = -0.5
+				repair_speed_factor  = 0.1
+			}
+		}  
+
+	GER_all_roads_to_berlin_idea_navy_last = { 
+
+		picture = gerallroadstoberlin
+		
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_speed_factor = 0.1
+			org_loss_when_moving = -0.05
+
+			non_core_manpower = 0.05
+
+			navy_max_range_factor  = 0.1
+			navy_weather_penalty  = -0.5
+			repair_speed_factor  = 0.1
+		}
+	}
 		
 		SS_Fake_tooltip_idea = {
 			

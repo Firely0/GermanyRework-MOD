@@ -2691,7 +2691,7 @@
 	shared_focus = {
 		id = GER_air_innovation_a
 		text = air_innovation
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_r56_goal_GER_luftwaffe
 		x = -18
 		y = 0
 		cost = 5
@@ -3106,7 +3106,7 @@
 
 	shared_focus = {
 		id = GER_army_innovation_a
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_focus_ger_oppose_hitler
 		text = GER_army_innovation
 		x = 10
 		y = 0
@@ -3394,6 +3394,30 @@
 					custom_effect_tooltip = GER_staff_a_tt
 					custom_effect_tooltip = GER_staff_modify_tt
 				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_experts_in_field
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = GER_staff }
+		relative_position_id = GER_army_innovation_a
+		cancelable = no
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_experts_in_field_tt
+			hidden_effect = {
+				set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }
+				set_technology = { Fallschirmjager_paratrooper_tech = 1 popup = no }
+			}
 		}
 	}
 
