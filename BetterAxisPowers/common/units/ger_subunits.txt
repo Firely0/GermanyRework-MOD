@@ -5,7 +5,7 @@ sub_units = {
 		map_icon_category = infantry
 		special_forces = yes
 
-		priority = 601
+		priority = 602
 		ai_priority = 200
 		active = no
 
@@ -54,14 +54,13 @@ sub_units = {
 			movement = 0.2
 		}
 	}
-
 	Fallschirmjager_paratrooper = {
 		abbreviation = "FAL"
 		sprite = infantry
 		map_icon_category = infantry
 		special_forces = yes
 
-		priority = 2
+		priority = 3
 		ai_priority = 2
 		active = no
 
