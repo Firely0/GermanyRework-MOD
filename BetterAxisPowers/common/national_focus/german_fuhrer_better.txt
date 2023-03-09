@@ -4854,17 +4854,27 @@ focus_tree = {
 		prerequisite = { focus = GER_the_Supreme_Commander }
 		prerequisite = { focus = GER_redraw_borders focus = GER_Europe_in_flames }
 		available = {
-			always = no
+			is_subject = no
+			has_full_control_of_state = 195
+			has_full_control_of_state = 217
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
 		}
 		cancel_if_invalid = no
 		x = 0
 		y = 3
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 1
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}	
 		completion_reward = {
+			set_cosmetic_tag = GER_greater_german_reich
+			set_province_name = { id = 6521 name = "Germania" }
+			hidden_effect = {
+				set_global_flag = form_greater_german_reich_flag
+			}
 		}
 	}
 
@@ -4879,11 +4889,12 @@ focus_tree = {
 		x = 0
 		y = 6
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_ideas = GER_all_roads_to_berlin_idea
 		}
 	}
 
@@ -4898,11 +4909,15 @@ focus_tree = {
 		x = -2
 		y = 7
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_army
+			}
 		}
 	}
 
@@ -4917,11 +4932,15 @@ focus_tree = {
 		x = 0
 		y = 7
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_air
+			}
 		}
 	}
 
@@ -4936,11 +4955,15 @@ focus_tree = {
 		x = 2
 		y = 7
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_all_roads_to_berlin_idea
+				add_idea = GER_all_roads_to_berlin_idea_navy
+			}
 		}
 	}
 
@@ -4955,11 +4978,46 @@ focus_tree = {
 		x = 0
 		y = 8
 		relative_position_id = GER_the_Supreme_Commander
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}	
 		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GER_all_roads_to_berlin_idea_army
+					add_idea = GER_all_roads_to_berlin_idea_army_last
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_army
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_army
+						add_idea = GER_all_roads_to_berlin_idea_army_last
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_air
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_air
+						add_idea = GER_all_roads_to_berlin_idea_air_last
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GER_all_roads_to_berlin_idea_navy
+					}
+					swap_ideas = {
+						remove_idea = GER_all_roads_to_berlin_idea_navy
+						add_idea = GER_all_roads_to_berlin_idea_navy_last
+					}
+				}
+			}
 		}
 	}
 
