@@ -8463,11 +8463,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 			random = {
-				50 = {
-					country_event = GER_no_focus_ger_com_civilwar.1
+				chance = 50
+				country_event = GER_no_focus_ger_com_civilwar.1
 
-					country_event = GER_no_focus_ger_com_adolf_retire.1
-				}
+				country_event = GER_no_focus_ger_com_adolf_retire.1
 			}
 		}
 	}
