@@ -66,6 +66,23 @@ give_SOV_armor_research_bonuses = { #this effect is run for the Soviets!
 	}
 }
 
+GER_killed_hitler_effect = {
+	retire_country_leader = yes
+    set_politics = {
+	 ruling_party = communism
+	 elections_allowed = no
+    }
+    recruit_character = GER_Com_Civilwar
+    add_country_leader_role = {
+	character = GER_Com_Civilwar
+	promote_leader = yes
+	country_leader = {
+		expire = "1965.1.1"
+		ideology = leninism 
+	}
+    }
+}
+
 MR_pact_transfer_state_effect = {
 	if = {
 		limit = {

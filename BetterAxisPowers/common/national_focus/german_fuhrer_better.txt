@@ -8449,19 +8449,24 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			random = {
-				chance = 50
-				country_event = GER_no_focus_ger_com_civilwar.1
-			}
-			else = {
-				kill_country_leader = yes
-				GER_Com_Civilwar = {
+			random_list = {
+				50 = {
+					country_event = GER_no_focus_ger_com_civilwar.1
+				}
+				50 = {
+					retire_country_leader = yes
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}
+					recruit_character = GER_Com_Civilwar
 					add_country_leader_role = {
+						character = GER_Com_Civilwar
+						promote_leader = yes
 						country_leader = {
 							expire = "1965.1.1"
 							ideology = leninism 
 						}
-						promote_leader = yes
 					}
 				}
 			}
