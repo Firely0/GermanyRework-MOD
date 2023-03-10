@@ -7001,7 +7001,6 @@ focus_tree = {
 		relative_position_id = GER_italy_ally
 		available = {
 			is_subject = no
-			
 			ITA = { is_free_or_subject_of_root = yes }
 		    ITA = { is_in_faction_with = GER }
 		}
@@ -7015,9 +7014,6 @@ focus_tree = {
 		}
 
 		bypass = {
-		ITA = {
-          NOT = { has_government = ROOT is_in_faction_with = GER }
-		  }
 		}
 
 		completion_reward = {
@@ -7066,6 +7062,22 @@ focus_tree = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				ITA = {
+					has_completed_focus = ITA_stockpile_fuel 
+					is_in_faction_with = GER
+					ruling_party = Fascism
+					has_idea = ITA_stockpiling_fuel
+				}
+			}
+			ITA = { 
+				modify_timed_idea = {
+					idea = ITA_stockpiling_fuel
+					days = 120
+				}
+			}
+		} 
 		if = {
 			limit = {
 				GER = {
@@ -8424,6 +8436,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -8449,25 +8462,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			random_list = {
+			random = {
 				50 = {
 					country_event = GER_no_focus_ger_com_civilwar.1
-				}
-				50 = {
-					retire_country_leader = yes
-					set_politics = {
-						ruling_party = communism
-						elections_allowed = no
-					}
-					recruit_character = GER_Com_Civilwar
-					add_country_leader_role = {
-						character = GER_Com_Civilwar
-						promote_leader = yes
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = leninism 
-						}
-					}
+
+					country_event = GER_no_focus_ger_com_adolf_retire.1
 				}
 			}
 		}

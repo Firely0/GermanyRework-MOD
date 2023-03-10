@@ -24,6 +24,7 @@ add_namespace = GER_request_fra_help
 add_namespace = GER_rhineland_n
 add_namespace = GER_rhineland
 add_namespace = GER_no_focus_ger_com_civilwar
+add_namespace = GER_no_focus_ger_com_adolf_retire
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -3287,6 +3288,46 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = GER_no_focus_ger_com_adolf_retire.1
+	title = "Assassination Successful"
+	desc = ""
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = GER_adolf_hitler
+						ruling_only = yes
+					}
+				}
+				retire_country_leader = yes
+			}
+			set_politics = {
+			 ruling_party = communism
+			 elections_allowed = no
+			}
+			#add_popularity = { 
+			#	ideology = communism
+			#	popularity = 0.40
+			#}
+			recruit_character = GER_Com_Civilwar
+			add_country_leader_role = {
+			character = GER_Com_Civilwar
+			promote_leader = yes
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = leninism 
+			}
+			}
+		}
+	}
+}
 
 
 
