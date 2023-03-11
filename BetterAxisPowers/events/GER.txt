@@ -3220,6 +3220,21 @@ country_event = {
 			}	
 			set_stability = 0.9
 			set_war_support = 0.8
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_the_red_reich
+			recruit_character = GER_Com_Civilwar
+			add_country_leader_role = {
+			character = GER_Com_Civilwar
+			promote_leader = yes
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = leninism 
+			}
+			}
+			load_focus_tree = {
+				tree = german_com_side
+				keep_completed = yes
+			}
 		}
 		add_stability = -0.25
 		hidden_effect = { set_cosmetic_tag = GER_provisional_gvt }
