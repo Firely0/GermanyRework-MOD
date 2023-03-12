@@ -3364,6 +3364,9 @@
 				}
 	
 				custom_effect_tooltip = SOV_focus_complete_effect_tt
+				effect_tooltip = {
+					remove_ideas = GER_reorg_in_army
+				}
 				hidden_effect = {
 					remove_ideas = GER_reorg_in_army
 				}				
@@ -3405,9 +3408,6 @@
 					custom_effect_tooltip = GER_Staff_tank_modify_tt
 					custom_effect_tooltip = GER_staff_a_tt
 					custom_effect_tooltip = GER_staff_modify_tt
-				}
-				hidden_effect = {
-					remove_idea = GER_reorg_in_army
 				}
 		}
 	}
