@@ -3352,12 +3352,21 @@
 				has_tech = superior_firepower
 			}
 		}
-		immediate = {
+		select_effect = {
 			add_ideas = GER_reorg_in_army
 		}
 		available_if_capitulated = yes
 		completion_reward = {
 				GER_upgrade_wehrmacht_effect = yes
+				custom_effect_tooltip = SOV_focus_select_effect_tt
+				effect_tooltip = {
+					add_ideas = GER_reorg_in_army
+				}
+	
+				custom_effect_tooltip = SOV_focus_complete_effect_tt
+				hidden_effect = {
+					remove_ideas = GER_reorg_in_army
+				}				
 				if = {
 					limit = {
 						has_completed_focus = GER_tank_warfare
