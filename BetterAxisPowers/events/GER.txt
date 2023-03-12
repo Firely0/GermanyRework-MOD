@@ -2856,14 +2856,12 @@ country_event = {
 		}
 		name = "We Must Prepare for the Inevitable War!"
 
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = GER
-		}
-
 		FRA = { 
 			add_stability = -0.1
 			add_political_power = -100
+			declare_war_on = {
+				target = GER
+			}
 		}
 
 		if = {
@@ -2898,6 +2896,9 @@ country_event = {
 			add_to_faction = FRA
 			add_stability = -0.1
 			add_political_power = -100
+			declare_war_on = {
+				target = GER
+			}
 		}
 
 	}
@@ -2951,7 +2952,7 @@ country_event = { #Event For France
 			factor = 0
 		}
 	}
-	 #ENG = { country_event = GER_rhineland.3 hours = 3 }
+	 ENG = { country_event = id = GER_rhineland.3 hours = 3 }
 	 add_opinion_modifier = { target = GER modifier = protest_action }
     }
 
@@ -2971,7 +2972,7 @@ country_event = { #Event For France
 			limit = {
 				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
 			}
-			ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
+			ENG = { country_event = { id = GER_rhineland.4 hours = 3 } }
 			effect_tooltip = {
 				ENG = {
 					custom_effect_tooltip = needs_approval
@@ -3069,8 +3070,8 @@ country_event = { #Event For France
 			factor = 0
 		}
 		country_event = { id = GER_rhineland.2 } 
-			add_political_power = -5
-		}
+		add_political_power = -5
+	}
 }
 
 country_event = { #Event For France / Not Diplo Side
@@ -3097,9 +3098,6 @@ country_event = { #Event For France / Not Diplo Side
 	}
 	trigger = {
 		NOT = { has_global_flag = ISO_GER_Y }
-	}
-	if = {
-		limit = { NOT = {} }
 	}
 	ENG = { country_event = { id = G hours = 3 } }
 		add_stability = -0.1
@@ -3177,6 +3175,199 @@ country_event = { #Event For France / Not Diplo Side
 		}
 	}
     }
+}
+
+country_event = { #Event For UK
+	id = GER_rhineland.3
+	title = "German Troops Enter Rhineland!"
+	desc = germany.60.d
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+    }
+
+	option = {
+	name = "We Should Cut Trades With Germany"
+	ai_chance = {
+		factor = 0
+	}
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
+    }
+
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "We Must Ensure the Security of Benelux."
+
+		HOL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = HOL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		BEL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = BEL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		LUX = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = LUX
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Event For UK - For Trade Ban
+	id = GER_rhineland.4
+	title = "German Troops Enter Rhineland Again!"
+	desc = germany.60.d
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+    }
+
+	option = {
+	name = "We Should Cut Trades With Germany"
+	ai_chance = {
+		factor = 0
+		modifier = {
+			FRA = { is_ai = no }
+			factor = 100
+		}
+	}
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
+    }
+}	
+
+country_event = { #Event For UK - Security of Benelux
+	id = GER_rhineland.5
+	title = "German Troops Enter Rhineland Again!"
+	desc = germany.60.d
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+    }
+
+	option = {
+		ai_chance = {
+			factor = 0
+			modifier = {
+				FRA = { is_ai = no }
+				factor = 100
+			}
+		}
+		name = "We Must Ensure the Security of Benelux."
+	
+		HOL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = HOL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		BEL = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = BEL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		LUX = {
+			limit = {
+				is_puppet = no
+				NOT = { has_war_with = ROOT }
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = LUX
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+	}
 }
 
 country_event = {
