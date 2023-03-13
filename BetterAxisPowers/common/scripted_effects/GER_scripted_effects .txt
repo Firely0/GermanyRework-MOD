@@ -1129,6 +1129,23 @@ GER_upgrade_wehrmacht_effect = {
 		}
 	}
 
+	GER_isolate_effect = {
+		if = {
+			limit = {
+				any_neighbor_country = {
+					NOT = {
+						tag = GER
+						tag = AUS
+					}
+					is_neighbor_of = {
+						tag = GER
+					}
+				}
+			}
+			country_event = { id = GER_rhineland_isolete.1 hours = 6 }
+		}
+	}
+
 
 
 

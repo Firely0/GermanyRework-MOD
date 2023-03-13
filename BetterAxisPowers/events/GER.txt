@@ -21,9 +21,10 @@ add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
 add_namespace = GER_request_help
 add_namespace = GER_request_fra_help
-add_namespace = GER_rhineland_n
+add_namespace = GER_rhineland_n #Rhineland Update
 add_namespace = GER_rhineland
-add_namespace = GER_rhineland_remind_ger #
+add_namespace = GER_rhineland_isolete
+add_namespace = GER_rhineland_remind_ger
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
 
@@ -2303,7 +2304,7 @@ country_event = {
 
 country_event = {
 	id = GER_SOV_ultimatom.1
-	title = "Ultimatom For Soviet Union!"
+	title = "ultimatum For Soviet Union!"
 	desc = "After Reaching our Goals We Must Decide Fate of Soviet Union."
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
@@ -2953,7 +2954,7 @@ country_event = { #Event For France
 			factor = 0
 		}
 	}
-	 ENG = { country_event = id = GER_rhineland.3 hours = 3 }
+	 ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
 	 add_opinion_modifier = { target = GER modifier = protest_action }
     }
 
@@ -2962,6 +2963,9 @@ country_event = { #Event For France
 	ai_chance = {
 		factor = 0
 	}
+	trigger = {
+		NOT = { has_global_flag = FRA_RHINELAND_CUT_TRADE }
+	}
 		add_stability = 0.05
 		add_political_power = -5
 		send_embargo = GER
@@ -2969,6 +2973,7 @@ country_event = { #Event For France
 			target = GER
 			modifier = protest_action
 		}
+		set_global_flag = FRA_RHINELAND_CUT_TRADE
 		if = {
 			limit = {
 				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
@@ -2994,9 +2999,12 @@ country_event = { #Event For France
 		ai_chance = {
 			factor = 0
 		}
+		trigger = {
+			NOT = { has_global_flag = FRA_RHINELAND_SEC_OF_BEN }
+		}
 		name = "We Must Ensure the Security of Benelux."
 
-		ENG = { country_event = { id = GER_rhineland.5 hours = 3 } }
+		set_global_flag = FRA_RHINELAND_SEC_OF_BEN
 
 		HOL = {
 			limit = {
@@ -3042,6 +3050,7 @@ country_event = { #Event For France
 			limit = {
 				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
 			}
+			ENG = { country_event = { id = GER_rhineland.5 hours = 3 } }
 			effect_tooltip = {
 				ENG = {
 					custom_effect_tooltip = needs_approval
@@ -3100,7 +3109,7 @@ country_event = { #Event For France / Not Diplo Side
 	trigger = {
 		NOT = { has_global_flag = ISO_GER_Y }
 	}
-	ENG = { country_event = { id = G hours = 3 } }
+	ENG = { country_event = { id = GER_rhineland.6 hours = 3 } }
 		add_stability = -0.1
 		add_war_support = -0.1
 		add_political_power = -350
@@ -3111,7 +3120,7 @@ country_event = { #Event For France / Not Diplo Side
 	ai_chance = {
 		factor = 0
 	}
-	ENG = { country_event = { id = G hours = 3 } }
+	ENG = { country_event = { id = GER_rhineland.7 hours = 3 } }
 		add_stability = -0.1
 		add_political_power = -200
     }
@@ -3201,7 +3210,6 @@ country_event = { #Event For UK
 			country_event = GER_rhineland_remind_ger.1
 		}
 	}
-	 
     }
 
 	option = {
@@ -3268,8 +3276,9 @@ country_event = { #Event For UK
 
 country_event = { #Event For UK - For Trade Ban
 	id = GER_rhineland.4
-	title = "German Troops Enter Rhineland Again!"
-	desc = germany.60.d
+	title = "German Troops Enter Rhineland!"
+	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is Trade Banning Germany.
+	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
 	timeout_days = 3
@@ -3284,6 +3293,11 @@ country_event = { #Event For UK - For Trade Ban
 		}
 	}
 	 add_opinion_modifier = { target = GER modifier = protest_action }
+
+	 hidden_effect = {
+		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
+		FRA = { country_event = GER_rhineland.1 }
+	 }
     }
 
 	option = {
@@ -3301,6 +3315,9 @@ country_event = { #Event For UK - For Trade Ban
 		add_opinion_modifier = {
 			target = GER
 			modifier = protest_action
+		}
+		hidden_effect = {
+			GER = { country_event = GER_rhineland_remind_ger.2 }
 		}
     }
 }	
@@ -3323,6 +3340,10 @@ country_event = { #Event For UK - Security of Benelux
 		}
 	}
 	 add_opinion_modifier = { target = GER modifier = protest_action }
+	 hidden_effect = {
+		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
+		FRA = { country_event = GER_rhineland.1 }
+	 }
     }
 
 	option = {
@@ -3377,6 +3398,111 @@ country_event = { #Event For UK - Security of Benelux
 	}
 }
 
+country_event = { #Event For UK isolate
+	id = GER_rhineland.6
+	title = "German Troops Enter Rhineland Again!"
+	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is The Isolation Of Germany.
+	They are waiting for our reply."
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+	 hidden_effect = {
+		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
+		FRA = { country_event = GER_rhineland.1 }
+	 }
+    }
+
+	option = {
+	name = "Let's isolate Germany"
+	ai_chance = {
+		factor = 0
+		modifier = {
+			FRA = { is_ai = no }
+			factor = 100
+		}
+	}
+	GER_isolate_effect = yes
+    }
+}
+
+country_event = { #Event For UK issue ultimatum
+	id = GER_rhineland.7
+	title = "German Troops Enter Rhineland Again!"
+	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is Sending Ultimatum to Germany.
+	They are waiting for our reply."
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+	timeout_days = 3
+
+	option = { #Historical
+	name = germany.60.b
+	ai_chance = {
+		factor = 99
+		modifier = {
+			has_global_flag = GER_has_started_war
+			factor = 0
+		}
+	}
+	 add_opinion_modifier = { target = GER modifier = protest_action }
+	 hidden_effect = {
+		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
+		FRA = { country_event = GER_rhineland.1 }
+	 }
+    }
+
+	option = {
+	name = "Issue Ultimatum"
+	ai_chance = {
+		factor = 0
+		modifier = {
+			FRA = { is_ai = no }
+			factor = 100
+		}
+	}
+	GER = { country_event = G }
+    }
+}
+
+country_event = {
+	id = GER_rhineland_isolete.1
+	title = "Request from Britain and France"
+	desc = "England and France want Germany to be isolated due to the militarization of the Rhineland, and they expect your support on this issue."
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fine"
+
+		ai_chance = {
+			factor = 100
+		}
+
+		add_stability = 0.05
+		add_political_power = -5
+		send_embargo = GER
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
+	}
+
+	option = {
+		name = "No"
+	}
+}
+
 country_event = { #Event For Germany Good News.
 	id = GER_rhineland_remind_ger.1
 	title = "Our Troops Enter Rhineland!"
@@ -3391,6 +3517,124 @@ country_event = { #Event For Germany Good News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_ab
+	}
+    }
+}
+
+country_event = { #Event For Germany Embargo But Good News.
+	id = GER_rhineland_remind_ger.2
+	title = "Our Troops Enter Rhineland!"
+	desc = "Our Troops Enter Rhineland. We Will Have Problems With Trade For A While, But It's Not A Problem. "
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = { #Historical
+	name = "Fine"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		complete_national_focus = GER_rhineland_ab
+	}
+    }
+}
+
+country_event = { #Event For Germany Isolated But Good News.
+	id = GER_rhineland_remind_ger.3
+	title = "Our Troops Enter Rhineland!"
+	desc = "Our Troops Enter Rhineland. We Will Have Problems With Trade For A While, Even though it would be an economic problem, it was worth it. "
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = { #Historical
+	name = "Fine"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		complete_national_focus = GER_rhineland_ab
+	}
+    }
+}
+
+country_event = { #Event For Germany Secerutiy of Benelux But Good News.
+	id = GER_rhineland_remind_ger.3
+	title = "Our Troops Enter Rhineland!"
+	desc = "Our Troops Enter Rhineland. We Caused Security Agreements With The Benelux Region, But It Was Worth It. "
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = { #Historical
+	name = "Fine"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		complete_national_focus = GER_rhineland_ab
+	}
+    }
+}
+
+country_event = { #Event For Germany Recive Ultimatum. Bad News.
+	id = GER_rhineland_remind_ger.4
+	title = "Ultimatum from France and United Kingdom!"
+	desc = ""
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = { #Historical
+	name = "Fine"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		complete_national_focus = GER_rhineland_demilitarized
+	}
+    }
+
+	option = {
+	name = "No"
+	ai_chance = {
+		factor = 0
+	}
+	hidden_effect = {
+		ENG = { country_event = G }
+	}
+    }
+}
+
+country_event = { #Event For UK - Ultimatum Not Aceppted.
+	id = GER_rhineland_remind_ger.5
+	title = "Germany Not Aceepted our Ultimatum!"
+	desc = ""
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = {
+	name = "War!"
+	ai_chance = {
+		factor = 100
+	}
+	declare_war_on = {
+		target = GER
+		type = puppet_wargoal_focus
+	}
+	FRA = {
+		declare_war_on = {
+			target = GER
+			type = puppet_wargoal_focus
+		}
+	}
+	add_to_faction = FRA
+    }
+
+	option = {
+	name = "Fine"
+	ai_chance = {
+		factor = 0
+	}
+	hidden_effect = {
+		GER = { country_event = GER_rhineland_remind_ger.1 }
 	}
     }
 }
@@ -3561,6 +3805,7 @@ country_event = {
 		}
 	}
 }
+
 
 
 
