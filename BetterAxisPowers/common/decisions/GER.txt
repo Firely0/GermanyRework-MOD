@@ -300,10 +300,11 @@ GER_Rhineland_demilitarized = {
 			has_global_flag = GER_RH_N_NP
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 		complete_effect = {
-			hidden_effect = {
-				complete_national_focus = GER_rhineland_ab
-			}
             set_global_flag = rhineland_remilitarized
             custom_effect_tooltip = GER_rhineland_ultimatum
 			if = {
@@ -338,6 +339,10 @@ GER_Rhineland_demilitarized = {
 
 		visible = {
 			has_active_mission = GER_Rhineland_demilitarized_b
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 		complete_effect = {

@@ -2995,7 +2995,7 @@ country_event = { #Event For France
 		}
 		name = "We Must Ensure the Security of Benelux."
 
-		ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
+		ENG = { country_event = { id = GER_rhineland.5 hours = 3 } }
 
 		HOL = {
 			limit = {
@@ -3195,6 +3195,11 @@ country_event = { #Event For UK
 		}
 	}
 	 add_opinion_modifier = { target = GER modifier = protest_action }
+	 GER = {
+		hidden_effect = {
+			complete_national_focus = GER_rhineland_ab
+		}
+	 }
     }
 
 	option = {

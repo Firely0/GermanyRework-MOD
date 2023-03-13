@@ -391,7 +391,6 @@ technologies = {
 			soft_attack = 0.1
 		}		
 
-
 		motorized = {
 			soft_attack = 0.1
 		}
@@ -494,6 +493,10 @@ technologies = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
+		Fallschirmjager_paratrooper = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
 		
 		path = {
 			leads_to_tech = paratroopers3
@@ -535,6 +538,9 @@ technologies = {
 	paratroopers3 = {
 
 		paratrooper = {
+			max_organisation = 5
+		}
+		Fallschirmjager_paratrooper = {
 			max_organisation = 5
 		}
 		
@@ -665,7 +671,7 @@ technologies = {
 		marine = {
 			max_organisation = 5
 		}
-
+		
 		research_cost = 2.0
 		start_year = 1943
 		folder = {
@@ -740,6 +746,10 @@ technologies = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
+		Gebirgsjager_mountaineers = {
+			max_organisation = 5
+			soft_attack = 0.05
+		} 
 		path = {
 			leads_to_tech = tech_mountaineers3
 			research_cost_coeff = 1
@@ -768,6 +778,9 @@ technologies = {
 		mountaineers = {
 			max_organisation = 5
 		}
+		Gebirgsjager_mountaineers = {
+			max_organisation = 5
+		} 
 
 		research_cost = 2.0
 		start_year = 1943
@@ -1222,7 +1235,15 @@ technologies = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
+		Gebirgsjager_mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
 		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		Fallschirmjager_paratrooper = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1313,7 +1334,15 @@ technologies = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
+		Gebirgsjager_mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
 		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		Fallschirmjager_paratrooper = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1410,7 +1439,15 @@ technologies = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
+		Gebirgsjager_mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
 		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		Fallschirmjager_paratrooper = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1494,7 +1531,15 @@ technologies = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
+		Gebirgsjager_mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
 		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		Fallschirmjager_paratrooper = {
 			defense = 0.03
 			breakthrough = 0.03
 		}

@@ -667,7 +667,11 @@ focus_tree = {
 		icon = GFX_focus_generic_secret_service_agency
 		available = {
 			has_government = fascism
-			has_war_with = SOV
+			OR = {
+				has_war_with = SOV
+				is_in_faction_with = SOV
+			}
+			
 		}
 		prerequisite = { focus = GER_SS_B }
 		prerequisite = { focus = GER_SS_A }
@@ -8444,7 +8448,7 @@ focus_tree = {
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_ernst_thalmann
+			show_ideas_tooltip = ernst_thalmann
 		}
 	}
 
@@ -8602,6 +8606,18 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available = {
+			NOT = {
+				MEX_leon_trotsky = {
+					has_character_flag = SOV_character_purged_flag
+				}
+			}
+			NOT = {
+				has_global_flag = trotsky_dead
+			}
+			MEX = { 
+				NOT = { has_idea = MEX_leon_trotsky }
+				NOT = { has_country_leader = { character = MEX_leon_trotsky } } 
+			}
 		}
 		bypass = {
 		}
@@ -9760,6 +9776,7 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = GER_Fuhrer }
 		available = {
+			has_tech = radio
 			has_government = fascism
 			NOT = { has_country_flag = GER_rhineland_has_problem }
 		}	
@@ -10805,8 +10822,9 @@ focus = {
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 849999 } #ca 90 div
-			SOU = {
+			SOV = {
 				has_government = communism
+				NOT = { is_in_faction_with = ROOT }
 			}
 		}
 		x = 0
