@@ -54,6 +54,89 @@ add_dynamic_modifier = {
 	modifier = Kriegsmarine_dynamic_modifier
 }
 
+create_navy_leader = {
+	name = "Otto Ciliax"
+		picture = "Portrait_Germany_Otto_Ciliax_AGA.dds"
+	traits = { navy_career_officer superior_tactician bold cuts_corners }
+	skill = 4
+	id = 200
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 5
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Conrad Albrecht"
+		picture = "Portrait_Germany_Conrad_Albrecht_AGA.dds"
+	traits = { old_guard_navy green_water_expert }
+	skill = 2
+	id = 201
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Rolf Carls"
+		picture = "Portrait_Germany_Rolf_Carls_AGA.dds"
+	traits = { navy_career_officer battleship_adherent naval_lineage }
+	skill = 2
+	id = 202
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Otto Kretschmer"
+		picture = "Portrait_Germany_Otto_Kretschmer_AGA.dds"
+	traits = { seawolf bold media_personality }
+	skill = 3
+	id = 203
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 5
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Theodore Krancke"
+		picture = "Portrait_Germany_Theodore_Krancke_AGA.dds"
+	traits = { spotter cruiser_captain }
+	skill = 3
+	id = 204
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Herbert Schultze"
+		picture = "Portrait_Germany_Herbert_Schultze_AGA.dds"
+	traits = { seawolf }
+	skill = 2
+	id = 205
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+	}
+	option = { 
+		name = agact.1.b
+		ai_chance = { factor = 1 }
+		set_country_flag = ct_aga_setup
+		
+	navy_experience = 50
+
+	}
+}
+
 #
 
 if = {

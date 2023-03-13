@@ -57,6 +57,15 @@ focus_tree = {
 				42 = { set_demilitarized_zone = no }
 				51 = { set_demilitarized_zone = no }
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_technology = { mobile_warfare = 1 popup = no }
+					add_ideas = i_dont_use_wargoal
+				}
+			}
 			add_political_power = 150
 			add_named_threat = { threat = 5 name = GER_rhineland }	
 		}
@@ -82,6 +91,15 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_technology = { mobile_warfare = 1 popup = no }
+					add_ideas = i_dont_use_wargoal
+				}
+			}
 			add_named_threat = { threat = 5 name = GER_rhineland }
 			set_country_flag = GER_rhineland_challenge_met
 			set_country_flag = GER_allow_grand
@@ -1099,6 +1117,10 @@ focus_tree = {
 						give_guarantee = POL
 					}
 				}
+				add_timed_idea = {
+					idea = wait_for_event
+					days = 3
+				}
 			}	
 			if = {
 				limit = {
@@ -1304,6 +1326,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_cap_pol_tt
 				NOT = { has_global_flag = GER_BLOCK_around_moginot }
+				NOT = { has_idea = wait_for_event }
 			}
 		}
 
@@ -8345,6 +8368,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			GER = { remove_ideas = kinder_kuche_kirche }
 		}
 	}
 
@@ -8607,8 +8631,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				MEX_leon_trotsky = {
-					has_character_flag = SOV_character_purged_flag
+				MEX = {
+					MEX_leon_trotsky = {
+						has_character_flag = SOV_character_purged_flag
+					}
 				}
 			}
 			NOT = {
@@ -8688,7 +8714,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_german_union
-		icon = GFX_focus_troskyunify
+		icon = GFX_goal_troskyunify
 		prerequisite = {
 			focus = GER_strike_union 
 		}
@@ -9543,15 +9569,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = { mobile_warfare = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}
 			set_country_flag = GER_side_with_fascism
 			if = {
 				limit = {
@@ -9752,7 +9769,9 @@ focus_tree = {
 		icon = GFX_goal_Kaiserinaxile
 		available = {
 			HOL = {
-				is_alone_or_in_faction_at_peace_with_GER = yes
+				is_puppet = no
+				exists = yes
+				NOT = { has_war_with = GER }
 				NOT = { has_completed_focus = HOL_the_only_man_in_the_dutch_government }
 			}
 		}
@@ -9778,7 +9797,6 @@ focus_tree = {
 		available = {
 			has_tech = radio
 			has_government = fascism
-			NOT = { has_country_flag = GER_rhineland_has_problem }
 		}	
 		cancel_if_invalid = no
 		x = -3

@@ -4990,6 +4990,23 @@ ideas = {
 
 		}
 
+		wait_for_event = {
+
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+		}
+
 		WehrmachtWarPlana_h = {
 			picture = ger_army
 

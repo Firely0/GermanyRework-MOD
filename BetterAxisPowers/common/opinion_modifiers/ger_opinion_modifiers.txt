@@ -15,4 +15,10 @@ opinion_modifiers = {
 	GER_Fate_of_SOV = {
 		value = 75
 	}
+
+	remained_passive_to_the_soviet_invasion = {
+		value = -50
+		months = 4
+		decay = 1
+	}
 }
