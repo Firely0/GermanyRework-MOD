@@ -2787,6 +2787,7 @@ country_event = {
 		}
 		
 		set_global_flag = GER_RH_N_NP
+		set_global_flag = FRA_RHINELAND_CUT_TRADE
 	}
 
 	option = {
@@ -2933,6 +2934,7 @@ country_event = {
 		}
 
 		set_global_flag = GER_RH_N_NP
+		set_global_flag = FRA_RHINELAND_CUT_TRADE
 		
 	}
 }
@@ -3224,6 +3226,10 @@ country_event = { #Event For UK
 			target = GER
 			modifier = protest_action
 		}
+
+		hidden_effect = {
+			GER = { country_event = GER_rhineland_remind_ger.2 }
+		}
     }
 
 	option = {
@@ -3270,6 +3276,10 @@ country_event = { #Event For UK
 					active = yes
 				}
 			}
+		}
+
+		hidden_effect = {
+			GER = { country_event = GER_rhineland_remind_ger.4 }
 		}
 	}
 }
@@ -3355,6 +3365,8 @@ country_event = { #Event For UK - Security of Benelux
 			}
 		}
 		name = "We Must Ensure the Security of Benelux."
+
+		add_to_faction = FRA
 	
 		HOL = {
 			limit = {
@@ -3395,6 +3407,9 @@ country_event = { #Event For UK - Security of Benelux
 				}
 			}
 		}
+		hidden_effect = {
+			GER = { country_event = GER_rhineland_remind_ger.4 }
+		}
 	}
 }
 
@@ -3433,6 +3448,12 @@ country_event = { #Event For UK isolate
 		}
 	}
 	GER_isolate_effect = yes
+
+	set_global_flag = ISO_GER_Y
+
+	hidden_effect = {
+		GER = { country_event = GER_rhineland_remind_ger.3 }
+	}
     }
 }
 
@@ -3470,7 +3491,7 @@ country_event = { #Event For UK issue ultimatum
 			factor = 100
 		}
 	}
-	GER = { country_event = G }
+	GER = { country_event = GER_rhineland_remind_ger.5 }
     }
 }
 
@@ -3558,7 +3579,7 @@ country_event = { #Event For Germany Isolated But Good News.
 }
 
 country_event = { #Event For Germany Secerutiy of Benelux But Good News.
-	id = GER_rhineland_remind_ger.3
+	id = GER_rhineland_remind_ger.4
 	title = "Our Troops Enter Rhineland!"
 	desc = "Our Troops Enter Rhineland. We Caused Security Agreements With The Benelux Region, But It Was Worth It. "
 	picture = GFX_report_event_soldiers_in_france
@@ -3576,7 +3597,7 @@ country_event = { #Event For Germany Secerutiy of Benelux But Good News.
 }
 
 country_event = { #Event For Germany Recive Ultimatum. Bad News.
-	id = GER_rhineland_remind_ger.4
+	id = GER_rhineland_remind_ger.5
 	title = "Ultimatum from France and United Kingdom!"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
@@ -3598,13 +3619,13 @@ country_event = { #Event For Germany Recive Ultimatum. Bad News.
 		factor = 0
 	}
 	hidden_effect = {
-		ENG = { country_event = G }
+		ENG = { country_event = GER_rhineland_remind_ger.6 }
 	}
     }
 }
 
 country_event = { #Event For UK - Ultimatum Not Aceppted.
-	id = GER_rhineland_remind_ger.5
+	id = GER_rhineland_remind_ger.6
 	title = "Germany Not Aceepted our Ultimatum!"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
