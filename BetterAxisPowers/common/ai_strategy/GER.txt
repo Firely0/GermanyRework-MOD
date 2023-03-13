@@ -1561,6 +1561,45 @@ dont_take_claims_on_POL_we_got_focus = {
 	}
 }
 
+dont_take_claims_we_got_focus = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_war = no
+		has_completed_focus = GER_foregin_affairs
+	}
+
+	abort = {
+		OR = {
+			has_completed_focus = GER_danzig_or_war
+			date > 1940.1.1
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "CZE"
+		value = 1
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = "AUS"
+		value = 1
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = "LUX"
+		value = 1
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = "YUG"
+		value = 1
+	}
+}
+
 axis_dont_mess_with_volunteers = {
 	allowed = {
 		OR = {

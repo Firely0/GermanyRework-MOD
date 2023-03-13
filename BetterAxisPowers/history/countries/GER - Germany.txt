@@ -1,5 +1,8 @@
 ﻿capital = 64
 
+#Rhineland Timeout
+set_variable = { ger_rhi_timeout = 140 }
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20

@@ -168,7 +168,7 @@ GER_Operation_Barbarossa_V = {
 GER_Rhineland_demilitarized = {
 
 	GER_Rhineland_demilitarized_a = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_infiltrate_state
 	
 		allowed = {
 			tag = GER
@@ -197,7 +197,7 @@ GER_Rhineland_demilitarized = {
 		is_good = no 
 		fire_only_once = no
 		selectable_mission = no
-		days_mission_timeout = 140
+		days_mission_timeout = ger_rhi_timeout #140
 		priority = 100
 	
 		cancel_effect = {
@@ -234,7 +234,7 @@ GER_Rhineland_demilitarized = {
 	}
 
 	GER_Rhineland_demilitarized_b = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_infiltrate_state
 	
 		allowed = {
 			tag = GER
@@ -263,7 +263,7 @@ GER_Rhineland_demilitarized = {
 		is_good = no 
 		fire_only_once = no
 		selectable_mission = no
-		days_mission_timeout = 140
+		days_mission_timeout = ger_rhi_timeout #140
 		priority = 90
 	
 		cancel_effect = {
