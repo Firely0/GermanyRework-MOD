@@ -1641,7 +1641,7 @@ focus_tree = {
 	focus = {
 		id = GER_demand_sudetenland
 		text = GER_demand_sudetenland
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_r56_goal_ger_fate_of_czech
 		prerequisite = { focus = GER_anschluss }
 		mutually_exclusive = { focus = GER_czech_friend }
 		will_lead_to_war_with = CZE
@@ -5159,7 +5159,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_support_iran
-		icon = GFX_goal_iranbefriendss
+		icon = GFX_goal_iranbefriend
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
@@ -5210,7 +5210,7 @@ focus_tree = {
 		id = GER_iran_trade
 		icon = GFX_goal_generic_positive_trade_relations
 		relative_position_id = GER_Axis_Powers
-		prerequisite = { focus = GER_Middle_east_diplomacy }
+		prerequisite = { focus = GER_support_iran }
 		available = {
 			PER = {
 				NOT = { has_war_with = root }
@@ -10294,8 +10294,12 @@ focus_tree = {
 	focus = {
 		id = GER_the_peoples_car
 		prerequisite = { focus = GER_Fuhrer }
-		icon = GFX_goal_thepeoplescar
+		icon = GFX_goal_r56_goal_GER_volkswagen
 		available = {
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = 0

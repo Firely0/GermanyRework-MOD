@@ -116,10 +116,15 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_thepeoplescar"
-		texturefile = "gfx/interface/goals/thepeoplescar.dds"
+		name = "GFX_goal_r56_goal_GER_volkswagen"
+		texturefile = "gfx/interface/goals/r56_goal_GER_volkswagen.dds"
 	}
-	
+
+	SpriteType = {
+		name = "GFX_goal_r56_goal_ger_fate_of_czech"
+		texturefile = "gfx/interface/goals/r56_goal_ger_fate_of_czech.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_goal_all_shall_serve"
 		texturefile = "gfx/interface/goals/all_shall_serve.dds"
