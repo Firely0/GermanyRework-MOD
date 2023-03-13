@@ -139,7 +139,7 @@ going_war_with_SOV = {
 	or = {
 		has_war_with = SOV
 		focus_progress = {
-			focus = GER_ussr_war_goalV
+			focus = GER_ussr_war_goal
 			progress > 0.01
 		}
 		is_justifying_wargoal_against = SOV
@@ -153,12 +153,5 @@ is_controlled_by_ITA_or_subject = {
 			tag = ITA
 			is_subject_of = ITA
 		}
-	}
-}
-
-GER_side_with_fascism = {
-	ROOT = {
-		has_government = fascism
-		NOT = { has_country_flag = GER_Block_the_Axis }
 	}
 }

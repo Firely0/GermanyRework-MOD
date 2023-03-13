@@ -5142,7 +5142,7 @@ focus_tree = {
 		x = 11
 		y = 2
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -5158,12 +5158,91 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_support_iran
+		icon = GFX_goal_iranbefriendss
+		relative_position_id = GER_Axis_Powers
+		prerequisite = { focus = GER_Middle_east_diplomacy }
+		available = {
+			PER = {
+				NOT = { has_war_with = root }
+				NOT = { is_puppet = yes }
+				exists = yes
+			}
+		}
+
+		x = 13
+		y = 2
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			PER = {
+				if = {
+					limit = {
+						GER = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = { idea = fascist_influence days = 1095 }
+					country_event = { id = generic.1 }
+				}
+				
+				if = {
+					limit = {
+						GER = {
+							has_government = neutrality
+						}
+					}
+					add_timed_idea = { idea = neutrality_influence days = 1095 }
+					country_event = { id = generic.1 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_iran_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = GER_Axis_Powers
+		prerequisite = { focus = GER_Middle_east_diplomacy }
+		available = {
+			PER = {
+				NOT = { has_war_with = root }
+				NOT = { is_puppet = yes }
+				exists = yes
+			}
+		}
+
+		x = 13
+		y = 3
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			PER = {
+				add_ideas = GER_Trade_with_Iran
+			}
+		}
+	}
+
+	focus = {
 		id = GER_Prepare_for_golden_square
 		icon = GFX_focus_TUR_support_the_golden_square
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
-			
 			IRQ = {
 				NOT = { has_war_with = root }
 				NOT = { is_puppet = yes }
@@ -5174,7 +5253,7 @@ focus_tree = {
 		x = 9
 		y = 2
 
-		cost = 2
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -9820,6 +9899,10 @@ focus_tree = {
 		available = {
 			has_tech = radio
 			has_government = fascism
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}	
 		cancel_if_invalid = no
 		x = -3
@@ -9844,6 +9927,10 @@ focus_tree = {
 		available = {
 			has_war = yes
 			date > 1943.01.01
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -9872,6 +9959,10 @@ focus_tree = {
 		prerequisite = { focus = GER_the_peoples_car }
 		icon = GFX_goal_undergroundfactory
 		available = {
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -9904,6 +9995,10 @@ focus_tree = {
 		icon = GFX_goal_supremefuhrer
 		available = {
 			date > 1943.01.01
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -10049,6 +10144,10 @@ focus_tree = {
 				surrender_progress > 0.30
 				casualties >1500000
 			}
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = -3
@@ -10173,6 +10272,10 @@ focus_tree = {
 		prerequisite = { focus = GER_Fuhrer focus = GER_grand_counchil }
 		icon = GFX_focus_generic_fascist_troops
 		available = {
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 		cancel_if_invalid = no
 		x = 7
