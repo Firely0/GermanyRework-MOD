@@ -126,17 +126,6 @@ create_navy_leader = {
 	coordination_skill = 3
 }
 
-	}
-	option = { 
-		name = agact.1.b
-		ai_chance = { factor = 1 }
-		set_country_flag = ct_aga_setup
-		
-	navy_experience = 50
-
-	}
-}
-
 #
 
 if = {

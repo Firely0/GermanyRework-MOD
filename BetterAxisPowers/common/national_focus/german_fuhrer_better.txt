@@ -8355,10 +8355,10 @@ focus_tree = {
 		bypass = {
 			has_government = fascism
 			NOT = { has_completed_focus = GER_against_fuhrer }
-			has_country_leader = {
+			NOT = {has_country_leader = {
 				character = GER_adolf_hitler
-				ruling_only = no
 			}
+		    }
 		}
 		cancel_if_invalid = no
 		x = 20

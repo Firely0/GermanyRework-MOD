@@ -1379,6 +1379,15 @@ characters={
 				factor = 1.000
 			}
 		}
+		corps_commander={
+			traits={ commando }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=810
+		}
 	}
 
 	GER_erich_bey={
@@ -1979,25 +1988,6 @@ characters={
 		}		
 	}
 
-	GER_erhard_milch={
-		name=GER_erhard_milch
-		portraits={
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Erhard_Milch.tga"
-				small="GFX_idea_erhard_milch"
-			}
-		}
-		corps_commander={
-			traits={ commando }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=810
-		}
-	}
-	
 	GER_ernst_busch={
 		name="Ernst Busch"
 		portraits={

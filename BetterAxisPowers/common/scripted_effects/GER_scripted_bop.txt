@@ -81,3 +81,201 @@ GER_bop_very_low_decrease_effect = {
 		value = -0.05
 	}
 }
+
+GER_bop_increase_lost_core_modifier = {
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_4
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_3
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_2
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_1
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_2
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_lost_core_5
+				}
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_1
+		}
+	}
+}
+
+GER_bop_decrease_lost_core_modifier = {
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_5
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_4
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_3
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_2
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_1
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_1
+		}
+	}
+	else = {
+		#NOTHING cannot decrease
+	}
+}
+
+GER_bop_remove_lost_core_modifier = {
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_5
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_5
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_4
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_4
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_3
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_3
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_2
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_2
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_1
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_1
+		}
+	}
+}
+
+GER_bop_remove_bop_effect = {
+	remove_power_balance = { id = GER_power_balance }
+}
