@@ -3194,12 +3194,13 @@ country_event = { #Event For UK
 			factor = 0
 		}
 	}
-	 add_opinion_modifier = { target = GER modifier = protest_action }
-	 GER = {
-		hidden_effect = {
+	add_opinion_modifier = { target = GER modifier = protest_action }
+	hidden_effect = {
+		GER = {
 			complete_national_focus = GER_rhineland_ab
 		}
-	 }
+	}
+	 
     }
 
 	option = {

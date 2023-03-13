@@ -1411,11 +1411,11 @@ make_sure_poland_is_ganked_before_we_move = {
 		id = "HOL"
 		value = -2000
 	}
-	#ai_strategy = {
-	#	type = declare_war
-	#	id = "BEL"
-	#	value = -2000
-	#}
+	ai_strategy = {
+		type = declare_war
+		id = "BEL"
+		value = -2000
+	}
 	ai_strategy = {
 		type = declare_war
 		id = "LUX"
@@ -1522,6 +1522,11 @@ axis_stay_away_from_the_royal_navy = {
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 16 #around UK
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 42
 		value = 100
 	}
 	ai_strategy = {
