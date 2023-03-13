@@ -21,6 +21,31 @@ ideas = {
 			}
 		}
 
+		GER_revolution_agents_idea = {
+
+			picture = nkvd_2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				intelligence_agency_defense = 1
+				operative_slot = 2
+				foreign_subversive_activites = -0.1
+
+				civilian_intel_to_others = -0.1
+				airforce_intel_to_others = -0.05
+				navy_intel_to_others = -0.05
+				army_intel_to_others = -0.1
+			}
+		}
+
 		GER_political_violence = {
 
 			picture = GermanyPoliticalViolence

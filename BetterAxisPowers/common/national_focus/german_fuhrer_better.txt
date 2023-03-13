@@ -8672,14 +8672,14 @@ focus_tree = {
 
 	focus = {
 		id = GER_german_union
-		icon = GFX_focus_troskysupreme
+		icon = GFX_focus_troskyunify
 		prerequisite = {
-			focus = GER_claim_new_home_of_brave_new_world 
+			focus = GER_strike_union 
 		}
 		relative_position_id = GER_the_German_Republic
 		x = -10
 		y = 7
-		cost = 5
+		cost = 10
 		available = {
 			SOV = {
 				OR = {
@@ -8700,8 +8700,10 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 			if = {
-				SOV = {
-					is_puppet_of = ROOT
+				limit = {
+					SOV = {
+						is_puppet_of = ROOT
+					}
 				}
 				annex_country = { target = SOV transfer_troops = yes }
 			}
@@ -8719,6 +8721,8 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available = {
+			has_intelligence_agency = yes
+			is_puppet = no
 		}
 		bypass = {
 		}
@@ -8727,6 +8731,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
+			add_ideas = GER_revolution_agents_idea
 		}
 	}
 
