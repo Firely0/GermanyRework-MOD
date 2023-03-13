@@ -1111,10 +1111,33 @@ focus_tree = {
 						ENG = {
 							is_ai = yes
 							has_government = democratic
+							NOT = { has_guaranteed = POL }
 						}
 					}
 					ENG = {
 						give_guarantee = POL
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							has_guaranteed = LIT
+							is_guaranteed_by = LIT
+						}
+					}
+					POL = {
+						diplomatic_relation = {
+							country = LIT
+							relation = guarantee
+							active = no
+						}
+					}
+					LIT = {
+						diplomatic_relation = {
+							country = POL
+							relation = guarantee
+							active = no
+						}
 					}
 				}
 				add_timed_idea = {
