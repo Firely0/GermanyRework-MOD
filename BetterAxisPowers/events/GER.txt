@@ -2939,7 +2939,7 @@ country_event = {
 
 country_event = { #Event For France
 	id = GER_rhineland.1
-	title = "German Troops Enter Rhineland Again!"
+	title = "German Troops Enter Rhineland!"
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
@@ -3015,7 +3015,7 @@ country_event = { #Event For France
 				diplomatic_relation = {
 					country = HOL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3028,7 +3028,7 @@ country_event = { #Event For France
 				diplomatic_relation = {
 					country = BEL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3041,7 +3041,7 @@ country_event = { #Event For France
 				diplomatic_relation = {
 					country = LUX
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3058,17 +3058,17 @@ country_event = { #Event For France
 					diplomatic_relation = {
 						country = HOL
 						relation = guarantee
-						active = no
+						active = yes
 					}
 					diplomatic_relation = {
 						country = BEL
 						relation = guarantee
-						active = no
+						active = yes
 					}
 					diplomatic_relation = {
 						country = LUX
 						relation = guarantee
-						active = no
+						active = yes
 					}
 				}
 			}
@@ -3241,7 +3241,7 @@ country_event = { #Event For UK
 				diplomatic_relation = {
 					country = HOL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3254,7 +3254,7 @@ country_event = { #Event For UK
 				diplomatic_relation = {
 					country = BEL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3267,7 +3267,7 @@ country_event = { #Event For UK
 				diplomatic_relation = {
 					country = LUX
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3324,7 +3324,7 @@ country_event = { #Event For UK - For Trade Ban
 
 country_event = { #Event For UK - Security of Benelux
 	id = GER_rhineland.5
-	title = "German Troops Enter Rhineland Again!"
+	title = "German Troops Enter Rhineland!"
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
@@ -3365,7 +3365,7 @@ country_event = { #Event For UK - Security of Benelux
 				diplomatic_relation = {
 					country = HOL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3378,7 +3378,7 @@ country_event = { #Event For UK - Security of Benelux
 				diplomatic_relation = {
 					country = BEL
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3391,7 +3391,7 @@ country_event = { #Event For UK - Security of Benelux
 				diplomatic_relation = {
 					country = LUX
 					relation = guarantee
-					active = no
+					active = yes
 				}
 			}
 		}
@@ -3400,7 +3400,7 @@ country_event = { #Event For UK - Security of Benelux
 
 country_event = { #Event For UK isolate
 	id = GER_rhineland.6
-	title = "German Troops Enter Rhineland Again!"
+	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is The Isolation Of Germany.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
@@ -3438,7 +3438,7 @@ country_event = { #Event For UK isolate
 
 country_event = { #Event For UK issue ultimatum
 	id = GER_rhineland.7
-	title = "German Troops Enter Rhineland Again!"
+	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is Sending Ultimatum to Germany.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france

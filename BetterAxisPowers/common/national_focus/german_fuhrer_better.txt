@@ -10272,10 +10272,6 @@ focus_tree = {
 		prerequisite = { focus = GER_Fuhrer focus = GER_grand_counchil }
 		icon = GFX_focus_generic_fascist_troops
 		available = {
-			has_country_leader = {
-				character = GER_adolf_hitler
-				ruling_only = yes
-			}
 		}
 		cancel_if_invalid = no
 		x = 7
