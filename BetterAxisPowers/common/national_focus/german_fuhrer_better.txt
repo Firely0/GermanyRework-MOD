@@ -984,7 +984,7 @@ focus_tree = {
 	focus = {
 		id = GER_demand_memel
 		text = GER_demand_memel
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_LIT_New_Republic
 		prerequisite = { focus = GER_anschluss }
 		available = { is_subject = no }
 		x = 0
@@ -2432,7 +2432,7 @@ focus_tree = {
 	focus = {
 		id = GER_demand_slovenia
 		text = GER_demand_slovenia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_fate_of_yug
 		prerequisite = { focus = GER_anschluss }
 		mutually_exclusive = { focus = GER_yug_friend }
 		available = {

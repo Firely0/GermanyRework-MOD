@@ -23,6 +23,7 @@ add_namespace = GER_request_help
 add_namespace = GER_request_fra_help
 add_namespace = GER_rhineland_n
 add_namespace = GER_rhineland
+add_namespace = GER_rhineland_remind_ger #
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
 
@@ -3197,7 +3198,7 @@ country_event = { #Event For UK
 	add_opinion_modifier = { target = GER modifier = protest_action }
 	hidden_effect = {
 		GER = {
-			complete_national_focus = GER_rhineland_ab
+			country_event = GER_rhineland_remind_ger.1
 		}
 	}
 	 
@@ -3374,6 +3375,24 @@ country_event = { #Event For UK - Security of Benelux
 			}
 		}
 	}
+}
+
+country_event = { #Event For Germany Good News.
+	id = GER_rhineland_remind_ger.1
+	title = "Our Troops Enter Rhineland!"
+	desc = "Our Troops Enter Rhineland without Problems!"
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = { #Historical
+	name = "Good News"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		complete_national_focus = GER_rhineland_ab
+	}
+    }
 }
 
 country_event = {
