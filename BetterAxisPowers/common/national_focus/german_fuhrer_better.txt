@@ -5167,6 +5167,7 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
+			has_government = fascism
 			PER = {
 				NOT = { has_war_with = root }
 				NOT = { is_puppet = yes }
@@ -5260,6 +5261,7 @@ focus_tree = {
 				NOT = { is_puppet = yes }
 				exists = yes
 			}
+			has_government = fascism
 		}
 
 		x = 9
@@ -9939,10 +9941,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 			date > 1943.01.01
-			has_country_leader = {
-				character = GER_adolf_hitler
-				ruling_only = yes
-			}
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -9976,18 +9974,14 @@ focus_tree = {
 				ruling_only = yes
 			}
 			64 = {
-				limit = {
-					arms_factory < 2
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
+				arms_factory < 2
+				is_controlled_by = ROOT
+				is_core_of = ROOT
 			}
 			52 = {
-				limit = {
-					arms_factory < 2
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
+				arms_factory < 2
+				is_controlled_by = ROOT
+				is_core_of = ROOT
 			}
 		}
 		cancel_if_invalid = no
