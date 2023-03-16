@@ -106,10 +106,10 @@ leader_traits = {
 	Volkswagen_trait = {
 		random = no
 		equipment_bonus = {
-			motorized = {
+			motorized_equipment_1 = {
 				build_cost_ic = -0.05 reliability = 0.05 
 			}
-			mechanized = {
+			mechanized_equipment = {
 				build_cost_ic = -0.05 reliability = 0.05 
 			}
 		}
@@ -253,5 +253,19 @@ leader_traits = {
 		puppet_cost_factor = -0.1
 		subjects_autonomy_gain = -3
 		annex_cost_factor = -0.05
+	}
+
+	armaments_organizer2 = {
+		random = no
+		conversion_cost_civ_to_mil_factor = -0.2
+		production_speed_supply_node_factor = 0.1
+
+		production_factory_efficiency_gain_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.05
+		# civ_to_mil_industry_conversion_rate = -1
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }	

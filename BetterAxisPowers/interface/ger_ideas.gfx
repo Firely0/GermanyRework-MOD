@@ -18,6 +18,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AfrikaCorps_idea"
 		texturefile = "gfx/interface/ideas/AfrikaCorps_idea.dds"
+	} 
+
+	spriteType = {
+		name = "GFX_idea_GermanyPoliticalViolence"
+		texturefile = "gfx/interface/ideas/GermanyPoliticalViolence.dds"
+	} 
+	
+	spriteType = {
+		name = "GFX_idea_sovconflict"
+		texturefile = "gfx/interface/ideas/sovconflict.dds"
 	}
 
 	spriteType = {
@@ -84,5 +94,10 @@ spriteTypes = {
 		name = "GFX_idea_volkswagen"
 		texturefile = "gfx/interface/ideas/volkswagen.dds"
 	}
-	
+
+	spriteType = {
+		name = "GFX_idea_communism_banned"
+		texturefile = "gfx/interface/ideas/idea_generic_communism_banned.dds"
+	}
+
 }	

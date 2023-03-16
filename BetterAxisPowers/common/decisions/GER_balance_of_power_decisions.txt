@@ -21,7 +21,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -53,7 +53,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -85,7 +85,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -117,7 +117,7 @@ GER_balance_of_power_category = {
 		base = 1
 		modifier = {
 			factor = 10
-			has_political_power = 150
+			has_political_power < 150
 		}
 		modifier = {
 			factor = 100
@@ -149,7 +149,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -183,7 +183,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -215,7 +215,7 @@ GER_balance_of_power_category = {
 			base = 1
 			modifier = {
 				factor = 10
-				has_political_power = 150
+				has_political_power < 150
 			}
 			modifier = {
 				factor = 100
@@ -246,7 +246,7 @@ GER_balance_of_power_category = {
 		base = 10
 		modifier = {
 			factor = 1000
-			has_political_power = 1
+			has_political_power < 1
 		}
 		modifier = {
 			factor = 1000
@@ -305,7 +305,7 @@ GER_balance_of_power_category = {
 			}
 			modifier = {
 				factor = 10
-				has_political_power = 200
+				has_political_power < 200
 			}
 		}
 
@@ -340,7 +340,7 @@ GER_balance_of_power_category = {
 			}
 			modifier = {
 				factor = 10
-				has_political_power = 200
+				has_political_power < 200
 			}
 		}
 
@@ -375,7 +375,7 @@ GER_balance_of_power_category = {
 			}
 			modifier = {
 				factor = 10
-				has_political_power = 200
+				has_political_power < 200
 			}
 		}
 
@@ -420,7 +420,7 @@ GER_balance_of_power_category = {
 		factor = 0
 		modifier = {
 			factor = 10
-			has_political_power = 110
+			has_political_power < 110
 		}
 		modifier = {
 			factor = 100
@@ -483,7 +483,7 @@ GER_balance_of_power_category = {
 		factor = 0
 		modifier = {
 			factor = 10
-			has_political_power = 110
+			has_political_power < 110
 		}
 		modifier = {
 			factor = 100

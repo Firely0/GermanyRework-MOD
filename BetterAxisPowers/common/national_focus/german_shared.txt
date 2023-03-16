@@ -1469,27 +1469,29 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			random_state = {
-			limit = {
-				is_controlled_by = GER
-				is_core_of = GER
+			random_owned_state = {
+				limit = {
+					infrastructure < 2
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
 			}
-			add_building_construction = {
-			 type = infrastructure
-			 level = 5
-			 instant_build = yes
-			 }	
-			}
-			random_state = {
-			limit = {
-				is_controlled_by = GER
-				is_core_of = GER
-			}
-			add_building_construction = {
-			 type = infrastructure
-			 level = 5
-			 instant_build = yes
-			 }	
+			random_owned_state = {
+				limit = {
+					infrastructure < 2
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
 			}
 		}
 	}	
@@ -3352,9 +3354,24 @@
 				has_tech = superior_firepower
 			}
 		}
+		select_effect = {
+			add_ideas = GER_reorg_in_army
+		}
 		available_if_capitulated = yes
 		completion_reward = {
 				GER_upgrade_wehrmacht_effect = yes
+				custom_effect_tooltip = SOV_focus_select_effect_tt
+				effect_tooltip = {
+					add_ideas = GER_reorg_in_army
+				}
+	
+				custom_effect_tooltip = SOV_focus_complete_effect_tt
+				effect_tooltip = {
+					remove_ideas = GER_reorg_in_army
+				}
+				hidden_effect = {
+					remove_ideas = GER_reorg_in_army
+				}				
 				if = {
 					limit = {
 						has_completed_focus = GER_tank_warfare
@@ -3399,10 +3416,9 @@
 
 	shared_focus = {
 		id = GER_experts_in_field
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = GER_staff }
 		relative_position_id = GER_army_innovation_a
-		cancelable = no
 		x = 0
 		y = 3
 		cost = 5
@@ -3413,6 +3429,7 @@
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			add_ideas = GER_special_forces
 			custom_effect_tooltip = GER_experts_in_field_tt
 			hidden_effect = {
 				set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }
@@ -3423,7 +3440,7 @@
 
 	shared_focus = {
 		id = GER_better_supply
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_truck
 		prerequisite = { focus = GER_Battle_Plan }
 		relative_position_id = GER_army_innovation_a
 		x = 4

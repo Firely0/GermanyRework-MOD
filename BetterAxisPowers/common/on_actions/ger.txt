@@ -304,6 +304,37 @@ on_actions = {
 				}
 			}
 		}
+	} 
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					has_global_flag = GER_nohelp_denmark
+					FROM = { tag = DEN }
+				}
+				DEN = {
+					add_timed_idea = {
+						idea = nohelp_denmark
+						days = 7
+					}
+				}
+			}
+		}
+	} GER_strike_union
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					has_completed_focus = GER_strike_union
+					FROM = { tag = SOV }
+				}
+				add_ideas = GER_strike_union
+			}
+		}
 	}
 
 }

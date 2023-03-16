@@ -31,6 +31,24 @@ characters={
 		}
 	}
 
+	GER_Com_Civilwar={
+		name=GER_Com_Civilwar
+		portraits={
+			civilian={
+				large=GFX_portrait_Comsidecivilwar
+			}
+		}
+	}
+
+	GER_Non_Civilwar={
+		name=GER_Non_Civilwar
+		portraits={
+			civilian={
+				large=GFX_portrait_Nonsidecivilwar
+			}
+		}
+	}
+
 	GER_konrad_adenauer={
 		name=GER_konrad_adenauer
 		portraits={
@@ -1091,7 +1109,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 0.000
 			}
 		}
 	}
@@ -1124,7 +1142,7 @@ characters={
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 0.000
 			}
 		}		
 	}
@@ -1361,6 +1379,15 @@ characters={
 				factor = 1.000
 			}
 		}
+		corps_commander={
+			traits={ commando }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=810
+		}
 	}
 
 	GER_erich_bey={
@@ -1450,13 +1477,16 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = speer
+			available = {
+				has_completed_focus = GER_german_war_economy_a
+			}
 			allowed = {
 				original_tag = GER
 			}
 			traits = {
-				armaments_organizer 
+				armaments_organizer2
 			}
-		}		
+		}	
 	}
 
 	GER_hjalmar_schacht={
@@ -1532,6 +1562,7 @@ characters={
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
+				has_completed_focus = GER_against_fuhrer
 			}
 			traits = {
 				communist_revolutionary 
@@ -1688,15 +1719,10 @@ characters={
 				original_tag = GER
 			}
 			available = {
+				has_completed_focus = GER_form_the_reichskommissariats
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					}
-					has_country_flag = GER_Fuhrer_in_Country
-					 
 				}
 			}
 			on_add = {
@@ -1733,7 +1759,7 @@ characters={
 				}
 			}
 			ai_will_do = {
-				factor = 30.000
+				factor = 50
 			}
 			traits = {
 				silent_workhorse 
@@ -1960,25 +1986,6 @@ characters={
 		}		
 	}
 
-	GER_erhard_milch={
-		name=GER_erhard_milch
-		portraits={
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Erhard_Milch.tga"
-				small="GFX_idea_erhard_milch"
-			}
-		}
-		corps_commander={
-			traits={ commando }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=810
-		}
-	}
-	
 	GER_ernst_busch={
 		name="Ernst Busch"
 		portraits={

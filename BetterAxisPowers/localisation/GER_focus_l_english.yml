@@ -7,6 +7,18 @@
  Gebirgsjager_mountaineers:0 "Gebirgsjager"
  Gebirgsjager_mountaineers_desc:0 ""
 
+ #leader
+
+ GER_Com_Civilwar:0 "Military Junta"
+ GER_Non_Civilwar:0 "Military Junta"
+
+ #state modifier
+
+ NON_Germany_state_dynamic_modifier:0 "Non-Aligned State for Civil-War"
+ CON_Germany_state_dynamic_modifier:0 "Communism State for Civil-War"
+ Germany_state_dynamic_modifier:0 "Fascism State for Civil-War"
+ Ger_non_vichy_state_dynamic_modifier:0 "Non-Vichy Occupation Zone"
+
  #ui ideas
  Wehrmacht_UI:0 "Wehrmacht"
  Kriegsmarine_UI:0 "Kriegsmarine"
@@ -28,11 +40,29 @@
  
  #Ideas
 
+ GER_revolution_agents_idea:0 "Revolution Agents"
+ GER_revolution_agents_idea_desc:0 ""
+
+ GER_strike_union_idea:0 "Strike Soviet Union"
+ GER_strike_union_idea_desc:0 ""
+
+ GER_special_forces:0 "Speacial Forces"
+ GER_special_forces_desc:0 ""
+
+ GER_reorg_in_army:0 "Military Reorganization"
+ GER_reorg_in_army_desc:0 ""
+
+ GER_political_violence:0 "Political Violence"
+ GER_political_violence_desc:0 ""
+
  GER_Turkey_mine:0 "Better Mineing"
  GER_Turkey_mine_desc:0 ""
 
  GER_Trade_with_Turkey:0 "Trade Pact with Germany"
  GER_Trade_with_Turkey_desc:0 ""
+
+ GER_Trade_with_Iran:0 "Trade Pact With Germany"
+ GER_Trade_with_Iran_desc:0 ""
 
  GER_purge_comunist_support_idea:0 "Purge Communist Party"
  GER_purge_comunist_support_idea_desc:0 ""
@@ -201,6 +231,9 @@
  GER_Fate_of_SOV:0 "Fate of Soviet Union"
  GER_Keep_occpy_land:0 "if Soviet Union Accepts, We Keep §ROccupied§! Lands! and Potential Lands for our Allies"
 
+ GER_killed_hitler_effect:0 "Assassination Successful "
+ GER_SOV_WAR_START:0 "\nWhen We Declare War on Soviet Union. We Gain Fallowing Idea;"
+
 #Wehrmacht Tank Side TT
 
  GER_wehrmacht_1_tt:0 "$armor_research$: §R-10%§!"
@@ -244,7 +277,7 @@
  GER_Operation_Barbarossa_running:0 "§YOperation Barbarossa§! is going as planned."
  vlasov_in_ss_flag:0 "Andrey Vlasov Imprisoned"
  GER_Four_Year_Plan_Start_tt:0 "Starts §YFour Year Plan§! for §G1461§! days"
- GER_staff_tt:0 "if Selected; §RMobile Warfare§! \n\n"
+ GER_staff_tt:0 "\nif Selected; §RMobile Warfare§! \n\n"
  GER_staff_a_tt:0 "if Selected; §RSuperior Firepower§! \n\n"
  GER_SS_tt:0 "Unlocks Occupation Law; §YSchutzstaffel§!"
  GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§!"
@@ -261,6 +294,7 @@
  dictator_pp_v1:0 "Dictator"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
+ armaments_organizer2:0 "Armaments Organizer"
 
  german_Fuhrer_tt:0 "Changes The National Focus Tree To §YRhineland§!"
  german_kaiser_tt:0 "Changes The National Focus Tree To §YOppose Hitler§!"
@@ -341,6 +375,16 @@
  GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
 
  #Focus And Others
+ GER_support_iran:0 "Support Iran Fascism"
+ GER_support_iran_desc:0 ""
+ GER_iran_trade:0 "Trade Pact with Iran"
+ GER_iran_trade_desc:0 ""
+ GER_prepare_for_innovative:0 "Prepare for Civilwar"
+ GER_prepare_for_innovative_desc:0 ""
+ GER_assassinate_adolf_hitler:0 "Assassinate Adolf Hitler"
+ GER_assassinate_adolf_hitler_desc:0 ""
+ GER_the_German_Republic:0 "the German Republic"
+ GER_the_German_Republic_desc:0 ""
  GER_for_Greater_Reich:0 "Pro-Claim Greater Reich"
  GER_for_Greater_Reich_desc:0 ""
  GER_all_roads_to_berlin:0 "All Roads to Berlin"

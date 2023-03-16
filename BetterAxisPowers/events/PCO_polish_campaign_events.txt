@@ -20,6 +20,9 @@ country_event = {
 
 	option = {
 		name = mrpact_initial.1.a	#Start negociations
+		ai_chance = {
+			factor = 100
+		}
 		SOV = {
 			country_event = { hours = 4 id = mrpact.1 }
 		} 
@@ -4580,14 +4583,15 @@ country_event = { #operation himmler (GER POV)
 			limit = {
 				GER = {
 					NOT = {
-						has_completed_focus = GER_danzig_or_war_new
+						has_completed_focus = GER_danzig_or_war
 					}
 				}
 			}
 			GER = {
-				unlock_national_focus = GER_danzig_or_war_new
+				unlock_national_focus = GER_danzig_or_war
 			}
 		}
+		set_global_flag = GER_BLOCK_around_moginot
 		if = {
 			limit = {
 				POL = {
