@@ -1469,27 +1469,29 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			random_state = {
-			limit = {
-				is_controlled_by = GER
-				is_core_of = GER
+			random_owned_state = {
+				limit = {
+					infrastructure < 2
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
 			}
-			add_building_construction = {
-			 type = infrastructure
-			 level = 5
-			 instant_build = yes
-			 }	
-			}
-			random_state = {
-			limit = {
-				is_controlled_by = GER
-				is_core_of = GER
-			}
-			add_building_construction = {
-			 type = infrastructure
-			 level = 5
-			 instant_build = yes
-			 }	
+			random_owned_state = {
+				limit = {
+					infrastructure < 2
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
 			}
 		}
 	}	
