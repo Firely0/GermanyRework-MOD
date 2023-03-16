@@ -9974,14 +9974,14 @@ focus_tree = {
 				ruling_only = yes
 			}
 			64 = {
-				arms_factory < 2
 				is_controlled_by = ROOT
 				is_core_of = ROOT
+				arms_factory > 1
 			}
 			52 = {
-				arms_factory < 2
 				is_controlled_by = ROOT
 				is_core_of = ROOT
+				arms_factory > 1			
 			}
 		}
 		cancel_if_invalid = no
