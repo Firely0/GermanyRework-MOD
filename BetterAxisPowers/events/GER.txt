@@ -19,12 +19,14 @@ add_namespace = GER_offer_support_irq
 add_namespace = GER_jap_coal_trade
 add_namespace = GER_CHI_Cooperation
 add_namespace = GER_SOV_ultimatom
-add_namespace = GER_request_help
+#Rhineland Update
+add_namespace = GER_request_help 
 add_namespace = GER_request_fra_help
-add_namespace = GER_rhineland_n #Rhineland Update
+add_namespace = GER_rhineland_n 
 add_namespace = GER_rhineland
 add_namespace = GER_rhineland_isolete
 add_namespace = GER_rhineland_remind_ger
+add_namespace = GER_rhineland_remind_fra
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
 
@@ -3306,7 +3308,7 @@ country_event = { #Event For UK - For Trade Ban
 
 	 hidden_effect = {
 		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-		FRA = { country_event = GER_rhineland.1 }
+		FRA = { country_event = GER_rhineland_remind_fra.1 }
 	 }
     }
 
@@ -3328,6 +3330,7 @@ country_event = { #Event For UK - For Trade Ban
 		}
 		hidden_effect = {
 			GER = { country_event = GER_rhineland_remind_ger.2 }
+			FRA = { country_event = GER_rhineland_remind_fra.2 }
 		}
     }
 }	
@@ -3352,7 +3355,7 @@ country_event = { #Event For UK - Security of Benelux
 	 add_opinion_modifier = { target = GER modifier = protest_action }
 	 hidden_effect = {
 		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-		FRA = { country_event = GER_rhineland.1 }
+		FRA = { country_event = GER_rhineland_remind_fra.1 }
 	 }
     }
 
@@ -3409,6 +3412,7 @@ country_event = { #Event For UK - Security of Benelux
 		}
 		hidden_effect = {
 			GER = { country_event = GER_rhineland_remind_ger.4 }
+			FRA = { country_event = GER_rhineland_remind_fra.2 }
 		}
 	}
 }
@@ -3434,7 +3438,7 @@ country_event = { #Event For UK isolate
 	 add_opinion_modifier = { target = GER modifier = protest_action }
 	 hidden_effect = {
 		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-		FRA = { country_event = GER_rhineland.1 }
+		FRA = { country_event = GER_rhineland_remind_fra.1 }
 	 }
     }
 
@@ -3453,6 +3457,7 @@ country_event = { #Event For UK isolate
 
 	hidden_effect = {
 		GER = { country_event = GER_rhineland_remind_ger.3 }
+		FRA = { country_event = GER_rhineland_remind_fra.2 }
 	}
     }
 }
@@ -3478,7 +3483,7 @@ country_event = { #Event For UK issue ultimatum
 	 add_opinion_modifier = { target = GER modifier = protest_action }
 	 hidden_effect = {
 		set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-		FRA = { country_event = GER_rhineland.1 }
+		FRA = { country_event = GER_rhineland_remind_fra.1 }
 	 }
     }
 
@@ -3492,6 +3497,7 @@ country_event = { #Event For UK issue ultimatum
 		}
 	}
 	GER = { country_event = GER_rhineland_remind_ger.5 }
+	FRA = { country_event = GER_rhineland_remind_fra.2 }
     }
 }
 
@@ -3622,6 +3628,41 @@ country_event = { #Event For Germany Recive Ultimatum. Bad News.
 		ENG = { country_event = GER_rhineland_remind_ger.6 }
 	}
     }
+}
+
+country_event = { #Event For France Bad News.
+	id = GER_rhineland_remind_fra.1
+	title = "United Kingdom Not Aceppted our Request"
+	desc = ""
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = {
+	name = "Fine"
+	ai_chance = {
+		factor = 100
+	}
+	hidden_effect = {
+		country_event = GER_rhineland.1
+	}
+    }
+
+}
+
+country_event = {
+	id = GER_rhineland_remind_fra.2
+	title = "United Kingdom Aceppted our Request"
+	desc = ""
+	picture = GFX_report_event_soldiers_in_france
+	is_triggered_only = yes
+
+	option = {
+	name = "Good"
+	ai_chance = {
+		factor = 100
+	}
+    }
+
 }
 
 country_event = { #Event For UK - Ultimatum Not Aceppted.

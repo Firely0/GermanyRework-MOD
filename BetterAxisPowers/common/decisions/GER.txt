@@ -347,8 +347,12 @@ GER_Rhineland_demilitarized = {
 
 		complete_effect = {
 			army_experience = 5
-			hidden_effect = {
-				FRA = { country_event = { id = GER_rhineland_n.1 hours = 3 } }
+			if = {
+				limit = { FRA = { is_subject = no } }
+				FRA = {
+					country_event = { id = GER_rhineland_n.1 hours = 3 }
+					custom_effect_tooltip = may_provoke_hostility
+				}
 			}
 		}
 	}

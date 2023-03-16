@@ -4951,6 +4951,7 @@ focus_tree = {
 		id = GER_secure_supremacry
 		icon = GFX_goal_supremewehrmacht
 		prerequisite = { focus = GER_all_roads_to_berlin }
+		mutually_exclusive = { focus = GER_secure_supremacry_in_air focus = GER_secure_supremacry_in_navy }
 		available = {
 		}
 		cancel_if_invalid = no
@@ -4973,6 +4974,7 @@ focus_tree = {
 		id = GER_secure_supremacry_in_air
 		icon = GFX_goal_supremeluftwaffe
 		prerequisite = { focus = GER_all_roads_to_berlin }
+		mutually_exclusive = { focus = GER_secure_supremacry_in_navy focus = GER_secure_supremacry }
 		available = {
 		}
 		cancel_if_invalid = no
@@ -4995,6 +4997,7 @@ focus_tree = {
 		id = GER_secure_supremacry_in_navy
 		icon = GFX_goal_supremekriegmarine
 		prerequisite = { focus = GER_all_roads_to_berlin }
+		mutually_exclusive = { focus = GER_secure_supremacry_in_air focus = GER_secure_supremacry }
 		available = {
 		}
 		cancel_if_invalid = no
@@ -5192,7 +5195,6 @@ focus_tree = {
 					add_timed_idea = { idea = fascist_influence days = 1095 }
 					country_event = { id = generic.1 }
 				}
-				
 				if = {
 					limit = {
 						GER = {
@@ -5201,6 +5203,15 @@ focus_tree = {
 					}
 					add_timed_idea = { idea = neutrality_influence days = 1095 }
 					country_event = { id = generic.1 }
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 200
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = offered_support
 				}
 			}
 		}
@@ -8764,8 +8775,8 @@ focus_tree = {
 			focus = GER_return_for_new_order 
 		}
 		relative_position_id = GER_the_German_Republic
-		x = -10
-		y = 4
+		x = -12
+		y = 3
 		cost = 5
 		available = {
 		}
@@ -8790,8 +8801,8 @@ focus_tree = {
 			focus = GER_claim_new_home_of_brave_new_world 
 		}
 		relative_position_id = GER_the_German_Republic
-		x = -10
-		y = 6
+		x = -12
+		y = 5
 		cost = 5
 		available = {
 		}
@@ -8821,7 +8832,7 @@ focus_tree = {
 			focus = GER_strike_union 
 		}
 		relative_position_id = GER_the_German_Republic
-		x = -10
+		x = -12
 		y = 7
 		cost = 10
 		available = {
@@ -9226,7 +9237,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_demand_slovenia_com
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_fate_of_yug
 		prerequisite = {
 			focus = GER_united_in_red
 		}
@@ -9270,7 +9281,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_demand_sudetenland_com
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_r56_goal_ger_fate_of_czech
 		prerequisite = {
 			focus = GER_united_in_red
 		}
@@ -9314,7 +9325,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_demand_menel_again
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_LIT_New_Republic
 		prerequisite = {
 			focus = GER_united_in_red
 		}
