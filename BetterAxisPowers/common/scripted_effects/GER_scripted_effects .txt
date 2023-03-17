@@ -1172,15 +1172,17 @@ GER_upgrade_wehrmacht_effect = {
 				scope = GER
 			}
 		}
-		every_state = {
+		if = {
 			limit = {
 				806 = {
 					is_controlled_by = GER
 				}
 			}
-			add_dynamic_modifier = {
-				modifier = Ger_non_vichy_state_dynamic_modifier
-				scope = GER
+			806 = {
+				add_dynamic_modifier = {
+					modifier = Ger_non_vichy_state_dynamic_modifier
+					scope = GER
+				}
 			}
 		}
 	}
