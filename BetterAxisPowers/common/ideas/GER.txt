@@ -21,6 +21,26 @@ ideas = {
 			}
 		}
 
+		GER_volkswagen_idea = {
+
+			picture = volkswagen
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment_1 = {
+					build_cost_ic = -0.05 reliability = 0.05 
+				}
+			}
+		}
+
 		GER_revolution_agents_idea = {
 
 			picture = nkvd_2
