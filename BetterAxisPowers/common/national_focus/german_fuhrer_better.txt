@@ -5252,7 +5252,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Prepare_for_golden_square
-		icon = GFX_focus_TUR_support_the_golden_square
+		icon = GFX_goal_iraqfriend
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
@@ -5304,7 +5304,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Support_golden_square
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_TUR_support_the_golden_square
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Prepare_for_golden_square }
 		mutually_exclusive = {
@@ -5344,7 +5344,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_interve_golden_square
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_iraqattack
 		relative_position_id = GER_Axis_Powers
 		mutually_exclusive = {
 			focus = GER_Support_golden_square
@@ -9358,7 +9358,7 @@ focus_tree = {
 		id = GER_claims_in_bessarabia
 		icon = GFX_focus_generic_attack_romania
 		prerequisite = {
-			focus = GER_baltic_seceruity
+			focus = GER_claims_in_poland
 		}
 		relative_position_id = GER_foregin_affairs_kom
 		x = -6
