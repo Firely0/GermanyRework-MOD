@@ -9124,7 +9124,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_support_spain
-		icon = GFX_focus_generic_befriend_communist_spain_focus
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = {
 			focus = GER_Road_to_New_World
 		}
@@ -9195,14 +9195,221 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_claims_in_baltic
+		id = GER_mongolia_membership
+		icon = GFX_goal_mongoliabefriend
+		prerequisite = {
+			focus = GER_Road_to_New_World
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -3
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_tannu_tuva_membership
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = GER_mongolia_membership
+		}
+		mutually_exclusive = {
+			focus = GER_aliance_with_tannu_tuva
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -2
+		y = 4
+		cost = 2
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_aliance_with_tannu_tuva
+		icon = GFX_goal_tanvutuvabefriend
+		prerequisite = {
+			focus = GER_mongolia_membership
+		}
+		mutually_exclusive = {
+			focus = GER_tannu_tuva_membership
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -4
+		y = 4
+		cost = 2
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_baltic_seceruity
 		icon = GFX_focus_SOV_baltic_security
 		prerequisite = {
 			focus = GER_Road_to_New_World
 		}
 		relative_position_id = GER_foregin_affairs_kom
 		x = -6
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_baltic
+		icon = GFX_focus_SOV_baltic_security
+		prerequisite = {
+			focus = GER_baltic_seceruity
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -8
 		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_secure_leningrad
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = {
+			focus = GER_claims_in_baltic
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -8
+		y = 5
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_poland
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = GER_baltic_seceruity
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -6
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_bessarabia
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = {
+			focus = GER_baltic_seceruity
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -6
+		y = 5
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_demand_balkan_submission
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = {
+			focus = GER_claims_in_bessarabia
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -7
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_seek_balkan_cooperation
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = {
+			focus = GER_claims_in_bessarabia
+		}
+		mutually_exclusive = {
+			focus = GER_demand_balkan_submission
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -5
+		y = 6
 		cost = 5
 		available = {
 		}
