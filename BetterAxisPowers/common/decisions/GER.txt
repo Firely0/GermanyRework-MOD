@@ -359,6 +359,63 @@ GER_Rhineland_demilitarized = {
 
 }
 
+GER_expand_support = {
+
+	GER_conquer_berlin = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			64 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 64 #Berlin
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	
+		complete_effect = { 
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+}	
+
 GER_case_anton_category = {
 
 	GER_case_anton = {
