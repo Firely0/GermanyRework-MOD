@@ -592,7 +592,7 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		allow_branch = { has_government = fascism }
+		allow_branch = { has_government = fascism NOT = { has_country_flag = GER_block_ss } }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
@@ -8477,7 +8477,7 @@ focus_tree = {
 		    }
 		}
 		cancel_if_invalid = no
-		x = 20
+		x = 21
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -8498,8 +8498,85 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 8
+		x = 0
 		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_better_and_greater_ss
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = GER_grant_power_to_ss }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_work_with_abwehr
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = GER_better_and_greater_ss }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -3
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_new_order_laws
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GER_better_and_greater_ss }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -1
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reichskommissariats_new
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = GER_work_with_abwehr  }
+		prerequisite = { focus = GER_new_order_laws }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 4
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8518,44 +8595,8 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 0
+		x = 8
 		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_fate_of_adolf_hitler
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grand_counchil }
-		relative_position_id = GER_grand_counchil
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_loyal_to_course
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grant_power_to_ss focus = GER_stay_with_grand_council }
-		relative_position_id = GER_grand_counchil
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 4
-		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8628,6 +8669,7 @@ focus_tree = {
 	focus = {
 		id = GER_prepare_for_innovative
 		icon = GFX_focus_generic_anti_fascist_diplomacy
+		text = GER_Working_on
 		mutually_exclusive = {
 			focus = GER_assassinate_adolf_hitler
 		}
@@ -9795,12 +9837,12 @@ focus_tree = {
 	focus = {
 		id = GER_superior_battle_plan
 		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grant_power_to_wehrmacht focus = GER_stay_with_grand_council }
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
 		relative_position_id = GER_grand_counchil
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -4
+		x = -10
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -9822,7 +9864,7 @@ focus_tree = {
 			has_completed_focus = GER_grant_power_to_wehrmacht
 		}
 		cancel_if_invalid = no
-		x = -5
+		x = -11
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -9841,7 +9883,7 @@ focus_tree = {
 			has_completed_focus = GER_grant_power_to_wehrmacht
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -9
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -9868,6 +9910,121 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	focus = {
+		id = GER_german_warfare_officers
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = GER_sea_overlord focus = GER_reform_eco_plan }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reforms_in_army_wehr
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_expand_command_cap
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = GER_reforms_in_army_wehr }
+		mutually_exclusive = { focus = GER_take_control_of_advisor }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_take_control_of_advisor
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = GER_reforms_in_army_wehr }
+		mutually_exclusive = { focus = GER_expand_command_cap }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reform_eco_plan
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = GER_expand_command_cap focus = GER_take_control_of_advisor }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_purge_ss
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = GER_block_ss
+		}
+	}
+
+
 
 	focus = {
 		id = GER_Fuhrer

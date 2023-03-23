@@ -915,7 +915,10 @@ GER_reichskommissariats = {
 				set_cosmetic_tag = BLR_reichskommissariat
 				
 				hidden_effect = {
-					load_focus_tree = SS_SOV_Side_focus
+					load_focus_tree = {
+						tree = SS_SOV_Side_focus
+						keep_completed = yes
+					}
 				}
 
 				set_variable = { SS_consumer_goods_factor = 0.1 }
@@ -1022,7 +1025,10 @@ GER_reichskommissariats = {
 				}
 
 				hidden_effect = {
-					load_focus_tree = SS_SOV_Side_focus
+					load_focus_tree = {
+						tree = SS_SOV_Side_focus
+						keep_completed = yes
+					}
 				}
 				set_variable = { SS_consumer_goods_factor = 0.1 }
 				set_variable = { SS_industrial_capacity_dockyard = -0.1 }

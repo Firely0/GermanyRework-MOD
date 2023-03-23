@@ -1187,6 +1187,83 @@ GER_upgrade_wehrmacht_effect = {
 		}
 	}
 
+	GER_Give_fascism_effect = {
+		random_other_country = {
+			limit = {
+				original_tag = GER
+				has_government = fascism
+			}
+			save_event_target_as = fascist_germany_civil_war
+			every_unit_leader = {
+				set_nationality = GER
+			}
+			set_variable = {
+				GER_max_command_power = -20
+			}
+			set_variable = {
+				GER_max_planning_factor = -0.2
+			}
+			set_variable = {
+				GER_planning_speed = -0.1
+			}
+			set_variable = {
+				GER_minimum_training_level = 0.1
+			}
+			set_variable = {
+				GER_land_doctrine_cost_factor = 0.1
+			}
+			set_variable = {
+				GER_air_mission_efficiency = -0.1
+			}
+			set_variable = {
+				GER_air_accidents_factor = 0.1
+			}
+			set_variable = {
+				GER_air_doctrine_cost_factor = 0.1
+			}
+			set_variable = {
+				GER_navy_visibility = 0.1
+			}
+			set_variable = {
+				GER_sub_retreat_speed = 0.05
+			}
+			set_variable = {
+				GER_critical_receive_chance = 0.1
+			}
+			set_variable = {
+				GER_naval_doctrine_cost_factor = 0.1
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Kriegsmarine_dynamic_modifier
+			}
+			load_focus_tree = {
+				tree = german_fuhrer_better
+				keep_completed = yes
+			}
+			complete_national_focus = GER_establish_abwehr
+			complete_national_focus = GER_Fuhrer
+		}
+		GER = {
+			every_unit_leader = {
+				limit = {
+					OR = {
+						has_id = 10
+						has_id = 15
+						has_id = 20
+						has_id = 24
+					}
+				}
+				set_nationality = event_target:fascist_germany_civil_war
+			}
+		}
+	}
+
 
 
 
