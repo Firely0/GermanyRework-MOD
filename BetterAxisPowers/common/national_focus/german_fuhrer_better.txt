@@ -599,7 +599,7 @@ focus_tree = {
 			is_puppet = no
 		}
 		cancel_if_invalid = no
-		x = -13
+		x = 40
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -716,7 +716,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 55
+		x = 26
 		y = 1
 		cost = 3
 
@@ -782,7 +782,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 0
+		x = 6
 		y = 1
 		relative_position_id = GER_foregin_affairs
 		cost = 10
@@ -2385,6 +2385,9 @@ focus_tree = {
 				exists = yes
 			}
 		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
+		}
 		cancel = {
 			OR = {
 				NOT = { country_exists = ENG }
@@ -3036,7 +3039,7 @@ focus_tree = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = GER_establish_abwehr }
-		x = 36
+		x = 12
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -5035,7 +5038,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 100
+		x = 73
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -8419,6 +8422,9 @@ focus_tree = {
 			NOT = { has_completed_focus = GER_against_fuhrer }
 			has_completed_focus = GER_rhineland_demilitarized
 		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
+		}
 		bypass = {
 			has_government = fascism
 			NOT = { has_completed_focus = GER_against_fuhrer }
@@ -10690,7 +10696,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Beaten_but_not_defeated
-		prerequisite = { focus = GER_Fuhrer focus = GER_grand_counchil }
+		prerequisite = { focus = GER_Fuhrer }
 		icon = GFX_focus_generic_fascist_troops
 		available = {
 		}
@@ -10758,7 +10764,7 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_foregin_affairs }
 		relative_position_id = GER_foregin_affairs
-		x = -11
+		x = -6
 		y = 1
 		cost = 3
 
