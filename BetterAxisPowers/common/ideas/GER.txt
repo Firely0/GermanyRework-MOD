@@ -4277,11 +4277,10 @@ ideas = {
 		}
 
 		visible = {
-		has_completed_focus = GER_Eco_Plan_Side_A_3
 		}
 
 		available = {
-			has_completed_focus = GER_Eco_Plan_Side_A_3
+			has_completed_focus = GER_krupp
 		}
 
 		ai_will_do = {
@@ -4835,8 +4834,14 @@ ideas = {
 			visible = {
 			NOT = {
 		     has_completed_focus = GER_Eco_Plan_Side_A_2
-			 }
+			}
 		    }
+
+			available = {
+				has_completed_focus = GER_krupp
+			}
+
+			cost = 250
 			
 			research_bonus = {
 			 industry = 0.15
@@ -4856,11 +4861,11 @@ ideas = {
 			}
 
 			visible = {
-		    has_completed_focus = GER_Eco_Plan_Side_A_2
+		     has_completed_focus = GER_Eco_Plan_Side_A_2
 		    } 
 
 		    available = {
-			has_completed_focus = GER_Eco_Plan_Side_A_2
+				has_completed_focus = GER_krupp
 		    }
 			
 			research_bonus = {

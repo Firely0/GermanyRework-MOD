@@ -990,6 +990,10 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = krupp
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = krupp_nofocusver
 		}	
 	}
 
@@ -3106,7 +3110,7 @@
 		prerequisite = { focus = GER_Convert_Civilian_Ships focus = GER_Graf_Zeppelin }
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -3292,7 +3296,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GER_Strategic_Des
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -3678,7 +3682,7 @@
 
 	shared_focus = {
 		id = GER_War_Plan
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_firepower
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_better_supply}
 		prerequisite = { focus = GER_staff }
