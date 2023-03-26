@@ -171,7 +171,7 @@
 
 	shared_focus = {
 		id = GER_Convert_Civilian_Ships
-		icon = GFX_focus_r56_goal_generic_carrier
+		icon = GFX_goal_r56_goal_generic_carrier
 		text = ITA_refit_civilian_ships
 		relative_position_id = GER_carrier_war
 		mutually_exclusive = { focus = GER_Graf_Zeppelin }
@@ -978,7 +978,6 @@
 
 	shared_focus = {
 		id = GER_krupp
-		text = GER_autarky
 		icon = GFX_goal_krupp
 		prerequisite = { focus = GER_autarky_a }
 		x = 0
@@ -996,7 +995,6 @@
 
 	shared_focus = {
 		id = GER_power_krupp
-		text = GER_autarky
 		icon = GFX_goal_krupppower
 		prerequisite = { focus = GER_krupp }
 		mutually_exclusive = { focus = GER_forced_colob_krupp }
@@ -1015,7 +1013,6 @@
 
 	shared_focus = {
 		id = GER_forced_colob_krupp
-		text = GER_autarky
 		icon = GFX_goal_kruppforcedcolob
 		prerequisite = { focus = GER_krupp }
 		x = -1
@@ -1257,12 +1254,11 @@
 	shared_focus = {
 		id = GER_extra_build_slot
 		icon = GFX_goal_r56_goal_generic_bills
-		text = extra_tech_slot
 		prerequisite = { focus = GER_Civlian_Mobilization focus = GER_Arms_Mobilization }
 		x = 0
 		y = 4
 		relative_position_id = GER_grosraumwirtschaft_a
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -1270,7 +1266,26 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_research_slot = 1
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 
@@ -2784,7 +2799,7 @@
 		y = 4
 		relative_position_id = GER_Hide_Arms_Industrialization
 		prerequisite = { focus = GER_german_war_economy_a }
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -2793,25 +2808,18 @@
 		available = {
 			has_war_support > 0.49
 		}
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = GER_german_war_economy }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
+			add_ideas = GER_convert_war_eco
+			random_owned_controlled_state = {
 				limit = {
-					NOT = { has_idea = war_economy }
-					NOT = { has_idea = tot_economic_mobilisation }
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
-				add_ideas = war_economy
+				add_extra_state_shared_building_slots = 2
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -2822,44 +2830,6 @@
 					}
 				}
 				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = GER_german_war_economy
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = GER_german_war_economy
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = GER_german_war_economy
 			}
 		}
 	}

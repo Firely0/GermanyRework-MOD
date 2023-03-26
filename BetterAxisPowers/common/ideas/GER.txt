@@ -21,6 +21,24 @@ ideas = {
 			}
 		}
 
+		GER_convert_war_eco = {
+
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.3
+			}
+		}
+
 		GER_volkswagen_idea = {
 
 			picture = volkswagen
