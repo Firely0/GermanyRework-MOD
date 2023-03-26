@@ -599,7 +599,7 @@ focus_tree = {
 			is_puppet = no
 		}
 		cancel_if_invalid = no
-		x = 40
+		x = -13
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -716,7 +716,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 60
+		x = 55
 		y = 1
 		cost = 3
 
@@ -3036,7 +3036,7 @@ focus_tree = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = GER_establish_abwehr }
-		x = 35
+		x = 36
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -4134,89 +4134,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_prepare_for_airwar
-		icon = GFX_goal_generic_radar
-		prerequisite = { focus = GER_west_wall }
-		available = {
-			has_tech = decimetric_radar
-			GER = {
-				has_full_control_of_state = 64
-				has_full_control_of_state = 60
-				has_full_control_of_state = 58
-			}
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_west_wall
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 64 
-					}
-				}
-				64 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 60 
-					}
-				}
-				
-				60 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 2
-						instant_build = yes
-					}
-				}
-				
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 58 
-					}
-				}
-				58 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = GER_Keep_Warmachine_going
 		icon = GFX_goal_keepwarmachinegoing
-		prerequisite = { focus = GER_prepare_for_airwar }
+		prerequisite = { focus = GER_west_wall }
 		mutually_exclusive = { focus = GER_protect_reichsautobahn }
 		available = {
 			any_country = {
@@ -4238,7 +4158,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4392,7 +4312,7 @@ focus_tree = {
 	focus = {
 		id = GER_protect_reichsautobahn
 		icon = GFX_goal_keepsafeheavyindustry
-		prerequisite = { focus = GER_prepare_for_airwar }
+		prerequisite = { focus = GER_west_wall }
 		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
 		available = {
 			GER = {
@@ -4404,7 +4324,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4510,7 +4430,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -5115,7 +5035,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 105
+		x = 100
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -8508,7 +8428,7 @@ focus_tree = {
 		    }
 		}
 		cancel_if_invalid = no
-		x = 21
+		x = 22
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -8589,6 +8509,108 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = 0
 		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_purge_party
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_grant_power_to_wehrmacht focus = GER_stay_with_grand_council }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_adolf_hitler
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_purge_party }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_chancellor_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_exile_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = -2
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_exile_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_chancellor_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_esc_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_exile_adolf focus = GER_chancellor_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 2
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_eco_reforms
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_chancellor_adolf focus = GER_exile_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 10
