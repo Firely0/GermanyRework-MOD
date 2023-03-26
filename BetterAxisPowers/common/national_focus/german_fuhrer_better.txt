@@ -592,14 +592,14 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		allow_branch = { has_government = fascism NOT = { has_country_flag = GER_block_ss } }
+		#allow_branch = { has_government = fascism NOT = { has_country_flag = GER_block_ss } }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
 			is_puppet = no
 		}
 		cancel_if_invalid = no
-		x = -14
+		x = 40
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -716,7 +716,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 50
+		x = 60
 		y = 1
 		cost = 3
 
@@ -782,7 +782,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 6
+		x = 0
 		y = 1
 		relative_position_id = GER_foregin_affairs
 		cost = 10
@@ -2368,6 +2368,37 @@ focus_tree = {
 				}
 				country_event = { id = generic.1 }
 			}
+		}
+	}
+
+	focus = {
+		id = GER_uk_friend
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = GER_foregin_affairs }
+		available = { 
+			NOT = { has_war_with = ENG }
+			ENG = {
+				custom_trigger_tooltip = {
+					tooltip = GER_alone_or_peace_faction_tt
+					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+				exists = yes
+			}
+		}
+		cancel = {
+			OR = {
+				NOT = { country_exists = ENG }
+				has_war_with = ENG
+			}
+		}
+		cancel_if_invalid = no
+		x = 10
+		y = 0
+		relative_position_id = GER_anschluss
+		cost = 5
+		ai_will_do = {
+		}		
+		completion_reward = {
 		}
 	}
 
@@ -5084,7 +5115,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 92
+		x = 105
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -8488,36 +8519,17 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_grant_power_to_ss
-		icon = GFX_goal_unknown
-		mutually_exclusive = { focus = GER_stay_with_grand_council }
-		mutually_exclusive = { focus = GER_grant_power_to_wehrmacht }
-		prerequisite = { focus = GER_grand_counchil }
-		relative_position_id = GER_grand_counchil
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-		}
-	}
 
 	focus = {
 		id = GER_better_and_greater_ss
 		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = GER_grant_power_to_ss }
+		prerequisite = { focus = GER_stay_with_grand_council }
 		relative_position_id = GER_grand_counchil
 		available = {
 			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = -2
+		x = 11
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -8531,13 +8543,13 @@ focus_tree = {
 		id = GER_work_with_abwehr
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = { focus = GER_better_and_greater_ss }
-		relative_position_id = GER_grand_counchil
+		relative_position_id = GER_better_and_greater_ss
 		available = {
 			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = -3
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8550,13 +8562,13 @@ focus_tree = {
 		id = GER_new_order_laws
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_better_and_greater_ss }
-		relative_position_id = GER_grand_counchil
+		relative_position_id = GER_better_and_greater_ss
 		available = {
 			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = -1
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8570,13 +8582,13 @@ focus_tree = {
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_work_with_abwehr  }
 		prerequisite = { focus = GER_new_order_laws }
-		relative_position_id = GER_grand_counchil
+		relative_position_id = GER_better_and_greater_ss
 		available = {
 			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = -2
-		y = 4
+		x = 0
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8610,6 +8622,9 @@ focus_tree = {
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		prerequisite = {
 			focus = GER_establish_abwehr
+		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -24
@@ -10007,13 +10022,13 @@ focus_tree = {
 		id = GER_purge_ss
 		icon = GFX_focus_generic_conspiracy
 		prerequisite = { focus = GER_grant_power_to_wehrmacht }
-		relative_position_id = GER_superior_battle_plan
+		relative_position_id = GER_grand_counchil
 		available = {
 			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = 2
-		y = 0
+		x = -8
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -10721,7 +10736,7 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_foregin_affairs }
 		relative_position_id = GER_foregin_affairs
-		x = -6
+		x = -11
 		y = 1
 		cost = 3
 
@@ -10745,11 +10760,11 @@ focus_tree = {
 		id = GER_Attack_SOV
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		relative_position_id = GER_foregin_affairs
+		relative_position_id = GER_Sleep_Well_SOV
 		allow_branch = {
 			has_completed_focus = GER_ussr_war_goal
 		}
-		x = -6
+		x = 0
 		y = 4
 		cost = 3
 
@@ -10775,9 +10790,9 @@ focus_tree = {
 		id = GER_Leningrad_mission
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -9
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = -3
+		y = 1
 		cost = 3
 
 		available = {
@@ -10815,9 +10830,9 @@ focus_tree = {
 		id = GER_Moscow_mission
 		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -6
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = 0
+		y = 1
 		cost = 3
 
 		available = {
@@ -10855,9 +10870,9 @@ focus_tree = {
 		id = GER_Stalingrad_mission
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -3
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = 3
+		y = 1
 		cost = 3
 
 		available = {
@@ -10897,9 +10912,9 @@ focus_tree = {
 		prerequisite = { focus = GER_Leningrad_mission }
 		prerequisite = { focus = GER_Moscow_mission }
 		prerequisite = { focus = GER_Stalingrad_mission }
-		relative_position_id = GER_foregin_affairs
-		x = -6
-		y = 6
+		relative_position_id = GER_Attack_SOV
+		x = 0
+		y = 2
 		cost = 3
 
 		available = {
