@@ -17,11 +17,33 @@ ideas = {
 			picture = generic_the_london_naval_treaty
 			
 			modifier = {
-				production_cost_max_ship_battleship = 5000
-				production_cost_max_ship_hull_cruiser = 2000
-				production_cost_max_ship_submarine = 300
-				production_cost_max_ship_destroyer = 1000
-				production_cost_max_ship_hull_carrier = 0
+				production_cost_max_ship_hull_heavy = 5000
+				production_cost_max_ship_hull_light = 2000
+				production_cost_max_ship_hull_submarine = 300
+				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_carrier = 1
+			}
+		}
+
+		Landon_Treaty_sub_focus = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+				production_cost_max_ship_hull_heavy = 5000
+				production_cost_max_ship_hull_light = 2000
+				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_carrier = 1
 			}
 		}
 
@@ -4303,7 +4325,7 @@ ideas = {
 		}
 
 		available = {
-			has_completed_focus = GER_krupp
+			has_completed_focus = GER_krupp_eco_focus
 			AND = {
 				OR = {
 					has_idea = krupp_nofocusver
@@ -4867,7 +4889,7 @@ ideas = {
 		    }
 
 			available = {
-				has_completed_focus = GER_krupp
+				has_completed_focus = GER_krupp_eco_focus
 			}
 
 			cost = 250
@@ -4894,10 +4916,7 @@ ideas = {
 		    } 
 
 		    available = {
-				has_completed_focus = GER_krupp
-				OR = {
-					has_idea = G
-				}
+				has_completed_focus = GER_krupp_eco_focus
 		    }
 			
 			research_bonus = {
