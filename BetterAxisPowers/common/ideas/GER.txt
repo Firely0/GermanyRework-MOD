@@ -11,16 +11,19 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+
+			cancel = {
+				has_war_with = ENG
+			}
 			
 			removal_cost = -1
 
 			picture = generic_the_london_naval_treaty
 			
 			modifier = {
-				production_cost_max_ship_hull_heavy = 5000
-				production_cost_max_ship_hull_light = 2000
-				production_cost_max_ship_hull_submarine = 300
-				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_heavy = 6000
+				production_cost_max_ship_hull_light = 3000
+				production_cost_max_ship_hull_submarine = 500
 				production_cost_max_ship_hull_carrier = 1
 			}
 		}

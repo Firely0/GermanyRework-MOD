@@ -569,15 +569,15 @@
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = 	Landon_Treaty_sub_focus
+					has_idea = Landon_Treaty_sub_focus
 				}
-				remove_idea = Landon_Treaty_sub_focus
+				remove_ideas = Landon_Treaty_sub_focus
 			}
 			if = {
 				limit = {
-					has_idea = 	Landon_Treaty
+					has_idea = Landon_Treaty
 				}
-				remove_idea = Landon_Treaty
+				remove_ideas = Landon_Treaty
 			}
 			add_threat = 5
 			hidden_effect = {
@@ -1013,6 +1013,9 @@
 		ai_will_do = {
 			factor = 9
 		}
+		available = {
+			always = no
+		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 		}	
@@ -1029,6 +1032,9 @@
 		cost = 10
 		ai_will_do = {
 			factor = 9
+		}
+		available = {
+			always = no
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
