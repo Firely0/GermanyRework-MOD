@@ -323,7 +323,11 @@ country_event = {
 				FIN = {
 					every_owned_state = {
 						limit = {
-							is_core_of = PREV
+							OR = {
+								state = 146
+								state = 147
+								state = 772
+							}
 						}
 						SOV = { add_state_claim = PREV }
 					}

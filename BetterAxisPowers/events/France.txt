@@ -575,7 +575,6 @@ country_event = {
 				transfer_state = 31
 			}
 		}
-		GER_Give_Vichy_Lands_effect_effect = yes
 		FRA = {
 			set_capital = { state = 539 }
 
@@ -762,7 +761,6 @@ country_event = {
 		country_event = { hours = 6 id = news.34 }
 		hidden_effect =  {
 			FRA = { news_event = { id = france.20 days = 1 } }
-			GER_Give_Vichy_Lands_effect = yes
 		}
 	}
 
@@ -938,7 +936,6 @@ country_event = {
                 transfer_state = 806
             }
         }
-		GER_Give_Vichy_Lands_effect = yes
 		FRA = {
 			set_capital = { state = 539 }
 			hidden_effect = {
