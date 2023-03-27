@@ -1148,43 +1148,6 @@ GER_upgrade_wehrmacht_effect = {
 		}
 	}
 
-	GER_Give_Vichy_Lands_effect = {
-		every_state = {
-			limit = {
-				state = 29
-				state = 785
-				state = 15
-				state = 16
-				state = 18
-				state = 17
-				state = 27
-				state = 24
-				state = 30
-				state = 14
-				state = 23
-				state = 19
-				state = 806
-			}
-			add_dynamic_modifier = {
-				modifier = Ger_non_vichy_state_dynamic_modifier
-				scope = GER
-			}
-		}
-		if = {
-			limit = {
-				806 = {
-					is_controlled_by = GER
-				}
-			}
-			806 = {
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
-		}
-	}
-
 	GER_Give_fascism_effect = {
 		random_other_country = {
 			limit = {
