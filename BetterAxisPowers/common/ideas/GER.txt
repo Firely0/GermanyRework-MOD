@@ -2,6 +2,29 @@ ideas = {
 
 	country = {
 
+		Landon_Treaty = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+				production_cost_max_ship_battleship = 5000
+				production_cost_max_ship_hull_cruiser = 2000
+				production_cost_max_ship_submarine = 300
+				production_cost_max_ship_destroyer = 1000
+				production_cost_max_ship_hull_carrier = 0
+			}
+		}
+
 		GER_special_forces = {
 
 			picture = generic_army_war_college
@@ -4281,6 +4304,12 @@ ideas = {
 
 		available = {
 			has_completed_focus = GER_krupp
+			AND = {
+				OR = {
+					has_idea = krupp_nofocusver
+					has_idea = krupp_idea_focus
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -4866,6 +4895,9 @@ ideas = {
 
 		    available = {
 				has_completed_focus = GER_krupp
+				OR = {
+					has_idea = G
+				}
 		    }
 			
 			research_bonus = {

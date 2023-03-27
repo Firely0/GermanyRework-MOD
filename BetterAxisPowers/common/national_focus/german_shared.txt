@@ -567,6 +567,8 @@
 		}	
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			remove_idea = Landon_Treaty
+			add_threat = 5
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {
@@ -977,7 +979,7 @@
 	}
 
 	shared_focus = {
-		id = GER_krupp
+		id = GER_krupp_eco_focus
 		icon = GFX_goal_krupp
 		prerequisite = { focus = GER_autarky_a }
 		x = 0
@@ -1000,11 +1002,11 @@
 	shared_focus = {
 		id = GER_power_krupp
 		icon = GFX_goal_krupppower
-		prerequisite = { focus = GER_krupp }
+		prerequisite = { focus = GER_krupp_eco_focus }
 		mutually_exclusive = { focus = GER_forced_colob_krupp }
 		x = 1
 		y = 1
-		relative_position_id = GER_krupp
+		relative_position_id = GER_krupp_eco_focus
 		cost = 10
 		
 		ai_will_do = {
@@ -1018,12 +1020,12 @@
 	shared_focus = {
 		id = GER_forced_colob_krupp
 		icon = GFX_goal_kruppforcedcolob
-		prerequisite = { focus = GER_krupp }
+		prerequisite = { focus = GER_krupp_eco_focus }
+		mutually_exclusive = { focus = GER_power_krupp }
 		x = -1
 		y = 1
-		relative_position_id = GER_krupp
+		relative_position_id = GER_krupp_eco_focus
 		cost = 10
-		
 		ai_will_do = {
 			factor = 9
 		}
@@ -2521,8 +2523,8 @@
 				instant_build = yes
 				}
 			}
-
 		}
+
 		}
 	}
 

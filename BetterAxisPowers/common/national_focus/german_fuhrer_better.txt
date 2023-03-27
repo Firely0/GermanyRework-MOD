@@ -724,7 +724,7 @@ focus_tree = {
 			has_government = fascism
 			OR = {
 				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_grand_counchil
+				#has_completed_focus = GER_grand_counchil
 			}
 		}
 
@@ -4891,7 +4891,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 6
+		y = 5
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 10
 		ai_will_do = {
@@ -4911,7 +4911,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = -2
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -4934,7 +4934,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -4957,7 +4957,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 2
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -4979,7 +4979,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 8
+		y = 7
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 10
 		ai_will_do = {
@@ -5034,7 +5034,7 @@ focus_tree = {
 			has_government = fascism
 			OR = {
 				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_grand_counchil
+				#has_completed_focus = GER_grand_counchil
 			}
 		}
 		cancel_if_invalid = no
@@ -10082,7 +10082,7 @@ focus_tree = {
 				character = GER_adolf_hitler
 				ruling_only = yes
 			}
-			NOT = { has_completed_focus = GER_against_fuhrer }
+			#NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 0
