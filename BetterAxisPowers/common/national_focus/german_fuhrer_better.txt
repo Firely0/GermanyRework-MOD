@@ -2458,7 +2458,7 @@ focus_tree = {
 		}		
 		completion_reward = {
 			GER = {
-				country_event = { id = gerb.1 days = 1 }
+				country_event = { id = gerb.1 hours = 6 }
 			}
 		}
 	}
@@ -11114,7 +11114,7 @@ focus = {
 		id = GER_Ukraine
 		icon = GFX_goal_ukraine_deal
 		available = {
-			has_completed_focus = GER_form_the_reichskommissariats_a
+			has_completed_focus = GER_form_the_reichskommissariats
 		}
 		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = 1
@@ -11139,7 +11139,7 @@ focus = {
 		id = GER_Belarus
 		icon = GFX_goal_belarus_deal
 		available = {
-			has_completed_focus = GER_form_the_reichskommissariats_a
+			has_completed_focus = GER_form_the_reichskommissariats
 		}
 		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = -1
