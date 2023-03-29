@@ -2991,7 +2991,7 @@ focus_tree = {
 		available = {
 			GRE = { 
 				exists = yes
-				has_war = yes
+				NOT = { has_war_with = GER }
 			}
 			NOT = { is_in_faction_with = GRE }
 		}
@@ -10793,7 +10793,7 @@ focus_tree = {
 			has_completed_focus = GER_ussr_war_goal
 		}
 		x = 0
-		y = 4
+		y = 3
 		cost = 3
 
 		available = {

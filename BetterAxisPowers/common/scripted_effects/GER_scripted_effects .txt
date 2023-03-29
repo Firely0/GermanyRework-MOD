@@ -1120,16 +1120,43 @@ GER_isolate_effect = {
 		every_neighbor_country = {
 			target = {
 			NOT = { 
-				tag = GER 
+			 tag = GER 
 			}
 			NOT = { 
-				tag = AUS 
+			 tag = AUS 
 			}
 			AND = {
-				bordering_country = GER
+			 bordering_country = GER
 			}
 			}
 			country_event = { id = GER_rhineland_isolete.1 }
+		}
+	}
+}
+
+GER_Vichy_state_modifier = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 18
+				state = 29
+				state = 785
+				state = 16
+				state = 15
+				state = 30
+				state = 24
+				state = 14
+				state = 30
+				state = 23
+				state = 19
+				state = 806
+				state = 27
+				state = 17
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = Ger_non_vichy_state_dynamic_modifier
+			target = GER
 		}
 	}
 }

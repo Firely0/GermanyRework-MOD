@@ -1100,6 +1100,7 @@ country_event = {
 		hidden_effect =  {
 			FRA = { news_event = { id = france.20 days = 1 } }
 		}
+		GER_Vichy_state_modifier = yes
 	}
 	option = { # Agree - Fascism - LaR
 		name = france.14.a
@@ -1313,6 +1314,7 @@ country_event = {
 				}
 			}
 		}
+		GER_Vichy_state_modifier = yes
 	}
 	option = { # Conquer everything!
 		name = france.14.b

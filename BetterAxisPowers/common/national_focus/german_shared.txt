@@ -1334,7 +1334,14 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		available = {
+			OR = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 59
+				has_full_control_of_state = 60
+				has_full_control_of_state = 54
+			}
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1365,7 +1372,6 @@
 					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky
 				}
 			}
-
 			if = {
 				limit = {
 					has_idea = Four_Year_Plan_2_Small_Arms
@@ -1375,7 +1381,6 @@
 					add_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
 				}
 			}
-
 			if = {
 				limit = {
 					has_idea = Four_Year_Plan_2_autarky_small_arms
@@ -1383,6 +1388,50 @@
 				swap_ideas = {
 					remove_idea = Four_Year_Plan_2_autarky_small_arms
 					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms
+				}
+			}
+			custom_effect_tooltip = GER_autobahn_tt
+			hidden_effect = {
+				64 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				59 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				60 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				54 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
 				}
 			}
 		}
@@ -2190,6 +2239,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			64 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				type = synthetic_refinery
 				level = 3
@@ -2325,8 +2375,6 @@
 			show_ideas_tooltip = henschel_focus
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_MAN_Focus 
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = krupp
 			hidden_effect = {
 			if = {
 				limit = {
@@ -2379,76 +2427,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		}
-	}
-
-	shared_focus = {
-		id = GER_autobahn_a
-		text = GER_autobahn
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = GER_Civlian_Mobilization }
-		x = -1
-		y = 1
-		relative_position_id = GER_Civlian_Mobilization
-		cost = 10
-		ai_will_do = {
-			factor = 12
-		}
-
-		available = {
-			OR = {
-				has_full_control_of_state = 64
-				has_full_control_of_state = 59
-				has_full_control_of_state = 60
-				has_full_control_of_state = 54
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			custom_effect_tooltip = GER_autobahn_tt
-			hidden_effect = {
-				64 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				59 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				60 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-				54 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
-					}
-				}
-			}		
 		}
 	}
 

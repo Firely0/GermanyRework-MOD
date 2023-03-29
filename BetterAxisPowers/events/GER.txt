@@ -171,6 +171,7 @@ country_event = {
 	option = {
 		name = "We Will Together Again Soon..."
 		GER_bop_medium_decrease_effect = yes
+		GER_bop_increase_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
 	}
 }
@@ -182,10 +183,10 @@ country_event = {
 	picture = GFX_report_event_german_troops
 	is_triggered_only = yes
 	fire_only_once = yes
-	# ok
 	option = {
 		name = BBA_italy_bop.3.a
 		GER_bop_medium_increase_effect = yes
+		GER_bop_decrease_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_reclaiming_cores_tt
 	}
 }
