@@ -677,6 +677,11 @@ country_event = {
 	will_lead_to_war_with = HOL
 	will_lead_to_war_with = LUX
 	will_lead_to_war_with = FRA
+	immediate = {
+		GER = {
+			remove_ideas = POL_focused_on_the_eastern_front
+		}
+	}
 	option = {
 		name = ger_around_maginot_event.1.a
 		ai_chance = {
