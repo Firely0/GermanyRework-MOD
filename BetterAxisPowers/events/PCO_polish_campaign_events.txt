@@ -6059,14 +6059,6 @@ country_event = { #event for the end of the fighting
 	immediate = {
 		hidden_effect = {
 			set_global_flag = poland_partitionned_flag
-			if = {
-				limit = {
-					POL = {
-						has_capitulated = yes
-					}
-				}
-				SOV = { white_peace = POL }
-			}
 		}
 	}
 
