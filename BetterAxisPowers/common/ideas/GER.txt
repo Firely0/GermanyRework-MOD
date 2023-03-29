@@ -5150,6 +5150,7 @@ ideas = {
 	
 			cancel = {
 				is_at_peace_exiled_countries_excluded = no
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
 			}
 	
 			removal_cost = -1
@@ -5158,7 +5159,6 @@ ideas = {
 	
 			modifier = {
 				ai_call_ally_desire_factor = -500
-				ai_join_ally_desire_factor = -500
 			}
 
 		}
