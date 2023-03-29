@@ -1156,7 +1156,7 @@ GER_Vichy_state_modifier = {
 		}
 		add_dynamic_modifier = {
 			modifier = Ger_non_vichy_state_dynamic_modifier
-			target = GER
+			scope = GER
 		}
 	}
 }
