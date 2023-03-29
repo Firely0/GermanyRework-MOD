@@ -14,7 +14,7 @@ ideas = {
 
 			cancel = {
 				has_war_with = ENG
-			}
+			} 
 			
 			removal_cost = -1
 
@@ -36,6 +36,10 @@ ideas = {
 
 			allowed_civil_war = {
 				always = no
+			}
+
+			cancel = {
+				has_war_with = ENG
 			}
 			
 			removal_cost = -1
@@ -5129,6 +5133,32 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+			}
+
+		}
+
+		ita_dont_core_about_eth = { 
+
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			cancel = {
+				is_at_peace_exiled_countries_excluded = no
+			}
+	
+			removal_cost = -1
+			
+			picture = generic_guns_shield
+	
+			modifier = {
+				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
 			}
 
 		}

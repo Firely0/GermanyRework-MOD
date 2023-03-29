@@ -14,6 +14,28 @@ on_actions = {
 		}
 	}
 
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+					ITA = {
+						has_war_with = ETH 
+						is_ai = yes 
+					}
+					ETH = {
+						has_war_with = ITA
+						exiled = yes
+					}
+				}
+				ITA = {
+					add_ideas = ita_dont_core_about_eth
+				}
+			}
+		}
+	}
+
     on_state_control_changed = {
 		effect = {
 			if = { 

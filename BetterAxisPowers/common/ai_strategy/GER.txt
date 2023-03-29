@@ -1976,28 +1976,7 @@ GER_my_precisioussss = {
 		value = -999
 	}
 }
-GER_i_dont_care_of_etihopia = {
-	allowed = {
-		NOT = { original_tag = ITA }
-		NOT = { has_war_with = ETH }
-	}
-	enable = {
-		is_in_faction_with = ITA
-		ETH = {
-			exiled = yes
-		}
-	}
-	Abort = {
-		ETH = {
-			exiled = no
-		}
-	}
-	ai_strategy = {
-		type = dont_join_wars_with
-		id = "ITA"
-		value = 500
-	}
-}
+
 GER_let_italy_handle_french_front_alone = {
 	allowed = {
 		original_tag = GER
