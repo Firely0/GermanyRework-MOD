@@ -44,6 +44,16 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
+						SOV = {
+							controls_state = 96
+						}
+					}
+					SOV = {
+						transfer_state = 96
+					}
+				}
+				if = {
+					limit = {
 						has_global_flag = poland_partitionned_flag
 						POL = {
 							has_war_with = SOV
