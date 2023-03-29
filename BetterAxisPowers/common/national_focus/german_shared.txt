@@ -1345,7 +1345,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = {
+			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = Four_Year_Plan_2
 					add_idea = Four_Year_Plan_Civilian_Mobilization
@@ -1450,7 +1450,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = {
+			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = Four_Year_Plan_2
 					add_idea = Four_Year_Plan_Arms_Mobilization
