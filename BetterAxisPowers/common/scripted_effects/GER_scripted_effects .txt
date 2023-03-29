@@ -1162,6 +1162,18 @@ GER_Vichy_state_modifier = {
 	set_global_flag = ITA_GER_VICHY_ESTABLISHED
 }
 
+GER_SOV_white_peace_check = {
+	if = {
+		limit = {
+			original_tag = SOV
+			has_war_with = POL
+			has_global_flag = GER_SOV_WHITE_PEACE_1
+		}
+		white_peace = POL
+		clr_global_flag = GER_SOV_WHITE_PEACE_1
+	}
+}
+
 GER_Give_fascism_effect = {
 	random_other_country = {
 		limit = {
