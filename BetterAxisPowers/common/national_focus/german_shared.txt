@@ -1346,11 +1346,13 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Civilian_Mobilization
+				GER = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2
+						add_idea = Four_Year_Plan_Civilian_Mobilization
+					}
+					custom_effect_tooltip = GER_autobahn_tt					
 				}
-				custom_effect_tooltip = GER_autobahn_tt
 			}
 			hidden_effect = {
 				if = {
@@ -1451,9 +1453,11 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Arms_Mobilization
+				GER = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2
+						add_idea = Four_Year_Plan_Arms_Mobilization
+					}			
 				}
 			}
 			hidden_effect = {
