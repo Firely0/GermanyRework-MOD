@@ -4318,34 +4318,32 @@ ideas = {
 		designer = yes
 		
 		krupp = {
-		 picture = krupp
-			
-		allowed = {
-			original_tag = GER
-		}
-			
-		research_bonus = {
-			armor = 0.15	
-		}
 
-		visible = {
-		}
-
-		available = {
-			has_completed_focus = GER_krupp_eco_focus
-			custom_trigger_tooltip = {
-				tooltip = krupp_used_tt
-				krupp_used = yes
+			picture = krupp
+			allowed = {
+				original_tag = GER
 			}
-		}
-		}
 
-		ai_will_do = {
-			factor = 2
-		}
-	
-		traits = { krupp_tank}
+			visible = {
+			}
 
+			available = {
+				has_completed_focus = GER_krupp_eco_focus
+				custom_trigger_tooltip = {
+					tooltip = krupp_used_tt
+					krupp_used = yes
+				}
+			}
+			
+			research_bonus = {
+				armor = 0.15	
+			}
+			
+			traits = { krupp_tank }
+
+			ai_will_do = {
+				factor = 2
+			}
 		}
 
 		porsche = {
