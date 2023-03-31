@@ -164,3 +164,11 @@ krupp_used = {
 		}
 	}
 }
+
+japan_declared_war_usa = {
+	JAP = {
+		NOT = { has_war_with = GER }
+		has_war_with = USA
+	}
+	has_global_flag = GER_ITA_JAP_TRIPLE
+}

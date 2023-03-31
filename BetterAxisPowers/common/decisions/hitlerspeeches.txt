@@ -496,7 +496,10 @@ hitlerspeeches_category = {
 
 		available = {
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			has_wargoal_against = USA
+			OR = {
+				has_wargoal_against = USA
+				japan_declared_war_usa = yes
+			}
 
 		}
 
