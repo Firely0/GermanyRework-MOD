@@ -4333,12 +4333,11 @@ ideas = {
 
 		available = {
 			has_completed_focus = GER_krupp_eco_focus
-			AND = {
-				OR = {
-					has_idea = krupp_nofocusver
-					has_idea = krupp_idea_focus
-				}
+			custom_trigger_tooltip = {
+				tooltip = krupp_used_tt
+				krupp_used = yes
 			}
+		}
 		}
 
 		ai_will_do = {
