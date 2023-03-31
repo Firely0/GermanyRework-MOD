@@ -155,3 +155,12 @@ is_controlled_by_ITA_or_subject = {
 		}
 	}
 }
+
+krupp_used = {
+	AND = {
+		OR = {
+			has_idea = krupp_nofocusver
+			has_idea = krupp_idea_focus
+		}
+	}
+}
