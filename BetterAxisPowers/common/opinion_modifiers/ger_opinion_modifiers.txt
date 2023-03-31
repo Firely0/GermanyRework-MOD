@@ -16,6 +16,12 @@ opinion_modifiers = {
 		value = 75
 	}
 
+	speaked_against_us = {
+		value = -20
+		months = 3
+		decay = 1
+	}
+
 	remained_passive_to_the_soviet_invasion = {
 		value = -50
 		months = 4

@@ -26,13 +26,13 @@ hitlerspeeches_category = {
 		}
 
 		complete_effect = {
-			add_opinion_modifier = { target = ENG modifier = small_decrease }
-			add_opinion_modifier = { target = FRA modifier = small_decrease }
-			add_opinion_modifier = { target = USA modifier = small_decrease }
+			add_opinion_modifier = { target = ENG modifier = speaked_against_us }
+			add_opinion_modifier = { target = FRA modifier = speaked_against_us }
+			add_opinion_modifier = { target = USA modifier = speaked_against_us }
 			add_popularity = { ideology = fascism popularity = 0.03 }
 			
 		    hidden_effect = {
-			sound_effect = sp_kapitalismus 
+			 sound_effect = sp_kapitalismus 
 			}
 		}		
 	}
@@ -59,12 +59,12 @@ hitlerspeeches_category = {
 		}
 
 		complete_effect = {
-			add_manpower = 8000
-			add_popularity = { ideology = fascism popularity = 0.03 }
+		  add_manpower = 8000
+		  add_popularity = { ideology = fascism popularity = 0.03 }
 			
-		hidden_effect = {
+		  hidden_effect = {
 			sound_effect = sp_hitlerjugend 
-			}
+		  }
 		}
 		
 	}
@@ -122,7 +122,7 @@ hitlerspeeches_category = {
 
 		available = { 
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			has_idea = krupp
+			krupp_used = yes
 			NOT = { 51 = { is_demilitarized_zone = yes } }
 		}
 
@@ -156,7 +156,7 @@ hitlerspeeches_category = {
 
 		available = {
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			has_completed_focus = GER_autobahn
+			has_completed_focus = GER_Civlian_Mobilization
 		}
 		
 		activation = {
@@ -248,7 +248,7 @@ hitlerspeeches_category = {
         timeout_effect = {
             add_political_power = -50
 			add_popularity = { ideology = fascism popularity = -0.03 }			
-       		}
+       	}
 
 
 		complete_effect = {
@@ -297,9 +297,9 @@ hitlerspeeches_category = {
 			add_war_support = 0.02
 			add_popularity = { ideology = fascism popularity = 0.02 }
 			
-		hidden_effect = {
-			sound_effect = sp_kap_fra 
-			}
+		    hidden_effect = {
+			 sound_effect = sp_kap_fra 
+		    }
 		}
 				
 	}
@@ -343,14 +343,14 @@ hitlerspeeches_category = {
 			air_experience = 15
 			navy_experience = 15
 			add_tech_bonus = {
-    				bonus = 0.25
-    				uses = 1
-    				category = land_doctrine
+    			bonus = 0.25
+    			uses = 1
+    			category = land_doctrine
 			}
 	
 			hidden_effect = {
-					sound_effect = sp_totaler_krieg
-				}
+				sound_effect = sp_totaler_krieg
+			}
 
 		}
 		
@@ -388,8 +388,8 @@ hitlerspeeches_category = {
 			army_experience = 15
 
 			hidden_effect = {
-					sound_effect = sp_stalingrad 
-				}
+				sound_effect = sp_stalingrad 
+			}
 		}			
 		
 	}
@@ -421,11 +421,11 @@ hitlerspeeches_category = {
 		}
 
 		complete_effect = {
-			add_opinion_modifier = { target = USA modifier = small_decrease }
+			add_opinion_modifier = { target = USA modifier = speaked_against_us }
 			add_popularity = { ideology = fascism popularity = 0.02 }
 			
-		hidden_effect = {
-			sound_effect = sp_antwort_auf_roosevelt 
+		    hidden_effect = {
+			 sound_effect = sp_antwort_auf_roosevelt 
 			}
 		}
 				
@@ -464,85 +464,17 @@ hitlerspeeches_category = {
 			add_war_support = 0.1
 			add_manpower = 50000
 			add_tech_bonus = {
-    				bonus = 0.5
-    				uses = 1
-    				category = land_doctrine
+    			bonus = 0.5
+    			uses = 1
+    			category = land_doctrine
 			}
 	
 			hidden_effect = {
-					sound_effect = sp_letzte_rede
-				}
+				sound_effect = sp_letzte_rede
+			}
 
 		}
 		
-	}
-
-	war_pol = {
-
-		icon = category_usa_intervention_mandate
-
-		fire_only_once = yes
-
-		allowed = {
-			tag = GER
-		}
-
-		visible = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			NOT = { has_war_with = POL }
-			country_exists = POL
-			}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			has_wargoal_against = POL
-		}
-
-		complete_effect = {
-			declare_war_on = { target = POL type = take_state_focus }
-			add_war_support = 0.01
-			
-			hidden_effect = {
-				sound_effect = war_pol
-			}
-		}
-		
-		
-	}
-
-	war_sov = {
-
-		icon = category_usa_intervention_mandate
-
-		fire_only_once = yes
-
-		allowed = {
-			tag = GER
-		}
-
-		visible = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			NOT = { has_war_with = SOV }
-			country_exists = SOV
-		}
-
-		available = {
-			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			has_idea = joseph_goebbels
-			has_wargoal_against = SOV
-		}
-
-		complete_effect = {
-			declare_war_on = { target = SOV type = annex_everything }
-			add_war_support = 0.01
-			
-			hidden_effect = {
-				sound_effect = war_sov
-			}
-		}
-			
 	}
 
 	war_usa1 = {
@@ -574,8 +506,8 @@ hitlerspeeches_category = {
 			add_war_support = 0.01
 			
 			hidden_effect = {
-					sound_effect = war_usa
-				}
+				sound_effect = war_usa
+			}
 
 		}
 			
@@ -609,8 +541,8 @@ hitlerspeeches_category = {
 			add_war_support = 0.01
 			
 			hidden_effect = {
-					sound_effect = war_usa
-				}
+				sound_effect = war_usa
+			}
 
 		}
 			

@@ -342,6 +342,9 @@ on_actions = {
 					FROM = { tag = SOV }
 				}
 				add_ideas = GER_strike_union
+				hidden_effect = {
+					sound_effect = war_sov
+				}
 			}
 		}
 	}
