@@ -323,7 +323,11 @@ country_event = {
 				FIN = {
 					every_owned_state = {
 						limit = {
-							is_core_of = PREV
+							OR = {
+								state = 146
+								state = 147
+								state = 722
+							}
 						}
 						SOV = { add_state_claim = PREV }
 					}
@@ -6494,6 +6498,8 @@ country_event = { #SOV ask us to hand them over their territories
 				transfer_state = 89
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -6698,6 +6704,8 @@ country_event = { #SOV ask us to hand them over their territories
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -6909,6 +6917,8 @@ country_event = { #SOV wants to renegociate the pact since we're holding their a
 				transfer_state = 89
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7111,6 +7121,8 @@ country_event = { #SOV wants to renegociate the pact since we're holding their a
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7289,6 +7301,8 @@ country_event = { #GER wants to trade the territories they're holding for lithua
 				transfer_state = 784
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7398,6 +7412,8 @@ country_event = { #SOV is not interested in Lithuania
 				transfer_state = 89
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7599,6 +7615,8 @@ country_event = { #SOV is not interested in Lithuania
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7857,6 +7875,8 @@ country_event = { #SOV leaves us the territories we conquered
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -7974,6 +7994,8 @@ country_event = {
 				transfer_state = 89
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -8178,6 +8200,8 @@ country_event = { #GER ask us to hand them over their territories
 				transfer_state = 89
 				
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -8440,6 +8464,8 @@ country_event = { #GER ask us to hand them over their territories
 			
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -8667,6 +8693,8 @@ country_event = { #GER says we can  keep the territories
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -8794,6 +8822,8 @@ country_event = { #SOV ask us if we can hand each others territories
 				#transfer_state = 784
 
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			GER = {
 				transfer_state = 784
@@ -9058,6 +9088,8 @@ country_event = { #SOV ask us if we can hand each others territories
 			
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -9315,6 +9347,8 @@ country_event = { #SOV propose that we keep each others terr and redraw our bord
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -9401,6 +9435,8 @@ country_event = { #SOV propose that we keep each others terr and redraw our bord
 			}
 			SOV = {
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			if = {
 				limit = {

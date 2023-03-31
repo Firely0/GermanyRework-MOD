@@ -2,6 +2,58 @@ ideas = {
 
 	country = {
 
+		Landon_Treaty = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = ENG
+			} 
+			
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+				production_cost_max_ship_hull_heavy = 6000
+				production_cost_max_ship_hull_light = 3000
+				production_cost_max_ship_hull_submarine = 500
+				production_cost_max_ship_hull_carrier = 1
+			}
+		}
+
+		Landon_Treaty_sub_focus = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = ENG
+			}
+			
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+			
+			modifier = {
+				production_cost_max_ship_hull_heavy = 5000
+				production_cost_max_ship_hull_light = 2000
+				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_carrier = 1
+			}
+		}
+
 		GER_special_forces = {
 
 			picture = generic_army_war_college
@@ -18,6 +70,44 @@ ideas = {
 			modifier = {
 				special_forces_cap = 0.1
 				special_forces_training_time_factor = 0.1
+			}
+		}
+
+		GER_convert_war_eco = {
+
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.3
+			}
+		}
+
+		GER_volkswagen_idea = {
+
+			picture = volkswagen
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment_1 = {
+					build_cost_ic = -0.05 reliability = 0.05 
+				}
 			}
 		}
 
@@ -4239,11 +4329,16 @@ ideas = {
 		}
 
 		visible = {
-		has_completed_focus = GER_Eco_Plan_Side_A_3
 		}
 
 		available = {
-			has_completed_focus = GER_Eco_Plan_Side_A_3
+			has_completed_focus = GER_krupp_eco_focus
+			AND = {
+				OR = {
+					has_idea = krupp_nofocusver
+					has_idea = krupp_idea_focus
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -4797,9 +4892,13 @@ ideas = {
 			visible = {
 			NOT = {
 		     has_completed_focus = GER_Eco_Plan_Side_A_2
-			 }
+			}
 		    }
-			
+
+			available = {
+				has_completed_focus = GER_krupp_eco_focus
+			}
+
 			research_bonus = {
 			 industry = 0.15
 			}
@@ -4818,11 +4917,11 @@ ideas = {
 			}
 
 			visible = {
-		    has_completed_focus = GER_Eco_Plan_Side_A_2
+		     has_completed_focus = GER_Eco_Plan_Side_A_2
 		    } 
 
 		    available = {
-			has_completed_focus = GER_Eco_Plan_Side_A_2
+				has_completed_focus = GER_krupp_eco_focus
 		    }
 			
 			research_bonus = {
@@ -5034,6 +5133,32 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+			}
+
+		}
+
+		ita_dont_core_about_eth = { 
+
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = no
+			}
+	
+			cancel = {
+				is_at_peace_exiled_countries_excluded = no
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+			}
+	
+			removal_cost = -1
+			
+			picture = generic_guns_shield
+	
+			modifier = {
+				ai_call_ally_desire_factor = -500
 			}
 
 		}

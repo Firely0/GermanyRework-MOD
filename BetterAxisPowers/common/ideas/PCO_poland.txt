@@ -41,6 +41,29 @@ ideas = {
 				defense_bonus_against = -0.4
 			}
 
+			on_remove = {
+				if = {
+					limit = {
+						SOV = {
+							controls_state = 96
+						}
+					}
+					SOV = {
+						transfer_state = 96
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = poland_partitionned_flag
+						POL = {
+							has_war_with = SOV
+						}
+					}
+					POL = { white_peace = SOV }
+					SOV = { white_peace = POL }
+				}
+			}
+
 			picture = PolandArmyProblems
 
 			modifier = {

@@ -1,1156 +1,1259 @@
 
 give_SOV_armor_research_bonuses = { #this effect is run for the Soviets!
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		add_tech_bonus = {
-			name = med_armor_bonus
-			ahead_reduction = 2
-			category = cat_medium_armor
-		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 1
-			category = armor
-		}
-	}
-	if = { #double if because history files don't like else and this effect is run in the Soviet history file
-		limit = {
+if = {
+	limit = {
+		NOT = {
 			has_dlc = "No Step Back"
 		}
-		create_equipment_variant = {
-			name = "A-20"
-			type = medium_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_small_cannon_2
-				turret_type_slot = tank_medium_two_man_tank_turret
-				suspension_type_slot = tank_christie_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine
-				special_type_slot_1 = sloped_armor
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 8
-				tank_nsb_armor_upgrade = 2
-			}
-			icon = "GFX_SOV_basic_medium_tank_medium"
-		}
-		create_equipment_variant = {
-			name = "KV-1"
-			type = heavy_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_medium_cannon
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine		
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 10
-				tank_nsb_armor_upgrade = 9
-			}
-			icon = "GFX_SOV_improved_heavy_tank_medium"
-		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 2
-			category = armor
-		}
 	}
+	add_tech_bonus = {
+		name = med_armor_bonus
+		ahead_reduction = 2
+		category = cat_medium_armor
+	}
+	add_tech_bonus = {
+		name = armor_bonus
+		bonus = 1.0
+		uses = 1
+		category = armor
+	}
+}
+if = { #double if because history files don't like else and this effect is run in the Soviet history file
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "A-20"
+		type = medium_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 8
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "GFX_SOV_basic_medium_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "KV-1"
+		type = heavy_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine		
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 10
+			tank_nsb_armor_upgrade = 9
+		}
+		icon = "GFX_SOV_improved_heavy_tank_medium"
+	}
+	add_tech_bonus = {
+		name = armor_bonus
+		bonus = 1.0
+		uses = 2
+		category = armor
+	}
+}
 }
 
 MR_pact_transfer_state_effect = {
+if = {
+	limit = {
+		96 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 96
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
 	if = {
 		limit = {
-			96 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 96
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = { transfer_state = 96 }
-		}
-		else = {
-			random_other_country = {
-				limit = {
+			NOT = {
+				any_other_country = {
 					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 96
-			}
-		}
-	}
-	if = {
-		limit = {
-			95 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 95
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = { transfer_state = 95 }
-		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 95
-			}
-		}
-	}
-	if = {
-		limit = {
-			94 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 94
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = { transfer_state = 94 }
-		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 94
-			}
-		}
-	}
-	if = {
-		limit = {
-			93 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 93
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 93 }
-	}
-	if = {
-		limit = {
-			91 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 91
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 91 }
-	}
-	if = {
-		limit = {
-			97 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 97
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = { transfer_state = 97 }
-		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 97
-				97 = {
-					add_core_of = PREV
-				}
-			}
-		}
-	}
-	if = {
-		limit = {
-			89 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 89
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 89 }
-	}
-	if = {
-		limit = {
-			784 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 784
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_global_flag = LIT_gets_vilnius
-					LIT = { controls_state = 784 }
-					LIT = { is_in_faction_with = SOU }
-				}
-				LIT = { exists = yes }
-			}
-			LIT = { transfer_state = 784 }
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = { transfer_state = 784 }
-		}
-		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 784
-			}
-		}
-	}
-}
-
-MR_pact_transfer_faction_state_effect = {
-	if = {
-		limit = {
-			96 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 96
-						is_in_faction_with = ROOT
-					}
+					has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 				}
 			}
 		}
 		SOU = { transfer_state = 96 }
 	}
+	else = {
+		random_other_country = {
+			limit = {
+				is_in_faction_with = SOU
+				OR = {
+					has_cosmetic_tag = LIT_belarus
+					has_cosmetic_tag = LAT_belarus
+					has_cosmetic_tag = EST_belarus
+					has_cosmetic_tag = BAL_UNIFIED
+				}
+			}
+			transfer_state = 96
+		}
+	}
+}
+if = {
+	limit = {
+		95 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 95
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
 	if = {
 		limit = {
-			95 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 95
-						is_in_faction_with = ROOT
-					}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = SOU
+					has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 				}
 			}
 		}
 		SOU = { transfer_state = 95 }
 	}
+	else = {
+		random_other_country = {
+			limit = {
+				is_in_faction_with = SOU
+				OR = {
+					has_cosmetic_tag = LIT_belarus
+					has_cosmetic_tag = LAT_belarus
+					has_cosmetic_tag = EST_belarus
+					has_cosmetic_tag = BAL_UNIFIED
+				}
+			}
+			transfer_state = 95
+		}
+	}
+}
+if = {
+	limit = {
+		94 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 94
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
 	if = {
 		limit = {
-			94 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 94
-						is_in_faction_with = ROOT
-					}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = SOU
+					has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 				}
 			}
 		}
 		SOU = { transfer_state = 94 }
 	}
-	if = {
-		limit = {
-			93 = {
+	else = {
+		random_other_country = {
+			limit = {
+				is_in_faction_with = SOU
 				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 93
-						is_in_faction_with = ROOT
-					}
+					has_cosmetic_tag = LIT_belarus
+					has_cosmetic_tag = LAT_belarus
+					has_cosmetic_tag = EST_belarus
+					has_cosmetic_tag = BAL_UNIFIED
+				}
+			}
+			transfer_state = 94
+		}
+	}
+}
+if = {
+	limit = {
+		93 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 93
+					is_subject_of = ROOT
 				}
 			}
 		}
-		SOU = { transfer_state = 93 }
 	}
-	if = {
-		limit = {
-			91 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 91
-						is_in_faction_with = ROOT
-					}
+	SOU = { transfer_state = 93 }
+}
+if = {
+	limit = {
+		91 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 91
+					is_subject_of = ROOT
 				}
 			}
 		}
-		SOU = { transfer_state = 91 }
+	}
+	SOU = { transfer_state = 91 }
+}
+if = {
+	limit = {
+		97 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 97
+					is_subject_of = ROOT
+				}
+			}
+		}
 	}
 	if = {
 		limit = {
-			97 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 97
-						is_in_faction_with = ROOT
-					}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = SOU
+					has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 				}
 			}
 		}
 		SOU = { transfer_state = 97 }
 	}
-	if = {
-		limit = {
-			89 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 89
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		SOU = { transfer_state = 89 }
-	}
-	if = {
-		limit = {
-			784 = {
-				OR = {
-					is_controlled_by = ROOT
-					any_other_country = { 
-						controls_state = 784
-						is_in_faction_with = ROOT
-					}
-				}
-			}
-		}
-		if = {
+	else = {
+		random_other_country = {
 			limit = {
+				is_in_faction_with = SOU
 				OR = {
-					has_global_flag = LIT_gets_vilnius
-					LIT = { controls_state = 784 }
+					has_cosmetic_tag = LIT_belarus
+					has_cosmetic_tag = LAT_belarus
+					has_cosmetic_tag = EST_belarus
+					has_cosmetic_tag = BAL_UNIFIED
 				}
-				LIT = { exists = yes }
 			}
-			LIT = { transfer_state = 784 }
-		}
-		else = {
-			SOU = { transfer_state = 784 }
+			transfer_state = 97
+			97 = {
+				add_core_of = PREV
+			}
 		}
 	}
 }
-
-GER_bop_increase_lost_core_modifier = {
+if = {
+	limit = {
+		89 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 89
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 89 }
+}
+if = {
+	limit = {
+		784 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 784
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
 	if = {
 		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_4
+			OR = {
+				has_global_flag = LIT_gets_vilnius
+				LIT = { controls_state = 784 }
+				LIT = { is_in_faction_with = SOU }
 			}
+			LIT = { exists = yes }
 		}
-		add_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_5
-		}
-	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_3
-			}
-		}
-		add_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_4
-		}
-	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_2
-			}
-		}
-		add_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_3
-		}
-	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_1
-			}
-		}
-		add_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_2
-		}
+		LIT = { transfer_state = 784 }
 	}
 	else_if = {
 		limit = {
 			NOT = {
-				has_power_balance_modifier = {
-					id = GER_power_balance
-					modifier = GER_power_balance_lost_core_5
+				any_other_country = {
+					is_in_faction_with = SOU
+					has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 				}
 			}
 		}
-		add_power_balance_modifier = {
-			id = GER_power_balancev
+		SOU = { transfer_state = 784 }
+	}
+	else = {
+		random_other_country = {
+			limit = {
+				is_in_faction_with = SOU
+				OR = {
+					has_cosmetic_tag = LIT_belarus
+					has_cosmetic_tag = LAT_belarus
+					has_cosmetic_tag = EST_belarus
+					has_cosmetic_tag = BAL_UNIFIED
+				}
+			}
+			transfer_state = 784
+		}
+	}
+}
+}
+
+MR_pact_transfer_faction_state_effect = {
+if = {
+	limit = {
+		96 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 96
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 96 }
+}
+if = {
+	limit = {
+		95 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 95
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 95 }
+}
+if = {
+	limit = {
+		94 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 94
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 94 }
+}
+if = {
+	limit = {
+		93 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 93
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 93 }
+}
+if = {
+	limit = {
+		91 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 91
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 91 }
+}
+if = {
+	limit = {
+		97 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 97
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 97 }
+}
+if = {
+	limit = {
+		89 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = {
+					controls_state = 89
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	SOU = { transfer_state = 89 }
+}
+if = {
+	limit = {
+		784 = {
+			OR = {
+				is_controlled_by = ROOT
+				any_other_country = { 
+					controls_state = 784
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_global_flag = LIT_gets_vilnius
+				LIT = { controls_state = 784 }
+			}
+			LIT = { exists = yes }
+		}
+		LIT = { transfer_state = 784 }
+	}
+	else = {
+		SOU = { transfer_state = 784 }
+	}
+}
+}
+
+GER_bop_increase_lost_core_modifier = {
+if = {
+	limit = {
+		has_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_4
+		}
+	}
+	add_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_5
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_3
+		}
+	}
+	add_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_4
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_lost_core_2
+		}
+	}
+	add_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_3
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
+			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_1
 		}
 	}
+	add_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_2
+	}
+}
+else_if = {
+	limit = {
+		NOT = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_lost_core_5
+			}
+		}
+	}
+	add_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_1
+	}
+}
 }
 
 GER_bop_decrease_lost_core_modifier = {
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_5
-			}
-		}
-		remove_power_balance_modifier = {
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_5
 		}
 	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_4
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_5
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_4
 		}
 	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_3
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_4
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_3
 		}
 	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_2
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_3
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_2
 		}
 	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_1
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_2
+	}
+}
+else_if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_1
 		}
 	}
-	else = {
-		#NOTHING cannot decrease
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_1
 	}
+}
+else = {
+	#NOTHING cannot decrease
+}
 }
 
 GER_bop_remove_lost_core_modifier = {
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_5
-			}
-		}
-		remove_power_balance_modifier = {
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_5
 		}
 	}
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_4
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_5
+	}
+}
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_4
 		}
 	}
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_3
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_4
+	}
+}
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_3
 		}
 	}
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_2
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_3
+	}
+}
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_2
 		}
 	}
-	if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_1
-			}
-		}
-		remove_power_balance_modifier = {
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_2
+	}
+}
+if = {
+	limit = {
+		has_power_balance_modifier = {
 			id = GER_power_balance
 			modifier = GER_power_balance_lost_core_1
 		}
 	}
+	remove_power_balance_modifier = {
+		id = GER_power_balance
+		modifier = GER_power_balance_lost_core_1
+	}
+}
 }
 
 GER_upgrade_wehrmacht_effect = {	
-		hidden_effect = {
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_dynamic_modifier
-					}
-					has_completed_focus = GER_tank_warfare
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_dynamic_modifier
 				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_Tank_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_inf
-					add_idea = Wehrmacht_Main_Tank
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = { modifier = Wehrmacht_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_Tank_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_inf
+				add_idea = Wehrmacht_Main_Tank
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_Tank_dynamic_modifier
+				}
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = { modifier = Wehrmacht_Tank_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_Tank_1_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_Tank
+				add_idea = Wehrmacht_Main_Tank_1
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_Tank_1_dynamic_modifier
+				}
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = { modifier = Wehrmacht_Tank_1_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_Tank_2_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_Tank_1
+				add_idea = Wehrmacht_Main_Tank_2
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_dynamic_modifier
+				}
+				has_completed_focus = GER_Battle_Plan
+			}
+			remove_dynamic_modifier = { modifier = Wehrmacht_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_INF_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_dynamic_modifier
 				}
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_Tank_dynamic_modifier
-					}
-					has_completed_focus = GER_tank_warfare
-				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_Tank_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_Tank_1_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_Tank
-					add_idea = Wehrmacht_Main_Tank_1
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_INF_1_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_1_dynamic_modifier
 				}
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_Tank_1_dynamic_modifier
-					}
-					has_completed_focus = GER_tank_warfare
-				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_Tank_1_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_Tank_2_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_Tank_1
-					add_idea = Wehrmacht_Main_Tank_2
-				}
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_1_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_inf
+				add_idea = Wehrmacht_Main_inf_1
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_dynamic_modifier
-					}
-					has_completed_focus = GER_Battle_Plan
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_2_dynamic_modifier
 				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_INF_dynamic_modifier }
+				has_completed_focus = GER_Cheap_EQ
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_INF_dynamic_modifier
-					}
-				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_INF_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_INF_1_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_INF_3_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_inf_1
+				add_idea = WehrmachtWarPlana_h
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_INF_1_dynamic_modifier
-					}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_2_dynamic_modifier
 				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_INF_1_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_inf
-					add_idea = Wehrmacht_Main_inf_1
-				}
+				has_completed_focus = GER_Cheap_SUP
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_INF_2_dynamic_modifier
-					}
-					has_completed_focus = GER_Cheap_EQ
-				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_INF_3_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_inf_1
-					add_idea = WehrmachtWarPlana_h
-				}
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Wehrmacht_INF_4_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Wehrmacht_Main_inf_1
+				add_idea = WehrmachtWarPlanb_h
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = Wehrmacht_INF_2_dynamic_modifier
-					}
-					has_completed_focus = GER_Cheap_SUP
-				}
-				remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Wehrmacht_INF_4_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Wehrmacht_Main_inf_1
-					add_idea = WehrmachtWarPlanb_h
-				}
+		}
+		# Fake update to get the other ones in the correct place
+		# Airforce
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
 			}
-			# Fake update to get the other ones in the correct place
-			# Airforce
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
+		}
+		# Navy
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
 			}
-			# Navy
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+		}
+	}
+}
+
+GER_upgrade_luftwaffe_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+				has_completed_focus = GER_Strategic_Des
 			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Luftwaffe_debuff
+				add_idea = Luftwaffe_SD
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+				has_completed_focus = GER_CAS
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Luftwaffe_debuff
+				add_idea = Luftwaffe_CAS
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Luftwaffe_CAS
+				add_idea = Luftwaffe_CAS_R
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+				has_completed_focus = GER_Operational_Integratiy
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Luftwaffe_debuff
+				add_idea = Luftwaffe_OI
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
+			swap_ideas = {
+				remove_idea = Luftwaffe_OI
+				add_idea = Luftwaffe_OI_IMP
+			}
+		}
+		# Fake update to get the other ones in the correct place
+		# Navy
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+		}
+	}
+}
+
+GER_upgrade_kriegsmarine_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+				has_completed_focus = GER_carrier_war
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			}
+			remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
+			add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
+		}
+	}
+}
+
+GER_upgrade_kriegsmarine_idea_effect = {
+		if = {
+			limit = {
+				has_idea = Kriegsmarine_Debuff_Version
+				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			}
+			swap_ideas = {
+				remove_idea = Kriegsmarine_Debuff_Version
+				add_idea = Kriegsmarine_buff_Version_No_Carrier
+			}
+		}
+		if = {
+			limit = {
+				has_idea = Kriegsmarine_Debuff_Version
+				has_completed_focus = GER_carrier_war
+			}
+			swap_ideas = {
+				remove_idea = Kriegsmarine_Debuff_Version
+				add_idea = Kriegsmarine_Debuff_Version_Carrier
+			}
+		}
+		if = {
+			limit = {
+				has_idea = Kriegsmarine_buff_Version_No_Carrier
+				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			}
+			swap_ideas = {
+				remove_idea = Kriegsmarine_buff_Version_No_Carrier
+				add_idea = Kriegsmarine_Debuff_Version_Last_Version
+			}
+		}
+		if = {
+			limit = {
+				has_idea = Kriegsmarine_Debuff_Version_Carrier
+				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			}
+			swap_ideas = {
+				remove_idea = Kriegsmarine_Debuff_Version_Carrier
+				add_idea = Kriegsmarine_Debuff_Version_Last_Version
+			}
+		}
+}
+
+GER_Lands_in_Soviet = {
+	every_state = {
+		limit = { 
+			has_state_flag = GER_Claim_lands
+			is_controlled_by_ROOT_or_ally = yes
+		} 
+		transfer_state_to = GER
+	}
+}
+
+JAP_Lands_in_Soviet = {
+	if = {
+		limit = {
+			has_country_flag = GER_SOV_JAP_Demanded
+			408 = { is_owned_by = SOV }
+			409 = { is_owned_by = SOV }
+			655 = { is_owned_by = SOV }
+		}
+		JAP = {
+			transfer_state = 408
+			transfer_state = 409
+			transfer_state = 655
+			add_state_core = 655
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_Fate_of_SOV
 			}
 		}
 	}
+}
+
+ROM_Lands_in_Soviet = {
+	if = {
+		limit = {
+			has_country_flag = GER_SOV_ROM_Demanded
+			80 = { is_owned_by = SOV }
+			78 = { is_owned_by = SOV }
+			766 = { is_owned_by = SOV }
+		}
+		ROM = {
+			transfer_state = 80
+			transfer_state = 78
+			transfer_state = 766
+		}
+		ROM = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_Fate_of_SOV
+			}
+		}
+	}
+}
+
+FIN_Lands_in_Soviet = {
+	if = {
+		limit = {
+			has_country_flag = GER_SOV_FIN_Demanded
+			146 = { is_owned_by = SOV }
+			147 = { is_owned_by = SOV }
+			722 = { is_owned_by = SOV }
+		}
+		FIN = {
+			transfer_state = 146
+			transfer_state = 147
+			transfer_state = 722
+		}
+		FIN = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_Fate_of_SOV
+			}
+		}
+	}
+}
+
+TUR_Lands_in_Soviet = {
+	if = {
+		limit = {
+			has_country_flag = GER_SOV_TUR_Demanded
+			231 = { is_owned_by = SOV }
+			229 = { is_owned_by = SOV }
+			230 = { is_owned_by = SOV }
+		}
+		TUR = {
+			transfer_state = 231
+			transfer_state = 229
+			transfer_state = 230
+			add_state_core = 229
+		}
+		TUR = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GER_Fate_of_SOV
+			}
+		}
+	}
+}
+
+GER_isolate_effect = {
+	GER = {
+		every_neighbor_country = {
+			target = {
+			NOT = { 
+			 tag = GER 
+			}
+			NOT = { 
+			 tag = AUS 
+			}
+			AND = {
+			 bordering_country = GER
+			}
+			}
+			country_event = { id = GER_rhineland_isolete.1 }
+		}
+	}
+}
+
+GER_Vichy_state_modifier = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 18
+				state = 29
+				state = 785
+				state = 16
+				state = 15
+				state = 30
+				state = 24
+				state = 14
+				state = 30
+				state = 23
+				state = 19
+				state = 806
+				state = 27
+				state = 17
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = Ger_non_vichy_state_dynamic_modifier
+			scope = GER
+		}
+	}
+	set_global_flag = ITA_GER_VICHY_ESTABLISHED
+}
+
+GER_SOV_white_peace_check = {
+	if = {
+		limit = {
+			original_tag = SOV
+			has_war_with = POL
+			has_global_flag = GER_SOV_WHITE_PEACE_1
+		}
+		white_peace = POL
+		clr_global_flag = GER_SOV_WHITE_PEACE_1
+	}
+}
+
+GER_Give_fascism_effect = {
+	random_other_country = {
+		limit = {
+			original_tag = GER
+			has_government = fascism
+		}
+		save_event_target_as = fascist_germany_civil_war
+		every_unit_leader = {
+			set_nationality = GER
+		}
+		set_variable = {
+			GER_max_command_power = -20
+		}
+		set_variable = {
+			GER_max_planning_factor = -0.2
+		}
+		set_variable = {
+			GER_planning_speed = -0.1
+		}
+		set_variable = {
+			GER_minimum_training_level = 0.1
+		}
+		set_variable = {
+			GER_land_doctrine_cost_factor = 0.1
+		}
+		set_variable = {
+			GER_air_mission_efficiency = -0.1
+		}
+		set_variable = {
+			GER_air_accidents_factor = 0.1
+		}
+		set_variable = {
+			GER_air_doctrine_cost_factor = 0.1
+		}
+		set_variable = {
+			GER_navy_visibility = 0.1
+		}
+		set_variable = {
+			GER_sub_retreat_speed = 0.05
+		}
+		set_variable = {
+			GER_critical_receive_chance = 0.1
+		}
+		set_variable = {
+			GER_naval_doctrine_cost_factor = 0.1
+		}
+		add_dynamic_modifier = {
+			modifier = Wehrmacht_dynamic_modifier
+		}
+		add_dynamic_modifier = {
+			modifier = Luftwaffe_dynamic_modifier
+		}
+		add_dynamic_modifier = {
+			modifier = Kriegsmarine_dynamic_modifier
+		}
+		load_focus_tree = {
+			tree = german_fuhrer_better
+			keep_completed = yes
+		}
+		complete_national_focus = GER_establish_abwehr
+		complete_national_focus = GER_Fuhrer
+	}
+	GER = {
+		every_unit_leader = {
+			limit = {
+				OR = {
+					has_id = 10
+					has_id = 15
+					has_id = 20
+					has_id = 24
+				}
+			}
+			set_nationality = event_target:fascist_germany_civil_war
+		}
+	}
+}
+
+
+
+
+
+
 	
-	GER_upgrade_luftwaffe_effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-					has_completed_focus = GER_Strategic_Des
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Luftwaffe_debuff
-					add_idea = Luftwaffe_SD
-				}
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_SD_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_SD_A_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_SD_B_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-					has_completed_focus = GER_CAS
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Luftwaffe_debuff
-					add_idea = Luftwaffe_CAS
-				}
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_CAS_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_CAS_A_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Luftwaffe_CAS
-					add_idea = Luftwaffe_CAS_R
-				}
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-					has_completed_focus = GER_Operational_Integratiy
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Luftwaffe_debuff
-					add_idea = Luftwaffe_OI
-				}
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Luftwaffe_OI_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Luftwaffe_OI_A_dynamic_modifier }
-				swap_ideas = {
-					remove_idea = Luftwaffe_OI
-					add_idea = Luftwaffe_OI_IMP
-				}
-			}
-			# Fake update to get the other ones in the correct place
-			# Navy
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_PlanZ_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-			}
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-			}
-		}
-	}
-
-	GER_upgrade_kriegsmarine_effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-					has_completed_focus = GER_carrier_war
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-			}
-			else_if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-			}
-			else_if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-			}
-			else_if = {
-				limit = {
-					has_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				}
-				remove_dynamic_modifier = { modifier = Kriegsmarine_Carrier_dynamic_modifier }
-				add_dynamic_modifier = { modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier }
-			}
-		}
-	}
-
-	GER_upgrade_kriegsmarine_idea_effect = {
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_Debuff_Version
-					has_completed_focus = GER_carrier_war
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_Debuff_Version
-					add_idea = Kriegsmarine_FAKE_Carrier_Buff
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_FAKE
-					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_FAKE
-					add_idea = Kriegsmarine_buff_Version_No_Carrier
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_FAKE_Carrier_Buff
-					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_FAKE_Carrier_Buff
-					add_idea = Kriegsmarine_Debuff_Version_Last_Version
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Kriegsmarine_buff_Version_No_Carrier
-					has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-				}
-				swap_ideas = {
-					remove_idea = Kriegsmarine_buff_Version_No_Carrier
-					add_idea = Kriegsmarine_Debuff_Version_Last_Version
-				}
-			}
-	}
-
-	GER_Lands_in_Soviet = {
-		every_state = {
-			limit = { 
-				has_state_flag = GER_Claim_lands
-				is_controlled_by = GER
-			} 
-			transfer_state_to = GER
-		}
-	}
-
-	JAP_Lands_in_Soviet = {
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_JAP_Demanded
-				408 = { is_owned_by = SOV }
-				409 = { is_owned_by = SOV }
-				655 = { is_owned_by = SOV }
-			}
-			JAP = {
-				transfer_state = 408
-				transfer_state = 409
-				transfer_state = 655
-				add_state_core = 655
-			}
-			JAP = {
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_Fate_of_SOV
-				}
-			}
-		}
-	}
-
-	ROM_Lands_in_Soviet = {
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_ROM_Demanded
-				80 = { is_owned_by = SOV }
-				78 = { is_owned_by = SOV }
-				766 = { is_owned_by = SOV }
-			}
-			ROM = {
-				transfer_state = 80
-				transfer_state = 78
-				transfer_state = 766
-			}
-			ROM = {
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_Fate_of_SOV
-				}
-			}
-		}
-	}
-
-	FIN_Lands_in_Soviet = {
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_FIN_Demanded
-				146 = { is_owned_by = SOV }
-				147 = { is_owned_by = SOV }
-				722 = { is_owned_by = SOV }
-			}
-			FIN = {
-				transfer_state = 146
-				transfer_state = 147
-				transfer_state = 722
-			}
-			FIN = {
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_Fate_of_SOV
-				}
-			}
-		}
-	}
-
-	TUR_Lands_in_Soviet = {
-		if = {
-			limit = {
-				has_country_flag = GER_SOV_TUR_Demanded
-				231 = { is_owned_by = SOV }
-				229 = { is_owned_by = SOV }
-				230 = { is_owned_by = SOV }
-			}
-			TUR = {
-				transfer_state = 231
-				transfer_state = 229
-				transfer_state = 230
-				add_state_core = 229
-			}
-			TUR = {
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_Fate_of_SOV
-				}
-			}
-		}
-	}
-
-	GER_isolate_effect = {
-		GER = {
-			every_neighbor_country = {
-				target = {
-				NOT = { 
-					tag = GER 
-				}
-				NOT = { 
-					tag = AUS 
-				}
-				AND = {
-					bordering_country = GER
-				}
-				}
-				country_event = { id = GER_rhineland_isolete.1 }
-			}
-		}
-	}
-
-
-
-
-
-	
-		

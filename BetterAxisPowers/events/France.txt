@@ -442,132 +442,54 @@ country_event = {
 		if = {
 			limit = { 28 = { owner = { original_tag = FRA } } }
 			set_state_controller = 28
-			28 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 17 = { owner = { original_tag = FRA } } }
 			set_state_controller = 17
-			17 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 27 = { owner = { original_tag = FRA } } }
 			set_state_controller = 27
-			27 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 18 = { owner = { original_tag = FRA } } }
 			set_state_controller = 18
-			18 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 29 = { owner = { original_tag = FRA } } }
 			set_state_controller = 29
-			29 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 785 = { owner = { original_tag = FRA } } }
 			set_state_controller = 785
-			785 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 15 = { owner = { original_tag = FRA } } }
 			set_state_controller = 15
-			15 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 16 = { owner = { original_tag = FRA } } }
 			set_state_controller = 16
-			16 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 24 = { owner = { original_tag = FRA } } }
 			set_state_controller = 24
-			24 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 30 = { owner = { original_tag = FRA } } }
 			set_state_controller = 30
-			30 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 14 = { owner = { original_tag = FRA } } }
 			set_state_controller = 14
-			14 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 23 = { owner = { original_tag = FRA } } }
 			set_state_controller = 23
-			23 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		if = {
 			limit = { 19 = { owner = { original_tag = FRA } } }
 			set_state_controller = 19
-			19 = { 
-				add_dynamic_modifier = {
-					modifier = Ger_non_vichy_state_dynamic_modifier
-					scope = GER
-				}
-			}
 		}
 		# Italian Occupation Zone (if they did well)
 		if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
@@ -637,7 +559,6 @@ country_event = {
 			}
 			ITA = { transfer_state = 735 }
 		}
-		
 		#Spanish occupation zone
 		if = {
 			limit = {
@@ -1179,6 +1100,7 @@ country_event = {
 		hidden_effect =  {
 			FRA = { news_event = { id = france.20 days = 1 } }
 		}
+		GER_Vichy_state_modifier = yes
 	}
 	option = { # Agree - Fascism - LaR
 		name = france.14.a
@@ -1392,6 +1314,7 @@ country_event = {
 				}
 			}
 		}
+		GER_Vichy_state_modifier = yes
 	}
 	option = { # Conquer everything!
 		name = france.14.b

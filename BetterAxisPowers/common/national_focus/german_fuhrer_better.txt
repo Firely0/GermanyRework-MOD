@@ -34,7 +34,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
 		}
-		x = 61
+		x = 41
 		y = 0
 		cost = 5
 		available = {
@@ -77,7 +77,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
-		x = 59
+		x = 39
 		y = 0
 		cost = 5
 		available = {
@@ -118,7 +118,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_rhineland_ab focus = GER_rhineland_demilitarized
 		}
-		x = 60
+		x = 40
 		y = 1
 		cost = 1
 		available = {
@@ -592,14 +592,14 @@ focus_tree = {
 		id = GER_SS
 		text = GER_SS_F
 		icon = GFX_focus_generic_military_mission
-		allow_branch = { has_government = fascism }
+		#allow_branch = { has_government = fascism NOT = { has_country_flag = GER_block_ss } }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
 			has_government = fascism
 			is_puppet = no
 		}
 		cancel_if_invalid = no
-		x = -14
+		x = 40
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -716,7 +716,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 50
+		x = 26
 		y = 1
 		cost = 3
 
@@ -724,7 +724,7 @@ focus_tree = {
 			has_government = fascism
 			OR = {
 				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_grand_counchil
+				#has_completed_focus = GER_grand_counchil
 			}
 		}
 
@@ -2372,6 +2372,40 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_uk_friend
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = GER_foregin_affairs }
+		available = { 
+			NOT = { has_war_with = ENG }
+			ENG = {
+				custom_trigger_tooltip = {
+					tooltip = GER_alone_or_peace_faction_tt
+					is_alone_or_in_faction_at_peace_with_GER = yes
+				}
+				exists = yes
+			}
+		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
+		}
+		cancel = {
+			OR = {
+				NOT = { country_exists = ENG }
+				has_war_with = ENG
+			}
+		}
+		cancel_if_invalid = no
+		x = 10
+		y = 0
+		relative_position_id = GER_anschluss
+		cost = 5
+		ai_will_do = {
+		}		
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_request_slovenia
 		icon = GFX_goal_generic_military_deal
 		will_lead_to_war_with = YUG
@@ -2424,7 +2458,7 @@ focus_tree = {
 		}		
 		completion_reward = {
 			GER = {
-				country_event = { id = gerb.1 days = 1 }
+				country_event = { id = gerb.1 hours = 6 }
 			}
 		}
 	}
@@ -2957,7 +2991,7 @@ focus_tree = {
 		available = {
 			GRE = { 
 				exists = yes
-				has_war = yes
+				NOT = { has_war_with = GER }
 			}
 			NOT = { is_in_faction_with = GRE }
 		}
@@ -3005,7 +3039,7 @@ focus_tree = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = GER_establish_abwehr }
-		x = 35
+		x = 12
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -3118,7 +3152,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_west_wall
 		cost = 10
@@ -3748,7 +3782,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_west_wall
 		cost = 10
@@ -4103,89 +4137,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_prepare_for_airwar
-		icon = GFX_goal_generic_radar
-		prerequisite = { focus = GER_west_wall }
-		available = {
-			has_tech = decimetric_radar
-			GER = {
-				has_full_control_of_state = 64
-				has_full_control_of_state = 60
-				has_full_control_of_state = 58
-			}
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_west_wall
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 64 
-					}
-				}
-				64 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 60 
-					}
-				}
-				
-				60 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 2
-						instant_build = yes
-					}
-				}
-				
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 58 
-					}
-				}
-				58 = {
-					add_building_construction = {
-						type = radar_station 
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = GER_Keep_Warmachine_going
 		icon = GFX_goal_keepwarmachinegoing
-		prerequisite = { focus = GER_prepare_for_airwar }
+		prerequisite = { focus = GER_west_wall }
 		mutually_exclusive = { focus = GER_protect_reichsautobahn }
 		available = {
 			any_country = {
@@ -4207,7 +4161,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4361,7 +4315,7 @@ focus_tree = {
 	focus = {
 		id = GER_protect_reichsautobahn
 		icon = GFX_goal_keepsafeheavyindustry
-		prerequisite = { focus = GER_prepare_for_airwar }
+		prerequisite = { focus = GER_west_wall }
 		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
 		available = {
 			GER = {
@@ -4373,7 +4327,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4479,7 +4433,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		relative_position_id = GER_prepare_for_airwar
+		relative_position_id = GER_west_wall
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -4937,7 +4891,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 6
+		y = 5
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 10
 		ai_will_do = {
@@ -4957,7 +4911,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = -2
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -4980,7 +4934,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -5003,7 +4957,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 2
-		y = 7
+		y = 6
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 5
 		ai_will_do = {
@@ -5025,7 +4979,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 8
+		y = 7
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 10
 		ai_will_do = {
@@ -5080,11 +5034,11 @@ focus_tree = {
 			has_government = fascism
 			OR = {
 				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_grand_counchil
+				#has_completed_focus = GER_grand_counchil
 			}
 		}
 		cancel_if_invalid = no
-		x = 92
+		x = 73
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -5096,7 +5050,7 @@ focus_tree = {
 			set_rule = {
 				can_create_factions = yes
 			}
-			create_faction = "Axis"
+			create_faction = "The Axis"
 		    }	
 		}
 	}
@@ -5252,7 +5206,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Prepare_for_golden_square
-		icon = GFX_focus_TUR_support_the_golden_square
+		icon = GFX_goal_iraqfriend
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
@@ -5304,7 +5258,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Support_golden_square
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_TUR_support_the_golden_square
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Prepare_for_golden_square }
 		mutually_exclusive = {
@@ -5344,7 +5298,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_interve_golden_square
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_iraqattack
 		relative_position_id = GER_Axis_Powers
 		mutually_exclusive = {
 			focus = GER_Support_golden_square
@@ -8468,6 +8422,9 @@ focus_tree = {
 			NOT = { has_completed_focus = GER_against_fuhrer }
 			has_completed_focus = GER_rhineland_demilitarized
 		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
+		}
 		bypass = {
 			has_government = fascism
 			NOT = { has_completed_focus = GER_against_fuhrer }
@@ -8477,7 +8434,7 @@ focus_tree = {
 		    }
 		}
 		cancel_if_invalid = no
-		x = 20
+		x = 22
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -8488,18 +8445,178 @@ focus_tree = {
 		}
 	}
 
+
 	focus = {
-		id = GER_grant_power_to_ss
-		icon = GFX_goal_unknown
-		mutually_exclusive = { focus = GER_stay_with_grand_council }
-		mutually_exclusive = { focus = GER_grant_power_to_wehrmacht }
-		prerequisite = { focus = GER_grand_counchil }
+		id = GER_better_and_greater_ss
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = GER_stay_with_grand_council }
 		relative_position_id = GER_grand_counchil
 		available = {
+			NOT = { has_completed_focus = GER_SS }
 		}
 		cancel_if_invalid = no
-		x = 8
+		x = 11
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_work_with_abwehr
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = GER_better_and_greater_ss }
+		relative_position_id = GER_better_and_greater_ss
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -1
 		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_new_order_laws
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GER_better_and_greater_ss }
+		relative_position_id = GER_better_and_greater_ss
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reichskommissariats_new
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = GER_work_with_abwehr  }
+		prerequisite = { focus = GER_new_order_laws }
+		relative_position_id = GER_better_and_greater_ss
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_purge_party
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_grant_power_to_wehrmacht focus = GER_stay_with_grand_council }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_adolf_hitler
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_purge_party }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_chancellor_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_exile_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = -2
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_exile_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_chancellor_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_esc_adolf
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_fate_of_adolf_hitler }
+		mutually_exclusive = { focus = GER_exile_adolf focus = GER_chancellor_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 2
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_eco_reforms
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_chancellor_adolf focus = GER_exile_adolf focus = GER_esc_adolf }
+		relative_position_id = GER_grand_counchil
+		cancel_if_invalid = no
+		x = 0
+		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8518,44 +8635,8 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 0
+		x = 8
 		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_fate_of_adolf_hitler
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grand_counchil }
-		relative_position_id = GER_grand_counchil
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_loyal_to_course
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grant_power_to_ss focus = GER_stay_with_grand_council }
-		relative_position_id = GER_grand_counchil
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 4
-		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -8569,6 +8650,9 @@ focus_tree = {
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		prerequisite = {
 			focus = GER_establish_abwehr
+		}
+		allow_branch = {
+			has_global_flag = GER_TEST_COM_FOCUS
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -24
@@ -8628,6 +8712,7 @@ focus_tree = {
 	focus = {
 		id = GER_prepare_for_innovative
 		icon = GFX_focus_generic_anti_fascist_diplomacy
+		text = GER_Working_on
 		mutually_exclusive = {
 			focus = GER_assassinate_adolf_hitler
 		}
@@ -9124,7 +9209,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_support_spain
-		icon = GFX_focus_generic_befriend_communist_spain_focus
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = {
 			focus = GER_Road_to_New_World
 		}
@@ -9195,14 +9280,221 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_claims_in_baltic
+		id = GER_mongolia_membership
+		icon = GFX_goal_mongoliabefriend
+		prerequisite = {
+			focus = GER_Road_to_New_World
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -3
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_tannu_tuva_membership
+		icon = GFX_focus_generic_treaty
+		prerequisite = {
+			focus = GER_mongolia_membership
+		}
+		mutually_exclusive = {
+			focus = GER_aliance_with_tannu_tuva
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -2
+		y = 4
+		cost = 2
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_aliance_with_tannu_tuva
+		icon = GFX_goal_tanvutuvabefriend
+		prerequisite = {
+			focus = GER_mongolia_membership
+		}
+		mutually_exclusive = {
+			focus = GER_tannu_tuva_membership
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -4
+		y = 4
+		cost = 2
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_baltic_seceruity
 		icon = GFX_focus_SOV_baltic_security
 		prerequisite = {
 			focus = GER_Road_to_New_World
 		}
 		relative_position_id = GER_foregin_affairs_kom
 		x = -6
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_baltic
+		icon = GFX_focus_SOV_baltic_security
+		prerequisite = {
+			focus = GER_baltic_seceruity
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -8
 		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_secure_leningrad
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = {
+			focus = GER_claims_in_baltic
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -8
+		y = 5
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_poland
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = GER_baltic_seceruity
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -6
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_claims_in_bessarabia
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = {
+			focus = GER_claims_in_poland
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -6
+		y = 5
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_demand_balkan_submission
+		icon = GFX_focus_generic_balkans_focus
+		prerequisite = {
+			focus = GER_claims_in_bessarabia
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -7
+		y = 6
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_seek_balkan_cooperation
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = {
+			focus = GER_claims_in_bessarabia
+		}
+		mutually_exclusive = {
+			focus = GER_demand_balkan_submission
+		}
+		relative_position_id = GER_foregin_affairs_kom
+		x = -5
+		y = 6
 		cost = 5
 		available = {
 		}
@@ -9588,12 +9880,12 @@ focus_tree = {
 	focus = {
 		id = GER_superior_battle_plan
 		icon = GFX_goal_unknown
-		prerequisite = { focus = GER_grant_power_to_wehrmacht focus = GER_stay_with_grand_council }
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
 		relative_position_id = GER_grand_counchil
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -4
+		x = -10
 		y = 2
 		cost = 5
 		ai_will_do = {
@@ -9615,7 +9907,7 @@ focus_tree = {
 			has_completed_focus = GER_grant_power_to_wehrmacht
 		}
 		cancel_if_invalid = no
-		x = -5
+		x = -11
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -9634,7 +9926,7 @@ focus_tree = {
 			has_completed_focus = GER_grant_power_to_wehrmacht
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -9
 		y = 3
 		cost = 5
 		ai_will_do = {
@@ -9663,6 +9955,121 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_german_warfare_officers
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = GER_sea_overlord focus = GER_reform_eco_plan }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reforms_in_army_wehr
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_expand_command_cap
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = GER_reforms_in_army_wehr }
+		mutually_exclusive = { focus = GER_take_control_of_advisor }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_take_control_of_advisor
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = GER_reforms_in_army_wehr }
+		mutually_exclusive = { focus = GER_expand_command_cap }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_reform_eco_plan
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = GER_expand_command_cap focus = GER_take_control_of_advisor }
+		relative_position_id = GER_superior_battle_plan
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_purge_ss
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_grant_power_to_wehrmacht }
+		relative_position_id = GER_grand_counchil
+		available = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		cancel_if_invalid = no
+		x = -8
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = GER_block_ss
+		}
+	}
+
+
+
+	focus = {
 		id = GER_Fuhrer
 		icon = GFX_goal_Fuhrer
 		mutually_exclusive = { focus = GER_grand_counchil }
@@ -9675,7 +10082,7 @@ focus_tree = {
 				character = GER_adolf_hitler
 				ruling_only = yes
 			}
-			NOT = { has_completed_focus = GER_against_fuhrer }
+			#NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -9974,14 +10381,14 @@ focus_tree = {
 				ruling_only = yes
 			}
 			64 = {
-				arms_factory < 2
 				is_controlled_by = ROOT
 				is_core_of = ROOT
+				arms_factory > 1
 			}
 			52 = {
-				arms_factory < 2
 				is_controlled_by = ROOT
 				is_core_of = ROOT
+				arms_factory > 1			
 			}
 		}
 		cancel_if_invalid = no
@@ -10289,7 +10696,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Beaten_but_not_defeated
-		prerequisite = { focus = GER_Fuhrer focus = GER_grand_counchil }
+		prerequisite = { focus = GER_Fuhrer }
 		icon = GFX_focus_generic_fascist_troops
 		available = {
 		}
@@ -10330,6 +10737,7 @@ focus_tree = {
 			show_ideas_tooltip = GER_Volkswagen
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = GER_Volkswagen_t
+			add_ideas = GER_volkswagen_idea
 			random_owned_controlled_state = {
 				prioritize = { 64 }
 				limit = {
@@ -10380,12 +10788,12 @@ focus_tree = {
 		id = GER_Attack_SOV
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		relative_position_id = GER_foregin_affairs
+		relative_position_id = GER_Sleep_Well_SOV
 		allow_branch = {
 			has_completed_focus = GER_ussr_war_goal
 		}
-		x = -6
-		y = 4
+		x = 0
+		y = 3
 		cost = 3
 
 		available = {
@@ -10410,9 +10818,9 @@ focus_tree = {
 		id = GER_Leningrad_mission
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -9
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = -3
+		y = 1
 		cost = 3
 
 		available = {
@@ -10450,9 +10858,9 @@ focus_tree = {
 		id = GER_Moscow_mission
 		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -6
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = 0
+		y = 1
 		cost = 3
 
 		available = {
@@ -10490,9 +10898,9 @@ focus_tree = {
 		id = GER_Stalingrad_mission
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_Attack_SOV }
-		relative_position_id = GER_foregin_affairs
-		x = -3
-		y = 5
+		relative_position_id = GER_Attack_SOV
+		x = 3
+		y = 1
 		cost = 3
 
 		available = {
@@ -10532,9 +10940,9 @@ focus_tree = {
 		prerequisite = { focus = GER_Leningrad_mission }
 		prerequisite = { focus = GER_Moscow_mission }
 		prerequisite = { focus = GER_Stalingrad_mission }
-		relative_position_id = GER_foregin_affairs
-		x = -6
-		y = 6
+		relative_position_id = GER_Attack_SOV
+		x = 0
+		y = 2
 		cost = 3
 
 		available = {
@@ -10706,7 +11114,7 @@ focus = {
 		id = GER_Ukraine
 		icon = GFX_goal_ukraine_deal
 		available = {
-			has_completed_focus = GER_form_the_reichskommissariats_a
+			has_completed_focus = GER_form_the_reichskommissariats
 		}
 		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = 1
@@ -10731,7 +11139,7 @@ focus = {
 		id = GER_Belarus
 		icon = GFX_goal_belarus_deal
 		available = {
-			has_completed_focus = GER_form_the_reichskommissariats_a
+			has_completed_focus = GER_form_the_reichskommissariats
 		}
 		prerequisite = { focus = GER_Local_Police_force_in_soviet }
 		x = -1
