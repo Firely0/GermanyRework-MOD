@@ -45,6 +45,24 @@
  
  #Ideas
 
+ GER_Trade_with_uk:0 "Trade Pact with England"
+ GER_Trade_with_uk_desc:0 ""
+
+ GER_Trade_with_uk_expand:0 "Trade Pact with England"
+ GER_Trade_with_uk_expand_desc:0 ""
+
+ GER_Trade_with_uk_uk:0 "Trade Pact with Germany"
+ GER_Trade_with_uk_uk_desc:0 ""
+
+ GER_Trade_with_uk_uk_expand:0 "Trade Pact with Germany"
+ GER_Trade_with_uk_uk_expand_desc:0 ""
+
+ GER_Trade_with_uk_ger_puppet:0 "Trade Pact with Kingdom"
+ GER_Trade_with_uk_ger_puppet_desc:0 ""
+
+ GER_Trade_with_uk_uk_puppets:0 "Trade Pact with Germany"
+ GER_Trade_with_uk_uk_puppets_desc:0 ""
+
  Landon_Treaty:0 "Anglo-German Naval Agreement"
  Landon_Treaty_desc:0 ""
 
@@ -247,6 +265,7 @@
  ger_sov_treaty_in_berlin:0 "§RPeace Deal Completed in Berlin§!"
  GER_Fate_of_SOV:0 "Fate of Soviet Union"
  GER_Keep_occpy_land:0 "if Soviet Union Accepts, We Keep §ROccupied§! Lands! and Potential Lands for our Allies"
+ GER_london_naval_treaty:0 "Our Navy Still Limited by Anglo-German Agreement"
 
  GER_killed_hitler_effect:0 "Assassination Successful "
  GER_SOV_WAR_START:0 "\nWhen We Declare War on Soviet Union. We Gain Fallowing Idea;"
@@ -305,6 +324,7 @@
  GER_align_bulgaria_unaligned:0 "Align Bulgaria"
  ger_yug_diplomatic_focus:0 "German-Yugoslavia Diplomacy Focus"
  speaked_against_us:0 "Spoken Against Us"
+ challenged_royal_navy:0 "Challenged Royal Navy"
  GER_ITA_JAP_TRIPLE:0 "Signed Tripartite Pact"
  GER_END_OF_FOUR_YEAR_PLAN_tt:0 "Unlocks §YBetter Econamic Plan§!"
  GER_FOUR_PLAN_FLAG:0 "Four Year Plan"
@@ -880,3 +900,5 @@
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_prepare_next_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£consumer_goods_texticon Consumer Goods Factories§!: §G-3%§!"
+ GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YDockyard output§!: £dockyard_output §G+20.0%§! \n§YMilitary factory output§!: £factory_output §R-10.0%§!"
+ GER_focus_on_land_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YMilitary factory output§!: £factory_output §R+5.0%§!"

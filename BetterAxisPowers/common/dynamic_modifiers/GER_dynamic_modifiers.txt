@@ -140,6 +140,8 @@ Wehrmacht_dynamic_modifier = {
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -204,6 +206,8 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	army_morale_factor = GER_army_morale_factor 
 	army_org_regain = GER_army_org_regain 
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
 
 	#Volkssturm
 
@@ -281,6 +285,8 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 	
 		army_morale_factor = GER_army_morale_factor
 		army_org_regain = GER_army_org_regain
+
+		industrial_capacity_factory = GER_industrial_capacity_factory
 			
 		#Volkssturm
 			
@@ -333,6 +339,8 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 		
 	 army_morale_factor = GER_army_morale_factor 
 	 army_org_regain = GER_army_org_regain 
+
+	 industrial_capacity_factory = GER_industrial_capacity_factory
 				
 	 #Volkssturm
 				
@@ -385,6 +393,8 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -435,6 +445,8 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
 
 	#Volkssturm
 
@@ -488,6 +500,8 @@ Wehrmacht_INF_2_dynamic_modifier = {
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -538,6 +552,8 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
 
 	#Volkssturm
 
@@ -590,6 +606,8 @@ Wehrmacht_INF_4_dynamic_modifier = {
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
 
 	#Volkssturm
 
@@ -759,6 +777,8 @@ Kriegsmarine_dynamic_modifier = {
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
+
 	#Plan Z
 
 	positioning = GER_positioning # 0.05
@@ -801,6 +821,8 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
 	#Plan Z
 
@@ -845,6 +867,8 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
+
 	#Plan Z
 
 	positioning = GER_positioning # 0.05
@@ -887,6 +911,8 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
 	#Plan Z
 

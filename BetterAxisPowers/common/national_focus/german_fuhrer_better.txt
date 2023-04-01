@@ -2414,6 +2414,13 @@ focus_tree = {
 		prerequisite = { focus = GER_uk_friend }
 		available = { 
 			NOT = { has_war_with = ENG }
+			custom_trigger_tooltip = {
+				tooltip = GER_london_naval_treaty
+				OR = {
+					has_idea = Landon_Treaty
+					has_idea = Landon_Treaty_sub_focus
+				}
+			}
 			ENG = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
@@ -2432,10 +2439,11 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = GER_uk_friend
-		cost = 5
+		cost = 10
 		ai_will_do = {
 		}		
 		completion_reward = {
+			ENG = { country_event = { id = GER_eng_naval_agreement.1 hours = 6 } }
 		}
 	}
 
@@ -2445,6 +2453,11 @@ focus_tree = {
 		prerequisite = { focus = GER_anglo_german_agreemet }
 		available = { 
 			NOT = { has_war_with = ENG }
+			custom_trigger_tooltip = {
+				tooltip = GER_london_naval_treaty
+				NOT = { has_idea = Landon_Treaty }
+				NOT = { has_idea = Landon_Treaty_sub_focus }
+			}
 			ENG = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
@@ -2468,6 +2481,19 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = challenged_royal_navy
+				}
+			}
+			custom_effect_tooltip = GER_challenge_royal_navy_modify
+			set_variable = {
+				GER_industrial_capacity_factory = -0.1
+			}
+			set_variable = {
+				GER_industrial_capacity_dockyard = 0.2
+			}
 		}
 	}
 
@@ -2500,6 +2526,10 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			custom_effect_tooltip = GER_focus_on_land_modify
+			set_variable = {
+				GER_industrial_capacity_factory = 0.05
+			}
 		}
 	}
 
@@ -2612,7 +2642,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_battle_of_Birmingham
-		icon = GFX_focus_lionuk
+		icon = GFX_goal_lionuk
 		prerequisite = { focus = GER_operation_sealion }
 		available = { 
 			custom_trigger_tooltip = {
