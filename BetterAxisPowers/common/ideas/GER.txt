@@ -54,6 +54,198 @@ ideas = {
 			}
 		}
 
+		GER_Trade_with_uk = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = ENG
+				NOT = { country_exists = ENG }
+			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_uk = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = GER
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_expand = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = ENG
+				NOT = { country_exists = ENG }
+			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+
+		}
+
+		GER_Trade_with_uk_uk_expand = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = GER
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+
+		}
+
+		GER_Trade_with_uk_ger_puppet = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = ENG
+				NOT = { country_exists = ENG }
+				has_war_with = CAN
+				NOT = { country_exists = CAN }
+				has_war_with = MAL
+				NOT = { country_exists = MAL }
+				has_war_with = RAJ
+				NOT = { country_exists = RAJ }
+			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = MAL
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_uk_puppets = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war_with = GER
+				NOT = { country_exists = GER }
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+
+		}
+
 		GER_special_forces = {
 
 			picture = generic_army_war_college

@@ -29,6 +29,7 @@ add_namespace = GER_rhineland_remind_ger
 add_namespace = GER_rhineland_remind_fra
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
+add_namespace = GER_eng_trade_agreement
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1436,6 +1437,74 @@ country_event = {
 				expire = 0
 			}
 		}
+	}
+}
+
+country_event = {
+	id = GER_eng_trade_agreement.1
+	title = "Germany Wants Trade Pact!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
+		GER = {
+			country_event = {
+				id = GER_SWE_renew.2
+				days = 1
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "No"
+		GER = {
+			country_event = {
+				id = GER_SWE_renew.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_eng_trade_agreement.2
+	title = "United Kingdom Accepted our Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+		hidden_effect = {
+			GER = {
+				add_ideas = GER_Trade_with_uk
+			}
+			ENG = {
+				add_ideas = GER_Trade_with_uk_uk
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_eng_trade_agreement.3
+	title = "United Kingdom Not Accepted our Trade Offer"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Fine"
 	}
 }
 

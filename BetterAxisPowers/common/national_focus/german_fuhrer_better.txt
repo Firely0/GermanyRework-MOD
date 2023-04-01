@@ -2552,7 +2552,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_battle_of_liverpool
-		icon = GFX_goal_eng_expose_the_belly_of_the_bear_s
+		icon = GFX_goal_lionuk_s
 		prerequisite = { focus = GER_operation_sealion }
 		available = { 
 			custom_trigger_tooltip = {
@@ -2612,7 +2612,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_battle_of_Birmingham
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		icon = GFX_focus_lionuk
 		prerequisite = { focus = GER_operation_sealion }
 		available = { 
 			custom_trigger_tooltip = {
@@ -2638,7 +2638,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_uk_trade_agre
+		id = GER_uk_trade_agreements
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_uk_friend }
 		available = { 
@@ -2665,13 +2665,14 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			ENG	= { country_event = { id = GER_eng_trade_agreement.1 hours = 6 } }
 		}
 	}
 
 	focus = {
 		id = GER_expand_agreement
 		icon = GFX_goal_tradeukpuppets
-		prerequisite = { focus = GER_uk_trade_agre }
+		prerequisite = { focus = GER_uk_trade_agreements }
 		available = { 
 			NOT = { has_war_with = ENG }
 			ENG = {
@@ -2692,18 +2693,31 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = 1
 		y = 1
-		relative_position_id = GER_uk_trade_agre
+		relative_position_id = GER_uk_trade_agreements
 		cost = 3
 		ai_will_do = {
 		}		
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_Trade_with_uk
+				add_idea = GER_Trade_with_uk_ger_puppet
+			}
+			MAL = {
+				add_ideas = GER_Trade_with_uk_uk_puppets
+			}
+			CAN = {
+				add_ideas = GER_Trade_with_uk_uk_puppets
+			}
+			RAJ = {
+				add_ideas = GER_Trade_with_uk_uk_puppets
+			}
 		}
 	}
 
 	focus = {
 		id = GER_expand_agreement_eng
 		icon = GFX_goal_uk_ger
-		prerequisite = { focus = GER_uk_trade_agre }
+		prerequisite = { focus = GER_uk_trade_agreements }
 		available = { 
 			NOT = { has_war_with = ENG }
 			ENG = {
@@ -2724,11 +2738,21 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = -1
 		y = 1
-		relative_position_id = GER_uk_trade_agre
+		relative_position_id = GER_uk_trade_agreements
 		cost = 3
 		ai_will_do = {
 		}		
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_Trade_with_uk
+				add_idea = GER_Trade_with_uk_expand
+			}
+			ENG = {
+				swap_ideas = {
+					remove_idea = GER_Trade_with_uk_uk
+					add_idea = GER_Trade_with_uk_uk_expand
+				}
+			}
 		}
 	}
 
