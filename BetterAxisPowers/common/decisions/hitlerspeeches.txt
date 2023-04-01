@@ -122,7 +122,10 @@ hitlerspeeches_category = {
 
 		available = { 
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
-			krupp_used = yes
+			custom_trigger_tooltip = {
+				tooltip = krupp_used_tt
+				krupp_used = yes
+			}
 			NOT = { 51 = { is_demilitarized_zone = yes } }
 		}
 
