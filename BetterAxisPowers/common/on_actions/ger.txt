@@ -338,6 +338,23 @@ on_actions = {
 			if = {
 				limit = {
 					tag = GER
+					has_global_flag = GER_nohelp_denmark
+					FROM = { tag = ENG }
+				}
+				GER = {
+					activate_mission = GER_plan_working_fine_or_not
+					activate_mission = GER_dover_portsmouth_subtraction
+					activate_mission = GER_plymouth_subtraction
+				}
+			}
+		}
+	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
 					has_completed_focus = GER_strike_union
 					FROM = { tag = SOV }
 				}

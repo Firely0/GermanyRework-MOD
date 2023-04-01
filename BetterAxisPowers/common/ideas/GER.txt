@@ -121,6 +121,10 @@ ideas = {
 				has_war_with = ENG
 				NOT = { country_exists = ENG }
 			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
 			
             targeted_modifier = {
 				tag = ENG
@@ -176,6 +180,10 @@ ideas = {
 			cancel = {
 				has_war_with = ENG
 				NOT = { country_exists = ENG }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 			
             targeted_modifier = {
@@ -238,6 +246,10 @@ ideas = {
 				NOT = { country_exists = MAL }
 				has_war_with = RAJ
 				NOT = { country_exists = RAJ }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 			
             targeted_modifier = {
