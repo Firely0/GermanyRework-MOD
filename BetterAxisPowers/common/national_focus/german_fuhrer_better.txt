@@ -2429,13 +2429,7 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = -4
 		y = 1
 		relative_position_id = GER_uk_friend
@@ -2466,14 +2460,8 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		mutually_exclusive = { focus = GER_focus_on_land_army }
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = -1
 		y = 1
 		relative_position_id = GER_anglo_german_agreemet
@@ -2511,14 +2499,8 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		mutually_exclusive = { focus = GER_challenge_royal_navy }
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = 1
 		y = 1
 		relative_position_id = GER_anglo_german_agreemet
@@ -2538,7 +2520,21 @@ focus_tree = {
 		icon = GFX_goal_r56_goal_GER_operation_sealion
 		prerequisite = { focus = GER_uk_friend }
 		available = {
-			has_war_with = ENG 
+			35 = {
+				is_controlled_by_ROOT_or_ally
+			}
+			6 = {
+				is_controlled_by_ROOT_or_ally
+			}
+			15 = {
+				is_controlled_by_ROOT_or_ally
+			}
+			785 = {
+				is_controlled_by_ROOT_or_ally
+			}
+			29 = {
+				is_controlled_by_ROOT_or_ally
+			}
 		}
 		cancel = {
 		}
@@ -2550,6 +2546,20 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			add_timed_idea = { idea = Operation_Sea_Lion days = 120 }
+			set_global_flag = GER_Operation_Sealion_ph1_running
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { has_war_with = ENG }
+					}
+				}
+				declare_war_on = {
+					target = ENG
+					type = annex_everything
+				}
+				add_threat = 20
+			}
 		}
 	}
 
@@ -2563,12 +2573,6 @@ focus_tree = {
 				always = no
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		cancel_if_invalid = no
 		x = 0
 		y = 1
@@ -2577,6 +2581,18 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			modify_timed_idea = {
+				idea = GER_sealion
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Birmigham
+				days = 30
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Liverpool
+				days = 30
+			}
 		}
 	}
 
@@ -2590,12 +2606,6 @@ focus_tree = {
 				always = no
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		cancel_if_invalid = no
 		x = 3
 		y = 1
@@ -2604,6 +2614,18 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			modify_timed_idea = {
+				idea = GER_sealion
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Landon
+				days = 30
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Liverpool
+				days = 30
+			}
 		}
 	}
 
@@ -2650,12 +2672,6 @@ focus_tree = {
 				always = no
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		cancel_if_invalid = no
 		x = -3
 		y = 1
@@ -2664,6 +2680,18 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			modify_timed_idea = {
+				idea = GER_sealion
+				days = 60
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Landon
+				days = 30
+			}
+			add_days_mission_timeout = {
+				mission = GER_conquer_Liverpool
+				days = 30
+			}
 		}
 	}
 
@@ -2687,7 +2715,7 @@ focus_tree = {
 				has_war_with = ENG
 			}
 		}
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = 4
 		y = 1
 		relative_position_id = GER_uk_friend
@@ -2703,8 +2731,12 @@ focus_tree = {
 		id = GER_expand_agreement
 		icon = GFX_goal_tradeukpuppets
 		prerequisite = { focus = GER_uk_trade_agreements }
-		available = { 
+		available = {
 			NOT = { has_war_with = ENG }
+			custom_trigger_tooltip = {
+				tooltip = GER_trade_on_going_uk
+				has_idea = GER_Trade_with_uk
+			}
 			ENG = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
@@ -2720,7 +2752,7 @@ focus_tree = {
 				has_war_with = ENG
 			}
 		}
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = 1
 		y = 1
 		relative_position_id = GER_uk_trade_agreements
@@ -2750,6 +2782,10 @@ focus_tree = {
 		prerequisite = { focus = GER_uk_trade_agreements }
 		available = { 
 			NOT = { has_war_with = ENG }
+			custom_trigger_tooltip = {
+				tooltip = GER_trade_on_going_uk
+				has_idea = GER_Trade_with_uk
+			}
 			ENG = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
@@ -2765,7 +2801,7 @@ focus_tree = {
 				has_war_with = ENG
 			}
 		}
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		x = -1
 		y = 1
 		relative_position_id = GER_uk_trade_agreements

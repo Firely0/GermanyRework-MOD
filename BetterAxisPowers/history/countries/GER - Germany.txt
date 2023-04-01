@@ -3,6 +3,10 @@
 #Rhineland Timeout
 set_variable = { ger_rhi_timeout = 140 }
 
+#Sea Lion Time
+set_variable = { GER_sealion_ph1_time = 120 }
+set_variable = { GER_sealion_ph2_time = 120 }
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20

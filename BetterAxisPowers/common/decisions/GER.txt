@@ -1,3 +1,312 @@
+GER_Operation_Sealion_ph2 = {
+
+	GER_conquer_Birmigham = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			128 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 128 #Birmigham
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_time_ph2
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_Birmingham
+		}
+	}
+	
+	GER_conquer_Landon = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = { #GOAL
+			126 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 126 #London
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_time_ph2
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_landon
+		}
+	}
+
+	GER_conquer_Liverpool = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = { #GOAL
+			132 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 132 #Liverpool
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_time_ph2
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_liverpool
+		}
+	}
+}
+
+GER_Operation_Sealion_ph1 = {
+
+	GER_plan_working_fine_or_not = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			has_global_flag = dover_portsmouth_subtraction
+			has_global_flag = plymouth_subtraction
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = yes 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_ph1_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+		}
+	
+		complete_effect = {
+			add_timed_idea = { idea = GER_sealion days = 120 } 
+			set_global_flag = GER_Operation_Sealion_running
+		}
+	}
+
+	GER_dover_portsmouth_subtraction = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			127 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 127 #Sussex
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_ph1_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			set_global_flag = dover_portsmouth_subtraction
+		}
+	}
+	
+	GER_plymouth_subtraction = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = { #GOAL
+			123 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 123 #South-West England
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_sealion_ph1_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			set_global_flag = plymouth_subtraction
+		}
+	}
+}
+
 GER_Operation_Barbarossa_V = {
 
 	GER_conquer_Leningrad = {

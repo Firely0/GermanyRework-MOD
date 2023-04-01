@@ -2,6 +2,56 @@ ideas = {
 
 	country = {
 
+		Operation_Sea_Lion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 10
+				naval_invasion_capacity = 20
+				amphibious_invasion = 0.1
+				extra_paratrooper_supply_grace = 128
+			}
+		}
+
+		Operation_Sea_Lion_ph2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 10
+				naval_invasion_capacity = 20
+				amphibious_invasion = 0.1
+				extra_paratrooper_supply_grace = 128
+			}
+		}
+
 		Landon_Treaty = {
 
 			allowed = {
@@ -2034,7 +2084,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_acquire_tanks
+			picture = GFX_idea_sovconflict
 
 			targeted_modifier = {
 				tag = SOV
@@ -2058,6 +2108,31 @@ ideas = {
 			}
 
 		}
+
+		GER_sealion = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_engconflict
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+
+			on_remove = {
+			}
+
+		}
+
 		GER_dismantle_maginot = {
 			allowed = {
 				always = no
