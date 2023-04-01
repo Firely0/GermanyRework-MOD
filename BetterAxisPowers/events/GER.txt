@@ -1454,7 +1454,7 @@ country_event = {
 		name = "Fine"
 		GER = {
 			country_event = {
-				id = GER_SWE_renew.2
+				id = GER_eng_trade_agreement.2
 				days = 1
 			}
 		}
@@ -1466,7 +1466,7 @@ country_event = {
 		name = "No"
 		GER = {
 			country_event = {
-				id = GER_SWE_renew.3
+				id = GER_eng_trade_agreement.3
 				days = 1
 			}
 		}
@@ -3934,6 +3934,10 @@ country_event = {
 	option = {
 		name = "Fine"
 
+		ai_chance = {
+			factor = 100
+		}
+
 		GER = { country_event = { id = GER_eng_naval_agreement.2 hours = 6 } }
 	}
 
@@ -3954,11 +3958,15 @@ country_event = {
 	
 	option = {
 		name = "Good News"
-	}
 
-	hidden_effect = {
-		remove_ideas = Landon_Treaty
-		remove_ideas = Landon_Treaty_sub_focus
+		ai_chance = {
+			factor = 100
+		}
+
+		hidden_effect = {
+			remove_ideas = Landon_Treaty
+			remove_ideas = Landon_Treaty_sub_focus
+		}
 	}
 }
 
@@ -3972,6 +3980,10 @@ country_event = {
 	
 	option = {
 		name = "Fine"
+
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 

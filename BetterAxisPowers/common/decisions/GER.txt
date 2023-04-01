@@ -195,8 +195,13 @@ GER_Operation_Sealion_ph1 = {
 		}
 	
 		complete_effect = {
-			add_timed_idea = { idea = GER_sealion days = 120 } 
+			add_timed_idea = { idea = GER_sealion days = 240 } 
 			set_global_flag = GER_Operation_Sealion_running
+			hidden_effect = {
+				activate_mission = GER_conquer_Birmigham
+				activate_mission = GER_conquer_Landon
+				activate_mission = GER_conquer_Liverpool
+			}
 		}
 	}
 

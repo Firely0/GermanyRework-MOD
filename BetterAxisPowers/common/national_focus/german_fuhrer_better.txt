@@ -2520,23 +2520,11 @@ focus_tree = {
 		icon = GFX_goal_r56_goal_GER_operation_sealion
 		prerequisite = { focus = GER_uk_friend }
 		available = {
-			35 = {
-				is_controlled_by_ROOT_or_ally
-			}
-			6 = {
-				is_controlled_by_ROOT_or_ally
-			}
-			15 = {
-				is_controlled_by_ROOT_or_ally
-			}
-			785 = {
-				is_controlled_by_ROOT_or_ally
-			}
-			29 = {
-				is_controlled_by_ROOT_or_ally
-			}
-		}
-		cancel = {
+			has_full_control_of_state = 35
+			has_full_control_of_state = 6
+			has_full_control_of_state = 15
+			has_full_control_of_state = 785
+			has_full_control_of_state = 29
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -2554,11 +2542,17 @@ focus_tree = {
 						NOT = { has_war_with = ENG }
 					}
 				}
-				declare_war_on = {
-					target = ENG
+				create_wargoal = {
 					type = annex_everything
+					target = ENG
+					expire = 120
 				}
 				add_threat = 20
+			}
+			hidden_effect = {
+				activate_mission = GER_plan_working_fine_or_not
+				activate_mission = GER_dover_portsmouth_subtraction
+				activate_mission = GER_plymouth_subtraction
 			}
 		}
 	}
