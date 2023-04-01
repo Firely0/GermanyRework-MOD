@@ -567,19 +567,6 @@
 		}	
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = Landon_Treaty_sub_focus
-				}
-				remove_ideas = Landon_Treaty_sub_focus
-			}
-			if = {
-				limit = {
-					has_idea = Landon_Treaty
-				}
-				remove_ideas = Landon_Treaty
-			}
-			add_threat = 5
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {

@@ -2429,12 +2429,6 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
-			}
-		}
 		cancel_if_invalid = no
 		x = -4
 		y = 1
@@ -2464,12 +2458,6 @@ focus_tree = {
 					is_alone_or_in_faction_at_peace_with_GER = yes
 				}
 				exists = yes
-			}
-		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
 			}
 		}
 		mutually_exclusive = { focus = GER_focus_on_land_army }
@@ -2509,12 +2497,6 @@ focus_tree = {
 					is_alone_or_in_faction_at_peace_with_GER = yes
 				}
 				exists = yes
-			}
-		}
-		cancel = {
-			OR = {
-				NOT = { country_exists = ENG }
-				has_war_with = ENG
 			}
 		}
 		mutually_exclusive = { focus = GER_challenge_royal_navy }
