@@ -2717,6 +2717,15 @@
 				}
 				add_ideas = war_economy
 			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					} 
+				}
+				add_political_power = 150
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {

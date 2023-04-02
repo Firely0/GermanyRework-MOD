@@ -7,6 +7,7 @@ add_namespace = ger_fuhrer_end
 add_namespace = GER_Create_Afrika_Corps_event
 add_namespace = GER_ITA_HQ_LOC
 add_namespace = GER_ENG_ETH_event
+add_namespace = GER_ETH_ITA_Interve
 add_namespace = GER_SWE_renew
 add_namespace = GER_denmark_problem
 add_namespace = GER_norway_problem
@@ -1343,6 +1344,57 @@ country_event = {
 			factor = 100
 		}
 		name = "We Will Deal With Them Later"
+	}
+}
+
+country_event = {
+	id = GER_ETH_ITA_Interve.1
+	title = "What Side We Should Suport?"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+		name = "Italy"
+
+		country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }
+	}
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "Etihopia"
+
+		country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }
+	}
+}
+
+country_event = {
+	id = GER_ETH_ITA_Interve.2
+	title = "Germany Offer Support!"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "Good"
+
+		add_timed_idea = { idea = ITA_ETH_German_Generals days = 1461 }
+
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "No"
 	}
 }
 

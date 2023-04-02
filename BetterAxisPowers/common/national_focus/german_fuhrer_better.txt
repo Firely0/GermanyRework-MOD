@@ -170,6 +170,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Interve_Civilwars
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = GER_establish_abwehr }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 6
+		y = 1
+		relative_position_id = GER_establish_abwehr
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_Interve_Civilwars_idea days = 1461 
+			}
+		}
+	}
+
+	focus = {
 		id = GER_purge_fascism_support
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		allow_branch = {
@@ -210,7 +231,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		relative_position_id = GER_establish_abwehr
-		x = -2
+		x = -4
 		y = 1
 		cost = 5
 		available = {
@@ -249,7 +270,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		relative_position_id = GER_establish_abwehr
-		x = -4
+		x = -6
 		y = 1
 		cost = 5
 		available = {
@@ -280,6 +301,35 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
 			FRA = { country_event = { id = GER_request_help.1 hours = 6 } }
+		}
+	}
+
+	focus = {
+		id = GER_interve_eth
+		icon = GFX_focus_ETH_the_second_italo_ethiopian_war
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		relative_position_id = GER_establish_abwehr
+		x = -2
+		y = 1
+		cost = 3
+		available = {
+			ITA = {
+				has_war_with = ETH
+			}
+			ETH = {
+				has_capitulated = no
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			GER = { country_event = { id = GER_ETH_ITA_Interve.1 hours = 6 } }
 		}
 	}
 
@@ -2708,6 +2758,7 @@ focus_tree = {
 					is_alone_or_in_faction_at_peace_with_GER = yes
 				}
 				exists = yes
+				NOT = { is_embargoing = GER }
 			}
 		}
 		cancel = {
@@ -5122,27 +5173,6 @@ focus_tree = {
 #Fuhrer Focus Tree
 
 	focus = {
-		id = GER_Interve_Civilwars
-		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = GER_for_our_honor focus = GER_for_our_revange }
-		available = {
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 2
-		relative_position_id = GER_Beaten_but_not_defeated
-		cost = 3
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_Interve_Civilwars_idea days = 1461 
-			}
-		}
-	}
-
-	focus = {
 		id = GER_for_our_honor
 		icon = GFX_goal_ForOurGlory
 		prerequisite = { focus = GER_Beaten_but_not_defeated }
@@ -5600,6 +5630,7 @@ focus_tree = {
 			PER = {
 				NOT = { has_war_with = root }
 				NOT = { is_puppet = yes }
+				NOT = { is_embargoing = GER }
 				exists = yes
 			}
 		}
@@ -6058,6 +6089,7 @@ focus_tree = {
 			SWE = {
 				exists = yes
 				is_subject = no
+				NOT = { is_embargoing = GER }
 			}
 
 			SWE = {
@@ -7480,7 +7512,6 @@ focus_tree = {
 		will_lead_to_war_with = ETH
 
 		available = {
-			
 			ITA = {
 				is_in_faction_with = GER
 				has_war_with = ETH
