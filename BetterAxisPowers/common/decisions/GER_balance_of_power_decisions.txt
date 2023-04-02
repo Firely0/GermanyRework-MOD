@@ -432,6 +432,17 @@ GER_balance_of_power_category = {
 					division_has_battalion_in_template = motorized
 					is_unit_template_reserves = no
 					unit_strength > 0.5
+					any_enemy_country = {
+						OR = {
+							has_war_with = ROOT
+							any_enemy_country = {
+								has_war_with = ROOT
+							}
+						}
+					}
+					any_province = {
+						is_core_of = ROOT
+					}
 				}
 			}	
 		}
@@ -495,6 +506,17 @@ GER_balance_of_power_category = {
 					division_has_battalion_in_template = motorized
 					is_unit_template_reserves = no
 					unit_strength > 0.5
+					any_enemy_country = {
+						OR = {
+							has_war_with = ROOT
+							any_enemy_country = {
+								has_war_with = ROOT
+							}
+						}
+					}
+					any_province = {
+						is_core_of = ROOT
+					}
 				}
 			}	
 		}
@@ -545,6 +567,10 @@ GER_balance_of_power_category = {
 	ai_will_do = {
 		factor = 0
 		modifier = {
+			factor = 10
+			has_political_power < 110
+		}
+		modifier = {
 			factor = 100
 			random_country_division = {
 				limit = {
@@ -554,6 +580,17 @@ GER_balance_of_power_category = {
 					division_has_battalion_in_template = motorized
 					is_unit_template_reserves = no
 					unit_strength > 0.5
+					any_enemy_country = {
+						OR = {
+							has_war_with = ROOT
+							any_enemy_country = {
+								has_war_with = ROOT
+							}
+						}
+					}
+					any_province = {
+						is_core_of = ROOT
+					}
 				}
 			}	
 		}
