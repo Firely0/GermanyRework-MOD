@@ -238,6 +238,10 @@ hitlerspeeches_category = {
 			tag = GER
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 		available = { 
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
 		}
@@ -275,6 +279,10 @@ hitlerspeeches_category = {
 
 		allowed = {
 			tag = GER
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 		visible = {
@@ -488,6 +496,13 @@ hitlerspeeches_category = {
 
 		allowed = {
 			tag = GER
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				
+			}
 		}
 
 		visible = {
