@@ -317,9 +317,11 @@ focus_tree = {
 		available = {
 			ITA = {
 				has_war_with = ETH
+				NOT = { has_war_with = ROOT }
 			}
 			ETH = {
 				has_capitulated = no
+				NOT = { has_war_with = ROOT }
 			}
 		}
 		bypass = {
@@ -9374,7 +9376,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_reorg_navy
-		icon = GFX_goal_Kriegsmarine
+		icon = GFX_goal_KriegsmarineS
 		prerequisite = {
 			focus = GER_foregin_affairs_kom
 		}
