@@ -1300,7 +1300,7 @@ ideas = {
 		}
 
 		GER_Interve_Civilwars_idea = {
-			picture = generic_manpower_bonus
+			picture = generic_aircraft_support
 				
 			allowed = {
 				always = no
@@ -1314,6 +1314,7 @@ ideas = {
 				
 			modifier = {
 				send_volunteer_size = 3
+				air_volunteer_cap = 100
 			}
 		}
 
