@@ -1,4 +1,4 @@
-GER_Operation_Sealion_ph2 = {
+GER_Operation_Sealion_ph_2 = {
 
 	GER_conquer_Birmigham = {
 		icon = GFX_decision_generic_operation
@@ -16,7 +16,7 @@ GER_Operation_Sealion_ph2 = {
 		}
 	
 		visible = {
-			has_global_flag = GER_Operation_Sealion_running
+			has_global_flag = GER_Operation_Sealion_ph2_running
 		}
 	
 		highlight_states = {
@@ -31,12 +31,12 @@ GER_Operation_Sealion_ph2 = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_time_ph2
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_war_support = -0.05
 		}
 	
@@ -52,7 +52,7 @@ GER_Operation_Sealion_ph2 = {
 			complete_national_focus = GER_battle_of_Birmingham
 		}
 	}
-	
+
 	GER_conquer_Landon = {
 		icon = GFX_decision_generic_operation
 	
@@ -60,7 +60,7 @@ GER_Operation_Sealion_ph2 = {
 			tag = GER
 		}
 	
-		available = { #GOAL
+		available = {
 			126 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	
@@ -69,7 +69,7 @@ GER_Operation_Sealion_ph2 = {
 		}
 	
 		visible = {
-			has_global_flag = GER_Operation_Sealion_running
+			has_global_flag = GER_Operation_Sealion_ph2_running
 		}
 	
 		highlight_states = {
@@ -84,12 +84,12 @@ GER_Operation_Sealion_ph2 = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_time_ph2
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_war_support = -0.05
 		}
 	
@@ -113,7 +113,7 @@ GER_Operation_Sealion_ph2 = {
 			tag = GER
 		}
 	
-		available = { #GOAL
+		available = {
 			132 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	
@@ -122,7 +122,7 @@ GER_Operation_Sealion_ph2 = {
 		}
 	
 		visible = {
-			has_global_flag = GER_Operation_Sealion_running
+			has_global_flag = GER_Operation_Sealion_ph2_running
 		}
 	
 		highlight_states = {
@@ -137,12 +137,12 @@ GER_Operation_Sealion_ph2 = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_time_ph2
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_war_support = -0.05
 		}
 	
@@ -160,7 +160,7 @@ GER_Operation_Sealion_ph2 = {
 	}
 }
 
-GER_Operation_Sealion_ph1 = {
+GER_Operation_Sealion_ph_1 = {
 
 	GER_plan_working_fine_or_not = {
 		icon = GFX_decision_generic_operation
@@ -183,20 +183,21 @@ GER_Operation_Sealion_ph1 = {
 		}
 	
 		cancel_if_not_visible = yes
-		is_good = yes 
+		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_ph1_time
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
+			add_war_support = -0.05
 		}
 	
 		complete_effect = {
 			add_timed_idea = { idea = GER_sealion days = 240 } 
-			set_global_flag = GER_Operation_Sealion_running
+			set_global_flag = GER_Operation_Sealion_ph2_running
 			hidden_effect = {
 				activate_mission = GER_conquer_Birmigham
 				activate_mission = GER_conquer_Landon
@@ -236,12 +237,12 @@ GER_Operation_Sealion_ph1 = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_ph1_time
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_war_support = -0.05
 		}
 	
@@ -257,7 +258,7 @@ GER_Operation_Sealion_ph1 = {
 			set_global_flag = dover_portsmouth_subtraction
 		}
 	}
-	
+
 	GER_plymouth_subtraction = {
 		icon = GFX_decision_generic_operation
 	
@@ -265,7 +266,7 @@ GER_Operation_Sealion_ph1 = {
 			tag = GER
 		}
 	
-		available = { #GOAL
+		available = {
 			123 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	
@@ -289,12 +290,12 @@ GER_Operation_Sealion_ph1 = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_sealion_ph1_time
+		days_mission_timeout = 120
 	
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_war_support = -0.05
 		}
 	

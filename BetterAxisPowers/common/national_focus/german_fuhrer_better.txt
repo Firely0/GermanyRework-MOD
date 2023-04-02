@@ -2392,7 +2392,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 12
+		x = 11
 		y = 0
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -2549,10 +2549,17 @@ focus_tree = {
 				}
 				add_threat = 20
 			}
-			hidden_effect = {
-				activate_mission = GER_plan_working_fine_or_not
-				activate_mission = GER_dover_portsmouth_subtraction
-				activate_mission = GER_plymouth_subtraction
+			if = {
+				limit = {
+					ROOT = {
+						has_war_with = ENG
+					}
+				}
+				hidden_effect = {
+					activate_mission = GER_plan_working_fine_or_not
+					activate_mission = GER_dover_portsmouth_subtraction
+					activate_mission = GER_plymouth_subtraction
+				}
 			}
 		}
 	}
