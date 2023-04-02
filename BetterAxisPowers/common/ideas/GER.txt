@@ -118,9 +118,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = ENG
-				NOT = { country_exists = ENG }
-				is_embargoing = ENG
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					is_embargoing = ENG
+				}
 			}
 
 			modifier = {
@@ -149,9 +151,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
-				is_embargoing = GER
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
 			}
 	
 			modifier = {
@@ -180,9 +184,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = ENG
-				NOT = { country_exists = ENG }
-				is_embargoing = ENG
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					is_embargoing = ENG
+				}
 			}
 
 			modifier = {
@@ -211,9 +217,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
-				is_embargoing = GER
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
 			}
 	
 			modifier = {
@@ -242,17 +250,19 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = ENG
-				NOT = { country_exists = ENG }
-				has_war_with = CAN
-				NOT = { country_exists = CAN }
-				has_war_with = MAL
-				NOT = { country_exists = MAL }
-				has_war_with = RAJ
-				NOT = { country_exists = RAJ }
-				is_embargoing = CAN
-				is_embargoing = MAL
-				is_embargoing = RAJ
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					has_war_with = CAN
+					NOT = { country_exists = CAN }
+					has_war_with = MAL
+					NOT = { country_exists = MAL }
+					has_war_with = RAJ
+					NOT = { country_exists = RAJ }
+					is_embargoing = CAN
+					is_embargoing = MAL
+					is_embargoing = RAJ
+				}
 			}
 
 			modifier = {
@@ -299,9 +309,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
-				is_embargoing = GER
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
 			}
 	
 			modifier = {
@@ -837,8 +849,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = GER }
-				has_war_with = GER
+				OR = {
+					NOT = { country_exists = GER }
+					has_war_with = GER
+				}
 			}
 			
 			modifier = {
@@ -866,8 +880,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = GER }
-				has_war_with = GER
+				OR = {
+					NOT = { country_exists = GER }
+					has_war_with = GER
+				}
 			}
 			
 			modifier = {
@@ -894,8 +910,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -934,8 +952,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -970,8 +990,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -1012,8 +1034,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -1050,9 +1074,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = SWE
-				NOT = { country_exists = SWE }
-				is_embargoing = SWE
+				OR = {
+					has_war_with = SWE
+					NOT = { country_exists = SWE }
+					is_embargoing = SWE
+				}
 			}
 			
             targeted_modifier = {
@@ -1077,9 +1103,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = SWE
-				NOT = { country_exists = GER }
-				is_embargoing = GER
+				OR = {
+					has_war_with = SWE
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
 			}
 	
 			modifier = {
@@ -1108,8 +1136,10 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -1138,9 +1168,11 @@ ideas = {
 			}
 
 			cancel = {
-				is_puppet = yes
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					is_puppet = yes
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -1169,8 +1201,10 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -2107,7 +2141,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = sovconflict
+			picture = generic_acquire_tanks
 
 			targeted_modifier = {
 				tag = SOV
@@ -5436,8 +5470,12 @@ ideas = {
 			}
 	
 			cancel = {
-				is_at_peace_exiled_countries_excluded = no
-				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				OR = {
+					is_at_peace_exiled_countries_excluded = no
+					has_global_flag = ITA_GER_VICHY_ESTABLISHED
+					16 = { is_controlled_by_ROOT_or_ally = yes }
+					VIC = { exists = yes }
+				}
 			}
 	
 			removal_cost = -1

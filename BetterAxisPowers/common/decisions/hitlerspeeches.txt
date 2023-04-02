@@ -416,6 +416,10 @@ hitlerspeeches_category = {
 			tag = GER
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 		visible = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
@@ -501,7 +505,8 @@ hitlerspeeches_category = {
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				
+				is_historical_focus_on = yes
+				factor = 100
 			}
 		}
 

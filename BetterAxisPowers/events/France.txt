@@ -438,6 +438,7 @@ country_event = {
 		FRA = {
 			set_cosmetic_tag = FRA_FREE
 		}
+		set_global_flag = ITA_GER_VICHY_ESTABLISHED
 		# German Occupation Zone
 		if = {
 			limit = { 28 = { owner = { original_tag = FRA } } }
@@ -776,6 +777,7 @@ country_event = {
 		FRA = {
 			set_cosmetic_tag = FRA_FREE
 		}
+		set_global_flag = ITA_GER_VICHY_ESTABLISHED
 		# German Occupation Zone
 		if = {
 			limit = { 28 = { owner = { original_tag = FRA } } }
@@ -1136,6 +1138,7 @@ country_event = {
 				set_state_flag = vichy_italian_conquest
 			}
 		}
+		set_global_flag = ITA_GER_VICHY_ESTABLISHED
 		custom_effect_tooltip = establishing_vichy_tt
 		hidden_effect = {
 			create_dynamic_country = {

@@ -11519,6 +11519,16 @@ focus = {
 					}
 				}
 			}
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = hostile_status
+				}
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = hostile_status
+			}
 		}
 	}
 
