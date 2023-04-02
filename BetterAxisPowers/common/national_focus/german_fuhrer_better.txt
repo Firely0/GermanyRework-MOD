@@ -2443,6 +2443,9 @@ focus_tree = {
 				has_war_with = ENG
 			}
 		}
+		bypass = {
+			has_war_with = ENG
+		}
 		cancel_if_invalid = no
 		x = 11
 		y = 0
@@ -8867,6 +8870,9 @@ focus_tree = {
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		prerequisite = {
 			focus = GER_establish_abwehr
+		}
+		allow_branch = {
+			has_global_flag = GER_COM_SIDE_BLOCK
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -24
