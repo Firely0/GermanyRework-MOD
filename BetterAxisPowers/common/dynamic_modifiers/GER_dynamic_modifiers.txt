@@ -47,6 +47,17 @@ Germany_state_dynamic_modifier = {
 	
 }
 
+Krupp_PH1_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppx32
+
+	production_speed_buildings_factor = -0.2
+	production_speed_industrial_complex_factor = 0.3
+	production_speed_infrastructure_factor = 0.3
+	 
+}
+
 Ger_non_vichy_state_dynamic_modifier = {
 	enable = { always = yes }
 

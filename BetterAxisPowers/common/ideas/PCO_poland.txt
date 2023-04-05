@@ -187,14 +187,24 @@ ideas = {
 				always = no # Added via event
 			}
 
+			cancel = {
+				has_war_with = GER
+			}
+
 			allowed_civil_war = {
 				has_government = communism
 			}
+
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.2
+			}
+
 			modifier = {
 				fascism_acceptance = 40
 				min_export = 0.05
 				research_speed_factor = 0.05
-				experience_gain_army = 0.05
 				improve_relations_maintain_cost_factor = -0.1
 			}
 		}
@@ -210,6 +220,10 @@ ideas = {
 			targeted_modifier = {
 				tag = SOV
 				trade_opinion_factor = 0.5
+			}
+
+			cancel = {
+				has_war_with = SOV
 			}
 
 			allowed_civil_war = {
