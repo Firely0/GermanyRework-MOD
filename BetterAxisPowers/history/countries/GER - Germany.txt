@@ -7,6 +7,9 @@ set_variable = { ger_rhi_timeout = 140 }
 set_variable = { GER_sealion_ph1_time = 120 }
 set_variable = { GER_sealion_ph2_time = 120 }
 
+activate_mission = GER_SOV_TRAINING 
+activate_mission = GER_ITA_TRAINING
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20
