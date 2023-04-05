@@ -2719,10 +2719,8 @@
 			}
 			if = {
 				limit = {
-					OR = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					} 
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation 
 				}
 				add_political_power = 150
 			}

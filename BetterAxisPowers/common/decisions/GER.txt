@@ -1,3 +1,101 @@
+GER_krupp_ph1 = {
+
+	icon = GFX_decision_eng_propaganda_campaigns
+
+	allowed = {
+		original_tag = GER
+	}
+	
+	priority = 100
+
+	visible_when_empty = no
+	
+	visible = {
+		always = yes
+	}
+
+}
+
+GER_training_program = {
+
+	GER_SOV_TRAINING = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		cost = 25
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			remove_ideas = GER_SOV_TRAINING
+			SOV = { remove_ideas = SOV_GER_TRAINING }
+		}
+	
+		complete_effect = {
+			remove_ideas = GER_SOV_TRAINING
+			SOV = { remove_ideas = SOV_GER_TRAINING }
+		}
+	}
+
+	GER_ITA_TRAINING = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		cost = 25
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			remove_ideas = GER_ITA_TRAINING
+			ITA = { remove_ideas = ITA_GER_TRAINING }
+		}
+	
+		complete_effect = {
+			remove_ideas = GER_ITA_TRAINING
+			ITA = { remove_ideas = ITA_GER_TRAINING }
+		}
+	}
+
+}
+
 GER_Operation_Sealion_ph_2 = {
 
 	GER_conquer_Birmigham = {
