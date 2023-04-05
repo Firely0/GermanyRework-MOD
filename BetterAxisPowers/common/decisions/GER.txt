@@ -1,25 +1,10 @@
 GER_krupp_ph1 = {
-
-	icon = GFX_decision_eng_propaganda_campaigns
-
-	allowed = {
-		original_tag = GER
-	}
-	
-	priority = 100
-
-	visible_when_empty = no
-	
-	visible = {
-		always = yes
-	}
-
 }
 
 GER_training_program = {
 
 	GER_SOV_TRAINING = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_air
 	
 		allowed = {
 			tag = GER
@@ -57,7 +42,7 @@ GER_training_program = {
 	}
 
 	GER_ITA_TRAINING = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_naval
 	
 		allowed = {
 			tag = GER
