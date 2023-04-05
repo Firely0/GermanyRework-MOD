@@ -52,9 +52,41 @@ Krupp_PH1_modifier = {
 
 	icon = GFX_modifiers_kruppx32
 
-	production_speed_buildings_factor = -0.2
-	production_speed_industrial_complex_factor = 0.3
-	production_speed_infrastructure_factor = 0.3
+	production_speed_industrial_complex_factor = 0.1
+	production_speed_infrastructure_factor = 0.1
+
+    repair_speed_industrial_complex_factor = 0.5
+	repair_speed_infrastructure_factor = 0.5
+	 
+}
+
+Krupp_PH2_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.1
+	production_speed_buildings_factor = 0.05
+	 
+}
+
+Krupp_PH2_FREETRADE_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.15
+	production_speed_buildings_factor = 0.1
+	 
+}
+
+Krupp_PH3_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.05
+	production_speed_buildings_factor = 0.05
 	 
 }
 
