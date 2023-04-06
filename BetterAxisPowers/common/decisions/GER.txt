@@ -31,8 +31,11 @@ GER_training_program = {
 		}
 	
 		timeout_effect = {
-			remove_ideas = GER_SOV_TRAINING
-			SOV = { remove_ideas = SOV_GER_TRAINING }
+			custom_effect_tooltip = GER_end_of_training_program
+			hidden_effect = {
+				remove_ideas = GER_SOV_TRAINING
+				SOV = { remove_ideas = SOV_GER_TRAINING }
+			}
 		}
 	
 		complete_effect = {
@@ -82,8 +85,11 @@ GER_training_program = {
 		}
 	
 		timeout_effect = {
-			remove_ideas = GER_ITA_TRAINING
-			ITA = { remove_ideas = ITA_GER_TRAINING }
+			custom_effect_tooltip = GER_end_of_training_program
+			hidden_effect = {
+				remove_ideas = GER_ITA_TRAINING
+				ITA = { remove_ideas = ITA_GER_TRAINING }
+			}
 		}
 	
 		complete_effect = {

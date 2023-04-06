@@ -206,9 +206,8 @@ ideas = {
 			picture = generic_the_london_naval_treaty
 			
 			modifier = {
-				production_cost_max_ship_hull_heavy = 5000
-				production_cost_max_ship_hull_light = 2000
-				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_heavy = 6000
+				production_cost_max_ship_hull_light = 3000
 				production_cost_max_ship_hull_carrier = 1
 			}
 		}
@@ -5310,6 +5309,29 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		krupp_starter_ver = {
+			picture = krupp
+			
+			allowed = {
+			 original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+			}
+
+			research_bonus = {
+			 industry = 0.05
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
 		}
 		
 		krupp_nofocusver = {

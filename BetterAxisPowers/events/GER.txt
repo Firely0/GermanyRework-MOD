@@ -3674,6 +3674,7 @@ country_event = { #Event For Germany Good News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_ab
+		country_event = { hours = 6 id = news.25 }
 	}
     }
 }
@@ -3692,6 +3693,7 @@ country_event = { #Event For Germany Embargo But Good News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_ab
+		country_event = { hours = 6 id = news.25 }
 	}
     }
 }
@@ -3710,6 +3712,7 @@ country_event = { #Event For Germany Isolated But Good News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_ab
+		country_event = { hours = 6 id = news.25 }
 	}
     }
 }
@@ -3728,6 +3731,7 @@ country_event = { #Event For Germany Secerutiy of Benelux But Good News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_ab
+		country_event = { hours = 6 id = news.25 }
 	}
     }
 }
@@ -3797,7 +3801,7 @@ country_event = {
 
 country_event = { #Event For UK - Ultimatum Not Aceppted.
 	id = GER_rhineland_remind_ger.6
-	title = "Germany Not Aceepted our Ultimatum!"
+	title = "Germany Not Accepted our Ultimatum!"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
@@ -3818,6 +3822,9 @@ country_event = { #Event For UK - Ultimatum Not Aceppted.
 		}
 	}
 	add_to_faction = FRA
+	hidden_effect = {
+		GER = { country_event = { id = news.26 hours = 6 } }
+	}
     }
 
 	option = {
