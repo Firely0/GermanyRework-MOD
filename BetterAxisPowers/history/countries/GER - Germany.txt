@@ -29,6 +29,30 @@ every_state = {
 	}
 }
 
+add_opinion_modifier = {
+    target = SOV
+    modifier = gertrainingprogram
+} 
+
+SOV = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
+add_opinion_modifier = {
+    target = ITA
+    modifier = gertrainingprogram
+}
+
+ITA = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20

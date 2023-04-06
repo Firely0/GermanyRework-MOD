@@ -36,8 +36,21 @@ GER_training_program = {
 		}
 	
 		complete_effect = {
-			remove_ideas = GER_SOV_TRAINING
-			SOV = { remove_ideas = SOV_GER_TRAINING }
+			custom_effect_tooltip = GER_Cancel_Training_Program
+			hidden_effect = {
+				remove_ideas = GER_SOV_TRAINING
+				SOV = { remove_ideas = SOV_GER_TRAINING }
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = gertrainingprogram
+				}
+				SOV = {
+					remove_opinion_modifier = {
+						target = GER
+						modifier = gertrainingprogram
+					}
+				}
+			}
 		}
 	}
 
@@ -74,8 +87,21 @@ GER_training_program = {
 		}
 	
 		complete_effect = {
-			remove_ideas = GER_ITA_TRAINING
-			ITA = { remove_ideas = ITA_GER_TRAINING }
+			custom_effect_tooltip = GER_Cancel_Training_Program
+			hidden_effect = {
+				remove_ideas = GER_ITA_TRAINING
+				ITA = { remove_ideas = ITA_GER_TRAINING }
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = gertrainingprogram
+				}
+				ITA = {
+					remove_opinion_modifier = {
+						target = GER
+						modifier = gertrainingprogram
+					}
+				}
+			}
 		}
 	}
 
