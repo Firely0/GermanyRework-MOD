@@ -705,6 +705,49 @@ GER_Rhineland_demilitarized = {
 		}
 	}
 
+	GER_Rhineland_demilitarized_e = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			909 = { is_demilitarized_zone = no }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 909 #Wuttemberg
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = no
+		days_mission_timeout = ger_rhi_timeout #140
+		priority = 89
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+		}
+	
+		complete_effect = {
+		}
+	}
+
 	GER_Rhineland_demilitarized_c = {
 
 		allowed = {
@@ -714,6 +757,7 @@ GER_Rhineland_demilitarized = {
 		available = {
 			42 = { is_demilitarized_zone = yes }
 			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
 		}
 
 		cost = 35
@@ -755,6 +799,7 @@ GER_Rhineland_demilitarized = {
 		available = {
 			42 = { is_demilitarized_zone = yes }
 			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
 		}
 
 		cost = 35
