@@ -1,0 +1,129 @@
+ideas = {
+
+	country = {
+		part_of_mittel_europa = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.1
+				recruitable_population_factor = -0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				cic_to_overlord_factor = 0.1
+				mic_to_overlord_factor = 0.1
+				extra_trade_to_overlord_factor = 0.1
+			}
+		}
+
+		mittel_europa_buff_0 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				#consumer_goods_factor = 0.01
+				#industrial_capacity_factory = 0.02
+			}
+		}
+
+		mittel_europa_buff_1 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.01
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		mittel_europa_buff_2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.02
+				industrial_capacity_factory = 0.04
+			}
+		}
+
+		mittel_europa_buff_3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = 0.06
+			}
+		}
+
+		mittel_europa_buff_4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.04
+				industrial_capacity_factory = 0.08
+			}
+		}
+
+		mittel_europa_buff_5 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		mittel_europa_buff_6 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				is_subject_of = GER
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.06
+				industrial_capacity_factory = 0.12
+			}
+		}
+	}
+}

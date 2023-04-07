@@ -7450,6 +7450,33 @@ focus_tree = {
     }
 
 	focus = {
+		id = GER_Milita_Africa
+		icon = GFX_goal_militaafrica
+		dynamic = yes
+		prerequisite = { focus = GER_Planned_Offense focus = GER_Battle_of_El_Alamein }
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		x = 0
+		y = 5
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+	    }
+
+    }
+
+	focus = {
 		id = GER_italy_ally
 		text = GER_italy_ally
 		icon = GFX_focus_befriend_italy
@@ -11517,15 +11544,46 @@ focus = {
 					}
 				}
 			}
-			SOV = {
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					add_opinion_modifier = {
+						target = SOV
+						modifier = AI_SOV_WAR
+					}
+				}
+				SOV = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = hostile_status
+					}
+				}
 				add_opinion_modifier = {
-					target = ROOT
+					target = SOV
 					modifier = hostile_status
 				}
-			}
-			add_opinion_modifier = {
-				target = SOV
-				modifier = hostile_status
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = gertrainingprogram 
+				}
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = gertrainingprogram 
+				}
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = improve_relation
+				}
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = SOV_strengthened_relations_with_us
+				}
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = SOV_strengthened_relations_with_us
+				}
 			}
 		}
 	}
