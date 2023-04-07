@@ -2076,6 +2076,11 @@ country_event = {
 		name = mrpact_negociations_lithuania.1.a	#Who cares about Lithuania
 		ai_chance = {
 			factor = 40
+			modifier = {
+				factor = 1000
+				NOT = { LIT = { is_subject_of = GER } }
+				is_historical_focus_on = yes
+			}
 		}
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_lithuania.2 }
@@ -2209,6 +2214,7 @@ country_event = {
 					every_owned_state = {
 						limit = {
 							is_core_of = PREV
+							NOT = { is_controlled_by = GER }
 						}
 						SOV = { add_state_claim = PREV }
 					}
@@ -2643,6 +2649,7 @@ country_event = {
 					every_owned_state = {
 						limit = {
 							is_core_of = PREV
+							NOT = { is_controlled_by = GER }
 						}
 						SOV = { add_state_claim = PREV }
 					}

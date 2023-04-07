@@ -819,6 +819,28 @@ ideas = {
 			}
 		}
 
+		GER_Colonial_Police_Fake_tooltip_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.35
+				compliance_gain = -0.015
+				required_garrison_factor = -0.35
+				resistance_damage_to_garrison = -0.45
+				local_factories = 0.25
+				local_resources = 0.25
+			}
+		}
+
 		sour_loser_v = {
 
 			picture = sour_loser
@@ -5031,6 +5053,99 @@ ideas = {
 			}
 		}
 
+		renault_ger = {
+    
+			picture = renault
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_AMX = {
+		
+			picture = generic_tank_manufacturer_2
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_APX = {
+			picture = FRA_atelier_puteaux
+			
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { medium_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_panhard = {
+			picture = FRA_panhard
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { armored_car_manufacturer FRA_designer_DEBUFF }
+		}
+
 	}
 	
 	naval_manufacturer = { 
@@ -5074,6 +5189,71 @@ ideas = {
 			}
 			
 		}	
+
+		GER_aeb = {
+			picture = FRA_aeb	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				VIC = { exists = yes }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
+		GER_acl = {
+			picture = FRA_acl	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				VIC = { exists = yes }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
+	
+		GER_acf = {
+			picture = FRA_acf	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				29 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
 	}
 	
 	aircraft_manufacturer = { 
@@ -5307,6 +5487,94 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		GER_morane_saulnier = {
+			picture = morane_saulnier
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { light_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_bloch = {
+			picture = bloch
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_country_flag = ITA_GER_VICHY_ESTABLISHED
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { medium_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_amiot = {
+			picture = amiot
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { heavy_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_levasseur = {
+			picture = levasseur
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { naval_aircraft_manufacturer FRA_designer_1_DEBUFF }
 		}
 	}
 	

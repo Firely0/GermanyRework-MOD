@@ -268,4 +268,37 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	FRA_designer_DEBUFF = { #Tank
+		random = no
+		industrial_capacity_factory = -0.05
+		repair_speed_arms_factory_factor = -0.05
+		army_intel_to_others = 05.0
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FRA_designer_1_DEBUFF = { #AIR
+		random = no
+		industrial_capacity_factory = -0.05
+		repair_speed_arms_factory_factor = -0.05
+		airforce_intel_to_others = 05.0
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	FRA_designer_navy_DEBUFF = { #Navy
+	    random = no
+	    industrial_capacity_dockyard = -0.05
+	    repair_speed_dockyard_factor = -0.05
+	    navy_intel_to_others = 05.0
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+    }	
 }	

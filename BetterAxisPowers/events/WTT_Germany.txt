@@ -86,7 +86,7 @@ country_event = {
 				every_unit_leader = {
 					set_nationality = GER
 				}
-				remove_idea = kinder_kuche_kirche
+				remove_ideas = kinder_kuche_kirche
 				swap_ideas = {
 					remove_idea = sour_loser
 					add_idea = sour_loser_v
@@ -94,10 +94,10 @@ country_event = {
 				add_ideas = kinder_kuche_kirche
 			}
 			SOV = {
-				remove_idea = SOV_GER_TRAINING
+				remove_ideas = SOV_GER_TRAINING
 			}
 			ITA = {
-				remove_idea = ITA_GER_TRAINING
+				remove_ideas = ITA_GER_TRAINING
 			}
 			GER = {
 				every_unit_leader = {

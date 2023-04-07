@@ -734,6 +734,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_form_colonial_police
+		icon = GFX_goal_GER_new_colonial_empire
+		available = {
+			has_government = fascism
+		}
+		prerequisite = { focus = GER_SS }
+		x = -3
+		y = 1
+		relative_position_id = GER_SS
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_Africa_tt
+			show_ideas_tooltip = GER_Colonial_Police_Fake_tooltip_idea
+		}
+	}
+
+	focus = {
 		id = GER_SS_Final_Focus
 		icon = GFX_focus_generic_secret_service_agency
 		available = {
@@ -1206,14 +1227,6 @@ focus_tree = {
 							has_civil_war = no
 						}
 					}
-				}
-				effect_tooltip = {
-					transfer_state = 85
-					add_state_core = 85
-					transfer_state = 807
-					add_state_core = 807
-					remove_state_claim = 86
-					remove_state_claim = 762
 				}
 				ENG = {
 					if = {

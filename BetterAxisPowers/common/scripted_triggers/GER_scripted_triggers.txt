@@ -156,6 +156,14 @@ is_controlled_by_ITA_or_subject = {
 	}
 }
 
+japan_declared_war_usa = {
+	JAP = {
+		NOT = { has_war_with = GER }
+		has_war_with = USA
+	}
+	has_global_flag = GER_ITA_JAP_TRIPLE
+}
+
 krupp_used = {
 	AND = {
 		OR = {
@@ -165,10 +173,44 @@ krupp_used = {
 	}
 }
 
-japan_declared_war_usa = {
-	JAP = {
-		NOT = { has_war_with = GER }
-		has_war_with = USA
+krupp_work_with_tank = {
+	AND = {
+		OR = {
+			has_idea = porsche
+			has_idea = porsche_focus
+			has_idea = henschel
+			has_idea = henschel_focus
+			has_idea = GER_MAN
+			has_idea = GER_MAN_Focus
+			has_idea = GER_Volkswagen
+			has_idea = GER_Mercedes
+			has_idea = GER_skoda
+		}
 	}
-	has_global_flag = GER_ITA_JAP_TRIPLE
 }
+
+krupp_work_with_air = {
+	AND = {
+		OR = {
+			has_idea = messerschmitt
+			has_idea = messerschmitt_focus
+			has_idea = junkers
+			has_idea = junkers_focus
+			has_idea = focke_wulf
+			has_idea = heinkel
+			has_idea = dornier
+			has_idea = dornier_focus
+			has_idea = GER_Mercedes_t
+		}
+	}
+}
+
+krupp_work_with_naval = {
+	AND = {
+		OR = {
+			has_idea = germaniawerft
+			has_idea = blohm_und_voss
+		}
+	}
+}
+

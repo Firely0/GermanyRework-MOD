@@ -31,11 +31,13 @@
 
  modifier_production_cost_max_ship_hull_light:0 "Light Ship Max Cost"
  modifier_production_cost_max_ship_hull_submarine:0 "Submarine Max Cost"
+ modifier_repair_speed_dockyard_factor:0 "Dockyard Repair Speed"
 
  #Occupation Laws
  ss_police_final:0 "Schutzstaffel"
  ss_police:0 "Schutzstaffel"
  ss_police_final_sov:0 "Schutzstaffel"
+ GER_colonial_police:0 "Colonial Police"
 
  #Operation Barbarossa
  GER_Operation_Barbarossa_V:0 "Operation Barbarossa"
@@ -154,6 +156,7 @@
  GER_fascism_for_our_glory_idea_desc:0 ""
 
  SS_Fake_tooltip_idea:0 "Schutzstaffel"
+ GER_Colonial_Police_Fake_tooltip_idea:0 "Colonial Police"
 
  sour_loser_v:0 "Bitter Loser"
  sour_loser_v_desc:0 "Bitterness over defeat in the Great War dominates the politics of this nation."
@@ -376,6 +379,7 @@
  GER_SS_tt:0 "Unlocks Occupation Law; §YSchutzstaffel§!"
  GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§!"
  GER_SS_Soviet_tt:0 "Unlocks Occupation Law in §YSoviet Union§! States;"
+ GER_Africa_tt:0 "Unlocks Occupation Law in §YAfrica§! States;"
  GER_Four_Year_Plan_Finish_tt:0 "Available After End Of §RFour Year Plan§!"
  GER_align_bulgaria:0 "Align Bulgaria"
  GER_align_bulgaria_unaligned:0 "Align Bulgaria"
@@ -428,6 +432,23 @@
  Mercedes_trait:0 "Multi-Role Designer"
  Mercedes_1_trait:0 "Multi-Role Designer"
 
+ #Vichy Colob. With Germans!
+
+ FRA_designer_DEBUFF:0 ""
+ FRA_designer_1_DEBUFF:0 ""
+ FRA_designer_navy_DEBUFF:0 ""
+
+ renault_ger:0 "Renault"
+ GER_AMX:0 "AMX"
+ GER_APX:0 "APX"
+ GER_panhard:0 "Panhard"
+ GER_aeb:0 "AEB"
+ GER_acl:0 "ACL"
+ GER_acf:0 "ACF"
+ GER_morane_saulnier:0 "Morane-Saulnier"
+ GER_amiot:0 "Amiot"
+ GER_levasseur:0 "Levasseur"
+
  #Event
  gerb.79.t:0 "Ultimatum from Germany"
  gerb.79.d:0 "With Greece under the thumb of Germany, [From.GetLeader] has put pressure on our government to join their ranks. The Italy-German alliance has put us in a position where neutrality is no longer an option, and now an ultimatum has arrived from Berlin demanding we  join them in the very pact they are using to force our hand.\n\nAlthough we cannot maintain neutrality, there are other options. Seeking support from Britain is one, standing our ground is another. None, however, can secure the future of the republic with certainty."
@@ -474,6 +495,8 @@
  GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
 
  #Focus And Others
+ GER_form_colonial_police:0 "Form Colonial Police"
+ GER_form_colonial_police_desc:0 ""
  GER_uk_friend:0 "Anglo-German Agreements"
  GER_uk_friend_desc:0 ""
  GER_uk_trade_agreements:0 "Trade Pact"

@@ -58,6 +58,10 @@ ideas = {
 						POL = {
 							has_war_with = SOV
 						}
+						SOV = {
+							has_war_with = POL
+						}
+						NOT = { SOV = { is_in_faction_with = GER } }
 					}
 					POL = { white_peace = SOV }
 					SOV = { white_peace = POL }
@@ -173,10 +177,7 @@ ideas = {
 			}
 			
 			picture = generic_planning
-
-			modifier = {
-				justify_war_goal_time = 0.5
-			}
+			
 		}
 		SOV_molotov_ribbentrop_pact_new = {
 			removal_cost = -1

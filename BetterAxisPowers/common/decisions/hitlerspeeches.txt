@@ -503,10 +503,14 @@ hitlerspeeches_category = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			base = 0
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 100
+				add = 350
+			}
+			modifier = {
+				has_wargoal_against = USA
+				add = 350
 			}
 		}
 
@@ -523,7 +527,6 @@ hitlerspeeches_category = {
 				has_wargoal_against = USA
 				japan_declared_war_usa = yes
 			}
-
 		}
 
 		complete_effect = {
