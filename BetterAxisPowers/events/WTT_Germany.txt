@@ -86,6 +86,10 @@ country_event = {
 				every_unit_leader = {
 					set_nationality = GER
 				}
+				swap_ideas = {
+					remove_idea = sour_loser
+					add_idea = sour_loser_v
+				}
 			}
 			GER = {
 				every_unit_leader = {
@@ -99,6 +103,13 @@ country_event = {
 					}
 					set_nationality = event_target:fascist_germany_civil_war
 				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = sour_loser
+					add_idea = sour_loser_v
+				}
+				clr_country_flag = GER_BLOCKED_TOTAL_WAR
 			}
 			if = {
 				limit = {

@@ -10388,6 +10388,7 @@ focus_tree = {
 			has_war = yes
 			GER = { remove_ideas = kinder_kuche_kirche }
 			GER = { add_ideas = tot_economic_mobilisation }
+			clr_country_flag = GER_BLOCKED_TOTAL_WAR
 			hidden_effect = {
 				limit = {
 					is_ai = yes
