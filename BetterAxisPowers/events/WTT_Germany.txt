@@ -86,10 +86,18 @@ country_event = {
 				every_unit_leader = {
 					set_nationality = GER
 				}
+				remove_idea = kinder_kuche_kirche
 				swap_ideas = {
 					remove_idea = sour_loser
 					add_idea = sour_loser_v
 				}
+				add_ideas = kinder_kuche_kirche
+			}
+			SOV = {
+				remove_idea = SOV_GER_TRAINING
+			}
+			ITA = {
+				remove_idea = ITA_GER_TRAINING
 			}
 			GER = {
 				every_unit_leader = {
@@ -105,10 +113,12 @@ country_event = {
 				}
 			}
 			hidden_effect = {
+				remove_idea = kinder_kuche_kirche
 				swap_ideas = {
 					remove_idea = sour_loser
 					add_idea = sour_loser_v
 				}
+				add_ideas = kinder_kuche_kirche
 				clr_country_flag = GER_BLOCKED_TOTAL_WAR
 			}
 			if = {
