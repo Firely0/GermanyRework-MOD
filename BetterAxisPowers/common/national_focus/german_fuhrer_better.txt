@@ -6036,7 +6036,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_naval_intel_cooperation
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_navalintel
 		prerequisite = { focus = GER_japan_friend }
 		available = {
 			is_subject = no
@@ -6123,7 +6123,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_naval_expand_project
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = GER_naval_intel_cooperation }
 		prerequisite = { focus = GER_JAP_Coal_Search }
 		available = {
@@ -9713,7 +9713,7 @@ focus = {
 
     focus = {
 		id = GER_anti_comitern_pact
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_generic_attack_communists_a
 		text = GER_anti_comitern_pact
 		prerequisite = { focus = GER_Sleep_Well_SOV  }
 		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } NOT = { has_completed_focus = GER_against_fuhrer } } 

@@ -1695,7 +1695,7 @@
 
 	shared_focus = {
 		id = GER_rebuild_the_high_seas_fleet_a
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_generic_navy_battleship
 		text = GER_rebuild_the_high_seas_fleet
 		relative_position_id = GER_naval_rearmament_a
 		prerequisite = { focus = GER_plan_z_a }
@@ -1748,7 +1748,7 @@
 
 	shared_focus = {
 		id = GER_carrier_war
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_r56_goal_generic_carrier
 		relative_position_id = GER_naval_rearmament_a
 		prerequisite = { focus = GER_plan_z_a }
 		x = -3
@@ -1786,7 +1786,7 @@
 
 	shared_focus = {
 		id = GER_Graf_Zeppelin
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_goal_build_carier
 		relative_position_id = GER_carrier_war
 		mutually_exclusive = { focus = GER_Convert_Civilian_Ships }
 		prerequisite = { focus = GER_carrier_war }
@@ -1835,8 +1835,7 @@
 
 	shared_focus = {
 		id = GER_Convert_Civilian_Ships
-		icon = GFX_goal_r56_goal_generic_carrier
-		text = ITA_refit_civilian_ships
+		icon = GFX_goal_generic_navy_carrier
 		relative_position_id = GER_carrier_war
 		mutually_exclusive = { focus = GER_Graf_Zeppelin }
 		prerequisite = { focus = GER_carrier_war }
@@ -1894,7 +1893,7 @@
 
 	shared_focus = {
 		id = GER_Bismarck
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_build_bismarck
 		prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		x = 1
@@ -3156,7 +3155,7 @@
 
 	shared_focus = {
 		id = GER_Finish
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_endoffouryearplan
         prerequisite = { focus = GER_extra_tech_slot_a focus = GER_extra_build_slot focus = GER_switch_to_war_economy }
 		x = 0
 		y = 6
@@ -3190,7 +3189,7 @@
 	shared_focus = {
 		id = GER_Finish_COPY
 		text = GER_Finish
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_endoffouryearplan
 		allow_branch = { has_completed_focus = GER_Finish }
 		x = -14
 		y = 0
