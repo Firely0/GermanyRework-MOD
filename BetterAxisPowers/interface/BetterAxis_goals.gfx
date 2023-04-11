@@ -36,6 +36,36 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_GER_industry"
+		texturefile = "gfx/interface/goals/GER_industry.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_focus_on_arms"
+		texturefile = "gfx/interface/goals/focus_on_arms.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_focus_on_civilian"
+		texturefile = "gfx/interface/goals/focus_on_civilian.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_small_arms"
+		texturefile = "gfx/interface/goals/small_arms.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_construct_car_factory"
+		texturefile = "gfx/interface/goals/goal_generic_construct_car_factory.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_army_tanks3"
+		texturefile = "gfx/interface/goals/goal_generic_army_tanks3.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_goal_tradeukpuppets"
 		texturefile = "gfx/interface/goals/tradeukpuppets.dds"		
 	}
