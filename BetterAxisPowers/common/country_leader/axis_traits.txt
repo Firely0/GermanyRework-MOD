@@ -283,10 +283,9 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 
-
 		experience_loss_factor = -0.1
 		power_balance_weekly = 0.03
-		weekly_casualties_war_support = 0.006
+		weekly_casualties_war_support = 0.001
 
 		ai_will_do = {
 			factor = 1
@@ -298,8 +297,7 @@ leader_traits = {
 
 		stability_factor = 0.1
 
-		consumer_goods_factor = -0.05
-		global_building_slots = 1
+		consumer_goods_factor = -0.03
 
 		ai_will_do = {
 			factor = 1
