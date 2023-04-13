@@ -1489,6 +1489,35 @@ characters={
 		}	
 	}
 
+	GER_eva_braun ={
+		name= "Eva Braun"
+		portraits={
+			army={
+				small="GFX_idea_eva_braun"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = eva_braun
+			cost = 100
+			available = {
+				has_country_leader = {
+					character = GER_adolf_hitler
+					ruling_only = yes
+				}
+			}
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				eva_braun_trait
+			}
+			on_add = {
+				custom_effect_tooltip = GER_asign_eva_braun
+			}
+		}	
+	}
+
 	GER_hjalmar_schacht={
 		name=GER_hjalmar_schacht
 		portraits={

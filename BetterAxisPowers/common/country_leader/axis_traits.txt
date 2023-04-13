@@ -269,6 +269,56 @@ leader_traits = {
 		}
 	}
 
+	eva_braun_trait = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	eva_braun_trait_health = {
+		random = no
+		stability_factor = 0.1
+
+
+		experience_loss_factor = -0.1
+		power_balance_weekly = 0.03
+		weekly_casualties_war_support = 0.006
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	eva_braun_trait_eco = {
+		random = no
+
+		stability_factor = 0.1
+
+		consumer_goods_factor = -0.05
+		global_building_slots = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	eva_braun_trait_fasicm_moment = {
+		random = no
+
+		stability_factor = 0.1
+
+        conscription = 0.02
+		conscription_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	FRA_designer_DEBUFF = { #Tank
 		random = no
 		industrial_capacity_factory = -0.05

@@ -69,8 +69,21 @@
  GER_training_program:0 "German Military Training Programs"
  GER_SOV_TRAINING:0 "German-Soviet Air Training Program"
  GER_ITA_TRAINING:0 "German-Italian Naval Training Program"
+
+ #Eva Braun
+
+ eva_braun_category:0 "Eva Braun Working Area"
+ eva_braun_has_job:0 "Eva Braun is Asigned Job"
+
+ eva_braun_asign_women_fasicm_moment:0 "Asign as; Women's Movement"
+ eva_braun_work_as_eco:0 "Asign as; NSDAP Bugdet Manager"
+ eva_braun_work_as_health_care:0 "Asign as; Ministry of Health"
+ eva_braun_remove_from_job:0 "Resign Eva Braun"
  
  #Ideas
+
+ ger_temp_debuff:0 "NSDAP Resign Funding"
+ ger_temp_debuff_desc:0 ""
 
  Krupp_PH1_modifier:0 "Krupp"
  Krupp_PH2_modifier:0 "Krupp"
@@ -284,6 +297,8 @@
 
  #TT
 
+ GER_asign_eva_braun:0 "You Can Assign Eva Braun to Different Professions."
+
  GER_BLOCKED_TOTAL_WAR:0 "Blocked from Using Total War Without Focus or Civil War."
 
  GER_west_wall_forts_2:0 "Add §Y24 Land Forts§! on the French border.\n"
@@ -403,6 +418,11 @@
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
  armaments_organizer2:0 "Armaments Organizer"
+ eva_braun_trait:0 ""
+ eva_braun_trait_health:0 "Ministry of Health"
+ eva_braun_trait_eco:0 "NSDAP Bugdet Manager"
+ eva_braun_trait_fasicm_moment:0 "Women's Movement"
+ 
 
  german_Fuhrer_tt:0 "Changes The National Focus Tree To §YRhineland§!"
  german_kaiser_tt:0 "Changes The National Focus Tree To §YOppose Hitler§!"

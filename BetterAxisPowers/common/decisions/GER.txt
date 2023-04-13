@@ -1,3 +1,203 @@
+eva_braun_category = {
+
+	eva_braun_work_as_health_care = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_health
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_health"
+			}
+		}
+	}
+
+	eva_braun_work_as_eco = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_eco
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_eco"
+			}
+		}
+	}
+
+	eva_braun_asign_women_fasicm_moment = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_women_fasicm
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_fasicm_moment"
+			}
+		}
+	}
+
+	eva_braun_remove_from_job = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = eva_braun_has_job
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = eva_braun_women_fasicm
+				}
+				add_war_support = -0.1
+			}
+			if = {
+				limit = {
+					has_country_flag = eva_braun_health
+				}
+				add_stability = -0.1
+			}
+			if = {
+				limit = {
+					has_country_flag = eva_braun_eco
+				}
+				add_timed_idea = {
+					idea = ger_temp_debuff
+					days = 90
+				}
+			}
+			clr_country_flag = eva_braun_women_fasicm
+			clr_country_flag = eva_braun_health
+			clr_country_flag = eva_braun_eco
+			clr_country_flag = eva_braun_has_job
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_health
+				}
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_eco
+				}
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_fasicm_moment
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = eva_braun_trait
+			}
+		}
+	}
+}
+
 GER_krupp_ph1 = {
 
 	Krupp_work_with_aircraft_designer = {

@@ -24,6 +24,28 @@ ideas = {
 			}
 		}
 
+		ger_temp_debuff = {
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+
 		GER_technocracy_idea = {
 
 			picture = jap_supremacy_of_technology
