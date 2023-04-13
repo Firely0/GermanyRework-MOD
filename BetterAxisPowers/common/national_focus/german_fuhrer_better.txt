@@ -35,7 +35,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
 		}
-		x = 61
+		x = 36
 		y = 0
 		cost = 5
 		available = {
@@ -79,7 +79,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
-		x = 59
+		x = 34
 		y = 0
 		cost = 5
 		available = {
@@ -120,7 +120,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_rhineland_ab focus = GER_rhineland_demilitarized
 		}
-		x = 60
+		x = 35
 		y = 1
 		cost = 1
 		available = {
@@ -1935,7 +1935,7 @@ focus_tree = {
 	focus = {
 		id = GER_end_of_czechoslovakia
 		text = GER_end_of_czechoslovakia
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_GER_end_of_czechoslovakia
 		prerequisite = { focus = GER_first_vienna_award }
 		available = { 
 			is_subject = no
@@ -3286,8 +3286,8 @@ focus_tree = {
 	focus = {
 		id = GER_fate_of_yugoslavia
 		text = GER_fate_of_yugoslavia
+		icon = GFX_goal_GER_fate_of_yugoslavia
 		prerequisite = { focus = GER_first_ljubljana_award }
-		icon = GFX_goal_generic_territory_or_war
 		available = {
 			is_subject = no
 			NOT = { has_war_with = YUG }
@@ -3499,7 +3499,7 @@ focus_tree = {
 		id = GER_fate_of_greece
 		text = GER_fate_of_greece
 		prerequisite = { focus = GER_second_ljubljana_award }
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_GER_fate_of_greece
 		available = {
 			country_exists = GRE
 			NOT = { has_war_with = GRE }
@@ -9104,6 +9104,7 @@ focus_tree = {
 				character = GER_adolf_hitler
 				ruling_only = yes
 			}
+			has_completed_focus = GER_kdf_wagen_a
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -9769,7 +9770,7 @@ focus = {
 
     focus = {
 		id = GER_anti_soviet_pact
-		icon = GFX_focus_ger_bulwark_against_bolshevism
+		icon = GFX_goal_GER_anti_soviet_pact
 		text = GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comitern_pact }
 		available = {

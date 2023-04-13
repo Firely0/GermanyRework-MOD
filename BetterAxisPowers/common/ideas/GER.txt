@@ -24,6 +24,29 @@ ideas = {
 			}
 		}
 
+		GER_technocracy_idea = {
+
+			picture = jap_supremacy_of_technology
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+
 		SOV_GER_TRAINING = {
 
 			picture = german_advisors

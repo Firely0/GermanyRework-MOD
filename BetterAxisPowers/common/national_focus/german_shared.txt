@@ -1969,7 +1969,7 @@
 
 	shared_focus = {
 		id = GER_pride_of_the_modern_germany_a
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_Bismarck
 		text = GER_pride_of_the_modern_germany
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		prerequisite = { focus = GER_Bismarck focus = GER_His_Ship }
@@ -2074,7 +2074,7 @@
 
 	shared_focus = {
 		id = GER_crossing_the_atlantic_a
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_prepare_for_the_next_blockade
 		text = GER_crossing_the_atlantic
 		prerequisite = { focus = GER_prepare_for_the_next_blockade_a }
 		available = {
@@ -2219,7 +2219,7 @@
 
 	shared_focus= {
 		id = GER_plan_z_a
-		icon = GFX_goal_Bismarck
+		icon = GFX_goal_planz
 		text = GER_plan_z
 		prerequisite = { focus = GER_naval_rearmament_a }
 		x = -2
@@ -2429,7 +2429,7 @@
 
 	shared_focus = {
 		id = GER_modular_construction_a
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_POL_develop_polish_shipbuilding
 		text = GER_modular_construction
 		prerequisite = { focus = GER_u_boat_effort_a }
 		x = -1
@@ -2452,7 +2452,8 @@
 		text = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = GER_four_year_plan_a }
-		x = 0
+		mutually_exclusive = { focus = GER_technocracy }
+		x = 1
 		y = 1
 		relative_position_id = GER_four_year_plan_a
 		cost = 10
@@ -2462,178 +2463,42 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					GER = {
-						NOT = { has_completed_focus = GER_four_year_plan_a}
-					}
-				}
-				custom_effect_tooltip = GER_autarky_tt
-			}
-		    if = {
-				limit = {
-				 has_idea = Four_Year_Plan_1_Hide_ARMS
-				}
-			    swap_ideas = {
-				 remove_idea = Four_Year_Plan_1_Hide_ARMS
-				 add_idea = Four_Year_Plan_1_autarky_hide_arms
-			    }
-				add_tech_bonus = {
-				 name = GER_autarky
-				 bonus = 1.0
-				 uses = 2
-				 technology = excavation1
-				 technology = excavation2
-				 technology = excavation3
-				 technology = excavation4
-				 technology = excavation5
-			    }
-			}
+			add_ideas = G
+		}
+	}
 
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_Small_Arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_Small_Arms
-					add_idea = Four_Year_Plan_2_autarky_small_arms
-				}
-							add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
-
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_1
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1
-					add_idea = Four_Year_Plan_1_autarky
-				}
-				add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_2_autarky
-				}
-				add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
-            if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				}
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				add_idea = Four_Year_Plan_Arms_Mobilization_autarky_hide_arms 
-			 }
+	shared_focus = {
+		id = GER_technocracy
+		text = GER_autarky
+		icon = GFX_goal_Technocracy
+		prerequisite = { focus = GER_four_year_plan_a }
+		mutually_exclusive = { focus = GER_autarky_a }
+		x = -1
+		y = 1
+		relative_position_id = GER_four_year_plan_a
+		cost = 10
+		
+		ai_will_do = {
+			factor = 9
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {	
 			add_tech_bonus = {
-				name = GER_autarky
+				name = GER_technocracy
 				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
+				ahead_reduction = 1
+				uses = 1
+				category = electronics
 			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization
-				}
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_Arms_Mobilization
-				add_idea = Four_Year_Plan_Arms_Mobilization_autarky 
-			 }
-			add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
-
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization
-				}
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_Civilian_Mobilization
-				add_idea = Four_Year_Plan_Civilian_Mobilization_autarky
-			 }
-			add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
-
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-				}
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-				add_idea = Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms
-			 }
-			add_tech_bonus = {
-				name = GER_autarky
-				bonus = 1.0
-				uses = 2
-				technology = excavation1
-				technology = excavation2
-				technology = excavation3
-				technology = excavation4
-				technology = excavation5
-			    }
-			}
+			add_ideas = GER_technocracy_idea
 		}
 	}
 
 	shared_focus = {
 		id = GER_krupp_eco_focus
 		icon = GFX_goal_krupp
-		prerequisite = { focus = GER_autarky_a }
-		x = 0
+		prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
+		x = -1
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -2696,8 +2561,8 @@
 		icon = GFX_goal_generic_construct_civ_factory
 		text = GER_hermann_goring_werke
 		dynamic = yes
-		prerequisite = { focus = GER_autarky_a }
-		x = -2
+		prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
+		x = -3
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -2768,6 +2633,27 @@
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
+			if = {
+				limit = {
+					has_completed_focus = GER_technocracy
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_industrial_effort_2IC
+				}
+			}
 		}
 	}
 
@@ -2777,7 +2663,7 @@
 		text = GER_kdf_wagen
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke_a }
-		x = -2
+		x = -3
 		y = 3
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -2848,6 +2734,27 @@
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
 			}
+			if = {
+				limit = {
+					has_completed_focus = GER_technocracy
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_industrial_effort_2IC
+				}
+			}
 		}
 	}
 
@@ -2856,7 +2763,7 @@
 		icon = GFX_goal_generic_oil_refinery
 		text = GER_coal_liquidization
 		prerequisite = { focus = GER_autarky_a }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -2958,7 +2865,7 @@
 		icon = GFX_focus_research
 		text = extra_tech_slot
 		prerequisite = { focus = GER_synthetic_rubber_a focus = GER_kdf_wagen_a }
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -3585,7 +3492,7 @@
 		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
-		mutually_exclusive = { focus = GER_Eco_Plan_A }
+		mutually_exclusive = { focus = GER_Eco_Plan_A focus = GER_Eco_Plan_C }
 		x = 4
 		y = 2
 		relative_position_id = GER_Finish_COPY
@@ -3902,7 +3809,7 @@
 	shared_focus = {
 		id = GER_Eco_Plan_Side_A_1
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A }
+		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A focus = GER_Eco_Plan_C_A }
 		x = 0
 		y = 6
 		relative_position_id = GER_Finish_COPY

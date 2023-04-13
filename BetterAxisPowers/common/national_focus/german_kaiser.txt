@@ -18,6 +18,8 @@ focus_tree = {
 		}
 	}
 
+	continuous_focus_position = { x = 20 y = 2000 }
+
 	default = no
 
 	shared_focus = GER_four_year_plan_a	
@@ -69,7 +71,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_secure_the_new_state
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_GER_secure_the_new_state
 		prerequisite = { focus = GER_oppose_hitler_a }
 		available = {
 			is_subject = no
@@ -131,7 +133,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rebuild_the_nation
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_GER_hammer
 		prerequisite = { focus = GER_revive_the_kaiserreich focus = GER_reestablish_free_elections }
 		available = {
 		}
@@ -597,7 +599,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_central_powers
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_centralpowers
 		prerequisite = { focus = GER_our_place_in_the_sun }
 		available = {
 			is_subject = no
@@ -675,7 +677,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_prepare_italian_coup
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_GER_prepare_italian_coup
 		prerequisite = { focus = GER_the_central_powers }
 		available = {
 			is_subject = no
@@ -1451,7 +1453,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_anti_soviet_pact_unaligned
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comintern_pact_unaligned }
 		available = {
 			is_subject = no
@@ -1498,7 +1500,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_tackle_the_communist_threat
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_attack_soviet
 		prerequisite = { focus = GER_anti_soviet_pact_unaligned focus = GER_carte_blanche_for_alsace_and_french_colonies }
 		available = {
 			is_subject = no
@@ -1540,7 +1542,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_iberian_problem
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_communist_spain_focus
 		prerequisite = { focus = GER_tackle_the_communist_threat }
 		available = {
 			is_subject = no
@@ -1836,7 +1838,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_danubian_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_danubian
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -1926,7 +1928,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_danubian_expansion
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_danubian_expand
 		prerequisite = { focus = GER_danubian_membership }
 		available = {
 			is_subject = no
@@ -1994,7 +1996,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_no_balkan_communism
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_generic_attack_communists_a
 		prerequisite = { focus = GER_danubian_expansion }
 		available = {
 			is_subject = no
@@ -2128,7 +2130,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_low_countries_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_benelux
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -2212,7 +2214,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_no_reds_in_western_europe
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_generic_attack_communists_a
 		prerequisite = { focus = GER_low_countries_membership }
 		available = {
 			is_subject = no
@@ -2346,7 +2348,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_scandinavian_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_scandinavian_alliance
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -2430,7 +2432,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_baltic_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_baltic
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
@@ -2564,7 +2566,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_polish_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_Poland_befriend
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
@@ -2650,7 +2652,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_finnish_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_invite_finland
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
