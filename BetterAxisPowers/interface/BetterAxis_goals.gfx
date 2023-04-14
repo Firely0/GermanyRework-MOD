@@ -31,6 +31,26 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_CreateHQ_ITA"
+		texturefile = "gfx/interface/goals/CreateHQ_ITA.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_CreateHQ"
+		texturefile = "gfx/interface/goals/CreateHQ.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ETH_peacekeeping_forces_side"
+		texturefile = "gfx/interface/goals/focus_ETH_peacekeeping_forces_side.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_finger"
+		texturefile = "gfx/interface/goals/finger.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_goal_r56_goal_GER_operation_sealion"
 		texturefile = "gfx/interface/goals/r56_goal_GER_operation_sealion.dds"			
 	}

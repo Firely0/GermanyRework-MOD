@@ -343,7 +343,7 @@ country_event = {
 		has_country_flag = german_coup
 	}
 	
-	trigger_only_once = yes
+	fire_only_once = yes
 
 	option = {
 		name = austrian_coup.1.a
@@ -375,7 +375,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.412 }
+			news_event = { hours = 6 id = AOV_news.412 }
 		}
 	}
 }
@@ -469,7 +469,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.411 }
+			news_event = { hours = 6 id = AOV_news.411 }
 		}
 	}
 }
@@ -513,7 +513,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.411 }
+			news_event = { hours = 6 id = AOV_news.411 }
 		}
 	}
 }
@@ -1280,7 +1280,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -1318,7 +1318,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -1356,7 +1356,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -1394,7 +1394,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -1432,7 +1432,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -1470,7 +1470,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.409 }
+			news_event = { hours = 6 id = AOV_news.409 }
 		}
 	}
 	option = {
@@ -2028,7 +2028,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2043,7 +2043,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2067,7 +2067,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2082,7 +2082,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2106,7 +2106,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2121,7 +2121,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2147,7 +2147,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2162,7 +2162,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2186,7 +2186,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2201,7 +2201,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2225,7 +2225,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2240,7 +2240,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2266,7 +2266,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.403 }
+			news_event = { hours = 6 id = AOV_news.403 }
 		}
 	}
 	option = {
@@ -2281,7 +2281,7 @@ country_event = {
 			popularity = -0.20
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id =  news.408 }
+			news_event = { hours = 6 id =  AOV_news.408 }
 		}
 	}
 }
@@ -2373,8 +2373,8 @@ country_event = {
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		hidden_effect = {
-			news_event = { days = 2 id = news.402 }
-			GER = { country_event { id = austrian_plebiscite_results.1 days = 3 } }
+			news_event = { days = 2 id = AOV_news.402 }
+			GER = { country_event = { id = austrian_plebiscite_results.1 days = 3 } }
 		}
 	}
 	option = {
@@ -2396,12 +2396,12 @@ country_event = {
 			popularity = 0.05
 		}
 		hidden_effect = {
-			news_event = { days = 2 id = news.405 }
-			GER = { country_event { id = austrian_plebiscite_results.2 days = 3 } }
+			news_event = { days = 2 id = AOV_news.405 }
+			GER = { country_event = { id = austrian_plebiscite_results.2 days = 3 } }
 		}
 		#GER = { country_event { id = austrian_plebiscite_results.2 days = 2 } }
 		#hidden_effect = {
-		#	news_event = { days = 3 id = news.405 }
+		#	news_event = { days = 3 id = AOV_news.405 }
 		#}
 	}
 }
@@ -2423,7 +2423,7 @@ country_event = {
 #		GER = { country_event { id = frankfurt_conference.12 days = 4 } }
 #		custom_effect_tooltip = GAME_OVER_TT
 #		hidden_effect = {
-#			news_event = { hours = 6 id = news.402 }
+#			news_event = { hours = 6 id = AOV_news.402 }
 #		}
 #	}
 #	option = {
@@ -2451,7 +2451,7 @@ country_event = {
 #		}
 #		GER = { country_event = austria.10 }
 #		hidden_effect = {
-#			news_event = { hours = 6 id = news.404 }
+#			news_event = { hours = 6 id = AOV_news.404 }
 #		}
 #	}
 #}
@@ -2473,7 +2473,7 @@ country_event = {
 #		GER = { country_event { id = frankfurt_conference.12 days = 4 } }
 #		custom_effect_tooltip = GAME_OVER_TT
 #		hidden_effect = {
-#			news_event = { hours = 6 id = news.402 }
+#			news_event = { hours = 6 id = AOV_news.402 }
 #		}
 #	}
 #	option = {
@@ -2501,7 +2501,7 @@ country_event = {
 #		}
 #		GER = { country_event = austria.10 }
 #		hidden_effect = {
-#			news_event = { hours = 6 id = news.404 }
+#			news_event = { hours = 6 id = AOV_news.404 }
 #		}
 #	}
 #}
@@ -2549,7 +2549,7 @@ country_event = {
 			}
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.402 }
+		#	news_event = { hours = 6 id = AOV_news.402 }
 		#}
 	}
 }
@@ -2678,17 +2678,13 @@ country_event = {
 			base = 95
 			modifier = {
 				factor = 100
-				limit = {
-					has_completed_focus = ITA_italy_first
-				}
+				has_completed_focus = ITA_italy_first
 			}
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				is_in_faction_with = AUS
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
@@ -2735,7 +2731,7 @@ country_event = {
 			base = 5
 		}
 		trigger = { 
-			ITA = {
+			ROOT = {
 				NOT = {
 					has_completed_focus = ITA_guarantee_austrian_independence
 				}
@@ -2743,10 +2739,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				original_tag = ITA
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -2771,9 +2767,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.6 }
@@ -2794,10 +2794,10 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -2816,9 +2816,7 @@ country_event = {
 			country_event = anschluss_reaction.12
 		}
 		hidden_effect = {
-			ITA = {
-				country_event = { hours = 3 id = italian_reaction.16 }
-			}
+			country_event = { hours = 3 id = italian_reaction.16 }
 		}
 	}
 	option = {
@@ -2827,18 +2825,15 @@ country_event = {
 			base = 0
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		add_stability = -0.15
 		add_war_support -0.20
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -2863,9 +2858,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.6 }
@@ -2909,17 +2908,13 @@ country_event = {
 			base = 90
 			modifier = {
 				factor = 100
-				limit = {
-					has_completed_focus = ITA_italy_first
-				}
+				has_completed_focus = ITA_italy_first
 			}
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				is_in_faction_with = AUS
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
@@ -3010,9 +3005,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.4 }
@@ -3026,26 +3025,22 @@ country_event = {
 			base = 99
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				is_in_faction_with = AUS
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -3066,14 +3061,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					ITA = { 
+					ROOT = { 
 						is_in_faction = no
 						NOT = {
 							has_completed_focus = ITA_defy_the_duce
 						}
 					}
 				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+				ROOT = { country_event = { hours = 4 id = italian_reaction.14 } }
 			}
 		}
 	}
@@ -3083,18 +3078,15 @@ country_event = {
 			base = 1
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		add_stability = -0.15
 		add_war_support = -0.20
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -3119,9 +3111,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.4 }
@@ -3140,19 +3136,15 @@ country_event = {
 	desc = {
 		text = italian_reaction.3.d
 		trigger = {
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 	}
 	desc = {
 		text = italian_reaction.3.d_2
 		trigger = {
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 	}
 	picture = GFX_report_event_degaulle_inspect_troops
@@ -3165,34 +3157,28 @@ country_event = {
 			base = 85
 			modifier = {
 				factor = 95
-				limit = {
-					has_completed_focus = ITA_italy_first
-				}
+				has_completed_focus = ITA_italy_first
 			}
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				ITA = { is_in_faction_with = AUS }
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
 		trigger = { 
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -3213,14 +3199,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					ITA = { 
+					ROOT = { 
 						is_in_faction = no
 						NOT = {
 							has_completed_focus = ITA_defy_the_duce
 						}
 					}
 				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+				country_event = { hours = 4 id = italian_reaction.14 }
 			}
 		}
 	}
@@ -3230,18 +3216,15 @@ country_event = {
 			base = 15
 		}
 		trigger = { 
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -3266,9 +3249,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.5 }
@@ -3282,26 +3269,22 @@ country_event = {
 			base = 96
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				is_in_faction_with = AUS
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -3322,14 +3305,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					ITA = { 
+					ROOT = { 
 						is_in_faction = no
 						NOT = {
 							has_completed_focus = ITA_defy_the_duce
 						}
 					}
 				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+				country_event = { hours = 4 id = italian_reaction.14 }
 			}
 		}
 	}
@@ -3339,18 +3322,15 @@ country_event = {
 			base = 3
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		add_stability = -0.15
 		add_war_support = -0.20
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -3375,9 +3355,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		AUS = { country_event = anschluss_reaction.5 }
@@ -3397,19 +3381,15 @@ country_event = {
 	desc = {
 		text = italian_reaction.4.d
 		trigger = {
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 	}
 	desc = {
 		text = italian_reaction.4.d_2
 		trigger = {
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 	}
 	picture = GFX_report_event_fascists_posing
@@ -3422,18 +3402,15 @@ country_event = {
 			base = 40
 		}
 		trigger = { 
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -3458,9 +3435,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		add_political_power = -10
@@ -3485,26 +3466,24 @@ country_event = {
 			}
 			modifier = {
 				factor = 100
-				ITA = { is_in_faction_with = AUS }
+				is_in_faction_with = AUS
 				NOT = { 
 					is_in_faction_with = GER
 				}
 			}
 		}
 		trigger = { 
-			ITA = {
-				NOT = {
-					has_completed_focus = ITA_guarantee_austrian_independence
-				}
+			NOT = {
+				has_completed_focus = ITA_guarantee_austrian_independence
 			}
 		}
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -3527,14 +3506,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					ITA = { 
+					ROOT = { 
 						is_in_faction = no
 						NOT = {
 							has_completed_focus = ITA_defy_the_duce
 						}
 					}
 				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+				country_event = { hours = 4 id = italian_reaction.14 }
 			}
 		}
 	}
@@ -3544,26 +3523,22 @@ country_event = {
 			base = 43
 			modifier = {
 				factor = 100
-				limit = {
-					ITA = { is_in_faction_with = AUS }
-					NOT = { 
-						is_in_faction_with = GER
-					}
+				is_in_faction_with = AUS
+				NOT = { 
+					is_in_faction_with = GER
 				}
 			}
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		if = {
 			limit = {
 				NOT = {
-					AUS = { is_guaranteed_by = ITA }
+					AUS = { is_guaranteed_by = ROOT }
 				}
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
 					country = AUS
 					relation = guarantee
@@ -3586,14 +3561,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					ITA = { 
+					ROOT = { 
 						is_in_faction = no
 						NOT = {
 							has_completed_focus = ITA_defy_the_duce
 						}
 					}
 				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+				country_event = { hours = 4 id = italian_reaction.14 }
 			}
 		}
 	}
@@ -3603,18 +3578,15 @@ country_event = {
 			base = 7
 		}
 		trigger = { 
-			ITA = {
-				has_completed_focus = ITA_guarantee_austrian_independence
-			}
+			has_completed_focus = ITA_guarantee_austrian_independence
 		}
 		add_stability = -0.15
 		add_war_support = -0.20
 		if = {
 			limit = {
-				tag = ITA
-				AUS = { is_guaranteed_by = ITA }
+				AUS = { is_guaranteed_by = ROOT }
 			}
-			ITA = {
+			ROOT = {
 				diplomatic_relation = {
    					country = AUS
    					relation = guarantee
@@ -3639,9 +3611,13 @@ country_event = {
 				is_in_faction_with = AUS
 				is_faction_leader = no
 			}
-			OR = {
-				AUS = { remove_from_faction = ITA }
-				HUN = { remove_from_faction = ITA }
+			random_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_in_faction_with = AUS
+					is_faction_leader = yes
+				}
+				remove_from_faction = ROOT
 			}
 		}
 		hidden_effect = {
@@ -3753,7 +3729,7 @@ country_event = {
 			target = AUS
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.407 }
+			news_event = { hours = 6 id = AOV_news.407 }
 		}
 	}
 	option = {
@@ -3769,7 +3745,7 @@ country_event = {
 		add_political_power = -180
 		
 		hidden_effect = {
-			news_event = { hours = 6 id = news.406 }
+			news_event = { hours = 6 id = AOV_news.406 }
 		}
 	}
 }
@@ -3814,7 +3790,7 @@ country_event = {
 			country_event = italian_refusals.4
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 	option = {
@@ -3826,7 +3802,7 @@ country_event = {
 			country_event = italian_refusals.1
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.406 }
+		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
 	}
 }
@@ -3850,7 +3826,7 @@ country_event = {
 			country_event = italian_refusals.5
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 	option = {
@@ -3862,7 +3838,7 @@ country_event = {
 			country_event = italian_refusals.2
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.406 }
+		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
 	}
 }
@@ -3903,7 +3879,7 @@ country_event = {
 			country_event = italian_refusals.4 
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 	option = {
@@ -3915,7 +3891,7 @@ country_event = {
 			country_event = italian_refusals.8
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.406 }
+		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
 	}
 }
@@ -3939,7 +3915,7 @@ country_event = {
 			country_event = italian_refusals.5
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 	option = {
@@ -3951,7 +3927,7 @@ country_event = {
 			country_event = italian_refusals.8
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.406 }
+		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
 	}
 }
@@ -3971,7 +3947,7 @@ country_event = {
 			country_event = italian_refusals.1
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 }
@@ -3991,7 +3967,7 @@ country_event = {
 			country_event = italian_refusals.2
 		}
 		#hidden_effect = {
-		#	news_event = { hours = 6 id = news.407 }
+		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
 	}
 }
@@ -4034,7 +4010,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { hours = 6 id = news.410 }
+			news_event = { hours = 6 id = AOV_news.410 }
 		}
 	}
 	option = {

@@ -1,12 +1,12 @@
 ﻿
-add_namespace = news
+add_namespace = AOV_news
 
 # Frankfurt Conference and Germany wins the Austrian Plebiscite
 news_event = {
-	id = news.402
-	title = news.402.title
+	id = AOV_news.402
+	title = AOV_news.402.title
 	desc = {
-		text = news.402.desc
+		text = AOV_news.402.desc
 	}
 	picture = GFX_news_event_019
 	
@@ -19,7 +19,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.402.a
+		name = AOV_news.402.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -31,11 +31,11 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.402.b
+		name = AOV_news.402.b
 		trigger = { TAG = GER }
 	}
 	option = {
-		name = news.402.c
+		name = AOV_news.402.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -44,7 +44,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.402.e
+		name = AOV_news.402.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -53,7 +53,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.402.f
+		name = AOV_news.402.f
 		trigger = {
 			TAG = AUS
 		}
@@ -62,10 +62,10 @@ news_event = {
 
 # Frankfurt Conference Fails
 news_event = {
-	id = news.403
-	title = news.403.title
+	id = AOV_news.403
+	title = AOV_news.403.title
 	desc = {
-		text = news.403.desc
+		text = AOV_news.403.desc
 	}
 	picture = GFX_news_event_003
 	
@@ -78,7 +78,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.403.a
+		name = AOV_news.403.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -90,11 +90,11 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.403.b
+		name = AOV_news.403.b
 		trigger = { TAG = GER }
 	}
 	option = {
-		name = news.403.c
+		name = AOV_news.403.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -103,7 +103,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.403.e
+		name = AOV_news.403.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -112,7 +112,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.403.f
+		name = AOV_news.403.f
 		trigger = {
 			TAG = AUS
 		}
@@ -121,10 +121,10 @@ news_event = {
 
 # Frankfurt Conference and Austrian Refusal of the Plebiscite
 news_event = {
-	id = news.404
-	title = news.404.title
+	id = AOV_news.404
+	title = AOV_news.404.title
 	desc = {
-		text = news.404.desc
+		text = AOV_news.404.desc
 	}
 	picture = GFX_news_event_german_inspect_troops
 	
@@ -137,7 +137,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.404.a
+		name = AOV_news.404.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -149,11 +149,11 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.404.b
+		name = AOV_news.404.b
 		trigger = { TAG = GER }
 	}
 	option = {
-		name = news.404.c
+		name = AOV_news.404.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -162,7 +162,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.404.e
+		name = AOV_news.404.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -171,7 +171,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.404.f
+		name = AOV_news.404.f
 		trigger = {
 			TAG = AUS
 		}
@@ -180,10 +180,10 @@ news_event = {
 
 # Frankfurt Conference and Germany looses the Austrian Plebiscite
 news_event = {
-	id = news.405
-	title = news.405.title
+	id = AOV_news.405
+	title = AOV_news.405.title
 	desc = {
-		text = news.405.desc
+		text = AOV_news.405.desc
 	}
 	picture = GFX_news_event_german_inspect_troops
 	
@@ -196,7 +196,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.405.a
+		name = AOV_news.405.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -208,13 +208,13 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.405.b
+		name = AOV_news.405.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.405.c
+		name = AOV_news.405.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -223,7 +223,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.405.e
+		name = AOV_news.405.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -232,7 +232,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.405.f
+		name = AOV_news.405.f
 		trigger = {
 			TAG = AUS
 		}
@@ -241,10 +241,10 @@ news_event = {
 
 # The Italians oppose the Anschluss, Germany bows
 news_event = {
-	id = news.406
-	title = news.406.title
+	id = AOV_news.406
+	title = AOV_news.406.title
 	desc = {
-		text = news.406.desc
+		text = AOV_news.406.desc
 	}
 	picture = GFX_news_event_008
 	
@@ -257,7 +257,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.406.a
+		name = AOV_news.406.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -268,19 +268,19 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.406.b
+		name = AOV_news.406.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.406.c
+		name = AOV_news.406.c
 		trigger = { 
 			TAG = ITA
 		}
 	}
 	option = {
-		name = news.406.e
+		name = AOV_news.406.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -289,7 +289,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.406.f
+		name = AOV_news.406.f
 		trigger = {
 			TAG = AUS
 		}
@@ -298,10 +298,10 @@ news_event = {
 
 # The Italians oppose the Anschluss, War breack out
 news_event = {
-	id = news.407
-	title = news.407.title
+	id = AOV_news.407
+	title = AOV_news.407.title
 	desc = {
-		text = news.407.desc
+		text = AOV_news.407.desc
 	}
 	picture = GFX_news_event_008
 	
@@ -314,7 +314,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.407.a
+		name = AOV_news.407.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -325,13 +325,13 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.407.b
+		name = AOV_news.407.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.407.c
+		name = AOV_news.407.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -339,7 +339,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.407.e
+		name = AOV_news.407.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -348,7 +348,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.407.f
+		name = AOV_news.407.f
 		trigger = {
 			TAG = AUS
 		}
@@ -357,10 +357,10 @@ news_event = {
 
 # Germany looses the Frankfurt conf and back down
 news_event = {
-	id = news.408
-	title = news.408.title
+	id = AOV_news.408
+	title = AOV_news.408.title
 	desc = {
-		text = news.408.desc
+		text = AOV_news.408.desc
 	}
 	picture = GFX_news_event_019
 	
@@ -373,7 +373,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.408.a
+		name = AOV_news.408.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -384,13 +384,13 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.408.b
+		name = AOV_news.408.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.408.c
+		name = AOV_news.408.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -398,7 +398,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.408.e
+		name = AOV_news.408.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -407,7 +407,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.408.f
+		name = AOV_news.408.f
 		trigger = {
 			TAG = AUS
 		}
@@ -416,10 +416,10 @@ news_event = {
 
 # Germany refuse the Mediation option and go to war
 news_event = {
-	id = news.409
-	title = news.409.title
+	id = AOV_news.409
+	title = AOV_news.409.title
 	desc = {
-		text = news.409.desc
+		text = AOV_news.409.desc
 	}
 	picture = GFX_news_event_003
 	
@@ -432,7 +432,7 @@ news_event = {
 	}
 	
 	option = {
-		name = news.409.a
+		name = AOV_news.409.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -443,13 +443,13 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.409.b
+		name = AOV_news.409.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.409.c
+		name = AOV_news.409.c
 		trigger = { 
 			OR = {
 				TAG = ITA
@@ -457,7 +457,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.409.e
+		name = AOV_news.409.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -466,7 +466,7 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.409.f
+		name = AOV_news.409.f
 		trigger = {
 			TAG = AUS
 		}
@@ -475,10 +475,10 @@ news_event = {
 
 #Rome Protocols renewed (Anschluss)
 news_event = {
-	id = news.410
-	title = news.410.t
+	id = AOV_news.410
+	title = AOV_news.410.t
 	desc = {
-		text = news.410.desc
+		text = AOV_news.410.desc
 	}
 	picture = GFX_news_event_filov_with_mussolini
 	
@@ -487,7 +487,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = news.410.a
+		name = AOV_news.410.a
 		trigger = {
 			OR = {
 				TAG = HUN
@@ -497,13 +497,13 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.410.b
+		name = AOV_news.410.b
 		trigger = { 
 			TAG = GER
 		}
 	}
 	option = {
-		name = news.410.c
+		name = AOV_news.410.c
 		trigger = { 
 			NOT = {
 				TAG = HUN
@@ -519,9 +519,9 @@ news_event = {
 
 # Anschluss of Austria
 news_event = {
-	id = news.411
-	title = news.411.t
-	desc = news.411.d
+	id = AOV_news.411
+	title = AOV_news.411.t
+	desc = AOV_news.411.d
 	picture = GFX_news_event_german_speech
 	
 	major = yes
@@ -529,7 +529,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = news.411.a
+		name = AOV_news.411.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -540,15 +540,15 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.411.b
+		name = AOV_news.411.b
 		trigger = { TAG = GER }
 	}
 	option = {
-		name = news.411.c
+		name = AOV_news.411.c
 		trigger = { TAG = ITA }
 	}
 	option = {
-		name = news.411.e
+		name = AOV_news.411.e
 		trigger = {
 			OR = {
 				TAG = FRA
@@ -560,9 +560,9 @@ news_event = {
 
 # Anschluss of Austria in civil war
 news_event = {
-	id = news.412
-	title = news.412.t
-	desc = news.412.d
+	id = AOV_news.412
+	title = AOV_news.412.t
+	desc = AOV_news.412.d
 	picture = GFX_news_event_german_speech
 	
 	major = yes
@@ -570,7 +570,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = news.412.a
+		name = AOV_news.412.a
 		trigger = {
 			NOT = {
 				TAG = GER
@@ -581,15 +581,15 @@ news_event = {
 		}
 	}
 	option = {
-		name = news.412.b
+		name = AOV_news.412.b
 		trigger = { TAG = GER }
 	}
 	option = {
-		name = news.412.c
+		name = AOV_news.412.c
 		trigger = { TAG = ITA }
 	}
 	option = {
-		name = news.412.e
+		name = AOV_news.412.e
 		trigger = {
 			OR = {
 				TAG = FRA

@@ -910,6 +910,7 @@ focus_tree = {
 				GER = {
 					country_event = austria.1
 				}				
+				#custom_effect_tooltip = anschluss_mefo_bills_tt
 			}
 			if = {
 				limit = {
@@ -4500,7 +4501,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_FIN_war_with_sov
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_goal_finger
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_influense_finland }
 		available = {
@@ -4743,9 +4744,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_Set_HQ_in_Libya
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_CreateHQ
 		prerequisite = { focus = GER_Afrika_Corps_Erwin_Rommel }
-
 		available = {
 			has_idea = GER_Afrika_Korps
 			
@@ -4830,7 +4830,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Battle_of_El_Alamein
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_ETH_peacekeeping_forces
 		prerequisite = { focus = GER_Set_HQ_in_Libya }
 		
 		available = {
@@ -5019,6 +5019,9 @@ focus_tree = {
 			if = {
 				limit = {
 					ITA = { is_ai = no }
+					ITA = {
+						is_in_faction_with = GER
+					}
 				}
 				ITA = { country_event = { id = GER_ITA_HQ_LOC.1 days = 1 } }
 			}
@@ -5028,7 +5031,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_Set_HQ_in_front
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_CreateHQ_ITA
 		prerequisite = { focus = GER_Afrika_Corps_Follow_Italy }
 		dynamic = yes
 
@@ -5219,9 +5222,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_Planned_Offense
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_ETH_peacekeeping_forces_side
 		prerequisite = { focus = GER_Set_HQ_in_front }
-
 		available = {
 			
 			ITA = { is_in_faction_with = GER }
@@ -5462,7 +5464,9 @@ focus_tree = {
 		icon = GFX_focus_generic_africa_infrastructure
 		dynamic = yes
 		prerequisite = { focus = GER_Set_HQ_in_front }
-
+		allow_branch = {
+			NOT = { has_completed_focus = GER_Afrika_Corps_Follow_Italy }
+		}
 		available = {
 			
 			ITA = { is_in_faction_with = GER }
@@ -5701,6 +5705,183 @@ focus_tree = {
 	    }
 
     }
+
+	focus = {
+		id = GER_africa_Etiopia_war_logistics
+		icon = GFX_focus_generic_develop_ethiopia
+		x = 5
+		y = 3
+		relative_position_id = GER_Create_Afrika_Corps
+		available_if_capitulated = yes
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_global_flag = GER_ETH_SIDE_PLAN 
+		}
+		dynamic = yes
+		prerequisite = { focus = GER_Set_HQ_in_front }
+		available = {
+			ITA = { is_in_faction_with = GER }
+			ITA = {
+				has_global_flag = GER_ETH_SIDE_PLAN 
+				has_idea = GER_ITA_Afrika_Korps
+				custom_trigger_tooltip = { #Etiopia
+				tooltip = GER_Etiopia_in_control_tt
+					908 = { is_controlled_by_ITA_or_subject = yes }
+					842 = { is_controlled_by_ITA_or_subject = yes }
+					841 = { is_controlled_by_ITA_or_subject = yes }
+					843 = { is_controlled_by_ITA_or_subject = yes }
+					840 = { is_controlled_by_ITA_or_subject = yes }
+					839 = { is_controlled_by_ITA_or_subject = yes }
+					271 = { is_controlled_by_ITA_or_subject = yes }
+					835 = { is_controlled_by_ITA_or_subject = yes }
+					838 = { is_controlled_by_ITA_or_subject = yes }
+					837 = { is_controlled_by_ITA_or_subject = yes }
+					836 = { is_controlled_by_ITA_or_subject = yes }
+					835 = { is_controlled_by_ITA_or_subject = yes }
+				}
+				custom_trigger_tooltip = { #Erita
+				tooltip = GER_Erita_in_control_tt
+				ITA = {
+					550 = { is_controlled_by_ITA_or_subject = yes }
+				}	
+				}
+				custom_trigger_tooltip = { #Somoliland
+				tooltip = GER_Somoliland_in_control_tt
+				ITA = {
+					559 = { is_controlled_by_ITA_or_subject = yes }
+					844 = { is_controlled_by_ITA_or_subject = yes }
+				}	
+			}
+		}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			841 = {
+				add_building_construction = {
+					type = supply_node
+					instant_build = yes
+					level = 1
+					province = 1984
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = supply_node
+					instant_build = yes
+					level = 1
+					province = 10775
+				}
+			}
+			build_railway = {
+				level = 1
+				start_province = 12991
+				target_province = 10775
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 12766
+				target_province = 1984
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 2
+				start_province = 1984
+				target_province = 5010
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 2
+				start_province = 12991
+				target_province = 5010
+				build_only_on_allied = yes
+			}	
+		}
+	}
+
+	focus = {
+		id = GER_africa_libya_war_logistics
+		icon = GFX_focus_generic_develop_libya
+		text = GER_Libya_war_logistics
+		prerequisite = { focus = GER_Set_HQ_in_front }
+		allow_branch = {
+			has_global_flag = GER_LIB_SIDE_PLAN
+		}
+		available = {
+			ITA = { is_in_faction_with = GER }
+			ITA = {
+				has_global_flag = GER_LIB_SIDE_PLAN
+				has_idea = GER_ITA_Afrika_Korps
+				custom_trigger_tooltip = {
+				tooltip = GER_ITA_libyan_in_control_tt
+					449 = { is_controlled_by_ITA_or_subject = yes }
+					448 = { is_controlled_by_ITA_or_subject = yes }
+					451 = { is_controlled_by_ITA_or_subject = yes }
+					450 = { is_controlled_by_ITA_or_subject = yes }
+					663 = { is_controlled_by_ITA_or_subject = yes }
+					662 = { is_controlled_by_ITA_or_subject = yes }
+					661 = { is_controlled_by_ITA_or_subject = yes }
+				}
+			}
+		}
+	
+		bypass = {
+		}
+	
+		x = 5
+		y = 3
+		relative_position_id = GER_Create_Afrika_Corps
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+	
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			449 = {	
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 10117
+				}
+			}
+			663 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 12079
+				}
+			}	 
+			build_railway = {
+				level = 1
+				start_province = 11954
+				target_province = 12079
+			}
+			build_railway = {
+				level = 1
+				start_province = 11954
+				target_province = 10117
+			}
+			build_railway = {
+				level = 1
+				start_province = 10117
+				target_province = 1149
+			}
+			build_railway = {
+				level = 1
+				start_province = 12079
+				target_province = 1130
+			}
+		}
+	
+	}
 
 	focus = {
 		id = GER_Milita_Africa
@@ -6290,7 +6471,7 @@ focus_tree = {
 			
 		}
 		cancel_if_invalid = no
-		x = 20
+		x = 21
 		y = 1
 		relative_position_id = GER_Axis_Powers
 		cost = 3
