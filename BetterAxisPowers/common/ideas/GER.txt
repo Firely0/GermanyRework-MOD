@@ -42,7 +42,29 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		ger_temp_debuff_1 = {
+
+			picture = generic_exploit_mines
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
 			}
 		}
 

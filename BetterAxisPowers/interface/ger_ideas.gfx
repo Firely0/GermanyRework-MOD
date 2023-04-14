@@ -11,11 +11,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_ger_army"
-		texturefile = "gfx/interface/ideas/wehrmacht.dds"
-	}
-
-	spriteType = {
 		name = "GFX_idea_shiptraing"
 		texturefile = "gfx/interface/ideas/shiptraing.dds"
 	}
@@ -51,13 +46,28 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_ger_army"
+		texturefile = "gfx/interface/ideas/Heer_first.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ger_army_1"
+		texturefile = "gfx/interface/ideas/Heer_final.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_ger_army_ui"
 		texturefile = "gfx/interface/ideas/wehrmachtUI.dds"
 	}
 	
 	spriteType = {
 		name = "GFX_idea_ger_air"
-		texturefile = "gfx/interface/ideas/Luftwaffe.dds"
+		texturefile = "gfx/interface/ideas/Luftwaffe_first.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ger_air_1"
+		texturefile = "gfx/interface/ideas/Luftwaffe_final.dds"
 	}
 
 	spriteType = {
@@ -67,7 +77,12 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_idea_ger_navy"
-		texturefile = "gfx/interface/ideas/Kriegsmarine.dds"
+		texturefile = "gfx/interface/ideas/Kriegmarine_first.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ger_navy_1"
+		texturefile = "gfx/interface/ideas/Kriegmarine_final.dds"
 	}
 	
 	spriteType = {

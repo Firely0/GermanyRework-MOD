@@ -7,8 +7,13 @@ set_variable = { ger_rhi_timeout = 140 }
 set_variable = { GER_sealion_ph1_time = 120 }
 set_variable = { GER_sealion_ph2_time = 120 }
 
+#Krupp
+set_variable = { GER_KRUPP_PHASE_TIME = 365 }
+set_country_flag = GER_Active_Mission
+
 activate_mission = GER_SOV_TRAINING 
 activate_mission = GER_ITA_TRAINING
+activate_mission = Krupp_End_of_Agreements
 
 every_state = {
 	limit = {

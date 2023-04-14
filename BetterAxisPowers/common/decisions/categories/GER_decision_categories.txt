@@ -146,12 +146,12 @@ GER_krupp_ph1 = {
 		original_tag = GER
 	}
 	
-	priority = 100
+	priority = 89
 
 	visible_when_empty = no
 	
 	visible = {
-		always = yes
+		has_war = no
 	}
 
 }
@@ -164,7 +164,7 @@ GER_training_program = {
 		original_tag = GER
 	}
 	
-	priority = 100
+	priority = 90
 
 	visible_when_empty = no
 	

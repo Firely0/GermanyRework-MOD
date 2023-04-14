@@ -52,13 +52,19 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = german_Fuhrer_tt
 			hidden_effect = {
-			 set_cosmetic_tag = GER_the_third_reich
+			set_cosmetic_tag = GER_the_third_reich
 			if = {
 				limit = {
 					is_ai = yes
 				}
 				set_variable = { ger_rhi_timeout = 200 }
-			} 
+				set_technology = { mobile_warfare = 1 popup = no }
+				add_ideas = i_dont_use_wargoal
+				swap_ideas = {
+					remove_idea = sour_loser
+					add_idea = sour_loser_revange_never_surrender
+				}
+			}
 			activate_mission = GER_Rhineland_demilitarized_a
             activate_mission = GER_Rhineland_demilitarized_b
 			activate_mission = GER_Rhineland_demilitarized_e

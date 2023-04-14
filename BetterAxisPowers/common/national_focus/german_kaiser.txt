@@ -63,7 +63,8 @@ focus_tree = {
 			custom_effect_tooltip = GER_oppose_hitler_civil_war
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
-			add_political_power = 120
+			909 = { set_demilitarized_zone = no }
+			add_political_power = 150
 			add_named_threat = { threat = 5 name = GER_oppose_hitler }
 			country_event = { id = wtt_germany.1 }
 		}

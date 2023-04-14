@@ -344,7 +344,7 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	 #Lighting Strike 
 
@@ -504,7 +504,7 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 Wehrmacht_INF_2_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 
 	#We Have Plans Right?
@@ -558,7 +558,7 @@ Wehrmacht_INF_2_dynamic_modifier = {
 Wehrmacht_INF_3_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	#We Have Plans Right?
 
@@ -612,7 +612,7 @@ Wehrmacht_INF_3_dynamic_modifier = {
 Wehrmacht_INF_4_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	#We Have Plans Right?
 
@@ -682,7 +682,7 @@ Luftwaffe_dynamic_modifier = {
 Luftwaffe_SD_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
@@ -699,7 +699,7 @@ Luftwaffe_SD_dynamic_modifier = {
 Luftwaffe_SD_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
@@ -717,7 +717,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 Luftwaffe_SD_B_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_interception_detect_factor = 0.10
 	air_mission_efficiency = -0.05
@@ -734,7 +734,7 @@ Luftwaffe_SD_B_dynamic_modifier = {
 Luftwaffe_CAS_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -754,7 +754,7 @@ Luftwaffe_CAS_dynamic_modifier = {
 Luftwaffe_CAS_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -774,7 +774,7 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 Luftwaffe_OI_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -794,7 +794,7 @@ Luftwaffe_OI_dynamic_modifier = {
 Luftwaffe_OI_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -946,7 +946,7 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_navy
+	icon = GFX_idea_ger_navy_1
 
     #Base
 

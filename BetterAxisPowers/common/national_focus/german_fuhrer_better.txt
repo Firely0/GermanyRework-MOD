@@ -47,6 +47,7 @@ focus_tree = {
 		bypass = {
 			42 = { is_demilitarized_zone = no }
 			51 = { is_demilitarized_zone = no }
+			909 = { set_demilitarized_zone = no }
 			#NOT = { has_country_flag = GER_rhi_bypass_with_war }
 		}
 		ai_will_do = {
@@ -904,44 +905,11 @@ focus_tree = {
 							owns_state = 848
 						}
 					}
-					ITA = {
-						NOT = {
-							has_completed_focus = ITA_guarantee_austrian_independence
-						}
-					}
-					
 				}
 
-				AUS = {
-					country_event = {
-						id = germany.28
-						days = 1
-					}
+				GER = {
+					country_event = austria.1
 				}				
-			}
-			if = {
-				limit = {
-					country_exists = AUS
-					AUS = {
-						has_civil_war = no
-						OR = {
-							owns_state = 4
-							owns_state = 152
-							owns_state = 153
-							owns_state = 848 #Vorarlberg 
-						}
-					}
-					ITA = {
-						has_completed_focus = ITA_guarantee_austrian_independence
-					}
-				}
- 
-				ITA = {
-					country_event = {
-						id = BBA_italy_interaction_events.24
-						days = 1
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -953,12 +921,6 @@ focus_tree = {
 							owns_state = 152
 							owns_state = 153
 							owns_state = 848
-						}
-						
-					}
-					ITA = {
-						NOT = {
-							has_completed_focus = ITA_guarantee_austrian_independence
 						}
 					}
 				}
@@ -987,71 +949,9 @@ focus_tree = {
 								}
 							}							
 						}
-						
 					}
-					country_event = { id = germany.126 days = 1 }
+					country_event = { id = austria.1 days = 1 }
 				}
-			}
-
-			if = {
-				limit = {
-					4 = {
-						owner = {
-							NOT = {
-								tag = AUS
-							}
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				add_state_core = 4
-			}
-			if = {
-				limit = {
-					152 = {
-						owner = {
-							NOT = {
-								tag = AUS
-							}
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				add_state_core = 152
-			}
-			if = {
-				limit = {
-					153 = {
-						owner = {
-							NOT = {
-								tag = AUS
-							}
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				add_state_core = 153
-			}
-			if = {
-				limit = {
-					848 = {
-						owner = {
-							NOT = {
-								tag = AUS
-							}
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				add_state_core = 848
 			}
 		}
 	}
@@ -3527,6 +3427,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Beaten_but_not_defeated }
 		mutually_exclusive = { focus = GER_for_our_revange }
 		available = {
+			has_idea = sour_loser
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -3550,6 +3451,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Beaten_but_not_defeated }
 		mutually_exclusive = { focus = GER_for_our_honor }
 		available = {
+			has_idea = sour_loser
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -3574,6 +3476,7 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = GER_for_our_revange }
 		available = {
+			has_idea = sour_loser_revange
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -3596,6 +3499,7 @@ focus_tree = {
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = GER_for_our_honor }
 		available = {
+			has_idea = sour_loser_our_honor
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -8738,7 +8642,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			has_war = yes
 			GER = { remove_ideas = kinder_kuche_kirche }
 			GER = { add_ideas = tot_economic_mobilisation }
 			clr_country_flag = GER_BLOCKED_TOTAL_WAR
