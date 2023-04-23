@@ -1174,6 +1174,43 @@ GER_SOV_white_peace_check = {
 	}
 }
 
+GER_AUS_annex = {
+	4 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	152 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	153 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	848 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	AUS = {
+		every_unit_leader = {
+			set_nationality = GER
+		}
+	}
+	annex_country = { target = AUS transfer_troops = yes }
+	add_political_power = 75
+	set_country_flag = AUS_annexed
+	add_war_support = 0.1
+	add_stability = 0.05
+}
+
 GER_give_krupp_state = {
 	if = {
 		limit = {

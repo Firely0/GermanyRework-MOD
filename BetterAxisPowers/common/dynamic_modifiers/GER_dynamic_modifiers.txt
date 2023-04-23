@@ -185,6 +185,9 @@ Wehrmacht_dynamic_modifier = {
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -195,6 +198,11 @@ Wehrmacht_dynamic_modifier = {
 
 	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	org_loss_when_moving = GER_org_loss_when_moving # -0.1
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	
 	#the Blitzkrieg
@@ -210,6 +218,10 @@ Wehrmacht_dynamic_modifier = {
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
 	cas_damage_reduction = GER_cas_damage_reduction
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
 
 	#Supply - Used Later
 
@@ -252,6 +264,9 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -262,6 +277,11 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	org_loss_when_moving = GER_org_loss_when_moving # -0.05
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1	
 
 	#the Blitzkrieg
 	
@@ -276,6 +296,10 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
 	cas_damage_reduction = GER_cas_damage_reduction
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
 
 	#So Our Plan is...?
 
@@ -313,6 +337,11 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 	
 		army_armor_speed_factor = GER_army_armor_speed_factor # 0.05
 		org_loss_when_moving = GER_org_loss_when_moving # -0.05
+
+	    #Experts in Field
+
+	    special_forces_cap = GER_special_forces # 0.15
+	    special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1		
 	
 		#the Blitzkrieg
 		
@@ -330,6 +359,9 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 		army_org_regain = GER_army_org_regain
 
 		industrial_capacity_factory = GER_industrial_capacity_factory
+
+		army_org_regain = GER_army_org_regain # 0
+		grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 			
 		#Volkssturm
 			
@@ -367,6 +399,11 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 		
 	 army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	 org_loss_when_moving = GER_org_loss_when_moving # -0.1
+
+	 #Experts in Field
+
+	 special_forces_cap = GER_special_forces # 0.15
+	 special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 		
 	 #the Blitzkrieg
 			
@@ -384,6 +421,9 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 	 army_org_regain = GER_army_org_regain 
 
 	 industrial_capacity_factory = GER_industrial_capacity_factory
+
+	 army_org_regain = GER_army_org_regain # 0
+	 grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 				
 	 #Volkssturm
 				
@@ -419,6 +459,15 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	cas_damage_reduction = GER_cas_damage_reduction # 0.05
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
 
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
+
 	#Supply - Used Later
 
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
@@ -437,6 +486,9 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -472,6 +524,15 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	cas_damage_reduction = GER_cas_damage_reduction # 0.05
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
 
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1	
+
 	#Supply - Used Later
 
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
@@ -490,6 +551,9 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -524,7 +588,16 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -544,6 +617,9 @@ Wehrmacht_INF_2_dynamic_modifier = {
 	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -577,7 +653,16 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -597,6 +682,9 @@ Wehrmacht_INF_3_dynamic_modifier = {
 	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -631,7 +719,16 @@ Wehrmacht_INF_4_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -651,6 +748,9 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 

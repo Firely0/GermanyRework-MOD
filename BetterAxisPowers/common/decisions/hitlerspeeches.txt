@@ -169,6 +169,10 @@ hitlerspeeches_category = {
 			54 = { infrastructure > 9  }
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 		days_mission_timeout = 60
 
 		complete_effect = {
@@ -209,6 +213,10 @@ hitlerspeeches_category = {
 		
 		activation = {
 			GER = { owns_state = 4 }
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 		days_mission_timeout = 30
@@ -391,6 +399,10 @@ hitlerspeeches_category = {
 		
 		activation = {
 			217 = { is_fully_controlled_by = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 		complete_effect = {

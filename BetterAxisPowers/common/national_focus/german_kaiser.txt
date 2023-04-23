@@ -31,7 +31,7 @@ focus_tree = {
 
     focus = {
 		id = GER_oppose_hitler_a
-		icon = GFX_focus_ger_oppose_hitler
+		icon = GFX_goal_Volkssturm
 		text = GER_oppose_hitler
 
 		available = {
@@ -555,7 +555,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_schlieffen_once_more # Schlieffen 2.0!
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SWI_fortify_border_with_france
 		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
 		available = {
 			is_subject = no
@@ -927,7 +927,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ally_the_shade
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = GER_accept_british_naval_dominance }
 		available = {
 			is_subject = no
@@ -961,7 +961,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_carte_blanche_for_alsace_and_french_colonies
-		icon = GFX_goal_generic_territory_or_war
+		icon = GGFX_focus_attack_france
 		prerequisite = { focus = GER_ally_the_shade }
 		will_lead_to_war_with = FRA
 		available = {
@@ -1206,7 +1206,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_safeguard_the_baltic
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_baltic_entente
 		prerequisite = { focus = GER_see_to_the_eastern_front }
 		available = {
 			is_subject = no

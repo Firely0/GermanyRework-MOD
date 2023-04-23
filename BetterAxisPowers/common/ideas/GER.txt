@@ -2,6 +2,98 @@ ideas = {
 
 	country = {
 
+		Defense_Industry = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.05
+			}
+		}
+
+		Defense_Industry_2 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.01
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+
+		Defense_Industry_3 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.01
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		Defense_Industry_4 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.2
+			}
+		}
+
 		focus_on_liquidation = {
 
 			picture = generic_refining_concern_1
@@ -525,25 +617,6 @@ ideas = {
 
 		}
 
-		GER_special_forces = {
-
-			picture = generic_army_war_college
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				special_forces_cap = 0.1
-				special_forces_training_time_factor = 0.1
-			}
-		}
-
 		GER_convert_war_eco = {
 
 			picture = SOV_second_five_year_plan
@@ -904,6 +977,26 @@ ideas = {
 				required_garrison_factor = -0.2
 				local_factories = 0.1
 				local_resources = 0.15
+				resistance_damage_to_garrison = -0.4
+			}
+		}
+
+		SS_Fake_tooltip_idea_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.2
+				compliance_gain = -0.025
+				required_garrison_factor = -0.40
 				resistance_damage_to_garrison = -0.4
 			}
 		}
@@ -1769,46 +1862,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				war_support_factor = -0.1 
-			}
-		}
-
-		GER_atlantikwall_idea = {
-		
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_fortify_the_borders
-
-			modifier = {
-				production_speed_coastal_bunker_factor = 0.2
-			}
-		}
-
-		GER_ostwall_idea = {
-		
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_wall_line
-
-			modifier = {
-				production_speed_bunker_factor = 0.2
 			}
 		}
 
@@ -4238,7 +4291,7 @@ ideas = {
              production_speed_infrastructure_factor = 0.15
              production_speed_industrial_complex_factor = 0.15
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			}
 		 }
@@ -4263,7 +4316,7 @@ ideas = {
              production_speed_infrastructure_factor = 0.15
              production_speed_industrial_complex_factor = 0.15
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			 production_oil_factor = 0.05
 		     fuel_gain_factor_from_states = 0.10
@@ -4295,7 +4348,7 @@ ideas = {
 			 production_speed_rail_way_factor = 0.1
              production_speed_supply_node_factor = 0.1
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			}
 		 }
@@ -4355,7 +4408,7 @@ ideas = {
              production_speed_radar_station_factor = 0.05
              production_speed_air_base_factor = 0.05
 
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			}
@@ -4384,7 +4437,7 @@ ideas = {
              production_speed_radar_station_factor = 0.05
              production_speed_air_base_factor = 0.05
 
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			 production_oil_factor = 0.05
@@ -4485,7 +4538,7 @@ ideas = {
              production_speed_air_base_factor = 0.05
 
 			 conversion_cost_mil_to_civ_factor = -0.3
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			}
@@ -4548,7 +4601,7 @@ ideas = {
              production_speed_air_base_factor = 0.05
 
 			 conversion_cost_mil_to_civ_factor = -0.3
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			production_oil_factor = 0.05

@@ -646,10 +646,11 @@ focus_tree = {
 	focus = {
 		id = GER_SS
 		text = GER_SS_F
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_SS
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
+			has_completed_focus = GER_Fuhrer
 			has_government = fascism
 			is_puppet = no
 		}
@@ -668,7 +669,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_SS_A
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_agency_1
 		prerequisite = { focus = GER_SS }
 		available = {
 			has_government = fascism
@@ -683,12 +684,13 @@ focus_tree = {
 		}	
 		completion_reward = {
 			custom_effect_tooltip = GER_SS_tt
+			show_ideas_tooltip = SS_Fake_tooltip_idea_1
 		}
 	}
 
 	focus = {
 		id = GER_SS_B
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_goal_secret_agents
 		prerequisite = { focus = GER_SS }
 		available = {
 			has_government = fascism
@@ -1209,10 +1211,9 @@ focus_tree = {
 		id = GER_weserubung
 		text = GER_weserubung
 		icon = GFX_goal_War_with_scandavia
-		prerequisite = { focus = GER_danzig_or_war }
+		prerequisite = { focus = GER_danzig_or_war focus = GER_danzig_vs_slovakia }
 		will_lead_to_war_with = DEN 
 		will_lead_to_war_with = NOR
-
 		bypass = {
 			AND = {
 				DEN = { 
@@ -1229,34 +1230,17 @@ focus_tree = {
 				}
 			}
 		}
-		
 		available = {
-			10 = {
-				controller = {
-					OR = {
-						is_in_faction_with = ROOT
-						original_tag = GER
-					}
-				}
-			}
-			85 = {
-				controller = {
-					OR = {
-						is_in_faction_with = ROOT
-						original_tag = GER
-					}
-				}
-			}
-			OR = { 
+			OR = {
 				has_war_with = ENG
 				NOT = {country_exists = ENG}
+				POL = { is_guaranteed_by = ENG }
 			}
 		}
-		
-		x = 1
-		y = 2
+		x = -2
+		y = 1
 		relative_position_id = GER_danzig_or_war
-		cost = 4
+		cost = 2
 		ai_will_do = {
 			factor = 10	
 			modifier = {
@@ -1311,8 +1295,7 @@ focus_tree = {
 		id = GER_around_maginot
 		text = GER_around_maginot
 		icon = GFX_focus_SWI_fortify_border_with_france
-		prerequisite = { focus = GER_danzig_or_war focus = GER_poland_friend }
-		
+		prerequisite = { focus = GER_danzig_or_war focus = GER_danzig_vs_slovakia }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_cap_pol_tt
@@ -1320,7 +1303,6 @@ focus_tree = {
 				NOT = { has_idea = wait_for_event }
 			}
 		}
-
 		bypass = {
 			HOL = {
 				OR = {
@@ -1344,14 +1326,12 @@ focus_tree = {
 				}
 			}
 		}
-
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = HOL
 		will_lead_to_war_with = LUX
 		will_lead_to_war_with = FRA
-
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = GER_danzig_or_war
 		cost = 4
 		ai_will_do = {
@@ -2007,7 +1987,7 @@ focus_tree = {
 	focus = {
 		id = GER_danzig_vs_slovakia
 		icon = GFX_focus_generic_polish_deal
-		text = GER_danzig_vs_slovakia
+		text = GER_danzig_vs_slovakia_n
 		prerequisite = { focus = GER_end_of_czechoslovakia }
 		mutually_exclusive = { focus = GER_danzig_or_war }
 		available = {
@@ -2018,13 +1998,13 @@ focus_tree = {
 					is_in_faction_with = GER
 				}
 				owns_state = 70
+				owns_state = 71
+				owns_state = 73
 			}
 			NOT = { owns_state = 85 }
 			NOT = { has_war_with = POL }
 			POL = { owns_state = 72 }
 		}
-
-
 		x = 0
 		y = 1
 		relative_position_id = GER_end_of_czechoslovakia
@@ -2034,53 +2014,21 @@ focus_tree = {
 		}	
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			POL = {
-				country_event = { id = germany.80 days = 1 }
-			}
-		}
-	}
-
-	focus = {
-		id = GER_poland_friend
-		icon = GFX_goal_Poland_befriend
-		text = GER_poland_friend
-		prerequisite = { focus = GER_danzig_vs_slovakia }
-		available = {
-			NOT = { has_global_flag = sov_yes_pact }
-			NOT = { has_war_with = POL }
-			POL = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-			}
-		}
-		bypass = {
-			is_in_faction_with = POL
-			is_alone_or_in_faction_at_peace_with_GER = no
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_danzig_vs_slovakia
-		cost = 3
-		ai_will_do = {
-			factor = 0
-		}	
-		completion_reward = {
-			POL = {
-				add_opinion_modifier = { target = GER modifier = ger_pol_diplomacy_focus }
-				if = {
-					limit = {
-						GER = {
-							has_government = fascism
+			GER = { country_event = { id = GER_trade_danzig.1 hours = 6 } }
+			hidden_effect = {
+				add_state_core = 85
+				POL = {
+					add_opinion_modifier = { target = GER modifier = ger_pol_diplomacy_focus }
+					if = {
+						limit = {
+							GER = {
+								has_government = fascism
+							}
 						}
+						add_timed_idea = { idea = fascist_influence days = 1095 }
 					}
-					add_timed_idea = { idea = fascist_influence days = 1095 }
+					country_event = { id = generic.1 }
 				}
-				country_event = { id = generic.1 }
-			}
-			GER = {
-				complete_national_focus = GER_around_maginot
 			}
 		}
 	}
@@ -2094,7 +2042,7 @@ focus_tree = {
 			is_subject = no			
 			NOT = { is_in_faction_with = FRA }
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = GER_around_maginot
 		cost = 10
@@ -2400,6 +2348,12 @@ focus_tree = {
 				exists = yes
 			}
 		}
+		bypass = {
+			OR = {
+				NOT = { has_idea = Landon_Treaty }
+				NOT = { has_idea = Landon_Treaty_sub_focus }
+			}
+		}
 		cancel_if_invalid = yes
 		x = -4
 		y = 1
@@ -2416,19 +2370,11 @@ focus_tree = {
 		id = GER_challenge_royal_navy
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		prerequisite = { focus = GER_anglo_german_agreemet }
-		available = { 
-			NOT = { has_war_with = ENG }
+		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_london_naval_treaty
 				NOT = { has_idea = Landon_Treaty }
 				NOT = { has_idea = Landon_Treaty_sub_focus }
-			}
-			ENG = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-				exists = yes
 			}
 		}
 		mutually_exclusive = { focus = GER_focus_on_land_army }
@@ -2460,15 +2406,7 @@ focus_tree = {
 		id = GER_focus_on_land_army
 		icon = GFX_goal_rhineland
 		prerequisite = { focus = GER_anglo_german_agreemet }
-		available = { 
-			NOT = { has_war_with = ENG }
-			ENG = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-				exists = yes
-			}
+		available = {
 		}
 		mutually_exclusive = { focus = GER_challenge_royal_navy }
 		cancel_if_invalid = yes
@@ -2668,6 +2606,7 @@ focus_tree = {
 		prerequisite = { focus = GER_uk_friend }
 		available = { 
 			NOT = { has_war_with = ENG }
+			NOT = { is_embargoing = ENG }
 			ENG = {
 				custom_trigger_tooltip = {
 					tooltip = GER_alone_or_peace_faction_tt
@@ -4476,7 +4415,7 @@ focus_tree = {
 		x = 3
 		y = 2
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0
 		}
@@ -5010,6 +4949,7 @@ focus_tree = {
 			ITA = {
 				add_ideas = GER_ITA_Afrika_Korps
 			}
+			mark_focus_tree_layout_dirty = yes
 			if = {
 				limit = {
 					ITA = { is_ai = yes }
@@ -5225,7 +5165,6 @@ focus_tree = {
 		icon = GFX_focus_ETH_peacekeeping_forces_side
 		prerequisite = { focus = GER_Set_HQ_in_front }
 		available = {
-			
 			ITA = { is_in_faction_with = GER }
 			OR = {
 				ITA = {

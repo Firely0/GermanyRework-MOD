@@ -21,6 +21,7 @@
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = todt
+			add_ideas = Defense_Industry
 			custom_effect_tooltip = GER_west_wall_forts_2
 			909 = {
 				if = {
@@ -125,7 +126,32 @@
 		}
 		
 		completion_reward = {
-			add_ideas = GER_atlantikwall_idea
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_2
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = Defense_Industry
+					}
+					swap_ideas = {
+						remove_idea = Defense_Industry
+						add_idea = Defense_Industry_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = Defense_Industry_3
+					}
+					swap_ideas = {
+						remove_idea = Defense_Industry_3
+						add_idea = Defense_Industry_4
+					}
+				}
+			}
 			custom_effect_tooltip = atlantikwall_tooltip
 			custom_effect_tooltip = atlantikwall_tooltip_2
 			hidden_effect = {
@@ -755,7 +781,32 @@
 		}
 		
 		completion_reward = {
-			add_ideas = GER_ostwall_idea
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_3
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = Defense_Industry
+					}
+					swap_ideas = {
+						remove_idea = Defense_Industry
+						add_idea = Defense_Industry_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = Defense_Industry_2
+					}
+					swap_ideas = {
+						remove_idea = Defense_Industry_2
+						add_idea = Defense_Industry_4
+					}
+				}
+			}
 			custom_effect_tooltip = GER_ostwall_forts
 			custom_effect_tooltip = GER_ostwall_forts_2
 			if = {
@@ -2221,6 +2272,7 @@
 		id = GER_plan_z_a
 		icon = GFX_goal_planz
 		text = GER_plan_z
+		prerequisite = { focus = GER_naval_rearmament_b }
 		prerequisite = { focus = GER_naval_rearmament_a }
 		x = -2
 		y = 1
@@ -2409,7 +2461,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GER_u_boat_effort_a
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2435,7 +2487,7 @@
 		x = -1
 		y = 1
 		relative_position_id = GER_u_boat_effort_a
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3173,12 +3225,26 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			effect_tooltip = {
-				GER = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Arms_Mobilization
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_Hide_Arms_Industrialization }
 				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2
+						add_idea = Four_Year_Plan_Arms_Mobilization
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_Hide_Arms_Industrialization
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2_Small_Arms
+						add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
+					}
 				}
 			}
 			hidden_effect = {
@@ -3366,7 +3432,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
 		mutually_exclusive = { focus = GER_Eco_Plan_B }
@@ -3479,7 +3545,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A_Main_A
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = GER_Eco_Plan_A }
 		x = 0
 		y = 3
@@ -3565,7 +3631,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A_Main_B
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = GER_Eco_Plan_A_Main_A }
 		x = 0
 		y = 6
@@ -3651,7 +3717,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_B
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_Focus_Military_Mobilisation
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
 		mutually_exclusive = { focus = GER_Eco_Plan_A focus = GER_Eco_Plan_C }
@@ -3680,7 +3746,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_B_Main_A
-		icon = GFX_goal_generic_army_tanks3
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = GER_Eco_Plan_B }
 		x = 4
 		y = 5
@@ -4128,7 +4194,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_Main
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_goal_endoffouryearplan
 		prerequisite = { focus = GER_Eco_Plan_B_Main_B focus = GER_Eco_Plan_A_Main_B }
 		text = GER_Working_on
 		x = 0
@@ -5035,7 +5101,7 @@
 		id = GER_army_innovation_a
 		icon = GFX_focus_ger_oppose_hitler
 		text = GER_army_innovation
-		x = 15
+		x = 16
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -5070,6 +5136,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = GER_tank_warfare_modify_tt
+			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
@@ -5088,12 +5155,352 @@
 	}
 
 	shared_focus = {
+		id = GER_SS_Forces
+		icon = GFX_goal_SS
+		relative_position_id = GER_army_innovation_a
+		allow_branch = { has_completed_focus = GER_tank_warfare }
+		prerequisite = { focus = GER_staff }
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_penal_battalions
+		icon = GFX_focus_SOV_penal_battalions
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_burn }
+		text = SOV_penal_battalions
+		#mutually_exclusive = { focus = GER_Terror_Doctrine }
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			set_technology = { penal_infantry = 1 popup = no }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Terror_Doctrine
+		icon = GFX_goal_SS_terror
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_SS_Forces }
+		mutually_exclusive = { focus = GER_ss_division }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_v1_rockets
+		icon = GFX_focus_rocketry
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Terror_Doctrine }
+		x = 4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_flamethrower_units
+		icon = GFX_goal_flametrower
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_v1_rockets }
+		x = 4
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_ss_division
+		icon = GFX_goal_SS_division
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_SS_Forces }
+		mutually_exclusive = { focus = GER_Terror_Doctrine }
+		x = 2
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_burn
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_ss_division }
+		x = 2
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_new_reichskommissariats
+		icon = GFX_focus_ger_reichskommisariats
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_penal_battalions focus = GER_flamethrower_units }
+		x = 3
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_Forces_2
+		icon = GFX_goal_SS
+		text = GER_SS_Forces
+		relative_position_id = GER_army_innovation_a
+		allow_branch = { has_completed_focus = GER_Battle_Plan }
+		prerequisite = { focus = GER_staff }
+		x = -3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_penal_battalions_2
+		icon = GFX_focus_SOV_penal_battalions
+		text = GER_penal_battalions
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_burn_2 }
+		text = SOV_penal_battalions
+		x = -2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			set_technology = { penal_infantry = 1 popup = no }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Terror_Doctrine_2
+		icon = GFX_goal_SS_terror
+		text = GER_Terror_Doctrine
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_SS_Forces_2 }
+		mutually_exclusive = { focus = GER_ss_division_2 }
+		x = -4
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_v1_rockets_2
+		icon = GFX_focus_rocketry
+		text = GER_v1_rockets
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Terror_Doctrine_2 }
+		x = -4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_flamethrower_units_2
+		icon = GFX_goal_flametrower
+		text = GER_flamethrower_units
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_v1_rockets_2 }
+		x = -4
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_ss_division_2
+		icon = GFX_goal_SS_division
+		text = GER_ss_division
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_SS_Forces_2 }
+		mutually_exclusive = { focus = GER_Terror_Doctrine_2 }
+		x = -2
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_burn_2
+		icon = GFX_goal_generic_forceful_treaty
+		text = GER_burn
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_ss_division_2 }
+		x = -2
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
+		id = GER_new_reichskommissariats_2
+		icon = GFX_focus_ger_reichskommisariats
+		text = GER_new_reichskommissariats
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_penal_battalions_2 focus = GER_flamethrower_units_2 }
+		x = -3
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	shared_focus = {
 		id = GER_Lighting_Strike
 		icon = GFX_goal_lastoffensive
 		relative_position_id = GER_army_innovation_a
+		allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
 		prerequisite = { focus = GER_soviet_treaty_a }
 		prerequisite = { focus = GER_staff }
-		x = -2
+		x = -3
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -5121,21 +5528,260 @@
 	}
 
 	shared_focus = {
-		id = GER_Panther
-		icon = GFX_goal_generic_army_tanks
+		id = GER_follow_fuhrer_design
+		icon = GFX_goal_fuhrer_design
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
-		mutually_exclusive = { focus = GER_Anti_Tank }
-		x = -3
+		mutually_exclusive = { focus = GER_follow_wehrmacht_design }
+		x = -2
 		y = 4
-		cost = 5
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = mobile_warfare
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = 0.2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_tiger_I
+		icon = GFX_goal_tiger
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_fuhrer_design }
+		x = -2
+		y = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
 			date > 1942.1.1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_technology = { masterful_blitz_GERV = 1 popup = no }
+			create_equipment_variant = {
+				name = "Tiger I"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = stabilizer
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 11
+					tank_nsb_armor_upgrade = 14
+			    }
+				icon = "GFX_GER_improved_heavy_tank_medium"
+				model = "GER_heavy_armor_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_tiger_destroyer
+		icon = GFX_goal_Anti_tank
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_tiger_I }
+		#prerequisite = { focus = GER_army_innovation_2_a }
+		x = -2
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1942.6.1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Panzerjäger Tiger"
+				type = heavy_tank_destroyer_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = squeezebore_adaptor
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = secondary_turret_small_cannon
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 14
+			    }
+				icon = "GFX_GER_improved_heavy_tank_td"
+				model = "GER_heavy_tank_destroyer_brigade_1_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Maus
+		icon = GFX_goal_Maus
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_fuhrer_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1943.8.1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Panzer VIII Maus"
+				type = super_heavy_tank_chassis_1
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_super_heavy_cannon
+				turret_type_slot = tank_super_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = squeezebore_adaptor
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 20
+					tank_nsb_armor_upgrade = 12
+			    }
+				icon = "GFX_GER_super_heavy_tank_medium"
+				model = "GER_super_heavy_armor_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_follow_wehrmacht_design
+		icon = GFX_goal_wehrmacht_design
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Lighting_Strike }
+		mutually_exclusive = { focus = GER_follow_fuhrer_design }
+		x = -4
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
 			has_tech = mobile_warfare
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_stugg
+		icon = GFX_focus_generic_self_propelled_gun
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_wehrmacht_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = -6
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Sturmgeschütz IV"
+				type = medium_tank_artillery_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_medium_howitzer_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = secondary_turret_hmg	
+                special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = additional_machine_guns
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 10
+			    }
+				icon = "GFX_GER_medium_BCC"
+				model = "GER_medium_tank_destroyer_brigade_0_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Panther
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_wehrmacht_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = -4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1942.1.1
 		}
 
 		available_if_capitulated = yes
@@ -5158,7 +5804,7 @@
 				special_type_slot_4 = stabilizer
 				}
 				upgrades = {
-				    tank_nsb_engine_upgrade = 12
+				    tank_nsb_engine_upgrade = 14
 					tank_nsb_armor_upgrade = 14
 			    }
 				icon = "GFX_GER_medium_CBC"
@@ -5171,10 +5817,9 @@
 		id = GER_King_Tiger
 		icon = GFX_focus_generic_army_tanks2
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Panther focus = GER_Anti_Tank }
-		prerequisite = { focus = GER_army_innovation_2_a }
-		x = -4
-		y = 6
+		prerequisite = { focus = GER_Anti_Tank focus = GER_tiger_destroyer }
+		x = -3
+		y = 7
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -5187,8 +5832,13 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		        set_technology = { masterful_blitz_GERV = 1 popup = no }
-				create_equipment_variant = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_follow_fuhrer_design }
+				}
+				set_technology = { masterful_blitz_GERV = 1 popup = no }
+			}
+			create_equipment_variant = {
 				name = "King Tiger"
 				type = heavy_tank_chassis_3
 				parent_version = 0
@@ -5205,7 +5855,7 @@
 				special_type_slot_4 = wet_ammo_storage
 				}
 				upgrades = {
-				    tank_nsb_engine_upgrade = 9
+				    tank_nsb_engine_upgrade = 13
 					tank_nsb_armor_upgrade = 11
 			    }
 				icon = "GFX_GER_advanced_heavy_tank_medium"
@@ -5218,18 +5868,17 @@
 		id = GER_Anti_Tank
 		icon = GFX_goal_Anti_tank
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Lighting_Strike }
-		mutually_exclusive = { focus = GER_Panther }
-		x = -1
-		y = 4
+		prerequisite = { focus = GER_Panther }
+		#mutually_exclusive = { focus = GER_Panther }
+		x = -4
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			date > 1942.1.1
-			has_tech = mobile_warfare
+			date > 1942.6.1
 		}
 
 		available_if_capitulated = yes
@@ -5263,7 +5912,7 @@
 
 	shared_focus = {
 		id = GER_staff
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_military_academy_1
 		prerequisite = { focus = GER_tank_warfare focus = GER_Battle_Plan }
 		relative_position_id = GER_army_innovation_a
 		cancelable = no
@@ -5354,7 +6003,9 @@
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = GER_special_forces
+			custom_effect_tooltip = GER_experts_in_field_modify_tt
+			set_variable = { GER_special_forces_training_time_factor = 0.1 }
+			set_variable = { GER_special_forces = 0.15 }
 			custom_effect_tooltip = GER_experts_in_field_tt
 			hidden_effect = {
 				set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }
@@ -5368,7 +6019,7 @@
 		icon = GFX_focus_generic_truck
 		prerequisite = { focus = GER_Battle_Plan }
 		relative_position_id = GER_army_innovation_a
-		x = 4
+		x = 5
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -5401,7 +6052,8 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_better_supply}
 		prerequisite = { focus = GER_staff }
-		x = 2
+		allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
+		x = 3
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -5440,8 +6092,8 @@
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_War_Plan }
-		mutually_exclusive = { Focus = GER_Cheap_SUP }
-		x = 3
+		mutually_exclusive = { Focus = GER_harsh_training_methods }
+		x = 2
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -5459,10 +6111,10 @@
 
 	shared_focus = {
 		id = GER_Better_SUP
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = GER_better_supply }
 		relative_position_id = GER_army_innovation_a
-		x = 5
+		x = 7
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -5482,13 +6134,50 @@
 	}
 
 	shared_focus = {
+		id = GER_repair_old_guns
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = GER_Better_SUP }
+		relative_position_id = GER_army_innovation_a
+		x = 7
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 2500
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1950
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 1250
+				producer = GER
+			}
+		}
+	}
+
+	shared_focus = {
 		id = GER_Cheap_SUP
 		icon = GFX_goal_generic_army_artillery2
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_War_Plan }
-		mutually_exclusive = { Focus = GER_Cheap_EQ }
-		x = 1
-		y = 4
+		prerequisite = { focus = GER_Cheap_EQ }
+		x = 2
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -5504,13 +6193,88 @@
 	}
 
 	shared_focus = {
+		id = GER_harsh_training_methods
+		icon = GFX_focus_generic_infiltration
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_War_Plan }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = superior_firepower
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_harsh_training_methods_modify_tt
+			set_variable = { GER_acclimatization_hot_climate_gain_factor = 0.2 }
+			set_variable = { GER_acclimatization_cold_climate_gain_factor = 0.2 }
+			set_variable = { GER_terrain_penalty_reduction = 0.1 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_new_supply_ways
+		icon = GFX_focus_SOV_the_road_of_life
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_harsh_training_methods }
+		x = 4
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = superior_firepower
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_new_supply_ways_modify_tt
+			set_variable = {
+				GER_truck_attrition_factor = -1.0
+			}
+			set_variable = {
+				GER_supply_factor = 0.2
+			}
+			set_variable = {
+				GER_supply_node_range = 0.2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht
+		icon = GFX_goal_glory_of_wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_King_Tiger }
+		prerequisite = { focus = GER_anti_air_tank }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
 		id = GER_Better_Anti_Tank
 		icon = GFX_goal_generic_army_artillery
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Better_SUP }
-		prerequisite = { focus = GER_Cheap_EQ focus = GER_Cheap_SUP }
-		x = 4
-		y = 6
+		prerequisite = { focus = GER_Cheap_SUP focus = GER_new_supply_ways }
+		x = 3
+		y = 7
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -5524,6 +6288,29 @@
 			uses = 1
 			category = cat_anti_tank	
 		 } 
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1
+		icon = GFX_goal_glory_of_wehrmacht
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank focus = GER_repair_old_guns }
+		allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
 		}
 	}
 
@@ -5547,6 +6334,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = GER_Battle_Plan_modify_tt
+			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
@@ -5593,7 +6381,7 @@
 			}
 		}
 
-		x = -4
+		x = -5
 		y = 2
 		relative_position_id = GER_army_innovation_a
 		cost = 10
@@ -5687,7 +6475,7 @@
 		icon = GFX_focus_generic_tank_production
 		text = GER_army_innovation_2
 		prerequisite = { focus = GER_soviet_treaty_a }
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = GER_soviet_treaty_a
 		cost = 10
@@ -5724,6 +6512,45 @@
 					technology = advanced_medium_tank_chassis
 					technology = mechanised_infantry
 				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_anti_air_tank
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = GER_army_innovation_2_a }
+		x = -2
+		y = 5
+		relative_position_id = GER_soviet_treaty_a
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Flakpanzer IV Wirbelwind"
+				type = medium_tank_aa_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = secondary_turret_small_cannon
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 10
+			    }
+				icon = "GFX_GER_improved_medium_spaa"
+				model = "GER_medium_sp_anti_air_brigade_2_entity"
 			}
 		}
 	}

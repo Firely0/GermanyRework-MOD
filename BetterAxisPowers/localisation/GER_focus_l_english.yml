@@ -81,6 +81,10 @@
  eva_braun_remove_from_job:0 "Resign Eva Braun"
  
  #Ideas
+ Defense_Industry:0 "Defense Industry"
+ Defense_Industry_2:0 "Defense Industry"
+ Defense_Industry_3:0 "Defense Industry"
+ Defense_Industry_4:0 "Defense Industry"
 
  ger_temp_debuff:0 "NSDAP Resign Funding"
  ger_temp_debuff_desc:0 ""
@@ -177,6 +181,7 @@
 
  SS_Fake_tooltip_idea:0 "Schutzstaffel"
  GER_Colonial_Police_Fake_tooltip_idea:0 "Colonial Police"
+ SS_Fake_tooltip_idea_1:0 "Schutzstaffel"
 
  sour_loser_v:0 "Bitter Loser"
  sour_loser_v_desc:0 "Bitterness over defeat in the Great War dominates the politics of this nation."
@@ -523,6 +528,34 @@
  GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
 
  #Focus And Others
+ GER_repair_old_guns:0 "Repair Old Equipment"
+ GER_repair_old_guns_desc:0 ""
+ GER_new_supply_ways:0 "Convert New Supply Methods"
+ GER_harsh_training_methods:0 "Harsh Training Methods"
+ GER_harsh_training_methods_desc:0 ""
+ GER_anti_air_tank:0 "Flakpanzer IV "Wirbelwind""
+ GER_anti_air_tank_desc:0 ""
+ GER_Glory_of_Wehrmacht:0 "Glory of Wehrmacht"
+ GER_Glory_of_Wehrmacht_desc:0 ""
+ GER_SS_Forces:0 "SS Forces"
+ GER_SS_Forces_desc:0 ""
+ GER_ss_division:0 "SS Divisions"
+ GER_ss_division_desc:0 ""
+ GER_Terror_Doctrine:0 "Terror Doctrine"
+ GER_stugg:0 "Sturmgeschütz IV"
+ GER_stugg_desc:0 ""
+ GER_Maus:0 "PzKpfw VIII Maus"
+ GER_Maus_desc:0 ""
+ GER_tiger_destroyer:0 "Panzerjäger Tiger"
+ GER_tiger_destroyer_desc:0 ""
+ GER_tiger_I:0 "Tiger I"
+ GER_tiger_I_desc:0 ""
+ GER_follow_fuhrer_design:0 "Follow Fuhrer Designs"
+ GER_follow_fuhrer_design_desc:0 ""
+ GER_follow_wehrmacht_design:0 "Follow Wehrmacht Designs"
+ GER_follow_wehrmacht_design_desc:0 ""
+ GER_danzig_vs_slovakia_n:0 "Deal for Danzig"
+ GER_danzig_vs_slovakia_n_desc:0 ""
  GER_technocracy:0 "Technocracy"
  GER_technocracy_desc:0 ""
  GER_Convert_Civilian_Ships:0 "New Carrier Models"
@@ -944,16 +977,21 @@
  GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.0%§! \n£training_speed_texticon Minimum Training Level: §R-10.0%§! \n£manpower_texticon Conscription Factor: §Y+10.0%§! \n\n"
  GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.0%§! \n£army_morale_texticon Army Morale: §Y+10.00%§! \n\n"
 
+ GER_Glory_of_wehrmacht_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+10.0%§! \n£medal_texticon Grant Medal Cost: §Y-100.0%§! \n\n"
+
  GER_tank_warfare_modify_tt:0 "$GER_Wehrmacht_tt$ \n£speed_tank_texticon Armor Speed Factor: §Y+10.0%§! \n£org_loss_when_moving_texticon Org Loss When Moving: §Y-5.0%§! \n£training_texticon Minimum Training Level: §Y-5.0%§! \n\n"
  GER_Staff_tank_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power: §Y+20.0§! \n£planning_max_texticon Max Planning Factor: §Y+20.0%§! \n£planning_speed_texticon Planning Speed: §R-10.0%§! \n£training_texticon Minimum Training Level: §Y-5.0%§! \n\n"
  GER_Lighting_Strike_modify_tt:0 "$GER_Wehrmacht_tt$ \n£breakthrough_texticon Breakthrough: §Y+10.0%§! \n£recon_texticon Recon Factor §Y+10.0%§! \n£initiative_texticon Initiative Factor §Y+10%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n£org_loss_when_moving_texticon Org Loss When Moving: §Y-10%§! \n£speed_tank_texticon Armor Speed Factor: §Y+10%§! \n£army_doctrine_cost_texticon Land Doctrine Factor: §Y-5%§! \n\n" 
 
  GER_Battle_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §R-5.0%§! \n£planning_max_texticon Planning Speed: §Y+10.0%§! \n\n"
  GER_better_supply_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-10.0%§! \n\n"
+ GER_new_supply_ways_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-90.0%§! \n\n"
  GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5.0%§! \n£planning_max_texticon  Max planning factor §Y+20.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §Y+5.0%§! \n£training_texticon Minimum Training Level: §Y-10.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_War_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£air_superiority_texticon Air Superiority Bonus In Combat §Y+10.0%§! \n£cas_texticon Cas Damage Reduction §Y+5.0%§! \n£railway_gun_texticon Railway Gun Bombardment Factor §Y+20.0§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_Cheap_EQ_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_Cheep_SUP_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
+ GER_harsh_training_methods_modify_tt:0 "$GER_Wehrmacht_tt$ \n£temperature_hot_texticon Hot Climate Gain Factor §Y+20.0%§! \n£temperature_cold_texticon Cold Climate Gain Factor §Y+20.0%§! \n£terrain_penalty_texticon Terrain Penalty Reduction §Y+10.0%§! \n\n"
+ GER_experts_in_field_modify_tt:0 "$GER_Wehrmacht_tt$ \n£specops_training_speed_texticon Special Forces Training Speed §R+10.0%§! \n£specops_max_texticon Special Forces Capacity Multiplier §Y+15.0%§! \n\n"
 
  GER_Cheep_sup_tt:0 "§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_cheep_eq_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§ \n\n"

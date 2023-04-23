@@ -32,6 +32,7 @@ add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
 add_namespace = GER_eng_trade_agreement
 add_namespace = GER_eng_naval_agreement
+add_namespace = GER_trade_danzig
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -4041,6 +4042,35 @@ country_event = {
 	
 	option = {
 		name = "Fine"
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = GER_trade_danzig.1
+	title = "Agreements with Polish"
+	desc = "What Path Should We Follow to Take the Land of Danzig?"
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Danzig for Slovakia"
+
+		POL = { country_event = { id = germany.80 days = 1 } }
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "Danzig for Guarantee"
+
+		POL = { country_event = { id = wtt_germany.14 days = 1 } }
 
 		ai_chance = {
 			factor = 100
