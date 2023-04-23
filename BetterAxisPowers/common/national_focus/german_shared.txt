@@ -126,30 +126,31 @@
 		}
 		
 		completion_reward = {
-			effect_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_west_wall }
+				}
 				swap_ideas = {
 					remove_idea = Defense_Industry
 					add_idea = Defense_Industry_2
 				}
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = Defense_Industry
-					}
-					swap_ideas = {
-						remove_idea = Defense_Industry
-						add_idea = Defense_Industry_2
-					}
+			if = {
+				limit = {
+					has_idea = Defense_Industry
 				}
-				if = {
-					limit = {
-						has_idea = Defense_Industry_3
-					}
-					swap_ideas = {
-						remove_idea = Defense_Industry_3
-						add_idea = Defense_Industry_4
-					}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry_3
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry_3
+					add_idea = Defense_Industry_4
 				}
 			}
 			custom_effect_tooltip = atlantikwall_tooltip
@@ -781,30 +782,31 @@
 		}
 		
 		completion_reward = {
-			effect_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_west_wall }
+				}
 				swap_ideas = {
 					remove_idea = Defense_Industry
 					add_idea = Defense_Industry_3
 				}
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = Defense_Industry
-					}
-					swap_ideas = {
-						remove_idea = Defense_Industry
-						add_idea = Defense_Industry_3
-					}
+			if = {
+				limit = {
+					has_idea = Defense_Industry
 				}
-				if = {
-					limit = {
-						has_idea = Defense_Industry_2
-					}
-					swap_ideas = {
-						remove_idea = Defense_Industry_2
-						add_idea = Defense_Industry_4
-					}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry_2
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry_2
+					add_idea = Defense_Industry_4
 				}
 			}
 			custom_effect_tooltip = GER_ostwall_forts
@@ -5158,7 +5160,7 @@
 		id = GER_SS_Forces
 		icon = GFX_goal_SS
 		relative_position_id = GER_army_innovation_a
-		allow_branch = { has_completed_focus = GER_tank_warfare }
+		allow_branch = { always = no }
 		prerequisite = { focus = GER_staff }
 		x = 3
 		y = 3
@@ -5325,7 +5327,7 @@
 		icon = GFX_goal_SS
 		text = GER_SS_Forces
 		relative_position_id = GER_army_innovation_a
-		allow_branch = { has_completed_focus = GER_Battle_Plan }
+		allow_branch = { always = no }
 		prerequisite = { focus = GER_staff }
 		x = -3
 		y = 3
@@ -5335,6 +5337,7 @@
 		}
 		available = {
 			has_completed_focus = GER_SS
+			always = no
 		}
 
 		available_if_capitulated = yes
@@ -5497,7 +5500,7 @@
 		id = GER_Lighting_Strike
 		icon = GFX_goal_lastoffensive
 		relative_position_id = GER_army_innovation_a
-		allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
+		#allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
 		prerequisite = { focus = GER_soviet_treaty_a }
 		prerequisite = { focus = GER_staff }
 		x = -3
@@ -6052,7 +6055,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_better_supply}
 		prerequisite = { focus = GER_staff }
-		allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
+		#allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
 		x = 3
 		y = 3
 		cost = 10

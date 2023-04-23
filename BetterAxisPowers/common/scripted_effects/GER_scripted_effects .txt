@@ -729,14 +729,14 @@ GER_upgrade_wehrmacht_effect = {
 		if = {
 			limit = {
 				has_dynamic_modifier = {
-					modifier = Wehrmacht_INF_2_dynamic_modifier
+					modifier = Wehrmacht_INF_3_dynamic_modifier
 				}
 				has_completed_focus = GER_Cheap_SUP
 			}
-			remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_3_dynamic_modifier }
 			add_dynamic_modifier = { modifier = Wehrmacht_INF_4_dynamic_modifier }
 			swap_ideas = {
-				remove_idea = Wehrmacht_Main_inf_1
+				remove_idea = WehrmachtWarPlana_h
 				add_idea = WehrmachtWarPlanb_h
 			}
 		}

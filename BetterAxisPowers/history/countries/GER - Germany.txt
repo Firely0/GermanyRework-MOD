@@ -15,24 +15,24 @@ activate_mission = GER_SOV_TRAINING
 activate_mission = GER_ITA_TRAINING
 activate_mission = Krupp_End_of_Agreements
 
-every_state = {
-	limit = {
-		OR = {
-			State = 42
-			state = 51
-			state = 60
-			state = 63
-			state = 65
-			state = 66
-			state = 67
-		} 
-	}
-	add_dynamic_modifier = {
-		modifier = Krupp_PH1_modifier
-		scope = GER
-		days = 365
-	}
-}
+#every_state = { Krupp is Not Ready :(
+#	limit = {
+#		OR = {
+#			State = 42
+#			state = 51
+#			state = 60
+#			state = 63
+#			state = 65
+#			state = 66
+#			state = 67
+#		} 
+#	}
+#	add_dynamic_modifier = {
+#		modifier = Krupp_PH1_modifier
+#		scope = GER
+#		days = 365
+#	}
+#}
 
 add_opinion_modifier = {
     target = SOV

@@ -35,7 +35,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
 		}
-		x = 36
+		x = 41
 		y = 0
 		cost = 5
 		available = {
@@ -80,7 +80,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
-		x = 34
+		x = 39
 		y = 0
 		cost = 5
 		available = {
@@ -121,7 +121,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_rhineland_ab focus = GER_rhineland_demilitarized
 		}
-		x = 35
+		x = 40
 		y = 1
 		cost = 1
 		available = {
@@ -538,7 +538,6 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_support_china }
 		available = {
 			is_subject = no
-			
 			AND = {
 				country_exists = CHI
 			    ROOT = { NOT = { has_war_with = CHI } }	
@@ -4949,7 +4948,6 @@ focus_tree = {
 			ITA = {
 				add_ideas = GER_ITA_Afrika_Korps
 			}
-			mark_focus_tree_layout_dirty = yes
 			if = {
 				limit = {
 					ITA = { is_ai = yes }
@@ -4965,6 +4963,7 @@ focus_tree = {
 				}
 				ITA = { country_event = { id = GER_ITA_HQ_LOC.1 days = 1 } }
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -4976,7 +4975,6 @@ focus_tree = {
 		dynamic = yes
 
 		available = {
-			
 			ITA = { is_in_faction_with = GER }
 			OR = {
 				ITA = {
@@ -5042,6 +5040,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+		mark_focus_tree_layout_dirty = yes
 		effect_tooltip = {
 			if = {
 				limit = {

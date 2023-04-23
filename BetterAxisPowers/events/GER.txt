@@ -2305,7 +2305,7 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			factor = 20
+			factor = 40
 		}
 		name = "No"
 
@@ -2341,7 +2341,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		name = "Good"
+		name = "Fine"
 	}
 }
 
@@ -2384,7 +2384,7 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			factor = 20
+			factor = 40
 		}
 		name = "No"
 
@@ -2423,7 +2423,7 @@ country_event = {
 
 country_event = {
 	id = GER_CHI_Cooperation.3
-	title = "China Accepted our Request!"
+	title = "China not aceppted our Request!"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
@@ -2431,7 +2431,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		name = "Good"
+		name = "Fine"
 	}
 }
 
