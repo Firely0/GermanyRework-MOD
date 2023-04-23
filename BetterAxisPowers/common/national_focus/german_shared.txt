@@ -5545,7 +5545,6 @@
 
 		available = {
 			has_tech = mobile_warfare
-			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5573,6 +5572,7 @@
 
 		available = {
 			date > 1942.1.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5620,6 +5620,7 @@
 
 		available = {
 			date > 1942.6.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5666,6 +5667,7 @@
 
 		available = {
 			date > 1943.8.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5711,7 +5713,6 @@
 		}
 		available = {
 			has_tech = mobile_warfare
-			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5785,6 +5786,7 @@
 
 		available = {
 			date > 1942.1.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5830,6 +5832,7 @@
 
 		available = {
 			date > 1943.1.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
@@ -5882,6 +5885,7 @@
 
 		available = {
 			date > 1942.6.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes

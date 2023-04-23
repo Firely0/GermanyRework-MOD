@@ -38,7 +38,7 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 		}
-		x = 35
+		x = 40
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -961,7 +961,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_carte_blanche_for_alsace_and_french_colonies
-		icon = GGFX_focus_attack_france
+		icon = GFX_focus_attack_france
 		prerequisite = { focus = GER_ally_the_shade }
 		will_lead_to_war_with = FRA
 		available = {
