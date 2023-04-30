@@ -57,6 +57,8 @@ country_event = {
 		custom_effect_tooltip = GER_fascism_civil_war_tt
 		add_stability = -0.25
 		hidden_effect = { set_cosmetic_tag = GER_provisional_gvt }
+		remove_mission = GER_SOV_TRAINING
+		remove_mission = GER_ITA_TRAINING
 		random_other_country = {
 			limit = {
 				original_tag = GER

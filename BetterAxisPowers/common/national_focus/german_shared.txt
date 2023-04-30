@@ -5545,6 +5545,10 @@
 
 		available = {
 			has_tech = mobile_warfare
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
 		}
 
 		available_if_capitulated = yes
@@ -6259,6 +6263,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_King_Tiger }
 		prerequisite = { focus = GER_anti_air_tank }
+		allow_branch = { has_government = fascism }
 		x = -5
 		y = 8
 		cost = 10
@@ -6269,6 +6274,29 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_non
+		icon = GFX_goal_glory_of_wehrmacht_nonaligned
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_anti_air_tank }
+		prerequisite = { focus = GER_King_Tiger }
+		allow_branch = { NOT = { has_government = fascism } }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
 			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
 			set_variable = { GER_army_org_regain = 0.1 }
 			set_variable = { GER_grant_medal_cost_factor = -1.0 }
@@ -6303,8 +6331,9 @@
 		icon = GFX_goal_glory_of_wehrmacht
 		text = GER_Glory_of_Wehrmacht
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Better_Anti_Tank focus = GER_repair_old_guns }
-		allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { has_government = fascism }
 		x = 5
 		y = 8
 		cost = 10
@@ -6312,6 +6341,29 @@
 			factor = 1
 		}
 
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1_non
+		icon = GFX_goal_glory_of_wehrmacht_nonaligned
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { NOT = { has_government = fascism } }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = { 

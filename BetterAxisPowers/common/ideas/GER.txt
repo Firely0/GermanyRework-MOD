@@ -2,6 +2,93 @@ ideas = {
 
 	country = {
 
+		ENG_tank_production = {
+
+			picture = generic_armor
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+		ENG_anti_tank_production = {
+
+			picture = generic_artillery_regiments
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+		Japan_Side_Intel = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	 
+			modifier = {
+
+			 navy_intel_factor = 0.1
+			 decryption_power_factor = 0.05
+
+			}
+		}
+
+		Japan_Side_Intel_build = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			
+			 navy_intel_factor = 0.1
+			 decryption_power_factor = 0.05
+			 production_speed_dockyard_factor = 0.1
+
+			}
+		} 
+
 		Defense_Industry = {
 
 			picture = YUG_federal_defense_council

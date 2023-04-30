@@ -177,6 +177,7 @@ focus_tree = {
 		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = GER_establish_abwehr }
 		available = {
+			has_war = no
 		}
 		cancel_if_invalid = no
 		x = 6

@@ -2645,16 +2645,23 @@ country_event = {
 			GER_Lands_in_Soviet = yes
 		}
 
+		hidden_effect = {
+			add_threat = 50
+			SOV = {
+				white_peace = GER
+			}
+			set_truce = {
+				target = SOV
+				days = 365
+			}
+		}
+
 		GER = {
 			start_peace_conference = {
 				tag = SOV
 				score_factor = 0
 				message = ger_sov_treaty_in_berlin
 			}
-		}
-
-		hidden_effect = {
-			add_threat = 50
 		}
 		
 	}	
@@ -3753,6 +3760,10 @@ country_event = { #Event For Germany Recive Ultimatum. Bad News.
 	}
 	hidden_effect = {
 		complete_national_focus = GER_rhineland_demilitarized
+		add_timed_idea = {
+			idea = rhineland_challenge_met
+			days = 183
+		}
 	}
     }
 

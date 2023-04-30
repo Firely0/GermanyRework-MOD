@@ -31,6 +31,21 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_belgiumattack"
+		texturefile = "gfx/interface/goals/belgiumattack.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_holattack"
+		texturefile = "gfx/interface/goals/holattack.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_Eng_Africa"
+		texturefile = "gfx/interface/goals/Eng_Africa.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_goal_CreateHQ_ITA"
 		texturefile = "gfx/interface/goals/CreateHQ_ITA.dds"			
 	}
@@ -163,6 +178,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_glory_of_wehrmacht"
 		texturefile = "gfx/interface/goals/glory_of_wehrmacht.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_goal_glory_of_wehrmacht_nonaligned"
+		texturefile = "gfx/interface/goals/glory_of_wehrmacht_nonaligned.dds"		
 	}
 	
 	SpriteType = {
