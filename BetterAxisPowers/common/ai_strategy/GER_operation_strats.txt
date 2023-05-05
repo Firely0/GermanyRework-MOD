@@ -1,24 +1,21 @@
- GER_collaboration_on_POL = {
+ GER_collaboration_on_NOR = {
  	allowed = {
  		tag = GER
  	}
- 	ai_strategy = {
- 		type = operative_operation
- 		operation = operation_collaboration_government
- 		value = 100
- 		operation_target = POL
- 	}
-	
+	enable = {
+		date > 1938.01.01
+	}
+
  	ai_strategy = {
  		type = operative_mission
  		mission = build_intel_network
  		value = 100
- 		mission_target = POL
+ 		mission_target = NOR
  	}
 
   	ai_strategy = {
  		type = intelligence_agency_usable_factories
- 		value = 30
+ 		value = 20
  	}
 
     ai_strategy = {
@@ -37,4 +34,70 @@
         type = operation_equipment_priority
         value = 10
     }
+}
+
+GER_blitz_norway_denmark = {
+	allowed = {
+		tag = GER
+	}
+
+    enable = {
+		focus_progress = {
+			focus = GER_danzig_or_war
+			progress > 0.1
+		}
+	   NOR = { exists = yes }
+    }
+
+	abort = {
+		OR = {
+			NOR = { has_capitulated = yes }
+			date > 1941.01.01
+		}
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = DEN
+		value = 100
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = DEN
+		value = 100
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 142
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 110
+	}
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 100
+	}
 }

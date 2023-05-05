@@ -2,6 +2,45 @@ ideas = {
 
 	country = {
 
+		abwehr_agent = {
+
+			picture = generic_spy_intel
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+			}
+		}
+
+		ENG_resource_efficiency = {
+
+			picture = ast_all_in
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources = 0.1
+			}
+		}
+
 		ENG_tank_production = {
 
 			picture = generic_armor
@@ -322,8 +361,7 @@ ideas = {
 	
 			modifier = {
 				experience_gain_air = 0.1
-				air_training_xp_gain_factor = -0.5
-				air_accidents_factor = 0.2
+				air_training_xp_gain_factor = -1.0
 			}
 		}
 
@@ -425,7 +463,32 @@ ideas = {
 				naval_invasion_prep_speed = 0.1
 				naval_invasion_capacity = 20
 				amphibious_invasion = 0.1
-				extra_paratrooper_supply_grace = 128
+				extra_marine_supply_grace = 128
+			}
+		}
+
+		Operation_Weserubung = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 0.1
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.1
+				extra_marine_supply_grace = 128
 			}
 		}
 
@@ -1146,8 +1209,7 @@ ideas = {
 
 				stability_factor = -0.04
 				war_support_factor = -0.04
-
-				surrender_limit = -0.15
+				surrender_limit = 0.05
 			}
 		}
 
@@ -1169,6 +1231,7 @@ ideas = {
 
 				stability_factor = 0.1
 				war_support_factor = -0.1
+				surrender_limit = 0.05
 			}
 		}
 
@@ -1190,6 +1253,7 @@ ideas = {
 
 				stability_factor = 0.1
 				war_support_factor = -0.1
+				surrender_limit = 0.05
 
 				command_abilities_cost_factor = -0.2
 			}
@@ -1212,6 +1276,7 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				war_support_factor = 0.1
+				surrender_limit = 0.05
 			}
 		}
 
@@ -2527,6 +2592,11 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 
+			modifier = {
+                army_armor_speed_factor = 0.05
+				org_loss_when_moving = -0.1
+			}
+
 			on_remove = {
 				if = {
 					limit = {
@@ -3426,12 +3496,12 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3469,7 +3539,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3502,12 +3572,12 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3537,8 +3607,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3546,7 +3616,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3588,7 +3658,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3621,8 +3691,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3630,7 +3700,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3665,7 +3735,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3695,8 +3765,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3704,7 +3774,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3738,7 +3808,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3778,7 +3848,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3792,10 +3862,8 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 
 			}
-		 }   
+		}   
 
-		
-        
         Four_Year_Plan_2 = {
 			picture = FourYearPlan
 			allowed = {
@@ -3813,8 +3881,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3822,7 +3890,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3857,8 +3925,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3866,7 +3934,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3905,7 +3973,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3947,7 +4015,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3986,7 +4054,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4028,7 +4096,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4070,7 +4138,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4113,7 +4181,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4155,7 +4223,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4189,8 +4257,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -4198,7 +4266,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4231,8 +4299,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -4240,7 +4308,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4270,8 +4338,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.05
 
@@ -4279,7 +4347,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.35
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4312,8 +4380,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.05
 
@@ -4321,7 +4389,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.35
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -4948,7 +5016,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.01
 			}
 		}
 
@@ -4973,11 +5041,10 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.03
 
 				agency_upgrade_time = -0.05
 				root_out_resistance_effectiveness_factor = 0.1
-				operative_slot = 1
 			}
 		}
 
@@ -5002,13 +5069,12 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.06
+				consumer_goods_factor = 0.05
 
 				intel_network_gain_factor = 0.1
+				agency_upgrade_time = -0.05
 				root_out_resistance_effectiveness_factor = 0.1
 				occupied_operative_recruitment_chance = 0.1
-				agency_upgrade_time = -0.05
-				operative_slot = 1
 			}
 		}
 
@@ -6078,6 +6144,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
+
+			cancel = {
+				is_at_peace_exiled_countries_excluded = no
+			}
 			
 			removal_cost = -1
 			
@@ -6108,7 +6178,6 @@ ideas = {
 		ita_dont_core_about_eth = { 
 
 			allowed = {
-				original_tag = ITA
 				always = no
 			}
 	
@@ -6120,6 +6189,7 @@ ideas = {
 				OR = {
 					is_at_peace_exiled_countries_excluded = no
 					has_global_flag = ITA_GER_VICHY_ESTABLISHED
+					has_idea = ITA_italian_irredentism_ns
 					16 = { is_controlled_by_ROOT_or_ally = yes }
 					VIC = { exists = yes }
 				}
@@ -6631,6 +6701,28 @@ ideas = {
 			} 
 
 			modifier = {
+			}
+		}
+
+		Operation_Weserubung_AI = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 0.9
 			}
 		}
 

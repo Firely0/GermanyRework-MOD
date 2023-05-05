@@ -403,6 +403,14 @@ GER_training_program = {
 	
 		cancel_effect = {
 		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_global_flag = spanish_civil_war
+			}
+		}
 	
 		timeout_effect = {
 			custom_effect_tooltip = GER_end_of_training_program

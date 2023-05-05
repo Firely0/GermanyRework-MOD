@@ -60,10 +60,6 @@ focus_tree = {
 				set_variable = { ger_rhi_timeout = 200 }
 				set_technology = { mobile_warfare = 1 popup = no }
 				add_ideas = i_dont_use_wargoal
-				swap_ideas = {
-					remove_idea = sour_loser
-					add_idea = sour_loser_revange_never_surrender
-				}
 			}
 			activate_mission = GER_Rhineland_demilitarized_a
             activate_mission = GER_Rhineland_demilitarized_b

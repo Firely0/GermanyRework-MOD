@@ -30,6 +30,10 @@ opinion_modifiers = {
 		value = 35
 	}
 
+	oldtradeparterns = {
+		value = 40
+	}
+
 	AI_SOV_WAR = {
 		value = -300
 	}
@@ -46,5 +50,11 @@ opinion_modifiers = {
 
 	ignored_our_interests = {
 		value = -30
+	}
+
+	middle_east_intervention = {
+		value = -20
+		months = 24
+		decay = 1
 	}
 }

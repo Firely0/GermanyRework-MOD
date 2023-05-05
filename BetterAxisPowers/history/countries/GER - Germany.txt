@@ -35,6 +35,32 @@ activate_mission = Krupp_End_of_Agreements
 #}
 
 add_opinion_modifier = {
+    target = SWE
+    modifier = oldtradeparterns
+}
+
+SWE = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = oldtradeparterns
+	}
+} 
+
+add_opinion_modifier = {
+    target = SWE
+    modifier = oldtradeparterns
+	trade = yes
+}
+
+SWE = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = oldtradeparterns
+		trade = yes
+	}
+}
+
+add_opinion_modifier = {
     target = SOV
     modifier = gertrainingprogram
 } 

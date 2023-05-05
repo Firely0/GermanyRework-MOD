@@ -101,6 +101,8 @@
  ITA_GER_TRAINING:0 "German Naval Experience Program"
  GER_ITA_TRAINING:0 "Naval Experience Program"
 
+ abwehr_agent:0 "die Abwehr"
+
  GER_technocracy_idea:0 "Technocracy"
  GER_technocracy_idea_desc:0 ""
 
@@ -112,6 +114,9 @@
 
  Operation_Sea_Lion:0 "Prepare for Inavasion"
  Operation_Sea_Lion_desc:0 ""
+
+ Operation_Weserubung:0 "Operation Weserübung"
+ Operation_Weserubung_desc:0 ""
 
  GER_sealion:0 "Operation Sea Lion"
  GER_sealion_desc:0 ""
@@ -322,7 +327,7 @@
 
  GER_autarky_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HMilitary Factory §!Construction Speed: §G+10%§! \n§HNaval Dockyard §!Construction Speed: §G+10%§! \n§HCivilian Factory §!Construction Speed§!: §G+5%§!"
 
- GER_cap_pol_tt:0 "Focus Auto-Complete After §RCapitulation§! of §RPoland§!"
+ GER_cap_pol_tt:0 "if we war with §RPoland§! Focus Auto-Complete After §RCapitulation§! of §RPoland§!"
 
  GER_Kaiser_in_Country_tt:0 "Wilhelm II in Country"
  GER_Fuhrer_in_Country:0 "Adolf Hitler in Country"
@@ -415,6 +420,7 @@
  speaked_against_us:0 "Spoken Against Us"
  challenged_royal_navy:0 "Challenged Royal Navy"
  gertrainingprogram:0 "Training Programs"
+ oldtradeparterns:0 "Old Trade Partners"
  GER_ITA_JAP_TRIPLE:0 "Signed Tripartite Pact"
  GER_END_OF_FOUR_YEAR_PLAN_tt:0 "Unlocks §YBetter Econamic Plan§!"
  GER_FOUR_PLAN_FLAG:0 "Four Year Plan"

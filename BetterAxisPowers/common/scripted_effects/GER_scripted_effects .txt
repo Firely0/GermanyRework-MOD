@@ -1312,6 +1312,59 @@ GER_krupp_next_ph = {
 	}
 }
 
+GER_AI_EQ = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 10000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 2500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 1950
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = 1250
+			producer = GER
+		}
+	}
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = 10000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 2500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 1950
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = 1250
+			producer = GER
+		}
+	}
+}
+
 GER_Give_fascism_effect = {
 	random_other_country = {
 		limit = {

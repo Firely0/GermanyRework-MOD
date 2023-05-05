@@ -1364,7 +1364,7 @@ country_event = {
 		}
 		name = "Italy"
 
-		country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }
+		ITA = {country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }}
 	}
 	option = {
 		ai_chance = {
@@ -1372,7 +1372,7 @@ country_event = {
 		}
 		name = "Etihopia"
 
-		country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }
+		ETH = {country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }}
 	}
 }
 
@@ -1393,7 +1393,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			factor = 100
+			factor = 0
 		}
 		name = "No"
 	}
@@ -3218,6 +3218,7 @@ country_event = { #Event For France
 			}
 		}
 	}
+
 	option = {
 		name = "We Always Have Other Ways"
 		ai_chance = {
@@ -3438,7 +3439,7 @@ country_event = { #Event For UK - For Trade Ban
 	option = { #Historical
 	name = germany.60.b
 	ai_chance = {
-		factor = 99
+		factor = 50
 		modifier = {
 			has_global_flag = GER_has_started_war
 			factor = 0
@@ -3453,7 +3454,7 @@ country_event = { #Event For UK - For Trade Ban
     }
 
 	option = {
-	name = "We Should Cut Trades With Germany"
+	name = "We Agree"
 	ai_chance = {
 		factor = 0
 		modifier = {
@@ -3478,7 +3479,8 @@ country_event = { #Event For UK - For Trade Ban
 country_event = { #Event For UK - Security of Benelux
 	id = GER_rhineland.5
 	title = "German Troops Enter Rhineland!"
-	desc = germany.60.d
+	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Make Sure Security of Benelux.
+	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
 	timeout_days = 3
@@ -3486,7 +3488,7 @@ country_event = { #Event For UK - Security of Benelux
 	option = { #Historical
 	name = germany.60.b
 	ai_chance = {
-		factor = 99
+		factor = 50
 		modifier = {
 			has_global_flag = GER_has_started_war
 			factor = 0
@@ -3507,10 +3509,8 @@ country_event = { #Event For UK - Security of Benelux
 				factor = 100
 			}
 		}
-		name = "We Must Ensure the Security of Benelux."
-
+		name = "We Agree"
 		add_to_faction = FRA
-	
 		HOL = {
 			limit = {
 				is_puppet = no
@@ -3583,18 +3583,16 @@ country_event = { #Event For UK isolate
     }
 
 	option = {
-	name = "Let's isolate Germany"
+	name = "We Agree"
 	ai_chance = {
-		factor = 0
+		factor = 50
 		modifier = {
 			FRA = { is_ai = no }
 			factor = 100
 		}
 	}
 	GER_isolate_effect = yes
-
 	set_global_flag = ISO_GER_Y
-
 	hidden_effect = {
 		GER = { country_event = GER_rhineland_remind_ger.3 }
 		FRA = { country_event = GER_rhineland_remind_fra.2 }
@@ -3614,7 +3612,7 @@ country_event = { #Event For UK issue ultimatum
 	option = { #Historical
 	name = germany.60.b
 	ai_chance = {
-		factor = 99
+		factor = 50
 		modifier = {
 			has_global_flag = GER_has_started_war
 			factor = 0

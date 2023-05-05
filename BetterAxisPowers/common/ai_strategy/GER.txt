@@ -478,6 +478,12 @@ danzig_of_war_preparation = {
 		id = "POL"
 		value = 100
 	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = POL
+		value = 100
+	}
 }
 
 dont_die_in_mountains = {
@@ -513,7 +519,7 @@ war_with_soviets = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_ussr_war_goalV
+		has_completed_focus = GER_ussr_war_goal
 		country_exists = SOV
 	}
 	abort = {
@@ -533,7 +539,7 @@ soviet_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_soviet_allyV
+		has_completed_focus = GER_soviet_ally
 		country_exists = SOV
 	}
 	abort = {
@@ -2168,43 +2174,6 @@ GER_around_the_maginot = {
 		value = 100
 	}
 
-}
-
-
-# lets not invade until we have europe
-GER_dont_invade_until_FRA_falls = {
-	allowed = {
-		original_tag = GER
-		is_historical_focus_on = yes
-	}
-
-	enable = {
-		date < 1941.3.1
-		FRA = {
-			has_capitulated = no
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = invasion_unit_request
-		country_trigger = { always = yes }
-
-		value = -100
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-
-		# norway
-		state = 110
-		state = 142
-		state = 143
-		state = 144
-
-		value = -100
-	}
 }
 
 GER_have_some_train_production = {

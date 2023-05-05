@@ -14,14 +14,6 @@ on_actions = {
 		}
 	}
 
-	on_startup = {
-		effect = {
-			ENG = {
-				country_event = new_uk.1
-			}
-		}
-	}
-
 	on_join_faction = {
 		effect = {
 			if = {

@@ -622,7 +622,12 @@ country_event = {
 		86 = { set_state_name = "Posen" }
 		set_province_name = { id = 6558 name = "Posen" }
 		762 = { set_state_name = "Kattowitz" }
-		add_ideas = anti_soviet_pact
+		if = {
+			limit = {
+				NOT = { has_idea = anti_soviet_pact }
+			}
+			add_ideas = anti_soviet_pact
+		}
 		POL = { 
 			add_ideas = anti_soviet_pact
 			add_opinion_modifier = { target = GER modifier = danzig_for_guarantees }

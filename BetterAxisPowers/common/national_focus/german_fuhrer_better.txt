@@ -138,6 +138,7 @@ focus_tree = {
 				name = "Abwehr"
 				icon = GFX_intelligence_agency_logo_ger 
 			}
+			add_ideas = abwehr_agent
 		}
 	}
 
@@ -669,7 +670,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_SS_A
-		icon = GFX_goal_agency_1
+		icon = GFX_goal_secret_agents
 		prerequisite = { focus = GER_SS }
 		available = {
 			has_government = fascism
@@ -690,7 +691,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_SS_B
-		icon = GFX_goal_secret_agents
+		icon = GFX_goal_agency_1
 		prerequisite = { focus = GER_SS }
 		available = {
 			has_government = fascism
@@ -1084,6 +1085,7 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			hidden_effect = {
+				GER_AI_EQ = yes
 				if = {
 					limit = {
 						ENG = {
@@ -1214,6 +1216,7 @@ focus_tree = {
 		prerequisite = { focus = GER_danzig_or_war focus = GER_danzig_vs_slovakia }
 		will_lead_to_war_with = DEN 
 		will_lead_to_war_with = NOR
+		cancelable = no
 		bypass = {
 			AND = {
 				DEN = { 
@@ -1237,6 +1240,15 @@ focus_tree = {
 				POL = { is_guaranteed_by = ENG }
 			}
 		}
+		select_effect = {
+			add_timed_idea = { idea = Operation_Weserubung days = 120 }
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_timed_idea = { idea = Operation_Weserubung_AI days = 120 }
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = GER_danzig_or_war
@@ -1250,7 +1262,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-
 			if = {
 				limit = {
 					NOT = { DEN = { is_in_faction_with = GER } }
@@ -1263,8 +1274,6 @@ focus_tree = {
 					generator = { 37 }
 				}
 			}
-
-
 			if = {
 				limit = {
 					NOT = { NOR = { is_in_faction_with = GER } }
@@ -1277,7 +1286,18 @@ focus_tree = {
 					generator = { 110 }
 				}
 			}
-			
+			hidden_effect = {
+				if = {
+					limit = {
+						NOR = { is_ai = yes }
+						GER = { is_ai = yes }
+					}
+					set_collaboration = {
+						target = NOR
+						value = 1.0
+					}
+				}
+			}
 			add_tech_bonus = {
 				name = tp_bonus
 				bonus = 1.0
@@ -2429,6 +2449,7 @@ focus_tree = {
 		icon = GFX_goal_r56_goal_GER_operation_sealion
 		prerequisite = { focus = GER_uk_friend }
 		available = {
+			NOT = { has_idea = Operation_Weserubung }
 			has_full_control_of_state = 35
 			has_full_control_of_state = 6
 			has_full_control_of_state = 15
@@ -4009,7 +4030,6 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
-			
 			has_army_manpower = { size > 299999 }
 			is_subject = no
 			has_government = fascism
@@ -9923,6 +9943,7 @@ focus = {
 				}
 			}
 			hidden_effect = {
+				GER_AI_EQ = yes
 				if = {
 					limit = {
 						is_ai = yes
