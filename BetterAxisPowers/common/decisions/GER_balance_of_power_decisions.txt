@@ -424,27 +424,8 @@ GER_balance_of_power_category = {
 		}
 		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = medium_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-					any_enemy_country = {
-						OR = {
-							has_war_with = ROOT
-							any_enemy_country = {
-								has_war_with = ROOT
-							}
-						}
-					}
-					any_province = {
-						is_core_of = ROOT
-					}
-				}
-			}	
+			division_has_majority_template = medium_armor	
+			has_political_power > 110
 		}
 	}
 
@@ -493,32 +474,9 @@ GER_balance_of_power_category = {
 	ai_will_do = {
 		factor = 0
 		modifier = {
-			factor = 10
-			has_political_power < 110
-		}
-		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = medium_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-					any_enemy_country = {
-						OR = {
-							has_war_with = ROOT
-							any_enemy_country = {
-								has_war_with = ROOT
-							}
-						}
-					}
-					any_province = {
-						is_core_of = ROOT
-					}
-				}
-			}	
+			division_has_majority_template = medium_armor	
+			has_political_power > 110
 		}
 	}
 
@@ -567,32 +525,8 @@ GER_balance_of_power_category = {
 	ai_will_do = {
 		factor = 0
 		modifier = {
-			factor = 10
-			has_political_power < 110
-		}
-		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = heavy_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-					any_enemy_country = {
-						OR = {
-							has_war_with = ROOT
-							any_enemy_country = {
-								has_war_with = ROOT
-							}
-						}
-					}
-					any_province = {
-						is_core_of = ROOT
-					}
-				}
-			}	
+			division_has_majority_template = heavy_armor
 		}
 	}
 
@@ -633,6 +567,20 @@ GER_balance_of_power_category = {
 			original_tag = GER
 		}
 
+		ai_will_do = {
+			modifier = {
+				has_political_power > 200
+				factor = 100
+			}
+			modifier = {
+				factor = 100
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 0.1
+				}
+			}
+		}
+
 		cost = 50
 
 		days_re_enable = 365
@@ -642,11 +590,11 @@ GER_balance_of_power_category = {
 			GER_bop_high_decrease_effect = yes
 		    add_equipment_to_stockpile = {
 			 type = infantry_equipment
-			 amount = 1000
+			 amount = 1500
 		    }
 		    add_equipment_to_stockpile = {
 			 type = artillery_equipment
-			 amount = 250
+			 amount = 550
 		    }
 	    }
 

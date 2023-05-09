@@ -141,6 +141,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_goal_Red_Army_design"
+		texturefile = "gfx/interface/goals/Red_Army_design.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_goal_tiger"
 		texturefile = "gfx/interface/goals/tiger.dds"			
 	}
@@ -183,6 +188,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_glory_of_wehrmacht_nonaligned"
 		texturefile = "gfx/interface/goals/glory_of_wehrmacht_nonaligned.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_goal_glory_of_wehrmacht_com"
+		texturefile = "gfx/interface/goals/glory_of_wehrmacht_com.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_goal_glory_of_wehrmacht_dec"
+		texturefile = "gfx/interface/goals/glory_of_wehrmacht_dec.dds"		
 	}
 	
 	SpriteType = {

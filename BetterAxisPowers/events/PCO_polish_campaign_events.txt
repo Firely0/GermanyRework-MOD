@@ -2075,7 +2075,7 @@ country_event = {
 	option = {
 		name = mrpact_negociations_lithuania.1.a	#Who cares about Lithuania
 		ai_chance = {
-			factor = 40
+			factor = 0
 			modifier = {
 				factor = 1000
 				NOT = { LIT = { is_subject_of = GER } }
@@ -2089,7 +2089,7 @@ country_event = {
 	option = {
 		name = mrpact_negociations_lithuania.1.b	#We want it
 		ai_chance = {
-			factor = 60
+			factor = 0
 			modifier = {
 				factor = 80
 				LIT = { is_subject_of = GER }
@@ -2103,10 +2103,6 @@ country_event = {
 						LAT = { has_country_flag = mr_pact_into_german_sphere_of_influence }
 					}
 				}
-			}
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
 			}
 		}
 		SOV = {
@@ -2127,6 +2123,9 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_lithuania.2.a	#Of course
+		ai_chance = {
+			factor = 100
+		}
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_lithuania.4 }
 		}

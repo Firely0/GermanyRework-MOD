@@ -60,13 +60,15 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = GER_oppose_hitler_civil_war
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			909 = { set_demilitarized_zone = no }
-			add_political_power = 150
-			add_named_threat = { threat = 5 name = GER_oppose_hitler }
 			country_event = { id = wtt_germany.1 }
+			custom_effect_tooltip = GER_oppose_hitler_civil_war
+			add_named_threat = { threat = 5 name = GER_oppose_hitler }
+			hidden_effect = {
+				42 = { set_demilitarized_zone = no }
+				51 = { set_demilitarized_zone = no }
+				909 = { set_demilitarized_zone = no }
+				add_political_power = 150
+			}
 		}
 	}
 
@@ -306,6 +308,9 @@ focus_tree = {
 			add_named_threat = { threat = 5 name = GER_return_of_the_kaiser }
 			HOL = {
 				country_event = { id = wtt_germany.3 }
+			}
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -1071,7 +1076,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_see_to_the_eastern_front
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_LIT_New_Republic
 		prerequisite = { focus = GER_return_of_the_kaiser }
 		available = { 
 			is_subject = no
@@ -1631,6 +1636,7 @@ focus_tree = {
 			add_stability = 0.05
 			hidden_effect = {
 				set_cosmetic_tag = GER_german_monarchy
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}

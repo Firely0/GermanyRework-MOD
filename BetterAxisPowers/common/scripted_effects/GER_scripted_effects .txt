@@ -1319,58 +1319,128 @@ GER_AI_EQ = {
 		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_2
-			amount = 10000
+			amount = 20000
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
 			type = support_equipment
-			amount = 2500
+			amount = 3500
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
 			type = artillery_equipment_2
-			amount = 1950
+			amount = 3500
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
 			type = anti_air_equipment_2
-			amount = 1250
-			producer = GER
-		}
-	}
-	if = {
-		limit = {
-			is_ai = yes
-		}
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_3
-			amount = 10000
+			amount = 3500
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
-			type = support_equipment
-			amount = 2500
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = artillery_equipment_2
-			amount = 1950
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = anti_air_equipment_2
-			amount = 1250
+			type = motorized_equipment
+			amount = 4000
 			producer = GER
 		}
 	}
 }
 
-GER_Give_fascism_effect = {
-	random_other_country = {
+GER_AI_DIV = {
+	if = {
 		limit = {
-			original_tag = GER
-			has_government = fascism
+			is_ai = yes
 		}
+		division_template = {
+			name = "Panzer Division"
+			is_locked = no
+			priority = 0
+			regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor= { x = 0 y = 2 }
+				medium_armor = { x = 0 y = 3 }
+				medium_armor = { x = 0 y = 4 }
+				medium_armor = { x = 1 y = 0 }
+				medium_armor = { x = 1 y = 1 }
+				medium_armor= { x = 1 y = 2 }
+				medium_armor = { x = 1 y = 3 }
+				medium_armor = { x = 1 y = 4 }
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor= { x = 2 y = 2 }
+				medium_armor = { x = 2 y = 3 }
+				medium_armor = { x = 2 y = 4 }
+				mechanized = { x = 3 y = 0 }
+				mechanized = { x = 3 y = 1 }
+				mechanized= { x = 3 y = 2 }
+				mechanized = { x = 3 y = 3 }
+				mechanized = { x = 3 y = 4 }
+				mechanized = { x = 4 y = 0 }
+				mechanized = { x = 4 y = 1 }
+			}
+			support = {
+				medium_flame_tank = { x = 0 y = 0 }
+				armored_car_recon = { x = 0 y = 1 }
+				logistics_company = { x = 0 y = 2 }
+				signal_company = { x = 0 y = 3 }
+				engineer = { x = 0 y = 4 }
+			}
+		}
+		set_technology = { tech_engineers2 = 1 popup = no }
+		set_technology = { tech_signal_company = 1 popup = no }
+		set_technology = { mechanised_infantry = 1 popup = no }
+		create_equipment_variant = {
+			name = "Flammpanzer III Ausf. M"
+			type = medium_tank_flame_chassis_2
+			parent_version = 0
+			allow_without_tech = yes
+			modules = {
+			main_armament_slot = flamethrower
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 11
+			}
+			icon = "GFX_GER_medium_BAB"
+			model = "GER_medium_armor_0_entity"
+		}
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = TAG_new_railway_gun
+			location = 6521
+		}
+		64 = {
+			create_unit = {
+				division = "name = \"Panzer Division\" division_template = \"Panzer Division\" start_experience_factor = 1.0"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Panzer Division 2\" division_template = \"Panzer Division\" start_experience_factor = 1.0"
+				owner = GER
+			}
+		}
+	}
+}
+
+GER_Give_fascism_effect = {
+		load_focus_tree = {
+			tree = german_fuhrer_better
+			keep_completed = yes
+		}
+		uncomplete_national_focus = {
+			focus = GER_against_fuhrer
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+		unlock_national_focus = GER_rhineland_demilitarized
+		complete_national_focus = GER_establish_abwehr
+		complete_national_focus = GER_Fuhrer
+		set_cosmetic_tag = GER_the_third_reich
+		set_country_flag = COM_SIDE_FASCISM
 		save_event_target_as = fascist_germany_civil_war
 		every_unit_leader = {
 			set_nationality = GER
@@ -1420,13 +1490,6 @@ GER_Give_fascism_effect = {
 		add_dynamic_modifier = {
 			modifier = Kriegsmarine_dynamic_modifier
 		}
-		load_focus_tree = {
-			tree = german_fuhrer_better
-			keep_completed = yes
-		}
-		complete_national_focus = GER_establish_abwehr
-		complete_national_focus = GER_Fuhrer
-	}
 	GER = {
 		every_unit_leader = {
 			limit = {

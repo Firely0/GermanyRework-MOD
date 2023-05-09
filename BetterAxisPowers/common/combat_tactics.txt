@@ -421,6 +421,7 @@ tactic_blitz = {
 			skill_advantage > 1
 		}
 		OWNER = { NOT = { has_tech = masterful_blitz } } #Soviet improved version of blitz will replace this
+		OWNER = { NOT = { has_tech = masterful_blitz_GERV } }
 	}
 	
 	active = no

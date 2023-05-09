@@ -1036,7 +1036,7 @@ GER_Rhineland_demilitarized = {
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.15
+				popularity = -0.05
 			}
 		}
 	
@@ -1081,6 +1081,10 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		timeout_effect = { 
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 	
 		complete_effect = {
@@ -1124,6 +1128,10 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		timeout_effect = { 
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 	
 		complete_effect = {
@@ -1217,6 +1225,72 @@ GER_Rhineland_demilitarized = {
 
 GER_expand_support = {
 
+	GER_conquer_hamburg = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			58 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58 #Hamburg
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	
+		complete_effect = { 
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
+		}
+	}
+
 	GER_conquer_berlin = {
 		icon = GFX_decision_generic_operation
 	
@@ -1233,6 +1307,7 @@ GER_expand_support = {
 		}
 	
 		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
 		}
 	
 		highlight_states = {
@@ -1268,6 +1343,83 @@ GER_expand_support = {
 			}
 			add_war_support = 0.1
 			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
+		}
+	}
+
+	GER_conquer_munich = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			52 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 52 #Munich
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	
+		complete_effect = { 
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
 		}
 	}
 }	

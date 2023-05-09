@@ -52,7 +52,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = german_Fuhrer_tt
 			hidden_effect = {
-			set_cosmetic_tag = GER_the_third_reich
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_cosmetic_tag = GER_the_third_reich
+				}
 			if = {
 				limit = {
 					is_ai = yes

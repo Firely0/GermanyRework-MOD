@@ -33,6 +33,7 @@ add_namespace = GER_no_focus_ger_com_adolf_retire
 add_namespace = GER_eng_trade_agreement
 add_namespace = GER_eng_naval_agreement
 add_namespace = GER_trade_danzig
+add_namespace = GER_civil_war_end_com
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -3867,18 +3868,9 @@ country_event = {
 				ideology = fascism
 				size = 0.5
 				capital = 64
-				states = { 64 61 52 53 54 60 65 66 67 68 62 63 5 }
+				states = { 64 61 52 53 54 60 65 66 67 68 62 63 5 59 58 }
 			}
-			load_oob = "GER_German_Civil_War_neutrality"
-			random_other_country = {
-				limit = {
-					original_tag = GER
-					has_government = fascism
-				}
-				set_stability = 0.9
-				set_war_support = 0.8
-				load_oob = "GER_German_Civil_War_fascist"
-			}
+			load_oob = "GER_German_Civil_War_com"
 			add_popularity = {
 				ideology = communism
 				popularity = 0.60
@@ -3894,6 +3886,38 @@ country_event = {
 			recruit_character = GER_Com_Civilwar
 			add_ideas = GER_political_violence
 			activate_mission = GER_conquer_berlin
+			activate_mission = GER_conquer_hamburg
+			activate_mission = GER_conquer_munich
+			remove_mission = GER_SOV_TRAINING
+			remove_mission = GER_ITA_TRAINING
+			set_global_flag = GER_civil_war_need_support
+			set_global_flag = GER_civil_war
+			SOV = {
+				remove_ideas = SOV_GER_TRAINING
+			}
+			ITA = {
+				remove_ideas = ITA_GER_TRAINING
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 4000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+			}
 		add_country_leader_role = {
 			character = GER_Com_Civilwar
 			promote_leader = yes
@@ -3902,19 +3926,13 @@ country_event = {
 				ideology = leninism 
 			}
 		}
-			load_focus_tree = {
-				tree = german_com_side
-				keep_completed = yes
-			}
+		complete_national_focus = GER_BetterFuhrer
+		unlock_national_focus = GER_rhineland_demilitarized
+		complete_national_focus = GER_establish_abwehr
+		complete_national_focus = GER_against_fuhrer
+		unlock_national_focus = GER_assassinate_adolf_hitler
 		}
 		add_stability = -0.25
-		random_other_country = {
-			limit = {
-				original_tag = GER
-				has_government = fascism
-			}
-			set_cosmetic_tag = GER_civil_war
-		}
 		GER_Com_Civilwar = {
 			add_country_leader_role = {
 				country_leader = {
@@ -3924,8 +3942,34 @@ country_event = {
 				promote_leader = yes
 			}
 		}
-		hidden_effect = {
+		random_other_country = {
+			limit = {
+				original_tag = GER
+				has_government = fascism
+			}
 			GER_Give_fascism_effect = yes
+			set_stability = 0.9
+			set_war_support = 0.8
+			load_oob = "GER_German_Civil_War_fascist_vs_com"
+			GER_Give_fascism_side_guns_effect = yes
+			set_country_flag = GER_BLITZ_COM
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 15000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1250
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1500
+				producer = GER
+			}
+		}
+		hidden_effect = {
 			if = {
 				limit = {
 					is_ai = yes
@@ -3977,6 +4021,7 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_the_red_reich
+			set_global_flag = GER_civil_war_end
 			#add_popularity = { 
 			#	ideology = communism
 			#	popularity = 0.40
@@ -4083,6 +4128,47 @@ country_event = {
 
 		ai_chance = {
 			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = GER_civil_war_end_com.1
+	title = wtt_germany.18.t
+	desc = ""
+	picture = GFX_report_event_fascists_posing
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			news_event = { id = wtt_news.8 hours = 6 }
+			set_global_flag = GER_civil_war_end
+		}
+	}
+
+	# Execute head nazis Publically
+	option = {
+		name = wtt_germany.18.a
+		add_stability = 0.05
+		add_popularity = { ideology = fascism popularity = -0.05 }
+		delete_unit_template_and_units = { division_template = "Irregulare Truppe" }
+		if = { 
+			limit = { is_faction_leader = yes } 
+			leave_faction = yes
+		}
+	}
+
+	# Imprison head nazis for life
+	option = {
+		name = wtt_germany.18.b
+		add_political_power = 75
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = GER_imprisoned_fascist_leadership
+		delete_unit_template_and_units = { division_template = "Irregulare Truppe" }
+		if = { 
+			limit = { is_faction_leader = yes } 
+			leave_faction = yes
 		}
 	}
 }

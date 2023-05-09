@@ -147,6 +147,15 @@ Rush_Suez_dynamic_modifier = {
 
 }
 
+Rush_Berlin_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_speed_factor = 0.05  
+
+}
+
 GER_Resupply_dynamic_modifier = {
 	enable = { always = yes }
 

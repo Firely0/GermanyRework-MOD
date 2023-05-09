@@ -2,6 +2,147 @@ ideas = {
 
 	country = {
 
+		GER_plan_offensive = {
+
+			picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				max_planning_factor = 0.1
+			}
+		}
+
+		GER_foreign_training_staff = {
+
+			picture = generic_army_war_college
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		}
+
+		GER_war_time_logistics = {
+
+			picture = SOV_the_road_of_life
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_node_range = 0.15
+				supply_factor = 0.15
+			}
+		}
+
+		GER_aid_production = {
+
+			picture = generic_license_production
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		Emergency_Orders = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		Emergency_Orders_def = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		Emergency_Orders_attack = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+
 		abwehr_agent = {
 
 			picture = generic_spy_intel
@@ -905,7 +1046,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = -0.04
+				communism_drift = -0.1
 			}
 		}
 
@@ -923,7 +1064,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = -0.04
+				fascism_drift = -0.1
 			}
 		} 
 
@@ -1230,7 +1371,6 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				stability_factor = 0.1
-				war_support_factor = -0.1
 				surrender_limit = 0.05
 			}
 		}
@@ -1252,7 +1392,6 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				stability_factor = 0.1
-				war_support_factor = -0.1
 				surrender_limit = 0.05
 
 				command_abilities_cost_factor = -0.2
@@ -1785,6 +1924,9 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+
+			cancel = {
+			}
 	
 			removal_cost = -1
 				
@@ -1825,6 +1967,10 @@ ideas = {
 	
 			allowed_civil_war = {
 				always = yes
+			}
+
+			cancel = {
+				has_war_with_major = yes
 			}
 	
 			removal_cost = -1
@@ -2142,7 +2288,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_oppression
+			picture = generic_fascism_banned
 
 			modifier = {
 				fascism_drift = -0.05
@@ -2592,11 +2738,6 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 
-			modifier = {
-                army_armor_speed_factor = 0.05
-				org_loss_when_moving = -0.1
-			}
-
 			on_remove = {
 				if = {
 					limit = {
@@ -2855,7 +2996,7 @@ ideas = {
 		#Wehrmacht
 
 		Wehrmacht_UI = {
-			picture = ger_army_ui
+			picture = ger_army_1
 			allowed = {
 				original_tag = GER
 			}
@@ -5096,11 +5237,11 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = GER_krupp_eco_focus
 				custom_trigger_tooltip = {
 					tooltip = krupp_used_tt
 					krupp_used = yes
 				}
+				has_completed_focus = GER_krupp_eco_focus
 			}
 			
 			research_bonus = {
@@ -5110,7 +5251,7 @@ ideas = {
 			traits = { krupp_tank }
 
 			ai_will_do = {
-				factor = 2
+				factor = 15
 			}
 		}
 
@@ -6110,7 +6251,7 @@ ideas = {
 			traits = { Volkswagen_trait }
 
 			ai_will_do = {
-				factor = 1
+				factor = 15
 			}
 		}
 	}
@@ -6723,6 +6864,9 @@ ideas = {
 			
 			modifier = {
 				naval_invasion_prep_speed = 0.9
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.1
+				no_supply_grace = 128
 			}
 		}
 

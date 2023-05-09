@@ -22,7 +22,7 @@ on_actions = {
 					original_tag = ITA
 					has_government = fascism
 					ITA = {
-						has_war_with = ETH 
+						has_war_with = ETH
 						is_ai = yes 
 					}
 					ETH = {
@@ -313,6 +313,54 @@ on_actions = {
 				}
 			}
 		}
+	}
+			
+	on_civil_war_end_before_annexation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = GER
+					has_government = communism
+				}
+				random_other_country = {
+					limit = {
+						original_tag = GER
+						has_government = fascism
+					}
+					transfer_navy = { target = GER }
+					every_unit_leader = {
+						limit = {
+							OR = {
+								has_id = 10
+								has_id = 15
+								has_id = 20
+								has_id = 24
+							}
+						}
+						set_nationality = GER
+					}
+				}
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = GER
+						has_government = fascism
+					}
+					original_tag = GER
+					has_government = communism
+				}
+				set_global_flag = GER_civil_war_end
+				clr_global_flag = GER_civil_war
+				set_global_flag = { flag = civil_war_olympics value = 1 days = 30 }
+				country_event = { id = GER_civil_war_end_com.1 days = 1 }
+			}
+		}	
 	}
 
 	on_declare_war = {

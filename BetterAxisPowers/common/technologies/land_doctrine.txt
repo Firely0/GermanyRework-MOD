@@ -3411,15 +3411,14 @@ technologies = {
 	}
 
 	masterful_blitz_GERV = {
-	enable_tactic = tactic_masterful_blitz_ger
+		enable_tactic = tactic_masterful_blitz_ger
 
-	doctrine = yes
-	research_cost = 1
+		doctrine = yes
+		research_cost = 1
 
-	#set at gamestart
-	allow = {
-		always = no
+		#set at gamestart
+		allow = {
+			always = no
 		}
 	}
-	
 }
