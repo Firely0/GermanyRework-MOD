@@ -2,6 +2,24 @@ ideas = {
 
 	country = {
 
+		ger_communism_expand = {
+			picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+
 		GER_plan_offensive = {
 
 			picture = CZE_planning_bonus
@@ -160,6 +178,7 @@ ideas = {
 			modifier = {
 				operative_slot = 1
 				agency_upgrade_time = -0.1
+				decryption_factor = 0.1
 			}
 		}
 
@@ -452,7 +471,7 @@ ideas = {
 
 		SOV_GER_TRAINING = {
 
-			picture = german_advisors
+			picture = generic_air_bonus
 
 			allowed = {
 				always = no
@@ -508,7 +527,7 @@ ideas = {
 
 		ITA_GER_TRAINING = {
 
-			picture = german_advisors
+			picture = shiptraing
 
 			allowed = {
 				always = no

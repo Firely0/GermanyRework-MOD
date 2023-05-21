@@ -1433,7 +1433,7 @@
 
 	shared_focus = {
 		id = GER_protect_Berlin
-		icon = GFX_goal_BerlinFocus
+		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = GER_Keep_Warmachine_going focus = GER_protect_reichsautobahn }
 		available = {
 			GER = {
@@ -1748,7 +1748,7 @@
 
 	shared_focus = {
 		id = GER_rebuild_the_high_seas_fleet_a
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_GER_rebuild_the_high_seas_fleet
 		text = GER_rebuild_the_high_seas_fleet
 		relative_position_id = GER_naval_rearmament_a
 		prerequisite = { focus = GER_plan_z_a }
@@ -1810,8 +1810,6 @@
 		ai_will_do = {
 			factor = 1
 		}
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = GER_naval_air_effort_a_modify
 			hidden_effect = {
@@ -2294,6 +2292,7 @@
 				}
 			}
 			custom_effect_tooltip = GER_PLAN_Z_modify
+			activate_mission = GER_plan_z
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -2383,7 +2382,7 @@
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = GER_u_boat_effort_a }
 		text = GER_naval_effort2
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		relative_position_id = GER_u_boat_effort_a
 		x = 0
 		y = 2
@@ -3050,7 +3049,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -4713,8 +4711,6 @@
 				}
 			}
 		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			
 			air_experience = 50
@@ -5710,6 +5706,7 @@
 
 		available = {
 			has_tech = mobile_warfare
+			has_completed_focus = GER_Fuhrer
 			has_country_leader = {
 				character = GER_adolf_hitler
 				ruling_only = yes
@@ -5720,9 +5717,14 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
 			add_political_power = 100
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = 0.2
+			if = {
+				limit = {
+					has_completed_focus = GER_Fuhrer
+				}
+				add_power_balance_value = {
+					id = GER_power_balance
+					value = 0.2
+				}
 			}
 		}
 	}
@@ -5745,7 +5747,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_technology = { masterful_blitz_GERV = 1 popup = no }
 			create_equipment_variant = {
@@ -5793,7 +5794,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			create_equipment_variant = {
 				name = "Panzerjäger Tiger"
@@ -5840,7 +5840,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			create_equipment_variant = {
 				name = "Panzer VIII Maus"
@@ -5923,7 +5922,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			create_equipment_variant = {
 				name = "Sturmgeschütz IV"
@@ -5970,7 +5968,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = { 
 			create_equipment_variant = {
 				name = "PzKpfw Panther"
@@ -6016,7 +6013,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = {
@@ -6125,7 +6121,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 				create_equipment_variant = {
 				name = "Jagdpanther"

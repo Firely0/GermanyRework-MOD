@@ -7,32 +7,40 @@ set_variable = { ger_rhi_timeout = 140 }
 set_variable = { GER_sealion_ph1_time = 120 }
 set_variable = { GER_sealion_ph2_time = 120 }
 
+#Training Programs
+activate_mission = GER_SOV_TRAINING 
+activate_mission = GER_ITA_TRAINING
+
+add_opinion_modifier = {
+    target = SOV
+    modifier = gertrainingprogram
+} 
+
+SOV = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
+add_opinion_modifier = {
+    target = ITA
+    modifier = gertrainingprogram
+}
+
+ITA = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
 #Krupp
 set_variable = { GER_KRUPP_PHASE_TIME = 365 }
 set_country_flag = GER_Active_Mission
-
-activate_mission = GER_SOV_TRAINING 
-activate_mission = GER_ITA_TRAINING
 activate_mission = Krupp_End_of_Agreements
 
-#every_state = { Krupp is Not Ready :(
-#	limit = {
-#		OR = {
-#			State = 42
-#			state = 51
-#			state = 60
-#			state = 63
-#			state = 65
-#			state = 66
-#			state = 67
-#		} 
-#	}
-#	add_dynamic_modifier = {
-#		modifier = Krupp_PH1_modifier
-#		scope = GER
-#		days = 365
-#	}
-#}
+#Old Friend Sweden.
 
 add_opinion_modifier = {
     target = SWE
@@ -60,31 +68,9 @@ SWE = {
 	}
 }
 
-add_opinion_modifier = {
-    target = SOV
-    modifier = gertrainingprogram
-} 
-
-SOV = {
-	add_opinion_modifier = {
-		target = GER
-		modifier = gertrainingprogram
-	}
-}
-
-add_opinion_modifier = {
-    target = ITA
-    modifier = gertrainingprogram
-}
-
-ITA = {
-	add_opinion_modifier = {
-		target = GER
-		modifier = gertrainingprogram
-	}
-}
-
+#You Want Total War? 
 set_country_flag = GER_BLOCKED_TOTAL_WAR
+ # Yeah but maybe later
 
 #Wehrmacht
 set_variable = {

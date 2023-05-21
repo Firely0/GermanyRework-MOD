@@ -164,6 +164,16 @@ japan_declared_war_usa = {
 	has_global_flag = GER_ITA_JAP_TRIPLE
 }
 
+krupp_used_des = {
+	AND = {
+		OR = {
+			has_idea = krupp_starter_ver
+			has_idea = krupp_nofocusver
+			has_idea = krupp_idea_focus
+		}
+	}
+}
+
 krupp_used = {
 	AND = {
 		OR = {

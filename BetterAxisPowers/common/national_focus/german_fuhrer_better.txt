@@ -1085,7 +1085,10 @@ focus_tree = {
 				limit = {
 					is_ai = yes
 				}
-				NOT = { has_war_with = CZE }
+				OR = {
+					NOT = { has_war_with = CZE }
+					CZE = { has_capitulated = yes }
+				}
 			}
 			is_subject = no
 			has_army_manpower = { size > 949999 } #100 div			
@@ -1892,7 +1895,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_demand_sudetenland
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}	
@@ -2527,11 +2530,11 @@ focus_tree = {
 		prerequisite = { focus = GER_uk_friend }
 		available = {
 			NOT = { has_idea = Operation_Weserubung }
-			has_full_control_of_state = 35
-			has_full_control_of_state = 6
-			has_full_control_of_state = 15
-			has_full_control_of_state = 785
-			has_full_control_of_state = 29
+			35 = { is_controlled_by_ROOT_or_ally = yes }
+			6 = { is_controlled_by_ROOT_or_ally = yes }
+			15 = { is_controlled_by_ROOT_or_ally = yes }
+			785 = { is_controlled_by_ROOT_or_ally = yes }
+			29 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -3063,7 +3066,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_demand_slovenia
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -8165,6 +8168,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = { has_completed_focus = GER_Fuhrer }
+			has_global_flag = GER_ALLOW_COM_FOCUSES
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -20
@@ -8428,6 +8432,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_offer_mexico
+		icon = GFX_goal_mexfriend
+		prerequisite = {
+			focus = GER_claim_new_home_of_brave_new_world 
+		}
+		relative_position_id = GER_claim_new_home_of_brave_new_world
+		x = -2
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_strike_union
 		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = {
@@ -8499,13 +8525,121 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_take_over_soviet
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = {
+			focus = GER_german_union
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -15
+		y = 8
+		cost = 10
+		available = {
+			SOV = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_red_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = {
+			focus = GER_german_union
+		}
+		relative_position_id = GER_the_German_Republic
+		x = -12
+		y = 8
+		cost = 10
+		available = {
+			SOV = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_integrate_to_wehrmacht
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = {
+			focus = GER_fate_of_red_army
+		}
+		mutually_exclusive = { focus = GER_establish_war_department }
+		relative_position_id = GER_the_German_Republic
+		x = -11
+		y = 9
+		cost = 10
+		available = {
+			SOV = {
+				exists = no
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_establish_war_department
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = {
+			focus = GER_fate_of_red_army
+		}
+		mutually_exclusive = { focus = GER_integrate_to_wehrmacht }
+		relative_position_id = GER_the_German_Republic
+		x = -13
+		y = 9
+		cost = 10
+		available = {
+			SOV = {
+				exists = no
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_expand_revelation
 		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		prerequisite = {
 			focus = GER_claim_new_home_of_brave_new_world
 		}
 		relative_position_id = GER_claim_new_home_of_brave_new_world
-		x = -3
+		x = -6
 		y = 1
 		cost = 5
 		available = {
@@ -8517,10 +8651,232 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			every_state = {
-				limit = { is_core_of = SOV }
-				add_claim_by = ROOT
+			every_country = {
+				limit = {
+					NOT = { has_government = communism }
+				}
+				add_timed_idea = {
+					idea = ger_communism_expand
+					days = 365
+				}
 			}
+		}
+	}
+
+	focus = {
+		id = GER_scandinavian_com
+		icon = GFX_focus_generic_scandinavian_alliance
+		prerequisite = {
+			focus = GER_expand_revelation
+		}
+		relative_position_id = GER_expand_revelation
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_country = {
+				limit = { tag = DEN tag = NOR tag = SWE tag = FIN }
+				if = {
+					limit = {
+						has_idea = ger_communism_expand
+					}
+					modify_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_idea = ger_communism_expand }
+					}
+					add_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_interve_scandinavian_com
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {
+			focus = GER_scandinavian_com
+		}
+		relative_position_id = GER_expand_revelation
+		x = 2
+		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_low_countries_com
+		icon = GFX_goal_benelux
+		prerequisite = {
+			focus = GER_expand_revelation
+		}
+		relative_position_id = GER_expand_revelation
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_country = {
+				limit = { tag = HOL tag = BEL tag = LUX }
+				if = {
+					limit = {
+						has_idea = ger_communism_expand
+					}
+					modify_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_idea = ger_communism_expand }
+					}
+					add_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_interve_low_countries
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {
+			focus = GER_low_countries_com
+		}
+		relative_position_id = GER_expand_revelation
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_offer_membership
+		icon = GFX_goal_generic_national_unity
+		prerequisite = {
+			focus = GER_interve_low_countries focus = GER_interve_scandinavian_com focus = GER_interve_danubian
+		}
+		relative_position_id = GER_expand_revelation
+		x = 0
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_danubian_membership_com
+		icon = GFX_goal_danubian
+		prerequisite = {
+			focus = GER_expand_revelation
+		}
+		relative_position_id = GER_expand_revelation
+		x = -2
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_country = {
+				limit = { tag = AUS tag = CZE tag = HUN tag = ROM tag = YUG }
+				if = {
+					limit = {
+						has_idea = ger_communism_expand
+					}
+					modify_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_idea = ger_communism_expand }
+					}
+					add_timed_idea = {
+						idea = ger_communism_expand
+						days = 365
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_interve_danubian
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {
+			focus = GER_danubian_membership_com
+		}
+		relative_position_id = GER_expand_revelation
+		x = -2
+		y = 2
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
 		}
 	}
 
@@ -8578,7 +8934,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_for_our_honor_c
-		icon = GFX_goal_ForOurGlory
+		icon = GFX_goal_ForOurGlorycom
 		text = GER_for_our_honor
 		prerequisite = { focus = GER_Beaten_but_not_defeated_c }
 		mutually_exclusive = { focus = GER_for_our_revange_c }
@@ -9270,6 +9626,8 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available = {
+			has_completed_focus = GER_take_over_soviet
+			NOT = { has_idea = GER_take_over_soviet_idea }
 		}
 		bypass = {
 		}
@@ -9343,6 +9701,8 @@ focus_tree = {
 		cost = 5
 		text = SOV_baltic_security
 		available = {
+			has_completed_focus = GER_take_over_soviet
+			NOT = { has_idea = GER_take_over_soviet_idea }
 		}
 		bypass = {
 		}
@@ -9731,7 +10091,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_for_our_honor_cc
-		icon = GFX_goal_ForOurGlory
+		icon = GFX_goal_ForOurGlorycom
 		text = GER_for_our_honor
 		prerequisite = { focus = GER_Beaten_but_not_defeated_cc }
 		mutually_exclusive = { focus = GER_for_our_revange_cc }
@@ -9992,6 +10352,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			set_country_flag = GER_side_with_fascism
+			mark_focus_tree_layout_dirty = yes
 			if = {
 				limit = {
 					has_completed_focus = GER_rhineland_ab
@@ -10439,7 +10800,7 @@ focus_tree = {
 	focus = {
 		id = GER_No_Step_Back
 		prerequisite = { focus = GER_Basic_Training focus = GER_minimize_training }
-		icon = GFX_goal_BerlinFocus
+		icon = GFX_goal_generic_fortify_city
 		available = {
 			has_war = yes
 			OR = {
@@ -10975,14 +11336,6 @@ focus_tree = {
 			custom_effect_tooltip = needs_approval
 			custom_effect_tooltip = mrpact_non_aggression_tt
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				GER_AI_DIV = yes
-			}
-		}
 	}
 }
 
@@ -11448,7 +11801,6 @@ focus = {
 				}
 			}
 			hidden_effect = {
-				GER_AI_EQ = yes
 				if = {
 					limit = {
 						is_ai = yes
@@ -11457,6 +11809,8 @@ focus = {
 						target = SOV
 						modifier = AI_SOV_WAR
 					}
+					GER_AI_DIV = yes
+					GER_AI_EQ = yes
 				}
 				SOV = {
 					add_opinion_modifier = {

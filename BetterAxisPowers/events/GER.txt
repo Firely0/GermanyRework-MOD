@@ -2611,6 +2611,7 @@ country_event = {
 
 		if = {
 			limit = {
+				has_country_flag = GER_SOV_FIN_Demanded
 				FIN = {
 					is_in_faction_with = GER
 					has_war_with = SOV
@@ -2621,6 +2622,7 @@ country_event = {
 
 		if = {
 			limit = {
+				has_country_flag = GER_SOV_ROM_Demanded
 				ROM = {
 					is_in_faction_with = GER
 					has_war_with = SOV
@@ -2631,6 +2633,7 @@ country_event = {
 
 		if = {
 			limit = {
+				has_country_flag = GER_SOV_TUR_Demanded
 				TUR = {
 					is_in_faction_with = GER
 					has_war_with = SOV
