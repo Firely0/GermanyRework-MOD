@@ -13,6 +13,32 @@ on_actions = {
 		}
 	}
 
+	on_startup = {
+		effect = {
+			GER = {
+				diplomatic_relation = {
+					country = POL
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			SOV = {
+				diplomatic_relation = {
+					country = POL
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			ROM = {
+				diplomatic_relation = {
+					country = POL
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+	}
+
 	on_join_faction = {
 		effect = {
 			if = {

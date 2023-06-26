@@ -3420,4 +3420,16 @@ technologies = {
 			always = no
 		}
 	}
+
+	smoke_and_fire = {
+		enable_tactic = tactic_smoke_and_fire
+
+		doctrine = yes
+		research_cost = 1
+
+		#set at gamestart
+		allow = {
+			always = no
+		}
+	}
 }

@@ -347,15 +347,6 @@ on_actions = {
 						NOT = { has_government = fascism }
 					}
 				}
-				load_focus_tree = {
-					tree = german_fuhrer_better
-					keep_completed = yes
-				}
-				complete_national_focus = GER_BetterFuhrer
-				unlock_national_focus = GER_rhineland_demilitarized
-				complete_national_focus = GER_establish_abwehr
-				complete_national_focus = GER_Fuhrer
-				set_cosmetic_tag = GER_the_third_reich
 				clr_global_flag = GER_civil_war
 			}
 			# Give back JAP focus tree to Fascist Japan if they win the communist or democratic civil war.

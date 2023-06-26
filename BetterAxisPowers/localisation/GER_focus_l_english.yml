@@ -6,11 +6,14 @@
  Fallschirmjager_paratrooper_desc:0 ""
  Gebirgsjager_mountaineers:0 "Gebirgsjager"
  Gebirgsjager_mountaineers_desc:0 ""
+ Schutzstaffel_infantry:0 "Schutzstaffel infantry"
+ Schutzstaffel_infantry_desc:0 ""
 
  #leader
 
  GER_Com_Civilwar:0 "Military Junta"
  GER_Non_Civilwar:0 "Military Junta"
+ GER_michael_wittmann:0 "Michael Wittmann"
 
  #state modifier
 
@@ -24,8 +27,12 @@
  Kriegsmarine_UI:0 "Kriegsmarine"
  Luftwaffe_UI:0 "Luftwaffe"
 
+ #Tech
  masterful_blitz_GERV:0 "Masterful Blitz"
  tactic_masterful_blitz_ger:0 "Masterful Blitz"
+ tactic_smoke_and_fire:0 "Gas Attack"
+ smoke_and_fire:0 "Gas Attack"
+ Panzerschreck_at:0 "Panzerschrek"
 
  #Modifier Text
 
@@ -326,6 +333,8 @@
 
  #TT
 
+ GER_hitler_is_gone_tt:0 "Unlocked by Events or Death of Fuhrer"
+
  trotsky_dead:0 "Trotsky has been killed by agents"
 
  GER_civil_war_end:0 "German Civil War Ended"
@@ -337,6 +346,8 @@
  GER_BLOCKED_TOTAL_WAR:0 "Blocked from Using Total War Without Focus or Civil War."
 
  GER_west_wall_forts_2:0 "Add §Y24 Land Forts§! on the French border.\n"
+
+ GER_SS_focus_recruit:0 "\nAllow the recruitment of §Yforeign SS divisions§!.\n"
 
  GER_hide_mil_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HDockyard §!And §HMilitary §!Factory Output§!: §G+5%§!"
 
@@ -363,13 +374,14 @@
  GER_req_our_advance_tt:0 "§YFocus§! Unlocks Based on Our §RMission§! Success"
 
  GER_rhineland_problem:0 "Focus Auto-Complate After Our Approach of §RRemilitarization of Rhineland§!"
- GER_Rhineland_demilitarized:0 "Rhineland Problem"
- GER_Rhineland_demilitarized_desc:0 "It's Time To Fix This Humiliation Made To Our Country..."
+ GER_Rhineland_demilitarized:0 "Remilitarization of Rhineland"
+ GER_Rhineland_demilitarized_desc:0 "After the Nazi regime took power in January 1933, Germany began working towards rearmament and the remilitarization of the Rhineland."
  GER_Rhineland_demilitarized_a:0 "§RRhineland§! Still Demilitarized"
  GER_Rhineland_demilitarized_b:0 "§RMoselland§! Still Demilitarized"
  GER_Rhineland_demilitarized_e:0 "§RBaden§! Still Demilitarized"
  GER_Rhineland_demilitarized_c:0 "Militarize §RRhineland§!"
  GER_Rhineland_demilitarized_d:0 "Let's Test the French Response"
+ GER_Rhineland_demilitarized_back:0 "We Must Back Down"
  GER_communism_near_me:0 "Any Neighbor Country Ruled by Communism"
  GER_fascism_is_wrong:0 "Failure in Attempt of Militarize Rhineland"
  GER_experts_in_field_tt:0 "Unlocks §RGebirgsjager§! and §RFallschirmjager§! Special Units."
@@ -461,6 +473,8 @@
  eva_braun_trait_health:0 "Ministry of Health"
  eva_braun_trait_eco:0 "NSDAP Bugdet Manager"
  eva_braun_trait_fasicm_moment:0 "Women's Movement"
+ not_supported_us:0 "Not Supported us"
+ supported_us:0 "Supported us"
 
  #Expanding Axis to Glory right?
  expand_faction_to_eu:0 "Expanding Faction to Europe"
@@ -468,7 +482,6 @@
  expand_faction_to_balkans:0 "Expanding Faction to Balkans"
  expand_faction_to_middle_east:0 "Expanding Faction to Middle East"
  expand_faction_to_asia:0 "Expanding Faction to Asia"
- 
 
  german_Fuhrer_tt:0 "Changes The National Focus Tree To §YRhineland§!"
  german_kaiser_tt:0 "Changes The National Focus Tree To §YOppose Hitler§!"
@@ -567,6 +580,38 @@
  GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with "Blitzkrieg"."
 
  #Focus And Others
+
+ #Hitler is Gone
+ GER_hitler_is_gone:0 "[Root.StateofFuhrer]"
+ GER_hitler_is_gone1:0 "Adolf Hitler is Gone"
+ GER_hitler_is_dead:0 "Adolf Hitler is Assassinated"
+ GER_hitler_is_retired:0 "Adolf Hitler is retired"
+ GER_hitler_is_gone_desc:0 ""
+
+ GER_The_Last_Tiger_Ace:0 "Last Tiger Ace"
+ GER_The_Last_Tiger_Ace_desc:0 ""
+ GER_new_anti_tanks:0 "New Anti-Tank Weapons"
+ GER_new_anti_tanks_desc:0 ""
+ GER_SS_Field_Medic:0 "Field Medic"
+ GER_SS_Field_Medic_desc:0 ""
+ GER_SS_Smoke_and_Fire:0 "Smoke and Fire"
+ GER_SS_Smoke_and_Fire_desc:0 ""
+ GER_SS_For_The_Fatherland:0 "For The Fatherland"
+ GER_SS_For_The_Fatherland_desc:0 ""
+ GER_SS_Trops:0 "Reorganize SS Trops"
+ GER_SS_Trops_desc:0 ""
+ GER_SS_Teror_Doctrine:0 "SS Teror Doctrine"
+ GER_SS_Teror_Doctrine_desc:0 ""
+ GER_SS_Search_and_Destroy:0 "SS Search and Destroy"
+ GER_SS_Search_and_Destroy_desc:0 ""
+ GER_reorganize_party:0 "Reorganize Party"
+ GER_reorganize_party_desc:0 ""
+ GER_purge_party:0 "Purge Party"
+ GER_purge_party_desc:0 ""
+ GER_Power_hermann_goring:0 "Power Hermann Goring"
+ GER_Power_hermann_goring_desc:0 ""
+ GER_Power_Heinrich_Himmler:0 "Power Heinrich Himmler"
+ GER_Power_Heinrich_Himmler_desc:0 ""
  GER_danubian_membership_com:0 "Danubian Revolution"
  GER_danubian_membership_com_desc:0 ""
  GER_low_countries_com:0 "Low Countries Revolution"
@@ -965,7 +1010,7 @@
  GER_Afrika_Corps_Follow_Italy_desc:0 ""
  GER_Set_HQ_in_front:0 "[Root.GetAfricacorpsfront]"
  GER_Set_HQ_in_front_desc:0 ""
- GER_Set_HQ_in_front_1:0 "Create HQ in ITA-GER Front"
+ GER_Set_HQ_in_front_1:0 "Create HQ in Africa Front"
  GER_Set_HQ_in_front_1_desc:0 ""
  GER_Set_HQ_in_ETH_front:0 "Create HQ in Ethiopia"
  GER_Set_HQ_in_ETH_front_desc:0 ""
@@ -973,7 +1018,7 @@
  GER_Set_HQ_in_LIB_front_desc:0 ""
  GER_Planned_Offense:0 "Planned Offensive"
  GER_Planned_Offense_desc:0 ""
- GER_africa_front_war_logistics1:0 "War Logistics in ITA-GER Front"
+ GER_africa_front_war_logistics1:0 "War Logistics in Africa Front"
  GER_africa_front_war_logistics1_desc:0 ""
  GER_africa_front_war_logistics:0 "[Root.GetAfricacorpsfrontlogistics]"
  GER_africa_front_war_logistics_desc:0 ""
@@ -1163,6 +1208,22 @@
  GER_Cheep_sup_tt:0 "§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_cheep_eq_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_mix_eq_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
+
+# SS
+
+ SS_forces_dynamic_modifier:0 "Schutzstaffel Forces"
+ SS_forces_1_dynamic_modifier:0 "Schutzstaffel Forces"
+ GER_SS_Soldiers_tt:0 "Modify §Y$SS_forces_dynamic_modifier$§! by"
+
+ GER_SS_Search_modify_tt:0 "$GER_SS_Soldiers_tt$ \n£recon_texticon Recon Factor §Y+5.0%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n\n"
+ GER_SS_Field_modify_tt:0 "$GER_SS_Soldiers_tt$ \n£trickleback_texticon Field Hospital Trickleback: §G+20%§!\n£experience_loss_texticon Exp. Loss Factor: §G-20%§!! \n\n"
+ GER_SS_Teror_tt:0 "$GER_SS_Soldiers_tt$ \n£army_morale_texticon Army Morale: §G+10%§!\n£attack_air_texticon Ground Support Factor: §G+10%§!! \n\n"
+ GER_SS_fatherland_tt:0 "$GER_SS_Soldiers_tt$ \n£pocket_texticon Encirclement Penalty: §G-10%§! \n\n"
+ GER_SS_unlock_anti_wepon_tt:0 "Which Grants; \nAll Infantry & Mot/Mech: \n£hard_attack_texticon Hard Attack: §G+10%§! \n£piercing_texticon Piercing: §G+50%§! \n\n"
+
+ GER_SS_Field_Medic_tech:0 "SS Field Hospital"
+ GER_unlock_ss_soldier:0 "Unlocks Schutzstaffel Trops"
+ GER_SS_Field_Medic_tt:2 "Field Hospital Trickleback: §G+20%§!\nExp. Loss Factor: §G-20%§!"
 
  #Luftwaffe
 

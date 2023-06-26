@@ -2090,6 +2090,36 @@ technologies = {
 		}
 	}
 
+	Panzerschreck_at = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1940
+
+		category_all_infantry = {
+			hard_attack = 0.10
+			ap_attack = 0.5
+		}
+
+	}
+
+	Schutzstaffel_infantry_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			Schutzstaffel_infantry
+		}
+	}
+
 	######### FROM SOVIET FOCUS ##########
 	penal_infantry = {
 		

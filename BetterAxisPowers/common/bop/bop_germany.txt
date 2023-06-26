@@ -96,6 +96,7 @@ GER_power_balance = {
 					custom_effect_tooltip = GER_Fuhrer_Deposed_tt
 					hidden_effect = {
 						country_event = ger_fuhrer_end.1
+						set_global_flag = Adolf_retired
 					}
 				}
 			}

@@ -31,6 +31,15 @@ characters={
 		}
 	}
 
+	GER_michael_wittmann={
+		name=GER_michael_wittmann
+		portraits={
+			civilian={
+				large=GFX_portrait_Michael_Wittmann
+			}
+		}
+	}
+
 	GER_Com_Civilwar={
 		name=GER_Com_Civilwar
 		portraits={
@@ -1670,7 +1679,8 @@ characters={
 						tooltip = GER_Kaiser_in_Country_tt
 						has_country_flag = GER_Kaiser_in_Country
 					}
-				   }
+				}
+				has_completed_focus = GER_fascism_for_our_glory
 				if = {
 					limit = {
 						has_dlc = "Man the Guns"
@@ -1752,9 +1762,6 @@ characters={
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
-			}
-			on_add = {
-				custom_effect_tooltip = GER_SS_himmler_recruit
 			}
 			traits = {
 				prince_of_terror 

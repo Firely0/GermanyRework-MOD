@@ -1097,3 +1097,34 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 
 }
 
+SS_forces_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ger_ss_army
+
+	#SS Search and Destroy
+	coordination_bonus = GER_SS_coordination_bonus # 0.05
+	recon_factor = GER_SS_recon_factor # 0.05
+	#Custom Effect Tooltip 
+
+	#SS Teror Doctrine
+	army_morale_factor = GER_SS_army_morale_factor # 0.1
+	air_cas_present_factor = GER_SS_air_cas_present_factor # 0.1
+	pocket_penalty = GER_SS_pocket_penalty # -0.1
+
+}
+
+SS_forces_1_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ger_ss_army
+
+	#SS Search and Destroy
+	coordination_bonus = GER_SS_coordination_bonus # 0.05
+	recon_factor = GER_SS_recon_factor # 0.05
+	custom_modifier_tooltip = GER_SS_Field_Medic_tt
+
+}
+
+
+

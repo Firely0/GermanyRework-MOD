@@ -740,8 +740,25 @@ GER_upgrade_wehrmacht_effect = {
 				add_idea = WehrmachtWarPlanb_h
 			}
 		}
-		# Fake update to get the other ones in the correct place
-		# Airforce
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+			add_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+				has_completed_focus = GER_SS_Search_and_Destroy
+			}
+			remove_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+			add_dynamic_modifier = { modifier = SS_forces_1_dynamic_modifier }
+		}
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
@@ -904,8 +921,6 @@ GER_upgrade_luftwaffe_effect = {
 				add_idea = Luftwaffe_OI_IMP
 			}
 		}
-		# Fake update to get the other ones in the correct place
-		# Navy
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
@@ -996,7 +1011,7 @@ GER_upgrade_kriegsmarine_idea_effect = {
 		if = {
 			limit = {
 				has_idea = Kriegsmarine_buff_Version_No_Carrier
-				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				has_completed_focus = GER_carrier_war
 			}
 			swap_ideas = {
 				remove_idea = Kriegsmarine_buff_Version_No_Carrier
@@ -1119,7 +1134,7 @@ GER_isolate_effect = {
 			 tag = GER 
 			}
 			NOT = { 
-			 tag = AUS 
+				tag = FRA 
 			}
 			AND = {
 			 bordering_country = GER
@@ -1498,6 +1513,68 @@ GER_Give_fascism_effect = {
 			}
 			set_nationality = event_target:fascist_germany_civil_war
 		}
+	}
+}
+
+GER_last_tiger_ace_effect = {
+	division_template = {
+		name = "SS Heavy Panzer Battalion"
+		is_locked = yes
+		priority = 0
+		regiments = {
+			heavy_armor = { x = 0 y = 0 }
+			heavy_armor = { x = 0 y = 1 }
+			heavy_armor = { x = 0 y = 2 }
+			heavy_armor = { x = 0 y = 3 }
+			heavy_armor = { x = 0 y = 4 }
+			heavy_armor = { x = 1 y = 0 }
+			heavy_armor = { x = 1 y = 1 }
+			heavy_armor= { x = 1 y = 2 }
+			heavy_armor = { x = 1 y = 3 }
+			heavy_armor = { x = 1 y = 4 }
+			heavy_armor = { x = 2 y = 0 }
+			heavy_armor = { x = 2 y = 1 }
+			heavy_armor= { x = 2 y = 2 }
+			heavy_armor = { x = 2 y = 3 }
+			heavy_armor = { x = 2 y = 4 }
+			mechanized = { x = 3 y = 0 }
+			mechanized = { x = 3 y = 1 }
+			mechanized= { x = 3 y = 2 }
+			mechanized = { x = 3 y = 3 }
+			mechanized = { x = 3 y = 4 }
+			heavy_armor = { x = 4 y = 0 }
+			heavy_armor = { x = 4 y = 1 }
+		}
+		support = {
+			armored_car_recon = { x = 0 y = 0 }
+			logistics_company = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+			engineer = { x = 0 y = 3 }
+		}
+	}	
+	64 = {
+		create_unit = {
+			division = "name = \"101st SS Heavy Panzer Division\" division_template = \"SS Heavy Panzer Battalion\" start_experience_factor = 1.0 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+			owner = GER
+		}
+	}
+	random_country_division = {
+		limit = {
+			OR = {
+				division_has_battalion_in_template = heavy_armor
+			}
+			division_has_battalion_in_template = mechanized
+			is_unit_template_reserves = no
+			unit_strength > 0.5
+		}
+		add_history_entry = {
+			key = "This unit has been recognised as an Ace panzer division."
+			subject = "Division Honor"
+			allow = yes
+		}
+		add_unit_medal_to_latest_entry = {
+			unit_medals = knights_cross_oak_leaves
+		}										
 	}
 }
 
