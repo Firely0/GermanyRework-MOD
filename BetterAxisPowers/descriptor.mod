@@ -6,5 +6,5 @@ tags={
 	"Historical"
 }
 name="Better Axis Powers"
-supported_version="1.12.11"
+supported_version="1.12.12"
 remote_file_id="2904370119"

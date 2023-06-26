@@ -729,19 +729,36 @@ GER_upgrade_wehrmacht_effect = {
 		if = {
 			limit = {
 				has_dynamic_modifier = {
-					modifier = Wehrmacht_INF_2_dynamic_modifier
+					modifier = Wehrmacht_INF_3_dynamic_modifier
 				}
 				has_completed_focus = GER_Cheap_SUP
 			}
-			remove_dynamic_modifier = { modifier = Wehrmacht_INF_2_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = Wehrmacht_INF_3_dynamic_modifier }
 			add_dynamic_modifier = { modifier = Wehrmacht_INF_4_dynamic_modifier }
 			swap_ideas = {
-				remove_idea = Wehrmacht_Main_inf_1
+				remove_idea = WehrmachtWarPlana_h
 				add_idea = WehrmachtWarPlanb_h
 			}
 		}
-		# Fake update to get the other ones in the correct place
-		# Airforce
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+			add_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+				has_completed_focus = GER_SS_Search_and_Destroy
+			}
+			remove_dynamic_modifier = { modifier = SS_forces_dynamic_modifier }
+			add_dynamic_modifier = { modifier = SS_forces_1_dynamic_modifier }
+		}
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = Luftwaffe_dynamic_modifier }
@@ -904,8 +921,6 @@ GER_upgrade_luftwaffe_effect = {
 				add_idea = Luftwaffe_OI_IMP
 			}
 		}
-		# Fake update to get the other ones in the correct place
-		# Navy
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = Kriegsmarine_dynamic_modifier }
@@ -996,7 +1011,7 @@ GER_upgrade_kriegsmarine_idea_effect = {
 		if = {
 			limit = {
 				has_idea = Kriegsmarine_buff_Version_No_Carrier
-				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				has_completed_focus = GER_carrier_war
 			}
 			swap_ideas = {
 				remove_idea = Kriegsmarine_buff_Version_No_Carrier
@@ -1020,7 +1035,7 @@ GER_Lands_in_Soviet = {
 		limit = { 
 			has_state_flag = GER_Claim_lands
 			is_controlled_by_ROOT_or_ally = yes
-		} 
+		}
 		transfer_state_to = GER
 	}
 }
@@ -1028,7 +1043,6 @@ GER_Lands_in_Soviet = {
 JAP_Lands_in_Soviet = {
 	if = {
 		limit = {
-			has_country_flag = GER_SOV_JAP_Demanded
 			408 = { is_owned_by = SOV }
 			409 = { is_owned_by = SOV }
 			655 = { is_owned_by = SOV }
@@ -1051,7 +1065,6 @@ JAP_Lands_in_Soviet = {
 ROM_Lands_in_Soviet = {
 	if = {
 		limit = {
-			has_country_flag = GER_SOV_ROM_Demanded
 			80 = { is_owned_by = SOV }
 			78 = { is_owned_by = SOV }
 			766 = { is_owned_by = SOV }
@@ -1073,7 +1086,6 @@ ROM_Lands_in_Soviet = {
 FIN_Lands_in_Soviet = {
 	if = {
 		limit = {
-			has_country_flag = GER_SOV_FIN_Demanded
 			146 = { is_owned_by = SOV }
 			147 = { is_owned_by = SOV }
 			722 = { is_owned_by = SOV }
@@ -1095,7 +1107,6 @@ FIN_Lands_in_Soviet = {
 TUR_Lands_in_Soviet = {
 	if = {
 		limit = {
-			has_country_flag = GER_SOV_TUR_Demanded
 			231 = { is_owned_by = SOV }
 			229 = { is_owned_by = SOV }
 			230 = { is_owned_by = SOV }
@@ -1123,7 +1134,7 @@ GER_isolate_effect = {
 			 tag = GER 
 			}
 			NOT = { 
-			 tag = AUS 
+				tag = FRA 
 			}
 			AND = {
 			 bordering_country = GER
@@ -1174,12 +1185,273 @@ GER_SOV_white_peace_check = {
 	}
 }
 
-GER_Give_fascism_effect = {
-	random_other_country = {
-		limit = {
-			original_tag = GER
-			has_government = fascism
+GER_AUS_annex = {
+	4 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
 		}
+	}
+	152 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	153 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	848 = {
+		if = {
+			limit = { is_owned_by = AUS }
+			add_core_of = GER
+		}
+	}
+	AUS = {
+		every_unit_leader = {
+			set_nationality = GER
+		}
+	}
+	annex_country = { target = AUS transfer_troops = yes }
+	add_political_power = 75
+	set_country_flag = AUS_annexed
+	add_war_support = 0.1
+	add_stability = 0.05
+}
+
+GER_give_krupp_state = {
+	if = {
+		limit = {
+			has_country_flag = GER_krupp_ph_2
+			has_idea = free_trade
+			NOT = { has_country_flag = GER_krupp_2_ended }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					State = 42
+					state = 51
+					state = 60
+					state = 63
+					state = 65
+					state = 66
+					state = 67
+				} 
+			}
+			add_dynamic_modifier = {
+				modifier = Krupp_PH2_FREETRADE_modifier
+				scope = GER
+				days = 365
+			}
+		}
+		set_variable = { GER_KRUPP_PHASE_TIME = 730 }
+		activate_mission = Krupp_End_of_Agreements
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_krupp_ph_2
+			NOT = { has_idea = free_trade }
+			NOT = { has_country_flag = GER_krupp_2_ended }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					State = 42
+					state = 51
+					state = 60
+					state = 63
+					state = 65
+					state = 66
+					state = 67
+				} 
+			}
+			add_dynamic_modifier = {
+				modifier = Krupp_PH2_modifier
+				scope = GER
+				days = 730
+			}
+		}
+		set_variable = { GER_KRUPP_PHASE_TIME = 730 }
+		activate_mission = Krupp_End_of_Agreements
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_krupp_2_ended
+		}
+		every_state = {
+			limit = {
+				OR = {
+					State = 42
+					state = 51
+					state = 60
+					state = 63
+					state = 65
+					state = 66
+					state = 67
+				} 
+			}
+			add_dynamic_modifier = {
+				modifier = Krupp_PH3_modifier
+				scope = GER
+			}
+		}
+		set_country_flag = GER_krupp_final
+	}
+}
+
+GER_krupp_next_ph = {
+	if = {
+		limit = {
+			has_country_flag = GER_krupp_ph_starter
+			NOT	= { has_country_flag = GER_krupp_ph_2 }
+			NOT = { has_country_flag = GER_kupp_ph2_given }
+		}
+		clr_country_flag = GER_krupp_ph_starter
+		set_country_flag = GER_kupp_ph2_given
+		set_country_flag = GER_krupp_ph_2
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = GER_krupp_ph_starter }
+			NOT = { has_country_flag = GER_krupp_ph_2 }
+			has_country_flag = GER_kupp_ph2_given 
+		}
+		set_country_flag = GER_krupp_2_ended
+	}
+}
+
+GER_AI_EQ = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 20000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 3500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 3500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = 3500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 4000
+			producer = GER
+		}
+	}
+}
+
+GER_AI_DIV = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		division_template = {
+			name = "Panzer Division"
+			is_locked = no
+			priority = 0
+			regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor= { x = 0 y = 2 }
+				medium_armor = { x = 0 y = 3 }
+				medium_armor = { x = 0 y = 4 }
+				medium_armor = { x = 1 y = 0 }
+				medium_armor = { x = 1 y = 1 }
+				medium_armor= { x = 1 y = 2 }
+				medium_armor = { x = 1 y = 3 }
+				medium_armor = { x = 1 y = 4 }
+				medium_armor = { x = 2 y = 0 }
+				medium_armor = { x = 2 y = 1 }
+				medium_armor= { x = 2 y = 2 }
+				medium_armor = { x = 2 y = 3 }
+				medium_tank_destroyer_brigade = { x = 2 y = 4 }
+				mechanized = { x = 3 y = 0 }
+				mechanized = { x = 3 y = 1 }
+				mechanized= { x = 3 y = 2 }
+				mechanized = { x = 3 y = 3 }
+				mechanized = { x = 3 y = 4 }
+				medium_armor = { x = 4 y = 0 }
+				medium_armor = { x = 4 y = 1 }
+			}
+			support = {
+				medium_flame_tank = { x = 0 y = 0 }
+				armored_car_recon = { x = 0 y = 1 }
+				logistics_company = { x = 0 y = 2 }
+				signal_company = { x = 0 y = 3 }
+				engineer = { x = 0 y = 4 }
+			}
+		}
+		set_technology = { tech_engineers2 = 1 popup = no }
+		set_technology = { tech_signal_company = 1 popup = no }
+		set_technology = { mechanised_infantry = 1 popup = no }
+		create_equipment_variant = {
+			name = "Flammpanzer III Ausf. M"
+			type = medium_tank_flame_chassis_2
+			parent_version = 0
+			allow_without_tech = yes
+			modules = {
+			main_armament_slot = flamethrower
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 11
+			}
+			icon = "GFX_GER_medium_BAB"
+			model = "GER_medium_armor_0_entity"
+		}
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = TAG_new_railway_gun
+			location = 6521
+		}
+		64 = {
+			create_unit = {
+				division = "name = \"Panzer Division\" division_template = \"Panzer Division\" start_experience_factor = 1.0"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Panzer Division 2\" division_template = \"Panzer Division\" start_experience_factor = 1.0"
+				owner = GER
+			}
+		}
+	}
+}
+
+GER_Give_fascism_effect = {
+		load_focus_tree = {
+			tree = german_fuhrer_better
+			keep_completed = yes
+		}
+		uncomplete_national_focus = {
+			focus = GER_against_fuhrer
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+		unlock_national_focus = GER_rhineland_demilitarized
+		complete_national_focus = GER_establish_abwehr
+		complete_national_focus = GER_Fuhrer
+		set_cosmetic_tag = GER_the_third_reich
+		set_country_flag = COM_SIDE_FASCISM
 		save_event_target_as = fascist_germany_civil_war
 		every_unit_leader = {
 			set_nationality = GER
@@ -1229,13 +1501,6 @@ GER_Give_fascism_effect = {
 		add_dynamic_modifier = {
 			modifier = Kriegsmarine_dynamic_modifier
 		}
-		load_focus_tree = {
-			tree = german_fuhrer_better
-			keep_completed = yes
-		}
-		complete_national_focus = GER_establish_abwehr
-		complete_national_focus = GER_Fuhrer
-	}
 	GER = {
 		every_unit_leader = {
 			limit = {
@@ -1248,6 +1513,68 @@ GER_Give_fascism_effect = {
 			}
 			set_nationality = event_target:fascist_germany_civil_war
 		}
+	}
+}
+
+GER_last_tiger_ace_effect = {
+	division_template = {
+		name = "SS Heavy Panzer Battalion"
+		is_locked = yes
+		priority = 0
+		regiments = {
+			heavy_armor = { x = 0 y = 0 }
+			heavy_armor = { x = 0 y = 1 }
+			heavy_armor = { x = 0 y = 2 }
+			heavy_armor = { x = 0 y = 3 }
+			heavy_armor = { x = 0 y = 4 }
+			heavy_armor = { x = 1 y = 0 }
+			heavy_armor = { x = 1 y = 1 }
+			heavy_armor= { x = 1 y = 2 }
+			heavy_armor = { x = 1 y = 3 }
+			heavy_armor = { x = 1 y = 4 }
+			heavy_armor = { x = 2 y = 0 }
+			heavy_armor = { x = 2 y = 1 }
+			heavy_armor= { x = 2 y = 2 }
+			heavy_armor = { x = 2 y = 3 }
+			heavy_armor = { x = 2 y = 4 }
+			mechanized = { x = 3 y = 0 }
+			mechanized = { x = 3 y = 1 }
+			mechanized= { x = 3 y = 2 }
+			mechanized = { x = 3 y = 3 }
+			mechanized = { x = 3 y = 4 }
+			heavy_armor = { x = 4 y = 0 }
+			heavy_armor = { x = 4 y = 1 }
+		}
+		support = {
+			armored_car_recon = { x = 0 y = 0 }
+			logistics_company = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+			engineer = { x = 0 y = 3 }
+		}
+	}	
+	64 = {
+		create_unit = {
+			division = "name = \"101st SS Heavy Panzer Division\" division_template = \"SS Heavy Panzer Battalion\" start_experience_factor = 1.0 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+			owner = GER
+		}
+	}
+	random_country_division = {
+		limit = {
+			OR = {
+				division_has_battalion_in_template = heavy_armor
+			}
+			division_has_battalion_in_template = mechanized
+			is_unit_template_reserves = no
+			unit_strength > 0.5
+		}
+		add_history_entry = {
+			key = "This unit has been recognised as an Ace panzer division."
+			subject = "Division Honor"
+			allow = yes
+		}
+		add_unit_medal_to_latest_entry = {
+			unit_medals = knights_cross_oak_leaves
+		}										
 	}
 }
 

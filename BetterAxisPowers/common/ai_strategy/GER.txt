@@ -478,6 +478,12 @@ danzig_of_war_preparation = {
 		id = "POL"
 		value = 100
 	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = POL
+		value = 100
+	}
 }
 
 dont_die_in_mountains = {
@@ -513,7 +519,7 @@ war_with_soviets = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_ussr_war_goalV
+		has_completed_focus = GER_ussr_war_goal
 		country_exists = SOV
 	}
 	abort = {
@@ -533,7 +539,7 @@ soviet_ally = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_soviet_allyV
+		has_completed_focus = GER_soviet_ally
 		country_exists = SOV
 	}
 	abort = {
@@ -1221,13 +1227,13 @@ GER_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = suez
-		value = 30
+		value = 40
 	}
 
 	ai_strategy = {
 		type = area_priority
 		id = africa
-		value = -70
+		value = 40
 	}
 
 	ai_strategy = {
@@ -1348,42 +1354,6 @@ invading_france_is_pointless_because_we_go_through_benelux_soon = {
 		type = invade
 		id = "POL"
 		value = -500
-	}
-}
-
-worry_about_barbarossa_before_africa = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		country_exists = SOV
-		NOT = {	is_in_faction_with = SOV }
-		has_war_with = ENG
-		is_historical_focus_on = yes
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = -30
-	}
-	ai_strategy = {
-		type = area_priority
-		id = suez
-		value = -30
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = horn_of_africa
-		value = -200
-	}
-	ai_strategy = {
-		type = front_unit_request
-		area = horn_of_africa
-		value = -50
 	}
 }
 
@@ -2170,43 +2140,6 @@ GER_around_the_maginot = {
 
 }
 
-
-# lets not invade until we have europe
-GER_dont_invade_until_FRA_falls = {
-	allowed = {
-		original_tag = GER
-		is_historical_focus_on = yes
-	}
-
-	enable = {
-		date < 1941.3.1
-		FRA = {
-			has_capitulated = no
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = invasion_unit_request
-		country_trigger = { always = yes }
-
-		value = -100
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-
-		# norway
-		state = 110
-		state = 142
-		state = 143
-		state = 144
-
-		value = -100
-	}
-}
-
 GER_have_some_train_production = {
 	allowed = {
 		original_tag = GER
@@ -2444,10 +2377,10 @@ GER_tanks_in_the_snow = {
 	enable = {
 		OR = {
 			focus_progress = {
-				focus = GER_ussr_war_goalV
+				focus = GER_ussr_war_goal
 				progress > 0.01
 			}
-			has_completed_focus = GER_ussr_war_goalV
+			has_completed_focus = GER_ussr_war_goal
 		}
 	}
 
@@ -2522,100 +2455,6 @@ GER_abandon_ship = {
 		tag = SOV
 
 		value = -40
-	}
-
-}
-
-GER_blitzkrieg_russia_hard  = { #STEINER, IT IS NOT TIME YET
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		date < 1942.8.1
-		date > 1941.7.1
-		has_war_with = SOV
-		OR = {
-			has_idea = GER_barbarossa
-			SOV = { has_idea = SOV_desperate_measures_ns }
-		}
-		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-
-		tag = SOV
-
-		ratio = 0.5
-
-		priority = 100
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 39 #Strategic Region ID - Eastern Poland
-		value = 20000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130 #Strategic Region ID - Ukraine
-		value = 20000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-}
-
-GER_blitzkrieg_russia_soft  = { #Rolling incursions
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		#always = no #This isn't great
-		date < 1942.4.1 #To space!
-		date > 1941.8.1
-		has_war_with = SOV
-		OR = {
-			has_idea = GER_barbarossa
-			SOV = { has_idea = SOV_desperate_measures_ns }
-		}
-		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
-		set_temp_variable = { days = global.num_days }
-		modulo_temp_variable = { days = 40 }
-		check_variable = { days < 20 }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-
-		tag = SOV
-
-		ratio = 0.5
-
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 39 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
 	}
 
 }

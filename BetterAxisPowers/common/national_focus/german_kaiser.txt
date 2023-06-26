@@ -18,6 +18,8 @@ focus_tree = {
 		}
 	}
 
+	continuous_focus_position = { x = 20 y = 2000 }
+
 	default = no
 
 	shared_focus = GER_four_year_plan_a	
@@ -25,17 +27,18 @@ focus_tree = {
 	shared_focus = GER_air_innovation_a
 	shared_focus = GER_naval_rearmament_a
 	shared_focus = GER_army_innovation_a
+	shared_focus = GER_west_wall
 
     focus = {
 		id = GER_oppose_hitler_a
-		icon = GFX_focus_ger_oppose_hitler
+		icon = GFX_goal_Volkssturm
 		text = GER_oppose_hitler
 
 		available = {
 			is_subject = no
 			has_government = fascism
 		}
-		x = 30
+		x = 40
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -57,18 +60,21 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = GER_oppose_hitler_civil_war
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			add_political_power = 120
-			add_named_threat = { threat = 5 name = GER_oppose_hitler }
 			country_event = { id = wtt_germany.1 }
+			custom_effect_tooltip = GER_oppose_hitler_civil_war
+			add_named_threat = { threat = 5 name = GER_oppose_hitler }
+			hidden_effect = {
+				42 = { set_demilitarized_zone = no }
+				51 = { set_demilitarized_zone = no }
+				909 = { set_demilitarized_zone = no }
+				add_political_power = 150
+			}
 		}
 	}
 
 	focus = {
 		id = GER_secure_the_new_state
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_GER_secure_the_new_state
 		prerequisite = { focus = GER_oppose_hitler_a }
 		available = {
 			is_subject = no
@@ -130,7 +136,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rebuild_the_nation
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_GER_hammer
 		prerequisite = { focus = GER_revive_the_kaiserreich focus = GER_reestablish_free_elections }
 		available = {
 		}
@@ -290,7 +296,7 @@ focus_tree = {
 			has_country_flag = GER_mackensen_dead
 			NOT = { has_government = democratic }
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich
 		cost = 10
@@ -303,6 +309,9 @@ focus_tree = {
 			HOL = {
 				country_event = { id = wtt_germany.3 }
 			}
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -314,7 +323,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = -7
+		x = -8
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser
 		cost = 10
@@ -530,8 +539,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_revive_september_plan
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
+		available = {
+			has_government = neutrality
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_break_the_anglo_french_colonial_hegemony
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_september_plan_tt
+		}
+	}
+
+	focus = {
 		id = GER_schlieffen_once_more # Schlieffen 2.0!
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SWI_fortify_border_with_france
 		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
 		available = {
 			is_subject = no
@@ -576,7 +605,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_central_powers
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_centralpowers
 		prerequisite = { focus = GER_our_place_in_the_sun }
 		available = {
 			is_subject = no
@@ -654,7 +683,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_prepare_italian_coup
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_GER_prepare_italian_coup
 		prerequisite = { focus = GER_the_central_powers }
 		available = {
 			is_subject = no
@@ -817,7 +846,7 @@ focus_tree = {
 			NOT = { has_war_with = FRA }
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser
 		cost = 10
@@ -903,7 +932,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ally_the_shade
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = GER_accept_british_naval_dominance }
 		available = {
 			is_subject = no
@@ -937,7 +966,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_carte_blanche_for_alsace_and_french_colonies
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_attack_france
 		prerequisite = { focus = GER_ally_the_shade }
 		will_lead_to_war_with = FRA
 		available = {
@@ -1047,7 +1076,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_see_to_the_eastern_front
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_LIT_New_Republic
 		prerequisite = { focus = GER_return_of_the_kaiser }
 		available = { 
 			is_subject = no
@@ -1182,7 +1211,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_safeguard_the_baltic
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_baltic_entente
 		prerequisite = { focus = GER_see_to_the_eastern_front }
 		available = {
 			is_subject = no
@@ -1430,7 +1459,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_anti_soviet_pact_unaligned
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_GER_anti_soviet_pact
 		prerequisite = { focus = GER_anti_comintern_pact_unaligned }
 		available = {
 			is_subject = no
@@ -1477,7 +1506,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_tackle_the_communist_threat
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_attack_soviet
 		prerequisite = { focus = GER_anti_soviet_pact_unaligned focus = GER_carte_blanche_for_alsace_and_french_colonies }
 		available = {
 			is_subject = no
@@ -1519,7 +1548,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_iberian_problem
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_communist_spain_focus
 		prerequisite = { focus = GER_tackle_the_communist_threat }
 		available = {
 			is_subject = no
@@ -1592,7 +1621,7 @@ focus_tree = {
 			democratic > 0.4
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_reestablish_free_elections
 		cost = 10
@@ -1607,6 +1636,7 @@ focus_tree = {
 			add_stability = 0.05
 			hidden_effect = {
 				set_cosmetic_tag = GER_german_monarchy
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -1815,7 +1845,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_danubian_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_danubian
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -1905,7 +1935,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_danubian_expansion
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_danubian_expand
 		prerequisite = { focus = GER_danubian_membership }
 		available = {
 			is_subject = no
@@ -1973,7 +2003,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_no_balkan_communism
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_generic_attack_communists_a
 		prerequisite = { focus = GER_danubian_expansion }
 		available = {
 			is_subject = no
@@ -2107,7 +2137,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_low_countries_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_benelux
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -2191,7 +2221,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_no_reds_in_western_europe
-		icon = GFX_goal_anti_comintern_pact
+		icon = GFX_goal_generic_attack_communists_a
 		prerequisite = { focus = GER_low_countries_membership }
 		available = {
 			is_subject = no
@@ -2325,7 +2355,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_scandinavian_membership
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_scandinavian_alliance
 		prerequisite = { focus = GER_central_european_alliance }
 		available = {
 			is_subject = no
@@ -2352,7 +2382,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = GER_central_european_alliance
 		cost = 10
@@ -2409,7 +2439,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_baltic_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_baltic
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
@@ -2456,7 +2486,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		x = -2
-		y = 2
+		y = 1
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
 		ai_will_do = {
@@ -2543,7 +2573,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_polish_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_Poland_befriend
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
@@ -2566,7 +2596,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
 		ai_will_do = {
@@ -2629,7 +2659,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_finnish_membership
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_invite_finland
 		prerequisite = { focus = GER_scandinavian_membership }
 		available = {
 			is_subject = no
@@ -2652,7 +2682,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = yes
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = GER_scandinavian_membership
 		cost = 10
 		ai_will_do = {
@@ -2767,7 +2797,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_the_monarchy_compromise
 		cost = 10
@@ -2788,7 +2818,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 		}
-		x = 7
+		x = 9
 		y = 1
 		relative_position_id = GER_central_european_alliance
 		cost = 10

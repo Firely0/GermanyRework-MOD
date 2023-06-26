@@ -420,7 +420,7 @@ tactic_blitz = {
 			has_trait = panzer_leader
 			skill_advantage > 1
 		}
-		OWNER = { NOT = { has_tech = masterful_blitz } } #Soviet improved version of blitz will replace this
+		OWNER = { NOT = { has_tech = masterful_blitz } NOT = { has_tech = masterful_blitz_GERV } }
 	}
 	
 	active = no
@@ -462,6 +462,7 @@ tactic_elastic_defense = { #counters blitz
 		factor = 4
 	}
 	picture = elastic_defence
+	countered_by = tactic_smoke_and_fire
 	
 	attacker_movement_speed = -0.25
 	attacker = -0.15
@@ -880,6 +881,43 @@ tactic_barrage = { #Superior firepower attacker tactic
 	defender = -0.2	
 }
 
+tactic_masterful_blitz = {
+	only_show_for = SOV
+	
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = panzer_leader
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+	
+	base =  { 
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = SOV_tank_desant_blitz
+	countered_by = tactic_elastic_defense
+	
+	attacker_movement_speed = 0.5
+	combat_width = 0.1
+	attacker = 0.2
+	defender = -0.2
+}
+
 tactic_masterful_blitz_ger = {
 	only_show_for = GER
 	
@@ -917,17 +955,15 @@ tactic_masterful_blitz_ger = {
 	defender = -0.2
 }
 
-tactic_masterful_blitz = {
-	only_show_for = SOV
+tactic_smoke_and_fire = {
+	only_show_for = GER
 	
 	is_attacker = yes
 	trigger = {
 		is_attacker = yes
-		hardness > 0.5
 		phase = no
 		OR = {
 			skill > 2
-			has_trait = panzer_leader
 			skill_advantage > 1
 		}
 	}
@@ -935,21 +971,12 @@ tactic_masterful_blitz = {
 	active = no
 	
 	base =  { 
-		factor = 4
-		modifier = {
-			add = 4
-			OR = {
-				has_trait = panzer_expert
-				has_trait = combined_arms_expert
-			}
-		}
+		factor = 1
 	}
 	
-	picture = SOV_tank_desant_blitz
-	countered_by = tactic_elastic_defense
+	picture = GER_smoke_and_fire
 	
-	attacker_movement_speed = 0.5
 	combat_width = 0.1
-	attacker = 0.2
+	attacker = 0
 	defender = -0.2
 }

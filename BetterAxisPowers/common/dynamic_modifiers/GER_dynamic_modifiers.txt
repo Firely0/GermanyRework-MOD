@@ -47,6 +47,49 @@ Germany_state_dynamic_modifier = {
 	
 }
 
+Krupp_PH1_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppx32
+
+	production_speed_industrial_complex_factor = 0.1
+	production_speed_infrastructure_factor = 0.1
+
+    repair_speed_industrial_complex_factor = 0.05
+	repair_speed_infrastructure_factor = 0.05
+	 
+}
+
+Krupp_PH2_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.1
+	production_speed_buildings_factor = 0.05
+	 
+}
+
+Krupp_PH2_FREETRADE_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.15
+	production_speed_buildings_factor = 0.1
+	 
+}
+
+Krupp_PH3_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kruppfreetradex32
+
+	local_resources_factor = 0.05
+	production_speed_buildings_factor = 0.05
+	 
+}
+
 Ger_non_vichy_state_dynamic_modifier = {
 	enable = { always = yes }
 
@@ -104,6 +147,15 @@ Rush_Suez_dynamic_modifier = {
 
 }
 
+Rush_Berlin_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_speed_factor = 0.05  
+
+}
+
 GER_Resupply_dynamic_modifier = {
 	enable = { always = yes }
 
@@ -140,6 +192,11 @@ Wehrmacht_dynamic_modifier = {
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -150,6 +207,11 @@ Wehrmacht_dynamic_modifier = {
 
 	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	org_loss_when_moving = GER_org_loss_when_moving # -0.1
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	
 	#the Blitzkrieg
@@ -165,6 +227,10 @@ Wehrmacht_dynamic_modifier = {
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
 	cas_damage_reduction = GER_cas_damage_reduction
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
 
 	#Supply - Used Later
 
@@ -205,6 +271,11 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	army_morale_factor = GER_army_morale_factor 
 	army_org_regain = GER_army_org_regain 
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -215,6 +286,11 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	org_loss_when_moving = GER_org_loss_when_moving # -0.05
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1	
 
 	#the Blitzkrieg
 	
@@ -229,6 +305,10 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat
 	cas_damage_reduction = GER_cas_damage_reduction
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
 
 	#So Our Plan is...?
 
@@ -266,6 +346,11 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 	
 		army_armor_speed_factor = GER_army_armor_speed_factor # 0.05
 		org_loss_when_moving = GER_org_loss_when_moving # -0.05
+
+	    #Experts in Field
+
+	    special_forces_cap = GER_special_forces # 0.15
+	    special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1		
 	
 		#the Blitzkrieg
 		
@@ -281,6 +366,11 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 	
 		army_morale_factor = GER_army_morale_factor
 		army_org_regain = GER_army_org_regain
+
+		industrial_capacity_factory = GER_industrial_capacity_factory
+
+		army_org_regain = GER_army_org_regain # 0
+		grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 			
 		#Volkssturm
 			
@@ -295,7 +385,7 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	 #Lighting Strike 
 
@@ -318,6 +408,11 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 		
 	 army_armor_speed_factor = GER_army_armor_speed_factor # 0.1
 	 org_loss_when_moving = GER_org_loss_when_moving # -0.1
+
+	 #Experts in Field
+
+	 special_forces_cap = GER_special_forces # 0.15
+	 special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 		
 	 #the Blitzkrieg
 			
@@ -333,6 +428,11 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 		
 	 army_morale_factor = GER_army_morale_factor 
 	 army_org_regain = GER_army_org_regain 
+
+	 industrial_capacity_factory = GER_industrial_capacity_factory
+
+	 army_org_regain = GER_army_org_regain # 0
+	 grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 				
 	 #Volkssturm
 				
@@ -368,6 +468,15 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	cas_damage_reduction = GER_cas_damage_reduction # 0.05
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
 
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
+
 	#Supply - Used Later
 
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
@@ -384,6 +493,11 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -419,6 +533,15 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	cas_damage_reduction = GER_cas_damage_reduction # 0.05
 	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor
 
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1	
+
 	#Supply - Used Later
 
 	truck_attrition_factor = GER_truck_attrition_factor #-0.1
@@ -436,6 +559,11 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
@@ -449,7 +577,7 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 Wehrmacht_INF_2_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 
 	#We Have Plans Right?
@@ -469,7 +597,16 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -487,6 +624,11 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -501,7 +643,7 @@ Wehrmacht_INF_2_dynamic_modifier = {
 Wehrmacht_INF_3_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	#We Have Plans Right?
 
@@ -520,7 +662,16 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -538,6 +689,11 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
+
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
 
@@ -553,7 +709,7 @@ Wehrmacht_INF_3_dynamic_modifier = {
 Wehrmacht_INF_4_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_army
+	icon = GFX_idea_ger_army_1
 
 	#We Have Plans Right?
 
@@ -572,7 +728,16 @@ Wehrmacht_INF_4_dynamic_modifier = {
 
 	air_superiority_bonus_in_combat = GER_air_superiority_bonus_in_combat # 0.1
 	cas_damage_reduction = GER_cas_damage_reduction # 0.1
-	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor 0.2
+	railway_gun_bombardment_factor = GER_railway_gun_bombardment_factor #0.2
+
+	acclimatization_hot_climate_gain_factor = GER_acclimatization_hot_climate_gain_factor
+	acclimatization_cold_climate_gain_factor = GER_acclimatization_cold_climate_gain_factor
+	terrain_penalty_reduction = GER_terrain_penalty_reduction
+
+	#Experts in Field
+
+	special_forces_cap = GER_special_forces # 0.15
+	special_forces_training_time_factor = GER_special_forces_training_time_factor # 0.1
 
 	#Supply - Used Later
 
@@ -591,13 +756,18 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	army_morale_factor = GER_army_morale_factor # 0.03
 	army_org_regain = GER_army_org_regain # 0.03
 
+	industrial_capacity_factory = GER_industrial_capacity_factory
+
+	army_org_regain = GER_army_org_regain # 0
+	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
+
 	#Volkssturm
 
 	conscription = GER_volkssturm_conscription
 	conscription_factor = GER_volkssturm_conscription_factor
 	experience_gain_army_factor = GER_volkssturm_experience_gain_army_factor
 	
-	custom_modifier_tooltip = GER_Cheep_sup_tt
+	custom_modifier_tooltip = GER_mix_eq_tt
 	custom_modifier_tooltip = GER_wehrmacht_inf_3_tt #Armor -20 Cheeper Support EQ Focus
 
 }
@@ -621,7 +791,7 @@ Luftwaffe_dynamic_modifier = {
 Luftwaffe_SD_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
@@ -638,7 +808,7 @@ Luftwaffe_SD_dynamic_modifier = {
 Luftwaffe_SD_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
@@ -656,7 +826,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 Luftwaffe_SD_B_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
 	air_interception_detect_factor = 0.10
 	air_mission_efficiency = -0.05
@@ -673,7 +843,7 @@ Luftwaffe_SD_B_dynamic_modifier = {
 Luftwaffe_CAS_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -693,7 +863,7 @@ Luftwaffe_CAS_dynamic_modifier = {
 Luftwaffe_CAS_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -713,7 +883,7 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 Luftwaffe_OI_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -733,7 +903,7 @@ Luftwaffe_OI_dynamic_modifier = {
 Luftwaffe_OI_A_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_air
+	icon = GFX_idea_ger_air_1
 
     #Base
 
@@ -758,6 +928,8 @@ Kriegsmarine_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
 	#Plan Z
 
@@ -802,6 +974,8 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
+
 	#Plan Z
 
 	positioning = GER_positioning # 0.05
@@ -845,6 +1019,8 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
 
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
+
 	#Plan Z
 
 	positioning = GER_positioning # 0.05
@@ -879,7 +1055,7 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_ger_navy
+	icon = GFX_idea_ger_navy_1
 
     #Base
 
@@ -887,6 +1063,8 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05 
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+
+	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
 	#Plan Z
 
@@ -918,4 +1096,35 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	custom_modifier_tooltip = GER_Kriegsmarine_Glorygerarmyfocus_tt #equipment bonus
 
 }
+
+SS_forces_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ger_ss_army
+
+	#SS Search and Destroy
+	coordination_bonus = GER_SS_coordination_bonus # 0.05
+	recon_factor = GER_SS_recon_factor # 0.05
+	#Custom Effect Tooltip 
+
+	#SS Teror Doctrine
+	army_morale_factor = GER_SS_army_morale_factor # 0.1
+	air_cas_present_factor = GER_SS_air_cas_present_factor # 0.1
+	pocket_penalty = GER_SS_pocket_penalty # -0.1
+
+}
+
+SS_forces_1_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ger_ss_army
+
+	#SS Search and Destroy
+	coordination_bonus = GER_SS_coordination_bonus # 0.05
+	recon_factor = GER_SS_recon_factor # 0.05
+	custom_modifier_tooltip = GER_SS_Field_Medic_tt
+
+}
+
+
 

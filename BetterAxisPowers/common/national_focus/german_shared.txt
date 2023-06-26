@@ -1,9 +1,1726 @@
    
     continuous_focus_position = { x = 20 y = 2000 }
+
+	shared_focus = {
+		id = GER_west_wall
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = GER_prepare_for_war }
+		x = -30
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 8
+		}
+		available = {
+			has_full_control_of_state = 42
+			has_full_control_of_state = 909
+			42 = { is_demilitarized_zone = no }
+			909 = { is_demilitarized_zone = no }
+		}
+			
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = todt
+			add_ideas = Defense_Industry
+			custom_effect_tooltip = GER_west_wall_forts_2
+			909 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11640
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6712
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6542
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3530
+							instant_build = yes
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				42 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3558
+							instant_build = yes
+						}
+						
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 563
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11531
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9575
+							instant_build = yes
+						}
+					}
+				}
+			}			
+		}
+	}
+
+	shared_focus = {
+		id = GER_atlantikwall
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = GER_west_wall }
+		available = {
+			OR = {
+				FRA = { has_capitulated = yes }
+				NOT = { country_exists = FRA }
+			}
+			OR = {
+				has_full_control_of_state = 19
+				has_full_control_of_state = 23
+				has_full_control_of_state = 30
+				has_full_control_of_state = 14
+				has_full_control_of_state = 15
+				has_full_control_of_state = 29
+				has_full_control_of_state = 6
+				has_full_control_of_state = 7
+				has_full_control_of_state = 36
+				has_full_control_of_state = 99
+				has_full_control_of_state = 110
+				has_full_control_of_state = 142
+				has_full_control_of_state = 143
+				has_full_control_of_state = 144
+				has_full_control_of_state = 785
+			}
+		}
+		cancel_if_invalid = yes
+		x = 3
+		y = 1
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_west_wall }
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry_3
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry_3
+					add_idea = Defense_Industry_4
+				}
+			}
+			custom_effect_tooltip = atlantikwall_tooltip
+			custom_effect_tooltip = atlantikwall_tooltip_2
+			hidden_effect = {
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 19
+						}
+					}
+					19 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 23
+						}
+					}
+					23 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 30
+						}
+					}
+					30 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 14
+						}
+					}
+					14 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 15
+						}
+					}
+					15 = {
+						#Fortify naval bases a bit extra close to Calais
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 3
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 29
+						}
+					}
+					29 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+	
+						#Bonus Fortifications on Calais coastline
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 2
+            	    	    instant_build = yes
+            	    	}
+            	    	#Biggest fortifications on Calais itself
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_victory_point = yes
+            	    	    }
+            	    	    level = 3
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 6
+						}
+					}
+					6 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}	
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 7
+						}
+					}
+					7 = {
+						#Fortify naval bases a bit extra close to Calais
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 3
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}	
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 36
+						}
+					}	
+					36 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 56
+						}
+					}		
+					56 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 59
+						}
+					}		
+					59 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 58
+						}
+					}		
+					58 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 99
+						}
+					}		
+					99 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 110
+						}
+					}		
+					110 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 142
+						}
+					}		
+					142 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 143
+						}
+					}		
+					143 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 144
+						}
+					}		
+					144 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}
+				if = {
+					limit = {
+						any_country = {
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+							}
+							has_full_control_of_state = 785
+						}
+					}
+					785 = {
+						#Fortify naval bases
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+            	    	    type = coastal_bunker
+            	    	    province = {
+            	    	        all_provinces = yes
+            	    	        limit_to_coastal = yes
+            	    	    }
+            	    	    level = 1
+            	    	    instant_build = yes
+            	    	}
+					}
+				}	
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_ostwall
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = GER_west_wall }
+		available = {
+			any_country = {
+				OR = {
+					tag = GER
+					is_in_faction_with = GER
+				}
+				OR = {
+					has_full_control_of_state = 191
+					has_full_control_of_state = 209
+					has_full_control_of_state = 210
+					has_full_control_of_state = 207
+					has_full_control_of_state = 206
+					has_full_control_of_state = 204
+					has_full_control_of_state = 194
+					has_full_control_of_state = 202
+					has_full_control_of_state = 203
+					has_full_control_of_state = 226
+					has_full_control_of_state = 200
+				}
+			}
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_west_wall }
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry
+					add_idea = Defense_Industry_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = Defense_Industry_2
+				}
+				swap_ideas = {
+					remove_idea = Defense_Industry_2
+					add_idea = Defense_Industry_4
+				}
+			}
+			custom_effect_tooltip = GER_ostwall_forts
+			custom_effect_tooltip = GER_ostwall_forts_2
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 191 
+					}
+				}
+				hidden_effect = {
+					191 = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4640
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 209
+					}
+				}
+				hidden_effect = {
+					209 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 415
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3310
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 210 
+					}
+				}
+				hidden_effect = {
+					210 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3333
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11259
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9386
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 207 
+					}
+				}
+				hidden_effect = {
+					207 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 323
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11241
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11220
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3331
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 206 
+					}
+				}
+				hidden_effect = {
+					206 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9289
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3378
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 204 
+					}
+				}
+				hidden_effect = {
+					204 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6373
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 194 
+					}
+				}
+				hidden_effect = {
+					194 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6319
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9249
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3507
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 202 
+					}
+				}
+				hidden_effect = {
+					202 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9568
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3543
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 525
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3494
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 203 
+					}
+				}
+				hidden_effect = {
+					203 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11454
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 488
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3468
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6478
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 226 
+					}
+				}
+				hidden_effect = {
+					226 = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 9433
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11437
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 200 
+					}
+				}
+				hidden_effect = {
+					200 = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11405
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6596
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11700
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Keep_Warmachine_going
+		icon = GFX_goal_keepwarmachinegoing
+		prerequisite = { focus = GER_west_wall }
+		mutually_exclusive = { focus = GER_protect_reichsautobahn }
+		available = {
+			any_country = {
+				OR = {
+					tag = GER
+					is_in_faction_with = GER
+				}
+				OR = {
+					has_full_control_of_state = 75
+					has_full_control_of_state = 35
+					has_full_control_of_state = 30
+					has_full_control_of_state = 26
+					has_full_control_of_state = 19
+					has_full_control_of_state = 16
+					has_full_control_of_state = 14
+					has_full_control_of_state = 4
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 75 
+					}
+				}
+				75 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 35 
+					}
+				}
+				35 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 30 
+					}
+				}
+				30 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 26 
+					}
+				}
+				26 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 19 
+					}
+				}
+				19 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 16 
+					}
+				}
+				16 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 14 
+					}
+				}
+				14 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 4 
+					}
+				}
+				4 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_protect_reichsautobahn
+		icon = GFX_goal_keepsafeheavyindustry
+		prerequisite = { focus = GER_west_wall }
+		mutually_exclusive = { focus = GER_Keep_Warmachine_going }
+		available = {
+			GER = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 60
+				has_full_control_of_state = 59
+				has_full_control_of_state = 54
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 64 
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 60 
+					}
+				}
+				60 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = radar_station 
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 59 
+					}
+				}
+				59 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 
+					any_country = {
+						OR = {
+							tag = GER
+							is_in_faction_with = GER
+						}
+						has_full_control_of_state = 54 
+					}
+				}
+				54 = {
+					add_building_construction = {
+						type = anti_air_building 
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_protect_Berlin
+		icon = GFX_goal_Berlinflagwfort
+		prerequisite = { focus = GER_Keep_Warmachine_going focus = GER_protect_reichsautobahn }
+		available = {
+			GER = {
+				surrender_progress > 0.25
+				has_full_control_of_state = 64
+				has_full_control_of_state = 68
+				has_full_control_of_state = 66
+				has_full_control_of_state = 65
+				has_full_control_of_state = 63
+				has_full_control_of_state = 62
+				has_full_control_of_state = 61
+				has_full_control_of_state = 58
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_west_wall
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 64
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9456
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3499
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6521
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9496
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 375
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11444
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 68
+					}
+				}
+				68 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3572
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 66
+					}
+				}
+				66 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3438
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6595
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 552
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9570
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3485
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 65
+					}
+				}
+				65 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6441
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 514
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 573
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 63
+					}
+				}
+				63 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 6282
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6282
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 62
+					}
+				}
+				62 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9388
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 349
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 3440
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3207
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 61
+					}
+				}
+				61 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9294
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 11305
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 321
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						OR = {
+							tag = GER
+						}
+						has_full_control_of_state = 58
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9320
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9347
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
    
     shared_focus = {
 		id = GER_four_year_plan_a
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_GER_industry
 		text = GER_four_year_plan
 		x = -30
 		y = 0
@@ -31,7 +1748,7 @@
 
 	shared_focus = {
 		id = GER_rebuild_the_high_seas_fleet_a
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_GER_rebuild_the_high_seas_fleet
 		text = GER_rebuild_the_high_seas_fleet
 		relative_position_id = GER_naval_rearmament_a
 		prerequisite = { focus = GER_plan_z_a }
@@ -84,7 +1801,7 @@
 
 	shared_focus = {
 		id = GER_carrier_war
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_r56_goal_generic_carrier
 		relative_position_id = GER_naval_rearmament_a
 		prerequisite = { focus = GER_plan_z_a }
 		x = -3
@@ -93,8 +1810,6 @@
 		ai_will_do = {
 			factor = 1
 		}
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = GER_naval_air_effort_a_modify
 			hidden_effect = {
@@ -122,7 +1837,7 @@
 
 	shared_focus = {
 		id = GER_Graf_Zeppelin
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_goal_build_carier
 		relative_position_id = GER_carrier_war
 		mutually_exclusive = { focus = GER_Convert_Civilian_Ships }
 		prerequisite = { focus = GER_carrier_war }
@@ -171,8 +1886,7 @@
 
 	shared_focus = {
 		id = GER_Convert_Civilian_Ships
-		icon = GFX_goal_r56_goal_generic_carrier
-		text = ITA_refit_civilian_ships
+		icon = GFX_goal_generic_navy_carrier
 		relative_position_id = GER_carrier_war
 		mutually_exclusive = { focus = GER_Graf_Zeppelin }
 		prerequisite = { focus = GER_carrier_war }
@@ -230,7 +1944,7 @@
 
 	shared_focus = {
 		id = GER_Bismarck
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_build_bismarck
 		prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		x = 1
@@ -255,17 +1969,18 @@
 				allow_without_tech = yes
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_battery_slot = ship_heavy_battery_2
 					fixed_ship_anti_air_slot = ship_anti_air_2
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = heavy_ship_engine_3
 					fixed_ship_secondaries_slot = ship_secondaries_2
 					fixed_ship_armor_slot = ship_armor_bb_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_airplane_launcher_1
+					front_1_custom_slot = ship_heavy_battery_2
+					mid_1_custom_slot = ship_heavy_battery_2
 					mid_2_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_heavy_battery_3
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_heavy_battery_2
 				}
 			}
 			add_equipment_production = {
@@ -306,7 +2021,7 @@
 
 	shared_focus = {
 		id = GER_pride_of_the_modern_germany_a
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_Bismarck
 		text = GER_pride_of_the_modern_germany
 		relative_position_id = GER_rebuild_the_high_seas_fleet_a
 		prerequisite = { focus = GER_Bismarck focus = GER_His_Ship }
@@ -411,7 +2126,7 @@
 
 	shared_focus = {
 		id = GER_crossing_the_atlantic_a
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_prepare_for_the_next_blockade
 		text = GER_crossing_the_atlantic
 		prerequisite = { focus = GER_prepare_for_the_next_blockade_a }
 		available = {
@@ -532,9 +2247,9 @@
 
 	shared_focus = {
 		id = GER_naval_rearmament_a
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_KriegsmarineS
 		text = GER_naval_rearmament
-		x = -2
+		x = 15
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -556,30 +2271,19 @@
 
 	shared_focus= {
 		id = GER_plan_z_a
-		icon = GFX_goal_Bismarck
+		icon = GFX_goal_planz
 		text = GER_plan_z
+		prerequisite = { focus = GER_naval_rearmament_b }
 		prerequisite = { focus = GER_naval_rearmament_a }
-		x = -2
+		x = 0
 		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 0.25
-		}	
+		}
+		relative_position_id = GER_naval_rearmament_a
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = Landon_Treaty_sub_focus
-				}
-				remove_ideas = Landon_Treaty_sub_focus
-			}
-			if = {
-				limit = {
-					has_idea = Landon_Treaty
-				}
-				remove_ideas = Landon_Treaty
-			}
-			add_threat = 5
 			hidden_effect = {
 				GER_upgrade_kriegsmarine_effect = yes
 				set_variable = {
@@ -590,6 +2294,7 @@
 				}
 			}
 			custom_effect_tooltip = GER_PLAN_Z_modify
+			activate_mission = GER_plan_z
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -679,7 +2384,7 @@
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = GER_u_boat_effort_a }
 		text = GER_naval_effort2
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		relative_position_id = GER_u_boat_effort_a
 		x = 0
 		y = 2
@@ -759,7 +2464,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GER_u_boat_effort_a
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -779,13 +2484,13 @@
 
 	shared_focus = {
 		id = GER_modular_construction_a
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_POL_develop_polish_shipbuilding
 		text = GER_modular_construction
 		prerequisite = { focus = GER_u_boat_effort_a }
 		x = -1
 		y = 1
 		relative_position_id = GER_u_boat_effort_a
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -802,7 +2507,8 @@
 		text = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = GER_four_year_plan_a }
-		x = 0
+		mutually_exclusive = { focus = GER_technocracy }
+		x = 1
 		y = 1
 		relative_position_id = GER_four_year_plan_a
 		cost = 10
@@ -980,14 +2686,39 @@
 	}
 
 	shared_focus = {
+		id = GER_technocracy
+		icon = GFX_goal_Technocracy
+		prerequisite = { focus = GER_four_year_plan_a }
+		mutually_exclusive = { focus = GER_autarky_a }
+		x = -1
+		y = 1
+		relative_position_id = GER_four_year_plan_a
+		cost = 10
+		
+		ai_will_do = {
+			factor = 9
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {	
+			add_tech_bonus = {
+				name = GER_technocracy
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 1
+				category = electronics
+			}
+			add_ideas = GER_technocracy_idea
+		}
+	}
+
+	shared_focus = {
 		id = GER_krupp_eco_focus
 		icon = GFX_goal_krupp
-		prerequisite = { focus = GER_autarky_a }
-		x = 0
+		prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
+		x = -1
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
-		
 		ai_will_do = {
 			factor = 9
 		}
@@ -1001,53 +2732,12 @@
 	}
 
 	shared_focus = {
-		id = GER_power_krupp
-		icon = GFX_goal_krupppower
-		prerequisite = { focus = GER_krupp_eco_focus }
-		mutually_exclusive = { focus = GER_forced_colob_krupp }
-		x = 1
-		y = 1
-		relative_position_id = GER_krupp_eco_focus
-		cost = 10
-		
-		ai_will_do = {
-			factor = 9
-		}
-		available = {
-			always = no
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		}	
-	}
-
-	shared_focus = {
-		id = GER_forced_colob_krupp
-		icon = GFX_goal_kruppforcedcolob
-		prerequisite = { focus = GER_krupp_eco_focus }
-		mutually_exclusive = { focus = GER_power_krupp }
-		x = -1
-		y = 1
-		relative_position_id = GER_krupp_eco_focus
-		cost = 10
-		ai_will_do = {
-			factor = 9
-		}
-		available = {
-			always = no
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-		}	
-	}
-
-	shared_focus = {
 		id = GER_hermann_goring_werke_a
 		icon = GFX_goal_generic_construct_civ_factory
 		text = GER_hermann_goring_werke
 		dynamic = yes
-		prerequisite = { focus = GER_autarky_a }
-		x = -2
+		prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
+		x = -3
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -1118,16 +2808,37 @@
 				}
 				set_state_flag = GER_industrial_effort_2IC
 			}
+			if = {
+				limit = {
+					has_completed_focus = GER_technocracy
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_industrial_effort_2IC
+				}
+			}
 		}
 	}
 
 	shared_focus = {
 		id = GER_kdf_wagen_a
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_car_factory
 		text = GER_kdf_wagen
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke_a }
-		x = -2
+		x = -3
 		y = 3
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -1198,6 +2909,27 @@
 				}
 				set_state_flag = GER_industrial_effort_2_2IC
 			}
+			if = {
+				limit = {
+					has_completed_focus = GER_technocracy
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_industrial_effort_2IC
+				}
+			}
 		}
 	}
 
@@ -1206,7 +2938,7 @@
 		icon = GFX_goal_generic_oil_refinery
 		text = GER_coal_liquidization
 		prerequisite = { focus = GER_autarky_a }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -1225,15 +2957,16 @@
 				uses = 1
 				category = synth_resources
 			}
+			add_timed_idea = { idea = focus_on_liquidation days = 180 }
 			if = {
 				limit = {
 					has_full_control_of_state = 65
 				}
 				65 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = synthetic_refinery
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1277,7 +3010,6 @@
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1307,7 +3039,7 @@
 		icon = GFX_focus_research
 		text = extra_tech_slot
 		prerequisite = { focus = GER_synthetic_rubber_a focus = GER_kdf_wagen_a }
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = GER_autarky_a
 		cost = 10
@@ -1324,7 +3056,7 @@
 
 	shared_focus = {
 		id = GER_Civlian_Mobilization
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_focus_on_civilian
 		mutually_exclusive = { focus = GER_Arms_Mobilization }
 		prerequisite = { focus = GER_grosraumwirtschaft_a }
 		x = -1
@@ -1439,7 +3171,7 @@
 
 	shared_focus = { 
 		id = GER_Arms_Mobilization
-		icon = GFX_goal_generic_construct_mil_factory 
+		icon = GFX_goal_focus_on_arms 
 		mutually_exclusive = { focus = GER_Civlian_Mobilization }
 		prerequisite = { focus = GER_grosraumwirtschaft_a }
 		x = 1
@@ -1453,12 +3185,26 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			effect_tooltip = {
-				GER = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Arms_Mobilization
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_Hide_Arms_Industrialization }
 				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2
+						add_idea = Four_Year_Plan_Arms_Mobilization
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_Hide_Arms_Industrialization
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_2_Small_Arms
+						add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
+					}
 				}
 			}
 			hidden_effect = {
@@ -1504,7 +3250,7 @@
 
 	shared_focus = {
 		id = GER_Finish
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_endoffouryearplan
         prerequisite = { focus = GER_extra_tech_slot_a focus = GER_extra_build_slot focus = GER_switch_to_war_economy }
 		x = 0
 		y = 6
@@ -1538,7 +3284,7 @@
 	shared_focus = {
 		id = GER_Finish_COPY
 		text = GER_Finish
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_goal_endoffouryearplan
 		allow_branch = { has_completed_focus = GER_Finish }
 		x = -14
 		y = 0
@@ -1646,7 +3392,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
 		mutually_exclusive = { focus = GER_Eco_Plan_B }
@@ -1759,7 +3505,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A_Main_A
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = GER_Eco_Plan_A }
 		x = 0
 		y = 3
@@ -1845,7 +3591,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_A_Main_B
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = GER_Eco_Plan_A_Main_A }
 		x = 0
 		y = 6
@@ -1931,10 +3677,10 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_B
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_Focus_Military_Mobilisation
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
-		mutually_exclusive = { focus = GER_Eco_Plan_A }
+		mutually_exclusive = { focus = GER_Eco_Plan_A focus = GER_Eco_Plan_C }
 		x = 4
 		y = 2
 		relative_position_id = GER_Finish_COPY
@@ -1960,7 +3706,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_B_Main_A
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = GER_Eco_Plan_B }
 		x = 4
 		y = 5
@@ -2251,7 +3997,7 @@
 	shared_focus = {
 		id = GER_Eco_Plan_Side_A_1
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A }
+		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A focus = GER_Eco_Plan_C_A }
 		x = 0
 		y = 6
 		relative_position_id = GER_Finish_COPY
@@ -2408,7 +4154,7 @@
 
 	shared_focus = {
 		id = GER_Eco_Plan_Main
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_goal_endoffouryearplan
 		prerequisite = { focus = GER_Eco_Plan_B_Main_B focus = GER_Eco_Plan_A_Main_B }
 		text = GER_Working_on
 		x = 0
@@ -2431,7 +4177,7 @@
 
 	shared_focus = {
 		id = GER_Small_Arms
-		icon = GFX_goal_generic_military_deal 
+		icon = GFX_goal_small_arms
 		prerequisite = { focus = GER_Hide_Arms_Industrialization }
 		x = -1
 		y = 1
@@ -2725,6 +4471,15 @@
 		completion_reward = {
 			if = {
 				limit = {
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation 
+					}
+				}
+				add_political_power = 150
+			}
+			if = {
+				limit = {
 					NOT = { has_idea = war_economy }
 					NOT = { has_idea = tot_economic_mobilisation }
 				}
@@ -2890,7 +4645,7 @@
 		id = GER_air_innovation_a
 		text = air_innovation
 		icon = GFX_goal_r56_goal_GER_luftwaffe
-		x = -15
+		x = 2
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -2917,8 +4672,6 @@
 				}
 			}
 		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			
 			air_experience = 50
@@ -2994,7 +4747,7 @@
 		y = 2
 		relative_position_id = GER_air_innovation_a
 		prerequisite = { focus = GER_Operational_Integratiy }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0.25
 		}
@@ -3206,7 +4959,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GER_CAS
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3282,7 +5035,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GER_Strategic_Des
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3306,7 +5059,7 @@
 		id = GER_army_innovation_a
 		icon = GFX_focus_ger_oppose_hitler
 		text = GER_army_innovation
-		x = 15
+		x = -14
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -3316,7 +5069,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			army_experience = 50
-			custom_effect_tooltip = available_political_advisor #erwin_rommel
+			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = walther_von_brauchitsch
 		}	
 	}
@@ -3341,6 +5094,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = GER_tank_warfare_modify_tt
+			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = { GER_army_armor_speed_factor = 0.1 }
@@ -3359,12 +5113,210 @@
 	}
 
 	shared_focus = {
+		id = GER_SS_Trops
+		icon = GFX_goal_SS_division
+		relative_position_id = GER_army_innovation_a
+		allow_branch = { OR = { has_completed_focus = GER_tank_warfare has_completed_focus = GER_Battle_Plan } }
+		prerequisite = { focus = GER_staff }
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = GER_Battle_Plan
+			}
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = SS_forces_dynamic_modifier
+			}
+			hidden_effect = {
+				set_technology = { Schutzstaffel_infantry_tech = 1 popup = no }
+			}
+			custom_effect_tooltip = GER_unlock_ss_soldier
+			custom_effect_tooltip = GER_SS_focus_recruit
+			GER_upgrade_wehrmacht_effect = yes
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_Teror_Doctrine
+		icon = GFX_goal_SS_terror
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_Trops }
+		mutually_exclusive = { focus = GER_SS_Search_and_Destroy }
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_Teror_tt
+			set_variable = { GER_SS_army_morale_factor = 0.1 }
+			set_variable = { GER_SS_air_cas_present_factor = 0.1 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_For_The_Fatherland
+		icon = GFX_goal_SS_For_The_Fatherland
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_Teror_Doctrine }
+		x = -1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = GER_SS
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_fatherland_tt
+			set_variable = { GER_SS_pocket_penalty = -0.1 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_Smoke_and_Fire
+		icon = GFX_focus_ITA_banda_carita
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_For_The_Fatherland }
+		x = -1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			set_technology = { smoke_and_fire = 1 popup = no }
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_Search_and_Destroy
+		icon = GFX_goal_SS_search_and_destroy
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_Trops }
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_Search_modify_tt
+			set_variable = { GER_SS_coordination_bonus = 0.05 }
+			set_variable = { GER_SS_recon_factor = 0.05 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_SS_Field_Medic
+		icon = GFX_goal_SS_Medic
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_Search_and_Destroy }
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_Field_modify_tt
+			GER_upgrade_wehrmacht_effect = yes
+			hidden_effect = {
+				set_technology = { 
+					GER_SS_Field_Medic_tech = 1
+					popup = no 
+				} 
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_new_anti_tanks
+		icon = GFX_focus_usa_tank_destroyer_doctrine
+		relative_position_id = GER_SS_Trops
+		prerequisite = { focus = GER_SS_Field_Medic }
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			set_technology = { Panzerschreck_at = 1 popup = no }
+			custom_effect_tooltip = GER_SS_unlock_anti_wepon_tt
+		}
+	}
+
+	shared_focus = {
+		id = GER_The_Last_Tiger_Ace
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		relative_position_id = GER_SS_Trops
+		allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
+		prerequisite = { focus = GER_SS_Smoke_and_Fire focus = GER_new_anti_tanks }
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = GER_tiger_I
+				has_completed_focus = GER_King_Tiger
+			}
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			GER_last_tiger_ace_effect = yes
+		}
+	}
+
+	shared_focus = {
 		id = GER_Lighting_Strike
 		icon = GFX_goal_lastoffensive
 		relative_position_id = GER_army_innovation_a
+		allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
 		prerequisite = { focus = GER_soviet_treaty_a }
 		prerequisite = { focus = GER_staff }
-		x = -2
+		x = -3
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -3392,25 +5344,448 @@
 	}
 
 	shared_focus = {
-		id = GER_Panther
-		icon = GFX_goal_generic_army_tanks
+		id = GER_follow_red_army_design
+		icon = GFX_goal_Red_Army_design
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_Lighting_Strike }
-		mutually_exclusive = { focus = GER_Anti_Tank }
-		x = -3
+		mutually_exclusive = { focus = GER_follow_wehrmacht_design }
+		allow_branch = {
+			has_completed_focus = GER_against_fuhrer
+		}
+		x = -2
 		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = mobile_warfare
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	shared_focus = {
+		id = GER_t34
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_red_army_design }
+		x = -2
+		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			date > 1942.1.1
 			has_tech = mobile_warfare
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			create_equipment_variant = {
+				name = "T34"
+				type = medium_tank_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_medium_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = sloped_armor
+                special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = expanded_fuel_tank
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 17
+					tank_nsb_armor_upgrade = 8
+			    }
+				icon = "GFX_SOV_improved_medium_tank_medium"
+				model = "SOV_medium_armor_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_su76
+		icon = GFX_focus_generic_self_propelled_gun
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_red_army_design }
+		x = 0
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = mobile_warfare
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			create_equipment_variant = {
+				name = "SU-76"
+				type = light_tank_artillery_chassis_3
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_medium_howitzer_2
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = additional_machine_guns
+                special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = expanded_fuel_tank
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 8
+					tank_nsb_armor_upgrade = 6
+			    }
+				icon = "GFX_SOV_advanced_light_art_medium"
+				model = "SOV_light_sp_artillery_brigade_2_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_su_87
+		icon = GFX_goal_Anti_tank
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_t34 }
+		x = -2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = mobile_warfare
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			create_equipment_variant = {
+				name = "SU-85"
+				type = medium_tank_destroyer_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_high_velocity_cannon_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = sloped_armor
+                special_type_slot_3 = squeezebore_adaptor
+				special_type_slot_4 = expanded_fuel_tank
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 16
+					tank_nsb_armor_upgrade = 8
+			    }
+				icon = "GFX_SOV_improved_medium_td_medium"
+				model = "SOV_medium_tank_destroyer_brigade_2_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_follow_fuhrer_design
+		icon = GFX_goal_fuhrer_design
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Lighting_Strike }
+		mutually_exclusive = { focus = GER_follow_wehrmacht_design }
+		allow_branch = {
+			NOT = { has_completed_focus = GER_against_fuhrer }
+		}
+		x = -2
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = mobile_warfare
+			has_completed_focus = GER_Fuhrer
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			if = {
+				limit = {
+					has_completed_focus = GER_Fuhrer
+				}
+				add_power_balance_value = {
+					id = GER_power_balance
+					value = 0.2
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_tiger_I
+		icon = GFX_goal_tiger
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_fuhrer_design }
+		x = -2
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1942.1.1
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			set_technology = { masterful_blitz_GERV = 1 popup = no }
+			create_equipment_variant = {
+				name = "Tiger I"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = stabilizer
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 11
+					tank_nsb_armor_upgrade = 14
+			    }
+				icon = "GFX_GER_improved_heavy_tank_medium"
+				model = "GER_heavy_armor_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_tiger_destroyer
+		icon = GFX_goal_Anti_tank
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_tiger_I }
+		#prerequisite = { focus = GER_army_innovation_2_a }
+		x = -2
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1942.6.1
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Panzerjäger Tiger"
+				type = heavy_tank_destroyer_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = squeezebore_adaptor
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = secondary_turret_small_cannon
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 14
+			    }
+				icon = "GFX_GER_improved_heavy_tank_td"
+				model = "GER_heavy_tank_destroyer_brigade_1_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Maus
+		icon = GFX_goal_Maus
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_fuhrer_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1943.8.1
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Panzer VIII Maus"
+				type = super_heavy_tank_chassis_1
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_super_heavy_cannon
+				turret_type_slot = tank_super_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = squeezebore_adaptor
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 20
+					tank_nsb_armor_upgrade = 12
+			    }
+				icon = "GFX_GER_super_heavy_tank_medium"
+				model = "GER_super_heavy_armor_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_follow_wehrmacht_design
+		icon = GFX_goal_wehrmacht_design
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Lighting_Strike }
+		mutually_exclusive = { focus = GER_follow_fuhrer_design focus = GER_follow_red_army_design }
+		x = -4
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = mobile_warfare
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = { 
+			add_political_power = 100
+			if = {
+				limit = {
+					has_completed_focus = GER_against_fuhrer
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_Fuhrer
+				}
+				add_power_balance_value = {
+					id = GER_power_balance
+					value = -0.2
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_stugg
+		icon = GFX_goal_stugg
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_wehrmacht_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = -6
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Sturmgeschütz IV"
+				type = medium_tank_artillery_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_medium_howitzer_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = secondary_turret_hmg	
+                special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = additional_machine_guns
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 10
+			    }
+				icon = "GFX_GER_medium_BCC"
+				model = "GER_medium_tank_destroyer_brigade_0_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Panther
+		icon = GFX_goal_generic_army_tanks
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_follow_wehrmacht_design }
+		#mutually_exclusive = { focus = GER_Anti_Tank }
+		x = -4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1942.1.1
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
 		completion_reward = { 
 			create_equipment_variant = {
 				name = "PzKpfw Panther"
@@ -3429,7 +5804,7 @@
 				special_type_slot_4 = stabilizer
 				}
 				upgrades = {
-				    tank_nsb_engine_upgrade = 12
+				    tank_nsb_engine_upgrade = 14
 					tank_nsb_armor_upgrade = 14
 			    }
 				icon = "GFX_GER_medium_CBC"
@@ -3442,10 +5817,9 @@
 		id = GER_King_Tiger
 		icon = GFX_focus_generic_army_tanks2
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Panther focus = GER_Anti_Tank }
-		prerequisite = { focus = GER_army_innovation_2_a }
-		x = -4
-		y = 6
+		prerequisite = { focus = GER_Anti_Tank focus = GER_tiger_destroyer }
+		x = -3
+		y = 7
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -3453,13 +5827,18 @@
 
 		available = {
 			date > 1943.1.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		        set_technology = { masterful_blitz_GERV = 1 popup = no }
-				create_equipment_variant = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_follow_fuhrer_design }
+				}
+				set_technology = { masterful_blitz_GERV = 1 popup = no }
+			}
+			create_equipment_variant = {
 				name = "King Tiger"
 				type = heavy_tank_chassis_3
 				parent_version = 0
@@ -3476,7 +5855,63 @@
 				special_type_slot_4 = wet_ammo_storage
 				}
 				upgrades = {
-				    tank_nsb_engine_upgrade = 9
+				    tank_nsb_engine_upgrade = 13
+					tank_nsb_armor_upgrade = 11
+			    }
+				icon = "GFX_GER_advanced_heavy_tank_medium"
+				model = "GER_heavy_armor_2_entity"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_King_Tiger_1
+		icon = GFX_focus_generic_army_tanks2
+		text = GER_King_Tiger
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Anti_Tank focus = GER_su_87 }
+		x = -3
+		y = 7
+		cost = 10
+		allow_branch = {
+			has_completed_focus = GER_against_fuhrer
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1943.1.1
+			has_completed_focus = GER_army_innovation_2_a
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_follow_fuhrer_design }
+				}
+				set_technology = { masterful_blitz_GERV = 1 popup = no }
+			}
+			create_equipment_variant = {
+				name = "King Tiger"
+				type = heavy_tank_chassis_3
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_high_velocity_cannon_3
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = armor_skirts
+				special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 13
 					tank_nsb_armor_upgrade = 11
 			    }
 				icon = "GFX_GER_advanced_heavy_tank_medium"
@@ -3489,22 +5924,21 @@
 		id = GER_Anti_Tank
 		icon = GFX_goal_Anti_tank
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Lighting_Strike }
-		mutually_exclusive = { focus = GER_Panther }
-		x = -1
-		y = 4
+		prerequisite = { focus = GER_Panther }
+		#mutually_exclusive = { focus = GER_Panther }
+		x = -4
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			date > 1942.1.1
-			has_tech = mobile_warfare
+			date > 1942.6.1
+			has_completed_focus = GER_army_innovation_2_a
 		}
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 				create_equipment_variant = {
 				name = "Jagdpanther"
@@ -3534,7 +5968,7 @@
 
 	shared_focus = {
 		id = GER_staff
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_military_academy_1
 		prerequisite = { focus = GER_tank_warfare focus = GER_Battle_Plan }
 		relative_position_id = GER_army_innovation_a
 		cancelable = no
@@ -3625,7 +6059,9 @@
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = GER_special_forces
+			custom_effect_tooltip = GER_experts_in_field_modify_tt
+			set_variable = { GER_special_forces_training_time_factor = 0.1 }
+			set_variable = { GER_special_forces = 0.15 }
 			custom_effect_tooltip = GER_experts_in_field_tt
 			hidden_effect = {
 				set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }
@@ -3639,7 +6075,7 @@
 		icon = GFX_focus_generic_truck
 		prerequisite = { focus = GER_Battle_Plan }
 		relative_position_id = GER_army_innovation_a
-		x = 4
+		x = 5
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -3672,7 +6108,8 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_better_supply}
 		prerequisite = { focus = GER_staff }
-		x = 2
+		allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
+		x = 3
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -3711,8 +6148,8 @@
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_War_Plan }
-		mutually_exclusive = { Focus = GER_Cheap_SUP }
-		x = 3
+		mutually_exclusive = { Focus = GER_harsh_training_methods }
+		x = 2
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -3730,10 +6167,10 @@
 
 	shared_focus = {
 		id = GER_Better_SUP
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = GER_better_supply }
 		relative_position_id = GER_army_innovation_a
-		x = 5
+		x = 7
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -3753,13 +6190,50 @@
 	}
 
 	shared_focus = {
+		id = GER_repair_old_guns
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = GER_Better_SUP }
+		relative_position_id = GER_army_innovation_a
+		x = 7
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 2500
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1950
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 1250
+				producer = GER
+			}
+		}
+	}
+
+	shared_focus = {
 		id = GER_Cheap_SUP
 		icon = GFX_goal_generic_army_artillery2
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_War_Plan }
-		mutually_exclusive = { Focus = GER_Cheap_EQ }
-		x = 1
-		y = 4
+		prerequisite = { focus = GER_Cheap_EQ }
+		x = 2
+		y = 6
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3775,13 +6249,181 @@
 	}
 
 	shared_focus = {
+		id = GER_harsh_training_methods
+		icon = GFX_focus_generic_infiltration
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_War_Plan }
+		x = 4
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = superior_firepower
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_harsh_training_methods_modify_tt
+			set_variable = { GER_acclimatization_hot_climate_gain_factor = 0.2 }
+			set_variable = { GER_acclimatization_cold_climate_gain_factor = 0.2 }
+			set_variable = { GER_terrain_penalty_reduction = 0.1 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_new_supply_ways
+		icon = GFX_focus_SOV_the_road_of_life
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_harsh_training_methods }
+		x = 4
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_tech = superior_firepower
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = GER_new_supply_ways_modify_tt
+			set_variable = {
+				GER_truck_attrition_factor = -1.0
+			}
+			set_variable = {
+				GER_supply_factor = 0.2
+			}
+			set_variable = {
+				GER_supply_node_range = 0.2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht
+		icon = GFX_goal_glory_of_wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_King_Tiger }
+		prerequisite = { focus = GER_anti_air_tank }
+		allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_against_fuhrer } NOT = { has_completed_focus = GER_assassinate_adolf_hitler } NOT = { has_completed_focus = GER_War_Plan } }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_non
+		icon = GFX_goal_glory_of_wehrmacht_nonaligned
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_anti_air_tank }
+		prerequisite = { focus = GER_King_Tiger }
+		allow_branch = { has_completed_focus = GER_oppose_hitler_a NOT = { has_completed_focus = GER_the_monarchy_compromise } }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_dec
+		icon = GFX_goal_glory_of_wehrmacht_dec
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_anti_air_tank }
+		prerequisite = { focus = GER_King_Tiger }
+		allow_branch = { has_completed_focus = GER_the_monarchy_compromise }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_com
+		icon = GFX_goal_glory_of_wehrmacht_com
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_anti_air_tank }
+		prerequisite = { focus = GER_King_Tiger_1 }
+		allow_branch = { has_completed_focus = GER_against_fuhrer NOT = { has_completed_focus = GER_follow_red_army_design } }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_com_red
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_anti_air_tank }
+		prerequisite = { focus = GER_King_Tiger_1 }
+		allow_branch = { has_completed_focus = GER_against_fuhrer has_completed_focus = GER_follow_red_army_design }
+		x = -5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
 		id = GER_Better_Anti_Tank
 		icon = GFX_goal_generic_army_artillery
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Better_SUP }
-		prerequisite = { focus = GER_Cheap_EQ focus = GER_Cheap_SUP }
-		x = 4
-		y = 6
+		prerequisite = { focus = GER_Cheap_SUP focus = GER_new_supply_ways }
+		x = 3
+		y = 7
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -3795,6 +6437,99 @@
 			uses = 1
 			category = cat_anti_tank	
 		 } 
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1
+		icon = GFX_goal_glory_of_wehrmacht
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_against_fuhrer } NOT = { has_completed_focus = GER_assassinate_adolf_hitler } NOT = { has_completed_focus = GER_tank_warfare } }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1_non
+		icon = GFX_goal_glory_of_wehrmacht_nonaligned
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { has_completed_focus = GER_oppose_hitler_a NOT = { has_completed_focus = GER_the_monarchy_compromise } }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1_dec
+		icon = GFX_goal_glory_of_wehrmacht_dec
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { has_completed_focus = GER_the_monarchy_compromise }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_Glory_of_Wehrmacht_1_com
+		icon = GFX_goal_glory_of_wehrmacht_com
+		text = GER_Glory_of_Wehrmacht
+		relative_position_id = GER_army_innovation_a
+		prerequisite = { focus = GER_Better_Anti_Tank }
+		prerequisite = { focus = GER_repair_old_guns }
+		allow_branch = { has_completed_focus = GER_against_fuhrer }
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
+			set_variable = { GER_army_org_regain = 0.1 }
+			set_variable = { GER_grant_medal_cost_factor = -1.0 }
 		}
 	}
 
@@ -3818,6 +6553,7 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = GER_Battle_Plan_modify_tt
+			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				GER_upgrade_wehrmacht_effect = yes
 				set_variable = {
@@ -3864,7 +6600,7 @@
 			}
 		}
 
-		x = -4
+		x = -5
 		y = 2
 		relative_position_id = GER_army_innovation_a
 		cost = 10
@@ -3958,7 +6694,7 @@
 		icon = GFX_focus_generic_tank_production
 		text = GER_army_innovation_2
 		prerequisite = { focus = GER_soviet_treaty_a }
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = GER_soviet_treaty_a
 		cost = 10
@@ -3995,6 +6731,45 @@
 					technology = advanced_medium_tank_chassis
 					technology = mechanised_infantry
 				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_anti_air_tank
+		icon = GFX_goal_Wirbelwind
+		prerequisite = { focus = GER_army_innovation_2_a }
+		x = -2
+		y = 5
+		relative_position_id = GER_soviet_treaty_a
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Flakpanzer IV Wirbelwind"
+				type = medium_tank_aa_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = sloped_armor
+				special_type_slot_2 = secondary_turret_small_cannon
+				}
+				upgrades = {
+				    tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 10
+			    }
+				icon = "GFX_GER_improved_medium_spaa"
+				model = "GER_medium_sp_anti_air_brigade_2_entity"
 			}
 		}
 	}

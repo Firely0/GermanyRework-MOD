@@ -86,13 +86,13 @@ bookmarks = {
 			ideology = fascism
 			available = { has_dlc = "Waking the Tiger" }
 			ideas = {
+				sour_loser
+				Landon_Treaty
 				Wehrmacht_UI
-				Luftwaffe_UI
-				Kriegsmarine_UI
 			}
 			focuses = {
-				GER_anschluss
 				GER_danzig_or_war
+				GER_BetterFuhrer
 				GER_four_year_plan_a
 			}
 		}
@@ -101,13 +101,13 @@ bookmarks = {
 			ideology = fascism
 			available = { NOT = { has_dlc = "Waking the Tiger" } }
 			ideas = {
+				sour_loser
+				Landon_Treaty
 				Wehrmacht_UI
-				Kriegsmarine_UI
-				Luftwaffe_UI
 			}
 			focuses = {
-				GER_anschluss
 				GER_danzig_or_war
+				GER_BetterFuhrer
 				GER_four_year_plan_a
 			}
 		}

@@ -1,0 +1,34 @@
+wehrmacht_demands = {
+	allowed = {
+		original_tag = GER
+	}
+}
+SS_demands = { 
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_idea = GER_SS
+	}
+}
+SS_recruitment = { 
+	allowed = {
+		original_tag = GER
+	}
+
+	available = {
+		has_government = fascism
+	}
+
+	visible = {
+		OR = {
+			has_dynamic_modifier = {
+				modifier = SS_forces_dynamic_modifier
+			}
+			has_dynamic_modifier = {
+				modifier = SS_forces_1_dynamic_modifier
+			}
+		}
+	}
+}

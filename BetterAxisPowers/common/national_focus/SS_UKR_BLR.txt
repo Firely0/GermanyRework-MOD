@@ -3,7 +3,7 @@
     shared_focus = {
 		id = SS_industry
 		icon = GFX_goal_generic_construction
-		x = -30
+		x = -25
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -498,7 +498,7 @@
 	shared_focus = {
 		id = SS_Axis_Missions
 		icon = GFX_goal_generic_construction
-		x = -1
+		x = -3
 		y = 0
 		cost = 3
 		ai_will_do = {
@@ -825,7 +825,7 @@
     shared_focus = {
 		id = SS_Rebuild_Army
 		icon = GFX_focus_generic_little_entente
-		x = -16
+		x = -15
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1105,12 +1105,47 @@
 	}
 
 	shared_focus = {
-		id = SS_Glory_Of_Army
-		icon = GFX_focus_generic_military_mission
+		id = SS_Glory_Of_Army_1
+		icon = GFX_focus_POL_belarus_army
 		dynamic = yes
 		relative_position_id = SS_Rebuild_Army
 		prerequisite = { focus = SS_ReOrg_Army }
 		prerequisite = { focus = SS_Doctrine }
+		allow_branch = { original_tag = BLR }
+		x = 2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					tag = UKR
+				}
+				custom_effect_tooltip = SS_UKR_Glory_Of_Army_tt
+				set_variable = { SS_UKR_atack_factor = 0.1 } 
+				set_variable = { SS_UKR_defance_factor = 0.1 } 
+			}
+			if = {
+				limit = {
+					tag = BLR
+				}
+				custom_effect_tooltip = SS_BLR_Glory_Of_Army_tt
+				set_variable = { SS_BLR_atack_factor = 0.1 } 
+				set_variable = { SS_BLR_defance_factor = 0.1 } 
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SS_Glory_Of_Army_ukr
+		icon = GFX_focus_POL_ukrainian_army
+		dynamic = yes
+		relative_position_id = SS_Rebuild_Army
+		prerequisite = { focus = SS_ReOrg_Army }
+		prerequisite = { focus = SS_Doctrine }
+		allow_branch = { original_tag = UKR }
 		x = 2
 		y = 5
 		cost = 3

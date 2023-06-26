@@ -16,9 +16,77 @@ opinion_modifiers = {
 		value = 75
 	}
 
+	speaked_against_us = {
+		value = -20
+		months = 3
+		decay = 1
+	}
+
+	challenged_royal_navy = {
+		value = -100
+	}
+
+	gertrainingprogram = {
+		value = 35
+	}
+
+	oldtradeparterns = {
+		value = 40
+	}
+
+	request_help = {
+		value = 35
+	}
+
+	expand_faction_to_eu = {
+		value = -40
+	}
+
+	expand_faction_to_scandinavia = {
+		value = -40
+	}
+
+	expand_faction_to_balkans = {
+		value = -40
+	}
+
+	expand_faction_to_middle_east = {
+		value = -40
+	}
+
+	expand_faction_to_asia = {
+		value = -40
+	}
+
+	AI_SOV_WAR = {
+		value = -300
+	}
+
 	remained_passive_to_the_soviet_invasion = {
 		value = -50
 		months = 4
+		decay = 1
+	}
+
+	permitted_german_expansionism = {
+		value = -25
+	}
+
+	not_supported_us = {
+		value = -20
+	}
+
+	supported_us = {
+		value = 20
+	}
+
+	ignored_our_interests = {
+		value = -30
+	}
+
+	middle_east_intervention = {
+		value = -20
+		months = 24
 		decay = 1
 	}
 }

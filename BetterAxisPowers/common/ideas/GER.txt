@@ -2,6 +2,656 @@ ideas = {
 
 	country = {
 
+		ger_communism_expand = {
+			picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+
+		GER_plan_offensive = {
+
+			picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				max_planning_factor = 0.1
+			}
+		}
+
+		GER_foreign_training_staff = {
+
+			picture = generic_army_war_college
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		}
+
+		GER_war_time_logistics = {
+
+			picture = SOV_the_road_of_life
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_node_range = 0.15
+				supply_factor = 0.15
+			}
+		}
+
+		GER_aid_production = {
+
+			picture = generic_license_production
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		Emergency_Orders = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		Emergency_Orders_def = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		Emergency_Orders_attack = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		abwehr_agent = {
+
+			picture = generic_spy_intel
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+				decryption_factor = 0.1
+			}
+		}
+
+		ENG_resource_efficiency = {
+
+			picture = ast_all_in
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources = 0.1
+			}
+		}
+
+		ENG_tank_production = {
+
+			picture = generic_armor
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+		ENG_anti_tank_production = {
+
+			picture = generic_artillery_regiments
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+		Japan_Side_Intel = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	 
+			modifier = {
+
+			 navy_intel_factor = 0.1
+			 decryption_power_factor = 0.05
+
+			}
+		}
+
+		Japan_Side_Intel_build = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			
+			 navy_intel_factor = 0.1
+			 decryption_power_factor = 0.05
+			 production_speed_dockyard_factor = 0.1
+
+			}
+		} 
+
+		Defense_Industry = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.05
+			}
+		}
+
+		Defense_Industry_2 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+
+		Defense_Industry_3 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_anti_air_building_factor = 0.1
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		Defense_Industry_4 = {
+
+			picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.15
+			}
+		}
+
+		focus_on_liquidation = {
+
+			picture = generic_refining_concern_1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
+
+		ger_temp_debuff = {
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		ger_temp_debuff_1 = {
+
+			picture = generic_exploit_mines
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		GER_technocracy_idea = {
+
+			picture = jap_supremacy_of_technology
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		SOV_GER_TRAINING = {
+
+			picture = generic_air_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = GER
+			} 
+
+			research_bonus = { 
+				air_equipment = 0.05
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_air = 0.1
+				air_ace_generation_chance_factor = 0.2
+			}
+		}
+
+		GER_SOV_TRAINING = {
+
+			picture = generic_air_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = SOV
+			}
+
+			research_bonus = { 
+				air_equipment = 0.05
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				experience_gain_air = 0.1
+				air_training_xp_gain_factor = -1.0
+			}
+		}
+
+		ITA_GER_TRAINING = {
+
+			picture = shiptraing
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = GER
+			} 
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_navy = 0.1
+				navy_submarine_attack_factor = 0.1
+				navy_submarine_defence_factor = 0.1
+				naval_accidents_chance = 0.2
+			}
+		}
+
+		GER_ITA_TRAINING = {
+
+			picture = shiptraing
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+				has_war_with = ITA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_navy = 0.1
+				navy_capital_ship_attack_factor = 0.1
+				navy_capital_ship_defence_factor = 0.1
+				naval_accidents_chance = 0.2
+			}
+		}
+
+		ITA_ETH_German_Generals = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_air_factor = 0.1
+				max_command_power = 15
+				max_planning_factor = 0.1
+			}
+		}
+
+		Operation_Sea_Lion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 0.1
+				naval_invasion_capacity = 20
+				amphibious_invasion = 0.1
+				extra_marine_supply_grace = 128
+			}
+		}
+
+		Operation_Weserubung = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 0.1
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.1
+				extra_marine_supply_grace = 128
+			}
+		}
+
 		Landon_Treaty = {
 
 			allowed = {
@@ -47,30 +697,234 @@ ideas = {
 			picture = generic_the_london_naval_treaty
 			
 			modifier = {
-				production_cost_max_ship_hull_heavy = 5000
-				production_cost_max_ship_hull_light = 2000
-				production_cost_max_ship_hull_destroyer = 1000
+				production_cost_max_ship_hull_heavy = 6000
+				production_cost_max_ship_hull_light = 3000
 				production_cost_max_ship_hull_carrier = 1
 			}
 		}
 
-		GER_special_forces = {
+		GER_Trade_with_uk = {
+			picture = can_wartime_prices_and_trade_board
 
-			picture = generic_army_war_college
-			
+			removal_cost = -1
+				
 			allowed = {
 				always = no
 			}
-
+	
 			allowed_civil_war = {
+				always = yes
 			}
 
-			removal_cost = -1
+			cancel = {
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					is_embargoing = ENG
+				}
+			}
 
 			modifier = {
-				special_forces_cap = 0.1
-				special_forces_training_time_factor = 0.1
+				consumer_goods_factor = -0.05
 			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_uk = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_expand = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					is_embargoing = ENG
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+
+		}
+
+		GER_Trade_with_uk_uk_expand = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+
+		}
+
+		GER_Trade_with_uk_ger_puppet = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = ENG
+					NOT = { country_exists = ENG }
+					has_war_with = CAN
+					NOT = { country_exists = CAN }
+					has_war_with = MAL
+					NOT = { country_exists = MAL }
+					has_war_with = RAJ
+					NOT = { country_exists = RAJ }
+					is_embargoing = CAN
+					is_embargoing = MAL
+					is_embargoing = RAJ
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+            targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = CAN
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = MAL
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = RAJ
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.2
+			}
+
+		}
+
+		GER_Trade_with_uk_uk_puppets = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
+			}
+	
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+				
+            targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+
 		}
 
 		GER_convert_war_eco = {
@@ -105,8 +959,10 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
-				motorized_equipment_1 = {
-					build_cost_ic = -0.05 reliability = 0.05 
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05 
+					reliability = 0.05 
 				}
 			}
 		}
@@ -211,7 +1067,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = -0.04
+				communism_drift = -0.1
 			}
 		}
 
@@ -229,7 +1085,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = -0.04
+				fascism_drift = -0.1
 			}
 		} 
 
@@ -437,6 +1293,67 @@ ideas = {
 			}
 		}
 
+		SS_Fake_tooltip_idea_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.2
+				compliance_gain = -0.025
+				required_garrison_factor = -0.40
+				resistance_damage_to_garrison = -0.4
+			}
+		}
+
+		GER_Colonial_Police_Fake_tooltip_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.35
+				compliance_gain = -0.015
+				required_garrison_factor = -0.35
+				resistance_damage_to_garrison = -0.45
+				local_factories = 0.25
+				local_resources = 0.25
+			}
+		}
+
+		sour_loser_v = {
+
+			picture = sour_loser
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+		}
+
 		sour_loser = {
 			
 			allowed = {
@@ -454,8 +1371,7 @@ ideas = {
 
 				stability_factor = -0.04
 				war_support_factor = -0.04
-
-				surrender_limit = -0.15
+				surrender_limit = 0.05
 			}
 		}
 
@@ -476,7 +1392,7 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				stability_factor = 0.1
-				war_support_factor = -0.1
+				surrender_limit = 0.05
 			}
 		}
 
@@ -497,7 +1413,7 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				stability_factor = 0.1
-				war_support_factor = -0.1
+				surrender_limit = 0.05
 
 				command_abilities_cost_factor = -0.2
 			}
@@ -520,6 +1436,7 @@ ideas = {
 				drift_defence_factor = 0.5
 
 				war_support_factor = 0.1
+				surrender_limit = 0.05
 			}
 		}
 
@@ -575,8 +1492,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = GER }
-				has_war_with = GER
+				OR = {
+					NOT = { country_exists = GER }
+					has_war_with = GER
+				}
 			}
 			
 			modifier = {
@@ -604,8 +1523,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = GER }
-				has_war_with = GER
+				OR = {
+					NOT = { country_exists = GER }
+					has_war_with = GER
+				}
 			}
 			
 			modifier = {
@@ -632,8 +1553,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -672,8 +1595,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -708,8 +1633,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -750,8 +1677,10 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { country_exists = CHI }
-				has_war_with = CHI
+				OR = {
+					NOT = { country_exists = CHI }
+					has_war_with = CHI
+				}
 			}
 
 			modifier = {
@@ -788,8 +1717,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = SWE
-				NOT = { country_exists = SWE }
+				OR = {
+					has_war_with = SWE
+					NOT = { country_exists = SWE }
+					is_embargoing = SWE
+				}
 			}
 			
             targeted_modifier = {
@@ -814,8 +1746,11 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = SWE
-				NOT = { country_exists = GER }
+				OR = {
+					has_war_with = SWE
+					NOT = { country_exists = GER }
+					is_embargoing = GER
+				}
 			}
 	
 			modifier = {
@@ -844,8 +1779,10 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -874,9 +1811,11 @@ ideas = {
 			}
 
 			cancel = {
-				is_puppet = yes
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					is_puppet = yes
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -905,8 +1844,10 @@ ideas = {
 			}
 
 			cancel = {
-				has_war_with = GER
-				NOT = { country_exists = GER }
+				OR = {
+					has_war_with = GER
+					NOT = { country_exists = GER }
+				}
 			}
 	
 			modifier = {
@@ -1004,6 +1945,9 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+
+			cancel = {
+			}
 	
 			removal_cost = -1
 				
@@ -1036,7 +1980,7 @@ ideas = {
 		}
 
 		GER_Interve_Civilwars_idea = {
-			picture = generic_manpower_bonus
+			picture = generic_aircraft_support
 				
 			allowed = {
 				always = no
@@ -1045,11 +1989,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+
+			cancel = {
+				has_war_with_major = yes
+			}
 	
 			removal_cost = -1
 				
 			modifier = {
 				send_volunteer_size = 3
+				air_volunteer_cap = 100
 			}
 		}
 
@@ -1235,46 +2184,6 @@ ideas = {
 			}
 		}
 
-		GER_atlantikwall_idea = {
-		
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_fortify_the_borders
-
-			modifier = {
-				production_speed_coastal_bunker_factor = 0.2
-			}
-		}
-
-		GER_ostwall_idea = {
-		
-			allowed = {
-				original_tag = GER
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_wall_line
-
-			modifier = {
-				production_speed_bunker_factor = 0.2
-			}
-		}
-
 		GER_align_hungary = {
 			allowed = {
 				always = no
@@ -1400,7 +2309,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_oppression
+			picture = generic_fascism_banned
 
 			modifier = {
 				fascism_drift = -0.05
@@ -1866,6 +2775,31 @@ ideas = {
 			}
 
 		}
+
+		GER_sealion = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = engconflict
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+
+			on_remove = {
+			}
+
+		}
+
 		GER_dismantle_maginot = {
 			allowed = {
 				always = no
@@ -2083,7 +3017,7 @@ ideas = {
 		#Wehrmacht
 
 		Wehrmacht_UI = {
-			picture = ger_army_ui
+			picture = ger_army_1
 			allowed = {
 				original_tag = GER
 			}
@@ -2724,12 +3658,12 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2767,7 +3701,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2800,12 +3734,12 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2835,8 +3769,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -2844,7 +3778,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2886,7 +3820,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2919,8 +3853,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -2928,7 +3862,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2963,7 +3897,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -2993,8 +3927,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3002,7 +3936,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3036,7 +3970,7 @@ ideas = {
 
 				consumer_goods_factor = -0.05
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3076,7 +4010,7 @@ ideas = {
                 production_speed_infrastructure_factor  = 0.1
                 production_speed_rail_way_factor = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3090,10 +4024,8 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 
 			}
-		 }   
+		}   
 
-		
-        
         Four_Year_Plan_2 = {
 			picture = FourYearPlan
 			allowed = {
@@ -3111,8 +4043,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3120,7 +4052,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3155,8 +4087,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3164,7 +4096,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3203,7 +4135,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3245,7 +4177,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3284,7 +4216,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3326,7 +4258,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3368,7 +4300,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3411,7 +4343,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3453,7 +4385,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3487,8 +4419,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3496,7 +4428,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3529,8 +4461,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 
 				consumer_goods_factor = -0.05
 
@@ -3538,7 +4470,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3568,8 +4500,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.05
 
@@ -3577,7 +4509,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.35
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3610,8 +4542,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.05
 
@@ -3619,7 +4551,7 @@ ideas = {
                 production_speed_infrastructure_factor = 0.1
                 production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.35
 				production_speed_naval_base_factor = 0.05
                 production_speed_radar_station_factor = 0.05
                 production_speed_air_base_factor = 0.05
@@ -3676,7 +4608,7 @@ ideas = {
              production_speed_infrastructure_factor = 0.15
              production_speed_industrial_complex_factor = 0.15
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			}
 		 }
@@ -3701,7 +4633,7 @@ ideas = {
              production_speed_infrastructure_factor = 0.15
              production_speed_industrial_complex_factor = 0.15
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			 production_oil_factor = 0.05
 		     fuel_gain_factor_from_states = 0.10
@@ -3733,7 +4665,7 @@ ideas = {
 			 production_speed_rail_way_factor = 0.1
              production_speed_supply_node_factor = 0.1
 
-			 consumer_goods_factor = 0.05
+			 consumer_goods_factor = 0.03
 
 			}
 		 }
@@ -3793,7 +4725,7 @@ ideas = {
              production_speed_radar_station_factor = 0.05
              production_speed_air_base_factor = 0.05
 
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			}
@@ -3822,7 +4754,7 @@ ideas = {
              production_speed_radar_station_factor = 0.05
              production_speed_air_base_factor = 0.05
 
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			 production_oil_factor = 0.05
@@ -3923,7 +4855,7 @@ ideas = {
              production_speed_air_base_factor = 0.05
 
 			 conversion_cost_mil_to_civ_factor = -0.3
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			}
@@ -3986,7 +4918,7 @@ ideas = {
              production_speed_air_base_factor = 0.05
 
 			 conversion_cost_mil_to_civ_factor = -0.3
-			 consumer_goods_factor = 0.07
+			 consumer_goods_factor = 0.05
 			 stability_factor = 0.1
 
 			production_oil_factor = 0.05
@@ -4271,11 +5203,10 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.03
 
 				agency_upgrade_time = -0.05
 				root_out_resistance_effectiveness_factor = 0.1
-				operative_slot = 1
 			}
 		}
 
@@ -4300,13 +5231,12 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.06
+				consumer_goods_factor = 0.05
 
 				intel_network_gain_factor = 0.1
+				agency_upgrade_time = -0.05
 				root_out_resistance_effectiveness_factor = 0.1
 				occupied_operative_recruitment_chance = 0.1
-				agency_upgrade_time = -0.05
-				operative_slot = 1
 			}
 		}
 
@@ -4328,11 +5258,11 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = GER_krupp_eco_focus
 				custom_trigger_tooltip = {
 					tooltip = krupp_used_tt
 					krupp_used = yes
 				}
+				has_completed_focus = GER_krupp_eco_focus
 			}
 			
 			research_bonus = {
@@ -4342,7 +5272,7 @@ ideas = {
 			traits = { krupp_tank }
 
 			ai_will_do = {
-				factor = 2
+				factor = 15
 			}
 		}
 
@@ -4580,6 +5510,99 @@ ideas = {
 			}
 		}
 
+		renault_ger = {
+    
+			picture = renault
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_AMX = {
+		
+			picture = generic_tank_manufacturer_2
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_APX = {
+			picture = FRA_atelier_puteaux
+			
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { medium_tank_manufacturer FRA_designer_DEBUFF }
+		}
+	
+		GER_panhard = {
+			picture = FRA_panhard
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { armored_car_manufacturer FRA_designer_DEBUFF }
+		}
+
 	}
 	
 	naval_manufacturer = { 
@@ -4623,6 +5646,71 @@ ideas = {
 			}
 			
 		}	
+
+		GER_aeb = {
+			picture = FRA_aeb	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				VIC = { exists = yes }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
+		GER_acl = {
+			picture = FRA_acl	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				VIC = { exists = yes }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
+	
+		GER_acf = {
+			picture = FRA_acf	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				29 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer FRA_designer_navy_DEBUFF }
+		}
 	}
 	
 	aircraft_manufacturer = { 
@@ -4857,6 +5945,94 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		GER_morane_saulnier = {
+			picture = morane_saulnier
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { light_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_bloch = {
+			picture = bloch
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_country_flag = ITA_GER_VICHY_ESTABLISHED
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { medium_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_amiot = {
+			picture = amiot
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { heavy_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
+		
+		GER_levasseur = {
+			picture = levasseur
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				VIC = { exists = yes }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { naval_aircraft_manufacturer FRA_designer_1_DEBUFF }
+		}
 	}
 	
 	industrial_concern = {
@@ -4877,6 +6053,29 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		krupp_starter_ver = {
+			picture = krupp
+			
+			allowed = {
+			 original_tag = GER
+			}
+
+			visible = {
+		    }
+
+			available = {
+			}
+
+			research_bonus = {
+			 industry = 0.05
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
 		}
 		
 		krupp_nofocusver = {
@@ -5073,7 +6272,7 @@ ideas = {
 			traits = { Volkswagen_trait }
 
 			ai_will_do = {
-				factor = 1
+				factor = 15
 			}
 		}
 	}
@@ -5107,6 +6306,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
+
+			cancel = {
+				is_at_peace_exiled_countries_excluded = no
+			}
 			
 			removal_cost = -1
 			
@@ -5137,7 +6340,6 @@ ideas = {
 		ita_dont_core_about_eth = { 
 
 			allowed = {
-				original_tag = ITA
 				always = no
 			}
 	
@@ -5146,8 +6348,13 @@ ideas = {
 			}
 	
 			cancel = {
-				is_at_peace_exiled_countries_excluded = no
-				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				OR = {
+					is_at_peace_exiled_countries_excluded = no
+					has_global_flag = ITA_GER_VICHY_ESTABLISHED
+					has_idea = ITA_italian_irredentism_ns
+					16 = { is_controlled_by_ROOT_or_ally = yes }
+					VIC = { exists = yes }
+				}
 			}
 	
 			removal_cost = -1
@@ -5156,6 +6363,7 @@ ideas = {
 	
 			modifier = {
 				ai_call_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -500
 			}
 
 		}
@@ -5218,6 +6426,16 @@ ideas = {
 				 instant = yes
 				 build_cost_ic = -0.10
 				 reliability = 0.05
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+					reliability = 0.05
 				}
 			} 
 
@@ -5645,6 +6863,31 @@ ideas = {
 			} 
 
 			modifier = {
+			}
+		}
+
+		Operation_Weserubung_AI = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			cancel = {
+			} 
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_prep_speed = 0.9
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.1
+				no_supply_grace = 128
 			}
 		}
 

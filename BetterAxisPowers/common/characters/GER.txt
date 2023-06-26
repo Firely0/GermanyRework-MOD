@@ -15,7 +15,7 @@ characters={
 	}
 
 	GER_SUPREM_adolf_hitler={
-		name=GER_adolf_hitler
+		name= GER_adolf_hitler
 		portraits={
 			civilian={
 				large=GFX_portrait_Supreme_Adolf_Hitler
@@ -28,6 +28,15 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+		}
+	}
+
+	GER_michael_wittmann={
+		name=GER_michael_wittmann
+		portraits={
+			civilian={
+				large=GFX_portrait_Michael_Wittmann
+			}
 		}
 	}
 
@@ -1489,6 +1498,35 @@ characters={
 		}	
 	}
 
+	GER_eva_braun ={
+		name= "Eva Braun"
+		portraits={
+			army={
+				small="GFX_idea_eva_braun"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = eva_braun
+			cost = 100
+			available = {
+				has_country_leader = {
+					character = GER_adolf_hitler
+					ruling_only = yes
+				}
+			}
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				eva_braun_trait
+			}
+			on_add = {
+				custom_effect_tooltip = GER_asign_eva_braun
+			}
+		}	
+	}
+
 	GER_hjalmar_schacht={
 		name=GER_hjalmar_schacht
 		portraits={
@@ -1641,7 +1679,8 @@ characters={
 						tooltip = GER_Kaiser_in_Country_tt
 						has_country_flag = GER_Kaiser_in_Country
 					}
-				   }
+				}
+				has_completed_focus = GER_fascism_for_our_glory
 				if = {
 					limit = {
 						has_dlc = "Man the Guns"
@@ -1719,15 +1758,10 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_form_the_reichskommissariats
-				NOT = { has_completed_focus = GER_purge_ss }
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
-			}
-			on_add = {
-				custom_effect_tooltip = GER_SS_himmler_recruit
 			}
 			traits = {
 				prince_of_terror 

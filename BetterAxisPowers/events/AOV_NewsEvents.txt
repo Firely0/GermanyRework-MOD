@@ -1,0 +1,600 @@
+﻿
+add_namespace = AOV_news
+
+# Frankfurt Conference and Germany wins the Austrian Plebiscite
+news_event = {
+	id = AOV_news.402
+	title = AOV_news.402.title
+	desc = {
+		text = AOV_news.402.desc
+	}
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.402.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.402.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = AOV_news.402.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.402.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.402.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# Frankfurt Conference Fails
+news_event = {
+	id = AOV_news.403
+	title = AOV_news.403.title
+	desc = {
+		text = AOV_news.403.desc
+	}
+	picture = GFX_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.403.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.403.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = AOV_news.403.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.403.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.403.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# Frankfurt Conference and Austrian Refusal of the Plebiscite
+news_event = {
+	id = AOV_news.404
+	title = AOV_news.404.title
+	desc = {
+		text = AOV_news.404.desc
+	}
+	picture = GFX_news_event_german_inspect_troops
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.404.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.404.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = AOV_news.404.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.404.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.404.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# Frankfurt Conference and Germany looses the Austrian Plebiscite
+news_event = {
+	id = AOV_news.405
+	title = AOV_news.405.title
+	desc = {
+		text = AOV_news.405.desc
+	}
+	picture = GFX_news_event_german_inspect_troops
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.405.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.405.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.405.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.405.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.405.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# The Italians oppose the Anschluss, Germany bows
+news_event = {
+	id = AOV_news.406
+	title = AOV_news.406.title
+	desc = {
+		text = AOV_news.406.desc
+	}
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.406.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.406.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.406.c
+		trigger = { 
+			TAG = ITA
+		}
+	}
+	option = {
+		name = AOV_news.406.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.406.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# The Italians oppose the Anschluss, War breack out
+news_event = {
+	id = AOV_news.407
+	title = AOV_news.407.title
+	desc = {
+		text = AOV_news.407.desc
+	}
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.407.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.407.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.407.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = AOV_news.407.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.407.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# Germany looses the Frankfurt conf and back down
+news_event = {
+	id = AOV_news.408
+	title = AOV_news.408.title
+	desc = {
+		text = AOV_news.408.desc
+	}
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.408.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.408.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.408.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = AOV_news.408.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.408.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+# Germany refuse the Mediation option and go to war
+news_event = {
+	id = AOV_news.409
+	title = AOV_news.409.title
+	desc = {
+		text = AOV_news.409.desc
+	}
+	picture = GFX_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = AOV_news.409.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.409.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.409.c
+		trigger = { 
+			OR = {
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = AOV_news.409.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.409.f
+		trigger = {
+			TAG = AUS
+		}
+	}
+}
+
+#Rome Protocols renewed (Anschluss)
+news_event = {
+	id = AOV_news.410
+	title = AOV_news.410.t
+	desc = {
+		text = AOV_news.410.desc
+	}
+	picture = GFX_news_event_filov_with_mussolini
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AOV_news.410.a
+		trigger = {
+			OR = {
+				TAG = HUN
+				TAG = ITA
+				TAG = AUS
+			}
+		}
+	}
+	option = {
+		name = AOV_news.410.b
+		trigger = { 
+			TAG = GER
+		}
+	}
+	option = {
+		name = AOV_news.410.c
+		trigger = { 
+			NOT = {
+				TAG = HUN
+				TAG = ITA
+				TAG = AUS
+				TAG = GER
+			}
+		}
+	}
+}
+
+################################################
+
+# Anschluss of Austria
+news_event = {
+	id = AOV_news.411
+	title = AOV_news.411.t
+	desc = AOV_news.411.d
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AOV_news.411.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.411.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = AOV_news.411.c
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = AOV_news.411.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+}
+
+# Anschluss of Austria in civil war
+news_event = {
+	id = AOV_news.412
+	title = AOV_news.412.t
+	desc = AOV_news.412.d
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AOV_news.412.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = AOV_news.412.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = AOV_news.412.c
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = AOV_news.412.e
+		trigger = {
+			OR = {
+				TAG = FRA
+				TAG = ENG
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+
+GER_mittel_europa_level_up = {
+	if = {
+		limit = { has_idea = mittel_europa_buff_0 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_0
+			add_idea = mittel_europa_buff_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = mittel_europa_buff_1 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_1
+			add_idea = mittel_europa_buff_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = mittel_europa_buff_2 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_2
+			add_idea = mittel_europa_buff_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = mittel_europa_buff_3 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_3
+			add_idea = mittel_europa_buff_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = mittel_europa_buff_4 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_4
+			add_idea = mittel_europa_buff_5
+		}		
+	}
+	else_if = {
+		limit = { has_idea = mittel_europa_buff_5 }
+		swap_ideas = {
+			remove_idea = mittel_europa_buff_5
+			add_idea = mittel_europa_buff_6
+		}		
+	}
+}

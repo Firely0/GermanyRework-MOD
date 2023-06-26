@@ -13,7 +13,7 @@ country_event = {
 	option = {
 		name = wtt_germany.1.a
 		hidden_effect = {
-
+			set_global_flag = GER_civil_war
 			set_capital = { state = 55 }
 			start_civil_war = {
 				ruling_party = neutrality
@@ -57,6 +57,8 @@ country_event = {
 		custom_effect_tooltip = GER_fascism_civil_war_tt
 		add_stability = -0.25
 		hidden_effect = { set_cosmetic_tag = GER_provisional_gvt }
+		remove_mission = GER_SOV_TRAINING
+		remove_mission = GER_ITA_TRAINING
 		random_other_country = {
 			limit = {
 				original_tag = GER
@@ -86,6 +88,20 @@ country_event = {
 				every_unit_leader = {
 					set_nationality = GER
 				}
+				remove_ideas = {kinder_kuche_kirche}
+				swap_ideas = {
+					remove_idea = sour_loser
+					add_idea = sour_loser_v
+				}
+				add_ideas = {kinder_kuche_kirche}
+				GER_Give_fascism_effect = yes
+			}
+			clr_country_flag = GER_BLOCKED_TOTAL_WAR
+			SOV = {
+				remove_ideas = SOV_GER_TRAINING
+			}
+			ITA = {
+				remove_ideas = ITA_GER_TRAINING
 			}
 			GER = {
 				every_unit_leader = {
@@ -599,7 +615,12 @@ country_event = {
 		86 = { set_state_name = "Posen" }
 		set_province_name = { id = 6558 name = "Posen" }
 		762 = { set_state_name = "Kattowitz" }
-		add_ideas = anti_soviet_pact
+		if = {
+			limit = {
+				NOT = { has_idea = anti_soviet_pact }
+			}
+			add_ideas = anti_soviet_pact
+		}
 		POL = { 
 			add_ideas = anti_soviet_pact
 			add_opinion_modifier = { target = GER modifier = danzig_for_guarantees }
@@ -686,6 +707,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			news_event = { id = wtt_news.8 hours = 6 }
+			clr_country_flag = GER_civil_war
 			set_global_flag = GER_civil_war_end
 		}
 	}
@@ -2223,6 +2245,16 @@ country_event = {
 						traits = {}
 					}
 				}		
+			}
+			hidden_effect = {
+				set_global_flag = Adolf_killed
+				uncomplete_national_focus = {
+					focus = GER_Fuhrer
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				complete_national_focus = GER_hitler_is_gone
+				complete_national_focus = GER_Power_Heinrich_Himmler
 			}
 		}
 		hidden_effect = {

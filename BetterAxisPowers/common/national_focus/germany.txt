@@ -27,6 +27,7 @@ focus_tree = {
 	shared_focus = GER_air_innovation_a
 	shared_focus = GER_naval_rearmament_a
 	shared_focus = GER_army_innovation_a	
+	shared_focus = GER_west_wall
 
 	focus = {
 		id = GER_BetterFuhrer
@@ -51,15 +52,23 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = german_Fuhrer_tt
 			hidden_effect = {
-			 set_cosmetic_tag = GER_the_third_reich
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_cosmetic_tag = GER_the_third_reich
+				}
 			if = {
 				limit = {
 					is_ai = yes
 				}
 				set_variable = { ger_rhi_timeout = 200 }
-			} 
+				set_technology = { mobile_warfare = 1 popup = no }
+				add_ideas = i_dont_use_wargoal
+			}
 			activate_mission = GER_Rhineland_demilitarized_a
             activate_mission = GER_Rhineland_demilitarized_b
+			activate_mission = GER_Rhineland_demilitarized_e
 			load_focus_tree = {
 			  tree = german_fuhrer_better
 			  keep_completed = yes

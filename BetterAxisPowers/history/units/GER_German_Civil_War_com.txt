@@ -1,0 +1,135 @@
+﻿division_template = {
+	name = "Irregulare Truppe"
+	is_locked = yes
+
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Irregulare Truppe"
+		location = 9655
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "2. Irregulare Truppe"
+		location = 3690
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "3. Irregulare Truppe"
+		location = 11499 # ULM
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "4. Irregulare Truppe"
+		location = 9545
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "5. Irregulare Truppe"
+		location = 6555
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "6. Irregulare Truppe"
+		location = 6581
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "7. Irregulare Truppe"
+		location = 3574
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "8. Irregulare Truppe"
+		location = 589
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "9. Irregulare Truppe"
+		location = 6488 # Frankurt
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "10. Irregulare Truppe"
+		location = 6488 # Frankurt
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "11. Irregulare Truppe"
+		location = 3397
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "12. Irregulare Truppe"
+		location = 11445
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "13. Irregulare Truppe"
+		location = 9524
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "14. Irregulare Truppe"
+		location = 564 # KASSEL
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "15. Irregulare Truppe"
+		location = 3355
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "16. Irregulare Truppe"
+		location = 405
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "17. Irregulare Truppe"
+		location = 3234
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "18. Irregulare Truppe"
+		location = 309
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "19. Irregulare Truppe"
+		location = 241 #WILHEILMSHAVEN
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "20. Irregulare Truppe"
+		location = 564 # KASSEL
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "21. Irregulare Truppe"
+		location = 241 # WILHEILMSHAVEN
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "22. Irregulare Truppe"
+		location = 9517 # STUTTGART
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "23. Irregulare Truppe"
+		location = 6332 # Konigberg
+		division_template = "Irregulare Truppe"
+	}
+	division = {
+		name = "24. Irregulare Truppe"
+		location = 11360 #STUTTGART
+		division_template = "Irregulare Truppe"
+	}
+}

@@ -1,0 +1,515 @@
+﻿l_english:
+ MINIMIZE_EVENT:0 "§GClick§! to Minimize. Event will be placed in the Event Queue under §HEvents and Decisions§!."
+
+ ############################################ AUSTRIAN EVENTS (ANSCHLUSS) #####################################
+ 
+ austria.1.t:0 "Hitler Puts Pressure on [AUS.GetLeader]"
+ austria.1.d:0 "The Führer's main plan for the early expansion of the German Reich was always the integration of his native land, Austria, to the united Germany he dreams of; the Nazi party having definitely secured its foothold in Germany, it is now time to take this crucial next step. \n\nHitler invited the Austrian chancellor to a meeting in Bavaria, who will be received not only by him but also by a number of high-ranking Nazis and german commanders some of them "conveniently happening to be in the area", meeting during which [AUS.GetLeader] will be "proposed" projects aiming to secure the foothold of the Austrian Nazi party on the country."
+ austria.1.a:0 "The Anschluss will come soon enough now."
+ 
+ austria.2.t:0 "Germany Puts Pressure on us"
+ austria.2.d:0 "Summoned to an meeting in Bavaria a few days ago by the Führer of the German Reich himself, [AUS.GetLeader] attended and was greeted, with minimal courtesy, not only by Hitler but also by many high ranking German commanders. The meeting had hardly begun when the chancellor found himself already under the invective of his counterpart, Hitler making no secret of his desire to unite his native country with the rest of Germany. \n\nIn the afternoon [AUS.GetLeader] was utlimately presented with a "non-negotiable agreement": among other things the Austrian Nazi party is to be made legal, a general amnesty for imprisoned Nazis is to be declared and several prominent Austrian Nazis are to be appointed to key positions." 
+ austria.2.a:0 "Looks like we don't really have a choice..."
+ austria.2.b:0 "Who does they think they are to dictate our own politics?"
+ 
+ austria.3.t:0 "[AUS.GetLeader] Bends"
+ austria.3.d:0 "Austria seems to have kindly accepted and implemented our conditions. But we are still far from our goal, we must harden the pressure and rally the Austrian population, another of his notorious speeches by the Führer would be perfect."
+ austria.3.a:0 "This was just the first step."
+ 
+ austria.4.t:0 "[AUS.GetLeader] Resists"
+ austria.4.d:0 "Despite the show of force made to the Austrian Chancellor, it seems that he has not implemented any of our demands. On the contrary, he has strengthened the measures against the Austrian Nazi party. \n\nThe Führer is furious, and has called for a final ultimatum to be issued to Vienna and for the army to prepare to cross the border."
+ austria.4.a:0 "They shall see what it costs to stand up to us!"
+ 
+ austria.5.t:0 "Hitler Further Hardens German Claims"
+ austria.5.d:0 "Despite the fact that we have acceded to their demands, the Germans still continue to pressure us and in a speech in the Reichstag Hitler once again reiterated his claims on our country. It now seems quite clear that the Nazis will only be satisfied with the complete loss of Austria's sovereignty to Germany..."
+ austria.5.a:0 "That's it, we can't just stand by and do nothing!"
+ austria.5.b:0 "That's it, we can't just stand by and do nothing!"
+ 
+ 
+ austria.6.t:0 "[AUS.GetLeader] Organizes a Referendum"
+ austria.6.d:0 "The past 2 weeks have been trying for the the Austrian Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats. Meanwhile the actions of the Austrian Nazis have only escalated in violence and the German pressure has been getting stronger day by day. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and without the approval of his ministers, to organise a referendum among the population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
+ austria.6.a:0 "This is our final hope."
+ 
+ austria.7.t:0 "[AUS.GetLeader] Organizes a Referendum"
+ austria.7.d:0 "The past 2 weeks have been trying for the the Austrian Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats while we continue to pressure him. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and to the general surprise, to organise a referendum among the austrian population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
+ austria.7.a:0 "How dare he?! Send an ultimatum to cancel this joke!"
+ 
+ austria.8.t:0 "German Ultimatum - Cancel The Referendum!"
+ austria.8.d:0 "On hearing the news, Berlin went into a rage and quickly sent us an ultimatum demanding the cancellation of the referendum, or otherwise we would face "serious consequences"."
+ austria.8.a:0 "Me must avoid an invasion at all cost."
+ austria.8.b:0 "Austria is a sovereign nation, and will do what must be done to remain one!"
+ 
+ austria.9.t:0 "Austria Complies"
+ austria.9.d:0 "Faced with the threat of arms, the Austrians had no choice but to cancel the referendum. But the affront is total and furthermore measures have to be taken to finally achieve the Anschluss. We will therefore modify our ultimatum, this time demanding the resignation of [AUS.GetLeader] and his replacement as Austrian Chancellor by Herr Seyss-Inquart, an eminent Nazi devoted to our cause."
+ austria.9.a:0 "Austrian brothers, your liberation is near!"
+ 
+ austria.10.t:0 "Austria Resists"
+ austria.10.d:0 "The Austrian government publicly refused and denied everything, appealing to their rights as a sovereign nation "to prevent any external shenanigans harmful to the nation"! These fools leave us with no other choice, we will launch a coup that will quickly put an end to this ridiculous situation."
+ austria.10.a:0 "Seyss-Inquart will do what is necessary to serve the interests of the german people."
+ 
+ austrian_coup.1.t:0 "Austria Presses For Anschluss"
+ austrian_coup.1.d:0 "Although the coup did not take place under perfect conditions, it was a resounding victory and was supported by the vast majority of the Austrian population. Now that the position of the Nazi party in Vienna is consolidated, the final step can be made for the completion of the Anschluss."
+ austrian_coup.1.a:0 "Who can say that Austria is not German?"
+ 
+ austria.11.t:0 "Germany Reformulates It's Ultimatum"
+ austria.11.d:0 "It would appear that the Germans did not take the Chancellor's actions very well. Clearly determined this time to get it over with once and for all, the Germans sent us a final ultimatum; [AUS.GetLeader] must resign from office and Arthur Seyss-Inquart, one of the leading Austrian Nazis, must be appointed at his post. This is an obvious and crude coup d'état, but we knew that it would happen sooner or later anyway."
+ austria.11.a:0 "It is the only thing to do to avoid an unnecessary bloodshed..."
+ austria.11.b:0 "We shall give them a proper welcome if they dare to cross the border."
+ 
+ 
+ austria.14.t:0 "The Anschluss of Austria"
+ austria.14.d:0 "Despite the Chancellors's willingness to resign the Austrian President initially refused, but under peaking pressure from us finally agreed, and the Chancellor retired after a final speech. \n\nUpon hearing this news, Vienna immediately descended into chaos, with the mob spontaneously turning against jewish citizens, molesting them and destroying their businesses, while the Austrian Nazis were effectively taking over public buildings throughout the country. \n\nMeanwhile, the President, who was now refusing to appoint [AUS.GetLeader], finally came to realise that all was lost and proceded. A few hours later the Wehrmacht crossed the border under the cheers; in the early hours of the morning Austria as a country had ceased to exist."
+ austria.14.a:0 "Who can say that Austria is not German?"
+ 
+ 
+ austria.15.t:0 "The Anschluss of Austria"
+ austria.15.d:0 "After the ultimatum had passed without any reaction from [AUS.GetLeader], the Wehrmacht was ordered to cross the border while the Austrian Nazis quickly took over many public buildings throughout the country. The German army was welcomed without a single shot despite direct orders from Vienna to repel the invasion and was even cheered by the population. \n\nFurthermore, on the announcement of the takeover and as the Wehrmacht was rapidly approaching it, the Austrian capital suddenly descended into complete chaos with mobs  lynching the remnants of the Austrian government and spontaneously turning against Jewish citizens, molesting them and destroying their businesses. \n\nThe next morning we controlled the entire territory and Austria as a country had ceased to exist."
+ austria.15.a:0 "Who can say that Austria is not German?"
+ 
+ 
+ #############################################################
+ 
+ anschluss_reaction.1.t:0 "German Pressures on Austria"
+ anschluss_reaction.1.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that Hitler has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that the Austrian Chancellor and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, and allowing it to take place without reacting could have very serious consequences. \n\nOn the other hand, considering the extremely strong German claims over Austria many are arguing that these can be stopped by force of arms only, and the government is therefore extremely reluctant to intervene in any way. How should we react?"
+ anschluss_reaction.1.d_2:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that Hitler has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that the Austrian Chancellor and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, in other words this is nothing but another attempt by Germany to violate this treaty. And Hitler having demonstrated his willingness to go through with his plans regardless of the consequences, we now most likely find ourselves with a new ally in our fight against fascism."
+ anschluss_reaction.1.a:0 "Let's just issue a diplomatic objection."
+ anschluss_reaction.1.b:0 "The treaties must be enforced whatever the price might be!"
+ 
+ anschluss_reaction.2.t:0 "German Pressures on Austria"
+ anschluss_reaction.2.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that Hitler has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that the Austrian Chancellor and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, and allowing it to take place without reacting could have very serious consequences. \n\nThe British have informed us that in their opinion there is nothing that can be done to enforce the treaties except to engage in a war with Germany, and therefore categorically refuse to intervene. If we decide to interfere we shall be alone against the Germans."
+ anschluss_reaction.2.a:0 "Let's just issue a diplomatic objection."
+ anschluss_reaction.2.b:0 "The British be damned! We can't allow the Germans to do as they please!"
+ 
+ anschluss_reaction.3.t:0 "German Pressures on Austria"
+ anschluss_reaction.3.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that Hitler has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that the Austrian Chancellor and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, and allowing it to take place without reacting could have very serious consequences. \n\nThe British have informed us of their decision to enforce the treaties at all costs, even if at this point it likely  means war with Germany. Should we follow the British or stay out of it?"
+ anschluss_reaction.3.a:0 "We'll show Hitler what it means to defy us!"
+ anschluss_reaction.3.b:0 "France should stay of this."
+ 
+ anschluss_reaction.4.t:0 "The British are Backing us!"
+ anschluss_reaction.4.d:0 "The British, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; in the interest of respecting the clauses of the Treaties of Versailles and Saint-Germain-en-Laye which formally forbid a union between Germany and Austria."
+ anschluss_reaction.4.a:0 "The cavalry is here!"
+ 
+ anschluss_reaction.5.t:0 "The French are Backing us!"
+ anschluss_reaction.5.d:0 "The French, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; in the interest of respecting the clauses of the Treaties of Versailles and Saint-Germain-en-Laye which formally forbid a union between Germany and Austria."
+ anschluss_reaction.5.a:0 "The cavalry is here!"
+ 
+ anschluss_reaction.6.t:0 "France and Britain are Backing us!"
+ anschluss_reaction.6.d:0 "The two allies, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; in the interest of respecting the clauses of the Treaties of Versailles and Saint-Germain-en-Laye which formally forbid a union between Germany and Austria."
+ anschluss_reaction.6.a:0 "The cavalry is here!"
+ 
+ anschluss_reaction.7.t:0 "France, Britain and Italy remains passive"
+ anschluss_reaction.7.d:0 "Despite the fact that all three countries were quickly made aware of the dramatic situation in which we find ourselves, neither of them wished to intervene, even though they are supposed to be enforcing the treaties of Versailles and Saint-Germain-En-Laye for the two firsts and the third was supposed to guarantee us from the german threat. \n\nOnly the French ambassador merely advised us to organise a referendum on the annexation in order to resolve the crisis without bloodshed."
+ anschluss_reaction.7.a:0 "Looks like we're completely alone here..."
+ 
+ ##################################################################
+ 
+ anschluss_reaction.8.t:0 "The British Back Austria!"
+ anschluss_reaction.8.d:0 "Having been promptly informed of our plans towards Austria, the British informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it."
+ anschluss_reaction.8.a:0 "They better stay out of this."
+ anschluss_reaction.8.b:0 "Very well. Let's ask for a mediation then."
+ 
+ anschluss_reaction.9.t:0 "The French Back Austria!"
+ anschluss_reaction.9.d:0 "Having been promptly informed of our plans towards Austria, the French informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it."
+ anschluss_reaction.9.a:0 "They better stay out of this."
+ anschluss_reaction.9.b:0 "Very well. Let's ask for a mediation then."
+ 
+ anschluss_reaction.10.t:0 "Britain and France Back Austria!"
+ anschluss_reaction.10.d:0 "Having been promptly informed of our plans towards Austria, the French and the British informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it."
+ anschluss_reaction.10.a:0 "They better stay out of this."
+ anschluss_reaction.10.b:0 "Very well. Let's ask for a mediation then."
+ 
+ anschluss_reaction.12.t:0 "Britain, France and Italy Back Austria!"
+ anschluss_reaction.12.d:0 "Having been promptly informed of our plans towards Austria, the French and the British but informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it. Apparently impressed by this show of force, the Italians, because of their interests in Austria, decided to side with the Allies and also declared their military support for Austria."
+ anschluss_reaction.12.a:0 "They better all stay out of this."
+ anschluss_reaction.12.b:0 "Very well. Let's ask for a mediation then."
+ 
+ anschluss_reaction.13.t:0 "Britain and Italy Back Austria!"
+ anschluss_reaction.13.d:0 "Having been promptly informed of our plans towards Austria, the British informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it. Apparently impressed by this show of force, the Italians, because of their interests in Austria, decided to side with the British and also declared their military support for Austria."
+ anschluss_reaction.13.a:0 "They better stay out of this."
+ anschluss_reaction.13.b:0 "Very well. Let's ask for a mediation then."
+ 
+ anschluss_reaction.14.t:0 "France and Italy Back Austria!"
+ anschluss_reaction.14.d:0 "Having been promptly informed of our plans towards Austria, the French informed us that, under the clauses of the Treaty of Versailles strictly forbidding the Anschluss, if we were to violate Austrian integrity they would be prepared to resort to force to safeguard it. Apparently impressed by this show of force, the Italians, because of their interests in Austria, decided to side with the French and also declared their military support for Austria."
+ anschluss_reaction.14.a:0 "They better stay out of this."
+ anschluss_reaction.14.b:0 "Very well. Let's ask for a mediation then."
+ 
+ 
+ ####################################################################
+ 
+ frankfurt_conference.1.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ frankfurt_conference.1.desc:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but there is every reason to believe that such a plebiscite could be largely in Germany's favour anyway, and furthermore this union remains completely forbidden by the treaties, regardless of whether the Austrian people are for or against it."
+ frankfurt_conference.1.a:0 "Fine, let the people decide." (ENG + FRA [+ITA])
+ frankfurt_conference.1.b:0 "Fine, let the people decide." (ENG)
+ frankfurt_conference.1.c:0 "Fine, let the people decide." (FRA)
+ frankfurt_conference.1.d:0 "Fine, let the people decide." (FRA + ITA)
+ frankfurt_conference.1.e:0 "Fine, let the people decide." (ENG + ITA)
+ #########################################################
+ frankfurt_conference.1.f:0 "A no is a no." (FRA + ITA)
+ frankfurt_conference.1.g:0 "A no is a no." (ENG + ITA)
+ frankfurt_conference.1.h:0 "A no is a no." (FRA)
+ frankfurt_conference.1.i:0 "A no is a no." (ENG)
+ frankfurt_conference.1.j:0 "A no is a no." (ENG + FRA [+ITA])
+ 
+ frankfurt_conference.2.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ frankfurt_conference.2.desc:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but there is every reason to believe that such a plebiscite could be largely in Germany's favour anyway, and furthermore this union remains completely forbidden by the treaties, regardless of whether the Austrian people are for or against it. \n\nThe British on their side have already given their approval."
+ frankfurt_conference.2.a:0 "Very well, let's also give our approval."
+ frankfurt_conference.2.b:0 "Well WE do not agree!"
+ frankfurt_conference.2.c:0 "Very well, let's also give our approval."
+ frankfurt_conference.2.d:0 "Well WE do not agree!"
+ 
+ must_be_a_majority_tt: "
+ 
+ frankfurt_conference.3.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ frankfurt_conference.3.desc:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but there is every reason to believe that such a plebiscite would be largely in Germany's favour anyway, and furthermore this union remains completely forbidden by the two treaties, regardless of whether the Austrian people are for or against it. \n\nThe British have already refused, declaring that their decision on the matter is final and irrevocable, how should we react?"
+ frankfurt_conference.3.a:0 "The Austrian people have the right to choose, whether the British like it or not."
+ frankfurt_conference.3.b:0 "Well said! The treaties must be enforced, period."
+ frankfurt_conference.3.c:0 "The Austrian people have the right to choose, whether the British like it or not."
+ frankfurt_conference.3.d:0 "Well said! The treaties must be enforced, period."
+ 
+ frankfurt_conference.4.t:0 "France Agrees To Hold a Plebiscite Regardless"
+ frankfurt_conference.4.d:0 "While we have declared our strict objection to the german project, the French have unilaterally accepted it. It will thus be carried out in spite of the obvious threat that constitutes a united Germany and an Austria."
+ frankfurt_conference.4.a:0 "Wait what? Backstabbers!"
+ 
+ frankfurt_conference.5.t:0 "France Agrees To Hold a Plebiscite"
+ frankfurt_conference.5.d:0 "France accepted our request to organize a plebiscite, this is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ frankfurt_conference.5.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ frankfurt_conference.6.t:0 "Britain Agrees To Hold a Plebiscite"
+ frankfurt_conference.6.d:0 "The British have accepted our request to organize a plebiscite, this is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ frankfurt_conference.6.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ frankfurt_conference.7.t:0 "Britain And France Agree To Hold a Plebiscite"
+ frankfurt_conference.7.d:0 "Both the British and French have accepted our request to organize a plebiscite, this is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ frankfurt_conference.7.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ frankfurt_conference.8.t:0 "Britain And France Refuse To Hold a Plebiscite"
+ frankfurt_conference.8.d:0 "Both the British and French have refused our request to organize a plebiscite, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ frankfurt_conference.8.a:0 "They let us no choice."
+ frankfurt_conference.8.b:0 "But we're not ready for a confrontation..."
+ 
+ frankfurt_conference.13.t:0 "France Refuses To Hold a Plebiscite"
+ frankfurt_conference.13.d:0 "The French have refused our request to organize a plebiscite, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ frankfurt_conference.13.a:0 "They let us no choice."
+ frankfurt_conference.13.b:0 "But we're not ready for a confrontation..."
+ 
+ frankfurt_conference.14.t:0 "The British Refuse To Hold a Plebiscite"
+ frankfurt_conference.14.d:0 "The British have refused our request to organize a plebiscite, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ frankfurt_conference.14.a:0 "They let us no choice."
+ frankfurt_conference.14.b:0 "But we're not ready for a confrontation..."
+ 
+ italian_refusals.1.t:0 "Britain and Italy Refuse To Hold a Plebiscite"
+ italian_refusals.1.d:0 "Despite the French initial willingness to support our proposal, both the British and Italians have categorically refused, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ italian_refusals.1.a:0 "They let us no choice."
+ italian_refusals.1.b:0 "But we're not ready for a confrontation..."
+ 
+ italian_refusals.2.t:0 "France and Italy Refuse To Hold a Plebiscite"
+ italian_refusals.2.d:0 "Despite the British initial willingness to support our proposal, both the French and Italians have categorically refused, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ italian_refusals.2.a:0 "They let us no choice."
+ italian_refusals.2.b:0 "But we're not ready for a confrontation..."
+ 
+ italian_refusals.3.t:0 "France, Britain and Italy Refuse To Hold a Plebiscite"
+ italian_refusals.3.d:0 "The three powers collectively categorically opposed our proposal to organize a plebiscite, even thought it could have avoided an unnecessary bloodbath. Our patience is now running out and it looks like it's time to resort to arms."
+ italian_refusals.3.a:0 "They let us no choice."
+ italian_refusals.3.b:0 "But we're not ready for a confrontation..."
+ 
+ italian_refusals.4.t:0 "Italy And France Agree To Hold a Plebiscite"
+ italian_refusals.4.d:0 "Both the Italians and French have accepted our request to organize a plebiscite, this is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ italian_refusals.4.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ italian_refusals.5.t:0 "Italy And Britain Agree To Hold a Plebiscite"
+ italian_refusals.5.d:0 "Both the Italians and British have accepted our request to organize a plebiscite, this is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ italian_refusals.5.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ italian_refusals.6.t:0 "Britain And France Agree To Hold a Plebiscite"
+ italian_refusals.6.d:0 "Despite strict Italian opposition to the idea, both the French and the British have accepted our request to organize a plebiscite. This is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ italian_refusals.6.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ italian_refusals.7.t:0 "Britain, France and Italy Agree To Hold a Plebiscite"
+ italian_refusals.7.d:0 "Quite surprisingly, the French, the British and the Italians all approved our request to organize a plebiscite. This is our last chance to settle the Anschluss crisis without an open conflict, if we lose it, we will have no choice but to go to war to get what is legitimely us, or to give up our claims on Austria for the time being..."
+ italian_refusals.7.a:0 "We have to win, we can't afford such a humiliation."
+ 
+ italian_refusals.8.t:0 "The Plebiscite Proposal Raises Debate Between The Allies"
+ italian_refusals.8.d:0 "Our proposal seems to have created quite the conflict between the allied diplomats, one half being for and the other half against. In the end, lacking a majority on either side, the proposal was rejected... Our patience is now running out and it looks like it's time to resort to arms."
+ italian_refusals.8.a:0 "Well, we tried. After diplomacy, time for force."
+ italian_refusals.8.b:0 "We're not ready for a confrontation anyway..."
+ 
+ 
+ 
+ frankfurt_conference.9.t:0 "Mediators Press For a Plebiscite"
+ frankfurt_conference.9.d:0 "With force having proved unsuccessful at first, it would seem that Germany now tries to play the game of diplomacy. At the end of a conference in Frankfurt, the Germans asked the Allies to be able to organize a plebiscite on the annexation of Austria to Germany among the Austrian population, "in order to find a way out of this crisis without bloodshed". The Allies ultimately agreed, and are now pressing for the plebiscite to be held. \n\nThe Chancellor believes that the plebiscite can be won on condition that we manage to negotiate the participation of some political parties, such as the Social-Democrats, in the cause of Austrian independence, in exchange for a lifting of the ban on these parties."
+ frankfurt_conference.9.a:0 "We can't afford to destabilise our autority like this. There must be another way..."
+ frankfurt_conference.9.b:0 "We have to make what must be done to save our nation."
+ 
+ #frankfurt_conference.10.t:0 "French Mediators Press For a Plebiscite"
+ #frankfurt_conference.10.d:0 "With force having proved unsuccessful at first, it would seem that Germany now tries to play the game of diplomacy. At the end of a conference in Frankfurt, the Germans asked the Allies to be able to organize a plebiscite on the annexation of Austria to Germany among the Austrian population, in order to find a way out of this crisis without bloodshed. The French agreed, and are now pressing for the plebiscite to be held!"
+ #frankfurt_conference.10.a:0 "Looks like you can't escape fate..."
+ #frankfurt_conference.10.b:0 "We shall fight till the very end if we have to!"
+ 
+ #frankfurt_conference.11.t:0 "British and French Mediators Press For a Plebiscite"
+ #frankfurt_conference.11.d:0 "With force having proved unsuccessful at first, it would seem that Germany now tries to play the game of diplomacy. At the end of a conference in Frankfurt, the Germans asked the Allies to be able to organize a plebiscite on the annexation of Austria to Germany among the Austrian population, in order to find a way out of this crisis without bloodshed. Both the French and British agreed, and are now pressing for the plebiscite to be held!"
+ #frankfurt_conference.11.a:0 "Looks like you can't escape fate..."
+ #frankfurt_conference.11.b:0 "We shall fight till the very end if we have to!"
+ 
+ austrian_plebiscite_results.1.t:0 "The Anschluss Plebiscite"
+ austrian_plebiscite_results.1.d:0 "Quite unsurprisingly, the Austrian citizens voted overwhelmingly in favor of the annexation of Austria into our glorious Reich. This finally concludes the Austrian crisis."
+ austrian_plebiscite_results.1.a:0 "The Allies can rest assured that they have escaped war... for the moment."
+ 
+ austrian_plebiscite_results.2.t:0 "The Anschluss Plebiscite"
+ austrian_plebiscite_results.2.d:0 "Despite the obvious support for the Anschluss of the Austrian population, it seems that we have lost! The probable cause is surely the many political tricks of the Austrian chancellor who managed to get several political parties into his pocket by... unbanning them. The Führer is furious, he blamed it on fraud, and is now calling for the immediate invasion of Austria."
+ austrian_plebiscite_results.2.a:0 "Let's show them all what it costs to humiliate us!"
+ austrian_plebiscite_results.2.b:0 "We're not ready for a war..."
+ 
+ #########################################################
+ 
+ 
+ AOV_news.411.t:0 "The Anschluss of Austria" #historical, nothing happened
+ AOV_news.411.d:0 "Right after a successful coup d'état by the local Nazi party in Austria which was the outcome of a month-long crisis between Berlin and Vienna, German troops have crossed the Austrian border and taken control of the country. No fighting has been reported, and the German soldiers were greeted by cheering crowds in the cities.\n\nIn a speech before a massive crowd at the Heldenplatz in Vienna, Hitler announced the Anschluss of Austria, annexing the country into Germany:'The oldest eastern province of the German people shall be, from this point on, the newest bastion of the German Reich!'"
+ AOV_news.411.a:0 "If that is what they wish..."
+ AOV_news.411.b:0 "Welcome to the Reich!"
+ AOV_news.411.c:0 "We must secure our northern borders!"
+ AOV_news.411.e:0 "If that is what they wish..."
+ 
+ AOV_news.412.t:0 "The Anschluss of Austria" #alternative with civil war
+ AOV_news.412.d:0 "After a successful coup d'état by the local Nazi party of Austria, the fascists quickly took over the few areas that remained loyal to the government. A few days after all fighting was over, German soldiers crossed the border to take control of the country and were greeted by cheering crowds in the cities. \n\nIn a speech before a massive crowd at the Heldenplatz in Vienna, Hitler announced the Anschluss of Austria, annexing the country into Germany:'The struggles of the people are now over! The oldest eastern province of the German people shall be, from this point on, the newest bastion of the German Reich!'"
+ AOV_news.412.a:0 "If that is what they wish..."
+ AOV_news.412.b:0 "Welcome to the Reich!"
+ AOV_news.412.c:0 "We must secure our northern borders!"
+ AOV_news.412.e:0 "Did they needed so much violence?"
+ 
+ AOV_news.402.title:0 "The Frankfurt Conference" #Frankfurt Conference and Germany wins the plebiscite
+ AOV_news.402.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, had succeeded in organizing a conference in Frankfurt between all the concerned nations.\n\nBy the end of the Conference a compromise was found; a plebiscite was to be organized in Austria regarding the opinion of the population about the annexation of the country to Germany; plebiscite that the 'yes' ended up winning by an overwhelming majority."
+ AOV_news.402.a:0 "A close call."
+ AOV_news.402.b:0 "Welcome to the Reich!"
+ AOV_news.402.c:0 "We must secure our northern borders!"
+ AOV_news.402.e:0 "At last, peace was safeguarded."
+ AOV_news.402.f:0 "At least there won't be a war..."
+ 
+ AOV_news.403.title:0 "The Frankfurt Conference" #Frankfurt Conference fails
+ AOV_news.403.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, had succeeded in organizing a conference in Frankfurt between all the concerned nations.\n\nBy the end of the Conference, however, no compromise had been reached between the involved european powers, and war now seemed imminent."
+ AOV_news.403.a:0 "A noble attempt at safeguarding peace in Europe."
+ AOV_news.403.b:0 "Austria is rightfully German!"
+ AOV_news.403.c:0 "We must secure our northern borders!"
+ AOV_news.403.e:0 "Well, we tried..."
+ AOV_news.403.f:0 "Better a war than being eaten by our neighbour."
+ 
+ AOV_news.404.title:0 "The Frankfurt Conference" #Frankfurt Conference and Austria Refusal of the Plebiscite
+ AOV_news.404.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, had succeeded in organizing a conference in Frankfurt between all the concerned nations.\n\nBy the end of the Conference a compromise was found; a plebiscite was to be organized in Austria regarding the opinion of the population about the Anschluss. However and at the general surprise, the Austrian government refused, standing up not only to the Germans but also to the Allies, who then promptly cut all their diplomatic ties with Austria, which is now once again isolated against Germany."
+ AOV_news.404.a:0 "A truly surprising turn of events."
+ AOV_news.404.b:0 "Stubborn fools!"
+ AOV_news.404.c:0 "We must secure our northern borders!"
+ AOV_news.404.e:0 "It's not like we didn't try."
+ AOV_news.404.f:0 "Screw them! Screw them all!"
+ 
+ AOV_news.405.title:0 "The Frankfurt Conference" #Frankfurt Conference and Germany looses the Plebiscite
+ AOV_news.405.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, had succeeded in organizing a conference in Frankfurt between all the concerned nations.\n\nBy the end of the Conference a compromise was found; a plebiscite was to be organized in Austria regarding the opinion of the population about the annexation of the country to Germany; plebiscite that the 'no' ended up winning by a very small margin."
+ AOV_news.405.a:0 "the people have choosen."
+ AOV_news.405.b:0 "This is a disaster and a humiliation!"
+ AOV_news.405.c:0 "We must secure our northern borders!"
+ AOV_news.405.e:0 "the people have choosen."
+ AOV_news.405.f:0 "Long live independent Austria!"
+ 
+ AOV_news.406.title:0 "Conclusion of the Austrian Crisis" #Italy Intervene, Germany Backs down
+ AOV_news.406.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, it would seem that Italy, despite the almost total absence of reaction from the Allies who were supposed to enforce the Treaties of Versailles and Saint-Germain-en-Laye which strictly forbide a union between Germany and Austria, decided to intervene. \n\nThis decision, reflecting the situation of the attempted Anschluss of 1934, can be explained by the interests the Italians have in Austria and the Balkans. Faced with the Italian threats, the Germans decided to back down, thus marking an effective end to the Austrian crisis."
+ AOV_news.406.a:0 "Interesting turn of events."
+ AOV_news.406.b:0 "1934 all over again..."
+ AOV_news.406.c:0 "This time again we did all the work..."
+ AOV_news.406.e:0 "This is a bit embarrasing."
+ AOV_news.406.f:0 "Long live our Italian protectors!"
+ 
+ AOV_news.407.title:0 "The Austrian Crisis Escalates" #Italy Intervene, Germany go to war
+ AOV_news.407.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, it would seem that Italy, despite the almost total absence of reaction from the Allies who were supposed to enforce the Treaties of Versailles and Saint-Germain-en-Laye which strictly forbide a union between Germany and Austria, decided to intervene. \n\nThis decision, reflecting the situation of the attempted Anschluss of 1934, can be explained by the interests the Italians have in Austria and the Balkans. Germany however, despite the threats, refused to back down and a war between the two European powers now seems imminent."
+ AOV_news.407.a:0 "Interesting turn of events."
+ AOV_news.407.b:0 "It's a shame we had to come to this."
+ AOV_news.407.c:0 "Looks like we have to do all the work here."
+ AOV_news.407.e:0 "What are the Italians thinking?"
+ AOV_news.407.f:0 "Long live our Italian protectors!"
+ 
+ AOV_news.408.title:0 "The Frankfurt Conference" #Frankfurt Conference, plebiscite refused and germany backs down
+ AOV_news.408.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity, in the hope of being able to resolve diplomatically what was now called the Austrian crisis, had succeeded in organizing a conference in Frankfurt between all the concerned nations.\n\nBy the end of the Conference, no compromise had been reached as Austria's guaranteeing powers ended being implacable. Against all odds however the Germans backed down, and it seems that the Austrian crisis is now over for good."
+ AOV_news.408.a:0 "The Allies aren't messing around."
+ AOV_news.408.b:0 "This is a disaster and a humiliation..."
+ AOV_news.408.c:0 "Looks like Austria will remain in our sphere."
+ AOV_news.408.e:0 "The Germans were thaught a lesson they will remember."
+ AOV_news.408.f:0 "Long live independent Austria!"
+ 
+ AOV_news.409.title:0 "The Austrian Crisis Escalates" #Mediation Option refused, germany goes to war with austria
+ AOV_news.409.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, initiated calls for negotiations, which unfortunately went unanswered. \n\nAs Germany is looking like it will not back down despite the theats, a new war in Europe now seems imminent."
+ AOV_news.409.a:0 "Worrying."
+ AOV_news.409.b:0 "Austria is rightfull German land and we will get it one way or another!"
+ AOV_news.409.c:0 "Worrying."
+ AOV_news.409.e:0 "We've already beaten the Germans once, and we'll do so again!"
+ AOV_news.409.f:0 "*Chuckles* we're in danger"
+ 
+ AOV_news.410.t:0 "Renewal of the Rome Protocols" #Renewal of the Rome Protocols (if Italy ends up supporting Austria)
+ AOV_news.410.desc:0 "Following the the Austrian crisis, Italy, aiming to counter the aggressive German expansionism and revisionism, announced that it intended to renew and reinforce the Rome protocols; a series of international agreements between Italy, Austria and Hungary signed in 1934 that were primarily intended to guarantee economic cooperation between these three countries. \n\nIndeed, the crisis put two of the three signatories of these agreements in danger of war, and [ITA.GetLeader] therefore hoped to extend this alliance into not only an economic and political but also full military cooperation, "In order to effectively handle the German threat."."
+ AOV_news.410.a:0 "this alliance will certainly be fruitful for our 3 nations."
+ AOV_news.410.b:0 "A shame, the Italians would surely have made good allies."
+ AOV_news.410.c:0 "The Germans are becoming isolated."
+ 
+ 
+ #############################################################
+ 
+ anschluss_reaction.11.t:0 "Germany Puts Pressure on Austria"
+ anschluss_reaction.11.d:0 "We have recently been informed, firstly by our ambassadors on site and secondly by the news, that Germany's policy towards Austria has recently become extremely tough, and we have every reason to believe that this is the beginning of serious difficulties for this rather diplomatically isolated country.\n\nWe could be considerate and try to at least approach the League of Nations about this matter, or just let it go, it's not like it's any of our business after all."
+ anschluss_reaction.11.a:0 "We should not meddle in the affairs of other countries."
+ anschluss_reaction.11.b:0 "One's duty must always be to defend the rights of the others."
+ 
+ #############################################################
+ 
+ anschluss_reaction_ita_aus.1.t:0 "The British And Italians Are Backing us!"
+ anschluss_reaction_ita_aus.1.d:0 "The two countries, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; even though Italy clearly let us know that they were not helping us out of charity but to protect their interests against Nazi expansionism."
+ anschluss_reaction_ita_aus.1.a:0 "The cavalry is here!"
+ 
+ anschluss_reaction_ita_aus.2.t:0 "The French And Italians Are Backing us!"
+ anschluss_reaction_ita_aus.2.d:0 "The two countries, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; even though Italy clearly let us know that they were not helping us out of charity but to protect their interests against Nazi expansionism."
+ anschluss_reaction_ita_aus.2.a:0 "The cavalry is here!"
+ 
+ anschluss_reaction_ita_aus.3.t:0 "The Italians Are Backing us!"
+ anschluss_reaction_ita_aus.3.d:0 "While the allied powers, who are supposed to enforce the Versailles and Saint-Germain-en-Laye treaties, strictly forbidding the Anschluss, remained silent in the face of the situation, the Italians decided to come to our rescue! They declared their full diplomatic and military support to [AUS.GetLeader], even though they made it clear that they were not doing this out of compassion but to protect their interests from Nazi expansionism."
+ anschluss_reaction_ita_aus.3.a:0 "It's 1934 all over again!"
+ 
+ anschluss_reaction_ita_aus.4.t:0 "The British, French And Italians Are Backing us!"
+ anschluss_reaction_ita_aus.4.d:0 "The three countries, who were quickly made aware of what was going on, approached us and declared their full diplomatic and military support to [AUS.GetLeader] regarding this crisis; even though Italy clearly let us know that they were not helping us out of charity but to protect their interests against Nazi expansionism."
+ anschluss_reaction_ita_aus.4.a:0 "The cavalry is here!"
+ 
+ ###############################################################
+ 
+ italian_reaction.1.t:0 "German Pressure on Austria - The Allies Intervene"
+ 
+ italian_reaction.1.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nBut this time however as opposed to the 1934 attempt, it seems that the Allies have decided to intervene which is an assurance that we could perhaps begin to trust them."
+ 
+ # On the other hand a rapprochement with Germany, even if it means dropping Austria, could be interesting. As [GER.GetLeader] would probably be much more receptive to our ambitions than our "allies" of the Great War.
+ 
+ italian_reaction.1.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nThis time however as opposed to the 1934 attempt, it looks like the Allies have decided to intervene! When we gave our complete and total assurance to the Austrians regarding the independence of their country, we had feared that we would once again find ourselves alone the day [GER.GetLeader] would come to reclaim Austria, but it's not the case anymore!"
+ 
+ italian_reaction.1.a:0 "Perhaps this is a good sign? Let's back Austria too."
+ italian_reaction.1.b:0 "They have long lost our trust."
+ italian_reaction.1.c:0 "Perhaps we misjudged our allies."
+ italian_reaction.1.e:0 "You know what? Who cares about Austria after all."
+ 
+ ##################
+ 
+ italian_reaction.2.t:0 "German Pressure on Austria - Britain Intervene"
+ 
+ italian_reaction.2.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nBut this time however, it seems that the Allies, or at least the British, have decided to intervene which is an assurance that we could perhaps begin to trust them."
+ 
+ italian_reaction.2.d_2:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nThis time however as opposed to the 1934 attempt, it looks the British have decided to intervene! When we gave our complete and total assurance to the Austrians regarding the independence of their country, we had feared that we would once again find ourselves alone the day [GER.GetLeader] would come to reclaim Austria, but it's not the case anymore!"
+ 
+ italian_reaction.2.a:0 "Perhaps this is a good sign? Let's back Austria too."
+ italian_reaction.2.b:0 "They have long lost our trust."
+ italian_reaction.2.c:0 "Perhaps we have misjudged Britain."
+ italian_reaction.2.e:0 "You know what? Who cares about Austria after all."
+ 
+ #####################
+ 
+ italian_reaction.3.t:0 "German Pressure on Austria - France Intervene"
+ 
+ italian_reaction.3.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nBut this time however, it seems that the Allies, or at least the French, have decided to intervene which is an assurance that we could perhaps begin to trust them."
+ 
+ italian_reaction.3.d_2:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nThis time however as opposed to the 1934 attempt, it looks the French have decided to intervene! When we gave our complete and total assurance to the Austrians regarding the independence of their country, we had feared that we would once again find ourselves alone the day [GER.GetLeader] would come to reclaim Austria, but it's not the case anymore!"
+ 
+ italian_reaction.3.a:0 "Perhaps this is a good sign? Let's back Austria too."
+ italian_reaction.3.b:0 "They have long lost our trust."
+ italian_reaction.3.c:0 "Perhaps we have misjudged France."
+ italian_reaction.3.e:0 "You know what? Who cares about Austria after all."
+ 
+ #######################
+ 
+ italian_reaction.4.t:0 "German Pressure on Austria - The Allies Remains Silent"
+ 
+ italian_reaction.4.d:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nSadly it would seem that nothing has changed since '34, as the French and British have once again limited themselves to vague objections. Maybe is it time to seriously reconsider the reliability of our 'allies' of the Great War."
+ 
+ #, and we are beginning to think that a rapprochement with Germany, at the cost of Austria as a first step, might be a better idea than sticking with these guts-lacking traitors. Especially considering that [GER.GetLeader] might probably be much more receptive to our ambitions than the Allies ever were and will.
+ 
+ italian_reaction.4.d_2:0 "German pressure on Austria seems to have increased considerably recently. And it is now apparent that [GER.GetLeader] has in mind to begin preparations for the "Anschluss" - the union of his native country with Germany, wich is one of his long-standing main objectives. Our local ambassador further reported that [AUS.GetLeader] and his government seemed very nervous about the situation. \n\nIt should be noted that a union between Germany and Austria is strictly forbidden by the Treaties of Versailles and Saint-Germain-en-Laye, that France and Britain (and us... to a certain extend) are supposed to guarantee. \n\nIt should also be noted that an independent Austria benefits us quite a bit in terms of Realpolitik, mostly given how much the Austrian government owes us for protecting them from a first Anschluss attempt in 1934. \n\nSadly it would seem that nothing has changed since '34, as the French and British have once again limited themselves to vague objections. It is maybe time to seriously reconsider the reliability of our "allies"... And so here we are, isolated once again against Germany, what should we do now?"
+ 
+ italian_reaction.4.a:0 "We'll turn a blind eye on the Anschluss... For now."
+ italian_reaction.4.b:0 "Let them know that Austria firmly belongs to our sphere of influence!"
+ italian_reaction.4.c:0 "We shall fulfil our commitments to Austria of course!"
+ italian_reaction.4.e:0 "You know what? Who cares about Austria after all." 
+ 
+ ########################
+ 
+ italian_reaction.5.t:0 "The Italians Are Backing Austria!"
+ italian_reaction.5.d:0 "Despite the almost non-existent reactions of France or Great Britain, the Italians have nevertheless, although isolated, decided to protest against the diplomatic pressure that we have begun to exercise against Austria in recent times in preparation for the Anschluss. \n\nIt would seem that the situation of 1934 is repeating itself, and the Italians have made it clear that not only is an annexation of Austria perfectly illegal, but that the country falls within their own sphere of influence."
+ italian_reaction.5.a:0 "We can't back down again!"
+ italian_reaction.5.b:0 "Looks like the Anschluss is not for now..."
+ 
+ ###################################################################################
+ ############ FRANKFURT CONF 
+ 
+ italian_reaction.6.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.6.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nNevertheless the two Allies have both already given their approval, which means that even if we are against it, we can't really do much anymore but protest."
+ italian_reaction.6.a:0 "We couldn't have hoped better coming from these backstabbers."
+ 
+ ignored_our_interests: "Ignored our interests"
+ 
+ italian_reaction.7.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.7.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nWhile France is in favour of this option, the UK has been protesting against the idea. Our opinion will therefore be decisive, as the minority will be compelled to go on with the opinion of the majority."
+ italian_reaction.7.a:0 "Better diplomacy than war."
+ italian_reaction.7.b:0 "Potentially abandoning Austria, even to avoid war, is out of the question."
+ 
+ italian_reaction.8.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.8.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nWhile Great-Britain is in favour of this option, the French have been protesting against the idea. Our opinion will therefore be decisive, as the minority will be compelled to go on with the opinion of the majority."
+ italian_reaction.8.a:0 "Better diplomacy than war."
+ italian_reaction.8.b:0 "Potentially abandoning Austria, even to avoid war, is out of the question."
+ 
+ italian_reaction.9.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.9.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nThe two allies remained extremely strict and flatly refused the proposal, which we of course welcome very much. It is, by the way, worth noting that it was a real shock to many of our diplomats to see how firm France and England were, which is in stark contrast with the behaviour they had until very recently."
+ italian_reaction.9.a:0 "What a surprising and welcome development!"
+ 
+ italian_reaction.10.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.10.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nThe French, on their side, decided to accept the proposal. It therefore remains to be seen whether we also accept it or reject it. It should be noted that if we stand up to the French and reject the idea one to one, therefore failing to find any compromise with Germany, the conference will come to nothing with the probable consequences we know."
+ italian_reaction.10.a:0 "Very well, let's approve the proposal too."
+ italian_reaction.10.b:0 "No compromise. Austria is ours, period."
+ 
+ italian_reaction.11.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.11.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nThe British, on their side, decided to accept the proposal. It now remains to be seen whether we also accept it or reject it. It should be noted that if we stand up to the British and reject the idea one to one, therefore failing to find any compromise with Germany, the conference will come to nothing with the probable consequences we know."
+ italian_reaction.11.a:0 "Very well, let's approve the proposal too."
+ italian_reaction.11.b:0 "No compromise. Austria is ours, period."
+ 
+ italian_reaction.12.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.12.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nThe British remained extremely strict and flatly refused the proposal, which we of course welcome very much."
+ italian_reaction.12.a:0 "So that's what the famous British stoicism looks like."
+ 
+ italian_reaction.13.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
+ italian_reaction.13.d:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but this union still remains completely forbidden by the treaties France and Britain are supposed to enforce, regardless of whether the Austrian people are for or against it. And futhermore as far as we are concerned, this "solution" may cause us to lose Austria. \n\nThe French remained extremely strict and flatly refused the proposal, which we of course welcome very much."
+ italian_reaction.13.a:0 "The French have definitely not lost any of their composure from the Great War."
+ 
+ ######################
+ 
+ #Pact of Rome faction event
+ 
+ italian_reaction.14.t:0 "Austrian Crisis - The Rome Protocols"
+ italian_reaction.14.d:0 "Following the Austrian crisis, it is now clear that cooperation with Germany is impossible. And we urgently need a way to fight the threat posed by the Reich. \n\nA solution could be to renew the Rome Protocols signed in 1934 between us, Austria and Hungary; these agreements were mainly economic, but were also intended to make it possible, for example, to assert our influence over a part of the Balkans. \n\nPushing these agreements further by allowing full military cooperation between our three nations could allow us to effectively oppose the Germans, as well as giving us a good starting point for possible eastern territorial expansions in the near future..."
+ italian_reaction.14.a:0 "Let's send the proposal to Austria and Hungary."
+ italian_reaction.14.b:0 "We have other plans."
+ 
+ italian_reaction.15.t:0 "Italy Wants To Renew The Rome Protocols"
+ italian_reaction.15.d:0 "Following the Austrian crisis the Italians approached us declaring they wanted to renew the Rome Protocols signed in 1934 between us, Austria and Italy; these agreements were mainly economic, but were also intended to make it possible, for example, to assert our influence over a part of the Balkans. \n\nPushing these agreements further by allowing full military cooperation, as it is what Italy would now like to do, between our three nations could allow us to effectively oppose the German threat, as well as giving us a good starting point for possible territorial expansions in the near future..."
+ italian_reaction.15.a:0 "We're in!"
+ italian_reaction.15.b:0 "We have other plans for ourselves."
+ 
+ ###################
+ 
+ #Renewal of the Entente event
+ 
+ italian_reaction.16.t:0 "Austrian Crisis - Fate of the Entente"
+ italian_reaction.16.d:0 "With the Austrian Crisis, it is apparent that cooperation with Germany is impossible, and we must quickly seek support if we are to fight this looming threat effectively. \n\nThe behaviour of the Allies recently is encouraging, and is perhaps a sign that they can be trusted and that we can begin to resurrect the alliances of the Great War for the interests of us all?"
+ italian_reaction.16.a:0 "Yes, we must put our conflicts with them aside, at least for now."
+ italian_reaction.16.b:0 "Italy will forge it's own destiny."
+ 
+ ########################
+ 
+ ger_ref_veto_tt: "§RThe majority of the guaranteeing powers present at the conference must accept the proposal for the plebiscite to take place. Otherwise the conference will conclude without a compromise being reached and will therefore be considered a failure.§!"
+ 
+ ger_ref_veto_fra_tt: "§RThe majority of the guaranteeing powers present at the conference must accept the proposal for the plebiscite to take place. If the Italians decide, like the British, to support the proposal, it will be accepted by 2 against 1. Otherwise the conference will conclude without a compromise being reached and will therefore be considered a failure.§!"
+ 
+ ger_ref_veto_tt: "§RThe majority of the guaranteeing powers present at the conference must accept the proposal for the plebiscite to take place. Otherwise the conference will conclude without a compromise being reached and will therefore be considered a failure.§!"
+ 
+ ger_ref_veto_eng_tt: "§RIf the French decide to refuse the proposal, the conference will conclude without a compromise being reached and will therefore be considered a failure.§!"
+ 
+ ger_ref_vet_ita_tt: "§RIf the Italians decide to refuse the proposal, the conference will conclude without a compromise being reached and will therefore be considered a failure.§!"
+ 
+ wait_a_few_days_ger_tt: "§YWe will continue to increase the pressure on Austria until the right moment to launch the Anschluss comes up.§!"
+ 

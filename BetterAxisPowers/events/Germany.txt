@@ -3680,6 +3680,16 @@ country_event = {
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.28 }
+			hidden_effect = {
+				set_global_flag = Adolf_killed
+				uncomplete_national_focus = {
+					focus = GER_Fuhrer
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				complete_national_focus = GER_hitler_is_gone
+				complete_national_focus = GER_Power_Heinrich_Himmler
+			}
 		}
 	}
 	option = { # Göring
@@ -3699,6 +3709,16 @@ country_event = {
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = news.29 }
+			hidden_effect = {
+				set_global_flag = Adolf_killed
+				uncomplete_national_focus = {
+					focus = GER_Fuhrer
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				complete_national_focus = GER_hitler_is_gone
+				complete_national_focus = GER_Power_hermann_goring
+			}
 		}
 	}
 }

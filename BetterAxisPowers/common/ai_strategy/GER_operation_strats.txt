@@ -1,24 +1,21 @@
- GER_collaboration_on_POL = {
+ GER_agents = {
  	allowed = {
  		tag = GER
  	}
- 	ai_strategy = {
- 		type = operative_operation
- 		operation = operation_collaboration_government
- 		value = 100
- 		operation_target = POL
- 	}
-	
+	enable = {
+		date > 1938.01.01
+	}
+
  	ai_strategy = {
  		type = operative_mission
  		mission = build_intel_network
  		value = 100
- 		mission_target = POL
+ 		mission_target = NOR
  	}
 
   	ai_strategy = {
  		type = intelligence_agency_usable_factories
- 		value = 30
+ 		value = 20
  	}
 
     ai_strategy = {
@@ -37,4 +34,195 @@
         type = operation_equipment_priority
         value = 10
     }
+}
+
+GER_put_agent_on_NOR = {
+	allowed = {
+		tag = GER
+	}
+
+    enable = {
+	   date > 1937.01.01
+    }
+
+	abort = {
+		date > 1941.03.01
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 100
+		mission_target = NOR
+	}
+
+}
+
+GER_blitz_norway_denmark = {
+	allowed = {
+		tag = GER
+	}
+
+    enable = {
+	   has_idea	= Operation_Weserubung_AI
+    }
+
+	abort = {
+		OR = {
+			AND = {
+				NOR = { has_capitulated = yes }
+				DEN = { has_capitulated = yes }
+			}
+			date > 1941.01.01
+		}
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = DEN
+		value = 100
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = DEN
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		strategic_region = 6
+		ordertype = front
+		execution_type = rush
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		strategic_region = 6
+		value = 50
+	}
+
+	ai_strategy = { type = strategic_air_importance id = 6 value = 50000 }
+	ai_strategy = { type = front_armor_score id = "DEN" value = 50000 }
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 100
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = NOR
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 142
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 110
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = NOR
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+
+	ai_strategy = { type = strategic_air_importance id = 11 value = 50000 }
+	ai_strategy = { type = front_armor_score id = "NOR" value = -50000 }
+
+}
+
+GER_Soviet_war = { #Good Luck!
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		OR = {
+			has_idea = GER_barbarossa
+			SOV = { has_idea = SOV_desperate_measures_ns }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_armor_score
+		id = "SOV"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -10
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = SOV
+
+		ratio = 0.5
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+GER_blitz_com_civilwar = { #Good Luck!
+	allowed = {
+		original_tag = GER
+		has_government = fascism
+	}
+
+	enable = {
+		has_country_flag = GER_BLITZ_COM
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_armor_score
+		id = "GER"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = GER
+
+		ratio = 0.5
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
 }

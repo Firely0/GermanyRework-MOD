@@ -1,3 +1,818 @@
+eva_braun_category = {
+
+	eva_braun_work_as_health_care = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_health
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_health"
+			}
+		}
+	}
+
+	eva_braun_work_as_eco = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_eco
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_eco"
+			}
+		}
+	}
+
+	eva_braun_asign_women_fasicm_moment = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_women_fasicm
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_fasicm_moment"
+			}
+		}
+	}
+
+	eva_braun_remove_from_job = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = eva_braun_has_job
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = eva_braun_women_fasicm
+				}
+				add_war_support = -0.1
+			}
+			if = {
+				limit = {
+					has_country_flag = eva_braun_health
+				}
+				add_stability = -0.1
+			}
+			if = {
+				limit = {
+					has_country_flag = eva_braun_eco
+				}
+				add_timed_idea = {
+					idea = ger_temp_debuff
+					days = 90
+				}
+			}
+			clr_country_flag = eva_braun_women_fasicm
+			clr_country_flag = eva_braun_health
+			clr_country_flag = eva_braun_eco
+			clr_country_flag = eva_braun_has_job
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_health
+				}
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_eco
+				}
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait_fasicm_moment
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = eva_braun_trait
+			}
+		}
+	}
+}
+
+GER_krupp_ph1 = {
+
+	Krupp_work_with_aircraft_designer = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			krupp_work_with_air = yes
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_completed_focus = GER_forced_colob_krupp
+		}
+
+		complete_effect = {
+		}
+	}
+
+	Krupp_work_with_ship_designer = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			krupp_work_with_naval = yes
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_completed_focus = GER_forced_colob_krupp
+		}
+
+		complete_effect = {
+		}
+	}
+
+	Krupp_work_with_tank_designer = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			krupp_work_with_tank = yes
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_completed_focus = GER_forced_colob_krupp
+		}
+
+		complete_effect = {
+		}
+	}
+
+	Renew_Krupp_Agreements = {
+		icon = GFX_decision_hol_attract_foreign_investors
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT	= { has_active_mission = Krupp_End_of_Agreements }
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = { has_country_flag = GER_krupp_final }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ger_temp_debuff_1
+				days = 90
+			}
+			GER_give_krupp_state = yes
+		}
+	}
+
+	Krupp_End_of_Agreements = {
+		icon = GFX_decision_generic_industry
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			NOT = { has_country_flag = GER_Active_Mission }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				State = 42
+				state = 51
+				state = 60
+				state = 63
+				state = 65
+				state = 66
+				state = 67
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_KRUPP_PHASE_TIME
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = GER_krupp_ph_2
+				}
+				clr_country_flag = GER_krupp_ph_2
+			}
+			GER_krupp_next_ph = yes
+		}
+	
+		complete_effect = {
+		}
+	}
+
+}
+
+GER_training_program = {
+
+	GER_SOV_TRAINING = {
+		icon = GFX_decision_generic_air
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		cost = 25
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_global_flag = spanish_civil_war
+			}
+		}
+	
+		timeout_effect = {
+			custom_effect_tooltip = GER_end_of_training_program
+			hidden_effect = {
+				remove_ideas = GER_SOV_TRAINING
+				SOV = { remove_ideas = SOV_GER_TRAINING }
+			}
+		}
+	
+		complete_effect = {
+			custom_effect_tooltip = GER_Cancel_Training_Program
+			hidden_effect = {
+				remove_ideas = GER_SOV_TRAINING
+				SOV = { remove_ideas = SOV_GER_TRAINING }
+				remove_opinion_modifier = {
+					target = SOV
+					modifier = gertrainingprogram
+				}
+				SOV = {
+					remove_opinion_modifier = {
+						target = GER
+						modifier = gertrainingprogram
+					}
+				}
+			}
+		}
+	}
+
+	GER_ITA_TRAINING = {
+		icon = GFX_decision_generic_naval
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		cost = 25
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			custom_effect_tooltip = GER_end_of_training_program
+			hidden_effect = {
+				remove_ideas = GER_ITA_TRAINING
+				ITA = { remove_ideas = ITA_GER_TRAINING }
+			}
+		}
+	
+		complete_effect = {
+			custom_effect_tooltip = GER_Cancel_Training_Program
+			hidden_effect = {
+				remove_ideas = GER_ITA_TRAINING
+				ITA = { remove_ideas = ITA_GER_TRAINING }
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = gertrainingprogram
+				}
+				ITA = {
+					remove_opinion_modifier = {
+						target = GER
+						modifier = gertrainingprogram
+					}
+				}
+			}
+		}
+	}
+
+}
+
+GER_Operation_Sealion_ph_2 = {
+
+	GER_conquer_Birmigham = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			128 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph2_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 128 #Birmigham
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_Birmingham
+		}
+	}
+
+	GER_conquer_Landon = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			126 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph2_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 126 #London
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_landon
+		}
+	}
+
+	GER_conquer_Liverpool = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			132 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph2_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 132 #Liverpool
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			complete_national_focus = GER_battle_of_liverpool
+		}
+	}
+}
+
+GER_Operation_Sealion_ph_1 = {
+
+	GER_plan_working_fine_or_not = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			has_global_flag = dover_portsmouth_subtraction
+			has_global_flag = plymouth_subtraction
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+		}
+	
+		complete_effect = {
+			add_timed_idea = { idea = GER_sealion days = 240 }
+			clr_global_flag = GER_Operation_Sealion_ph1_running
+			set_global_flag = GER_Operation_Sealion_ph2_running
+			hidden_effect = {
+				activate_mission = GER_conquer_Birmigham
+				activate_mission = GER_conquer_Landon
+				activate_mission = GER_conquer_Liverpool
+			}
+		}
+	}
+
+	GER_dover_portsmouth_subtraction = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			127 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 127 #Sussex
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			set_global_flag = dover_portsmouth_subtraction
+		}
+	}
+
+	GER_plymouth_subtraction = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			123 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph1_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 123 #South-West England
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+		}
+	
+		complete_effect = { 
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+			set_global_flag = plymouth_subtraction
+		}
+	}
+}
+
 GER_Operation_Barbarossa_V = {
 
 	GER_conquer_Leningrad = {
@@ -204,28 +1019,12 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		timeout_effect = { 
-			if = {
-				limit = { NOT = { has_country_flag = GER_RHINELAND_a } }
-				set_country_flag = GER_RHINELAND_a
-			}
-			if = {
-				limit = { has_country_flag = GER_RHINELAND_a }
-				clr_country_flag = GER_RHINELAND_a
-				set_country_flag = GER_RHINELAND_b
-			}
-			if = {
-				limit = { has_country_flag = GER_RHINELAND_b }
-				clr_country_flag = GER_RHINELAND_b
-				set_country_flag = GER_RHINELAND_c
-			}
-			if = {
-				limit = { has_country_flag = GER_RHINELAND_c }
-				clr_country_flag = GER_RHINELAND_c
+			hidden_effect = {
 				complete_national_focus = GER_rhineland_demilitarized
 			}
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.15
+				popularity = -0.05
 			}
 		}
 	
@@ -270,6 +1069,57 @@ GER_Rhineland_demilitarized = {
 		}
 	
 		timeout_effect = { 
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+	
+		complete_effect = {
+		}
+	}
+
+	GER_Rhineland_demilitarized_e = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			909 = { is_demilitarized_zone = no }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 909 #Wuttemberg
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = no
+		days_mission_timeout = ger_rhi_timeout #140
+		priority = 89
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 	
 		complete_effect = {
@@ -285,6 +1135,7 @@ GER_Rhineland_demilitarized = {
 		available = {
 			42 = { is_demilitarized_zone = yes }
 			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
 		}
 
 		cost = 35
@@ -314,6 +1165,50 @@ GER_Rhineland_demilitarized = {
 					custom_effect_tooltip = may_provoke_hostility
 				}
 			}
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_e
+					days = 30
+				}
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_a
+					days = 30
+				}
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_b
+					days = 30
+				}
+			}
+		}
+	}
+
+	GER_Rhineland_demilitarized_back = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 10
+		priority = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_global_flag = GER_RH_N_NP
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_rhineland_demilitarized
 		}
 	}
 
@@ -326,6 +1221,7 @@ GER_Rhineland_demilitarized = {
 		available = {
 			42 = { is_demilitarized_zone = yes }
 			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
 		}
 
 		cost = 35
@@ -361,6 +1257,72 @@ GER_Rhineland_demilitarized = {
 
 GER_expand_support = {
 
+	GER_conquer_hamburg = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			58 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58 #Hamburg
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	
+		complete_effect = { 
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
+		}
+	}
+
 	GER_conquer_berlin = {
 		icon = GFX_decision_generic_operation
 	
@@ -377,6 +1339,7 @@ GER_expand_support = {
 		}
 	
 		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
 		}
 	
 		highlight_states = {
@@ -412,6 +1375,83 @@ GER_expand_support = {
 			}
 			add_war_support = 0.1
 			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
+		}
+	}
+
+	GER_conquer_munich = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			52 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 52 #Munich
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 365
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+		}
+	
+		complete_effect = { 
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.1
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 2000
+					target = GER
+				}
+			}
 		}
 	}
 }	

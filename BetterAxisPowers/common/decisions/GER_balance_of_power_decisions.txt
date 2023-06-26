@@ -33,6 +33,38 @@ GER_balance_of_power_category = {
 		
 	}
 
+	GER_Visit_Bismarck_Ship = { #Bismarck Ship
+		priority = 88
+		icon = GFX_decision_category_generic
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}
+
+		visible = { has_completed_focus = GER_Bismarck }
+		
+	}	
+
 	GER_low_increase_effect = { #Paris
 		priority = 90
 		icon = GFX_decision_eng_blackshirt_speech
@@ -225,7 +257,7 @@ GER_balance_of_power_category = {
 	
     }
 
-	GER_low_increase_effect_6 = {#Roma
+	GER_low_increase_effect_6 = {#Mussolini
 	priority = 90
 	icon = GFX_decision_eng_blackshirt_speech
 
@@ -254,9 +286,54 @@ GER_balance_of_power_category = {
 		}
 	}
 
-	visible = { 2 = { is_fully_controlled_by = ITA } is_ally_with = ITA }
+	visible = { 
+		2 = { is_fully_controlled_by = ITA } 
+	    is_ally_with = ITA
+		ITA = {
+			has_country_leader = { character = ITA_benito_mussolini }
+		} 
+    }
 	
     }
+
+	GER_low_increase_effect_8 = {#Roma
+	priority = 90
+	icon = GFX_decision_eng_blackshirt_speech
+
+	allowed = {
+		original_tag = GER
+	}
+
+	cost = 50
+
+	fire_only_once = yes
+
+	complete_effect = {
+		GER_bop_low_increase_effect = yes
+        ITA = { ITA_bop_very_low_increase_effect = yes }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 1000
+			has_political_power < 1
+		}
+		modifier = {
+			factor = 1000
+			has_war = no
+		}
+	}
+
+	visible = { 
+		2 = { is_fully_controlled_by = ITA } 
+	    is_ally_with = ITA
+		ITA = {
+			NOT = { has_country_leader = { character = ITA_benito_mussolini } } 
+		}
+    }
+	
+    } GER_low_increase_effect_8
 
 	GER_low_increase_effect_7 = {#Madrid
 	priority = 90
@@ -424,16 +501,8 @@ GER_balance_of_power_category = {
 		}
 		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = medium_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-				}
-			}	
+			division_has_majority_template = medium_armor	
+			has_political_power > 110
 		}
 	}
 
@@ -482,21 +551,9 @@ GER_balance_of_power_category = {
 	ai_will_do = {
 		factor = 0
 		modifier = {
-			factor = 10
-			has_political_power < 110
-		}
-		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = medium_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-				}
-			}	
+			division_has_majority_template = medium_armor	
+			has_political_power > 110
 		}
 	}
 
@@ -546,16 +603,7 @@ GER_balance_of_power_category = {
 		factor = 0
 		modifier = {
 			factor = 100
-			random_country_division = {
-				limit = {
-					OR = {
-						division_has_battalion_in_template = heavy_armor
-					}
-					division_has_battalion_in_template = motorized
-					is_unit_template_reserves = no
-					unit_strength > 0.5
-				}
-			}	
+			division_has_majority_template = heavy_armor
 		}
 	}
 
@@ -596,6 +644,20 @@ GER_balance_of_power_category = {
 			original_tag = GER
 		}
 
+		ai_will_do = {
+			modifier = {
+				has_political_power > 200
+				factor = 100
+			}
+			modifier = {
+				factor = 100
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 0.1
+				}
+			}
+		}
+
 		cost = 50
 
 		days_re_enable = 365
@@ -605,11 +667,11 @@ GER_balance_of_power_category = {
 			GER_bop_high_decrease_effect = yes
 		    add_equipment_to_stockpile = {
 			 type = infantry_equipment
-			 amount = 1000
+			 amount = 1500
 		    }
 		    add_equipment_to_stockpile = {
 			 type = artillery_equipment
-			 amount = 250
+			 amount = 550
 		    }
 	    }
 

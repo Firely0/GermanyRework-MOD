@@ -3,6 +3,75 @@
 #Rhineland Timeout
 set_variable = { ger_rhi_timeout = 140 }
 
+#Sea Lion Time
+set_variable = { GER_sealion_ph1_time = 120 }
+set_variable = { GER_sealion_ph2_time = 120 }
+
+#Training Programs
+activate_mission = GER_SOV_TRAINING 
+activate_mission = GER_ITA_TRAINING
+
+add_opinion_modifier = {
+    target = SOV
+    modifier = gertrainingprogram
+} 
+
+SOV = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
+add_opinion_modifier = {
+    target = ITA
+    modifier = gertrainingprogram
+}
+
+ITA = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = gertrainingprogram
+	}
+}
+
+#Krupp
+set_variable = { GER_KRUPP_PHASE_TIME = 365 }
+set_country_flag = GER_Active_Mission
+activate_mission = Krupp_End_of_Agreements
+
+#Old Friend Sweden.
+
+add_opinion_modifier = {
+    target = SWE
+    modifier = oldtradeparterns
+}
+
+SWE = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = oldtradeparterns
+	}
+} 
+
+add_opinion_modifier = {
+    target = SWE
+    modifier = oldtradeparterns
+	trade = yes
+}
+
+SWE = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = oldtradeparterns
+		trade = yes
+	}
+}
+
+#You Want Total War? 
+set_country_flag = GER_BLOCKED_TOTAL_WAR
+ # Yeah but maybe later
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20
@@ -522,14 +591,18 @@ add_ideas = {
 	sour_loser
 	kinder_kuche_kirche
 	Landon_Treaty
+	GER_SOV_TRAINING
+	GER_ITA_TRAINING
 	Wehrmacht
 	Luftwaffe
 	Kriegsmarine
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+	krupp_starter_ver
 }
 
+recruit_character = GER_eva_braun
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer
 recruit_character = GER_adolf_hitler

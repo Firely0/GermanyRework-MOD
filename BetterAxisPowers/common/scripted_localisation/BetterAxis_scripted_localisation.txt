@@ -64,3 +64,22 @@ defined_text = {
 		localization_key = SS_Glory_Of_Army
 	}
 }
+
+defined_text = {
+	name = StateofFuhrer
+	text = {
+		trigger = {
+			has_global_flag = Adolf_retired
+		}
+		localization_key = GER_hitler_is_retired
+	}
+	text = {
+		trigger = {
+			has_global_flag = Adolf_killed
+		}
+		localization_key = GER_hitler_is_dead
+	}
+	text = {
+		localization_key = GER_hitler_is_gone1
+	}
+}
