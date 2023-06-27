@@ -2,8 +2,21 @@ wehrmacht_demands = {
 	allowed = {
 		original_tag = GER
 	}
+
+	visible = {
+		has_idea = GER_SS
+	}
 }
 SS_demands = { 
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_idea = GER_SS
+	}
+}
+SS_loot = {
 	allowed = {
 		original_tag = GER
 	}

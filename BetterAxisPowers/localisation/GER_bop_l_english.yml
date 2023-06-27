@@ -4,10 +4,11 @@
 
  Kaiser_in_exile_bob:0 "Kaiser in Exile"
  GER_power_balance:0 "Health of Adolf Hitler"
+
  default_left_side:0 "Bad Condition"
  default_right_side:0 "Good Condition"
  mid_range:0 "Fine Physical and Mental Health "
- left_side_range:0 "Fuhrer`s Health is Worsening"
+ left_side_range:0 "Bad Mental Health Condition"
  middle_left_side_range:0 "Bad Physical And Mental Health Condition"
  far_left_side_range:0 "Fuhrer Cause Problems"
  bad_ending_left_side_range:0 "Problems in Army"
@@ -18,6 +19,7 @@
  
  #Army
  GER_very_low_increase_effect:0 "Get Wehrmacht Advice"
+ GER_very_low_decrease_effect_wehr:0 "Test Wehrmacht Loyalty"
  GER_very_low_increase_effect_1:0 "Get Luftwaffe Advice"
  GER_very_low_increase_effect_2:0 "Get Kriegsmarine Advice"
 
@@ -26,9 +28,8 @@
  GER_Visit_Bismarck_Ship:0 "Visit Bismarck Ship"
 
  #Panzer Ace
-
  GER_Panzer_Ace:0 "Only Use if You Have §RMedium Tank§! in §GDeployed§!."
- GER_Tiger_Ace:0 "Only Use if You Have §RHeavy Tank§! in §GDeployed§!."
+ GER_Tiger_Ace:0 "Only Use if You Have §RHeavy Tank§! in §GDeployed§!." # Remove 
 
  GER_very_low_decrease_effect_a:0 "Grant the Panzer Ace Medal"
  GER_very_low_decrease_effect_b:0 "Grant the Panzer Ace Medal"
@@ -42,21 +43,12 @@
  GER_low_increase_effect_4:0 "Visit Stalingrad"
  GER_low_increase_effect_5:0 "Visit Leningrad"
  GER_low_increase_effect_6:0 "Visit Mussolini" #My Friend Mussolini Always nice to see you, well not after you lose africa front.
- GER_low_increase_effect_7:0 "Visit Madrid"
+ GER_low_increase_effect_7:0 "Visit Madrid" # Need Events
  GER_low_increase_effect_8:0 "Visit Rome"
 
  #SS
  GER_very_low_decrease_effect:0 "Get SS Advice"
- GER_low_decrease_effect:0 "Seize Civilian Property"
- GER_low_decrease_effect_1:0 "Hire a Military Factory"
- GER_medium_decrease_effect:0 "Give SS medium influence"
- GER_high_decrease_effect:0 "Recruit SS Divisions"
- GER_high_decrease_effect_1:0 "Transfer Equipment to Army"
- 
- GER_division_infantry_ss:0 "Create two half-empty motorized SS divisions in a random controlled state. Only usable once per year."
- add_equipment_effect:0 "Add equipment to the stockpile. Only usable once per year."
- add_factory_effect:0 "Add one offsite military factory. Only usable once per year."
- add_building_slot:0 "Add one building slots in a random core state. Only usable once per year."
+ GER_very_low_decrease_effect_ss:0 "Test SS Loyalty"
 
  #Balance of Power Lost Core
 

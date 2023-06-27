@@ -651,6 +651,221 @@ SS_recruitment = {
 	}
 }
 
+SS_loot = {
+
+	GER_SS_Loot_Arms = {
+		priority = 100
+		icon = GFX_decision_ger_military_buildup
+
+		allowed = {
+			original_tag = GER
+		}
+
+		ai_will_do = {
+			modifier = {
+				has_political_power > 200
+				factor = 100
+			}
+			modifier = {
+				factor = 100
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 0.1
+				}
+			}
+		}
+
+		cost = 50
+
+		days_re_enable = 365
+
+		complete_effect = {
+			custom_effect_tooltip = add_equipment_effect
+		    add_equipment_to_stockpile = {
+			 type = infantry_equipment
+			 amount = 1500
+		    }
+	    }
+
+	  visible = { has_completed_focus = GER_form_the_reichskommissariats }
+		
+	}
+
+	GER_SS_Take_Over_Arms = {
+		priority = 99
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 75
+
+		days_re_enable = 365
+
+		complete_effect = {
+			custom_effect_tooltip = add_factory_effect
+			custom_effect_tooltip = can_increase_resistance
+			add_offsite_building = { type = arms_factory level = 1 }
+			random_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_resistance = 20
+			}
+		}
+
+		visible = { has_completed_focus = GER_form_the_reichskommissariats }
+		
+	}
+
+	GER_SS_Take_Over = {
+		priority = 98
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 75
+
+		days_re_enable = 180
+
+		complete_effect = {
+			custom_effect_tooltip = add_building_slot
+			custom_effect_tooltip = can_increase_resistance
+			random_controlled_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_resistance = 10
+			}
+		}
+
+		visible = { has_completed_focus = GER_form_the_reichskommissariats }
+		
+	}
+
+	GER_SS_Destroy_eifel_tower = {
+		priority = 96
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 150
+
+		complete_effect = {
+			custom_effect_tooltip = can_increase_resistance_d
+			random_controlled_state = {
+				limit = {
+					state = 16 
+				}
+				add_resistance = 75
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = FRA  NOT = { state = 16 }
+				}
+				add_resistance = 60
+			}
+		}
+
+		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED has_country_flag = ss_loot }
+		
+	}
+
+	GER_SS_Loot_France = {
+		priority = 95
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 50
+
+		complete_effect = {
+			set_country_flag = ss_loot
+			custom_effect_tooltip = add_building_speed
+			custom_effect_tooltip = can_increase_resistance
+			add_timed_idea = {
+				idea = GER_loot_france
+				days = 180
+			}
+			hidden_effect = {
+				hidden_effect = {
+					GER_Vichy_state_modifier_remove = yes
+				}
+				random_controlled_state = {
+					limit = {
+						is_core_of = FRA
+					}
+					add_resistance = 15
+				}
+			}
+		}
+
+		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED }
+		
+	}
+
+	GER_SS_Last_Loot_France = {
+		priority = 94
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = take_over_production
+			custom_effect_tooltip = increased_resistance
+			add_timed_idea = {
+				idea = GER_loot_france
+				days = 180
+			}
+			set_global_flag =  GER_allow_france_comp_bad
+			hidden_effect = {
+				GER_upgrade_france_comp = yes
+				random_controlled_state = {
+					limit = {
+						is_core_of = FRA
+					}
+					add_resistance = 20
+				}
+			}
+		}
+
+		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED has_country_flag = ss_loot NOT = { has_idea = GER_loot_france } }
+		
+	}
+
+	GER_SS_Take_Over_France = {
+		priority = 93
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 50
+
+		complete_effect = {
+			custom_effect_tooltip = take_over_france_companies
+			set_global_flag = GER_allow_france_comp
+		}
+
+		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED }
+		
+	}
+
+}
+
 SS_demands = {
 	SS_himmler_wants_field_command = {
 
@@ -682,6 +897,7 @@ SS_demands = {
 		}
 	}
 }
+
 wehrmacht_demands = {
-	
 }
+

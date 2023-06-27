@@ -1121,14 +1121,6 @@
 		completion_reward = {
 			if = {
 				limit = {
-					tag = UKR
-				}
-				custom_effect_tooltip = SS_UKR_Glory_Of_Army_tt
-				set_variable = { SS_UKR_atack_factor = 0.1 } 
-				set_variable = { SS_UKR_defance_factor = 0.1 } 
-			}
-			if = {
-				limit = {
 					tag = BLR
 				}
 				custom_effect_tooltip = SS_BLR_Glory_Of_Army_tt
