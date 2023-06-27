@@ -104,6 +104,19 @@ Ger_non_vichy_state_dynamic_modifier = {
 	
 }
 
+Ger_warsaw_state_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_conscription_exemptions_granted_x
+
+	resistance_garrison_penetration_chance = -0.8
+	local_non_core_manpower = -0.8
+
+	local_building_slots = -5
+	local_resources_factor = -1.0
+	
+}
+
 
 El_Alamein_Atack_dynamic_modifier = {
 	enable = { always = yes }

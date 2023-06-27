@@ -47,25 +47,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSSUkrainevBelarus
-	text = {
-		trigger = {
-			tag = UKR
-		}
-		localization_key = SS_Glory_Of_Army_UKR
-	}
-	text = {
-		trigger = {
-			tag = BLR
-		}
-		localization_key = SS_Glory_Of_Army_BLR
-	}
-	text = {
-		localization_key = SS_Glory_Of_Army
-	}
-}
-
-defined_text = {
 	name = StateofFuhrer
 	text = {
 		trigger = {

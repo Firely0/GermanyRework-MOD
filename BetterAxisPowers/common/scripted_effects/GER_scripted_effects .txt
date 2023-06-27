@@ -1173,6 +1173,30 @@ GER_Vichy_state_modifier = {
 	set_global_flag = ITA_GER_VICHY_ESTABLISHED
 }
 
+GER_Vichy_state_modifier_remove = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 18
+				state = 29
+				state = 785
+				state = 16
+				state = 15
+				state = 30
+				state = 24
+				state = 14
+				state = 30
+				state = 23
+				state = 19
+				state = 806
+				state = 27
+				state = 17
+			}
+		}
+		remove_dynamic_modifier = { modifier = Ger_non_vichy_state_dynamic_modifier }
+	}
+}
+
 GER_SOV_white_peace_check = {
 	if = {
 		limit = {
@@ -1575,6 +1599,99 @@ GER_last_tiger_ace_effect = {
 		add_unit_medal_to_latest_entry = {
 			unit_medals = knights_cross_oak_leaves
 		}										
+	}
+}
+
+GER_upgrade_france_comp = {
+	if = {
+		limit = {
+			has_idea = renault_ger
+		}
+		swap_ideas = {
+			remove_idea = renault_ger
+			add_idea = renault_ger_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_AMX
+		}
+		swap_ideas = {
+			remove_idea = GER_AMX
+			add_idea = GER_AMX_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_APX
+		}
+		swap_ideas = {
+			remove_idea = GER_APX
+			add_idea = GER_APX_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_panhard
+		}
+		swap_ideas = {
+			remove_idea = GER_panhard
+			add_idea = GER_panhard_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_aeb
+		}
+		swap_ideas = {
+			remove_idea = GER_aeb
+			add_idea = GER_aeb_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_acl
+		}
+		swap_ideas = {
+			remove_idea = GER_acl
+			add_idea = GER_acl_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_acf
+		}
+		swap_ideas = {
+			remove_idea = GER_acf
+			add_idea = GER_acf_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_morane_saulnier
+		}
+		swap_ideas = {
+			remove_idea = GER_morane_saulnier
+			add_idea = GER_morane_saulnier_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_amiot
+		}
+		swap_ideas = {
+			remove_idea = GER_amiot
+			add_idea = GER_amiot_a
+		}
+	}
+	if = {
+		limit = {
+			has_idea = GER_levasseur
+		}
+		swap_ideas = {
+			remove_idea = GER_levasseur
+			add_idea = GER_levasseur_a
+		}
 	}
 }
 

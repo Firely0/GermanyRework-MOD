@@ -152,8 +152,36 @@
  SS_Glory_Of_Army_desc:0 ""
  SS_Glory_Of_Army1:0 "The Glory Of the *"
  SS_Glory_Of_Army1_desc:0 ""
- SS_Glory_Of_Army_UKR:0 "The Glory Of the Ukraine Army"
- SS_Glory_Of_Army_BLR:0 "The Glory Of the Belarus Army"
+ SS_Glory_Of_Army_ukr:0 "The Glory Of the Ukraine Army"
+ SS_Glory_Of_Army_ukr_desc:0 ""
+ SS_Glory_Of_Army_1:0 "The Glory Of the Belarus Army"
+ SS_Glory_Of_Army_1_desc:0 ""
  SS_Army_Research_Department:0 "Research And Education Department"
  SS_Army_Research_Department_desc:0 ""
+
+ SS_loot:0 "Looting and Seizing"
+ SS_loot_desc:0 "Some in the SS believe that looting and seizing from the conquered territories will help the war economy But We must proceed with caution."
+
+ GER_SS_Take_Over:0 "Seize Civilian Property"
+ GER_SS_Take_Over_Arms:0 "Seize a Military Factory"
+
+ GER_SS_Loot_France:0 "Take France`s raw material"
+ GER_SS_Last_Loot_France:0 "Take Production Parts" #Remove Buff
+ GER_SS_Take_Over_France:0 "Take Over France Companies" # Bad Day For France.
+ GER_SS_Destroy_eifel_tower:0 "Destroy Eiffel Tower" # I have a picture of it. if you want to see it.d
+ GER_SS_destroy_warsaw:0 "Suppress Warsaw Upriseing"
+
+ GER_SS_Loot_Arms:0 "Transfer Equipment to Army"
+
+ add_equipment_effect:0 "Add equipment to the stockpile. Only usable once per year."
+ add_factory_effect:0 "Add one offsite military factory. Only usable once per year."
+ add_building_slot:0 "Add one building slots in a random core state. Only usable once per 180 days."
+ add_building_speed:0 "We Loot Construction Resources in France"
+ take_over_production:0 "We Gain Small Production buffs"
+ take_over_france_companies:0 "We can use French companies that want to cooperate with us."
+ can_increase_resistance:0 "This may increase resistance in area" # Well This Increase Resistance in Area...
+ increased_resistance:0 "This will increase resistance in occupied states of france. "
+ can_increase_resistance_d:0 "We Should Run, you know"
+
+ 
 

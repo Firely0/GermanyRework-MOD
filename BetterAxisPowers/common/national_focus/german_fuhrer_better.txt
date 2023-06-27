@@ -3996,14 +3996,14 @@ focus_tree = {
 		relative_position_id = GER_Axis_Powers
 		prerequisite = { focus = GER_Middle_east_diplomacy }
 		available = {
-			
-			VIC = {
+			random_other_country = {
+				limit = { original_tag = FRA has_government = fascism  is_dynamic_country = yes }
 				exists = yes
 				controls_state = 677
 				controls_state = 680
 				controls_state = 554
 				controls_state = 553
-			}
+			}	
 		}
 
 		x = 11
@@ -8497,15 +8497,12 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = GER_balanced_approach }
 			NOT = {
-				MEX_leon_trotsky = {
-					has_character_flag = SOV_character_purged_flag
-				}
 				SOV = {
 					has_completed_focus = SOV_the_left_opposition
 				}
 				has_global_flag = trotsky_dead
 			}
-			MEX = { 
+			MEX = {
 				NOT = { has_idea = MEX_leon_trotsky }
 				NOT = { has_country_leader = { character = MEX_leon_trotsky } } 
 			}

@@ -2,6 +2,35 @@ ideas = {
 
 	country = {
 
+		GER_loot_2_france = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		GER_loot_france = {
+			picture = SPA_recovering_from_the_civil_war
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
 		ger_communism_expand = {
 			picture = CZE_planning_bonus
 			
@@ -5523,7 +5552,33 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+		}
+
+		renault_ger_a = {
+    
+			picture = renault
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad 
 			}
 						
 			research_bonus = {
@@ -5546,7 +5601,33 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+		}
+
+		GER_AMX_a = {
+		
+			picture = generic_tank_manufacturer_2
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad 
 			}
 						
 			research_bonus = {
@@ -5569,7 +5650,9 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
 			}
 						
 			research_bonus = {
@@ -5577,7 +5660,32 @@ ideas = {
 			}
 			
 	
-			traits = { medium_tank_manufacturer FRA_designer_DEBUFF }
+			traits = { medium_tank_manufacturer }
+		}
+
+		GER_APX_a = {
+			picture = FRA_atelier_puteaux
+			
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { medium_tank_manufacturer }
 		}
 	
 		GER_panhard = {
@@ -5592,7 +5700,33 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+	
+			traits = { armored_car_manufacturer }
+		}
+
+		GER_panhard_a = {
+			picture = FRA_panhard
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -5655,11 +5789,34 @@ ideas = {
 			}
 	
 			available = {
-				VIC = { exists = yes }
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+		}
+
+		GER_aeb_a = {
+			picture = FRA_aeb	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -5668,6 +5825,7 @@ ideas = {
 			
 			traits = { convoy_escort_naval_manufacturer FRA_designer_navy_DEBUFF }
 		}
+
 		GER_acl = {
 			picture = FRA_acl	
 	
@@ -5676,11 +5834,34 @@ ideas = {
 			}
 	
 			available = {
-				VIC = { exists = yes }
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		GER_acl_a = {
+			picture = FRA_acl	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -5698,11 +5879,36 @@ ideas = {
 			}
 	
 			available = {
-				29 = { is_controlled_by = GER }
+				29 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		GER_acf_a = {
+			picture = FRA_acf	
+	
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				29 = { is_controlled_by_ROOT_or_ally = yes }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -5958,7 +6164,32 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+
+		GER_morane_saulnier_a = {
+			picture = morane_saulnier
+			
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 			
 			research_bonus = {
@@ -5980,7 +6211,32 @@ ideas = {
 			}
 	
 			visible = {
-				has_country_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		GER_bloch_a = {
+			picture = bloch
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -5989,7 +6245,7 @@ ideas = {
 			
 			traits = { medium_aircraft_manufacturer FRA_designer_1_DEBUFF }
 		}
-		
+
 		GER_amiot = {
 			picture = amiot
 						
@@ -6002,7 +6258,32 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		GER_amiot_a = {
+			picture = amiot
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -6024,7 +6305,32 @@ ideas = {
 			}
 	
 			visible = {
-				VIC = { exists = yes }
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp
+				NOT = { has_global_flag = GER_allow_france_comp_bad }
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+
+		GER_levasseur_a = {
+			picture = levasseur
+						
+			allowed = {
+				original_tag = GER
+			}
+	
+			available = {
+				16 = { is_controlled_by = GER }
+			}
+	
+			visible = {
+				has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				has_global_flag = GER_allow_france_comp_bad
 			}
 						
 			research_bonus = {
@@ -6353,7 +6659,6 @@ ideas = {
 					has_global_flag = ITA_GER_VICHY_ESTABLISHED
 					has_idea = ITA_italian_irredentism_ns
 					16 = { is_controlled_by_ROOT_or_ally = yes }
-					VIC = { exists = yes }
 				}
 			}
 	
