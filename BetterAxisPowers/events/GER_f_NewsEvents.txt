@@ -253,3 +253,53 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = ger_f_news.11
+	title = "Eiffel Tower Destroyed"
+	desc = ger_f_news.11.d
+	picture = GFX_report_event_picture_last_eifel_photo
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nice Photo"
+		trigger = {
+			original_tag = GER
+		}
+	}
+
+	option = {
+		name = "Germany Trying Something.."
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+
+	option = {
+		name = "Damn those Stupid Germans"
+		trigger = {
+			original_tag = FRA
+		}
+	}
+
+	option = {
+		name = "I didn't like it anyway."
+		trigger = {
+			original_tag = FRA
+		}
+	}
+
+	option = {
+		name = "Dark Times"
+		trigger = {
+			NOT = {
+				original_tag = GER
+				original_tag = FRA
+				is_in_faction_with = GER
+			}
+		}
+	}
+}

@@ -764,12 +764,19 @@ SS_loot = {
 					state = 16 
 				}
 				add_resistance = 75
+				damage_building = {
+					type = infrastructure
+					damage = 5
+				}
 			}
 			random_controlled_state = {
 				limit = {
 					is_core_of = FRA  NOT = { state = 16 }
 				}
 				add_resistance = 60
+			}
+			hidden_effect = {
+				news_event = { id = ger_f_news.11 hours = 3 }
 			}
 		}
 
