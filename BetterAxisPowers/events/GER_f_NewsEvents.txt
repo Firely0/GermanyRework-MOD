@@ -275,6 +275,7 @@ news_event = {
 		name = "Germany Trying Something.."
 		trigger = {
 			is_in_faction_with = GER
+			NOT = { original_tag = GER }
 		}
 	}
 
@@ -298,6 +299,50 @@ news_event = {
 			NOT = {
 				original_tag = GER
 				original_tag = FRA
+				is_in_faction_with = GER
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ger_f_news.12
+	title = "Destruction of Warsaw"
+	desc = ger_f_news.12.d
+	picture = GFX_report_news_event_warsaw_destory
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Uprising hahaha, Good luck."
+		trigger = {
+			original_tag = GER
+		}
+	}
+
+	option = {
+		name = "Germany Trying Something.."
+		trigger = {
+			is_in_faction_with = GER
+			NOT = { original_tag = GER }
+		}
+	}
+
+	option = {
+		name = "Those Stupid Germans"
+		trigger = {
+			original_tag = POL
+		}
+	}
+
+	option = {
+		name = "Dark Times"
+		trigger = {
+			NOT = {
+				original_tag = GER
+				original_tag = POL
 				is_in_faction_with = GER
 			}
 		}

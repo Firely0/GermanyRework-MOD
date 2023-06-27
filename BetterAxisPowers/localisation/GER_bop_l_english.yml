@@ -7,19 +7,18 @@
 
  default_left_side:0 "Bad Condition"
  default_right_side:0 "Good Condition"
- mid_range:0 "Fine Physical and Mental Health "
+ mid_range:0 "Regular Physical and Mental Health "
  left_side_range:0 "Bad Mental Health Condition"
  middle_left_side_range:0 "Bad Physical And Mental Health Condition"
- far_left_side_range:0 "Fuhrer Cause Problems"
+ far_left_side_range:0 "Fuhrer`s Health Cause Problems"
  bad_ending_left_side_range:0 "Problems in Army"
- right_side_range:0 "Fuhrer`s Health Getting Better"
+ right_side_range:0 "Mental Health Getting Better"
  middle_right_side_range:0 "Fine Health Condition"
  far_right_side_range:0 "Good Health Condition of Fuhrer"
  good_ending_right_side_range:0 "Good Health Condition of Fuhrer"
  
  #Army
  GER_very_low_increase_effect:0 "Get Wehrmacht Advice"
- GER_very_low_decrease_effect_wehr:0 "Test Wehrmacht Loyalty"
  GER_very_low_increase_effect_1:0 "Get Luftwaffe Advice"
  GER_very_low_increase_effect_2:0 "Get Kriegsmarine Advice"
 
@@ -29,11 +28,10 @@
 
  #Panzer Ace
  GER_Panzer_Ace:0 "Only Use if You Have §RMedium Tank§! in §GDeployed§!."
- GER_Tiger_Ace:0 "Only Use if You Have §RHeavy Tank§! in §GDeployed§!." # Remove 
 
- GER_very_low_decrease_effect_a:0 "Grant the Panzer Ace Medal"
- GER_very_low_decrease_effect_b:0 "Grant the Panzer Ace Medal"
- GER_very_low_decrease_effect_c:0 "Grant the Panzer Ace Medal"
+ GER_very_low_decrease_effect_a:0 "Grant the Panzer Elite Medal"
+ GER_very_low_decrease_effect_b:0 "Grant the Panzer Elite Medal"
+ GER_very_low_decrease_effect_c:0 "Grant the Panzer Elite Medal"
 
  # The Capital of this place is Berlin.
  GER_low_increase_effect:0 "Visit Paris"
@@ -48,7 +46,11 @@
 
  #SS
  GER_very_low_decrease_effect:0 "Get SS Advice"
- GER_very_low_decrease_effect_ss:0 "Test SS Loyalty"
+
+ # Army Loyalty
+ GER_very_low_decrease_effect_1:0 "Test Wehrmacht Loyalty"
+ GER_very_low_decrease_effect_2:0 "Test SS Loyalty"
+ GER_gain_loyalty:0 "Earns a Certain Amount of Loyalty. \nUse if you have Negative Loyalty \n\n"
 
  #Balance of Power Lost Core
 
