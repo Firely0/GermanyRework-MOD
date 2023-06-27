@@ -707,11 +707,13 @@ SS_loot = {
 			custom_effect_tooltip = add_factory_effect
 			custom_effect_tooltip = can_increase_resistance
 			add_offsite_building = { type = arms_factory level = 1 }
-			random_controlled_state = {
-				limit = {
-					NOT = { is_core_of = ROOT }
+			hidden_effect = {
+				random_controlled_state = {
+					limit = {
+						NOT = { is_core_of = ROOT }
+					}
+					add_resistance = 20
 				}
-				add_resistance = 20
 			}
 		}
 
@@ -739,7 +741,9 @@ SS_loot = {
 					NOT = { is_core_of = ROOT }
 				}
 				add_extra_state_shared_building_slots = 1
-				add_resistance = 10
+				hidden_effect = {
+					add_resistance = 10
+				}
 			}
 		}
 
@@ -775,9 +779,8 @@ SS_loot = {
 				}
 				add_resistance = 60
 			}
-			hidden_effect = {
-				news_event = { id = ger_f_news.11 hours = 3 }
-			}
+
+			news_event = { id = ger_f_news.11 hours = 3 }
 		}
 
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED has_country_flag = ss_loot }

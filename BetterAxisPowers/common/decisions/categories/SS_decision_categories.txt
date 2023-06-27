@@ -4,7 +4,7 @@ wehrmacht_demands = {
 	}
 
 	visible = {
-		has_idea = GER_SS
+		has_completed_focus = GER_SS
 	}
 }
 SS_demands = { 
@@ -13,7 +13,7 @@ SS_demands = {
 	}
 
 	visible = {
-		has_idea = GER_SS
+		has_completed_focus = GER_SS
 	}
 }
 SS_loot = {
@@ -22,7 +22,7 @@ SS_loot = {
 	}
 
 	visible = {
-		has_idea = GER_SS
+		has_completed_focus = GER_SS
 	}
 }
 SS_recruitment = { 
