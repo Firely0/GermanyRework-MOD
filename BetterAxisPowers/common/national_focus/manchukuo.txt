@@ -1913,7 +1913,9 @@ focus_tree = {
 				add_idea = five_people_armies_a
 			} 
 			hidden_effect = {
-				remove_idea = MAN_white_russian_advisers
+				remove_ideas = {
+					MAN_white_russian_advisers
+				}
 			}
 		}
 	}

@@ -871,228 +871,179 @@ country_event = {
 	desc = ger_kaiser_in_exile.1.d
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
+
+	#Historical
+
 	option = {
 		name = ger_kaiser_in_exile.1.a
-		ai_chance = {
-			factor = 0
-		}
-		GER = {
-			GER_bop_medium_increase_effect = yes
-		}
-	}
-	#Historical
-	option = {
-		name = ger_kaiser_in_exile.1.b
 		ai_chance = {
 			factor = 100
 		}
 		GER = {
-			GER_bop_low_increase_effect = yes
+			GER_bop_medium_increase_effect = yes
+			remove_ideas = {
+				GER_Wittelsbach
+			}
 		}
 	}
+
 	option = {
-		name = ger_kaiser_in_exile.1.c
+		name = ger_kaiser_in_exile.1.b
 		ai_chance = {
 			factor = 0
 		}
-		HOL = {
-			country_event = ger_kaiser_in_exile.3
+		GER = {
+			random_list = {
+				50 = {
+					country_event = { id = ger_kaiser_in_exile.2 days = 3 }
+				}
+				50 = {
+					country_event = { id = ger_kaiser_in_exile.3 days = 3 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.2
+	title = "Talks are Positive."
+	desc = "In a long conversation between Wilhelm II and Hermann Goring, Wilhelm II told Goring what he did not like about the regime and what needed to be done better. Goring says that the talks were fruitful and that Wilhelm was sincere."
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	#Historical
+
+	option = {
+		name = "Send Official Notice to the Netherlands for his Return."
+		ai_chance = {
+			factor = 100
+		}
+
+		HOL = { country_event = { id = ger_kaiser_in_exile.4 hours = 12 } }
+	}
+
+	option = {
+		name = "All right. Let him know we're listening to his opinion."
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
 
 country_event = {
 	id = ger_kaiser_in_exile.3
-	title = wtt_germany.3.t
-	desc = wtt_germany.3.d
+	title = "Unable to meet"
+	desc = "The Dutch troops assigned to protect Wilhelm II did not allow Goring to see him. Probably Wilhelm told them not to let him in."
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-	#accept
+
+	#Historical
+
 	option = {
-		name = wtt_germany.3.a
+		name = "That Poor Fool."
 		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.5
-				strength_ratio = {
-					tag = GER
-					ratio > 1.5
-				}
-			}
-			modifier = {
-				factor = 0.2
-				strength_ratio = {
-					tag = GER
-					ratio > 3
-				}
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = GER
-					ratio > 5
-				}
-			}
+			factor = 100
 		}
 		GER = {
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = GER_netherlands_kaiser_accept_opinion
-			}
-			country_event = {
-				id = ger_kaiser_in_exile.4
-				days = 1
-			}
-		}
-		FRA = {
-			country_event = {
-				id = wtt_germany.28
-			}
-		}
-	}
-	#refuse
-	option = {
-		name = wtt_germany.3.b
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.5
-				strength_ratio = {
-					tag = GER
-					ratio < 1
-				}
-			}
-			modifier = {
-				factor = 0.2
-				strength_ratio = {
-					tag = GER
-					ratio < 0.5
-				}
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = GER
-					ratio < 0.2
-				}
-			}
-		}
-		set_country_flag = netherlands_refused_return_kaiser
-		GER = {
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = GER_netherlands_kaiser_decline_opinion
-			}
-			country_event = {
-				id = ger_kaiser_in_exile.5
-				days = 1
-			}
-			hidden_effect = {
-				news_event = {
-					id = ger_f_news.1
-					hours = 30
-				}
+			GER_bop_medium_increase_effect = yes
+			remove_ideas = {
+				GER_Wittelsbach
 			}
 		}
 	}
 }
 
-#Notification event for Germany that the Kaiser is returned
 country_event = {
 	id = ger_kaiser_in_exile.4
-	title = wtt_germany.4.t
-	desc = ""
-	picture = GFX_report_event_royal_parade
+	title = "Germany Demands the Extradition of Wilhelm II."
+	desc = "In an unexpected announcement in the morning, Germany demands the extradition of Wilhelm II. With Britain and France remaining silent, our politicians suggest that we should extradite him without causing any trouble."
+	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-	#accept
+
 	option = {
-		name = ger_kaiser_in_exile.4.a
-		custom_effect_tooltip = GER_Wilhelm_II_back_tt
-		set_country_flag = GER_Kaiser_in_Country
-		hidden_effect = {
-			GER = {
-				add_ideas = Kaiser_Idea
-				create_corps_commander = {
-					name = "Paul von Lettow-Vorbeck"
-					gfx = GFX_portrait_ger_von_lettow_vorbeck
-					traits = {
-						trickster
-						war_hero
-						media_personality
-						jungle_rat
-					}
-					skill = 4
-					id = 499
-					attack_skill = 3
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 5
-				}
-			}
+		name = "Start the Return Process"
+		ai_chance = {
+			factor = 80
 		}
+
+		GER = { country_event = { id = ger_kaiser_in_exile.6 hours = 12 } }
+	}
+
+	option = {
+		name = "No way!"
+		ai_chance = {
+			factor = 20
+		}
+
+		GER = { country_event = { id = ger_kaiser_in_exile.5 hours = 12 } }
+
 		hidden_effect = {
-			set_power_balance_gfx = {
-				id = GER_power_balance
-				side = bad_ending_left_side_range
-				gfx = GFX_bop_Wilhelm
-			}
-			news_event = {
-				id = ger_f_news.3
-				hours = 6
-			}
+			news_event = { id = ger_f_news.1 hours = 6 }
 		}
 	}
 }
 
-#Netherlands refuses to return the Kaiser!
 country_event = {
 	id = ger_kaiser_in_exile.5
-	title = ger_f_news.5.t
-	desc = ger_f_news.5.d
-	picture = GFX_report_event_german_troops
+	title = "The Netherlands Resists."
+	desc = "After the notification reached the Dutch government, the Netherlands stated that they would never give Wilhelm II back."
+	picture = GFX_report_event_soldiers_marching
 	is_triggered_only = yes
-	#War!
+
 	option = {
+		name = "Then fight!"
 		ai_chance = {
-			factor = 50
+			factor = 100
 		}
-		name = wtt_germany.5.a
+
 		set_global_flag = GER_BLOCKED_KAISER
 		declare_war_on = {
 			target = HOL
 			type = puppet_wargoal_focus
 		}
-		FRA = {
-			country_event = {
-				id = wtt_germany.28
+		custom_effect_tooltip = no_help_comming
+		hidden_effect = {
+			HOL = {
+				add_timed_idea = {
+					idea = nohelp_denmark
+					days = 30
+				}
 			}
 		}
 	}
-	#Back down.
+
 	option = {
+		name = "We will take care of you later"
+
 		ai_chance = {
-			factor = 50
+			factor = 0
 		}
-		name = "We Will Deal With Them Later."
+
 		set_global_flag = GER_BLOCKED_KAISER
 	}
 }
 
-#Kaiser returned through war
 country_event = {
-	id = ger_kaiser_in_exile.6
-	title = ger_kaiser_in_exile.6.t
-	desc = ""
-	picture = GFX_report_event_royal_parade
+	id = ger_kaiser_in_exile.6 #Kaiser Return
+	title = "Netherlands Approved Our Request."
+	desc = "The Netherlands has started the extradition process. Wilhelm II will soon be on the German border."
+	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
+
 	option = {
-		name = ger_kaiser_in_exile.6.a
+		name = "Good News"
+		ai_chance = {
+			factor = 100
+		}
+
 		custom_effect_tooltip = GER_Wilhelm_II_back_tt
-		clr_global_flag = GER_BLOCKED_KAISER
 		set_country_flag = GER_Kaiser_in_Country
+
 		hidden_effect = {
 			GER = {
 				add_ideas = Kaiser_Idea
+				set_global_flag = Paul_von_lettow_vorbeck_recalled
 				create_corps_commander = {
 					name = "Paul von Lettow-Vorbeck"
 					gfx = GFX_portrait_ger_von_lettow_vorbeck
@@ -1109,12 +1060,66 @@ country_event = {
 					planning_skill = 2
 					logistics_skill = 5
 				}
+				set_power_balance_gfx = {
+					id = GER_power_balance
+					side = default_left_side
+					gfx = GFX_bop_Wilhelm
+				}
 			}
-			set_power_balance_gfx = {
-				id = GER_power_balance
-				side = bad_ending_left_side_range
-				gfx = GFX_bop_Wilhelm
+		}
+
+		hidden_effect = {
+			news_event = { id = ger_f_news.2 hours = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.7 #Kaiser Return with WAR
+	title = "Wilhelm Returns to Germany"
+	desc = "With the conclusion of the war in the Netherlands, our soldiers safely brought Wilhelm II back to our country."
+	picture = GFX_report_event_czech_soldiers_01
+	is_triggered_only = yes
+
+	option = {
+		name = "Good News"
+		ai_chance = {
+			factor = 100
+		}
+
+		custom_effect_tooltip = GER_Wilhelm_II_back_tt
+		set_country_flag = GER_Kaiser_in_Country
+		
+		hidden_effect = {
+			GER = {
+				add_ideas = Kaiser_Idea
+				set_global_flag = Paul_von_lettow_vorbeck_recalled
+				create_corps_commander = {
+					name = "Paul von Lettow-Vorbeck"
+					gfx = GFX_portrait_ger_von_lettow_vorbeck
+					traits = {
+						trickster
+						war_hero
+						media_personality
+						jungle_rat
+					}
+					skill = 4
+					id = 499
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 5
+				}
+				set_power_balance_gfx = {
+					id = GER_power_balance
+					side = default_left_side
+					gfx = GFX_bop_Wilhelm
+				}
 			}
+		}
+
+		hidden_effect = {
+			news_event = { id = ger_f_news.3 hours = 5 }
 		}
 	}
 }

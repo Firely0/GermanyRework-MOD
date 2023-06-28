@@ -662,14 +662,13 @@ SS_loot = {
 		}
 
 		available = {
-			random_controlled_state = {
-				limit = {
-					NOT = { is_core_of = ROOT }
-				}
+			any_controlled_state= {
+				NOT = { is_core_of = ROOT }
 			}	
 		}
 
 		ai_will_do = {
+			base = 1
 			modifier = {
 				has_political_power > 200
 				factor = 100
@@ -708,10 +707,8 @@ SS_loot = {
 		}
 
 		available = {
-			random_controlled_state = {
-				limit = {
-					NOT = { is_core_of = ROOT }
-				}
+			any_controlled_state= {
+				NOT = { is_core_of = ROOT }
 			}	
 		}
 
@@ -743,6 +740,12 @@ SS_loot = {
 
 		allowed = {
 			original_tag = GER
+		}
+
+		available = {
+			any_controlled_state = {
+				NOT = { is_core_of = ROOT }
+			}
 		}
 
 		cost = 75
@@ -777,9 +780,16 @@ SS_loot = {
 
 		available = {
 			any_controlled_state = {
-				limit = {
-					is_core_of = FRA is_on_continent = europe
-				}
+				is_core_of = FRA is_on_continent = europe
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+				has_political_power > 200
 			}
 		}
 
@@ -822,9 +832,16 @@ SS_loot = {
 
 		available = {
 			any_controlled_state = {
-				limit = {
-					is_core_of = FRA is_on_continent = europe
-				}
+				is_core_of = FRA is_on_continent = europe
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+				has_political_power > 200
 			}
 		}
 
@@ -865,9 +882,7 @@ SS_loot = {
 
 		available = {
 			any_controlled_state = {
-				limit = {
-					is_core_of = FRA is_on_continent = europe
-				}
+				is_core_of = FRA is_on_continent = europe
 			}
 		}
 
@@ -893,11 +908,7 @@ SS_loot = {
 		}
 
 		available = {
-			random_controlled_state = {
-				limit = {
-					state = 16 
-				}
-			}
+			controls_state = 16
 		}
 
 		cost = 150
@@ -928,7 +939,7 @@ SS_loot = {
 			16 = {
 				add_manpower = -50000 
 			}	
-			news_event = { id = ger_f_news.11 hours = 3 }
+			news_event = { id = ger_f_news.4 hours = 3 }
 			custom_effect_tooltip = can_increase_resistance_d
 			set_global_flag = GER_destroyed_eiffel
 			clr_global_flag = GER_allow_france_comp
@@ -949,9 +960,15 @@ SS_loot = {
 		}
 
 		available = {
-			random_controlled_state = {
-				limit = {
-					state = 10
+			controls_state = 10
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 100
+				10 = {
+					resistance > 45
 				}
 			}
 		}
@@ -985,16 +1002,12 @@ SS_loot = {
 					scope = GER
 				}
 			}	
-			news_event = { id = ger_f_news.12 hours = 3 }
+			news_event = { id = ger_f_news.5 hours = 3 }
 		}
 
 		visible = { 
 			POL = { has_completed_focus = POL_niech_zyje_opor }
-			random_controlled_state = {
-				limit = {
-					state = 10
-				}
-			}
+			controls_state = 10
 		}
 		
 	}

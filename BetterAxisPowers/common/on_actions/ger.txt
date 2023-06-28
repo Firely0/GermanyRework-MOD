@@ -148,34 +148,14 @@ on_actions = {
 			if = {
 				limit = {
 					tag = HOL
-					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
 					GER = {
 						has_global_flag = GER_BLOCKED_KAISER
 						has_war_with = HOL
 					}
 				}
 				GER = {
-					country_event = { id = ger_kaiser_in_exile.6 hours = 3 }  
-					set_global_flag = GER_CAP_HOL_KAISER
-				}
-			}
-		}
-	}
-
-	on_puppet = {
-		effect = {
-			if = {
-				limit = {
-					tag = HOL
-					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
-					GER = {
-						has_global_flag = GER_BLOCKED_KAISER
-						has_war_with = HOL
-					}
-				}
-				GER = {
-					country_event = { id = ger_kaiser_in_exile.6 hours = 3 }  
-					set_global_flag = GER_CAP_HOL_KAISER
+					country_event = { id = ger_kaiser_in_exile.7 hours = 3 }  
+					clr_global_flag = GER_BLOCKED_KAISER
 				}
 			}
 		}
@@ -186,15 +166,32 @@ on_actions = {
 			if = {
 				limit = {
 					tag = HOL
-					NOT = { has_global_flag = GER_CAP_HOL_KAISER }
 					GER = {
 						has_global_flag = GER_BLOCKED_KAISER
 						has_war_with = HOL
 					}
 				}
 				GER = {
-					country_event = { id = ger_kaiser_in_exile.6 hours = 3 } 
-					set_global_flag = GER_CAP_HOL_KAISER
+					country_event = { id = ger_kaiser_in_exile.7 hours = 3 } 
+					clr_global_flag = GER_BLOCKED_KAISER
+				}
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = HOL
+					GER = {
+						has_global_flag = GER_BLOCKED_KAISER
+						has_war_with = HOL
+					}
+				}
+				GER = {
+					country_event = { id = ger_kaiser_in_exile.7 hours = 3 }  
+					clr_global_flag = GER_BLOCKED_KAISER
 				}
 			}
 		}
@@ -471,9 +468,6 @@ on_actions = {
 					FROM = { tag = SOV }
 				}
 				add_ideas = GER_strike_union
-				hidden_effect = {
-					sound_effect = war_sov
-				}
 			}
 		}
 	}

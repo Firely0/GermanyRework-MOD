@@ -1,6 +1,3 @@
-   
-    continuous_focus_position = { x = 20 y = 2000 }
-
 	shared_focus = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
@@ -5220,6 +5217,7 @@
 		icon = GFX_goal_SS_search_and_destroy
 		relative_position_id = GER_SS_Trops
 		prerequisite = { focus = GER_SS_Trops }
+		mutually_exclusive = { focus = GER_SS_Teror_Doctrine }
 		x = 1
 		y = 1
 		cost = 10
@@ -6254,6 +6252,7 @@
 		icon = GFX_focus_generic_infiltration
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_War_Plan }
+		mutually_exclusive = { Focus = GER_Cheap_EQ }
 		x = 4
 		y = 4
 		cost = 5

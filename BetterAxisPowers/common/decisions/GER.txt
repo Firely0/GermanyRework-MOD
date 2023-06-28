@@ -2183,9 +2183,9 @@ political_actions = {
 		}
 		available = {
 			has_civil_war = no
-			NOT = { has_global_flag = GER_Kaiser_in_Country }
 		}
 		visible = {
+			NOT = { has_global_flag = Paul_von_lettow_vorbeck_recalled }
 			OR = {
 				has_country_leader = { ruling_only = yes character = GER_wilhelm_ii }
 				has_country_leader = { ruling_only = yes character = GER_wilhelm_iii }
