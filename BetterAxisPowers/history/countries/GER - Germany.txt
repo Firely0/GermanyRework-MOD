@@ -57,14 +57,12 @@ SWE = {
 add_opinion_modifier = {
     target = SWE
     modifier = oldtradeparterns
-	trade = yes
 }
 
 SWE = {
 	add_opinion_modifier = {
 		target = GER
 		modifier = oldtradeparterns
-		trade = yes
 	}
 }
 
@@ -593,7 +591,6 @@ add_ideas = {
 	Landon_Treaty
 	GER_SOV_TRAINING
 	GER_ITA_TRAINING
-	GER_Wittelsbach
 	Wehrmacht
 	Luftwaffe
 	Kriegsmarine

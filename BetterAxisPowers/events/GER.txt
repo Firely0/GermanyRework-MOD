@@ -59,7 +59,6 @@ country_event = {
 	title = "Germany Demands Qingdao"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-	set_from = ROOT
 	is_triggered_only = yes
 	option = {
 		name = "Fine"
@@ -161,7 +160,6 @@ country_event = {
 	option = {
 		name = "Good"
 		transfer_state = 743
-		target = GER
 		add_state_core = 743
 	}
 }
@@ -677,10 +675,6 @@ country_event = {
 	picture = GFX_report_event_german_troops
 	is_triggered_only = yes
 	fire_only_once = yes
-	will_lead_to_war_with = BEL
-	will_lead_to_war_with = HOL
-	will_lead_to_war_with = LUX
-	will_lead_to_war_with = FRA
 	immediate = {
 		GER = {
 			remove_ideas = POL_focused_on_the_eastern_front
@@ -2016,12 +2010,8 @@ country_event = {
 				NOT = {
 					has_global_flag = FIN_Granted_146
 				}
-				146 = {
-					NOT = {
-						owner = FIN
-					}
-					is_controlled_by_ROOT_or_ally = yes
-				}
+				NOT = { 146 = { is_controlled_by = FIN } }
+				146 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 			FIN = {
 				transfer_state = 146
@@ -2033,12 +2023,8 @@ country_event = {
 				NOT = {
 					has_global_flag = FIN_Granted_147
 				}
-				147 = {
-					NOT = {
-						owner = FIN
-					}
-					is_controlled_by_ROOT_or_ally = yes
-				}
+				NOT = { 147 = { is_controlled_by = FIN } }
+				147 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 			FIN = {
 				transfer_state = 147
@@ -2050,12 +2036,8 @@ country_event = {
 				NOT = {
 					has_global_flag = FIN_Granted_722
 				}
-				722 = {
-					NOT = {
-						owner = FIN
-					}
-					is_controlled_by_ROOT_or_ally = yes
-				}
+				NOT = { 722 = { is_controlled_by = FIN } }
+				722 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 			FIN = {
 				transfer_state = 722
@@ -3169,41 +3151,47 @@ country_event = { #Event For France
 		set_global_flag = FRA_RHINELAND_SEC_OF_BEN
 
 		HOL = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = HOL
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
 		BEL = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = BEL
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
 		LUX = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = LUX
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
@@ -3454,41 +3442,47 @@ country_event = { #Event For UK
 		name = "We Must Ensure the Security of Benelux."
 
 		HOL = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = HOL
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
 		BEL = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = BEL
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
 		LUX = {
-			limit = {
-				is_puppet = no
-				NOT = { has_war_with = ROOT }
-			}
-			ROOT = {
-				diplomatic_relation = {
-					country = LUX
-					relation = guarantee
-					active = yes
+			if = {
+				limit = {
+					is_puppet = no
+					NOT = { has_war_with = ROOT }
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = LUX
+						relation = guarantee
+						active = yes
+					}
 				}
 			}
 		}
@@ -4150,7 +4144,7 @@ country_event = {
 			set_stability = 0.9
 			set_war_support = 0.8
 			load_oob = "GER_German_Civil_War_fascist_vs_com"
-			GER_Give_fascism_side_guns_effect = yes
+			GER_AI_EQ_1 = yes
 			set_country_flag = GER_BLITZ_COM
 			add_equipment_to_stockpile = {
 				type = infantry_equipment

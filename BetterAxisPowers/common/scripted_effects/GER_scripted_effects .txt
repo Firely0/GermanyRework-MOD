@@ -1129,16 +1129,11 @@ TUR_Lands_in_Soviet = {
 GER_isolate_effect = {
 	GER = {
 		every_neighbor_country = {
-			target = {
 			NOT = { 
-			 tag = GER 
-			}
-			NOT = { 
-				tag = FRA 
+			 tag = GER tag = FRA 
 			}
 			AND = {
 			 bordering_country = GER
-			}
 			}
 			country_event = { id = GER_rhineland_isolete.1 }
 		}
@@ -1375,6 +1370,24 @@ GER_AI_EQ = {
 		add_equipment_to_stockpile = {
 			type = motorized_equipment
 			amount = 4000
+			producer = GER
+		}
+	}
+}
+
+GER_AI_EQ_1 = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
 			producer = GER
 		}
 	}
