@@ -811,7 +811,7 @@ SS_loot = {
 				}
 				every_controlled_state = {
 					limit = {
-						is_core_of = FRA is_on_continent = europe NOT = { state = 16 }
+						is_core_of = FRA is_on_continent = europe NOT = { state = 16 } NOT = { is_core_of = ROOT }
 					}
 					add_resistance = 10
 				}
@@ -853,7 +853,7 @@ SS_loot = {
 			custom_effect_tooltip = take_over_production
 			custom_effect_tooltip = increased_resistance
 			add_timed_idea = {
-				idea = GER_loot_france
+				idea = GER_loot_2_france
 				days = 180
 			}
 			set_global_flag =  GER_allow_france_comp_bad

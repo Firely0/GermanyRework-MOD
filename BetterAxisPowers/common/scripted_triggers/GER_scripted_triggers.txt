@@ -156,6 +156,15 @@ is_controlled_by_ITA_or_subject = {
 	}
 }
 
+is_controlled_by_target_or_subject = {
+	CONTROLLER = {
+		OR = {
+			tag = PREV
+			is_subject_of = PREV
+		}
+	}
+}
+
 japan_declared_war_usa = {
 	JAP = {
 		NOT = { has_war_with = GER }

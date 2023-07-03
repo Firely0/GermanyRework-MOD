@@ -1129,11 +1129,14 @@ TUR_Lands_in_Soviet = {
 GER_isolate_effect = {
 	GER = {
 		every_neighbor_country = {
-			NOT = { 
-			 tag = GER tag = FRA 
-			}
-			AND = {
-			 bordering_country = GER
+			limit = {
+				NOT = { 
+					tag = GER 
+					tag = FRA 
+				}
+				AND = {
+					bordering_country = GER
+				}
 			}
 			country_event = { id = GER_rhineland_isolete.1 }
 		}
@@ -1605,7 +1608,7 @@ GER_last_tiger_ace_effect = {
 			unit_strength > 0.5
 		}
 		add_history_entry = {
-			key = "This unit has been recognised as an Ace panzer division."
+			key = "This unit has been recognised as an Elite panzer division."
 			subject = "Division Honor"
 			allow = yes
 		}
@@ -1705,6 +1708,264 @@ GER_upgrade_france_comp = {
 			remove_idea = GER_levasseur
 			add_idea = GER_levasseur_a
 		}
+	}
+}
+
+GER_rudolf_hess_peace_sign = {
+
+	every_state = {
+		limit = { 
+			states = { 777 773 774 660 539 772 295 538 718 885 548 890 768 769 564 770 771 889 888 295 772 539 772 545 542 849 }
+		} 
+		set_state_flag = GER_Africa_states
+	}
+
+	every_state = {
+		limit = { 
+			states = { 905 547 904 903 844 559 269 268 550 908 842 841 840 839 838 271 837 836 835 884 886 883 887 549 551 456 457 907 447 453 454 455 553 554 860 677 452 552 273 514 786 782 515 775 767 }
+		} 
+		set_state_flag = ITA_Africa_states
+	}	
+
+	if = { # New Borders for Vichy France / France Peaced with Germans
+		limit = {
+			tag = GER
+			has_war_with = FRA
+			has_global_flag = ITA_GER_VICHY_ESTABLISHED
+		}
+		28 = { transfer_state_to = GER }
+		8 = { transfer_state_to = GER }
+		VIC = {
+			annex_country = {
+				target = FRA
+				transfer_troops = yes
+			}
+		}
+	}
+	
+	if = { # New Borders for France / France NOT Peaced with Germans
+		limit = {
+			tag = GER
+			has_war_with = FRA
+		}
+		28 = { transfer_state_to = GER }
+		8 = { transfer_state_to = GER }
+	}
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = YUG
+		}
+		102 = { transfer_state_to = GER }
+		853 = { transfer_state_to = GER }
+	}	
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = POL
+		}
+		85 = { transfer_state_to = GER }
+		807 = { transfer_state_to = GER }
+		86 = { transfer_state_to = GER }
+		72 = { transfer_state_to = GER } # I Belive You STOLE This?
+	}
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = POL
+		}
+		85 = { transfer_state_to = GER }
+		807 = { transfer_state_to = GER }
+		86 = { transfer_state_to = GER }
+		72 = { transfer_state_to = GER } # I Belive You STOLE This?
+	}
+
+	# Germany Annex BEL HOL DEN NOR
+
+	if = { 
+		limit = {
+			tag = GER
+			has_war_with = HOL
+		}
+		GER = {
+			annex_country = {
+				target = FRA
+				transfer_troops = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = BEL
+		}
+		GER = {
+			annex_country = {
+				target = FRA
+				transfer_troops = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = DEN
+		}
+		GER = {
+			annex_country = {
+				target = DEN
+				transfer_troops = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			tag = GER
+			has_war_with = NOR
+		}
+		GER = {
+			annex_country = {
+				target = NOR
+				transfer_troops = no
+			}
+		}
+	}
+
+	# Africa 
+
+	every_state = {
+		limit = { 
+			has_state_flag = GER_Africa_states
+			OR = {
+				ENG = { is_controlled_by_target_or_subject = yes }
+				FRA = { is_controlled_by_target_or_subject = yes }
+			}
+		}
+		transfer_state_to = GER
+	}
+	
+	every_state = {
+		limit = { 
+			has_state_flag = ITA_Africa_states
+			OR = {
+				ENG = { is_controlled_by_target_or_subject = yes }
+				FRA = { is_controlled_by_target_or_subject = yes }
+			}
+		}
+		transfer_state_to = ITA
+	}	
+
+	#
+		
+	if = { # Italy Gain Land, Seems Illegal
+		limit = {
+			original_tag = ITA
+			is_in_faction_with = GER
+			has_war_with = FRA
+		}
+		735 = { transfer_state_to = ITA }
+		851 = { transfer_state_to = ITA }
+		1 = { transfer_state_to = ITA }
+	}
+
+	if = { # Italy Gain Land, Seems Illegal
+		limit = {
+			original_tag = ITA
+			is_in_faction_with = GER
+			has_war_with = ENG
+		}
+		183 = { transfer_state_to = ITA }
+	}	
+	
+	if = { # Italy Gain Land, Seems Illegal
+	    limit = {
+			original_tag = ITA
+			is_in_faction_with = GER
+			has_war_with = YUG
+		}
+		103 = { transfer_state_to = ITA }
+		804 = { transfer_state_to = ITA }
+		105 = { transfer_state_to = ITA }
+	}
+
+	if = { # Albania Gain Land
+	    limit = {
+			tag = ALB
+			is_puppet_of = ITA
+			has_war_with = YUG
+			is_in_faction_with = GER
+		}
+		802 = { transfer_state_to = ITA }
+	}
+
+	if = { # Bulgaria Gain Land, SUS
+	    limit = {
+			tag = BUL
+			is_puppet_of = ITA
+			has_war_with = YUG
+			is_in_faction_with = GER
+		}
+		106 = { transfer_state_to = BUL }
+		803 = { transfer_state_to = BUL }
+	}
+	
+	if = { # Hungary Gain Land
+	    limit = {
+			tag = HUN
+			is_puppet_of = ITA
+			has_war_with = YUG
+			is_in_faction_with = GER
+		}
+		45 = { transfer_state_to = HUN }
+		764 = { transfer_state_to = HUN }
+	}	
+
+	# No Land for Romania Sad 
+
+	#No Land if no Albania
+	
+	if = { # Italy Gain Land, Seems Illegal
+	    limit = {
+			original_tag = ITA
+			is_in_faction_with = GER
+			has_war_with = GRE
+		}
+		185 = { transfer_state_to = ITA }
+		47 = { transfer_state_to = ITA }
+		186 = { transfer_state_to = ITA }
+		182 = { transfer_state_to = ITA }
+	}
+	
+	if = { # Bulgaria Gain Land, SUS
+	    limit = {
+			original_tag = ITA
+			is_in_faction_with = GER
+			has_war_with = GRE
+		}
+		731 = { transfer_state_to = ITA }
+		184 = { transfer_state_to = ITA }
+	}
+
+	clr_global_flag = flight_of_hess
+	
+	start_peace_conference = {
+		tag = ENG
+		score_factor = 0
+		message = ger_sov_treaty_in_berlin
+	}
+	ENG = {
+		white_peace = GER
+	}
+	add_threat = 50
+	set_truce = {
+		target = ENG
+		days = 365
 	}
 }
 

@@ -33,6 +33,7 @@ add_namespace = GER_eng_trade_agreement
 add_namespace = GER_eng_naval_agreement
 add_namespace = GER_trade_danzig
 add_namespace = GER_civil_war_end_com
+add_namespace = GER_rudolf_hess
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -4365,6 +4366,142 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = GER_rudolf_hess.1
+	title = "Negotiate Peace?"
+	desc = "Rudolf Hess, who flew alone from France to England, stated that he was going to negotiate peace in England and successfully reached the location despite being unauthorized to do so. He stated that he was waiting for official authorization to negotiate the terms of peace."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Victory Coming Soon."
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = no
+				factor = 100
+			}
+		}
+
+		country_event = { id = GER_rudolf_hess.2 hours = 5 }
+	}
+
+	option = {
+		name = "Shoot that fool on sight."
+
+		ai_chance = {
+			base = 1
+			modifier = { # Historical
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+
+		country_event = { id = GER_rudolf_hess.4 hours = 5 }
+	}
+}
+
+country_event = {
+	id = GER_rudolf_hess.2 #Event for UK
+	title = "Negotiate Peace?"
+	desc = "He stated that Rudolf Hess was sent by Germany to discuss peace negotiations after his statement was taken, and after the situation was approved by Germany, we can officially start peace negotiations. Of course you have the final word."
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Peace? Never! Victory Comes Home Soon.."
+
+		ai_chance = {
+			base = 30
+
+			modifier = {
+				has_war_support < 0.5
+				add = 10
+			}
+
+			modifier = {
+				has_stability > 0.5
+				add = 10
+			}
+
+			modifier = {
+				has_country_leader = { character = ENG_neville_chamberlain }
+				add = 20
+			}
+		}
+
+		country_event = { id = GER_rudolf_hess.4 hours = 5 }
+	}
+
+	option = {
+		name = "We must do what is right for our people.."
+
+		ai_chance = {
+			base = 30
+
+			modifier = {
+				has_war_support > 0.5
+				add = 20
+			}
+
+			modifier = {
+				has_stability > 0.5
+				add = 20
+			}
+
+			modifier = {
+				has_country_leader = { character = ENG_winston_churchill }
+				add = 20
+			}
+		}
+
+		country_event = { id = GER_rudolf_hess.3 hours = 5 }
+	}
+}
+
+country_event = {
+	id = GER_rudolf_hess.3
+	title = "United Kingdom Agreed"
+	desc = "After a long period of negotiations, an agreement on post-war borders and international zones has been reached and will soon become effective upon approval of the agreement by the parties."
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Another Victory for Fatherland"
+
+		ai_chance = {
+			base = 100
+		}
+
+		hidden_effect = {
+			GER_rudolf_hess_peace_sign = yes
+		}
+	}
+}
+
+country_event = {
+	id = GER_rudolf_hess.4
+	title = "Rudolf Hess Arrested"
+	desc = "Rudolf Hess was detained in the UK after the parties failed to reach an agreement and will soon be transferred to prison."
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting."
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
 
 
 

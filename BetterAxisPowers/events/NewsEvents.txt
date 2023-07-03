@@ -1530,6 +1530,10 @@ news_event = {
 	show_major = {
 		NOT = { tag = GER }
 	}
+
+	immediate = {
+		GER = { country_event = { id = GER_rudolf_hess.1 hours = 3 } }
+	}	
 	
 	option = {
 		name = news.44.a
@@ -1563,8 +1567,8 @@ news_event = {
 	
 	show_major = {
 		NOT = { tag = GER }
-	}	
-	
+	}
+
 	option = {
 		name = news.45.a
 		trigger = {
