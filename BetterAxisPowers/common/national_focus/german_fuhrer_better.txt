@@ -728,14 +728,14 @@ focus_tree = {
 			is_puppet = no
 		}
 		offset = {
-			x = -16
+			x = -10
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -18
+			x = -16
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
@@ -881,7 +881,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 46
+		x = 45
 		y = 1
 		cost = 3
 		available = {
@@ -892,14 +892,14 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -16
+			x = -10
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -20
+			x = -15
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
@@ -3642,7 +3642,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 15
+		x = 18
 		y = 2
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -3650,7 +3650,7 @@ focus_tree = {
 			factor = 10
 		}	
 		offset = {
-			x = -15
+			x = -20
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
@@ -3750,7 +3750,7 @@ focus_tree = {
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Dönitz }
 		cancel_if_invalid = no
-		x = 4
+		x = 6
 		y = 1
 		relative_position_id = GER_hitler_is_gone
 		cost = 3
@@ -3767,7 +3767,7 @@ focus_tree = {
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Dönitz }
 		cancel_if_invalid = no
-		x = -4
+		x = -6
 		y = 1
 		relative_position_id = GER_hitler_is_gone
 		cost = 3
@@ -3808,7 +3808,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = -2
+		x = -3
 		y = 2
 		relative_position_id = GER_hitler_is_gone
 		cost = 3
@@ -3819,7 +3819,378 @@ focus_tree = {
 			set_country_flag = GER_side_with_fascism
 			mark_focus_tree_layout_dirty = yes
 		}
-	}	
+	}
+
+	focus = {
+		id = GER_No_More_Eagles
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GER_for_Greater_Reich }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 1
+		relative_position_id = GER_for_Greater_Reich
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_New_World_Order
+		icon = GFX_goal_gerhegenomy
+		prerequisite = { focus = GER_No_More_Eagles }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		relative_position_id = GER_No_More_Eagles
+		cost = 3
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_ideas = GER_New_World_Order
+			add_threat = -99
+		}
+	}
+
+	focus = {
+		id = GER_Take_Out_USA
+		icon = GFX_focus_spa_the_war_of_vengeance
+		prerequisite = { focus = GER_New_World_Order }
+		available = {
+			USA = {
+				exists = yes
+				is_puppet = no
+				has_government = democratic
+			}
+		}
+		bypass = {
+			USA = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+					has_government = fascism
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 2
+		relative_position_id = GER_No_More_Eagles
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = GER_Take_Out_Japan
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = GER_New_World_Order }
+		available = {
+			JAP = {
+				exists = yes
+				is_puppet = no
+				has_government = fascism
+			}
+		}
+		bypass = {
+			JAP = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+					has_government = democratic
+				}
+			}
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 2
+		relative_position_id = GER_No_More_Eagles
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = GER_Take_Out_Soviet
+		icon = GFX_goal_generic_attack_communists_a
+		prerequisite = { focus = GER_New_World_Order }
+		available = {
+			SOV = {
+				exists = yes
+				is_puppet = no
+				has_government = communism
+			}
+		}
+		bypass = {
+			SOV = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+					has_government = fascism
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		relative_position_id = GER_No_More_Eagles
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = GER_Start_Operation
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = GER_Take_Out_USA }
+		prerequisite = { focus = GER_Take_Out_Japan }
+		prerequisite = { focus = GER_Take_Out_Soviet }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 3
+		relative_position_id = GER_New_World_Order
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = { tag = USA tag = JAP tag = SOV } is_major = yes NOT = { is_in_faction_with = ROOT has_non_aggression_pact_with = ROOT tag = GER }
+				}
+				GER = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = GER_Total_War_Idea
+				days = 730
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Sign_Axis_Pact
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_for_Greater_Reich }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -4
+		y = 1
+		relative_position_id = GER_for_Greater_Reich
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism NOT = { tag = ROOT has_war_with = ROOT }
+				}
+				country_event = { id = GER_Sign_Axis_Pact_event.1 hours = 12 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Balance_of_Power
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = GER_Sign_Axis_Pact }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 1
+		relative_position_id = GER_Sign_Axis_Pact
+		cost = 3
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_Purge_in_low_countries
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = GER_Balance_of_Power }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		relative_position_id = GER_Balance_of_Power
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism fascism < 0.6 OR = { tag = FIN tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = ROOT is_in_faction_with = GER } NOT = { is_major = yes }
+				}
+				add_stability = -0.1
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fascism_take_over
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = GER_Purge_in_low_countries }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 2
+		relative_position_id = GER_Balance_of_Power
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Force_Anti_Jewish
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = GER_Balance_of_Power }
+		prerequisite = { focus = GER_Purge_in_Italy focus = GER_Purge_in_low_countries }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 3
+		relative_position_id = GER_Balance_of_Power
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = { 
+			every_country = {
+				limit = {
+					has_government = fascism OR = { is_puppet_of = ROOT is_in_faction_with = GER has_idea = GER_Axis_Pact_idea }
+				}
+				country_event = { id = GER_force_anti_jewish.1 hours = 12 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Thousand_Week_Reich
+		icon = GFX_goal_demand_sudetenland
+		cancel_if_invalid = no
+		prerequisite = { 
+			focus = GER_German_hegemony
+		}
+		prerequisite = {
+			focus = GER_Force_Anti_Jewish focus = GER_Start_Operation
+		}
+		x = 0
+		y = 7
+		relative_position_id = GER_for_Greater_Reich
+		cost = 1000
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Purge_in_Italy
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = GER_Balance_of_Power }
+		available = {
+			ITA = {
+				is_in_faction_with = GER
+				has_war = no
+			}
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 1
+		relative_position_id = GER_Balance_of_Power
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			ITA = {
+				add_stability = -0.1
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_assassinate_mussolini_a
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = GER_Purge_in_Italy }
+		available = {
+			ITA = {
+				fascism < 0.6
+				is_in_faction_with = GER
+				has_war = no
+			}
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 2
+		relative_position_id = GER_Balance_of_Power
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			ITA = {
+				kill_country_leader = yes
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.5
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = GER_for_Greater_Reich
@@ -3828,10 +4199,15 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		available = {
 			is_subject = no
-			has_full_control_of_state = 195
-			has_full_control_of_state = 217
-			all_owned_state = {
-				is_fully_controlled_by = ROOT
+			OR = {
+				AND = {
+					has_full_control_of_state = 195
+					has_full_control_of_state = 217
+					all_owned_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				has_completed_focus = GER_National_sprit
 			}
 		}
 		cancel_if_invalid = no
@@ -3860,8 +4236,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 5
-		relative_position_id = GER_the_Supreme_Commander
+		y = 1
+		relative_position_id = GER_for_Greater_Reich
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -3880,8 +4256,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = -2
-		y = 6
-		relative_position_id = GER_the_Supreme_Commander
+		y = 1
+		relative_position_id = GER_all_roads_to_berlin
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -3903,8 +4279,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 6
-		relative_position_id = GER_the_Supreme_Commander
+		y = 1
+		relative_position_id = GER_all_roads_to_berlin
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -3926,8 +4302,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 2
-		y = 6
-		relative_position_id = GER_the_Supreme_Commander
+		y = 1
+		relative_position_id = GER_all_roads_to_berlin
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -3948,8 +4324,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 7
-		relative_position_id = GER_the_Supreme_Commander
+		y = 2
+		relative_position_id = GER_all_roads_to_berlin
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -3994,6 +4370,45 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_German_People
+		icon = GFX_goal_GermanPeople
+		prerequisite = { focus = GER_German_hegemony }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -1
+		y = 3
+		relative_position_id = GER_all_roads_to_berlin
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_ideas = GER_German_People_idea
+		}
+	}
+
+	focus = {
+		id = GER_to_moon
+		icon = GFX_goal_tonoon
+		prerequisite = { focus = GER_German_hegemony }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 3
+		relative_position_id = GER_all_roads_to_berlin
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
 		id = GER_Axis_Powers
 		icon = GFX_goal_the_Axis
 		prerequisite = { focus = GER_establish_abwehr }
@@ -4016,7 +4431,7 @@ focus_tree = {
 			factor = 10
 		}	
 		offset = {
-			x = -16
+			x = -10
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
@@ -4030,12 +4445,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		ROOT = {	
+		ROOT = {
 			set_rule = {
 				can_create_factions = yes
 			}
 			create_faction = "The Axis"
-		    }	
+			scoped_play_song = "axistheme"
+		}	
 		}
 	}
 
@@ -8408,6 +8824,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		allow_branch = {
+			has_global_flag = GER_BLOCK_COM
 			NOT = {
 				has_completed_focus = GER_Fuhrer
 				has_completed_focus = GER_hitler_is_gone
@@ -11233,7 +11650,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -3
+			x = 2
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone

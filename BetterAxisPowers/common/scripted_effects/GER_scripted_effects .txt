@@ -1842,6 +1842,15 @@ rudolf_hess_italy_annex_eth_w_puppets = {
 			transfer_troops = no
 		}
 	}
+	any_other_country = {
+		limit = {
+			is_puppet_of = ETH
+		}
+		annex_country = {
+			target = PREV
+			transfer_troops = no
+		}
+	}
 }
 
 rudolf_hess_GER_states = {
@@ -1865,6 +1874,9 @@ rudolf_hess_GER_POL_states = {
 			}
 		}
 		transfer_state_to = GER
+	}
+	GER = {
+		puppet = POL
 	}
 }
 
@@ -1988,5 +2000,14 @@ rudolf_hess_ITA_GRE_1_states = {
 			target = GRE
 			transfer_troops = no
 		}
+	}
+}
+
+rudolf_hess_ITA_YUG_PUPPET_states = {
+	YUG = {
+		remove_ideas = anti_german_military
+	}
+	ITA = {
+		puppet = YUG
 	}
 }

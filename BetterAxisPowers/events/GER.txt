@@ -34,6 +34,8 @@ add_namespace = GER_eng_naval_agreement
 add_namespace = GER_trade_danzig
 add_namespace = GER_civil_war_end_com
 add_namespace = GER_rudolf_hess
+add_namespace = GER_Sign_Axis_Pact_event
+add_namespace = GER_force_anti_jewish
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -4461,377 +4463,391 @@ country_event = {
 			base = 100
 		}
 
-		if = {
-			limit = {
-				has_war_with = BEL
-				has_war_with = FRA
-				has_war_with = ENG
-			}
-			rudolf_hess_africa_front_GER = yes
-		}
-		if = {
-			limit = {
-				has_war_with = FRA
-				FRA = {
-					is_in_faction_with = ENG
-				}
-			}
-			rudolf_hess_GER_states = yes
-		}
-		if = {
-			limit = {
-				has_war_with = POL
-				POL = {
-					is_in_faction_with = ENG
-				}
-			}
-			rudolf_hess_GER_POL_states = yes
-		}
-		if = {
-			limit = {
-				has_war_with = YUG
-				YUG = {
-					is_in_faction_with = ENG
-				}
-			}
-			rudolf_hess_GER_YUG_states = yes
-		}
-		if = {
-			limit = {
-				has_war_with = LUX
-				LUX = {
-					is_in_faction_with = ENG
-				}
-			}
-			GER = {
-				annex_country = {
-					target = LUX
-					transfer_troops = no
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_war_with = BEL
-				BEL = {
-					is_in_faction_with = ENG
-				}
-			}
-			set_global_flag = BEL_ANNEXED_TAKE_FRANCE_TER
-			GER = {
-				annex_country = {
-					target = BEL
-					transfer_troops = no
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = BEL_ANNEXED_TAKE_FRANCE_TER
-				has_war_with = FRA
-				FRA = {
-					is_in_faction_with = ENG
-				}
-			}
-			every_state = {
+		hidden_effect = {
+			if = {
 				limit = {
-					OR = {
-						state = 29
-					}
-				}
-				transfer_state_to = GER
-			}		
-		}
-		if = {
-			limit = {
-				has_war_with = INS
-				INS = {
-					is_in_faction_with = ENG
-					is_puppet = yes
-					is_puppet_of = HOL
-				}
-			}
-			HOL = {
-				end_puppet = INS
-			}
-			GER = {
-				puppet = INS
-			}
-		}
-		if = {
-			limit = {
-				has_war_with = DEN
-				DEN = {
-					is_in_faction_with = ENG
-				}
-			}
-			annex_country = {
-				target = DEN
-				transfer_troops = no
-			}
-		}
-		if = {
-			limit = {
-				has_war_with = NOR
-				NOR = {
-					is_in_faction_with = ENG
-				}
-			}
-			annex_country = {
-				target = NOR
-				transfer_troops = no
-			}
-		}
-		if = {
-			limit = {
-				has_war_with = HOL
-				HOL = {
-					is_in_faction_with = ENG
-				}
-			}
-			GER = {
-				annex_country = {
-					target = HOL
-					transfer_troops = no
-				}
-			}
-		}
-		if = {
-			limit = {
-				Always = yes
-			}
-			rudolf_hess_africa_front_ITA = yes
-		}
-		if = {
-			limit = {
-				has_war_with = ENG
-			}
-			rudolf_hess_africa_front_International_Zone = yes
-		}		
-		if = {
-			limit = {
-				has_war_with = ENG
-				SPR = {
-					exists = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}	
-					NOT = { has_war_with = GER }
-				}
-			}
-			118 = { transfer_state_to = SPR }
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
-					has_war_with = ETH
-				}
-				ETH = {
-					has_war_with = ITA
-					is_in_faction_with = ENG
-				}
-			}
-			rudolf_hess_italy_annex_eth_w_puppets = yes
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
+					has_war_with = BEL
+					has_war_with = FRA
 					has_war_with = ENG
 				}
+				rudolf_hess_africa_front_GER = yes
 			}
-			every_state = {
+			if = {
 				limit = {
-					OR = {
-						state = 116
-						state = 183
-					}
-				}
-				transfer_state_to = ITA
-			}
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
 					has_war_with = FRA
+					FRA = {
+						is_in_faction_with = ENG
+					}
 				}
+				rudolf_hess_GER_states = yes
 			}
-			every_state = {
+			if = {
 				limit = {
-					OR = {
-						state = 735
-						state = 851
-						state = 1
+					has_war_with = POL
+					POL = {
+						is_in_faction_with = ENG
 					}
 				}
-				transfer_state_to = ITA
+				rudolf_hess_GER_POL_states = yes
 			}
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
+			if = {
+				limit = {
 					has_war_with = YUG
-				}
-				YUG = {
-					is_in_faction_with = ENG
-				}
-				MNT = {
-					exists = no
-				}
-			}
-			rudolf_hess_ITA_YUG_states = yes
-		}		
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
-					has_war_with = YUG
-				}
-				YUG = {
-					is_in_faction_with = ENG
-				}
-				MNT = {
-					exists = yes
-					is_puppet_of = ITA
-				}
-			}
-			rudolf_hess_ITA_YUG_1_states = yes
-		}
-		if = {
-			limit = {
-				ALB = {
-					is_puppet_of = ITA
-				}
-				ITA = {
-					is_in_faction_with = GER
-					has_war_with = YUG
-				}
-				YUG = {
-					is_in_faction_with = ENG
-				}
-			}
-			rudolf_hess_ITA_ALB_YUG_states = yes
-		}
-		if = {
-			limit = {
-				BUL = {
-					is_in_faction_with = GER
-					is_in_faction_with = ITA
-				}
-				OR = {
-					GER = {
-						has_war_with = YUG
+					YUG = {
+						is_in_faction_with = ENG
 					}
-					ITA = {
-						has_war_with = YUG
+				}
+				rudolf_hess_GER_YUG_states = yes
+			}
+			if = {
+				limit = {
+					has_war_with = LUX
+					LUX = {
+						is_in_faction_with = ENG
+					}
+				}
+				GER = {
+					annex_country = {
+						target = LUX
+						transfer_troops = no
 					}
 				}
 			}
-			rudolf_hess_BUL_YUG_states = yes
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
-					is_in_faction_with = BUL
-				}
-				OR = {
-					GER = {
-						has_war_with = GRE
+			if = {
+				limit = {
+					has_war_with = BEL
+					BEL = {
+						is_in_faction_with = ENG
 					}
-					ITA = {
-						has_war_with = GRE
+				}
+				set_global_flag = BEL_ANNEXED_TAKE_FRANCE_TER
+				GER = {
+					annex_country = {
+						target = BEL
+						transfer_troops = no
 					}
 				}
 			}
-			rudolf_hess_ITA_GRE_states = yes
-		}
-		if = {
-			limit = {
-				ITA = {
-					is_in_faction_with = GER
-					NOT = { is_in_faction_with = BUL }
+			if = {
+				limit = {
+					has_global_flag = BEL_ANNEXED_TAKE_FRANCE_TER
+					has_war_with = FRA
+					FRA = {
+						is_in_faction_with = ENG
+					}
 				}
-				OR = {
-					GER = {
-						has_war_with = GRE
+				every_state = {
+					limit = {
+						OR = {
+							state = 29
+						}
 					}
-					ITA = {
-						has_war_with = GRE
+					transfer_state_to = GER
+				}		
+			}
+			if = {
+				limit = {
+					has_war_with = INS
+					INS = {
+						is_in_faction_with = ENG
+						is_puppet = yes
+						is_puppet_of = HOL
 					}
+				}
+				HOL = {
+					end_puppet = INS
+				}
+				GER = {
+					puppet = INS
 				}
 			}
-			rudolf_hess_ITA_GRE_1_states = yes
-		}		
-		if = {
-			limit = {
-				BUL = {
-					is_in_faction_with = GER
-					is_in_faction_with = ITA
-				}
-				OR = {
-					GER = {
-						has_war_with = GRE
-					}
-					ITA = {
-						has_war_with = GRE
+			if = {
+				limit = {
+					has_war_with = DEN
+					DEN = {
+						is_in_faction_with = ENG
 					}
 				}
-			}
-			rudolf_hess_BUL_GRE_states = yes
-		}
-		if = {
-			limit = {
-				HUN = {
-					is_in_faction_with = GER
-					is_in_faction_with = ITA
-				}
-				OR = {
-					GER = {
-						has_war_with = YUG
-					}
-					ITA = {
-						has_war_with = YUG
-					}
-				}
-			}
-			rudolf_hess_HUN_YUG_states = yes
-		}
-		if = {
-			limit = {
-				has_war_with = FRA
-				FRA = {
-					is_in_faction_with = ENG
-				}
-				has_global_flag = ITA_GER_VICHY_ESTABLISHED
-			}
-			VIC = {
 				annex_country = {
-					target = FRA
-					transfer_troops = yes
+					target = DEN
+					transfer_troops = no
 				}
 			}
-		}
-
-		# END Time to Peace
-
-		clr_global_flag = flight_of_hess
-		ENG = {
-			white_peace = GER
-		}
-		start_peace_conference = {
-			tag = ENG
-			score_factor = 0
-			message = ger_sov_treaty_in_berlin
-		}
-		add_threat = 50
-		set_truce = {
-			target = ENG
-			days = 365
+			if = {
+				limit = {
+					has_war_with = NOR
+					NOR = {
+						is_in_faction_with = ENG
+					}
+				}
+				annex_country = {
+					target = NOR
+					transfer_troops = no
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = HOL
+					HOL = {
+						is_in_faction_with = ENG
+					}
+				}
+				GER = {
+					annex_country = {
+						target = HOL
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					Always = yes
+				}
+				rudolf_hess_africa_front_ITA = yes
+			}
+			if = {
+				limit = {
+					has_war_with = ENG
+				}
+				rudolf_hess_africa_front_International_Zone = yes
+			}		
+			if = {
+				limit = {
+					has_war_with = ENG
+					SPR = {
+						exists = yes
+						OR = {
+							has_government = fascism
+							has_government = neutrality
+						}	
+						NOT = { has_war_with = GER }
+					}
+				}
+				118 = { transfer_state_to = SPR }
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = ETH
+					}
+					ETH = {
+						has_war_with = ITA
+						is_in_faction_with = ENG
+					}
+				}
+				rudolf_hess_italy_annex_eth_w_puppets = yes
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = ENG
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 116
+							state = 183
+						}
+					}
+					transfer_state_to = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = FRA
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 735
+							state = 851
+							state = 1
+						}
+					}
+					transfer_state_to = ITA
+				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = YUG
+					}
+					YUG = {
+						is_in_faction_with = ENG
+					}
+					MNT = {
+						exists = no
+					}
+				}
+				rudolf_hess_ITA_YUG_states = yes
+			}		
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = YUG
+					}
+					YUG = {
+						is_in_faction_with = ENG
+					}
+					MNT = {
+						exists = yes
+						is_puppet_of = ITA
+					}
+				}
+				rudolf_hess_ITA_YUG_1_states = yes
+			}
+			if = {
+				limit = {
+					ALB = {
+						is_puppet_of = ITA
+					}
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = YUG
+					}
+					YUG = {
+						is_in_faction_with = ENG
+					}
+				}
+				rudolf_hess_ITA_ALB_YUG_states = yes
+			}
+			if = {
+				limit = {
+					BUL = {
+						is_in_faction_with = GER
+						is_in_faction_with = ITA
+					}
+					OR = {
+						GER = {
+							has_war_with = YUG
+						}
+						ITA = {
+							has_war_with = YUG
+						}
+					}
+				}
+				rudolf_hess_BUL_YUG_states = yes
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						is_in_faction_with = BUL
+					}
+					OR = {
+						GER = {
+							has_war_with = GRE
+						}
+						ITA = {
+							has_war_with = GRE
+						}
+					}
+				}
+				rudolf_hess_ITA_GRE_states = yes
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_in_faction_with = GER
+						NOT = { is_in_faction_with = BUL }
+					}
+					OR = {
+						GER = {
+							has_war_with = GRE
+						}
+						ITA = {
+							has_war_with = GRE
+						}
+					}
+				}
+				rudolf_hess_ITA_GRE_1_states = yes
+			}		
+			if = {
+				limit = {
+					BUL = {
+						is_in_faction_with = GER
+						is_in_faction_with = ITA
+					}
+					OR = {
+						GER = {
+							has_war_with = GRE
+						}
+						ITA = {
+							has_war_with = GRE
+						}
+					}
+				}
+				rudolf_hess_BUL_GRE_states = yes
+			}
+			if = {
+				limit = {
+					HUN = {
+						is_in_faction_with = GER
+						is_in_faction_with = ITA
+					}
+					OR = {
+						GER = {
+							has_war_with = YUG
+						}
+						ITA = {
+							has_war_with = YUG
+						}
+					}
+				}
+				rudolf_hess_HUN_YUG_states = yes
+			}
+			if = {
+				limit = {
+					has_war_with = YUG
+					YUG = {
+						is_in_faction_with = ENG
+						exists = yes
+					}
+				}
+				rudolf_hess_ITA_YUG_PUPPET_states = yes
+			}
+			if = {
+				limit = {
+					has_war_with = FRA
+					FRA = {
+						is_in_faction_with = ENG
+					}
+					has_global_flag = ITA_GER_VICHY_ESTABLISHED
+				}
+				VIC = {
+					annex_country = {
+						target = FRA
+						transfer_troops = yes
+					}
+				}
+			}
+	
+			# END Time to Peace
+			clr_global_flag = flight_of_hess
+			complete_national_focus = GER_National_sprit
+			set_global_flag = GER_WORLD_WAR_II_WIN
+			ENG = {
+				white_peace = GER
+			}
+			start_peace_conference = {
+				tag = ENG
+				score_factor = 0
+				message = ger_sov_treaty_in_berlin
+			}
+			add_threat = 50
+			set_truce = {
+				target = ENG
+				days = 365
+			}
+			news_event = { id = ger_f_news.6 hours = 6 }
 		}
 	}
 }
@@ -4849,6 +4865,134 @@ country_event = {
 
 		ai_chance = {
 			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = GER_Sign_Axis_Pact_event.1
+	title = "Axis Pact Proposal?"
+	desc = "The German government is inviting us to sign Axis Pact. With this agreement, relations with Axis will develop and will provide us with economic support."
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign."
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_ideas = GER_Axis_Pact_idea
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = 50
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = supported_us
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = Signed_Axis_Pact
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 50
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "No."
+
+		ai_chance = {
+			base = 0
+		}
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = -10
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = Not_Signed_Axis_Pact
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_force_anti_jewish.1
+	title = "Request from Germany?"
+	desc = "The German government is inviting us to sign Axis Pact. With this agreement, relations with Axis will develop and will provide us with economic support."
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign."
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_ideas = GER_Axis_Pact_idea
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = 50
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = supported_us
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = Signed_Axis_Pact
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 50
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "No."
+
+		ai_chance = {
+			base = 0
+		}
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = -10
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = Not_Signed_Axis_Pact
+				}
+			}
 		}
 	}
 }
