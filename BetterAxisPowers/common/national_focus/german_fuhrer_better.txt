@@ -4013,7 +4013,11 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_ideas = GER_Axis_Pact_idea_ger
+
 			custom_effect_tooltip = GER_Axis_Pact_Puppet_tt
+			effect_tooltip = {
+				add_ideas = GER_Axis_Pact_idea_puppet
+			}
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -4022,9 +4026,10 @@ focus_tree = {
 					add_ideas = GER_Axis_Pact_idea_puppet
 				}
 			}
+			
 			every_country = {
 				limit = {
-					has_government = fascism NOT = { tag = ROOT has_war_with = ROOT is_subject_of = GER }
+					has_government = fascism NOT = { tag = ROOT tag = JAP is_subject_of = JAP has_war_with = ROOT is_subject_of = GER }
 				}
 				country_event = { id = GER_Sign_Axis_Pact_event.1 hours = 12 }
 			}
