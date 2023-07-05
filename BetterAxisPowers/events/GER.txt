@@ -4371,7 +4371,7 @@ country_event = {
 			}
 		}
 
-		country_event = { id = GER_rudolf_hess.2 hours = 5 }
+		ENG = { country_event = { id = GER_rudolf_hess.2 hours = 5 } } 
 	}
 
 	option = {
@@ -4419,7 +4419,8 @@ country_event = {
 			}
 		}
 
-		country_event = { id = GER_rudolf_hess.4 hours = 5 }
+		
+		GER = { country_event = { id = GER_rudolf_hess.4 hours = 5 } }
 	}
 
 	option = {
@@ -4444,7 +4445,7 @@ country_event = {
 			}
 		}
 
-		country_event = { id = GER_rudolf_hess.3 hours = 5 }
+		GER = { country_event = { id = GER_rudolf_hess.3 hours = 5 } } 
 	}
 }
 
@@ -4935,41 +4936,30 @@ country_event = {
 
 country_event = {
 	id = GER_force_anti_jewish.1
-	title = "Request from Germany?"
-	desc = "The German government is inviting us to sign Axis Pact. With this agreement, relations with Axis will develop and will provide us with economic support."
+	title = "The German government is pressurising us"
+	desc = "Germany is forcing us to enact anti-Jewish laws. Despite the laws that we have already implemented to some extent, Germany wants us to strictly pass new laws. "
 	picture = GFX_report_event_generic_sign_treaty1
 
 	is_triggered_only = yes
 
 	option = {
-		name = "Sign."
+		name = "Fine."
 
 		ai_chance = {
 			base = 100
 		}
 
-		add_ideas = GER_Axis_Pact_idea
+		add_ideas = GER_Anti_jewish_idea
 
 		hidden_effect = {
 			add_ai_strategy = {
 				type = alliance
 				id = "GER"
-				value = 50
+				value = 30
 			}
 			add_opinion_modifier = {
 				target = GER
 				modifier = supported_us
-			}
-			GER = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = Signed_Axis_Pact
-				}
-				add_ai_strategy = {
-					type = alliance
-					id = "ROOT"
-					value = 50
-				}
 			}
 		}
 	}
@@ -4986,12 +4976,6 @@ country_event = {
 				type = alliance
 				id = "GER"
 				value = -10
-			}
-			GER = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = Not_Signed_Axis_Pact
-				}
 			}
 		}
 	}

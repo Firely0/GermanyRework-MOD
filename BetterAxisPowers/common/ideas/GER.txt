@@ -2,6 +2,28 @@ ideas = {
 
 	country = {
 
+		GER_Anti_jewish_idea = {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = -0.01
+				local_manpower = 0.01
+
+				required_garrison_factor = -0.1
+
+			}
+		}
+
 		GER_Axis_Pact_idea = {
 			picture = AxisPact_idea
 

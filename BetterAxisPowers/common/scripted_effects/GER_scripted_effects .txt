@@ -1865,6 +1865,10 @@ rudolf_hess_GER_states = {
 }
 
 rudolf_hess_GER_POL_states = {
+	GER = {
+		release_on_controlled = POL
+		puppet = POL
+	}
 	every_state = {
 		limit = {
 			OR = {
@@ -1874,9 +1878,6 @@ rudolf_hess_GER_POL_states = {
 			}
 		}
 		transfer_state_to = GER
-	}
-	GER = {
-		puppet = POL
 	}
 }
 

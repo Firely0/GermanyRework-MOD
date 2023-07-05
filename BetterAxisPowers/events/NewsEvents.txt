@@ -1520,7 +1520,7 @@ news_event = {
 news_event = {
 	id = news.44
 	title = news.44.t
-	desc = news.44.d
+	desc = "Deputy Führer Rudolf Hess was arrested by Home Guard soldiers in Scotland yesterday after parachuting from a heavy fighter. \n\nAn accomplished pilot, he apparently flew alone across the North Sea, taking care stay out of radar range before veering west towards Britain.\nHess appears to have taken it upon himself to negotiate a peace treaty between Britain and Germany."
 	picture = GFX_news_event_029
 	
 	major = yes
@@ -1530,10 +1530,6 @@ news_event = {
 	show_major = {
 		NOT = { tag = GER }
 	}
-
-	immediate = {
-		GER = { country_event = { id = GER_rudolf_hess.1 hours = 3 } }
-	}	
 	
 	option = {
 		name = news.44.a
@@ -1779,7 +1775,7 @@ news_event = {
 		random_list = {
 			50 = { 
 				ENG = { news_event = { id = news.44 } }
-				GER = { country_event = { id = germany.107 } }
+				GER = { country_event = { id = GER_rudolf_hess.1 hours = 3 } }
 			}
 			50 = { 
 				ENG = { news_event = { id = news.45 } } 

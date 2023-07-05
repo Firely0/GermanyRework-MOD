@@ -3842,7 +3842,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_New_World_Order
-		icon = GFX_goal_gerhegenomy
+		icon = GFX_goal_betterreich
 		prerequisite = { focus = GER_No_More_Eagles }
 		available = {
 		}
@@ -3999,7 +3999,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Sign_Axis_Pact
-		icon = GFX_goal_presavegermany
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = GER_for_Greater_Reich }
 		available = {
 		}
@@ -4058,7 +4058,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism fascism < 0.6 OR = { tag = FIN tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = ROOT is_in_faction_with = GER } NOT = { is_major = yes }
+					has_government = fascism OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
 				}
 				add_stability = -0.1
 				add_popularity = {
@@ -4084,6 +4084,14 @@ focus_tree = {
 			factor = 0
 		}	
 		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism fascism > 0.5 OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+			}
 		}
 	}
 
@@ -4102,7 +4110,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}	
-		completion_reward = { 
+		completion_reward = {
 			every_country = {
 				limit = {
 					has_government = fascism OR = { is_puppet_of = ROOT is_in_faction_with = GER has_idea = GER_Axis_Pact_idea }
@@ -4114,7 +4122,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Thousand_Week_Reich
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_gerhegenomy
 		cancel_if_invalid = no
 		prerequisite = { 
 			focus = GER_German_hegemony
@@ -4450,7 +4458,6 @@ focus_tree = {
 				can_create_factions = yes
 			}
 			create_faction = "The Axis"
-			scoped_play_song = "axistheme"
 		}	
 		}
 	}
