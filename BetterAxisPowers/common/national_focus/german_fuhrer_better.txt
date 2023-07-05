@@ -4073,7 +4073,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
+					has_government = fascism NOT = { is_major = yes tag = GER } OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
 				}
 				add_stability = -0.1
 				add_popularity = {
@@ -4101,7 +4101,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism fascism > 0.5 OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
+					has_government = fascism fascism > 0.5 OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER } NOT = { is_major = yes tag = GER }
 				}
 				set_politics = {
 					ruling_party = fascism
@@ -4128,7 +4128,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism OR = { is_puppet_of = ROOT is_in_faction_with = GER has_idea = GER_Axis_Pact_idea }
+					has_government = fascism OR = { is_puppet_of = ROOT is_in_faction_with = GER has_idea = GER_Axis_Pact_idea } NOT = { tag = GER }
 				}
 				country_event = { id = GER_force_anti_jewish.1 hours = 12 }
 			}
