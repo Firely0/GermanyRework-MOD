@@ -24,6 +24,49 @@ ideas = {
 			}
 		}
 
+		GER_Axis_Pact_idea_puppet = {
+			picture = AxisPact_idea
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+
+				autonomy_gain_trade = -1.0
+				master_ideology_drift = 0.05
+
+				extra_trade_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.5
+				cic_to_overlord_factor = 0.5
+			}
+		}
+
+		GER_Axis_Pact_idea_ger = {
+			picture = AxisPact_idea
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
 		GER_Axis_Pact_idea = {
 			picture = AxisPact_idea
 
