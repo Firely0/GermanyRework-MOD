@@ -2684,7 +2684,7 @@ GER_raise_penal_battalions = {
 		}
 
 		cost = 5
-		fire_only_once = no
+		days_re_enable = 365
 
 		ai_will_do = {
 			factor = 200
