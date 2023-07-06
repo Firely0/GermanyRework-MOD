@@ -3681,6 +3681,9 @@ country_event = {
 		hidden_effect = {
 			news_event = { hours = 6 id = news.28 }
 			set_global_flag = Adolf_killed
+			remove_power_balance = {
+				id = GER_power_balance
+			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = yes
@@ -3711,7 +3714,14 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = GFX_portrait_karl_donitz_new
+			}
 			set_global_flag = Adolf_killed
+			remove_power_balance = {
+				id = GER_power_balance
+			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = yes
@@ -3731,6 +3741,9 @@ country_event = {
 		# Göring becomes the new Fascist leader of Germany
 		kill_country_leader = yes
 		add_stability = 0.1
+		remove_power_balance = {
+			id = GER_power_balance
+		}
 		GER_hermann_goring = {
 			add_country_leader_role = {
 				promote_leader = yes
