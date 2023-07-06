@@ -3692,6 +3692,36 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		name = "Karl Dönitz"
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		add_stability = 0.05
+		GER_karl_donitz = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			hidden_effect = {
+				set_global_flag = Adolf_killed
+				uncomplete_national_focus = {
+					focus = GER_Fuhrer
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				complete_national_focus = GER_hitler_is_gone
+				complete_national_focus = GER_Power_Karl_Dönitz
+			}
+		}
+	}
+
 	option = { # Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany

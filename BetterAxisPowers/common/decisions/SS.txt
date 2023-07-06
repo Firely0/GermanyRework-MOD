@@ -938,6 +938,9 @@ SS_loot = {
 			}
 			16 = {
 				add_manpower = -50000 
+				add_dynamic_modifier = {
+					modifier = Ger_warsaw_state_dynamic_modifier
+				}
 			}	
 			news_event = { id = ger_f_news.4 hours = 3 }
 			custom_effect_tooltip = can_increase_resistance_d
@@ -999,9 +1002,9 @@ SS_loot = {
 				add_manpower = -720000 
 				add_dynamic_modifier = {
 					modifier = Ger_warsaw_state_dynamic_modifier
-					scope = GER
 				}
-			}	
+			}
+			set_global_flag = GER_destroyed_warsaw
 			news_event = { id = ger_f_news.5 hours = 3 }
 		}
 

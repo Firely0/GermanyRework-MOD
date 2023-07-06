@@ -225,6 +225,16 @@ leader_traits = {
 		}
 	}
 
+	dictator_pp_n = {
+		random = no
+		political_power_gain = -0.05
+		weekly_casualties_war_support = 0.001
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	dictator_pp_v1 = {
 		random = no
 		political_power_gain = 0.1
@@ -253,6 +263,16 @@ leader_traits = {
 		puppet_cost_factor = -0.1
 		subjects_autonomy_gain = -3
 		annex_cost_factor = -0.05
+	}
+
+	WW1_Veteran = {
+		random = no
+		war_support_factor = 0.1
+		weekly_casualties_war_support = 0.001
+
+		ai_will_do = {
+			factor = 1
+		}
 	}
 
 	armaments_organizer2 = {

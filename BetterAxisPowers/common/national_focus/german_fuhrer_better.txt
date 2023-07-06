@@ -3650,7 +3650,7 @@ focus_tree = {
 			factor = 10
 		}	
 		offset = {
-			x = -20
+			x = -18
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
@@ -3665,7 +3665,7 @@ focus_tree = {
 	focus = {
 		id = GER_purge_party
 		icon = GFX_focus_generic_conspiracy
-		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_hermann_goring focus = GER_Power_Karl_Dönitz }
+		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		available = {
 		}
 		cancel_if_invalid = no
@@ -3677,12 +3677,13 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_stability = -0.1
 		}
 	}
 
 	focus = {
 		id = GER_take_advantage_of_Turmoil
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = { focus = GER_purge_party }
 		mutually_exclusive = {
 			focus = GER_take_support_from_ss
@@ -3698,6 +3699,11 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			add_country_leader_trait = dictator_pp_n
 		}
 	}
 
@@ -3723,6 +3729,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_country_leader_trait = dictator_pp
 		}
 	}
 
@@ -3779,7 +3786,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Power_Karl_Dönitz
+		id = GER_Power_Karl_Donitz
 		icon = GFX_goal_fuhrerisgone
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Heinrich_Himmler }
@@ -3796,19 +3803,89 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			set_country_flag = GER_side_with_fascism
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
 	focus = {
 		id = GER_surrender
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Dönitz }
+		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 2
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_blackout_tactics
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		available = {
 		}
 		cancel_if_invalid = no
 		x = -3
+		y = 3
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_no_time_for_warrules
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = GER_blackout_tactics }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -4
+		y = 4
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_for_germany
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_blackout_tactics }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -2
+		y = 4
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_burn_country
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
 		y = 2
 		relative_position_id = GER_hitler_is_gone
 		cost = 3
@@ -3818,6 +3895,60 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = GER_side_with_fascism
 			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {
+		id = GER_we_must_not_fall
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 3
+		y = 3
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_penal_battalions
+		icon = GFX_focus_SOV_penal_battalions
+		prerequisite = { focus = GER_we_must_not_fall }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 4
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = { 
+		id = GER_Loyal_to_Cause
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_we_must_not_fall }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 4
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
 		}
 	}
 
@@ -3838,7 +3969,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 		}
-	}
+	} 
 
 	focus = {
 		id = GER_New_World_Order
@@ -11668,7 +11799,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 2
+			x = 4
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone

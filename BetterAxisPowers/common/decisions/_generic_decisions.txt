@@ -1534,6 +1534,126 @@ special_projects = {
 			}
 		}
 	}
+
+	rebuild_warsaw = {
+
+		icon = GFX_decision_generic_special_project
+
+		available = {
+			has_full_control_of_state = 10
+			NOT = {
+				any_enemy_country = {
+					controls_state = 10
+				}
+			}
+			num_of_civilian_factories > 20
+		}
+	
+		visible = {
+			has_global_flag = GER_destroyed_warsaw
+		}
+	
+		fire_only_once = yes
+	
+		days_remove = 180
+	
+		cost = 200
+	
+		modifier = {
+			civilian_factory_use = 20
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 10
+					NOT = {
+						any_enemy_country = {
+							controls_state = 10
+						}
+					}
+				}
+				clr_global_flag = GER_destroyed_warsaw
+				random_controlled_state = {
+					limit = {
+						state = 10
+					}
+					remove_dynamic_modifier = { modifier = Ger_warsaw_state_dynamic_modifier }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 200
+				tag = POL
+			}
+			modifier = {
+				factor = 10 # Prioritize if not at war
+				has_war = no
+			}
+		}
+	}
+
+	rebuild_paris = {
+
+		icon = GFX_decision_generic_special_project
+
+		available = {
+			has_full_control_of_state = 16
+			NOT = {
+				any_enemy_country = {
+					controls_state = 16
+				}
+			}
+			num_of_civilian_factories > 20
+		}
+	
+		visible = {
+			has_global_flag = GER_destroyed_eiffel
+		}
+	
+		fire_only_once = yes
+	
+		days_remove = 180
+	
+		cost = 200
+	
+		modifier = {
+			civilian_factory_use = 20
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 16
+					NOT = {
+						any_enemy_country = {
+							controls_state = 16
+						}
+					}
+				}
+				clr_global_flag = GER_destroyed_eiffel
+				random_controlled_state = {
+					limit = {
+						state = 16
+					}
+					remove_dynamic_modifier = { modifier = Ger_warsaw_state_dynamic_modifier }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 200
+				tag = FRA
+			}
+			modifier = {
+				factor = 10 # Prioritize if not at war
+				has_war = no
+			}
+		}
+	}
 }
 
 war_measures = {
