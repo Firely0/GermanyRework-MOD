@@ -2667,6 +2667,36 @@ GER_aid_hun_rom_democratic_civil_war = {
 
 }
 
+GER_raise_penal_battalions = {
+
+	GER_raise_penal_battalion = {
+
+		allowed = {
+			original_tag = GER
+			has_government = fascism
+		}
+
+		available = {
+		}
+
+		visible = {
+			has_global_flag = GER_CAN_RISE_PENAL_BATTALIONS
+		}
+
+		cost = 5
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			GER_spawn_penal_divisions_effect = yes
+		}
+	}
+
+}
+
 GER_austro_hungarian_empire = {
 
 	GER_reform_austro_hungarian_empire = {

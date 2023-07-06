@@ -3937,8 +3937,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
 			hidden_effect = {
 				set_technology = { penal_infantry = 1 popup = no }
+				set_global_flag = GER_CAN_RISE_PENAL_BATTALIONS
 
 				division_template = {
 					name = "Strafbataillon"

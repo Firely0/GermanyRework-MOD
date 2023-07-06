@@ -44,6 +44,24 @@ GER_expand_support = {
 
 }
 
+GER_raise_penal_battalions = {
+
+	icon = GFX_decision_generic_independence
+
+	allowed = {
+		original_tag = GER
+	}
+	
+	priority = 70
+
+	visible_when_empty = no
+	
+	visible = {
+		has_global_flag = GER_CAN_RISE_PENAL_BATTALIONS
+	}
+
+}
+
 hitlerspeeches_category = {
 	icon = generic_propaganda
 
