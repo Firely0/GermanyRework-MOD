@@ -4829,6 +4829,9 @@ country_event = {
 						transfer_troops = yes
 					}
 				}
+				clr_global_flag = GER_allow_france_comp
+				clr_global_flag = GER_allow_france_comp_bad
+				clr_global_flag = ITA_GER_VICHY_ESTABLISHED
 			}
 	
 			# END Time to Peace

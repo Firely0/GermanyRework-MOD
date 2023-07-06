@@ -3701,7 +3701,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.15
+				popularity = -0.1
 			}
 			add_country_leader_trait = dictator_pp_n
 		}
@@ -3717,7 +3717,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = GER_Power_Heinrich_Himmler
-				has_completed_focus = GER_Power_Karl_Dönitz
+				has_completed_focus = GER_Power_Karl_Donitz
 			}
 		}
 		cancel_if_invalid = no
@@ -3755,7 +3755,7 @@ focus_tree = {
 		id = GER_Power_Heinrich_Himmler
 		icon = GFX_goal_newfuhrerishimmler
 		prerequisite = { focus = GER_hitler_is_gone }
-		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Dönitz }
+		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		cancel_if_invalid = no
 		x = 6
 		y = 1
@@ -3772,7 +3772,7 @@ focus_tree = {
 		id = GER_Power_hermann_goring
 		icon = GFX_goal_newfuhrerisgorring
 		prerequisite = { focus = GER_hitler_is_gone }
-		mutually_exclusive = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Dönitz }
+		mutually_exclusive = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
 		cancel_if_invalid = no
 		x = -6
 		y = 1
@@ -3787,7 +3787,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Power_Karl_Donitz
-		icon = GFX_goal_fuhrerisgone
+		icon = GFX_goal_newfuhreriskarldonitz
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Heinrich_Himmler }
 		allow_branch = {
@@ -3839,6 +3839,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_ideas = GER_hermann_goring_plans
 		}
 	}
 
@@ -3857,6 +3858,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_hermann_goring_plans
+				add_idea = GER_hermann_goring_plans_1
+			}
 		}
 	}
 
@@ -3913,6 +3918,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			add_ideas = GER_heinrick_himmler_plans
 		}
 	}
 
@@ -3931,6 +3937,32 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			hidden_effect = {
+				set_technology = { penal_infantry = 1 popup = no }
+
+				division_template = {
+					name = "Strafbataillon"
+					division_names_group = GER_PEN_01
+					is_locked = yes
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+
+				SOV_spawn_penal_divisions_effect = yes
+			}
 		}
 	}
 
@@ -3949,6 +3981,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_heinrick_himmler_plans
+				add_idea = GER_heinrick_himmler_plans_1
+			}
 		}
 	}
 
@@ -3976,6 +4012,7 @@ focus_tree = {
 		icon = GFX_goal_betterreich
 		prerequisite = { focus = GER_No_More_Eagles }
 		available = {
+			has_war = no
 		}
 		cancel_if_invalid = no
 		x = 2
@@ -4204,7 +4241,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism NOT = { is_major = yes tag = GER } OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER }
+					has_government = fascism is_in_faction_with = GER NOT = { is_major = yes tag = GER } OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER has_idea = GER_Axis_Pact_idea }
 				}
 				add_stability = -0.1
 				add_popularity = {
@@ -4232,7 +4269,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 				limit = {
-					has_government = fascism fascism > 0.5 OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER is_in_faction_with = GER } NOT = { is_major = yes tag = GER }
+					has_government = fascism fascism > 0.5 is_in_faction_with = GER OR = { tag = FIN tag = SWE tag = ROM tag = BUL tag = HUN tag = CRO tag = SLO is_puppet_of = GER has_idea = GER_Axis_Pact_idea } NOT = { is_major = yes tag = GER }
 				}
 				set_politics = {
 					ruling_party = fascism
@@ -11523,7 +11560,15 @@ focus_tree = {
 			factor = 0
 		}	
 		completion_reward = {
-			recruit_character = GER_SUPREM_adolf_hitler
+			add_field_marshal_role = {
+				character = GER_SUPREM_adolf_hitler
+				traits= { politically_connected  offensive_doctrine old_guard }
+				skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=2
+			}
 		}
 	}
 

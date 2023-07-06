@@ -2,6 +2,83 @@ ideas = {
 
 	country = {
 
+		GER_heinrick_himmler_plans = {
+			picture = Himler_plans
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 0.1
+			}
+		}
+
+		GER_heinrick_himmler_plans_1 = {
+			picture = Himler_plans
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 0.1
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		GER_hermann_goring_plans = {
+			picture = Gorring_Plans
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_air_damage_factor = -0.2
+			}
+		}
+
+		GER_hermann_goring_plans_1 = {
+			picture = Gorring_Plans
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { has_government = fascism }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_air_damage_factor = -0.2
+				army_breakthrough_against_major_factor = 0.05
+				army_attack_against_major_factor = 0.05
+
+			}
+		}
+
 		GER_Anti_jewish_idea = {
 			picture = tfv_can_conscription_crisis
 
