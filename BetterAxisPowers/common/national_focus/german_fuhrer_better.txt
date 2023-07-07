@@ -3738,6 +3738,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = GER_take_support_from_ss focus = GER_take_advantage_of_Turmoil }
 		available = {
+			fascism > 0.6
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -3748,6 +3749,13 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_chance_focus
+			if = {
+				limit = {
+					has_completed_focus = GER_Power_Karl_Donitz
+				}
+				country_event = { id = GER_new_leader.1 hours = 1 }
+			}
 		}
 	}
 
@@ -3766,7 +3774,135 @@ focus_tree = {
 		}	
 		completion_reward = {
 		}
-	}	
+	}
+	
+	focus = {
+		id = GER_Emergency_Orders_himmler
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = GER_Power_Heinrich_Himmler }
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		relative_position_id = GER_Power_Heinrich_Himmler
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = Emergency_Orders days = 364
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Case_North_a
+		text = GER_Case_North
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = GER_Emergency_Orders_himmler }
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		relative_position_id = GER_Emergency_Orders_himmler
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 63
+						state = 68
+						state = 66
+						state = 67
+						state = 763
+						state = 5
+						state = 188
+						state = 85
+						state = 807
+						state = 86
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 120
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Case_Western_a
+		text = GER_Case_Western
+		icon = GFX_focus_generic_strike_at_democracy3
+		prerequisite = { focus = GER_Emergency_Orders_himmler }
+		cancel_if_invalid = no
+		x = -2
+		y = 1
+		relative_position_id = GER_Emergency_Orders_himmler
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 28
+						state = 8
+						state = 909
+						state = 42
+						state = 51
+						state = 50
+						state = 55
+						state = 57
+						state = 56
+						state = 59
+						state = 60
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 120
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Battle_of_Berlin_a
+		text = GER_Battle_of_Berlin
+		icon = GFX_goal_Berlinflagwfort
+		prerequisite = { focus = GER_Emergency_Orders_himmler }
+		cancel_if_invalid = no
+		x = 0
+		y = 1
+		relative_position_id = GER_Emergency_Orders_himmler
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 64
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 364
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = GER_Power_hermann_goring
@@ -3782,6 +3918,131 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_Emergency_Orders_goring
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = GER_Power_hermann_goring }
+		cancel_if_invalid = no
+		x = -7
+		y = 2
+		relative_position_id = GER_hitler_is_gone
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = Emergency_Orders days = 364
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Case_North
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = GER_Emergency_Orders_goring }
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		relative_position_id = GER_Emergency_Orders_goring
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 63
+						state = 68
+						state = 66
+						state = 67
+						state = 763
+						state = 5
+						state = 188
+						state = 85
+						state = 807
+						state = 86
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 120
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Case_Western
+		icon = GFX_focus_generic_strike_at_democracy3
+		prerequisite = { focus = GER_Emergency_Orders_goring }
+		cancel_if_invalid = no
+		x = -2
+		y = 1
+		relative_position_id = GER_Emergency_Orders_goring
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 28
+						state = 8
+						state = 909
+						state = 42
+						state = 51
+						state = 50
+						state = 55
+						state = 57
+						state = 56
+						state = 59
+						state = 60
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 120
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Battle_of_Berlin
+		icon = GFX_goal_Berlinflagwfort
+		prerequisite = { focus = GER_Emergency_Orders_goring }
+		cancel_if_invalid = no
+		x = 0
+		y = 1
+		relative_position_id = GER_Emergency_Orders_goring
+		cost = 1
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GER
+					OR = {
+						state = 64
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_def_dynamic_modifier
+					scope = GER
+					days = 364
+				}
+			}
 		}
 	}
 

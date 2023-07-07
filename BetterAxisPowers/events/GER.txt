@@ -36,6 +36,7 @@ add_namespace = GER_civil_war_end_com
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
+add_namespace = GER_new_leader
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -4112,15 +4113,6 @@ country_event = {
 		unlock_national_focus = GER_assassinate_adolf_hitler
 		}
 		add_stability = -0.25
-		GER_Com_Civilwar = {
-			add_country_leader_role = {
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = leninism 
-				}
-				promote_leader = yes
-			}
-		}
 		random_other_country = {
 			limit = {
 				original_tag = GER
@@ -4941,6 +4933,53 @@ country_event = {
 	id = GER_force_anti_jewish.1
 	title = "The German government is pressurising us"
 	desc = "Germany is forcing us to enact anti-Jewish laws. Despite the laws that we have already implemented to some extent, Germany wants us to strictly pass new laws. "
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Fine."
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_ideas = GER_Anti_jewish_idea
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = 30
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = supported_us
+			}
+		}
+	}
+
+	option = {
+		name = "No."
+
+		ai_chance = {
+			base = 0
+		}
+
+		hidden_effect = {
+			add_ai_strategy = {
+				type = alliance
+				id = "GER"
+				value = -10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_new_leader.1
+	title = "The New Leader?"
+	desc = "Germany, which has been successfully guided by Karl Donitz's balancing policy, will finally have to choose its new leader. "
 	picture = GFX_report_event_generic_sign_treaty1
 
 	is_triggered_only = yes

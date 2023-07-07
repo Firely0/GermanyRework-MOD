@@ -105,7 +105,8 @@ ideas = {
 			picture = AxisPact_idea
 
 			allowed = {
-				always = no
+				is_puppet_of = GER
+				GER = { has_idea = GER_Axis_Pact_idea_ger }
 			}
 
 			cancel = {
