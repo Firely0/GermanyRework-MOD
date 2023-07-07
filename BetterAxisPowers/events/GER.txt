@@ -4862,6 +4862,16 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
+
+		hidden_effect = {
+			set_country_flag = flight_of_hess
+			if = {
+				limit = {
+					has_idea = rudolf_hess
+				}
+				remove_ideas = rudolf_hess
+			}
+		}
 	}
 }
 
