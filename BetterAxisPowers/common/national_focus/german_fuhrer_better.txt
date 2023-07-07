@@ -3785,7 +3785,9 @@ focus_tree = {
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_Power_Heinrich_Himmler }
 		allow_branch = { 
-			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_reorganize_party }
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -3937,6 +3939,8 @@ focus_tree = {
 		prerequisite = { focus = GER_Power_hermann_goring }
 		allow_branch = { 
 			NOT = { has_completed_focus = GER_reorganize_party } 
+		    NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = -7
@@ -4088,6 +4092,8 @@ focus_tree = {
 		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		allow_branch = { 
 			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = -2
@@ -4113,6 +4119,8 @@ focus_tree = {
 		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		allow_branch = { 
 			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = -3
@@ -4174,7 +4182,9 @@ focus_tree = {
 		icon = GFX_goal_continuous_suppression
 		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
 		allow_branch = { 
-			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_reorganize_party }
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 2
@@ -4209,6 +4219,8 @@ focus_tree = {
 		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
 		allow_branch = { 
 			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		cancel_if_invalid = no
 		x = 3
