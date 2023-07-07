@@ -1,0 +1,17 @@
+technology_sharing_group = {
+
+	id = Axis_Pact_research
+	name = Axis_Pact_research_name
+	desc = Axis_Pact_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        NOT = { has_war_with = GER }
+		OR = {
+			has_idea = GER_Axis_Pact_idea_puppet
+			has_idea = GER_Axis_Pact_idea
+		}
+    }
+}

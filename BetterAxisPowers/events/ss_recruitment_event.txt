@@ -21,9 +21,14 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_recruitment_NOR # player has already selected historical recruitment in Norway
@@ -101,10 +106,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -162,9 +172,14 @@ country_event = {
 		}
 		add_manpower = 500
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+			SS_resolve_effects_ss = yes
+		}
 	}
 
 }
@@ -176,17 +191,20 @@ country_event = {
 	desc = ss_recruitment_event.2.desc	#
 	picture = GFX_report_event_german_volunteers					# 
 	
-	
-
 	is_triggered_only = yes
 	option = { 
 		name = ss_recruitment_event.1.a #historical
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_recruitment_DEN # player has already selected historical recruitment in Norway
@@ -264,10 +282,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -325,9 +348,14 @@ country_event = {
 		}
 		add_manpower = 500
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+			SS_resolve_effects_ss = yes
+		}
 	}
 }
 
@@ -346,10 +374,15 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
 		if = {
 			limit = {
 				has_country_flag = SS_mechanised_division_late
@@ -410,10 +443,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -483,9 +521,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 
@@ -504,10 +547,16 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
+
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_mechanised_division_late
@@ -581,10 +630,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -654,9 +708,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 
 }
@@ -676,9 +735,14 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				NOT = { has_country_flag = SS_infantry_division }
@@ -712,9 +776,14 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
 		if = {
 			limit = {
@@ -786,8 +855,13 @@ country_event = {
 		add_manpower = 2000
 		army_experience = 10
 		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 
 }
@@ -843,9 +917,14 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
 		if = {
 			limit = {
@@ -904,9 +983,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 
@@ -1071,9 +1155,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 
@@ -1084,17 +1173,20 @@ country_event = {
 	desc = ss_recruitment_event.8.desc	#
 	picture = GFX_report_event_german_volunteers					# 
 	
-	
-
 	is_triggered_only = yes
 	option = { 
 		name = ss_recruitment_event.1.a #historical
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		add_manpower = 1000
 	}
 		
@@ -1144,9 +1236,14 @@ country_event = {
 		}
 		add_manpower = 500
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 # wehrmacht resolution events - generals protest
@@ -1222,6 +1319,7 @@ country_event = {
 			}
 		}
 		add_political_power = -75
+		
 		subtract_from_variable = { var = wehrmacht_anger value = 5 }
 	}
 }
@@ -1727,10 +1825,15 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_mechanised_division_late
@@ -1791,10 +1894,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -1864,9 +1972,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 #SS recruitment, scotland
@@ -1884,10 +1997,15 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
 		if = {
 			limit = {
 				NOT = { has_country_flag = SS_infantry_division }
@@ -1920,10 +2038,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_mechanised_division_late
@@ -1981,9 +2104,14 @@ country_event = {
 		}
 		add_manpower = 1000
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }
 #ss recruitment sweden
@@ -1993,18 +2121,20 @@ country_event = {
 	desc = ss_recruitment_alternate.3.desc	#
 	picture = GFX_report_event_german_volunteers					# 
 	
-	
-
 	is_triggered_only = yes
 	option = { 
 		name = ss_recruitment_event.1.a #historical
 		ai_chance = {
 			base = 50
 		}
-		add_to_variable = { var = wehrmacht_anger value = 5}
-		subtract_from_variable = { var = SS_anger value = 5}
-		SS_resolve_effects_wehrmacht = yes
-		
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 5}
+			subtract_from_variable = { var = SS_anger value = 5}
+			SS_resolve_effects_wehrmacht = yes
+		}
 			SS_set_templates = yes
 			if = {
 				limit = {
@@ -2067,10 +2197,15 @@ country_event = {
 				check_variable = { var = wehrmacht_anger value = 30 compare = greater_than_or_equals }
 			}
 		}
-		add_to_variable = { var = wehrmacht_anger value = 10}
-		subtract_from_variable = { var = SS_anger value = 10}
 		SS_set_templates = yes
-		SS_resolve_effects_wehrmacht = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = wehrmacht_anger value = 10}
+			subtract_from_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_wehrmacht = yes
+		}
 		if = {
 			limit = {
 				has_country_flag = SS_armored_division_late
@@ -2128,8 +2263,13 @@ country_event = {
 		}
 		add_manpower = 500
 		army_experience = 10
-		add_to_variable = { var = SS_anger value = 10}
-		SS_resolve_effects_ss = yes
-		subtract_from_variable = { var = wehrmacht_anger value = 5}
+		if = {
+			limit = {
+				NOT = { has_global_flag = GER_for_germany }
+			}
+			add_to_variable = { var = SS_anger value = 10}
+			SS_resolve_effects_ss = yes
+			subtract_from_variable = { var = wehrmacht_anger value = 5}
+		}
 	}
 }

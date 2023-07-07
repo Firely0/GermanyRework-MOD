@@ -3638,11 +3638,11 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_hitler_is_gone_tt
-				NOT = { has_country_leader = { character = GER_adolf_hitler } }
+				always = no
 			}
 		}
 		cancel_if_invalid = no
-		x = 18
+		x = 20
 		y = 2
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -3650,7 +3650,7 @@ focus_tree = {
 			factor = 10
 		}	
 		offset = {
-			x = -18
+			x = -20
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
@@ -3701,7 +3701,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = -0.1
+				popularity = 0.1
 			}
 			add_country_leader_trait = dictator_pp_n
 		}
@@ -3764,6 +3764,9 @@ focus_tree = {
 		icon = GFX_goal_newfuhrerishimmler
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
+		available = {
+			always = no
+		}
 		cancel_if_invalid = no
 		x = 6
 		y = 1
@@ -3781,6 +3784,9 @@ focus_tree = {
 		text = GER_Emergency_Orders_goring
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_Power_Heinrich_Himmler }
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
+		}
 		cancel_if_invalid = no
 		x = 1
 		y = 1
@@ -3909,6 +3915,9 @@ focus_tree = {
 		id = GER_Power_hermann_goring
 		icon = GFX_goal_newfuhrerisgorring
 		prerequisite = { focus = GER_hitler_is_gone }
+		available = {
+			always = no
+		}
 		mutually_exclusive = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
 		cancel_if_invalid = no
 		x = -6
@@ -3926,6 +3935,9 @@ focus_tree = {
 		id = GER_Emergency_Orders_goring
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_Power_hermann_goring }
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
+		}
 		cancel_if_invalid = no
 		x = -7
 		y = 2
@@ -4052,9 +4064,11 @@ focus_tree = {
 		icon = GFX_goal_newfuhreriskarldonitz
 		prerequisite = { focus = GER_hitler_is_gone }
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Heinrich_Himmler }
-		allow_branch = {
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
 		}
 		available = {
+			always = no
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -4072,13 +4086,14 @@ focus_tree = {
 		id = GER_refuse_surrender
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
-		available = {
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
 		}
 		cancel_if_invalid = no
 		x = -2
 		y = 2
 		relative_position_id = GER_hitler_is_gone
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
@@ -4096,13 +4111,14 @@ focus_tree = {
 		id = GER_blackout_tactics
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
-		available = {
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
 		}
 		cancel_if_invalid = no
 		x = -3
 		y = 3
 		relative_position_id = GER_hitler_is_gone
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}	
@@ -4148,6 +4164,8 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_FREE_SS_RECRUITMENT
+			set_global_flag = GER_for_germany
 		}
 	}
 
@@ -4155,13 +4173,14 @@ focus_tree = {
 		id = GER_burn_country
 		icon = GFX_goal_continuous_suppression
 		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
-		available = {
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
 		}
 		cancel_if_invalid = no
 		x = 2
 		y = 2
 		relative_position_id = GER_hitler_is_gone
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}	
@@ -4188,13 +4207,14 @@ focus_tree = {
 		id = GER_we_must_not_fall
 		icon = GFX_focus_ITA_generic_fascist_workers
 		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_Karl_Donitz }
-		available = {
+		allow_branch = { 
+			NOT = { has_completed_focus = GER_reorganize_party } 
 		}
 		cancel_if_invalid = no
 		x = 3
 		y = 3
 		relative_position_id = GER_hitler_is_gone
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}	
@@ -4464,6 +4484,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_ideas = GER_Axis_Pact_idea_ger
+			add_to_tech_sharing_group = Axis_Pact_research
 
 			custom_effect_tooltip = GER_Axis_Pact_Puppet_tt
 			effect_tooltip = {
@@ -9293,7 +9314,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		allow_branch = {
-			has_global_flag = GER_BLOCK_COM
+			has_global_flag = GER_COM_SIDE
 			NOT = {
 				has_completed_focus = GER_Fuhrer
 				has_completed_focus = GER_hitler_is_gone
@@ -12127,7 +12148,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = 4
+			x = 5
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
