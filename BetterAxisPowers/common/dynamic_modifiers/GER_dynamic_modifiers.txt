@@ -183,11 +183,32 @@ GER_Resupply_dynamic_modifier = {
 GER_def_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_modifiers_generic_supply
+	icon = GFX_modifiers_generic_defense
 	
 	no_supply_grace = 60
 	army_morale_factor = 0.1
 	dig_in_speed_factor = 0.1
+
+}
+
+GER_ss_resist_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	required_garrison_factor = 0.15
+	required_garrison_factor = 0.15
+	no_compliance_gain = 1
+
+}
+
+GER_burn_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_burn_state
+	
+	industry_repair_factor = -0.8
+	industry_free_repair_factor = -1.0
 
 }
 

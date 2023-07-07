@@ -3778,6 +3778,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_Emergency_Orders_himmler
+		text = GER_Emergency_Orders_goring
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_Power_Heinrich_Himmler }
 		cancel_if_invalid = no
@@ -4068,7 +4069,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_surrender
+		id = GER_refuse_surrender
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
 		available = {
@@ -4082,6 +4083,12 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			every_core_state = {
+				add_dynamic_modifier = {
+					modifier = GER_ss_resist_dynamic_modifier
+					days = 90
+				}
+			}
 		}
 	}
 
@@ -4159,8 +4166,21 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			set_country_flag = GER_side_with_fascism
-			mark_focus_tree_layout_dirty = yes
+			every_controlled_state = {
+				add_dynamic_modifier = {
+					modifier = GER_burn_dynamic_modifier
+					days = 90
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					not = { state = 64 }
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 10
+				}
+			}
 		}
 	}
 
