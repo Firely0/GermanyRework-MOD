@@ -99,6 +99,12 @@ GER_power_balance = {
 						set_global_flag = Adolf_retired
 					}
 				}
+				if = {
+					limit = {
+						NOT = { has_idea = Kaiser_Idea }
+					}
+					country_event = { id = GER_new_leader.2 hours = 6 }
+				}
 			}
 			on_deactivate = {
 				

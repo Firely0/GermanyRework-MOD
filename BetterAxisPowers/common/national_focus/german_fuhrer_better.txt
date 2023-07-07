@@ -728,14 +728,14 @@ focus_tree = {
 			is_puppet = no
 		}
 		offset = {
-			x = -10
+			x = -15
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -16
+			x = -20
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
@@ -892,14 +892,14 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -10
+			x = -15
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -15
+			x = -19
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
@@ -3666,8 +3666,6 @@ focus_tree = {
 		id = GER_purge_party
 		icon = GFX_focus_generic_conspiracy
 		prerequisite = { focus = GER_Power_Heinrich_Himmler focus = GER_Power_hermann_goring focus = GER_Power_Karl_Donitz }
-		available = {
-		}
 		cancel_if_invalid = no
 		x = 0
 		y = 2
@@ -4070,6 +4068,8 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_Power_hermann_goring focus = GER_Power_Heinrich_Himmler }
 		allow_branch = { 
 			NOT = { has_completed_focus = GER_reorganize_party } 
+			NOT = { has_completed_focus = GER_against_fuhrer } 
+			NOT = { has_completed_focus = GER_Fuhrer }
 		}
 		available = {
 			always = no
@@ -4934,14 +4934,14 @@ focus_tree = {
 			factor = 10
 		}	
 		offset = {
-			x = -10
+			x = -15
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -17
+			x = -21
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
