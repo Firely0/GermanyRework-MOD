@@ -1,3 +1,47 @@
+health_of_adolf_category = {
+
+	eva_braun_work_as_health_care = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_country_flag = eva_braun_has_job }
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_country_flag = eva_braun_has_job
+			set_country_flag = eva_braun_health
+			hidden_effect = {
+				remove_trait = {
+					character = GER_eva_braun
+					slot = political_advisor
+					trait = eva_braun_trait
+				}
+			}
+			add_trait = {
+				character = GER_eva_braun
+				slot = political_advisor
+				trait = "eva_braun_trait_health"
+			}
+		}
+	}
+}
+
 eva_braun_category = {
 
 	eva_braun_work_as_health_care = {

@@ -37,6 +37,7 @@ add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
 add_namespace = GER_new_leader
+add_namespace = GER_health_adolf
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -5173,6 +5174,34 @@ country_event = {
 			}
 		}
 	}
+}
+
+
+
+country_event = {
+	id = GER_health_adolf.1
+	title = "Health Problems of Adolf Hitler"
+	desc = "Adolf Hitler is looking for a quick solution to his recent health problems. What should we do?"
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Seek Treatment with Europe`s Best Doctors"
+	}
+
+	option = { #Theodor Morell
+		name = "Adolf's Personal Doctor"
+	}
+
+	option = {
+		name = "He just needs to rest."
+
+		trigger = {
+			check_variable = { adolf_hitler_rest < 5 }
+		}
+	}
+
 }
 
 
