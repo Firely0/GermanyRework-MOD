@@ -5184,14 +5184,36 @@ country_event = {
 	desc = "Adolf Hitler is looking for a quick solution to his recent health problems. What should we do?"
 	picture = GFX_report_event_generic_sign_treaty1
 
+	immediate = {
+		hidden_effect = {
+			activate_mission = Adolf_Hitler_Yearly_Check_ups 
+		}
+	}
+
 	is_triggered_only = yes
 
 	option = {
 		name = "Seek Treatment with Europe`s Best Doctors"
+
+		hidden_effect = {
+			add_to_variable = { best_doctors = 1 }
+			add_to_variable = { theodor_morell = -2 }
+		}
+
+		trigger = {
+			check_variable = { theodor_morell < 4 }
+		}
 	}
 
 	option = { #Theodor Morell
 		name = "Adolf's Personal Doctor"
+
+		GER_adolf_personal_doctor_idea_effect = yes
+
+		hidden_effect = { # Adolf`s Health Getting Bad
+			add_to_variable = { adolf_hitler_rest = 1 }
+			add_to_variable = { theodor_morell = 1 }
+		}
 	}
 
 	option = {

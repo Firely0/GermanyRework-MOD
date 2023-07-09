@@ -442,200 +442,6 @@ if = {
 }
 }
 
-GER_bop_increase_lost_core_modifier = {
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_4
-		}
-	}
-	add_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_5
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_3
-		}
-	}
-	add_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_4
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_2
-		}
-	}
-	add_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_3
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_1
-		}
-	}
-	add_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_2
-	}
-}
-else_if = {
-	limit = {
-		NOT = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_lost_core_5
-			}
-		}
-	}
-	add_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_1
-	}
-}
-}
-
-GER_bop_decrease_lost_core_modifier = {
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_5
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_5
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_4
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_4
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_3
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_3
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_2
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_2
-	}
-}
-else_if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_1
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_1
-	}
-}
-else = {
-	#NOTHING cannot decrease
-}
-}
-
-GER_bop_remove_lost_core_modifier = {
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_5
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_5
-	}
-}
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_4
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_4
-	}
-}
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_3
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_3
-	}
-}
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_2
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_2
-	}
-}
-if = {
-	limit = {
-		has_power_balance_modifier = {
-			id = GER_power_balance
-			modifier = GER_power_balance_lost_core_1
-		}
-	}
-	remove_power_balance_modifier = {
-		id = GER_power_balance
-		modifier = GER_power_balance_lost_core_1
-	}
-}
-}
-
 GER_upgrade_wehrmacht_effect = {	
 	hidden_effect = {
 		if = {
@@ -2023,5 +1829,26 @@ GER_spawn_penal_divisions_effect = {
 			}
 		}
 		set_country_flag = GER_penal_units_raised_flag
+	}
+}
+
+GER_adolf_personal_doctor_idea_effect = {
+	if = {
+		limit = {
+			has_idea = GER_bad_state_adolf
+		}
+		modify_timed_idea = {
+			idea = GER_bad_state_adolf
+			days = 30
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_idea = GER_bad_state_adolf }
+		}
+		add_timed_idea = {
+			idea = GER_bad_state_adolf
+			days = 30
+		}
 	}
 }

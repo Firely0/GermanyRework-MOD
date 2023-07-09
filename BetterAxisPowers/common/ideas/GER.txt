@@ -2,6 +2,26 @@ ideas = {
 
 	country = {
 
+		GER_bad_state_adolf = {
+			picture = generic_deal_with_the_devil2
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+			  NOT = { has_country_leader = { character = GER_adolf_hitler } }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				improve_relations_maintain_cost_factor = 0.3
+				political_advisor_cost_factor = 0.1
+				political_power_factor = -0.1
+			}
+		}
+
 		GER_heinrick_himmler_plans = {
 			picture = Himler_plans
 

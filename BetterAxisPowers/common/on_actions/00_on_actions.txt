@@ -519,8 +519,6 @@ on_actions = {
 				set_global_flag = GER_has_started_war
 			}
 
-
-
 			#Call Anti-Soviet pact members to war
 			if = {
 				limit = {
@@ -1176,6 +1174,22 @@ on_actions = {
 		}
 	}
 
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = GER
+						has_idea = GER_Axis_Pact_idea_ger
+					}
+				}
+				ROOT = {
+					add_idea = GER_Axis_Pact_idea_puppet
+				}
+			}
+		}
+	}
+
 	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
 	#ROOT = nation being released, FROM = overlord
 
@@ -1208,6 +1222,22 @@ on_actions = {
 				set_politics = {
 					ruling_party = democratic
 					elections_allowed = yes
+				}
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = GER
+						has_idea = GER_Axis_Pact_idea_ger
+					}
+				}
+				ROOT = {
+					add_idea = GER_Axis_Pact_idea_puppet
 				}
 			}
 		}

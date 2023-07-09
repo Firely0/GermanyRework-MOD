@@ -1,45 +1,128 @@
 health_of_adolf_category = {
 
-	eva_braun_work_as_health_care = {
-
+	Adolf_Hitler_Yearly_Check_ups = {
+		icon = GFX_decision_eng_trade_unions_support
+	
 		allowed = {
-			original_tag = GER
+			tag = GER
 		}
-
+	
 		available = {
-			NOT = { has_country_flag = eva_braun_has_job }
 		}
-
-		cost = 75
-
+	
+		activation = {
+		}
+	
+		visible = {
+		}
+	
+		cost = 50
+		cancel_if_not_visible = yes
+		is_good = no 
 		fire_only_once = no
-
-		days_re_enable = 365
+		selectable_mission = yes
+		days_mission_timeout = Adolf_Health_Year_TIME # 365
+	
+		cancel_effect = {
+		}
 
 		ai_will_do = {
 			factor = 0
 		}
+	
+		timeout_effect = {
+			country_event = { id = GER_health_adolf.1 hours = 6 }
+		}
+	
+		complete_effect = {
+			country_event = { id = GER_health_adolf.1 hours = 6 }
+		}
+	}
 
+	Adolf_Hitler_Yearly_Check_ups_debug = {
+		icon = GFX_decision_eng_trade_unions_support
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+		}
+	
 		visible = {
 		}
+	
+		cost = 50
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = yes
+	
+		cancel_effect = {
+		}
 
+		ai_will_do = {
+			factor = 0
+		}
+	
+		timeout_effect = {
+			country_event = { id = GER_health_adolf.1 hours = 6 }
+		}
+	
 		complete_effect = {
-			set_country_flag = eva_braun_has_job
-			set_country_flag = eva_braun_health
-			hidden_effect = {
-				remove_trait = {
-					character = GER_eva_braun
-					slot = political_advisor
-					trait = eva_braun_trait
-				}
-			}
-			add_trait = {
-				character = GER_eva_braun
-				slot = political_advisor
-				trait = "eva_braun_trait_health"
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+				tooltip_side = my_bop_side
 			}
 		}
 	}
+
+	Adolf_Hitler_Yearly_Check_ups_debug_1 = {
+		icon = GFX_decision_eng_trade_unions_support
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+		}
+	
+		activation = {
+		}
+	
+		visible = {
+		}
+	
+		cost = 50
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = no
+		selectable_mission = yes
+	
+		cancel_effect = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	
+		timeout_effect = {
+			country_event = { id = GER_health_adolf.1 hours = 6 }
+		}
+	
+		complete_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = 0.1
+				tooltip_side = my_bop_side
+			}
+		}
+	}
+
 }
 
 eva_braun_category = {

@@ -3932,6 +3932,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_End_Handicraft_Production
+		icon = GFX_goal_newfuhrerisgorring
+		prerequisite = { focus = GER_Power_hermann_goring }
+		allow_branch = {
+			has_completed_focus = GER_reorganize_party
+		}
+		available = {
+			always = no
+		}
+		cancel_if_invalid = no
+		x = -10
+		y = 2
+		relative_position_id = GER_hitler_is_gone
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_Emergency_Orders_goring
 		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_Power_hermann_goring }
@@ -11527,6 +11549,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = GER_side_with_fascism
 			mark_focus_tree_layout_dirty = yes
+			activate_mission = Adolf_Hitler_Yearly_Check_ups 
 			if = {
 				limit = {
 					has_completed_focus = GER_rhineland_ab

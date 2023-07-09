@@ -31,6 +31,11 @@ GER_power_balance = {
 				political_power_gain = -0.05
 
 			}
+			on_activate = {
+				GER_bop_increase_need_checkup_modifier = yes
+			}
+			on_deactivate = {
+			}
 		}
 		range = {
 			id = middle_left_side_range
@@ -49,6 +54,11 @@ GER_power_balance = {
 				conscription_factor = -0.1
 				army_morale_factor = -0.03
 				political_power_gain = -0.10
+			}
+			on_activate = {
+				GER_bop_increase_need_checkup_modifier = yes
+			}
+			on_deactivate = {
 			}
 		}
 		range = {
@@ -69,6 +79,11 @@ GER_power_balance = {
 				army_morale_factor = -0.06
 				political_power_gain = -0.2
 			}	
+			on_activate = {
+				GER_bop_increase_need_checkup_modifier = yes
+			}
+			on_deactivate = {
+			}
 		}
 		range = {
 			id = bad_ending_left_side_range

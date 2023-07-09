@@ -276,6 +276,128 @@ GER_bop_remove_lost_core_modifier = {
 	}
 }
 
+GER_bop_increase_need_checkup_modifier = {
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_2
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_1
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_2
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_need_checkup_1
+				}
+			}
+		}
+		add_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_1
+		}
+	}
+}
+
+GER_bop_decrease_need_checkup_modifier = {
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_3
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_2
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_2
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_1
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_1
+		}
+	}
+	else = {
+		#NOTHING cannot decrease
+	}
+}
+
+GER_bop_remove_need_checkup_modifier = {
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_3
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_3
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_2
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_2
+		}
+	}
+	if = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_1
+			}
+		}
+		remove_power_balance_modifier = {
+			id = GER_power_balance
+			modifier = GER_power_balance_need_checkup_1
+		}
+	}
+}
+
 GER_bop_remove_bop_effect = {
 	remove_power_balance = { id = GER_power_balance }
 }
