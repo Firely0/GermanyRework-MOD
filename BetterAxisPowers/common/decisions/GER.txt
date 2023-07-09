@@ -11,6 +11,7 @@ health_of_adolf_category = {
 		}
 	
 		activation = {
+			always = no
 		}
 	
 		visible = {
@@ -31,11 +32,11 @@ health_of_adolf_category = {
 		}
 	
 		timeout_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 6 }
+			country_event = { id = GER_health_adolf.1 hours = 12 }
 		}
 	
 		complete_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 6 }
+			country_event = { id = GER_health_adolf.1 hours = 12 }
 		}
 	}
 

@@ -1832,6 +1832,29 @@ GER_spawn_penal_divisions_effect = {
 	}
 }
 
+GER_adolf_search_costs_idea_effect = {
+	if = {
+		limit = {
+			has_idea = GER_search_costs_adolf
+			NOT = { has_country_flag = GER_END_OF_SEARCH }
+		}
+		modify_timed_idea = {
+			idea = GER_search_costs_adolf
+			days = 30
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_idea = GER_search_costs_adolf }
+			NOT = { has_country_flag = GER_END_OF_SEARCH }
+		}
+		add_timed_idea = {
+			idea = GER_search_costs_adolf
+			days = 30
+		}
+	}
+}
+
 GER_adolf_personal_doctor_idea_effect = {
 	if = {
 		limit = {
@@ -1850,5 +1873,160 @@ GER_adolf_personal_doctor_idea_effect = {
 			idea = GER_bad_state_adolf
 			days = 30
 		}
+	}
+}
+
+GER_adolf_personal_doctor_effect = {
+	if = {
+		limit = {
+			check_variable = { theodor_morell = 2 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 30 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { theodor_morell = 3 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 30 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { theodor_morell = 4 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 90 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { theodor_morell = 5 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 120 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+		add_country_leader_trait = GER_sick_leader
+		set_country_leader_portrait = {
+			ideology = fascism
+			portrait = GFX_Portrait_Germany_Adolf_Hitler_health
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { theodor_morell = 6 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 81 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else = {
+		limit = {
+			check_variable = { theodor_morell > 6 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+}
+
+GER_adolf_best_doctor_effect = {
+	if = {
+		limit = {
+			check_variable = { best_doctors = 2 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 30 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { best_doctors = 3 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 30 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { best_doctors = 4 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		subtract_from_variable = { Adolf_Health_Year_TIME = 120 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { best_doctors = 5 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		set_country_flag = GER_END_OF_SEARCH
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else = {
+		limit = {
+			check_variable = { best_doctors > 5 }
+		}
+		GER_bop_decrease_need_checkup_modifier = yes
+		add_to_variable = { Adolf_Health_Year_TIME = 15 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+}
+
+GER_adolf_rest_effect = {
+	if = {
+		limit = {
+			check_variable = { adolf_hitler_rest = 2 }
+		}
+		add_power_balance_value = {
+			id = GER_power_balance
+			value = 0.1
+		}
+		add_to_variable = { Adolf_Health_Year_TIME = 15 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { adolf_hitler_rest = 3 }
+		}
+		add_power_balance_value = {
+			id = GER_power_balance
+			value = 0.1
+		}
+		add_to_variable = { Adolf_Health_Year_TIME = 15 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { adolf_hitler_rest = 4 }
+		}
+		add_power_balance_value = {
+			id = GER_power_balance
+			value = 0.1
+		}
+		add_to_variable = { Adolf_Health_Year_TIME = 30 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else_if = {
+		limit = {
+			check_variable = { adolf_hitler_rest = 4 }
+		}
+		add_power_balance_value = {
+			id = GER_power_balance
+			value = 0.1
+		}
+		add_to_variable = { Adolf_Health_Year_TIME = 60 }
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
+	}
+	else = {
+		limit = {
+			check_variable = { adolf_hitler_rest > 5 }
+		}
+		add_power_balance_value = {
+			id = GER_power_balance
+			value = 0.1
+		}
+		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
 }

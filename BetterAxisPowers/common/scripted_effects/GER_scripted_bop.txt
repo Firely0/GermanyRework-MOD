@@ -277,6 +277,15 @@ GER_bop_remove_lost_core_modifier = {
 }
 
 GER_bop_increase_need_checkup_modifier = {
+	else = {
+		limit = {
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_3
+			}
+		}
+
+	}
 	else_if = {
 		limit = {
 			has_power_balance_modifier = {

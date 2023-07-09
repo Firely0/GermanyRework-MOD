@@ -32,7 +32,12 @@ GER_power_balance = {
 
 			}
 			on_activate = {
-				GER_bop_increase_need_checkup_modifier = yes
+				if = {
+					limit = {
+						NOT = { has_country_flag = GER_END_OF_SEARCH }
+					}
+					GER_bop_increase_need_checkup_modifier = yes
+				}
 			}
 			on_deactivate = {
 			}
@@ -56,7 +61,12 @@ GER_power_balance = {
 				political_power_gain = -0.10
 			}
 			on_activate = {
-				GER_bop_increase_need_checkup_modifier = yes
+				if = {
+					limit = {
+						NOT = { has_country_flag = GER_END_OF_SEARCH }
+					}
+					GER_bop_increase_need_checkup_modifier = yes
+				}
 			}
 			on_deactivate = {
 			}

@@ -2,6 +2,25 @@ ideas = {
 
 	country = {
 
+		GER_search_costs_adolf = {
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+			  NOT = { has_country_leader = { character = GER_adolf_hitler } }
+			} 
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.1
+			}
+		}
+
 		GER_bad_state_adolf = {
 			picture = generic_deal_with_the_devil2
 
