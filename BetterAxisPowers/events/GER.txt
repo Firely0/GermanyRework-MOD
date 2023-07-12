@@ -5156,6 +5156,45 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = "He is Fine."
+
+		hidden_effect = {
+			activate_mission = Adolf_Hitler_Yearly_Check_ups
+		}
+
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				NOT = {
+					OR = {
+						has_power_balance_modifier = {
+							id = GER_power_balance
+							modifier = GER_power_balance_need_checkup_1
+						}
+						has_power_balance_modifier = {
+							id = GER_power_balance
+							modifier = GER_power_balance_need_checkup_2
+						}
+						has_power_balance_modifier = {
+							id = GER_power_balance
+							modifier = GER_power_balance_need_checkup_3
+						}
+					}
+				}	
+			}
+		}
+
+		trigger = {
+			check_variable = { theodor_morell < 4 }
+			power_balance_value = {
+				id = GER_power_balance
+				value > -0.01
+			}
+		}
+	}
+
+	option = {
 		name = "Seek Treatment with Europe`s Best Doctors"
 
 		GER_adolf_search_costs_idea_effect = yes
@@ -5169,6 +5208,10 @@ country_event = {
 
 		trigger = {
 			check_variable = { theodor_morell < 4 }
+			power_balance_value = {
+				id = GER_power_balance
+				value < -0.01
+			}
 		}
 	}
 
@@ -5178,6 +5221,24 @@ country_event = {
 		GER_adolf_personal_doctor_idea_effect = yes
 		GER_adolf_personal_doctor_effect = yes
 
+		modifier = {
+			factor = 100
+			OR = {
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_need_checkup_1
+				}
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_need_checkup_2
+				}
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_need_checkup_3
+				}
+			}		
+		}
+
 		hidden_effect = { # Adolf`s Health Getting Bad
 			add_to_variable = { adolf_hitler_rest_bad = 1 }
 			add_to_variable = { theodor_morell = 1 }
@@ -5185,6 +5246,10 @@ country_event = {
 
 		trigger = {
 			check_variable = { best_doctors < 4 }
+			power_balance_value = {
+				id = GER_power_balance
+				value < -0.01
+			}
 		}
 	}
 
@@ -5199,6 +5264,10 @@ country_event = {
 
 		trigger = {
 			check_variable = { adolf_hitler_rest_bad < 5 }
+			power_balance_value = {
+				id = GER_power_balance
+				value < -0.01
+			}
 		}
 	}
 
