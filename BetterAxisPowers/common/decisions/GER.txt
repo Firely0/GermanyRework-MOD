@@ -40,90 +40,6 @@ health_of_adolf_category = {
 		}
 	}
 
-	Adolf_Hitler_Yearly_Check_ups_debug = {
-		icon = GFX_decision_eng_trade_unions_support
-	
-		allowed = {
-			tag = GER
-		}
-	
-		available = {
-		}
-	
-		activation = {
-		}
-	
-		visible = {
-		}
-	
-		cost = 50
-		cancel_if_not_visible = yes
-		is_good = no 
-		fire_only_once = no
-		selectable_mission = yes
-	
-		cancel_effect = {
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	
-		timeout_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 6 }
-		}
-	
-		complete_effect = {
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.1
-				tooltip_side = my_bop_side
-			}
-		}
-	}
-
-	Adolf_Hitler_Yearly_Check_ups_debug_1 = {
-		icon = GFX_decision_eng_trade_unions_support
-	
-		allowed = {
-			tag = GER
-		}
-	
-		available = {
-		}
-	
-		activation = {
-		}
-	
-		visible = {
-		}
-	
-		cost = 50
-		cancel_if_not_visible = yes
-		is_good = no 
-		fire_only_once = no
-		selectable_mission = yes
-	
-		cancel_effect = {
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	
-		timeout_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 6 }
-		}
-	
-		complete_effect = {
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = 0.1
-				tooltip_side = my_bop_side
-			}
-		}
-	}
-
 }
 
 eva_braun_category = {
@@ -498,6 +414,10 @@ GER_Operation_Sealion_ph_2 = {
 				add_stability = -0.05
 			}
 			complete_national_focus = GER_battle_of_Birmingham
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 		}
 	}
 
@@ -539,6 +459,10 @@ GER_Operation_Sealion_ph_2 = {
 	
 		timeout_effect = {
 			add_war_support = -0.05
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
 		}
 	
 		complete_effect = { 
@@ -592,6 +516,10 @@ GER_Operation_Sealion_ph_2 = {
 	
 		timeout_effect = {
 			add_war_support = -0.05
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 		}
 	
 		complete_effect = { 
@@ -802,6 +730,10 @@ GER_Operation_Barbarossa_V = {
 		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 		}
 	
 		complete_effect = { 
@@ -856,6 +788,10 @@ GER_Operation_Barbarossa_V = {
 		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
 		}
 	
 		complete_effect = { 
@@ -908,9 +844,11 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		timeout_effect = {
-			hidden_effect = {
-				add_stability = -0.05
-				add_war_support = -0.05
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
 			}
 		}
 	

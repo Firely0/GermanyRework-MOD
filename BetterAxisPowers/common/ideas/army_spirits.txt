@@ -103,6 +103,11 @@ ideas = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
 				}
+				modifier = {
+					factor = 100
+					tag = GER
+					has_dlc = "No Step Back"
+				}
 			}
 		}
 		inventive_leadership_spirit = {
@@ -289,6 +294,7 @@ ideas = {
 				modifier = {
 					factor = 100
 					tag = GER
+					has_dlc = "No Step Back"
 				}
 			}
 		}
@@ -305,6 +311,11 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 100
+					tag = GER 
+					has_dlc = "No Step Back"
 				}
 			}
 		}
@@ -451,6 +462,7 @@ ideas = {
 				modifier = {
 					factor = 100
 					tag = GER
+					has_dlc = "No Step Back"
 				}
 			}
 		}
@@ -551,6 +563,7 @@ ideas = {
 				modifier = {
 					factor = 100
 					tag = JAP
+					has_dlc = "No Step Back"
 					has_tech = trench_warfare
 				}
 			}

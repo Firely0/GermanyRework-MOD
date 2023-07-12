@@ -3750,6 +3750,12 @@ focus_tree = {
 			custom_effect_tooltip = GER_chance_focus
 			if = {
 				limit = {
+					NOT = { has_completed_focus = GER_Power_Karl_Donitz }
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
 					has_completed_focus = GER_Power_Karl_Donitz
 				}
 				country_event = { id = GER_new_leader.1 hours = 1 }
@@ -3776,7 +3782,84 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
-	
+
+	focus = {
+		id = GER_New_Rejime
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = GER_Power_Heinrich_Himmler }
+		allow_branch = {
+			has_completed_focus = GER_reorganize_party
+		}
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -3
+		y = 2
+		relative_position_id = GER_Power_Heinrich_Himmler
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_Interve_School
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = GER_New_Rejime }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = -1
+		y = 1
+		relative_position_id = GER_New_Rejime
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_militarism_him
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = GER_New_Rejime }
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		relative_position_id = GER_New_Rejime
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_new_radical_laws
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = GER_Power_hermann_goring }
+		allow_branch = {
+			has_completed_focus = GER_reorganize_party
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		relative_position_id = GER_Power_hermann_goring
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+		}
+	}
+
 	focus = {
 		id = GER_Emergency_Orders_himmler
 		text = GER_Emergency_Orders_goring
@@ -3933,7 +4016,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_End_Handicraft_Production
-		icon = GFX_goal_newfuhrerisgorring
+		icon = GFX_goal_GER_hammer
 		prerequisite = { focus = GER_Power_hermann_goring }
 		allow_branch = {
 			has_completed_focus = GER_reorganize_party
@@ -3942,9 +4025,9 @@ focus_tree = {
 			always = no
 		}
 		cancel_if_invalid = no
-		x = -10
-		y = 2
-		relative_position_id = GER_hitler_is_gone
+		x = 4
+		y = 1
+		relative_position_id = GER_Power_hermann_goring
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -9348,7 +9431,6 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		allow_branch = {
-			has_global_flag = GER_COM_SIDE
 			NOT = {
 				has_completed_focus = GER_Fuhrer
 				has_completed_focus = GER_hitler_is_gone
