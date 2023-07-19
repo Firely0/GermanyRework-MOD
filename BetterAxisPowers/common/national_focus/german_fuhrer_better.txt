@@ -4596,6 +4596,7 @@ focus_tree = {
 				name = "Me 262"
 				type = small_plane_airframe_4
 				parent_version = 0
+				allow_without_tech = yes
 				modules = {
 						fixed_main_weapon_slot = heavy_mg_4x
 						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
