@@ -218,8 +218,18 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.1
 		weekly_casualties_war_support = 0.001
-		ai_desired_divisions_factor = 0.20
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dictator_pp_new_rj = {
+		party_popularity_stability_factor = 0.1
+		political_power_gain = 0.15
+
+		weekly_casualties_war_support = 0.001
+		
 		ai_will_do = {
 			factor = 1
 		}
@@ -241,7 +251,6 @@ leader_traits = {
 		weekly_casualties_war_support = 0.001
 		weekly_convoys_war_support = 0.001 
 		weekly_bombing_war_support = 0.001 
-		ai_desired_divisions_factor = 0.20
 
 		ai_will_do = {
 			factor = 1
@@ -283,6 +292,16 @@ leader_traits = {
 		production_factory_efficiency_gain_factor = 0.05
 		production_lack_of_resource_penalty_factor = -0.05
 		# civ_to_mil_industry_conversion_rate = -1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	armaments_organizer3 = {
+		random = no
+		industrial_capacity_dockyard = 0.05
+		industrial_capacity_factory = 0.05
 
 		ai_will_do = {
 			factor = 1

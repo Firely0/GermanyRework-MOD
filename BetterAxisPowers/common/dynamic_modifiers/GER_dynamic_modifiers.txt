@@ -831,6 +831,16 @@ Luftwaffe_dynamic_modifier = {
 
 	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
 
+	#
+
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
 }
 
 Luftwaffe_SD_dynamic_modifier = {
@@ -848,6 +858,15 @@ Luftwaffe_SD_dynamic_modifier = {
 	
 	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
+
 }
 
 Luftwaffe_SD_A_dynamic_modifier = {
@@ -863,7 +882,15 @@ Luftwaffe_SD_A_dynamic_modifier = {
 	strategic_bomb_visibility = -0.1
 
 	air_doctrine_cost_factor = 0.05
-	
+
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
 	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
 }
@@ -883,6 +910,14 @@ Luftwaffe_SD_B_dynamic_modifier = {
 
 	custom_modifier_tooltip = GER_SD_production_tt #equipment bonus
 
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
 }
 
 Luftwaffe_CAS_dynamic_modifier = {
@@ -900,6 +935,14 @@ Luftwaffe_CAS_dynamic_modifier = {
 	air_cas_efficiency = 0.05
 
 	air_doctrine_cost_factor = 0.05
+
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
 
 	custom_modifier_tooltip = GER_CAS_tt #equipment bonus
 
@@ -921,6 +964,14 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 
 	air_range_factor = 0.1
 
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
 	custom_modifier_tooltip = GER_CAS_R_tt #equipment bonus
 
 }
@@ -941,6 +992,14 @@ Luftwaffe_OI_dynamic_modifier = {
 
 	air_doctrine_cost_factor = 0.05
 
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
+
 	custom_modifier_tooltip = GER_OI_tt #equipment bonus
 
 }
@@ -957,6 +1016,14 @@ Luftwaffe_OI_A_dynamic_modifier = {
 	air_bombing_targetting = 0.05
 	air_cas_efficiency = 0.05
 	air_escort_efficiency = 0.05
+
+	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
+	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
+	experience_gain_air = GER_experience_gain_air # 0.05
+	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
+	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
+	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
+	army_bonus_air_superiority_factor = GER_army_bonus_air_superiority_factor # 0.05
 
 	custom_modifier_tooltip = GER_OI_IMP_tt #equipment bonus
 

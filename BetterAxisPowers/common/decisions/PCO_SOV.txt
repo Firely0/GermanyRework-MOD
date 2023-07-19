@@ -62,7 +62,7 @@ SOV_coinvasion_of_poland_decision_category = {
 				POL = {
 					add_timed_idea = {
 						idea = POL_soviet_surprise_attack
-						days = 45
+						days = 60
 					}
 				}
 				if = {
@@ -104,7 +104,7 @@ SOV_coinvasion_of_poland_decision_category = {
 					}
 					add_timed_idea = {
 						idea = POL_passive_to_the_soviet_invasion
-						days = 50
+						days = 70
 					}
 				}
 				news_event = { hours = 6 id = pco_news.2 }
@@ -147,7 +147,7 @@ SOV_coinvasion_of_poland_decision_category = {
 			POL = { has_capitulated = yes }
 		}
 
-		days_mission_timeout = 70
+		days_mission_timeout = 90
 		#days_mission_timeout = 10 #USED FOR TESTING PURPOSES
 
 		timeout_effect = { #FAIL -> Do you want to continue or enter a peace to prevent the allies to declare on you?

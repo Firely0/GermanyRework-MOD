@@ -5016,6 +5016,8 @@ country_event = {
 			}
 			complete_national_focus = GER_Power_Heinrich_Himmler
 			mark_focus_tree_layout_dirty = yes
+			add_country_leader_trait = political_reformer_1
+			add_political_power = 100
 		}
 	}
 
@@ -5039,6 +5041,8 @@ country_event = {
 			}
 			complete_national_focus = GER_Power_hermann_goring
 			mark_focus_tree_layout_dirty = yes
+			add_country_leader_trait = political_reformer_1
+			add_political_power = 100
 		}
 	}
 }
@@ -5055,13 +5059,13 @@ country_event = {
 			remove_power_balance = {
 				id = GER_power_balance
 			}
+			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = yes
 				refund_political_power = no
 			}
 			complete_national_focus = GER_hitler_is_gone
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -5084,7 +5088,6 @@ country_event = {
 		}
 		hidden_effect = {
 			complete_national_focus = GER_Power_Heinrich_Himmler
-			mark_focus_tree_layout_dirty = yes
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.3
@@ -5112,8 +5115,8 @@ country_event = {
 				ideology = fascism
 				portrait = GFX_portrait_karl_donitz_new
 			}
+			GER_fix_Volkssturm = yes
 			complete_national_focus = GER_Power_Karl_Donitz
-			mark_focus_tree_layout_dirty = yes
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.3
@@ -5137,8 +5140,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			complete_national_focus = GER_Power_hermann_goring	
-			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = GER_Power_hermann_goring
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.3

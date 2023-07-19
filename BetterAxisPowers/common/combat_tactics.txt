@@ -420,7 +420,11 @@ tactic_blitz = {
 			has_trait = panzer_leader
 			skill_advantage > 1
 		}
-		OWNER = { NOT = { has_tech = masterful_blitz } NOT = { has_tech = masterful_blitz_GERV } }
+		OWNER = {
+			OR = {
+				NOT = { has_tech = masterful_blitz } NOT = { has_tech = masterful_blitz_GERV }
+			}
+		}
 	}
 	
 	active = no

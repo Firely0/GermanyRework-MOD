@@ -2,6 +2,87 @@ ideas = {
 
 	country = {
 
+		GER_new_laws_idea = {
+			picture = saf_history_of_segregation_2
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.1
+
+				resistance_activity = -0.15
+				resistance_growth_on_our_occupied_states = 0.15
+			}
+		}
+
+		GER_military_dictator_mix = {
+			picture = eng_imperial_conscription
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.2
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				special_forces_training_time_factor = -0.1
+			}
+		}
+
+		GER_military_dictator_militarizim = {
+			picture = eng_imperial_conscription
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.2
+				conscription = 0.01
+			}
+		}
+
+		GER_military_dictator_ship_school = {
+			picture = eng_imperial_conscription
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.1
+				special_forces_training_time_factor = -0.1
+			}
+		}
+
+		GER_end_of_handcraft_production = {
+			picture = air_war_plans_division_focus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
 		GER_search_costs_adolf = {
 			picture = generic_constitutional_guarantees
 
@@ -474,6 +555,30 @@ ideas = {
 				operative_slot = 1
 				agency_upgrade_time = -0.1
 				decryption_factor = 0.1
+			}
+		}
+
+		abwehr_agent_v = {
+
+			picture = generic_spy_intel
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+				intelligence_agency_defense = 0.5
+
+				decryption_factor = 0.1
+				encryption_factor = 0.1
 			}
 		}
 

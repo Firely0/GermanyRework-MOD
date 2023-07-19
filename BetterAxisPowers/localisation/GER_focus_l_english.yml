@@ -114,6 +114,20 @@
  GER_the_last_stand:0 "The Last Stand"
  
  #Ideas
+ GER_new_laws_idea:0 "New Laws"
+ GER_new_laws_idea_desc:0 ""
+ GER_end_of_handcraft_production:0 "End of Handcraft Production"
+ GER_end_of_handcraft_production_desc:0 ""
+ GER_military_dictator_ship_school:0 "Military Dictatorship"
+ GER_military_dictator_ship_school_desc:0 ""
+ GER_military_dictator_militarizim:0 "Military Dictatorship"
+ GER_military_dictator_militarizim_desc:0 ""
+ GER_military_dictator_mix:0 "Military Dictatorship"
+ GER_military_dictator_mix_desc:0 ""
+ GER_bad_state_adolf:0 "Bad State of Adolf Hitler"
+ GER_bad_state_adolf_desc:0 ""
+ GER_search_costs_adolf:0 "Health Care Cost"
+ GER_search_costs_adolf_desc:0 ""
  GER_hermann_goring_plans:0 "Hermann Goring Plans"
  GER_hermann_goring_plans_desc:0 ""
  GER_hermann_goring_plans_1:0 "Hermann Goring Plans"
@@ -167,6 +181,7 @@
  GER_ITA_TRAINING:0 "Naval Experience Program"
 
  abwehr_agent:0 "die Abwehr"
+ abwehr_agent_v:0 "die Abwehr"
 
  GER_technocracy_idea:0 "Technocracy"
  GER_technocracy_idea_desc:0 ""
@@ -378,6 +393,8 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ GER_GOERING_RETIRED:0 "Retired"
+ GER_HIMMLER_RETIRED:0 "Retired"
  GER_FREE_SS_RECRUITMENT:0 "It enables the SS and the Wehrmacht to recruit without causing problems."
  GER_chance_focus:0 "Chance Focus Tree Based on Country Leader. Not available for Karl Donitz."
  GER_Axis_Pact_Puppet_tt:0 "Every German subject"
@@ -522,9 +539,11 @@
  dictator_pp:0 "Dictator"
  dictator_pp_v1:0 "Dictator"
  dictator_pp_n:0 "Dictator"
+ dictator_pp_new_rj:0 "Dictator"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
  armaments_organizer2:0 "Armaments Organizer"
+ armaments_organizer3:0 "Armaments Organizer"
  eva_braun_trait:0 ""
  eva_braun_trait_health:0 "Ministry of Health"
  eva_braun_trait_eco:0 "NSDAP Bugdet Manager"
@@ -646,11 +665,41 @@
 
  #Hitler is Gone
  GER_hitler_is_gone:0 "[Root.StateofFuhrer]"
+ GER_hitler_is_gone_desc:0 ""
  GER_hitler_is_gone1:0 "Adolf Hitler is Gone"
  GER_hitler_is_dead:0 "Adolf Hitler is Assassinated"
  GER_hitler_is_retired:0 "Adolf Hitler is retired"
- GER_hitler_is_gone_desc:0 ""
-
+ 
+ GER_flying_aces:0 "Flying Aces"
+ GER_flying_aces_desc:0 ""
+ GER_new_are_of_fighters:0 "New Are of Fighters"
+ GER_new_are_of_fighters_desc:0 ""
+ GER_new_laws:0 "New Laws"
+ GER_new_laws_desc:0 ""
+ GER_luftwaffe_supremacry_jet:0 "Supremacy of Skies"
+ GER_luftwaffe_supremacry_jet_desc:0 ""
+ GER_shadow_agents:0 "Shadow Agents"
+ GER_shadow_agents_desc:0 ""
+ GER_war_time_indstury_gor:0 "Focus on Wartime Production"
+ GER_war_time_indstury_gor_desc:0 ""
+ GER_Legacy_of_German_air_force:0 "Legacy of German Aircraft"
+ GER_Legacy_of_German_air_force_desc:0 ""
+ GER_flexible_factories:0 "Flexible Factories"
+ GER_flexible_factories_desc:0 ""
+ GER_expand_liquid_mobilization_effort:0 "Expand Liquid Mobilization"
+ GER_expand_liquid_mobilization_effort_desc:0 ""
+ GER_expand_local_resources:0 "Expand Local Resources"
+ GER_expand_local_resources_desc:0 ""
+ GER_Case_Black:0 "Case Black"
+ GER_Case_Black_desc:0 ""
+ GER_End_Handicraft_Production:0 "End of Handcraft Air Production"
+ GER_End_Handicraft_Production_desc:0 ""
+ GER_New_Rejime:0 "Form New Rejime"
+ GER_New_Rejime_desc:0 ""
+ GER_Interve_School:0 "Military Schools"
+ GER_Interve_School_desc:0 ""
+ GER_militarism_him:0 "German Militarism"
+ GER_militarism_him_desc:0 ""
  GER_Emergency_Orders_goring:0 "Emergency Orders"
  GER_Emergency_Orders_goring_desc:0 ""
  GER_Case_Western:0 "Plans for West"
@@ -1379,7 +1428,10 @@
 
  GER_OI_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_efficiency_texticon  Air Mission Efficiency: §G+5.0%§! \n£air_accidents_texticon Air Accidents Factor: §G+5.0%§! \n£air_interception_efficiency_texticon  Air Interception Factor: §G+5.0%§! \n£air_efficiency_texticon Air Bombing Targetting: §G+5.0%§! \n£cas_texticon Close Air Support Efficiency: §G+5.0%§! \n£air_doctrine_cost_texticon Air Doctrine Cost: §G-5.0%§! \nMedium Air Frame: £production_cost Production Cost: §Y-5.0%§! \nHeavy Fighter: £production_cost Production Cost: §Y-5.0%§! \n\n"
  GER_OI_A_modifier_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_efficiency_texticon  Air Mission Efficiency: §G+5.0%§! \n£air_accidents_texticon  Air Accidents Factor: §G-5.0%§! \n£air_doctrine_cost_texticon Air Doctrine Cost: §G-5.0%§! \nFighter: £production_cost Production Cost: §Y-5.0%§! \n\n"
-
+ GER_legacy_of_ger_air_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_experience  Air Experience Gain §G+0.5§! \n£experience_neutral_training_texticon  Air Wing Experience Gain §G+10.0%§! \n£untrained_pilot_texticon  Untrained Pilot Penalty §G-10.0%§! \n\n"
+ GER_new_are_of_fighter_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_interception_efficiency_texticon  Air Superiority Mission Efficiency §G+10.0%§! \n£army_air_superiority_texticon  Air Superiority §G+5.0%§! \n\n"
+ GER_flying_aces_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£ace_generation_texticon  Ace Generation Chance Factor §G+10.0%§! \n£ace_generation_texticon  Ace Effectiveness §G+5.0%§! \n\n"
+ 
  #
 
  GER_JAP_Coal_Search_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£carrier_texticon Carrier Plane Agility: §Y+10.0%§!"

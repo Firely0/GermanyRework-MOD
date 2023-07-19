@@ -37,8 +37,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = -0.2
-				defense_bonus_against = -0.4
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
 			}
 
 			on_remove = {
@@ -51,20 +51,6 @@ ideas = {
 					SOV = {
 						transfer_state = 96
 					}
-				}
-				if = {
-					limit = {
-						has_global_flag = poland_partitionned_flag
-						POL = {
-							has_war_with = SOV
-						}
-						SOV = {
-							has_war_with = POL
-						}
-						NOT = { SOV = { is_in_faction_with = GER } }
-					}
-					POL = { white_peace = SOV }
-					SOV = { white_peace = POL }
 				}
 			}
 

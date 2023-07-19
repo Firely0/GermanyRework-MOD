@@ -55,10 +55,10 @@ GER_unit_production = {
 		value = -100
 	}
 
-	ai_strategy = {
+	ai_strategy = { #Go Away
 		type = role_ratio
 		id = motorized
-		value = 0 #because doctrine this = 2
+		value = -5 #because doctrine this = 2
 	}
 
 	ai_strategy = {
@@ -2132,124 +2132,6 @@ GER_around_the_maginot = {
 		value = 100
 	}
 
-	ai_strategy = {
-		type = front_armor_score
-		id = "POL"
-		value = 100
-	}
-
-}
-
-GER_have_some_train_production = {
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		date > 1936.7.1
-		num_of_military_factories > 50
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = train
-		value = 3
-	}
-}
-
-GER_blitzkrieg_russia_hard  = { #STEINER, IT IS NOT TIME YET
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		date < 1942.8.1
-		date > 1941.7.1
-		has_war_with = SOV
-		OR = {
-			has_idea = GER_barbarossa
-			SOV = { has_idea = SOV_desperate_measures_ns }
-		}
-		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-
-		tag = SOV
-
-		ratio = 0.5
-
-		priority = 100
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 39 #Strategic Region ID - Eastern Poland
-		value = 20000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130 #Strategic Region ID - Ukraine
-		value = 20000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-}
-
-GER_blitzkrieg_russia_soft  = { #Rolling incursions
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		#always = no #This isn't great
-		date < 1942.4.1 #To space!
-		date > 1941.8.1
-		has_war_with = SOV
-		OR = {
-			has_idea = GER_barbarossa
-			SOV = { has_idea = SOV_desperate_measures_ns }
-		}
-		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
-		set_temp_variable = { days = global.num_days }
-		modulo_temp_variable = { days = 40 }
-		check_variable = { days < 20 }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-
-		tag = SOV
-
-		ratio = 0.5
-
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 39 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
-	}
-
 }
 
 GER_stock_up_on_trains_before_barbarossa = {
@@ -3143,13 +3025,13 @@ bba_air_prod_2 = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 25
+		value = 30
 	}
 
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = fighter
-		value = 8
+		value = 13
 	}
 
 	ai_strategy = {
@@ -3161,13 +3043,13 @@ bba_air_prod_2 = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = cas
-		value = 15
+		value = 25
 	}
 
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = cas
-		value = 3
+		value = 9
 	}
 
 	ai_strategy = {
@@ -3179,7 +3061,7 @@ bba_air_prod_2 = {
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 15
+		value = 5
 	}
 
 	ai_strategy = {

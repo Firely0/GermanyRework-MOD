@@ -1226,6 +1226,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
+				NOT = { has_country_flag = GER_GOERING_RETIRED }
 				or = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
@@ -1744,6 +1745,9 @@ characters={
 				original_tag = GER
 			}
 			available = {
+				NOT = {
+					has_country_flag = GER_HIMMLER_RETIRED
+				}
 				OR = {
 					has_government = fascism 
 					has_country_flag = GER_reinstated_nazi_leadership

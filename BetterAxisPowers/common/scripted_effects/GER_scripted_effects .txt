@@ -2030,3 +2030,68 @@ GER_adolf_rest_effect = {
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
 }
+
+GER_end_of_goering = {
+	if = {
+		limit = {
+			has_idea = goering
+		}
+		remove_idea = goering
+	}
+	set_country_flag = GER_GOERING_RETIRED
+}
+
+GER_end_of_himmler = {
+	if = {
+		limit = {
+			has_idea = heinrich_himmler
+		}
+		remove_idea = heinrich_himmler
+	}
+	set_country_flag = GER_HIMMLER_RETIRED
+} 
+
+GER_fix_Volkssturm = {
+	if = {
+		limit = {
+			has_completed_focus = GER_Volkssturm
+		}
+		unlock_national_focus = GER_Volkssturm_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_minimize_training
+		}
+		unlock_national_focus = GER_minimize_training_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_Basic_Training
+		}
+		unlock_national_focus = GER_Basic_Training_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_No_Step_Back
+		}
+		unlock_national_focus = GER_No_Step_Back_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_reroute_supplies
+		}
+		unlock_national_focus = GER_reroute_supplies_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_volksopper
+		}
+		unlock_national_focus = GER_volksopper_hit_gone
+	}
+	if = {
+		limit = {
+			has_completed_focus = GER_Europe_in_flames
+		}
+		unlock_national_focus = GER_Europe_in_flames_hit_gone
+	}
+}
