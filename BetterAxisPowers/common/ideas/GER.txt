@@ -805,7 +805,7 @@ ideas = {
 			}
 
 			on_remove = {
-				add_idea = Defense_Industry
+				add_ideas = Defense_Industry
 				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
@@ -834,7 +834,7 @@ ideas = {
 			}
 
 			on_remove = {
-				add_idea = Defense_Industry_2
+				add_ideas = Defense_Industry_2
 				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
@@ -863,7 +863,7 @@ ideas = {
 			}
 
 			on_remove = {
-				add_idea = Defense_Industry_3
+				add_ideas = Defense_Industry_3
 				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
@@ -893,7 +893,7 @@ ideas = {
 			}
 
 			on_remove = {
-				add_idea = Defense_Industry_4
+				add_ideas = Defense_Industry_4
 				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
@@ -3273,7 +3273,7 @@ ideas = {
 						has_global_flag = GER_Moscow_win
 						has_global_flag = GER_Stalingrad_win
 					}
-					add_ideas = GER_barbarossa
+					add_ideass = GER_barbarossa
 				}
 				else = {
 					clr_global_flag = GER_Operation_Barbarossa_running
