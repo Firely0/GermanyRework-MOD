@@ -780,6 +780,8 @@ ideas = {
 			}
 		}
 
+		# Self Replace Ideas for Atlantikwall Rework
+
 		Defense_Industry_x = {
 
 			picture = YUG_federal_defense_council
@@ -800,6 +802,11 @@ ideas = {
 			modifier = {
 				production_speed_anti_air_building_factor = 0.05
 				civilian_factory_use = 6
+			}
+
+			on_remove = {
+				add_idea = Defense_Industry
+				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
 
@@ -825,6 +832,11 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.2
 				civilian_factory_use = 6
 			}
+
+			on_remove = {
+				add_idea = Defense_Industry_2
+				clr_country_flag = GER_working_on_atlantikwall
+			}
 		}
 
 		Defense_Industry_3_x = {
@@ -848,6 +860,11 @@ ideas = {
 				production_speed_anti_air_building_factor = 0.1
 				production_speed_bunker_factor = 0.2
 				civilian_factory_use = 6
+			}
+
+			on_remove = {
+				add_idea = Defense_Industry_3
+				clr_country_flag = GER_working_on_atlantikwall
 			}
 		}
 
@@ -874,7 +891,14 @@ ideas = {
 				production_speed_anti_air_building_factor = 0.15
 				civilian_factory_use = 6
 			}
+
+			on_remove = {
+				add_idea = Defense_Industry_4
+				clr_country_flag = GER_working_on_atlantikwall
+			}
 		}
+
+		#
 
 		focus_on_liquidation = {
 

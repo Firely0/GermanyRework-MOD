@@ -114,42 +114,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = pyrenes_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -215,42 +180,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = pyrenes_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -309,43 +239,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
-				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+			clr_country_flag = GER_working_on_atlantikwall
         }
 
 		cost = 25
@@ -410,42 +304,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = aquitaine_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -514,42 +373,6 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = aquitaine_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
         }
 
 		cost = 25
@@ -615,42 +438,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = aquitaine_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -710,42 +498,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -810,42 +563,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = poitou_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -914,42 +632,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = poitou_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1015,42 +698,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = poitou_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1110,42 +758,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1210,42 +823,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = loire_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1314,42 +892,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = loire_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1415,42 +958,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = loire_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1510,42 +1018,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1610,42 +1083,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = britanny_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1714,42 +1152,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = britanny_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1815,42 +1218,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = britanny_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -1910,42 +1278,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2010,42 +1343,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = normandy_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2114,42 +1412,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = normandy_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2215,42 +1478,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = normandy_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2310,42 +1538,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2410,42 +1603,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = picardy_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2514,42 +1672,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = picardy_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2615,42 +1738,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = picardy_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2710,42 +1798,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2810,42 +1863,7 @@ GER_germany_atlantikwall_rework_france = {
 			add_manpower = 10000
 			set_country_flag = calais_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -2914,42 +1932,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = calais_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3015,42 +1998,7 @@ GER_germany_atlantikwall_rework_france = {
             }
 			set_country_flag = calais_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3110,42 +2058,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3206,42 +2119,7 @@ GER_atlantikwall_vlandeeren = {
 			add_manpower = 10000
 			set_country_flag = vlandeeren_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3303,42 +2181,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = vlandeeren_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3397,42 +2240,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = vlandeeren_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3485,42 +2293,7 @@ GER_atlantikwall_vlandeeren = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3578,42 +2351,7 @@ GER_atlantikwall_vlandeeren = {
 			add_manpower = 10000
 			set_country_flag = brabant_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3675,42 +2413,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = brabant_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3769,42 +2472,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = brabant_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3857,42 +2525,7 @@ GER_atlantikwall_vlandeeren = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -3950,42 +2583,7 @@ GER_atlantikwall_vlandeeren = {
 			add_manpower = 10000
 			set_country_flag = holland_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4047,42 +2645,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = holland_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4141,42 +2704,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = holland_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4229,42 +2757,7 @@ GER_atlantikwall_vlandeeren = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4322,42 +2815,7 @@ GER_atlantikwall_vlandeeren = {
 			add_manpower = 10000
 			set_country_flag = friesland_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4419,42 +2877,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = friesland_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4513,42 +2936,7 @@ GER_atlantikwall_vlandeeren = {
             }
 			set_country_flag = friesland_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4601,42 +2989,7 @@ GER_atlantikwall_vlandeeren = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4698,42 +3051,7 @@ GER_atlantikwall_weser-ems = {
 			add_manpower = 10000
 			set_country_flag = weser-ems_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4795,42 +3113,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = weser-ems_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4889,42 +3172,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = weser-ems_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -4977,42 +3225,7 @@ GER_atlantikwall_weser-ems = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5070,42 +3283,7 @@ GER_atlantikwall_weser-ems = {
 			add_manpower = 10000
 			set_country_flag = hannover_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5167,42 +3345,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = hannover_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5261,42 +3404,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = hannover_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5349,42 +3457,7 @@ GER_atlantikwall_weser-ems = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5442,42 +3515,7 @@ GER_atlantikwall_weser-ems = {
 			add_manpower = 10000
 			set_country_flag = holstein_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5539,42 +3577,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = holstein_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5633,42 +3636,7 @@ GER_atlantikwall_weser-ems = {
             }
 			set_country_flag = holstein_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5721,42 +3689,7 @@ GER_atlantikwall_weser-ems = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5818,42 +3751,7 @@ GER_atlantikwall_jutland = {
 			add_manpower = 10000
 			set_country_flag = jutland_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -5915,42 +3813,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = jutland_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6009,42 +3872,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = jutland_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6097,42 +3925,7 @@ GER_atlantikwall_jutland = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6190,42 +3983,7 @@ GER_atlantikwall_jutland = {
 			add_manpower = 10000
 			set_country_flag = vestlandet_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6287,42 +4045,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = vestlandet_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6381,42 +4104,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = vestlandet_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6469,42 +4157,7 @@ GER_atlantikwall_jutland = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6562,42 +4215,7 @@ GER_atlantikwall_jutland = {
 			add_manpower = 10000
 			set_country_flag = trondelag_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6659,42 +4277,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = trondelag_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6753,42 +4336,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = trondelag_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6841,42 +4389,7 @@ GER_atlantikwall_jutland = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -6934,42 +4447,7 @@ GER_atlantikwall_jutland = {
 			add_manpower = 10000
 			set_country_flag = nord-norge_1
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -7031,42 +4509,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = nord-norge_2
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -7125,42 +4568,7 @@ GER_atlantikwall_jutland = {
             }
 			set_country_flag = nord-norge_3
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
@@ -7213,42 +4621,7 @@ GER_atlantikwall_jutland = {
             	    	}
 			}
 				clr_country_flag = GER_working_on_atlantikwall
-	if = {
-		limit = {
-			has_idea = Defense_Industry_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_x
-			add_idea = Defense_Industry
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_2_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_2_x
-			add_idea = Defense_Industry_2
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_3_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_3_x
-			add_idea = Defense_Industry_3
-		}
-	}
-	if = {
-		limit = {
-			has_idea = Defense_Industry_4_x
-		}
-		swap_ideas = {
-			remove_idea = Defense_Industry_4_x
-			add_idea = Defense_Industry_4
-		}
-	}
+
         }
 
 		cost = 25
