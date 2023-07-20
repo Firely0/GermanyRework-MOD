@@ -2036,7 +2036,7 @@ GER_end_of_goering = {
 		limit = {
 			has_idea = goering
 		}
-		remove_idea = goering
+		remove_ideas = goering
 	}
 	set_country_flag = GER_GOERING_RETIRED
 }
@@ -2046,7 +2046,7 @@ GER_end_of_himmler = {
 		limit = {
 			has_idea = heinrich_himmler
 		}
-		remove_idea = heinrich_himmler
+		remove_ideas = heinrich_himmler
 	}
 	set_country_flag = GER_HIMMLER_RETIRED
 } 
@@ -2109,7 +2109,7 @@ GER_add_cost_of_forts = {
 			}
 		}
 		hidden_effect = {
-			remove_idea = Defense_Industry
+			remove_ideas = Defense_Industry
 			add_timed_idea = {
 				idea = Defense_Industry_x
 				days = 30
@@ -2127,7 +2127,7 @@ GER_add_cost_of_forts = {
 			}
 		}
 		hidden_effect = {
-			remove_idea = Defense_Industry_2
+			remove_ideas = Defense_Industry_2
 			add_timed_idea = {
 				idea = Defense_Industry_2_x
 				days = 30
@@ -2163,7 +2163,7 @@ GER_add_cost_of_forts = {
 			}
 		}
 		hidden_effect = {
-			remove_idea = Defense_Industry_4
+			remove_ideas = Defense_Industry_4
 			add_timed_idea = {
 				idea = Defense_Industry_4_x
 				days = 30
