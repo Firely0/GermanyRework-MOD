@@ -2,7 +2,7 @@ GER_germany_atlantikwall_rework_france = {
 
 	GER_atlantikwall_pyrenes = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -15,7 +15,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall } 
 		}
 
 		highlight_states = {
@@ -58,17 +58,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_pyrenes_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -81,7 +78,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -116,6 +113,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = pyrenes_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -129,16 +127,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_pyrenes_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -183,6 +178,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = pyrenes_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -196,16 +192,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_pyrenes_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -244,6 +237,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -257,16 +251,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_aquitaine = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -279,7 +270,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -310,6 +301,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = aquitaine_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -322,17 +314,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_aquitaine_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -345,7 +334,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -380,6 +369,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = aquitaine_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -393,16 +383,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_aquitaine_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -447,6 +434,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = aquitaine_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -460,16 +448,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_aquitaine_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -508,6 +493,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -521,16 +507,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_poitou = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -543,7 +526,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -574,6 +557,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = poitou_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -586,17 +570,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_poitou_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -609,7 +590,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -644,6 +625,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = poitou_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -657,16 +639,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_poitou_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -711,6 +690,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = poitou_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -724,16 +704,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_poitou_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -772,6 +749,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -785,16 +763,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_loire = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -807,7 +782,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -838,6 +813,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = loire_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -850,17 +826,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_loire_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -873,7 +846,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -908,6 +881,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = loire_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -921,16 +895,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_loire_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -975,6 +946,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = loire_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -988,16 +960,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_loire_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -1036,6 +1005,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1049,16 +1019,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_britanny = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -1071,7 +1038,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -1102,6 +1069,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = britanny_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1114,17 +1082,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_britanny_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -1137,7 +1102,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -1172,6 +1137,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = britanny_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1185,16 +1151,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_britanny_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -1239,6 +1202,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = britanny_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1252,16 +1216,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_britanny_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -1300,6 +1261,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1313,16 +1275,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_normandy = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -1335,7 +1294,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -1366,6 +1325,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = normandy_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1378,17 +1338,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_normandy_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -1401,7 +1358,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -1436,6 +1393,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = normandy_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1449,16 +1407,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_normandy_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -1503,6 +1458,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = normandy_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1516,16 +1472,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_normandy_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -1564,6 +1517,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1577,16 +1531,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_picardy = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -1599,7 +1550,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -1630,6 +1581,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = picardy_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1642,17 +1594,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_picardy_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -1665,7 +1614,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -1700,6 +1649,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = picardy_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1713,16 +1663,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_picardy_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -1767,6 +1714,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = picardy_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1780,16 +1728,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_picardy_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -1828,6 +1773,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1841,16 +1787,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_calais = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
@@ -1863,7 +1806,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -1894,6 +1837,7 @@ GER_germany_atlantikwall_rework_france = {
 			}
 			add_manpower = 10000
 			set_country_flag = calais_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1906,17 +1850,14 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_calais_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
@@ -1929,7 +1870,7 @@ GER_germany_atlantikwall_rework_france = {
 					}
 				}
 			}
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -1964,6 +1905,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = calais_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -1977,16 +1919,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_calais_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -2031,6 +1970,7 @@ GER_germany_atlantikwall_rework_france = {
              producer = GER
             }
 			set_country_flag = calais_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2044,16 +1984,13 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_calais_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -2092,6 +2029,7 @@ GER_germany_atlantikwall_rework_france = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2105,10 +2043,7 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 }
@@ -2117,13 +2052,13 @@ GER_germany_atlantikwall_rework_benelux= {
 
 GER_atlantikwall_vlandeeren = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 6
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -2154,6 +2089,7 @@ GER_atlantikwall_vlandeeren = {
 			}
 			add_manpower = 10000
 			set_country_flag = vlandeeren_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2166,23 +2102,20 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_vlandeeren_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 6
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -2217,6 +2150,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = vlandeeren_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2230,16 +2164,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_vlandeeren_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -2277,6 +2208,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = vlandeeren_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2290,16 +2222,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_vlandeeren_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -2331,6 +2260,7 @@ GER_atlantikwall_vlandeeren = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2344,22 +2274,19 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_brabant = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 35
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -2390,6 +2317,7 @@ GER_atlantikwall_vlandeeren = {
 			}
 			add_manpower = 10000
 			set_country_flag = brabant_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2402,23 +2330,20 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_brabant_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 35
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -2453,6 +2378,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = brabant_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2466,16 +2392,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_brabant_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -2513,6 +2436,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = brabant_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2526,16 +2450,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_brabant_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -2567,6 +2488,7 @@ GER_atlantikwall_vlandeeren = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2580,22 +2502,19 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holland = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 7
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -2626,6 +2545,7 @@ GER_atlantikwall_vlandeeren = {
 			}
 			add_manpower = 10000
 			set_country_flag = holland_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2638,23 +2558,20 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_holland_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 7
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -2689,6 +2606,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = holland_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2702,16 +2620,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holland_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -2749,6 +2664,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = holland_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2762,16 +2678,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holland_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -2803,6 +2716,7 @@ GER_atlantikwall_vlandeeren = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2816,22 +2730,19 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_friesland = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 36
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -2862,6 +2773,7 @@ GER_atlantikwall_vlandeeren = {
 			}
 			add_manpower = 10000
 			set_country_flag = friesland_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2874,23 +2786,20 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_friesland_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 36
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -2925,6 +2834,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = friesland_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2938,16 +2848,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_friesland_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -2985,6 +2892,7 @@ GER_atlantikwall_vlandeeren = {
              producer = GER
             }
 			set_country_flag = friesland_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -2998,16 +2906,13 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_friesland_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -3039,6 +2944,7 @@ GER_atlantikwall_vlandeeren = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3052,10 +2958,7 @@ GER_atlantikwall_vlandeeren = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 
@@ -3065,13 +2968,13 @@ GER_germany_atlantikwall_rework_germany= {
 
 GER_atlantikwall_weser-ems = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 56
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -3102,6 +3005,7 @@ GER_atlantikwall_weser-ems = {
 			}
 			add_manpower = 10000
 			set_country_flag = weser-ems_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3114,23 +3018,20 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_weser-ems_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 56
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -3165,6 +3066,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = weser-ems_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3178,16 +3080,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_weser-ems_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -3225,6 +3124,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = weser-ems_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3238,16 +3138,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_weser-ems_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -3279,6 +3176,7 @@ GER_atlantikwall_weser-ems = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3292,22 +3190,19 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_hannover = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 59
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -3338,6 +3233,7 @@ GER_atlantikwall_weser-ems = {
 			}
 			add_manpower = 10000
 			set_country_flag = hannover_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3350,23 +3246,20 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_hannover_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 59
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -3401,6 +3294,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = hannover_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3414,16 +3308,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_hannover_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -3461,6 +3352,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = hannover_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3474,16 +3366,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_hannover_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -3515,6 +3404,7 @@ GER_atlantikwall_weser-ems = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3528,22 +3418,19 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holstein = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 58
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -3574,6 +3461,7 @@ GER_atlantikwall_weser-ems = {
 			}
 			add_manpower = 10000
 			set_country_flag = holstein_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3586,23 +3474,20 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_holstein_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 58
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -3637,6 +3522,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = holstein_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3650,16 +3536,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holstein_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -3697,6 +3580,7 @@ GER_atlantikwall_weser-ems = {
              producer = GER
             }
 			set_country_flag = holstein_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3710,16 +3594,13 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_holstein_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -3751,6 +3632,7 @@ GER_atlantikwall_weser-ems = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3764,10 +3646,7 @@ GER_atlantikwall_weser-ems = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 
@@ -3777,13 +3656,13 @@ GER_germany_atlantikwall_rework_scandinavia= {
 
 GER_atlantikwall_jutland = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 99
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -3814,6 +3693,7 @@ GER_atlantikwall_jutland = {
 			}
 			add_manpower = 10000
 			set_country_flag = jutland_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3826,23 +3706,20 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_jutland_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 99
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -3877,6 +3754,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = jutland_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3890,16 +3768,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_jutland_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -3937,6 +3812,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = jutland_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -3950,16 +3826,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_jutland_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -3991,6 +3864,7 @@ GER_atlantikwall_jutland = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4004,22 +3878,19 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_vestlandet = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 142
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -4050,6 +3921,7 @@ GER_atlantikwall_jutland = {
 			}
 			add_manpower = 10000
 			set_country_flag = vestlandet_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4062,23 +3934,20 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_vestlandet_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 142
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -4113,6 +3982,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = vestlandet_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4126,16 +3996,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_vestlandet_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -4173,6 +4040,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = vestlandet_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4186,16 +4054,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_vestlandet_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -4227,6 +4092,7 @@ GER_atlantikwall_jutland = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4240,22 +4106,19 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_trondelag = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 143
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -4286,6 +4149,7 @@ GER_atlantikwall_jutland = {
 			}
 			add_manpower = 10000
 			set_country_flag = trondelag_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4298,23 +4162,20 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_trondelag_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 143
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -4349,6 +4210,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = trondelag_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4362,16 +4224,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_trondelag_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -4409,6 +4268,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = trondelag_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4422,16 +4282,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_trondelag_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -4463,6 +4320,7 @@ GER_atlantikwall_jutland = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4476,22 +4334,19 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_nord-norge = {
 
-		icon = GFX_decision_GER_claim_yugo_1
+		icon = GFX_decision_setup_forts_1
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 144
-			NOT = { has_idea = ger_atlantikwall_consruction } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -4522,6 +4377,7 @@ GER_atlantikwall_jutland = {
 			}
 			add_manpower = 10000
 			set_country_flag = nord-norge_1
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4534,23 +4390,20 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		 add_manpower = -10000
 		}
 	}
 	
 	GER_atlantikwall_nord-norge_2 = {
 
-		icon = GFX_decision_GER_claim_yugo_2
+		icon = GFX_decision_setup_forts_2
         
         allowed = { tag = GER }		
 		 
 		available = {
 			has_full_control_of_state = 144
-			NOT = { has_idea = ger_atlantikwall_consruction }			
+			NOT = { has_country_flag = GER_working_on_atlantikwall }		
 		}
 
 		highlight_states = {
@@ -4585,6 +4438,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = nord-norge_2
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4598,16 +4452,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_nord-norge_3 = {
 
-		icon = GFX_decision_GER_claim_yugo_3
+		icon = GFX_decision_setup_forts_3
         
         allowed = { tag = GER }		
 		 
@@ -4645,6 +4496,7 @@ GER_atlantikwall_jutland = {
              producer = GER
             }
 			set_country_flag = nord-norge_3
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4658,16 +4510,13 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 	
 	GER_atlantikwall_nord-norge_4 = {
 
-		icon = GFX_decision_GER_claim_yugo_4
+		icon = GFX_decision_setup_forts_4
         
         allowed = { tag = GER }		
 		 
@@ -4699,6 +4548,7 @@ GER_atlantikwall_jutland = {
             	    	    instant_build = yes
             	    	}
 			}
+			GER_remove_cost_of_forts = yes
         }
 
 		cost = 25
@@ -4712,10 +4562,7 @@ GER_atlantikwall_jutland = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-		 add_timed_idea = {
-         idea = ger_atlantikwall_consruction
-         days = 30
-         }
+         GER_add_cost_of_forts = yes
 		}
 	}
 

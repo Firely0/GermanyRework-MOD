@@ -2095,3 +2095,83 @@ GER_fix_Volkssturm = {
 		unlock_national_focus = GER_Europe_in_flames_hit_gone
 	}
 }
+
+GER_add_cost_of_forts = {
+	set_country_flag = GER_working_on_atlantikwall
+	if = {
+		limit = {
+			has_idea = Defense_Industry
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry
+			add_idea = Defense_Industry_x
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_2
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_2
+			add_idea = Defense_Industry_2_x
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_3
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_3
+			add_idea = Defense_Industry_3_x
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_4
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_4
+			add_idea = Defense_Industry_4_x
+		}
+	}
+}
+
+GER_remove_cost_of_forts = {
+	clr_country_flag = GER_working_on_atlantikwall
+	if = {
+		limit = {
+			has_idea = Defense_Industry_x
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_x
+			add_idea = Defense_Industry
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_2_x
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_2_x
+			add_idea = Defense_Industry_2
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_3_x
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_3_x
+			add_idea = Defense_Industry_3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = Defense_Industry_4_x
+		}
+		swap_ideas = {
+			remove_idea = Defense_Industry_4_x
+			add_idea = Defense_Industry_4
+		}
+	}
+}
