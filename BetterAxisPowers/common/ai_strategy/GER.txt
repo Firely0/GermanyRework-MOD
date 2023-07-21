@@ -736,36 +736,12 @@ spain_ally_resistance = {
 	}
 }
 
-denmark_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_denmark_friend
-		country_exists = DEN
-	}
-	abort = {
-		NOT = { country_exists = DEN }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "DEN"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "DEN"
-		value = 100
-	}
-}
-
 sweden_ally = {
 	allowed = {
 		original_tag = GER
 	}
 	enable = {
-		has_completed_focus = GER_sweden_friend
+		has_completed_focus = GER_Befriend_Sweden
 		country_exists = SWE
 	}
 	abort = {
@@ -780,54 +756,6 @@ sweden_ally = {
 	ai_strategy = {
 		type = alliance
 		id = "SWE"
-		value = 100
-	}
-}
-
-dutch_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_dutch_friend
-		country_exists = HOL
-	}
-	abort = {
-		NOT = { country_exists = HOL }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "HOL"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "HOL"
-		value = 100
-	}
-}
-
-norway_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_norway_friend
-		country_exists = NOR
-	}
-	abort = {
-		NOT = { country_exists = NOR }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "NOR"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "NOR"
 		value = 100
 	}
 }
@@ -1123,7 +1051,7 @@ GER_naval_role_ratios_maximum_kaiser = {
 		has_dlc = "Man the Guns"
 	}
 	enable = {
-		has_completed_focus = GER_rebuild_the_high_seas_fleet
+		has_completed_focus = GER_rebuild_the_high_seas_fleet_a
 	}
 
 	ai_strategy = {

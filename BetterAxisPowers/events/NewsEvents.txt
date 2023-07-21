@@ -1907,7 +1907,7 @@ news_event = {
 				}
 				GER = {
 					has_completed_focus = GER_demand_memel
-					NOT = { has_completed_focus = GER_poland_friend }
+					NOT = { has_completed_focus = GER_danzig_vs_slovakia }
 				}
 			}
 			has_global_flag = eng_pol_pact_global
