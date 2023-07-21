@@ -1262,14 +1262,16 @@ focus_tree = {
 					country_event = ger_ultimatum.1
 				}
 				any_country = {
-					limit = {
-						is_in_faction_with = POL
-						is_faction_leader = yes
-						NOT = {
-							tag = ENG
+					if = {
+						limit = {
+							is_in_faction_with = POL
+							is_faction_leader = yes
+							NOT = {
+								tag = ENG
+							}
 						}
+						country_event = ger_ultimatum.1
 					}
-					country_event = ger_ultimatum.1
 				}
 				POL = {
 					if = {
@@ -6714,57 +6716,58 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		449 = {	
-			add_building_construction = {
-				type = radar_station
-				instant_build = yes
-				level = 3
+			449 = {	
+				add_building_construction = {
+					type = radar_station
+					instant_build = yes
+					level = 3
+				}
+				add_building_construction = {
+					type = anti_air_building
+					instant_build = yes
+					level = 3
+				}
 			}
+			451 = {	
+				add_building_construction = {
+					type = air_base
+					instant_build = yes
+					level = 3
+				}
+			}	
+			663 = {	
+				add_building_construction = {
+					type = air_base
+					instant_build = yes
+					level = 3
+				}
+			}	
+			448 = {	
 			add_building_construction = {
-				type = anti_air_building
-				instant_build = yes
-				level = 3
+					type = coastal_bunker 
+					instant_build = yes
+					level = 3
+					province = 1149
+			}	
 			}
-		}
-		451 = {	
+			450 = {
 			add_building_construction = {
-				type = air_base
-				instant_build = yes
-				level = 3
-			}
-		}	
-		663 = {	
-			add_building_construction = {
-				type = air_base
-				instant_build = yes
-				level = 3
-			}
-		}	
-		448 = {	
-		add_building_construction = {
 				type = coastal_bunker 
 				instant_build = yes
 				level = 3
-				province = 1149
-		}	
-	    }
-		450 = {
-		add_building_construction = {
-			type = coastal_bunker 
-			instant_build = yes
-			level = 3
-			province = 11954
+				province = 11954
+			}
+			}
+			451 {
+				add_building_construction = {
+					type = coastal_bunker 
+					instant_build = yes
+					level = 3
+					province = 1130
+				}
+			}
 		}
-	    }
-		451 {
-		add_building_construction = {
-			type = coastal_bunker 
-			instant_build = yes
-			level = 3
-			province = 1130
-		}
-	    }
-	}
+	}	
 
 	focus = {
 		id = GER_Battle_of_El_Alamein
@@ -6772,7 +6775,6 @@ focus_tree = {
 		prerequisite = { focus = GER_Set_HQ_in_Libya }
 		
 		available = {
-			
 			has_idea = GER_Afrika_Korps
 			452 = {
 				is_controlled_by_ROOT_or_ally = yes
