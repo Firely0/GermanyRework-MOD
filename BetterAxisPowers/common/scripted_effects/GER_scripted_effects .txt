@@ -940,9 +940,6 @@ GER_isolate_effect = {
 					tag = GER 
 					tag = FRA 
 				}
-				AND = {
-					bordering_country = GER
-				}
 			}
 			country_event = { id = GER_rhineland_isolete.1 }
 		}
@@ -1643,17 +1640,17 @@ rudolf_hess_africa_front_International_Zone = {
 
 rudolf_hess_italy_annex_eth_w_puppets = {
 	ITA = {
+		any_other_country = {
+			limit = {
+				is_puppet_of = ETH
+			}
+			annex_country = {
+				target = PREV
+				transfer_troops = no
+			}
+		}
 		annex_country = {
 			target = ETH
-			transfer_troops = no
-		}
-	}
-	any_other_country = {
-		limit = {
-			is_puppet_of = ETH
-		}
-		annex_country = {
-			target = PREV
 			transfer_troops = no
 		}
 	}
@@ -2145,7 +2142,7 @@ GER_add_cost_of_forts = {
 			}
 		}
 		hidden_effect = {
-			remove_idea = Defense_Industry_3
+			remove_ideas = Defense_Industry_3
 			add_timed_idea = {
 				idea = Defense_Industry_3_x
 				days = 30

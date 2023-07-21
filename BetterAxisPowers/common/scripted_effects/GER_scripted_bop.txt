@@ -277,25 +277,18 @@ GER_bop_remove_lost_core_modifier = {
 }
 
 GER_bop_increase_need_checkup_modifier = {
-	else = {
+	if = {
 		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_need_checkup_3
-			}
-		}
-
-	}
-	else_if = {
-		limit = {
-			has_power_balance_modifier = {
-				id = GER_power_balance
-				modifier = GER_power_balance_need_checkup_2
+			NOT = {
+				has_power_balance_modifier = {
+					id = GER_power_balance
+					modifier = GER_power_balance_need_checkup_1
+				}
 			}
 		}
 		add_power_balance_modifier = {
 			id = GER_power_balance
-			modifier = GER_power_balance_need_checkup_3
+			modifier = GER_power_balance_need_checkup_1
 		}
 	}
 	else_if = {
@@ -310,18 +303,16 @@ GER_bop_increase_need_checkup_modifier = {
 			modifier = GER_power_balance_need_checkup_2
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
-			NOT = {
-				has_power_balance_modifier = {
-					id = GER_power_balance
-					modifier = GER_power_balance_need_checkup_1
-				}
+			has_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_checkup_2
 			}
 		}
 		add_power_balance_modifier = {
 			id = GER_power_balance
-			modifier = GER_power_balance_need_checkup_1
+			modifier = GER_power_balance_need_checkup_3
 		}
 	}
 }

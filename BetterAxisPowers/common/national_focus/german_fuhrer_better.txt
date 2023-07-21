@@ -1262,13 +1262,11 @@ focus_tree = {
 					country_event = ger_ultimatum.1
 				}
 				any_country = {
-					if = {
-						limit = {
-							is_in_faction_with = POL
-							is_faction_leader = yes
-							NOT = {
-								tag = ENG
-							}
+					limit = {
+						is_in_faction_with = POL
+						is_faction_leader = yes
+						NOT = {
+							tag = ENG
 						}
 					}
 					country_event = ger_ultimatum.1
@@ -3805,12 +3803,6 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			any_controlled_state = {
-				limit = {
-					NOT = { is_core_of = ROOT }
-				}
-				add_resistance = -20
-			}
 			every_controlled_state = {
 				limit = {
 					is_on_continent = europe NOT = { is_core_of = ROOT }
@@ -6764,13 +6756,12 @@ focus_tree = {
 			province = 11954
 		}
 	    }
-		451 {	
+		451 {
 		add_building_construction = {
 			type = coastal_bunker 
 			instant_build = yes
 			level = 3
 			province = 1130
-			}
 		}
 	    }
 	}

@@ -2057,7 +2057,9 @@ country_event = {
 		}
 		name = "Any ally against Bolshevism is welcome."
 		clr_country_flag = vlasov_in_ss_flag
-		recruit_character = SOV_andrey_vlasov
+		SOV = {
+			SOV_andrey_vlasov = { set_nationality = GER }
+		}
 		SOV_andrey_vlasov = {
 			add_trait = {
 				trait = brilliant_strategist
@@ -4058,7 +4060,14 @@ country_event = {
 			set_war_support = 0.8
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_the_red_reich
-			recruit_character = GER_Com_Civilwar
+			add_country_leader_role = {
+				character = GER_Com_Civilwar
+				promote_leader = yes
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = leninism 
+				}
+			}
 			add_ideas = GER_political_violence
 			activate_mission = GER_conquer_berlin
 			activate_mission = GER_conquer_hamburg
@@ -4192,14 +4201,13 @@ country_event = {
 			#	ideology = communism
 			#	popularity = 0.40
 			#}
-			recruit_character = GER_Com_Civilwar
 			add_country_leader_role = {
-			character = GER_Com_Civilwar
-			promote_leader = yes
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = leninism 
-			}
+				character = GER_Com_Civilwar
+				promote_leader = yes
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = leninism 
+				}
 			}
 		}
 	}
