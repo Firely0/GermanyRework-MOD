@@ -1,0 +1,215 @@
+
+ai_historical_focus_list_GER = {
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		GER_Total_War
+		GER_Panther
+		GER_Anti_Tank
+		GER_King_Tiger
+		GER_Ultimatom_Soviet_Union
+		GER_National_sprit
+		GER_crossing_the_atlantic_a
+		GER_Volkssturm
+		GER_Basic_Training
+		GER_No_Step_Back
+		GER_reroute_supplies
+		GER_volksopper
+		GER_Europe_in_flames
+
+		GER_BetterFuhrer
+		GER_four_year_plan_a
+        GER_Hide_Arms_Industrialization
+		GER_grosraumwirtschaft_a
+		GER_establish_abwehr
+		GER_Interve_Civilwars
+		GER_Fuhrer
+		#1937
+		GER_Civlian_Mobilization
+		GER_extra_build_slot
+		GER_autarky_a
+		GER_hermann_goring_werke_a
+		GER_kdf_wagen_a
+		GER_extra_tech_slot_a
+		GER_foregin_affairs
+		GER_anschluss
+		#1938
+		GER_Small_Arms
+		GER_Arms_Mobilization
+		GER_coal_liquidization_a
+		GER_army_innovation_a
+	    GER_tank_warfare
+		GER_Axis_Powers
+		GER_soviet_treaty_a
+		GER_staff
+		GER_Sleep_Well_SOV
+		GER_anti_comitern_pact
+		GER_demand_sudetenland
+		GER_first_vienna_award
+		#1939
+		GER_demand_memel
+		GER_end_of_czechoslovakia
+		GER_Lighting_Strike
+		GER_Approach_Soviet
+		GER_mol_rib_pact
+		GER_danzig_or_war
+		GER_weserubung
+		#1940
+		GER_around_maginot
+		GER_war_with_france
+		GER_air_innovation_a
+		GER_german_war_economy_a
+		GER_CAS
+		GER_Operational_Integratiy
+		GER_Strategic_Des
+		GER_Improve_Des
+		GER_synthetic_rubber_a
+		GER_Finish
+		GER_second_vienna_award
+		#1941
+		GER_army_innovation_2_a
+		GER_Beaten_but_not_defeated
+		GER_SS
+		GER_SS_A
+		GER_follow_wehrmacht_design
+		GER_ussr_war_goal
+		GER_for_our_revange
+		GER_form_the_reichskommissariats
+		GER_SS_Trops
+		GER_SS_B
+		GER_SS_Final_Focus
+		GER_Local_Police_force_in_soviet
+		GER_never_surrender
+		GER_Belarus
+		GER_Ukraine
+		GER_Finish_Ins
+		GER_Finish_Civilian
+		GER_Eco_Plan_B
+		GER_Eco_Plan_Side_1
+		GER_Eco_Plan_Side_2
+		GER_Eco_Plan_B_Main_A
+		GER_Eco_Plan_Side_A_3
+		GER_Eco_Plan_Side_A_1
+		GER_Eco_Plan_B_Main_B
+		GER_anti_air_tank
+		GER_Glory_of_Wehrmacht
+		GER_naval_rearmament_a
+		#1942
+		GER_plan_z_a
+		GER_Improve_CAS_Range
+		GER_Improve_TAC
+		GER_air_innovation_2_a
+		GER_west_wall
+		GER_atlantikwall
+		GER_wunderwaffe
+		GER_rebuild_the_high_seas_fleet_a
+		GER_Bismarck
+		GER_carrier_war
+		GER_Graf_Zeppelin
+		GER_His_Ship
+		GER_pride_of_the_modern_germany
+		GER_naval_air_effort_a
+		GER_prepare_for_the_next_blockade_a
+	}
+}
+
+ai_focus_defense_GER = {
+	research = {
+		defensive = 5.0	
+		radar_tech = 1.0
+		construction_tech = 2.0
+		artillery = 2.0
+	}
+}
+
+ai_focus_aggressive_GER = {
+	research = {
+		offensive = 5.0
+		synth_resources = 1.0
+		motorized_equipment = 2.0
+		armor = 20.0
+	}
+}
+
+ai_focus_war_production_GER = {
+	research = {
+		industry = 10.0
+		construction_tech = 2.0
+		electronics = 2.0
+		computing_tech = 2.0		
+	}
+}
+
+ai_focus_military_equipment_GER = {
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+}
+
+ai_focus_military_advancements_GER = {
+	research = {
+		armor = 100.0
+		jet_technology = 5.0
+		land_doctrine = 100.0
+		rocketry = 7.5
+		radar_tech = 3.0
+		encryption_tech = 7.5
+		decryption_tech = 7.5
+		synth_resources = 3.0
+		motorized_equipment = 4.0
+		nuclear = 100.0
+		night_vision = 5.0
+		train_tech = 5.0
+	}
+}
+
+
+ai_focus_peaceful_GER = {
+	research = {
+		industry = 15.0
+		construction_tech = 5.0
+		electronics = 10.0
+		computing_tech = 10.0
+	}
+}
+
+ai_focus_naval_GER = {
+    research = {
+        naval_equipment = 7.0
+        naval_doctrine = 100.0
+        marine_tech = 10.0
+        dd_tech = 8.0
+        cl_tech = 5.0
+        ca_tech = 5.0
+        bc_tech = 3.0
+        bb_tech = 8.0
+        shbb_tech = 5.0
+        tp_tech = 3.0
+        cv_tech = 5.0
+        ss_tech = 10.0
+    }
+}
+
+ai_focus_naval_air_GER = {
+	research = {
+		naval_air = 4.0
+		naval_bomber = 3.0
+	}
+}
+
+ai_focus_aviation_GER = {
+	research = {
+		air_doctrine = 50.0
+		light_air = 20.0
+		light_fighter = 20.0
+		jet_technology = 1.0
+		cas_bomber = 2.0		
+		medium_air = 3.0
+		tactical_bomber = 5.0
+		heavy_air = 1.5
+		air_equipment = 5.0
+		para_tech = 10.0
+	}
+}

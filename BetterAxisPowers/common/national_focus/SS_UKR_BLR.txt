@@ -685,7 +685,7 @@
 		id = SS_fighter_focus
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = SS_Rebuild_Air }
-		mutually_exclusive = { focus = bomber_focusa }
+		mutually_exclusive = { focus = SS_bomber_focus }
 		x = -1
 		y = 1
 		relative_position_id = SS_Rebuild_Air
@@ -710,7 +710,7 @@
 		id = SS_bomber_focus
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = SS_Rebuild_Air }
-		mutually_exclusive = { focus = fighter_focusa }
+		mutually_exclusive = { focus = SS_fighter_focus }
 		x = 1
 		y = 1
 		relative_position_id = SS_Rebuild_Air
@@ -1206,6 +1206,9 @@
 		id = SS_Fleet_in_being
 		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = SS_ITA_Fleet }
+		mutually_exclusive = {
+			focus = SS_Air_Fleet
+		}
 		relative_position_id = SS_ITA_Fleet 
 		x = 1
 		y = 1

@@ -96,7 +96,6 @@ German_historical = {
 		GER_anschluss
 		#1938
 		GER_Small_Arms
-		GER_autobahn_a
 		GER_Arms_Mobilization
 		GER_coal_liquidization_a
 		GER_army_innovation_a
@@ -163,13 +162,13 @@ German_historical = {
 		GER_air_innovation_2_a
 		GER_west_wall
 		GER_atlantikwall
-		GER_wunderwaffe
+		GER_wunderwaffe_a
 		GER_rebuild_the_high_seas_fleet_a
 		GER_Bismarck
 		GER_carrier_war
 		GER_Graf_Zeppelin
 		GER_His_Ship
-		GER_pride_of_the_modern_germany
+		GER_pride_of_the_modern_germany_a
 		GER_naval_air_effort_a
 		GER_prepare_for_the_next_blockade_a
 	}
@@ -205,7 +204,7 @@ German_historical = {
 	}
 
 	focus_factors = {
-		GER_rhineland = 1.0
+		GER_BetterFuhrer = 1.0
 	}
 
 }

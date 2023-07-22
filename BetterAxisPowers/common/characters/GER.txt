@@ -743,6 +743,144 @@ characters={
 		}
 	}
 
+	GER_Otto_Ciliax={
+		name= "Otto Ciliax"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Otto_Ciliax_AGA
+				small=GFX_portrait_Germany_Otto_Ciliax_AGA_small
+			}
+			army={
+				small="GFX_idea_Otto_Ciliax"
+			}
+		}
+		
+		navy_leader={
+			traits = { navy_career_officer superior_tactician bold cuts_corners }
+			skill = 4
+			id = 200
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 5
+			coordination_skill = 3
+		}
+	}
+
+	GER_Conrad_Albrecht={
+		name= "Conrad Albrecht"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Conrad_Albrecht_AGA
+				small=GFX_portrait_Germany_Conrad_Albrecht_AGA_small
+			}
+			army={
+				small="GFX_idea_Conrad_Albrecht"
+			}
+		}
+		
+		navy_leader={
+			traits = { navy_career_officer superior_tactician bold cuts_corners }
+			skill = 2
+			id = 201
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+	}
+
+	GER_Rolf_Carls={
+		name= "Rolf Carls"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Rolf_Carls_AGA
+				small=GFX_portrait_Germany_Rolf_Carls_AGA_small
+			}
+			army={
+				small="GFX_idea_Rolf_Carls"
+			}
+		}
+		
+		navy_leader={
+			traits = { navy_career_officer battleship_adherent naval_lineage }
+			skill = 2
+			id = 202
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+	GER_Otto_Kretschmer={
+		name= "Otto Kretschmer"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Otto_Kretschmer_AGA
+				small=GFX_portrait_Germany_Otto_Kretschmer_AGA_small
+			}
+			army={
+				small="GFX_idea_Otto_Kretschmer"
+			}
+		}
+		
+		navy_leader={
+			traits = { seawolf bold media_personality }
+			skill = 3
+			id = 203
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 5
+			coordination_skill = 2
+		}
+	}
+
+	GER_Theodore_Krancke={
+		name= "Theodore Krancke"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Theodore_Krancke_AGA
+				small=GFX_portrait_Germany_Theodore_Krancke_AGA_small
+			}
+			army={
+				small="GFX_idea_Theodore_Krancke"
+			}
+		}
+		
+		navy_leader={
+			traits = { spotter cruiser_captain }
+			skill = 3
+			id = 204
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+
+	GER_Herbert_Schultze={
+		name= "Herbert Schultze"
+		portraits={
+			army={
+				large=GFX_portrait_Germany_Herbert_Schultze_AGA
+				small=GFX_portrait_Germany_Herbert_Schultze_AGA_small
+			}
+			army={
+				small="GFX_idea_Herbert_Schultze"
+			}
+		}
+		
+		navy_leader={
+			traits = { seawolf }
+			skill = 2
+			id = 205
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
 	GER_karl_donitz={
 		name=GER_karl_donitz
 		portraits={

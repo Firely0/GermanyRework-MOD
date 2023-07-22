@@ -905,7 +905,6 @@ focus_tree = {
 		id = GER_accept_british_naval_dominance
 		icon = GFX_focus_ger_accept_british_naval_dominance
 		prerequisite = { focus = GER_expatriate_the_communists }
-		mutually_exclusive = { focus = GER_plan_z focus = GER_u_boat_effort focus = GER_rebuild_the_high_seas_fleet }
 		available = {
 			is_subject = no
 			NOT = { has_war_with = ENG }

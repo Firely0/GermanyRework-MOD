@@ -1,7 +1,6 @@
 	shared_focus = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = GER_prepare_for_war }
 		x = -30
 		y = 8
 		cost = 5
@@ -1680,7 +1679,6 @@
 		id = GER_plan_z_a
 		icon = GFX_goal_planz
 		text = GER_plan_z
-		prerequisite = { focus = GER_naval_rearmament_b }
 		prerequisite = { focus = GER_naval_rearmament_a }
 		x = 0
 		y = 1
@@ -3086,7 +3084,7 @@
 		icon = GFX_goal_Focus_Military_Mobilisation
 		prerequisite = { focus = GER_Finish_Ins }
 		prerequisite = {focus = GER_Finish_Civilian  }
-		mutually_exclusive = { focus = GER_Eco_Plan_A focus = GER_Eco_Plan_C }
+		mutually_exclusive = { focus = GER_Eco_Plan_A }
 		x = 4
 		y = 2
 		relative_position_id = GER_Finish_COPY
@@ -3403,7 +3401,7 @@
 	shared_focus = {
 		id = GER_Eco_Plan_Side_A_1
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A focus = GER_Eco_Plan_C_A }
+		prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A }
 		x = 0
 		y = 6
 		relative_position_id = GER_Finish_COPY
@@ -3598,7 +3596,7 @@
 		completion_reward = {
 		if = {
 			limit = {
-                 has_completed_focus = GER_rhineland_a
+                 has_completed_focus = GER_rhineland_ab
 			}
 			random_state = {
 			limit = { is_owned_by = GER }
@@ -3613,7 +3611,7 @@
 
 		if = {
 			limit = {
-                 has_completed_focus = GER_rhineland_ab
+                 has_completed_focus = GER_against_fuhrer
 			}
 			random_state = {
 			limit = { is_owned_by = GER }
