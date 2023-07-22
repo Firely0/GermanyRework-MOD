@@ -3,7 +3,8 @@ German_alternate_kaiser = {
 	desc = "Wir wollen unsren Kaiser Wilhelm wiederhaben!"
 
 	allowed = {
-		original_tag = GER
+		#original_tag = GER
+		always = no
 	}
 	enable = {
 		OR = {
@@ -102,7 +103,8 @@ German_alternate_democratic = {
 	desc = "UNITY! JUSTICE! FREEDOM!"
 
 	allowed = {
-		original_tag = GER
+		#original_tag = GER
+		always = no
 	}
 	enable = {
 		OR = {
