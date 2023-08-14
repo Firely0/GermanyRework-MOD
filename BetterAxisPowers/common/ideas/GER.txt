@@ -1142,7 +1142,15 @@ ideas = {
 			}
 
 			cancel = {
-			} 
+				AND = {
+					DEN = {
+						has_capitulated = yes
+					}
+					NOR	= {
+						has_capitulated = yes
+					}
+				}
+			}
 			
 			removal_cost = -1
 
@@ -2376,8 +2384,34 @@ ideas = {
 			
 			modifier = {
 				#For My People
-				war_support_factor = 0.1
-				stability_factor = 0.1
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		Kaiser_Idea_king = { #King of People 
+			picture = Kaiser_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = neutrality }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#For My People
+				war_support_factor = 0.05
+				stability_factor = 0.05
+
+				#King of People
+				political_advisor_cost_factor = -0.2
+				navy_advisor_cost_factor = -0.2
+				army_advisor_cost_factor = -0.2
+				air_advisor_cost_factor = -0.2
 			}
 		}
 
@@ -2419,6 +2453,12 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+
+			cancel = {
+				FRA = {
+					has_capitulated = yes
+				}
+			}
 	
 			removal_cost = -1
 				
@@ -2441,15 +2481,18 @@ ideas = {
 			}
 
 			cancel = {
+				FRA = {
+					has_capitulated = yes
+				}
 			}
 	
 			removal_cost = -1
 				
 			modifier = {
+				org_loss_when_moving = -0.1
 				breakthrough_factor = 0.1
 				coordination_bonus = 0.05
-				initiative_factor = 0.1
-				org_loss_when_moving = -0.2
+				initiative_factor = 0.05
 			}
 		}
 
@@ -7632,6 +7675,14 @@ ideas = {
 			}
 
 			cancel = {
+				AND = {
+					DEN = {
+						has_capitulated = yes
+					}
+					NOR	= {
+						has_capitulated = yes
+					}
+				}
 			} 
 			
 			removal_cost = -1

@@ -1418,6 +1418,7 @@ GER_case_anton_category = {
 		complete_effect = {
 			custom_effect_tooltip = GER_case_anton_tt
 			hidden_effect = {
+				GER_Vichy_state_modifier_remove = yes
 				random_other_country = {
 					limit = {
 						original_tag = FRA

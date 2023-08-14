@@ -844,6 +844,15 @@ GER_Lands_in_Soviet = {
 		}
 		transfer_state_to = GER
 	}
+	every_country = {
+		limit = {
+			has_country_flag = GER_SOV_PUPPET_COUNTRY
+			has_capitulated = yes
+		}
+		every_owned_state = {
+			transfer_state_to = GER
+		}
+	}
 }
 
 JAP_Lands_in_Soviet = {

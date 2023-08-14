@@ -1058,6 +1058,7 @@ country_event = {
 					side = default_left_side
 					gfx = GFX_bop_Wilhelm
 				}
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 
@@ -1108,6 +1109,7 @@ country_event = {
 					side = default_left_side
 					gfx = GFX_bop_Wilhelm
 				}
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 
@@ -2631,6 +2633,7 @@ country_event = {
 				target = SOV
 				days = 365
 			}
+			set_global_flag = SOV_Keep_peace_with_GER
 		}
 
 		GER = {
@@ -4834,6 +4837,7 @@ country_event = {
 			set_global_flag = GER_WORLD_WAR_II_WIN
 			ENG = {
 				white_peace = GER
+				GER_democratic_nations_ai_strategies = yes
 			}
 			start_peace_conference = {
 				tag = ENG

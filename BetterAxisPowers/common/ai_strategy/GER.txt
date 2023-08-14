@@ -3046,3 +3046,33 @@ GER_dont_act_on_danzig_if_things_went_south = {
 		value = -2000
 	}
 }
+
+SOV_keep_peace_with_Germany = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		has_global_flag = SOV_Keep_peace_with_GER
+	}
+	abort = {
+		OR ={
+			GER = { has_war_with = SOV }
+		}
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "GER"
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore
+		id = "BLR"
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore
+		id = "UKR"
+		value = 200
+	}
+}

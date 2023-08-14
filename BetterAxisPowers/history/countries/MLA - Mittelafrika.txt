@@ -1,0 +1,59 @@
+﻿capital = 660
+
+set_convoys = 310
+set_stability = 0.5 
+set_war_support = 0.6
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1923.01.01"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 100
+}
+
+add_ideas = {
+}
+
+create_country_leader = {
+	name = "Afrika Korps Government"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Afrika Korps Government"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Afrika Korps Government"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Afrika Korps Government"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	}
+}

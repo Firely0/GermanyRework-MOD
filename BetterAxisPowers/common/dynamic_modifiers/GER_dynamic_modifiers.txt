@@ -93,14 +93,14 @@ Krupp_PH3_modifier = {
 Ger_non_vichy_state_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_modifiers_gerflagstate
+	icon = GFX_modifiers_vichy_state
 
-	compliance_gain = 0.02
-	resistance_garrison_penetration_chance = -0.1
+	compliance_gain = 0.03
+	resistance_garrison_penetration_chance = -0.15
 
 	local_resources_factor = -0.1
-	local_factory_sabotage = 0.05
 	local_intel_to_enemies = 0.1
+	local_factory_sabotage = 0.05
 	
 }
 

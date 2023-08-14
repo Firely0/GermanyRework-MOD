@@ -62,7 +62,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = wtt_news.4.a
+		name = "None shall stop the Germany!"
 		trigger = {
 			original_tag = GER
 		}
@@ -72,23 +72,12 @@ news_event = {
 		trigger = { 
 			NOT = { original_tag = GER }
 			NOT = { original_tag = HOL }
-			NOT = { original_tag = ENG }
-			NOT = { original_tag = FRA }
 		}
 	}
 	option = {
 		name = wtt_news.4.c
 		trigger = { 
 			original_tag = HOL
-		}
-	}
-	option = {
-		name = wtt_news.3.d
-		trigger = { 
-			OR = {
-				original_tag = ENG
-				original_tag = FRA
-			}
 		}
 	}
 }

@@ -291,9 +291,15 @@ on_actions = {
 					complete_national_focus = GER_Attack_SOV
 					every_state = {
 						limit = { 
-							is_owned_and_controlled_by = SOV 
+							is_owned_and_controlled_by = SOV
 						} 
 						set_state_flag = GER_Claim_lands
+					}
+					every_country = {
+						limit = {
+							is_puppet_of = SOV
+						}
+						set_country_flag = GER_SOV_PUPPET_COUNTRY
 					}
 					if = {
 						limit = {
