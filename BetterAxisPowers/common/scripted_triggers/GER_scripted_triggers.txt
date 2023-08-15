@@ -156,6 +156,15 @@ is_controlled_by_ITA_or_subject = {
 	}
 }
 
+is_controlled_by_GER_or_subject = {
+	CONTROLLER = {
+		OR = {
+			tag = GER
+			is_subject_of = GER
+		}
+	}
+}
+
 is_controlled_by_target_or_subject = {
 	CONTROLLER = {
 		OR = {

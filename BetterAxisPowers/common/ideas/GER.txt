@@ -3921,6 +3921,40 @@ ideas = {
 
 			#Ger Afrika Korps
 
+			MLA_Afrika_Korps = {
+				picture = AfrikaCorps_idea
+				allowed = {
+				}
+	
+				allowed_civil_war = {
+					always = yes
+				}
+
+				cancel = {
+				}
+				
+				removal_cost = -1
+	
+				equipment_bonus = {
+					infantry_equipment = {
+						instant = yes
+						build_cost_ic = -0.05
+					}	
+				}
+		
+				modifier = {
+	
+					recon_factor = 0.05
+					max_planning_factor = 0.03
+					planning_speed = 0.03
+
+					supply_node_range = 0.1
+					truck_attrition_factor = -0.05
+
+					acclimatization_hot_climate_gain_factor = 0.2
+				}
+			}
+
 			GER_Afrika_Korps = {
 				picture = AfrikaCorps_idea
 				allowed = {

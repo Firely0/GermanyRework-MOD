@@ -3,6 +3,7 @@
 set_convoys = 310
 set_stability = 0.5 
 set_war_support = 0.6
+set_research_slots = 3
 
 set_politics = {
 	ruling_party = fascism
@@ -16,6 +17,23 @@ set_popularities = {
 }
 
 add_ideas = {
+}
+
+set_technology = { # Same as Germany*
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	trade_interdiction = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
 }
 
 create_country_leader = {
@@ -33,7 +51,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
+	ideology = nazism
 	traits = {
 	}
 }

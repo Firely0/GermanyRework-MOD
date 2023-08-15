@@ -2120,6 +2120,20 @@ technologies = {
 		}
 	}
 
+	irregular_infantry_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			irregular_infantry 
+		}
+	}
+
 	######### FROM SOVIET FOCUS ##########
 	penal_infantry = {
 		

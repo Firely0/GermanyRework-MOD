@@ -242,6 +242,295 @@ eva_braun_category = {
 	}
 }
 
+GER_colonial_management_category = {
+	transfer_state_to_MLA = {
+
+		cost = 10
+
+		days_re_enable = 1
+
+		icon = GFX_decision_infiltrate_state
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+			GER = {
+				any_controlled_state = {
+					OR = {
+						is_claimed_by = MLA
+						is_core_of = MLA
+					}
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MLA
+						is_claimed_by = MLA
+					}
+					is_controlled_by = GER
+				}
+				transfer_state_to = MLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	sent_rommel_to_mla = {
+
+		cost = 30
+
+		days_re_enable = 30
+
+		icon = GFX_decision_ETH_chitet
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = GER_SENT_ROMMEL_MLA }
+		}
+
+		complete_effect = {
+			GER_erwin_rommel = { set_nationality = MLA }
+			hidden_effect = {
+				set_country_flag = GER_SENT_ROMMEL_MLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	recall_rommel_to_ger = {
+
+		cost = 30
+
+		days_re_enable = 30
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+		}
+
+		visible = {
+			has_country_flag = GER_SENT_ROMMEL_MLA
+		}
+
+		complete_effect = {
+			GER_erwin_rommel = { set_nationality = GER }
+			hidden_effect = {
+				clr_country_flag = GER_SENT_ROMMEL_MLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	sent_troops_to_mla = {
+
+		cost = 10
+
+		days_re_enable = 30
+
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			MLA = {
+				random_controlled_state = {
+					limit = {
+						is_core_of = MLA
+					}
+					create_unit = {
+						division = "name = \"Colonial Division\" division_template = \"Colonial Division\" start_experience_factor = 0.5"
+						owner = MLA
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	send_more_men_to_the_MLA = {
+
+		cost = 10
+
+		days_re_enable = 91
+
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+			GER = {
+				has_manpower > 10000
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+
+			GER = {
+				add_manpower = -10000
+			}
+
+			MLA = {
+				add_manpower = 10000
+				army_experience = 15
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = MLA
+					NOT = {
+						is_core_of = MLA
+					}
+				}
+				add_resistance = -5
+			}
+
+			hidden_effect = {
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	send_more_weapons_to_the_MLA = {
+
+		cost = 10
+
+		days_re_enable = 91
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+			OR = {
+				GER = {
+					has_equipment = {
+					    infantry_equipment_1 > 2000
+					}
+				}
+				GER = {
+					has_equipment = {
+					    infantry_equipment_0 > 2000
+					}
+				}
+				GER = {
+					has_equipment = {
+					    infantry_equipment_2 > 2000
+					}
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			GER = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 2000
+				    target = MLA
+				}
+			}
+
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = MLA
+					NOT = { is_core_of = MLA }
+				}
+				add_resistance = -5
+			}
+
+			hidden_effect = {
+
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				OR = {
+					GER = {
+						has_equipment = {
+						    infantry_equipment_1 > 5000
+						}
+					}
+					GER = {
+						has_equipment = {
+						    infantry_equipment_0 > 5000
+						}
+					}
+					GER = {
+						has_equipment = {
+						    infantry_equipment_2 > 5000
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 GER_training_program = {
 
 	GER_SOV_TRAINING = {
