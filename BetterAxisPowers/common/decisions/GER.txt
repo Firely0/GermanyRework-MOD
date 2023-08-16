@@ -32,11 +32,75 @@ health_of_adolf_category = {
 		}
 	
 		timeout_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 12 }
+			ROOT = { country_event = { id = GER_health_adolf.1 hours = 4 } }  
 		}
 	
 		complete_effect = {
-			country_event = { id = GER_health_adolf.1 hours = 12 }
+			ROOT = { country_event = { id = GER_health_adolf.1 hours = 4 } }
+		}
+	}
+	
+	GER_hitler_purge_leaders = {
+		icon = GFX_decision_generic_army_support                    
+		allowed = { tag = GER }               
+		available = {
+			always = no                     
+		}
+		activation = {                       
+	        always = no              		
+		}
+		is_good = no                         
+		selectable_mission = no                
+		days_mission_timeout = 30          
+		timeout_effect = {
+		    random_army_leader = {
+			    limit = {
+				    NOT = { has_trait = purged_by_hitler }
+				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+			    }
+			    add_timed_unit_leader_trait = {
+				    trait = purged_by_hitler
+				    days = 60
+			    }
+				set_unit_leader_flag = {
+					flag = recently_purged_by_hitler
+					value = 1
+					days = 180
+				}
+		    }
+			random_army_leader = {
+			    limit = {
+				    NOT = { has_trait = purged_by_hitler }
+				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+			    }
+			    add_timed_unit_leader_trait = {
+				    trait = purged_by_hitler
+				    days = 60
+			    }
+				set_unit_leader_flag = {
+					flag = recently_purged_by_hitler
+					value = 1
+					days = 180
+				}
+		    }
+			random_army_leader = {
+			    limit = {
+				    NOT = { has_trait = purged_by_hitler }
+				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+			    }
+			    add_timed_unit_leader_trait = {
+				    trait = purged_by_hitler
+				    days = 60
+			    }
+				set_unit_leader_flag = {
+					flag = recently_purged_by_hitler
+					value = 1
+					days = 180
+				}
+		    }
+		}
+		complete_effect = {           
 		}
 	}
 
@@ -857,6 +921,7 @@ GER_Operation_Sealion_ph_1 = {
 		}
 	
 		timeout_effect = {
+			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = {
@@ -1023,6 +1088,7 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.05
 			}
+			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
@@ -1081,6 +1147,7 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.1
 			}
+			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
@@ -1139,18 +1206,19 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.05
 			}
+			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
-		 complete_national_focus = GER_Stalingrad_mission
-		 SOV = {
-			add_popularity = {
-				ideology = neutrality 
-				popularity = 0.05
-			}
-			add_war_support = -0.05
-			add_stability = -0.05
-		}
+			complete_national_focus = GER_Stalingrad_mission
+			SOV = {
+			   add_popularity = {
+				   ideology = neutrality 
+				   popularity = 0.05
+			   }
+			   add_war_support = -0.05
+			   add_stability = -0.05
+		   }
 		}
 	}
 }

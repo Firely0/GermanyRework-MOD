@@ -280,7 +280,7 @@ GER_balance_of_power_category = {
 
 	visible = { 
 		2 = { is_fully_controlled_by = ITA } 
-	    is_ally_with = ITA
+		is_in_faction_with = ITA
 		ITA = {
 			has_country_leader = { character = ITA_benito_mussolini }
 		} 
@@ -311,7 +311,7 @@ GER_balance_of_power_category = {
 
 	visible = { 
 		2 = { is_fully_controlled_by = ITA } 
-	    is_ally_with = ITA
+	    is_in_faction_with = ITA
 		ITA = {
 			NOT = { has_country_leader = { character = ITA_benito_mussolini } } 
 		}
@@ -335,7 +335,7 @@ GER_balance_of_power_category = {
 		GER_bop_low_increase_effect = yes
 	}
 
-	visible = { is_ally_with = SPR 41 = { is_fully_controlled_by = SPR } }
+	visible = { is_in_faction_with = SPR 41 = { is_fully_controlled_by = SPR } }
 	
     }
 

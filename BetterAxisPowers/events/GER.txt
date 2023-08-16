@@ -5206,6 +5206,7 @@ country_event = {
 
 		GER_adolf_search_costs_idea_effect = yes
 		GER_adolf_best_doctor_effect = yes
+		GER_bop_decrease_need_checkup_modifier = yes
 
 		hidden_effect = {
 			add_to_variable = { best_doctors = 1 }
@@ -5227,6 +5228,7 @@ country_event = {
 
 		GER_adolf_personal_doctor_idea_effect = yes
 		GER_adolf_personal_doctor_effect = yes
+		GER_bop_decrease_need_checkup_modifier = yes
 
 		modifier = {
 			factor = 100

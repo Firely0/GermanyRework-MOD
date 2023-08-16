@@ -12864,6 +12864,11 @@ focus_tree = {
 				planning_skill=3
 				logistics_skill=2
 			}
+			GER_SUPREM_adolf_hitler = {
+				set_unit_leader_flag = {
+					flag = GER_NOT_PURGE
+				}
+			}
 		}
 	}
 
