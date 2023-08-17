@@ -668,11 +668,7 @@ SS_loot = {
 		}
 
 		ai_will_do = {
-			base = 1
-			modifier = {
-				has_political_power > 200
-				factor = 100
-			}
+			factor = 0
 			modifier = {
 				factor = 100
 				stockpile_ratio = {
@@ -712,7 +708,7 @@ SS_loot = {
 			}	
 		}
 
-		cost = 75
+		cost = 50
 
 		days_re_enable = 365
 
@@ -748,7 +744,7 @@ SS_loot = {
 			}
 		}
 
-		cost = 75
+		cost = 50
 
 		days_re_enable = 180
 

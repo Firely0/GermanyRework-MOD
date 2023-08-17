@@ -41,7 +41,7 @@ health_of_adolf_category = {
 	}
 	
 	GER_hitler_purge_leaders = {
-		icon = GFX_decision_generic_army_support                    
+		icon = GFX_decision_generic_police_action                  
 		allowed = { tag = GER }               
 		available = {
 			always = no                     
@@ -1088,7 +1088,6 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.05
 			}
-			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
@@ -1100,6 +1099,63 @@ GER_Operation_Barbarossa_V = {
 				}
 				add_war_support = -0.05
 				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Misk = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			206 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206 #Misk
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.025
+			add_war_support = -0.025
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+	
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
 			}
 		}
 	}
@@ -1147,7 +1203,6 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.1
 			}
-			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
@@ -1159,6 +1214,63 @@ GER_Operation_Barbarossa_V = {
 				}
 				add_war_support = -0.05
 				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Kiev = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = { #GOAL
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202 #Kiev
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			add_stability = -0.025
+			add_war_support = -0.025
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
+		}
+	
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
 			}
 		}
 	}
@@ -1206,7 +1318,6 @@ GER_Operation_Barbarossa_V = {
 				id = GER_power_balance
 				value = -0.05
 			}
-			activate_mission = GER_hitler_purge_leaders
 		}
 	
 		complete_effect = { 
@@ -1219,6 +1330,98 @@ GER_Operation_Barbarossa_V = {
 			   add_war_support = -0.05
 			   add_stability = -0.05
 		   }
+		}
+	}
+
+	GER_conquer_Sevastopol = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			137 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 137 #Sevastopol
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_stability = -0.025
+			add_war_support = -0.025
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+	
+		complete_effect = {
+			SOV = {
+			   add_popularity = {
+				   ideology = neutrality 
+				   popularity = 0.05
+			   }
+			   add_war_support = -0.025
+			   add_stability = -0.025
+		   }
+		}
+	}
+
+	GER_end_of_operation_barbarossa = {
+		icon = GFX_decision_generic_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			NOT = { has_global_flag = GER_Operation_Barbarossa_running }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = { 
+			activate_mission = GER_hitler_purge_leaders
+		}
+	
+		complete_effect = {
 		}
 	}
 }

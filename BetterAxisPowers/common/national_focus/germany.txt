@@ -58,21 +58,22 @@ focus_tree = {
 					}
 					set_cosmetic_tag = GER_the_third_reich
 				}
-			if = {
-				limit = {
-					is_ai = yes
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_variable = { ger_rhi_timeout = 200 }
+					set_technology = { mobile_warfare = 1 popup = no }
+					add_ideas = i_dont_use_wargoal
 				}
-				set_variable = { ger_rhi_timeout = 200 }
-				set_technology = { mobile_warfare = 1 popup = no }
-				add_ideas = i_dont_use_wargoal
-			}
-			activate_mission = GER_Rhineland_demilitarized_a
-            activate_mission = GER_Rhineland_demilitarized_b
-			activate_mission = GER_Rhineland_demilitarized_e
-			load_focus_tree = {
-			  tree = german_fuhrer_better
-			  keep_completed = yes
-			}
+				activate_mission = GER_Rhineland_demilitarized_a
+            	activate_mission = GER_Rhineland_demilitarized_b
+				activate_mission = GER_Rhineland_demilitarized_e
+				activate_mission = Adolf_Hitler_Yearly_Check_ups 
+				load_focus_tree = {
+					tree = german_fuhrer_better
+					keep_completed = yes
+				}
 			}
 		} 		
 	}

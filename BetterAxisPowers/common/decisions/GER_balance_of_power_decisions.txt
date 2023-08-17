@@ -97,7 +97,7 @@ GER_balance_of_power_category = {
 		
 	}
 
-	GER_low_increase_effect_1 = {#London
+	GER_low_increase_effect_1 = { #London
 		priority = 90
 		icon = GFX_decision_eng_blackshirt_speech
 
@@ -105,7 +105,7 @@ GER_balance_of_power_category = {
 			original_tag = GER
 		}
 
-		cost = 50
+		cost = 25
 
 		fire_only_once = yes
 
@@ -356,7 +356,7 @@ GER_balance_of_power_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 			modifier = {
 				factor = 10
 				power_balance_value = {
@@ -365,8 +365,11 @@ GER_balance_of_power_category = {
 				}
 			}
 			modifier = {
-				factor = 10
-				has_political_power < 200
+				factor = -10
+				power_balance_value = {
+					id = GER_power_balance 
+					value > 0.50
+				}
 			}
 		}
 
@@ -421,7 +424,7 @@ GER_balance_of_power_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 			modifier = {
 				factor = 10
 				power_balance_value = {
@@ -430,8 +433,11 @@ GER_balance_of_power_category = {
 				}
 			}
 			modifier = {
-				factor = 10
-				has_political_power < 200
+				factor = -10
+				power_balance_value = {
+					id = GER_power_balance 
+					value > 0.50
+				}
 			}
 		}
 
@@ -456,7 +462,7 @@ GER_balance_of_power_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 			modifier = {
 				factor = 10
 				power_balance_value = {
@@ -465,8 +471,11 @@ GER_balance_of_power_category = {
 				}
 			}
 			modifier = {
-				factor = 10
-				has_political_power < 200
+				factor = -10
+				power_balance_value = {
+					id = GER_power_balance 
+					value > 0.50
+				}
 			}
 		}
 
@@ -503,7 +512,7 @@ GER_balance_of_power_category = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
 			modifier = {
 				factor = 50
 				check_variable = { var = SS_anger value = 20 compare = greater_than_or_equals }

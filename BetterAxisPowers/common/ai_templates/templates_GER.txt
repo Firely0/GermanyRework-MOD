@@ -390,7 +390,6 @@ armored_GER = {
 			match_value = 20000.0
 			
 			support = {
-				medium_flame_tank = 1
 				armored_car_recon = 1
 				logistics_company = 1
 				signal_company = 1
@@ -399,9 +398,8 @@ armored_GER = {
 			}
 			
 			regiments = {
-				medium_armor = 16
-				medium_tank_destroyer_brigade = 1
-				motorized = 5
+				medium_armor = 10
+				motorized = 10
 			}
 		}
 
@@ -413,7 +411,6 @@ armored_GER = {
 			signal_company
 			logistics_company
 			engineer
-			medium_flame_tank
 		}
 		
 		replace_at_match = 0.95
@@ -499,7 +496,7 @@ armored_GER = {
 			}
 			
 			regiments = {
-				medium_armor = 16
+				medium_armor = 14
 				medium_tank_destroyer_brigade = 1
 				mechanized = 5
 			}
@@ -820,7 +817,7 @@ infantry_GER = {
 			}
 			
 			regiments = {
-				infantry = 11
+				infantry = 10
 				artillery_brigade = 1
 			}
 		}
@@ -913,8 +910,8 @@ infantry_GER = {
 			}
 			
 			regiments = {
-				infantry = 11
-				artillery_brigade = 1
+				infantry = 10
+				artillery_brigade = 2
 			}
 		}
 		
@@ -1001,8 +998,8 @@ infantry_GER = {
 			}
 			
 			regiments = {
-				infantry = 9
-				artillery_brigade = 4
+				infantry = 10
+				artillery_brigade = 2
 			}
 		}
 		

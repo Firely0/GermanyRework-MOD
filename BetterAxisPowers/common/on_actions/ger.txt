@@ -313,6 +313,7 @@ on_actions = {
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 					if = {
@@ -327,6 +328,7 @@ on_actions = {
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 					else = {
@@ -336,6 +338,7 @@ on_actions = {
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 				}
@@ -446,6 +449,19 @@ on_actions = {
 		}
 	}
 
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					FROM = { tag = ENG }
+				}
+				GER = {
+					complete_national_focus = GER_war_with_britain
+				}
+			}
+		}
+	}
 
 	on_declare_war = {
 		effect = {

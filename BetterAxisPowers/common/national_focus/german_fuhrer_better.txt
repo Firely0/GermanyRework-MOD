@@ -737,7 +737,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 67
+		x = 60
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 10
@@ -835,6 +835,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			unlock_decision_category_tooltip = GER_colonial_management_category
 			custom_effect_tooltip = GER_Africa_tt
 			show_ideas_tooltip = GER_Colonial_Police_Fake_tooltip_idea
 		}
@@ -876,7 +877,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		prerequisite = { focus = GER_establish_abwehr }
 		relative_position_id = GER_establish_abwehr
-		x = 47
+		x = 40
 		y = 1
 		cost = 3
 		available = {
@@ -887,14 +888,14 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -15
+			x = -14
 			y = 0
 			trigger = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		offset = {
-			x = -22
+			x = -21
 			y = 0
 			trigger = {
 				has_completed_focus = GER_Fuhrer
@@ -956,7 +957,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 10
+		x = -3
 		y = 1
 		relative_position_id = GER_foregin_affairs
 		cost = 10
@@ -1061,7 +1062,7 @@ focus_tree = {
 		icon = GFX_goal_LIT_New_Republic
 		prerequisite = { focus = GER_anschluss }
 		available = { is_subject = no }
-		x = 0
+		x = -5
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -1353,7 +1354,7 @@ focus_tree = {
 		select_effect = {
 			add_timed_idea = { idea = Operation_Weserubung days = 120 }
 		}
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = GER_danzig_or_war
 		cost = 2
@@ -1454,7 +1455,7 @@ focus_tree = {
 		will_lead_to_war_with = HOL
 		will_lead_to_war_with = LUX
 		will_lead_to_war_with = FRA
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = GER_danzig_or_war
 		cost = 4
@@ -1574,7 +1575,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -4
+		x = -1
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -1654,7 +1655,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_request_sudetenland
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_r56_goal_ger_fate_of_czech
 		will_lead_to_war_with = CZE
 		prerequisite = { focus = GER_czech_friend }
 		available = { 
@@ -1743,7 +1744,7 @@ focus_tree = {
 			is_puppet = yes
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -2350,7 +2351,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 4
+		x = 1
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -2434,7 +2435,7 @@ focus_tree = {
 			has_war_with = ENG
 		}
 		cancel_if_invalid = no
-		x = 0
+		x = 12
 		y = 1
 		relative_position_id = GER_foregin_affairs
 		cost = 3
@@ -2477,7 +2478,7 @@ focus_tree = {
 			NOT = { has_idea = Landon_Treaty_sub_focus }
 		}
 		cancel_if_invalid = yes
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_uk_friend
 		cost = 5
@@ -2496,17 +2497,15 @@ focus_tree = {
 			is_subject = no
 			NOT = { has_war_with = ENG }
 		}
-		bypass = {
-			has_war_with = ENG
-		}
 		cancel_if_invalid = yes
 		x = -1
 		y = 4
 		relative_position_id = GER_anglo_german_agreemet
-		cost = 10
+		cost = 8
 		ai_will_do = {
 		}		
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			create_wargoal = {
 				type = annex_everything
 				target = ENG
@@ -2561,7 +2560,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = GER_uk_friend
 		cost = 3
 		ai_will_do = {
@@ -2735,7 +2734,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = GER_uk_friend
 		cost = 5
@@ -2751,7 +2750,8 @@ focus_tree = {
 		icon = GFX_goal_Ger_Eng
 		prerequisite = { focus = GER_uk_trade_agreements }
 		mutually_exclusive = { focus = GER_war_with_britain }
-		available = { 
+		available = {
+			always = no
 			NOT = { has_war_with = ENG }
 			NOT = { is_embargoing = ENG }
 			ENG = {
@@ -2773,11 +2773,10 @@ focus_tree = {
 		x = 1
 		y = 4
 		relative_position_id = GER_uk_trade_agreements
-		cost = 10
+		cost = 8
 		ai_will_do = {
 		}		
 		completion_reward = {
-			ENG	= { country_event = { id = GER_eng_trade_agreement.1 hours = 6 } }
 		}
 	}
 
@@ -2831,7 +2830,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_request_slovenia
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_fate_of_yug
 		will_lead_to_war_with = YUG
 		prerequisite = { focus = GER_yug_friend }
 		available = { 
@@ -2921,7 +2920,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
@@ -3419,7 +3418,7 @@ focus_tree = {
 			}
 			NOT = { is_in_faction_with = GRE }
 		}
-		x = 2
+		x = -2
 		y = 1
 		relative_position_id = GER_fate_of_yugoslavia
 		cost = 10
@@ -5409,7 +5408,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 0
-		y = 3
+		y = 4
 		relative_position_id = GER_the_Supreme_Commander
 		cost = 1
 		ai_will_do = {
@@ -5620,7 +5619,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 100
+		x = 92
 		y = 1
 		relative_position_id = GER_establish_abwehr
 		cost = 3
@@ -7831,6 +7830,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_create_militafrica
 			hidden_effect = {
 				MLA = {
 					add_state_core = 777
@@ -12340,7 +12340,6 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = GER_side_with_fascism
 			mark_focus_tree_layout_dirty = yes
-			activate_mission = Adolf_Hitler_Yearly_Check_ups 
 			if = {
 				limit = {
 					has_completed_focus = GER_rhineland_ab
@@ -13169,16 +13168,9 @@ focus_tree = {
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		prerequisite = { focus = GER_foregin_affairs }
 		relative_position_id = GER_foregin_affairs
-		x = -11
+		x = 5
 		y = 1
 		cost = 3
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				NOT = { has_completed_focus = GER_ussr_war_goal } 
-			}
-		}
 		available = {
 			has_government = fascism
 		}
@@ -13262,6 +13254,12 @@ focus_tree = {
 				mission = GER_conquer_Stalingrad
 				days = 60
 			}
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = GER_end_of_operation_barbarossa
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -13302,6 +13300,12 @@ focus_tree = {
 				mission = GER_conquer_Stalingrad
 				days = 60
 			}
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = GER_end_of_operation_barbarossa
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -13341,6 +13345,12 @@ focus_tree = {
 			add_days_mission_timeout = {
 				mission = GER_conquer_Leningrad
 				days = 60
+			}
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = GER_end_of_operation_barbarossa
+					days = 60
+				}
 			}
 		}
 	}
@@ -13398,7 +13408,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 5
@@ -13418,7 +13428,6 @@ focus_tree = {
 	focus = { #should already be signed in 39
 	 id = GER_mol_rib_pact
 	 icon = GFX_goal_molotov_ribbentrop_pact
-	 text = GER_mol_rib_pact
 	 prerequisite = { focus = GER_Approach_Soviet }
 	 available = {
 		is_subject = no
@@ -13493,7 +13502,7 @@ focus = {
 	x = -1
 	y = 4
 	relative_position_id = GER_Approach_Soviet
-	cost = 10
+	cost = 8
 	ai_will_do = {
 		factor = 0.01
 		modifier = {
@@ -13577,7 +13586,7 @@ focus = {
 		}
 		allow_branch = { has_completed_focus = GER_ussr_war_goal }
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 5
@@ -13599,7 +13608,7 @@ focus = {
 		}
 		allow_branch = { has_completed_focus = GER_ussr_war_goal }
 		prerequisite = { focus = GER_Sleep_Well_SOV }
-		x = -4
+		x = -2
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 5
@@ -13622,7 +13631,7 @@ focus = {
 			NOT = { has_country_flag = vlasov_in_ss_flag }
 		}
 		prerequisite = { focus = GER_Russia_Glory_Army }
-		x = -3
+		x = -1
 		y = 2
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 4
@@ -13684,7 +13693,7 @@ focus = {
 			}	
 		}
 		prerequisite = { focus = GER_Russia_Glory_Army }
-		x = -5
+		x = -3
 		y = 2
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 4
@@ -13748,7 +13757,7 @@ focus = {
 		text = GER_anti_comitern_pact
 		prerequisite = { focus = GER_Sleep_Well_SOV  }
 		allow_branch = { NOT = { has_completed_focus = GER_ussr_war_goal } NOT = { has_completed_focus = GER_against_fuhrer } } 
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = GER_Sleep_Well_SOV
 		cost = 5
@@ -13870,7 +13879,7 @@ focus = {
 		x = 1
 		y = 4
 		relative_position_id = GER_anti_comitern_pact
-		cost = 10
+		cost = 8
 		historical_ai = {
 			NOT = {
 				any_home_area_neighbor_country = {

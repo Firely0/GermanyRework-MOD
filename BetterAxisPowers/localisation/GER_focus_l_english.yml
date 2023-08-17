@@ -67,8 +67,12 @@
  #Operation Barbarossa
  GER_Operation_Barbarossa_V:0 "Operation Barbarossa"
  GER_conquer_Leningrad:0 "Conquer Leningrad"
+ GER_conquer_Misk:0 "Conquer Misk"
  GER_conquer_Moscow:0 "Conquer Moscow"
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
+ GER_conquer_Kiev:0 "Canquer Kiev"
+ GER_conquer_Sevastopol:0 "Canquer Sevastopol"
+ GER_Unexpected_Winter:0 "Unexpected Soviet Winter"
 
  #Repair
 
@@ -96,6 +100,7 @@
 
  #Africa
 
+ GER_create_militafrica:0 "Establishes Mittlelafrika in our former African Territories"
  GER_colonial_management_category:0 "Mittelafrika Management"
  GER_colonial_management_category_desc:0 "Having restored order in our former African territories, we must ensure that the new regime can maintain order and support new military operations in the region."
  sent_troops_to_mla:0 "Send Troops"
@@ -704,6 +709,13 @@
  GER_hitler_is_dead:0 "Adolf Hitler is Assassinated"
  GER_hitler_is_retired:0 "Adolf Hitler is retired"
  
+ #Molotov Ribbentrop
+ GER_mol_rib_pact:1 "[GER.GetMolotovRibbentropName]"
+ GER_mol_rib_pact_desc:1 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
+ GER_mol_rib_pact_tt:1 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
+ SOV_MOLOTOV_RIBBENTROP_NAME_COMMUNIST:0 "Molotov-Ribbentrop Pact"
+ SOV_MOLOTOV_RIBBENTROP_NAME_EXILES:0 "Polish Partition Pact"
+
  GER_war_with_britain:0 "War with Britain"
  GER_war_with_britain_desc:0 ""
  GER_england_ally:0 "Aliance with England"
