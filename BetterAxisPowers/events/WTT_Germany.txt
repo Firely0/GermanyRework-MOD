@@ -3128,7 +3128,7 @@ country_event = {
 					FROM = { is_subject = no }
 				}
 				FROM = {
-					set_autonomy = { target = ROOT autonomy_state = autonomy_satellite }
+					set_autonomy = { target = ROOT autonomy_state = autonomy_Overthrown_Government }
 				}
 			}
 			if = {
@@ -3139,7 +3139,7 @@ country_event = {
 					FROM = { is_subject = no }
 				}
 				FROM = {
-					set_autonomy = { target = ROOT autonomy_state = autonomy_dominion }
+					set_autonomy = { target = ROOT autonomy_state = autonomy_Overthrown_Government }
 				}
 			}
 			if = {
@@ -3256,9 +3256,9 @@ country_event = {
 				limit = {
 					is_subject_of = FROM
 				}
-				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_satellite end_wars = no end_civil_wars = no} }
+				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_Overthrown_Government end_wars = no end_civil_wars = no} }
 			}
-			set_autonomy = { target = FROM autonomy_state = autonomy_satellite end_wars = no end_civil_wars = no}
+			set_autonomy = { target = FROM autonomy_state = autonomy_Overthrown_Government end_wars = no end_civil_wars = no}
 		}
 		if = {
 			limit = { 
@@ -3270,9 +3270,9 @@ country_event = {
 				limit = {
 					is_subject_of = FROM
 				}
-				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_dominion end_wars = no end_civil_wars = no} }
+				ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_Overthrown_Government end_wars = no end_civil_wars = no} }
 			}
-			set_autonomy = { target = FROM autonomy_state = autonomy_dominion end_wars = no end_civil_wars = no}
+			set_autonomy = { target = FROM autonomy_state = autonomy_Overthrown_Government end_wars = no end_civil_wars = no}
 		}
 		if = {
 			limit = { 

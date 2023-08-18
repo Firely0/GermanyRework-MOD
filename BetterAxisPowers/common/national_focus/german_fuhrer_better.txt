@@ -8845,14 +8845,14 @@ focus_tree = {
 						limit = {
 							has_dlc = "Death or Dishonor" 
 						}
-						set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
+						set_autonomy = { target = HUN autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 
 							has_dlc = "Together for Victory"
 							NOT = { has_dlc = "Death or Dishonor" } 
 						}
-						set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
+						set_autonomy = { target = HUN autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 
@@ -8945,14 +8945,14 @@ focus_tree = {
 						limit = {
 							has_dlc = "Death or Dishonor" 
 						}
-						set_autonomy = { target = ROM autonomy_state = autonomy_satellite }
+						set_autonomy = { target = ROM autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 
 							has_dlc = "Together for Victory"
 							NOT = { has_dlc = "Death or Dishonor" } 
 						}
-						set_autonomy = { target = ROM autonomy_state = autonomy_dominion }
+						set_autonomy = { target = ROM autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 
@@ -9045,14 +9045,14 @@ focus_tree = {
 						limit = {
 							has_dlc = "Death or Dishonor" 
 						}
-						set_autonomy = { target = BUL autonomy_state = autonomy_satellite }
+						set_autonomy = { target = BUL autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 
 							has_dlc = "Together for Victory"
 							NOT = { has_dlc = "Death or Dishonor" } 
 						}
-						set_autonomy = { target = BUL autonomy_state = autonomy_dominion }
+						set_autonomy = { target = BUL autonomy_state = autonomy_Overthrown_Government }
 					}
 					if = {
 						limit = { 

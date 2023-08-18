@@ -8,6 +8,9 @@
  MLA_communism:0 "Mittelafrika"
  autonomy_africa_colony:0 "Africa Colony"
 
+ #Autonomy
+ autonomy_Overthrown_Government:0 "Overthrown Government"
+
  #Tech Sharing
 
  Axis_Pact_research_name:0 "Axis Pact Cooperation Program"
@@ -51,12 +54,6 @@
  tactic_smoke_and_fire:0 "Gas Attack"
  smoke_and_fire:0 "Gas Attack"
  Panzerschreck_at:0 "Panzerschrek"
-
- #Modifier Text
-
- modifier_production_cost_max_ship_hull_light:0 "Light Ship Max Cost"
- modifier_production_cost_max_ship_hull_submarine:0 "Submarine Max Cost"
- modifier_repair_speed_dockyard_factor:0 "Dockyard Repair Speed"
 
  #Occupation Laws
  ss_police_final:0 "Schutzstaffel"
@@ -434,7 +431,7 @@
  GER_GOERING_RETIRED:0 "Retired"
  GER_HIMMLER_RETIRED:0 "Retired"
  GER_FREE_SS_RECRUITMENT:0 "It enables the SS and the Wehrmacht to recruit without causing problems."
- GER_chance_focus:0 "Chance Focus Tree Based on Country Leader. Not available for Karl Donitz."
+ GER_chance_focus:0 "Chance Focus Tree and Country Leader."
  GER_Axis_Pact_Puppet_tt:0 "Every German subject"
  GER_end_of_event:0 "Ends Events"
 

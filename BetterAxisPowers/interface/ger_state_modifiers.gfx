@@ -45,9 +45,15 @@ spriteTypes = {
         texturefile = "gfx/interface/state_modifiers/modifiers_vichy_state.dds"
     }
 
+    # Temp
     spriteType = {
 		name = "GFX_autonomy_africa_colony_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_africa_colony_icon.dds"
+	}
+
+    spriteType = {
+		name = "GFX_autonomy_Overthrown_Government_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
 	}
 
 }	
