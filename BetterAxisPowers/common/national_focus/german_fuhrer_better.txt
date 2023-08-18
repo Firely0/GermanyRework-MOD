@@ -8726,7 +8726,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Integrate_War_Eco
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_IntegrateWarEco
 		text = GER_integrate_war_economies
 		prerequisite = { focus = GER_align_romania focus = GER_align_hungary focus = GER_align_bulgaria }
 		available = {
