@@ -239,7 +239,6 @@ Wehrmacht_dynamic_modifier = {
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -318,11 +317,10 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 	command_abilities_cost_factor = GER_command_abilities_cost_factor 
 
 	army_morale_factor = GER_army_morale_factor 
-	army_org_regain = GER_army_org_regain 
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
-	army_org_regain = GER_army_org_regain # 0
+	army_org_regain = GER_army_org_regain 
 	grant_medal_cost_factor = GER_grant_medal_cost_factor # 0 
 
 	#Volkssturm
@@ -414,7 +412,6 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 		command_abilities_cost_factor = GER_command_abilities_cost_factor
 	
 		army_morale_factor = GER_army_morale_factor
-		army_org_regain = GER_army_org_regain
 
 		industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -476,7 +473,6 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 	 command_abilities_cost_factor = GER_command_abilities_cost_factor 
 		
 	 army_morale_factor = GER_army_morale_factor 
-	 army_org_regain = GER_army_org_regain 
 
 	 industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -541,7 +537,6 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -606,7 +601,6 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -672,7 +666,6 @@ Wehrmacht_INF_2_dynamic_modifier = {
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -737,7 +730,6 @@ Wehrmacht_INF_3_dynamic_modifier = {
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 
@@ -803,7 +795,6 @@ Wehrmacht_INF_4_dynamic_modifier = {
 	command_abilities_cost_factor = GER_command_abilities_cost_factor # -0.2
 
 	army_morale_factor = GER_army_morale_factor # 0.03
-	army_org_regain = GER_army_org_regain # 0.03
 
 	industrial_capacity_factory = GER_industrial_capacity_factory
 

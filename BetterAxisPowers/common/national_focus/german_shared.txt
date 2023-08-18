@@ -1137,6 +1137,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
+			add_timed_idea = { idea = Four_Year_Plan_1 days = 1460 }
 			add_tech_bonus = {
 				name = GER_four_year_plan
 				bonus = 1.0
@@ -1145,10 +1146,7 @@
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = hjalmar_schacht
-			set_country_flag = GER_FOUR_PLAN_FLAG
-			hidden_effect = {
-				add_timed_idea = { idea = Four_Year_Plan_1  days = 1461 }
-			}	
+			set_country_flag = GER_FOUR_PLAN_FLAG	
 		}
 	}
 
@@ -2664,12 +2662,21 @@
 			factor = 1
 		}
 
+		complete_tooltip = {
+			custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
+			add_ideas = German_Eco_Plan_B
+			hidden_effect = {
+				complete_national_focus = GER_Finish_COPY
+				mark_focus_tree_layout_dirty = yes
+			}			
+		}
+
 		available = {
 			custom_trigger_tooltip = {
 			tooltip = GER_Four_Year_Plan_Finish_tt
 			has_country_flag =  {
 				flag = GER_FOUR_PLAN_FLAG
-				days > 1461
+				days > 1460
 			}
             }
 		}
@@ -2678,6 +2685,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
+			add_ideas = German_Eco_Plan_B
 			hidden_effect = {
 				complete_national_focus = GER_Finish_COPY
 				mark_focus_tree_layout_dirty = yes
@@ -2700,13 +2708,19 @@
 
 		available = {
 		}
+
+		complete_tooltip = {
+			custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
+			add_ideas = German_Eco_Plan_B
+			hidden_effect = {
+				complete_national_focus = GER_Finish_COPY
+				mark_focus_tree_layout_dirty = yes
+			}			
+		}
 	
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			hidden_effect = {
-			 add_ideas = German_Eco_Plan_B
-			}
 		}
 	}
 
@@ -4584,7 +4598,7 @@
 		prerequisite = { focus = GER_SS_Teror_Doctrine }
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4606,7 +4620,7 @@
 		prerequisite = { focus = GER_SS_For_The_Fatherland }
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4649,7 +4663,7 @@
 		prerequisite = { focus = GER_SS_Search_and_Destroy }
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4676,7 +4690,7 @@
 		prerequisite = { focus = GER_SS_Field_Medic }
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4694,7 +4708,6 @@
 		id = GER_The_Last_Tiger_Ace
 		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
 		relative_position_id = GER_SS_Trops
-		allow_branch = { NOT = { has_completed_focus = GER_Battle_Plan } }
 		prerequisite = { focus = GER_SS_Smoke_and_Fire focus = GER_new_anti_tanks }
 		x = 0
 		y = 4
@@ -5545,7 +5558,7 @@
 		relative_position_id = GER_army_innovation_a
 		x = 7
 		y = 7
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6116,7 +6129,7 @@
 				special_type_slot_2 = secondary_turret_small_cannon
 				}
 				upgrades = {
-				    tank_nsb_engine_upgrade = 14
+				    tank_nsb_engine_upgrade = 13
 					tank_nsb_armor_upgrade = 10
 			    }
 				icon = "GFX_GER_improved_medium_spaa"
