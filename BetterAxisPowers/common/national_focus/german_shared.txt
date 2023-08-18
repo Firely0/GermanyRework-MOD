@@ -1136,17 +1136,19 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
-			add_timed_idea = { idea = Four_Year_Plan_1 days = 1460 }
 			add_tech_bonus = {
 				name = GER_four_year_plan
 				bonus = 1.0
 				uses = 2
 				category = industry
 			}
+			custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = hjalmar_schacht
 			set_country_flag = GER_FOUR_PLAN_FLAG	
+			hidden_effect = {
+				add_timed_idea = { idea = Four_Year_Plan_1 days = 1460 }
+			}
 		}
 	}
 
@@ -3767,7 +3769,9 @@
 		ai_will_do = {
 			factor = 1
 		}
-
+		complete_tooltip = {
+			custom_effect_tooltip = GER_hide_mil_tt		
+		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -4009,6 +4013,9 @@
 			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			custom_effect_tooltip = GER_gross_tt		
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -4047,12 +4054,12 @@
 				}
 			}
 
-			else_if = {
-			  limit = {
-				 has_idea = Four_Year_Plan_1
-			    }
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1
+			if = {
+				limit = {
+					has_idea = Four_Year_Plan_1
+				}
+				 swap_ideas = {
+					 remove_idea = Four_Year_Plan_1
 					add_idea = Four_Year_Plan_2
 				}
 			}

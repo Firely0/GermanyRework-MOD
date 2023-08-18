@@ -28,13 +28,13 @@ leader_traits = {
 	}
 
 	porsche_focus_trait = {
-	random = no
-	equipment_bonus = {
-		armor = {
-		armor_value = 0.1 hard_attack = 0.1
+		random = no
+		equipment_bonus = {
+			armor = {
+			armor_value = 0.1 hard_attack = 0.1
+			}
 		}
-	}
-
+	
 		ai_will_do = {
 			factor = 1
 		}
@@ -286,6 +286,8 @@ leader_traits = {
 
 	armaments_organizer2 = {
 		random = no
+		sprite = 10
+
 		conversion_cost_civ_to_mil_factor = -0.2
 		production_speed_supply_node_factor = 0.1
 
@@ -300,6 +302,8 @@ leader_traits = {
 
 	armaments_organizer3 = {
 		random = no
+		sprite = 10
+		
 		industrial_capacity_dockyard = 0.05
 		industrial_capacity_factory = 0.05
 
@@ -310,6 +314,8 @@ leader_traits = {
 
 	eva_braun_trait = {
 		random = no
+		sprite = 13
+
 		stability_factor = 0.1
 		war_support_factor = -0.05
 
@@ -320,8 +326,9 @@ leader_traits = {
 
 	eva_braun_trait_health = {
 		random = no
-		stability_factor = 0.1
+		sprite = 13
 
+		stability_factor = 0.1
 		experience_loss_factor = -0.1
 		power_balance_weekly = 0.03
 		weekly_casualties_war_support = 0.001
@@ -333,9 +340,9 @@ leader_traits = {
 
 	eva_braun_trait_eco = {
 		random = no
+		sprite = 13
 
 		stability_factor = 0.1
-
 		consumer_goods_factor = -0.03
 
 		ai_will_do = {
@@ -345,9 +352,9 @@ leader_traits = {
 
 	eva_braun_trait_fasicm_moment = {
 		random = no
+		sprite = 13
 
 		stability_factor = 0.1
-
         conscription = 0.02
 		conscription_factor = 0.1
 
@@ -362,7 +369,6 @@ leader_traits = {
 		max_planning_factor = -0.15
 		dig_in_speed_factor = -0.05
 		army_defence_factor = -0.05
-
 
 		ai_will_do = {
 			factor = 0
