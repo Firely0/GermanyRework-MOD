@@ -69,6 +69,7 @@
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
  GER_conquer_Kiev:0 "Canquer Kiev"
  GER_conquer_Sevastopol:0 "Canquer Sevastopol"
+ GER_end_of_operation_barbarossa:0 "End of Operation Barbarossa"
  GER_Unexpected_Winter:0 "Unexpected Soviet Winter"
 
  #Repair
@@ -707,9 +708,9 @@
  GER_hitler_is_retired:0 "Adolf Hitler is retired"
  
  #Molotov Ribbentrop
- GER_mol_rib_pact:1 "[GER.GetMolotovRibbentropName]"
- GER_mol_rib_pact_desc:1 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
- GER_mol_rib_pact_tt:1 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
+ GER_mol_rib_pact:0 "[GER.GetMolotovRibbentropName]"
+ GER_mol_rib_pact_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
+ GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
  SOV_MOLOTOV_RIBBENTROP_NAME_COMMUNIST:0 "Molotov-Ribbentrop Pact"
  SOV_MOLOTOV_RIBBENTROP_NAME_EXILES:0 "Polish Partition Pact"
 

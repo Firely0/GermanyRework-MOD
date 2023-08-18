@@ -107,11 +107,16 @@ Ger_non_vichy_state_dynamic_modifier = {
 Ger_warsaw_state_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_modifiers_conscription_exemptions_granted_x
+	icon = GFX_modifiers_modifiers_destroyed_city
 
 	resistance_garrison_penetration_chance = -0.8
 	local_non_core_manpower = -0.8
+	local_manpower = -0.8
 
+	state_production_speed_buildings_factor = -0.5
+	army_speed_factor_for_controller = -0.2
+	disable_strategic_redeployment_for_controller = 1
+	
 	local_building_slots = -5
 	local_resources_factor = -1.0
 	

@@ -1046,7 +1046,7 @@ GER_Operation_Sealion_ph_1 = {
 GER_Operation_Barbarossa_V = {
 
 	GER_conquer_Leningrad = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -1104,7 +1104,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_conquer_Misk = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_tank
 	
 		allowed = {
 			tag = GER
@@ -1161,7 +1161,7 @@ GER_Operation_Barbarossa_V = {
 	}
 	
 	GER_conquer_Moscow = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_stalinist_state
 	
 		allowed = {
 			tag = GER
@@ -1219,7 +1219,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_conquer_Kiev = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_tank
 	
 		allowed = {
 			tag = GER
@@ -1276,7 +1276,7 @@ GER_Operation_Barbarossa_V = {
 	}
 	
 	GER_conquer_Stalingrad = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_gre_faction_management
 	
 		allowed = {
 			tag = GER
@@ -1334,7 +1334,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_conquer_Sevastopol = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_tank
 	
 		allowed = {
 			tag = GER
@@ -1391,7 +1391,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_end_of_operation_barbarossa = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_generic_tank
 	
 		allowed = {
 			tag = GER
@@ -1651,6 +1651,7 @@ GER_Rhineland_demilitarized = {
 
 		visible = {
 			has_global_flag = GER_RH_N_NP
+			NOT = { has_decision = GER_Rhineland_demilitarized_c }
 		}
 
 		complete_effect = {

@@ -13431,6 +13431,7 @@ focus_tree = {
 	 id = GER_mol_rib_pact
 	 icon = GFX_goal_molotov_ribbentrop_pact
 	 prerequisite = { focus = GER_Approach_Soviet }
+	 dynamic = yes
 	 available = {
 		is_subject = no
 		has_government = fascism

@@ -311,8 +311,11 @@ on_actions = {
 							add_timed_idea = { idea = GER_barbarossa days = 180 }
 							set_variable = { GER_Operation_Barb_time = 180 }
 							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_conquer_Kiev
+							activate_mission = GER_conquer_Sevastopol
 							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
@@ -326,8 +329,11 @@ on_actions = {
 							add_timed_idea = { idea = GER_barbarossa days = 365 }
 							set_variable = { GER_Operation_Barb_time = 365 }
 							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_conquer_Kiev
+							activate_mission = GER_conquer_Sevastopol
 							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
@@ -336,8 +342,11 @@ on_actions = {
 							add_timed_idea = { idea = GER_barbarossa days = 180 }
 							set_variable = { GER_Operation_Barb_time = 180 }
 							activate_mission = GER_conquer_Leningrad
+							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
 							activate_mission = GER_conquer_Stalingrad
+							activate_mission = GER_conquer_Kiev
+							activate_mission = GER_conquer_Sevastopol
 							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}

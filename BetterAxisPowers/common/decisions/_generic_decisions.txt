@@ -1537,7 +1537,7 @@ special_projects = {
 
 	rebuild_warsaw = {
 
-		icon = GFX_decision_generic_special_project
+		icon = GFX_decision_generic_merge_plant_materiel
 
 		available = {
 			has_full_control_of_state = 10
@@ -1583,9 +1583,9 @@ special_projects = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				factor = 200
+				factor = 10
 				tag = POL
 			}
 			modifier = {
@@ -1597,7 +1597,7 @@ special_projects = {
 
 	rebuild_paris = {
 
-		icon = GFX_decision_generic_special_project
+		icon = GFX_decision_generic_merge_plant_materiel
 
 		available = {
 			has_full_control_of_state = 16
@@ -1643,9 +1643,9 @@ special_projects = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
-				factor = 200
+				factor = 10
 				tag = FRA
 			}
 			modifier = {

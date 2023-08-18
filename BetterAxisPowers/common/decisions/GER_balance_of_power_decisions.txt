@@ -388,7 +388,7 @@ GER_balance_of_power_category = {
 		ai_will_do = {
 			base = 1
 			modifier = {
-				factor = 50
+				factor = 100
 				check_variable = { var = wehrmacht_anger value = 10 compare = greater_than_or_equals }
 			}
 		}
@@ -512,9 +512,9 @@ GER_balance_of_power_category = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 1
 			modifier = {
-				factor = 50
+				factor = 100
 				check_variable = { var = SS_anger value = 20 compare = greater_than_or_equals }
 			}
 		}
