@@ -2461,7 +2461,7 @@ country_event = {
 				is_in_faction_with = GER
 				has_war_with = SOV
 			}
-			has_completed_focus = GER_FIN_granted_lands
+			has_global_flag = GER_FIN_granted_lands
 			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
 		}
 	}

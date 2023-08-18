@@ -1666,9 +1666,6 @@
 
 		bypass = {
 		}
-
-		complete_tooltip = {
-		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			navy_experience = 50
@@ -3615,12 +3612,12 @@
                  has_completed_focus = GER_rhineland_ab
 			}
 			random_state = {
-			limit = { is_owned_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+				limit = { is_owned_by = GER }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -3630,12 +3627,12 @@
                  has_completed_focus = GER_against_fuhrer
 			}
 			random_state = {
-			limit = { is_owned_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+				limit = { is_owned_by = GER }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -3645,32 +3642,25 @@
                  has_completed_focus = GER_oppose_hitler_a
 			}
 			random_state = {
-			limit = { is_owned_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+				limit = { is_owned_by = GER }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
 
 		else_if = {
-			limit = {
-			NOT = {
-				has_completed_focus = GER_rhineland_a
-				has_completed_focus = GER_oppose_hitler_a
-				has_completed_focus = GER_rhineland_ab
-			}
-			}
 			add_named_threat = { threat = 2 name = GER_rhineland }
 			random_state = {
-			limit = { is_owned_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+				limit = { is_owned_by = GER }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -3768,9 +3758,6 @@
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		complete_tooltip = {
-			custom_effect_tooltip = GER_hide_mil_tt		
 		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4013,9 +4000,6 @@
 			factor = 1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			custom_effect_tooltip = GER_gross_tt		
-		}
 		completion_reward = {
 			if = {
 				limit = {
