@@ -3293,6 +3293,12 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 
+			cancel = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+
 			on_remove = {
 				if = {
 					limit = {
@@ -3302,7 +3308,10 @@ ideas = {
 					}
 					add_ideas = GER_barbarossa
 				}
-				else = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = SOV_Keep_peace_with_GER }
+					}
 					clr_global_flag = GER_Operation_Barbarossa_running
 					set_global_flag = GER_Operation_Barbarossa_Failed
 				}

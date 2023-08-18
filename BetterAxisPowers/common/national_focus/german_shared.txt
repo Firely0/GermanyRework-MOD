@@ -4919,7 +4919,7 @@
 		prerequisite = { focus = GER_Lighting_Strike }
 		mutually_exclusive = { focus = GER_follow_wehrmacht_design }
 		allow_branch = {
-			NOT = { has_completed_focus = GER_against_fuhrer }
+			NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_against_fuhrer } }
 		}
 		x = -2
 		y = 4
@@ -5004,7 +5004,6 @@
 		icon = GFX_goal_Anti_tank
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_tiger_I }
-		#prerequisite = { focus = GER_army_innovation_2_a }
 		x = -2
 		y = 6
 		cost = 5
@@ -5223,7 +5222,7 @@
 		id = GER_King_Tiger
 		icon = GFX_focus_generic_army_tanks2
 		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Anti_Tank focus = GER_tiger_destroyer }
+		prerequisite = { focus = GER_Anti_Tank focus = GER_tiger_destroyer focus = GER_su_87 }
 		x = -3
 		y = 7
 		cost = 10
@@ -5237,62 +5236,6 @@
 		}
 
 		available_if_capitulated = yes
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_follow_fuhrer_design }
-				}
-				set_technology = { masterful_blitz_GERV = 1 popup = no }
-			}
-			create_equipment_variant = {
-				name = "King Tiger"
-				type = heavy_tank_chassis_3
-				parent_version = 0
-				allow_without_tech = yes
-				modules = {
-				main_armament_slot = tank_high_velocity_cannon_3
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_cast_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = armor_skirts
-				special_type_slot_4 = wet_ammo_storage
-				}
-				upgrades = {
-				    tank_nsb_engine_upgrade = 13
-					tank_nsb_armor_upgrade = 11
-			    }
-				icon = "GFX_GER_advanced_heavy_tank_medium"
-				model = "GER_heavy_armor_2_entity"
-			}
-		}
-	}
-
-	shared_focus = {
-		id = GER_King_Tiger_1
-		icon = GFX_focus_generic_army_tanks2
-		text = GER_King_Tiger
-		relative_position_id = GER_army_innovation_a
-		prerequisite = { focus = GER_Anti_Tank focus = GER_su_87 }
-		x = -3
-		y = 7
-		cost = 10
-		allow_branch = {
-			has_completed_focus = GER_against_fuhrer
-		}
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1943.1.1
-			has_completed_focus = GER_army_innovation_2_a
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = {
@@ -5715,7 +5658,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_King_Tiger }
 		prerequisite = { focus = GER_anti_air_tank }
-		allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_against_fuhrer } NOT = { has_completed_focus = GER_assassinate_adolf_hitler } NOT = { has_completed_focus = GER_War_Plan } }
+		allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_against_fuhrer } NOT = { has_completed_focus = GER_assassinate_adolf_hitler } NOT = { has_completed_focus = GER_Battle_Plan } }
 		x = -5
 		y = 8
 		cost = 10
@@ -5739,7 +5682,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_anti_air_tank }
 		prerequisite = { focus = GER_King_Tiger }
-		allow_branch = { has_completed_focus = GER_oppose_hitler_a NOT = { has_completed_focus = GER_the_monarchy_compromise } }
+		allow_branch = { has_completed_focus = GER_oppose_hitler_a NOT = { has_completed_focus = GER_the_monarchy_compromise } NOT = { has_completed_focus = GER_Battle_Plan } }
 		x = -5
 		y = 8
 		cost = 10
@@ -5762,7 +5705,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_anti_air_tank }
 		prerequisite = { focus = GER_King_Tiger }
-		allow_branch = { has_completed_focus = GER_the_monarchy_compromise }
+		allow_branch = { has_completed_focus = GER_the_monarchy_compromise NOT = { has_completed_focus = GER_Battle_Plan } }
 		x = -5
 		y = 8
 		cost = 10
@@ -5784,7 +5727,7 @@
 		text = GER_Glory_of_Wehrmacht
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_anti_air_tank }
-		prerequisite = { focus = GER_King_Tiger_1 }
+		prerequisite = { focus = GER_King_Tiger }
 		allow_branch = { has_completed_focus = GER_against_fuhrer NOT = { has_completed_focus = GER_follow_red_army_design } }
 		x = -5
 		y = 8
@@ -5808,6 +5751,7 @@
 		relative_position_id = GER_army_innovation_a
 		prerequisite = { focus = GER_anti_air_tank }
 		prerequisite = { focus = GER_King_Tiger_1 }
+		prerequisite = { focus = GER_King_Tiger }
 		allow_branch = { has_completed_focus = GER_against_fuhrer has_completed_focus = GER_follow_red_army_design }
 		x = -5
 		y = 8

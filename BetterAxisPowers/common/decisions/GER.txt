@@ -1046,7 +1046,7 @@ GER_Operation_Sealion_ph_1 = {
 GER_Operation_Barbarossa_V = {
 
 	GER_conquer_Leningrad = {
-		icon = GFX_decision_SOV_place_hq
+		icon = GFX_decision_gre_faction_management
 	
 		allowed = {
 			tag = GER
@@ -1219,7 +1219,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_conquer_Kiev = {
-		icon = GFX_decision_generic_tank
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -1259,7 +1259,7 @@ GER_Operation_Barbarossa_V = {
 			add_war_support = -0.025
 			add_power_balance_value = {
 				id = GER_power_balance
-				value = -0.1
+				value = -0.05
 			}
 		}
 	
@@ -1334,7 +1334,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_conquer_Sevastopol = {
-		icon = GFX_decision_generic_tank
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -1391,7 +1391,7 @@ GER_Operation_Barbarossa_V = {
 	}
 
 	GER_end_of_operation_barbarossa = {
-		icon = GFX_decision_generic_tank
+		icon = GFX_decision_generic_intelligence_operation
 	
 		allowed = {
 			tag = GER
