@@ -5251,6 +5251,10 @@ country_event = {
 	option = {
 		name = "For a better Germany!"
 
+		ai_chance = {
+			base = 100
+		}
+
 		hidden_effect = {
 			activate_mission = GER_hitler_purge_leaders
 		}

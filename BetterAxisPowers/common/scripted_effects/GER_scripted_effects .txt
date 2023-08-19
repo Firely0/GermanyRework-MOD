@@ -1546,13 +1546,17 @@ rudolf_hess_africa_front_International_Zone = {
 
 rudolf_hess_italy_annex_eth_w_puppets = {
 	ITA = {
-		any_other_country = {
+		if = {
 			limit = {
-				is_puppet_of = ETH
+				every_country = {
+					is_puppet_of = ETH
+				}
 			}
-			annex_country = {
-				target = PREV
-				transfer_troops = no
+			ITA = {
+				annex_country = {
+					target = PREV
+					transfer_troops = no
+				}
 			}
 		}
 		annex_country = {

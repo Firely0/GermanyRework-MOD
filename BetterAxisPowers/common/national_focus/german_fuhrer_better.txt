@@ -1298,10 +1298,6 @@ focus_tree = {
 						}
 					}
 				}
-				add_timed_idea = {
-					idea = wait_for_event
-					days = 3
-				}
 			}	
 			if = {
 				limit = {
@@ -1324,17 +1320,17 @@ focus_tree = {
 					}
 					country_event = ger_ultimatum.1
 				}
-				any_country = {
-					if = {
-						limit = {
+				if = {
+					limit = {
+						any_country = {
 							is_in_faction_with = POL
 							is_faction_leader = yes
 							NOT = {
 								tag = ENG
 							}
 						}
-						country_event = ger_ultimatum.1
 					}
+					PREV = { country_event = ger_ultimatum.1 }  
 				}
 				POL = {
 					if = {

@@ -44,11 +44,17 @@ health_of_adolf_category = {
 		icon = GFX_decision_generic_police_action  
 		allowed = {
 			tag = GER
-		}                              
-		available = {                  
 		}
-		activation = {                       
-	        always = no              		
+	
+		available = {
+			always = no
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
 		}
 		is_good = no                         
 		selectable_mission = no                
@@ -142,6 +148,7 @@ health_of_adolf_category = {
 eva_braun_category = {
 
 	eva_braun_work_as_health_care = {
+		icon = GFX_decision_eng_trade_unions_support
 
 		allowed = {
 			original_tag = GER
@@ -183,6 +190,7 @@ eva_braun_category = {
 	}
 
 	eva_braun_work_as_eco = {
+		icon = GFX_decision_generic_industry
 
 		allowed = {
 			original_tag = GER
@@ -224,6 +232,7 @@ eva_braun_category = {
 	}
 
 	eva_braun_asign_women_fasicm_moment = {
+		icon = GFX_decision_ger_reichskommissariats
 
 		allowed = {
 			original_tag = GER
@@ -265,6 +274,7 @@ eva_braun_category = {
 	}
 
 	eva_braun_remove_from_job = {
+		icon = GFX_decision_generic_break_treaty
 
 		allowed = {
 			original_tag = GER
