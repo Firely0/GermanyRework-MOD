@@ -63,6 +63,30 @@ on_actions = {
 		}
 	}
 
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = GER_FIN_granted_lands
+					is_in_faction_with = GER
+					any_state = {
+						has_state_flag = GER_FIN_granted_lands_state
+						OR = {
+							is_controlled_by = GER
+							controller = {
+								is_in_faction_with = GER
+								NOT = { tag = FIN }
+								NOT = { owns_state = PREV } #Not owner (it should be actually occupating the state -> Also prevents the issue in YUG with IMRO removing the core)
+								NOT = { PREV = { is_core_of = PREV } }
+							}
+						}
+					}
+				}
+				country_event = GER_FIN_lands.1
+			}
+		}
+	}
+
     on_state_control_changed = {
 		effect = {
 			if = { 

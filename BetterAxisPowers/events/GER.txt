@@ -1917,6 +1917,18 @@ country_event = {
 			factor = 100
 		}
 		name = "Good."
+
+		hidden_effect = {
+			146 = {
+				set_state_flag = GER_FIN_granted_lands_state
+			}
+			147 = {
+				set_state_flag = GER_FIN_granted_lands_state
+			}
+			722 = {
+				set_state_flag = GER_FIN_granted_lands_state
+			}
+		}
 	}
 }
 
@@ -1939,87 +1951,29 @@ country_event = {
 	title = "Request from Finland"
 	desc = "Finland Request Control of Their Pre-Winter War lands."
 	picture = GFX_report_event_finnish_soldiers_snow
-	trigger = {
-		original_tag = GER
-		has_global_flag = GER_FIN_granted_lands
-		country_exists = FIN
-		FIN = {
-			has_capitulated = NO
-			is_in_faction_with = GER
-			NOT = {
-				has_war_with = GER
-			}
-		}
-		150 = {
-			is_controlled_by = FIN
-		}
-		149 = {
-			is_controlled_by = FIN
-		}
-		148 = {
-			is_controlled_by = FIN
-		}
-		111 = {
-			is_controlled_by = FIN
-		}
-		if = {
-			limit = {
-				any_allied_country = {
-					NOT = {
-						is_subject_of = ROOT
-					}
-					OR = {
-						controls_state = 146
-						controls_state = 147
-						controls_state = 722
-					}
-				}
-			}
-		}
-	}
 	option = {
 		ai_chance = {
 			factor = 100
 		}
-		name = "Fine."
-		if = {
+		name = "Fine"
+
+		every_state = {
 			limit = {
-				NOT = {
-					has_global_flag = FIN_Granted_146
-				}
-				NOT = { 146 = { is_controlled_by = FIN } }
-				146 = { is_controlled_by_ROOT_or_ally = yes }
+				has_state_flag = GER_FIN_granted_lands_state
+				OR = {
+					is_controlled_by = GER
+					controller = {
+						is_in_faction_with = GER
+						NOT = { tag = FIN }
+					}
+				}		
 			}
 			FIN = {
-				transfer_state = 146
-			}
-			set_global_flag = FIN_Granted_146
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = FIN_Granted_147
+				transfer_state = PREV
+				hidden_effect = {
+					set_state_controller = PREV
 				}
-				NOT = { 147 = { is_controlled_by = FIN } }
-				147 = { is_controlled_by_ROOT_or_ally = yes }
 			}
-			FIN = {
-				transfer_state = 147
-			}
-			set_global_flag = FIN_Granted_147
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = FIN_Granted_722
-				}
-				NOT = { 722 = { is_controlled_by = FIN } }
-				722 = { is_controlled_by_ROOT_or_ally = yes }
-			}
-			FIN = {
-				transfer_state = 722
-			}
-			set_global_flag = FIN_Granted_722
 		}
 	}
 }
@@ -2529,7 +2483,8 @@ country_event = {
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
 
-	option = { 
+	option = {
+		name = "Fine, "
 		ai_chance = {
 			base = 40
 			modifier = {
@@ -2541,8 +2496,7 @@ country_event = {
 				factor = 60
 			}
 		}
-		name = "Fine, "
-
+		
 		GER = {
 			country_event = { id = GER_SOV_ultimatom.3 hours = 12 }
 		}
@@ -4916,7 +4870,7 @@ country_event = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "ROOT"
+					id = ROOT
 					value = 50
 				}
 			}
@@ -5230,22 +5184,25 @@ country_event = {
 		GER_adolf_personal_doctor_effect = yes
 		GER_bop_decrease_need_checkup_modifier = yes
 
-		modifier = {
-			factor = 100
-			OR = {
-				has_power_balance_modifier = {
-					id = GER_power_balance
-					modifier = GER_power_balance_need_checkup_1
-				}
-				has_power_balance_modifier = {
-					id = GER_power_balance
-					modifier = GER_power_balance_need_checkup_2
-				}
-				has_power_balance_modifier = {
-					id = GER_power_balance
-					modifier = GER_power_balance_need_checkup_3
-				}
-			}		
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 100
+				OR = {
+					has_power_balance_modifier = {
+						id = GER_power_balance
+						modifier = GER_power_balance_need_checkup_1
+					}
+					has_power_balance_modifier = {
+						id = GER_power_balance
+						modifier = GER_power_balance_need_checkup_2
+					}
+					has_power_balance_modifier = {
+						id = GER_power_balance
+						modifier = GER_power_balance_need_checkup_3
+					}
+				}		
+			}
 		}
 
 		hidden_effect = { # Adolf`s Health Getting Bad

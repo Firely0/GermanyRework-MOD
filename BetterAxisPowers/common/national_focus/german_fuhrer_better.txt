@@ -405,6 +405,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Asian_Policy
+		icon = GFX_focus_usa_focus_on_asia
+		prerequisite = { focus = GER_Axis_Powers }		
+		available = {
+			is_faction_leader = yes
+			
+		}
+		cancel_if_invalid = no
+		x = 21
+		y = 1
+		relative_position_id = GER_Axis_Powers
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
 		id = GER_japan_friend
 		text = GER_japan_friend
 		icon = GFX_focus_chi_collaboration_with_the_japanese
@@ -2493,6 +2514,7 @@ focus_tree = {
 		id = GER_war_with_britain
 		icon = GFX_focus_attack_britain
 		prerequisite = { focus = GER_anglo_german_agreemet }
+		mutually_exclusive = { focus = GER_england_ally }
 		available = { 
 			is_subject = no
 			NOT = { has_war_with = ENG }
@@ -3459,6 +3481,40 @@ focus_tree = {
 	}
 
 #Fuhrer Focus Tree
+
+	focus = {
+		id = GER_Beaten_but_not_defeated
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
+		icon = GFX_focus_generic_fascist_troops
+		available = {
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
+		}
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_completed_focus = GER_hitler_is_gone
+			}
+		}
+		cancel_if_invalid = no
+		x = 7
+		y = 3
+		relative_position_id = GER_establish_abwehr
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
 
 	focus = {
 		id = GER_for_our_honor
@@ -5167,6 +5223,49 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_for_Greater_Reich
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_redraw_borders focus = GER_the_Supreme_Commander focus = GER_the_Supreme_Commander_Kaiser focus = GER_reorganize_party focus = GER_Europe_in_flames focus = GER_Europe_in_flames_hit_gone }
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
+		available = {
+			is_subject = no
+			OR = {
+				AND = {
+					has_full_control_of_state = 195
+					has_full_control_of_state = 217
+					all_owned_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				has_completed_focus = GER_National_sprit
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = GER_Kaiser_in_Country
+			}
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 4
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_greater_german_reich
+			set_province_name = { id = 6521 name = "Germania" }
+			hidden_effect = {
+				set_global_flag = form_greater_german_reich_flag
+			}
+		}
+	}
+
+	focus = {
 		id = GER_Sign_Axis_Pact
 		icon = GFX_goal_axispact_focus
 		prerequisite = { focus = GER_for_Greater_Reich }
@@ -5381,48 +5480,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_for_Greater_Reich
-		icon = GFX_goal_presavegermany
-		prerequisite = { focus = GER_redraw_borders focus = GER_the_Supreme_Commander focus = GER_the_Supreme_Commander_Kaiser focus = GER_reorganize_party focus = GER_Europe_in_flames focus = GER_Europe_in_flames_hit_gone }
-		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
-		available = {
-			is_subject = no
-			OR = {
-				AND = {
-					has_full_control_of_state = 195
-					has_full_control_of_state = 217
-					all_owned_state = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				has_completed_focus = GER_National_sprit
-			}
-		}
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_country_flag = GER_Kaiser_in_Country
-			}
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 4
-		relative_position_id = GER_the_Supreme_Commander
-		cost = 1
-		ai_will_do = {
-			factor = 0
-		}	
-		completion_reward = {
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = GER_greater_german_reich
-			set_province_name = { id = 6521 name = "Germania" }
-			hidden_effect = {
-				set_global_flag = form_greater_german_reich_flag
-			}
-		}
-	}
+
 
 	focus = {
 		id = GER_all_roads_to_berlin
@@ -8500,26 +8558,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_Asian_Policy
-		icon = GFX_focus_usa_focus_on_asia
-		prerequisite = { focus = GER_Axis_Powers }		
-		available = {
-			is_faction_leader = yes
-			
-		}
-		cancel_if_invalid = no
-		x = 21
-		y = 1
-		relative_position_id = GER_Axis_Powers
-		cost = 3
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
+
 
 	focus = {
         id = GER_BALKAN
@@ -9370,6 +9409,50 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_against_fuhrer
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		allow_branch = {
+			has_global_flag = G
+			NOT = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
+		}
+		relative_position_id = GER_establish_abwehr
+		x = -20
+		y = 1
+		cost = 10
+		offset = {
+			x = 20
+			y = 1
+			trigger = {
+				has_completed_focus = GER_against_fuhrer
+			}
+		}
+		available = {
+			NOT = { 
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
+			has_completed_focus = GER_rhineland_demilitarized
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ernst_thalmann
+		}
+	}
+
+	focus = {
 		id = GER_request_help
 		icon = GFX_goal_anschluss
 		relative_position_id = GER_against_fuhrer
@@ -10123,51 +10206,6 @@ focus_tree = {
 			}
 		} 		
 	}
-
-	focus = {
-		id = GER_against_fuhrer
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		prerequisite = {
-			focus = GER_establish_abwehr
-		}
-		allow_branch = {
-			has_global_flag = G
-			NOT = {
-				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
-		relative_position_id = GER_establish_abwehr
-		x = -20
-		y = 1
-		cost = 10
-		offset = {
-			x = 20
-			y = 1
-			trigger = {
-				has_completed_focus = GER_against_fuhrer
-			}
-		}
-		available = {
-			NOT = { 
-				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_hitler_is_gone
-			}
-			has_completed_focus = GER_rhineland_demilitarized
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-			mark_focus_tree_layout_dirty = yes
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ernst_thalmann
-		}
-	}
-
 	focus = {
 		id = GER_assassinate_adolf_hitler
 		icon = GFX_goal_Assassination_Fuhrer
@@ -13126,40 +13164,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_Beaten_but_not_defeated
-		prerequisite = {
-			focus = GER_establish_abwehr
-		}
-		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
-		icon = GFX_focus_generic_fascist_troops
-		available = {
-			OR = {
-				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
-		offset = {
-			x = 6
-			y = 0
-			trigger = {
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
-		cancel_if_invalid = no
-		x = 7
-		y = 3
-		relative_position_id = GER_establish_abwehr
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			add_stability = 0.05
-			add_war_support = 0.05
-		}
-	}
-
 
 
 	#SOV
@@ -13535,7 +13539,29 @@ focus = {
 	}
 }
 
-focus = {
+	focus = {
+		id = GER_Local_Police_force_in_soviet
+		icon = GFX_focus_generic_self_management
+		available = {
+			has_completed_focus = GER_SS_A
+		}
+		allow_branch = { has_completed_focus = GER_ussr_war_goal }
+		prerequisite = { focus = GER_Sleep_Well_SOV }
+		x = 2
+		y = 1
+		relative_position_id = GER_Sleep_Well_SOV
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_Soviet_tt
+			show_ideas_tooltip = SS_Fake_tooltip_idea
+		}
+	}
+
+    focus = {
 		id = GER_Ukraine
 		icon = GFX_goal_ukraine_deal
 		available = {
@@ -13577,28 +13603,6 @@ focus = {
 		
 		completion_reward = {
 			unlock_decision_tooltip = GER_reichskommissariat_ostland
-		}
-	}
-
-	focus = {
-		id = GER_Local_Police_force_in_soviet
-		icon = GFX_focus_generic_self_management
-		available = {
-			has_completed_focus = GER_SS_A
-		}
-		allow_branch = { has_completed_focus = GER_ussr_war_goal }
-		prerequisite = { focus = GER_Sleep_Well_SOV }
-		x = 2
-		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_SS_Soviet_tt
-			show_ideas_tooltip = SS_Fake_tooltip_idea
 		}
 	}
 

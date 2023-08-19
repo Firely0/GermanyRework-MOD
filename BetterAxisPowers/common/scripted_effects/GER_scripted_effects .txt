@@ -1792,7 +1792,6 @@ GER_adolf_personal_doctor_effect = {
 		limit = {
 			check_variable = { theodor_morell = 3 }
 		}
-		
 		subtract_from_variable = { Adolf_Health_Year_TIME = 30 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
@@ -1800,7 +1799,6 @@ GER_adolf_personal_doctor_effect = {
 		limit = {
 			check_variable = { theodor_morell = 4 }
 		}
-		
 		subtract_from_variable = { Adolf_Health_Year_TIME = 90 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
@@ -1808,7 +1806,6 @@ GER_adolf_personal_doctor_effect = {
 		limit = {
 			check_variable = { theodor_morell = 5 }
 		}
-		
 		subtract_from_variable = { Adolf_Health_Year_TIME = 120 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 		add_country_leader_trait = GER_sick_leader
@@ -1821,15 +1818,13 @@ GER_adolf_personal_doctor_effect = {
 		limit = {
 			check_variable = { theodor_morell = 6 }
 		}
-		
 		subtract_from_variable = { Adolf_Health_Year_TIME = 81 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
-	else = {
+	else_if = {
 		limit = {
 			check_variable = { theodor_morell > 6 }
 		}
-		
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
 }
@@ -1867,11 +1862,10 @@ GER_adolf_best_doctor_effect = {
 		set_country_flag = GER_END_OF_SEARCH
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
-	else = {
+	else_if = {
 		limit = {
 			check_variable = { best_doctors > 5 }
 		}
-		
 		add_to_variable = { Adolf_Health_Year_TIME = 15 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
@@ -1922,7 +1916,7 @@ GER_adolf_rest_effect = {
 		add_to_variable = { Adolf_Health_Year_TIME = 60 }
 		activate_mission = Adolf_Hitler_Yearly_Check_ups
 	}
-	else = {
+	else_if = {
 		limit = {
 			check_variable = { adolf_hitler_rest > 5 }
 		}
