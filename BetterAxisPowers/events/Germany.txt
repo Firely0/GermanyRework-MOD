@@ -560,10 +560,12 @@ country_event = {
 				}
 			}
 		}
-		any_state = {
-			OR = {
-				has_state_flag = mr_pact_ger_reserved_state
-				has_state_flag = mr_pact_ger_reserved_state_special
+		every_state = {
+			limit = {
+				OR = {
+					has_state_flag = mr_pact_ger_reserved_state
+					has_state_flag = mr_pact_ger_reserved_state_special
+				}
 			}
 			SOV = {
 				add_state_claim = PREV

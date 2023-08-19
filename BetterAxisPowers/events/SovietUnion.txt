@@ -2137,24 +2137,28 @@ country_event = {
 			}
 		}
 		name = soviet.60.a
-		any_state = {
-			has_state_flag = mr_pact_ger_reserved_state
-			controller = {
-				OR = {
-					original_tag = SOV
-					is_subject_of = SOV
-					is_in_faction_with = SOV
+		every_state = {
+			limit = {
+				has_state_flag = mr_pact_ger_reserved_state
+				controller = {
+					OR = {
+						original_tag = SOV
+						is_subject_of = SOV
+						is_in_faction_with = SOV
+					}
 				}
 			}
 			GER = { transfer_state = PREV }
 		}
-		any_state = {
-			has_state_flag = mr_pact_ger_reserved_state_special
-			controller = {
-				OR = {
-					original_tag = SOV
-					is_subject_of = SOV
-					is_in_faction_with = SOV
+		every_state = {
+			limit = {
+				has_state_flag = mr_pact_ger_reserved_state_special
+				controller = {
+					OR = {
+						original_tag = SOV
+						is_subject_of = SOV
+						is_in_faction_with = SOV
+					}
 				}
 			}
 			GER = { transfer_state = PREV }
@@ -2187,10 +2191,12 @@ country_event = {
 			relation = non_aggression_pact
 			active = no
 		}
-		any_state = {
-			OR = {
-				has_state_flag = mr_pact_sov_reserved_state
-				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+		every_state = {
+			limit = {
+				OR = {
+					has_state_flag = mr_pact_sov_reserved_state
+					has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				}
 			}
 			GER = {
 				add_state_claim = PREV

@@ -1548,7 +1548,7 @@ rudolf_hess_italy_annex_eth_w_puppets = {
 	ITA = {
 		if = {
 			limit = {
-				every_country = {
+				any_country = {
 					is_puppet_of = ETH
 				}
 			}

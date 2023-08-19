@@ -2493,7 +2493,7 @@ country_event = {
 				factor = 100
 			}
 			modifier = {
-				surrender_progress = 0.40
+				surrender_progress > 0.40
 				factor = 60
 			}
 		}
