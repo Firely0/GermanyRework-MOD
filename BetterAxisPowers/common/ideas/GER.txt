@@ -2489,10 +2489,8 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				org_loss_when_moving = -0.1
 				breakthrough_factor = 0.1
-				coordination_bonus = 0.05
-				initiative_factor = 0.05
+				coordination_bonus = 0.1
 			}
 		}
 
@@ -3302,6 +3300,7 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
+						has_war_with = SOV
 						has_global_flag = GER_Leningrad_win
 						has_global_flag = GER_Moscow_win
 						has_global_flag = GER_Stalingrad_win
@@ -3311,6 +3310,11 @@ ideas = {
 				if = {
 					limit = {
 						NOT = { has_global_flag = SOV_Keep_peace_with_GER }
+						NOT = {
+							has_global_flag = GER_Leningrad_win
+							has_global_flag = GER_Moscow_win
+							has_global_flag = GER_Stalingrad_win
+						}						
 					}
 					clr_global_flag = GER_Operation_Barbarossa_running
 					set_global_flag = GER_Operation_Barbarossa_Failed
@@ -3326,6 +3330,12 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = fascism
+			}
+
+			cancel = {
+				NOT = {
+					has_war_with = ENG
+				}
 			}
 
 			removal_cost = -1

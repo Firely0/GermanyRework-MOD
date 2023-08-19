@@ -5240,6 +5240,23 @@ country_event = {
 
 }
 
+country_event = {
+	id = GER_health_adolf.2
+	title = "Purge of Army"
+	desc = "After the failure of the last military operation, Adolf Hitler, after a detailed presentation by the Wehrmacht and the SS, issued the new orders and changes in tasks that he considered necessary. We'll have to review some of our generals."
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "For a better Germany!"
+
+		hidden_effect = {
+			activate_mission = GER_hitler_purge_leaders
+		}
+	}
+}
+
 
 
 

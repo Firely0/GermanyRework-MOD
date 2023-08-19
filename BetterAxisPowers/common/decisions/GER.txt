@@ -41,19 +41,52 @@ health_of_adolf_category = {
 	}
 	
 	GER_hitler_purge_leaders = {
-		icon = GFX_decision_generic_police_action                  
-		allowed = { tag = GER }               
-		available = {
-			always = no                     
+		icon = GFX_decision_generic_police_action  
+		allowed = {
+			tag = GER
+		}                              
+		available = {                  
 		}
 		activation = {                       
 	        always = no              		
 		}
 		is_good = no                         
 		selectable_mission = no                
-		days_mission_timeout = 30          
+		days_mission_timeout = 3          
 		timeout_effect = {
 		    random_army_leader = {
+			    limit = {
+				    NOT = { has_trait = purged_by_hitler }
+				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+			    }
+			    add_timed_unit_leader_trait = {
+				    trait = purged_by_hitler
+				    days = 60
+			    }
+				set_unit_leader_flag = {
+					flag = recently_purged_by_hitler
+					value = 1
+					days = 180
+				}
+		    }
+			random_army_leader = {
+			    limit = {
+				    NOT = { has_trait = purged_by_hitler }
+				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+			    }
+			    add_timed_unit_leader_trait = {
+				    trait = purged_by_hitler
+				    days = 60
+			    }
+				set_unit_leader_flag = {
+					flag = recently_purged_by_hitler
+					value = 1
+					days = 180
+				}
+		    }
+			random_army_leader = {
 			    limit = {
 				    NOT = { has_trait = purged_by_hitler }
 				    NOT = { has_unit_leader_flag = recently_purged_by_hitler }
@@ -921,7 +954,7 @@ GER_Operation_Sealion_ph_1 = {
 		}
 	
 		timeout_effect = {
-			activate_mission = GER_hitler_purge_leaders
+			country_event = { id = GER_health_adolf.2 hours = 12 }
 		}
 	
 		complete_effect = {
@@ -1046,7 +1079,7 @@ GER_Operation_Sealion_ph_1 = {
 GER_Operation_Barbarossa_V = {
 
 	GER_conquer_Leningrad = {
-		icon = GFX_decision_gre_faction_management
+		icon = GFX_decision_SOV_lenin
 	
 		allowed = {
 			tag = GER
@@ -1161,7 +1194,7 @@ GER_Operation_Barbarossa_V = {
 	}
 	
 	GER_conquer_Moscow = {
-		icon = GFX_decision_SOV_stalinist_state
+		icon = GFX_decision_SOV_moscow
 	
 		allowed = {
 			tag = GER
@@ -1276,7 +1309,7 @@ GER_Operation_Barbarossa_V = {
 	}
 	
 	GER_conquer_Stalingrad = {
-		icon = GFX_decision_gre_faction_management
+		icon = GFX_decision_SOV_stalin
 	
 		allowed = {
 			tag = GER
@@ -1398,7 +1431,14 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		available = {
-			NOT = { has_global_flag = GER_Operation_Barbarossa_running }
+			NOT = { 
+				has_active_mission = GER_conquer_Moscow
+				has_active_mission = GER_conquer_Stalingrad
+				has_active_mission = GER_conquer_Leningrad
+				has_active_mission = GER_conquer_Misk
+				has_active_mission = GER_conquer_Kiev 
+				has_active_mission = GER_conquer_Sevastopol
+		    }
 		}
 	
 		activation = {
@@ -1418,7 +1458,7 @@ GER_Operation_Barbarossa_V = {
 		}
 	
 		timeout_effect = { 
-			activate_mission = GER_hitler_purge_leaders
+			country_event = { id = GER_health_adolf.2 hours = 12 }
 		}
 	
 		complete_effect = {

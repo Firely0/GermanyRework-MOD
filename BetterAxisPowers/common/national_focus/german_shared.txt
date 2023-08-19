@@ -3786,7 +3786,7 @@
 			}
 		}
 
-		if = {
+		else_if = {
 			limit = {
                  has_completed_focus = GER_against_fuhrer
 			}
@@ -3801,7 +3801,7 @@
 			}
 		}
 
-		if = {
+		else_if = {
 			limit = {
                  has_completed_focus = GER_oppose_hitler_a
 			}
@@ -3815,8 +3815,8 @@
 				}
 			}
 		}
-
-		else_if = {
+		
+		else = {
 			add_named_threat = { threat = 2 name = GER_rhineland }
 			random_state = {
 				limit = { is_owned_by = GER }
