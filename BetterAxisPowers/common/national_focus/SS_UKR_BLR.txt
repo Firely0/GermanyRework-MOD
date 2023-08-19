@@ -870,6 +870,22 @@
 	}
 
 	shared_focus = {
+		id = SS_Army_Research_Department
+		icon = GFX_focus_prc_infiltration
+		relative_position_id = SS_Rebuild_Army
+		x = 4
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	shared_focus = {
 		id = SS_Inf_Effort_Main
 		icon = GFX_goal_generic_axis_build_infantry
 		text = army_effort
@@ -1014,22 +1030,6 @@
 				uses = 2
 				category = land_doctrine
 			}
-		}
-	}
-
-	shared_focus = {
-		id = SS_Army_Research_Department
-		icon = GFX_focus_prc_infiltration
-		relative_position_id = SS_Rebuild_Army
-		x = 4
-		y = 0
-		cost = 10
-		ai_will_do = {
-			factor = 12
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 

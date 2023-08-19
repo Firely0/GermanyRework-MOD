@@ -405,6 +405,52 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Axis_Powers
+		icon = GFX_goal_the_Axis
+		prerequisite = { focus = GER_establish_abwehr }
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
+		available = {
+			NOT = { has_global_flag = GER_civil_war }
+			is_puppet = no
+			has_government = fascism
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
+		}
+		cancel_if_invalid = no
+		x = 92
+		y = 1
+		relative_position_id = GER_establish_abwehr
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}	
+		offset = {
+			x = -15
+			y = 0
+			trigger = {
+				has_completed_focus = GER_hitler_is_gone
+			}
+		}
+		offset = {
+			x = -22
+			y = 0
+			trigger = {
+				has_completed_focus = GER_Fuhrer
+			}
+		}
+		completion_reward = {
+		ROOT = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "The Axis"
+		}	
+		}
+	}
+
+	focus = {
 		id = GER_Asian_Policy
 		icon = GFX_focus_usa_focus_on_asia
 		prerequisite = { focus = GER_Axis_Powers }		
@@ -2772,6 +2818,7 @@ focus_tree = {
 		icon = GFX_goal_Ger_Eng
 		prerequisite = { focus = GER_uk_trade_agreements }
 		mutually_exclusive = { focus = GER_war_with_britain }
+		mutually_exclusive = { focus = GER_soviet_ally }
 		available = {
 			always = no
 			NOT = { has_war_with = ENG }
@@ -5046,6 +5093,86 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_the_Supreme_Commander
+		prerequisite = { focus = GER_Total_War focus = GER_underground_factories }
+		icon = GFX_goal_supremefuhrer
+		available = {
+			date > 1943.01.01
+			has_country_leader = {
+				character = GER_adolf_hitler
+				ruling_only = yes
+			}
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		relative_position_id = GER_the_peoples_car
+		cost = 5
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			add_field_marshal_role = {
+				character = GER_SUPREM_adolf_hitler
+				traits= { politically_connected  offensive_doctrine old_guard }
+				skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=2
+			}
+			GER_SUPREM_adolf_hitler = {
+				set_unit_leader_flag = {
+					flag = GER_NOT_PURGE
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_for_Greater_Reich
+		icon = GFX_goal_presavegermany
+		prerequisite = { focus = GER_redraw_borders focus = GER_the_Supreme_Commander focus = GER_the_Supreme_Commander_Kaiser focus = GER_reorganize_party focus = GER_Europe_in_flames focus = GER_Europe_in_flames_hit_gone }
+		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
+		available = {
+			is_subject = no
+			OR = {
+				AND = {
+					has_full_control_of_state = 195
+					has_full_control_of_state = 217
+					all_owned_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				has_completed_focus = GER_National_sprit
+			}
+		}
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_country_flag = GER_Kaiser_in_Country
+			}
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 4
+		relative_position_id = GER_the_Supreme_Commander
+		cost = 1
+		ai_will_do = {
+			factor = 0
+		}	
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_greater_german_reich
+			set_province_name = { id = 6521 name = "Germania" }
+			hidden_effect = {
+				set_global_flag = form_greater_german_reich_flag
+			}
+		}
+	}
+
+	focus = {
 		id = GER_No_More_Eagles
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_for_Greater_Reich }
@@ -5218,49 +5345,6 @@ focus_tree = {
 			add_timed_idea = {
 				idea = GER_Total_War_Idea
 				days = 730
-			}
-		}
-	}
-
-	focus = {
-		id = GER_for_Greater_Reich
-		icon = GFX_goal_presavegermany
-		prerequisite = { focus = GER_redraw_borders focus = GER_the_Supreme_Commander focus = GER_the_Supreme_Commander_Kaiser focus = GER_reorganize_party focus = GER_Europe_in_flames focus = GER_Europe_in_flames_hit_gone }
-		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
-		available = {
-			is_subject = no
-			OR = {
-				AND = {
-					has_full_control_of_state = 195
-					has_full_control_of_state = 217
-					all_owned_state = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				has_completed_focus = GER_National_sprit
-			}
-		}
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_country_flag = GER_Kaiser_in_Country
-			}
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 4
-		relative_position_id = GER_the_Supreme_Commander
-		cost = 1
-		ai_will_do = {
-			factor = 0
-		}	
-		completion_reward = {
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = GER_greater_german_reich
-			set_province_name = { id = 6521 name = "Germania" }
-			hidden_effect = {
-				set_global_flag = form_greater_german_reich_flag
 			}
 		}
 	}
@@ -5662,51 +5746,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_Axis_Powers
-		icon = GFX_goal_the_Axis
-		prerequisite = { focus = GER_establish_abwehr }
-		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
-		available = {
-			NOT = { has_global_flag = GER_civil_war }
-			is_puppet = no
-			has_government = fascism
-			OR = {
-				has_completed_focus = GER_Fuhrer
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
-		cancel_if_invalid = no
-		x = 92
-		y = 1
-		relative_position_id = GER_establish_abwehr
-		cost = 3
-		ai_will_do = {
-			factor = 10
-		}	
-		offset = {
-			x = -15
-			y = 0
-			trigger = {
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
-		offset = {
-			x = -22
-			y = 0
-			trigger = {
-				has_completed_focus = GER_Fuhrer
-			}
-		}
-		completion_reward = {
-		ROOT = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = "The Axis"
-		}	
-		}
-	}
+
 
 	focus = {
 		id = GER_Middle_east_diplomacy
@@ -12870,43 +12910,6 @@ focus_tree = {
 				}
 			}
 			add_offsite_building = { type = arms_factory level = 4 }
-		}
-	}
-
-	focus = {
-		id = GER_the_Supreme_Commander
-		prerequisite = { focus = GER_Total_War focus = GER_underground_factories }
-		icon = GFX_goal_supremefuhrer
-		available = {
-			date > 1943.01.01
-			has_country_leader = {
-				character = GER_adolf_hitler
-				ruling_only = yes
-			}
-		}
-		cancel_if_invalid = no
-		x = 0
-		y = 2
-		relative_position_id = GER_the_peoples_car
-		cost = 5
-		ai_will_do = {
-			factor = 0
-		}	
-		completion_reward = {
-			add_field_marshal_role = {
-				character = GER_SUPREM_adolf_hitler
-				traits= { politically_connected  offensive_doctrine old_guard }
-				skill=3
-				attack_skill=4
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=2
-			}
-			GER_SUPREM_adolf_hitler = {
-				set_unit_leader_flag = {
-					flag = GER_NOT_PURGE
-				}
-			}
 		}
 	}
 
