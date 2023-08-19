@@ -1479,7 +1479,7 @@ GER_Operation_Barbarossa_V = {
 GER_Rhineland_demilitarized = {
 
 	GER_Rhineland_demilitarized_a = {
-		icon = GFX_decision_infiltrate_state
+		icon = GFX_decision_ger_troops_march
 	
 		allowed = {
 			tag = GER
@@ -1529,7 +1529,7 @@ GER_Rhineland_demilitarized = {
 	}
 
 	GER_Rhineland_demilitarized_b = {
-		icon = GFX_decision_infiltrate_state
+		icon = GFX_decision_ger_troops_march
 	
 		allowed = {
 			tag = GER
@@ -1576,7 +1576,7 @@ GER_Rhineland_demilitarized = {
 	}
 
 	GER_Rhineland_demilitarized_e = {
-		icon = GFX_decision_infiltrate_state
+		icon = GFX_decision_ger_troops_march
 	
 		allowed = {
 			tag = GER
@@ -1622,94 +1622,8 @@ GER_Rhineland_demilitarized = {
 		}
 	}
 
-	GER_Rhineland_demilitarized_c = {
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			42 = { is_demilitarized_zone = yes }
-			51 = { is_demilitarized_zone = yes }
-			909 = { is_demilitarized_zone = yes }
-		}
-
-		cost = 35
-		priority = 80
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 10000
-				has_idea = hjalmar_schacht
-			}
-		}
-
-		visible = {
-			has_global_flag = GER_RH_N_NP
-		}
-
-		complete_effect = {
-            set_global_flag = rhineland_remilitarized
-            custom_effect_tooltip = GER_rhineland_ultimatum
-			if = {
-				limit = { FRA = { is_subject = no } }
-				FRA = {
-					country_event = { id = GER_rhineland.1 }
-					custom_effect_tooltip = may_provoke_hostility
-				}
-			}
-			hidden_effect = {
-				add_days_mission_timeout = {
-					mission = GER_Rhineland_demilitarized_e
-					days = 30
-				}
-				add_days_mission_timeout = {
-					mission = GER_Rhineland_demilitarized_a
-					days = 30
-				}
-				add_days_mission_timeout = {
-					mission = GER_Rhineland_demilitarized_b
-					days = 30
-				}
-			}
-		}
-	}
-
-	GER_Rhineland_demilitarized_back = {
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			42 = { is_demilitarized_zone = yes }
-			51 = { is_demilitarized_zone = yes }
-			909 = { is_demilitarized_zone = yes }
-		}
-
-		cost = 10
-		priority = 75
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		visible = {
-			has_global_flag = GER_RH_N_NP
-			NOT = { has_decision = GER_Rhineland_demilitarized_c }
-		}
-
-		complete_effect = {
-			complete_national_focus = GER_rhineland_demilitarized
-		}
-	}
-
 	GER_Rhineland_demilitarized_d = {
+		icon = GFX_decision_eng_blackshirt_march
 
 		allowed = {
 			original_tag = GER
@@ -1747,6 +1661,95 @@ GER_Rhineland_demilitarized = {
 					custom_effect_tooltip = may_provoke_hostility
 				}
 			}
+		}
+	}
+
+	GER_Rhineland_demilitarized_c = {
+		icon = GFX_decision_SWI_consolidate_council_power
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 35
+		priority = 80
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 10000
+				has_idea = hjalmar_schacht
+			}
+		}
+
+		visible = {
+			has_global_flag = GER_RH_N_NP
+		}
+
+		complete_effect = {
+            set_global_flag = rhineland_remilitarized
+			set_country_flag = GER_SELECTED_DESC
+            custom_effect_tooltip = GER_rhineland_ultimatum
+			if = {
+				limit = { FRA = { is_subject = no } }
+				FRA = {
+					country_event = { id = GER_rhineland.1 }
+					custom_effect_tooltip = may_provoke_hostility
+				}
+			}
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_e
+					days = 30
+				}
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_a
+					days = 30
+				}
+				add_days_mission_timeout = {
+					mission = GER_Rhineland_demilitarized_b
+					days = 30
+				}
+			}
+		}
+	}
+
+	GER_Rhineland_demilitarized_back = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			42 = { is_demilitarized_zone = yes }
+			51 = { is_demilitarized_zone = yes }
+			909 = { is_demilitarized_zone = yes }
+		}
+
+		cost = 10
+		priority = 75
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = { has_country_flag = GER_SELECTED_DESC } #TEMP FIX
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_rhineland_demilitarized
 		}
 	}
 

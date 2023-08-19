@@ -1646,7 +1646,7 @@ GER_wants_synth = {
 	}
 	enable = {
 		has_government = fascism
-		date > 1937.10.20
+		has_idea = focus_on_liquidation
 		has_war = no
 	}
 	abort_when_not_enabled = yes
