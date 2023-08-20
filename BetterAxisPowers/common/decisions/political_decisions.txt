@@ -1728,6 +1728,7 @@ political_actions = {
 
         available = {
             GER = { NOT = { has_government = ROOT } }
+			GER = { NOT = { has_completed_focus = GER_Call_Albert } }
         }
 
         modifier = {

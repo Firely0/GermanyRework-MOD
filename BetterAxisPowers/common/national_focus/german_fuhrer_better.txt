@@ -12537,7 +12537,7 @@ focus_tree = {
 		available = {
 		}
 		cancel_if_invalid = no
-		x = 2
+		x = 3
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -12571,7 +12571,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Call_Albert
-		icon = GFX_focus_generic_treaty
+		icon = GFX_goal_recall_albert
 		prerequisite = { focus = GER_the_King_of_People }
 		relative_position_id = GER_Kaiser
 		available = {
@@ -12583,14 +12583,35 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}	
-		completion_reward = {	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = GER_United_People
+		icon = GFX_goal_GermanPeoplenon
+		prerequisite = { focus = GER_the_King_of_People }
+		relative_position_id = GER_Kaiser
+		available = {
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.1	
 		}
 	}
 
 	focus = {
 		id = GER_the_Supreme_Commander_Kaiser
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = GER_Call_Albert }
+		icon = GFX_goal_supreme_commander_wilhelm
+		prerequisite = { focus = GER_Call_Albert focus = GER_United_People }
 		relative_position_id = GER_Kaiser
 		available = {
 		}
