@@ -1,5 +1,4 @@
 on_actions = {
-
 	on_startup = {
 		effect = {
 			GER = {
@@ -12,7 +11,6 @@ on_actions = {
 			}
 		}
 	}
-
 	on_startup = {
 		effect = {
 			GER = {
@@ -38,17 +36,18 @@ on_actions = {
 			}
 		}
 	}
-
 	on_join_faction = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = DONT_ABUSE_ITA_FACTION }
+					NOT = {
+						has_global_flag = DONT_ABUSE_ITA_FACTION
+					}
 					original_tag = ITA
 					has_government = fascism
 					ITA = {
 						has_war_with = ETH
-						is_ai = yes 
+						is_ai = yes
 					}
 					ETH = {
 						has_war_with = ITA
@@ -62,7 +61,6 @@ on_actions = {
 			}
 		}
 	}
-
 	on_weekly = {
 		effect = {
 			if = {
@@ -75,9 +73,17 @@ on_actions = {
 							is_controlled_by = GER
 							controller = {
 								is_in_faction_with = GER
-								NOT = { tag = FIN }
-								NOT = { owns_state = PREV } #Not owner (it should be actually occupating the state -> Also prevents the issue in YUG with IMRO removing the core)
-								NOT = { PREV = { is_core_of = PREV } }
+								NOT = {
+									tag = FIN
+								}
+								NOT = {
+									owns_state = PREV
+								}
+								NOT = {
+									PREV = {
+										is_core_of = PREV
+									}
+								}
 							}
 						}
 					}
@@ -86,15 +92,16 @@ on_actions = {
 			}
 		}
 	}
-
-    on_state_control_changed = {
+	on_state_control_changed = {
 		effect = {
-			if = { 
+			if = {
 				limit = {
 					FROM = {
 						original_tag = GER
 						has_war = yes
-						has_power_balance = { id = GER_power_balance }
+						has_power_balance = {
+							id = GER_power_balance
+						}
 						is_power_balance_side_active = {
 							id = GER_power_balance
 							side = default_left_side
@@ -104,7 +111,7 @@ on_actions = {
 						is_owned_by = GER
 					}
 				}
-				if = { 
+				if = {
 					limit = {
 						FROM.FROM = {
 							is_core_of = GER
@@ -112,26 +119,36 @@ on_actions = {
 					}
 					if = {
 						limit = {
-							FROM = { check_variable = { GER_lost_core = 0 } }
+							FROM = {
+								check_variable = {
+									GER_lost_core = 0
+								}
+							}
 						}
 						FROM = {
-							set_variable = { GER_lost_core = FROM.FROM }
-							country_event = { id = ger_lost_core.1 hours = 1 }
+							set_variable = {
+								GER_lost_core = FROM.FROM
+							}
+							country_event = {
+								id = ger_lost_core.1
+								hours = 1
+							}
 						}
 					}
-					else = { 
+					else = {
 						GER_bop_medium_decrease_effect = yes
 						GER_bop_increase_lost_core_modifier = yes
 					}
-					
 				}
 			}
-			else_if = { 
+			else_if = {
 				limit = {
 					ROOT = {
 						original_tag = GER
 						has_war = yes
-						has_power_balance = { id = GER_power_balance }
+						has_power_balance = {
+							id = GER_power_balance
+						}
 						is_power_balance_side_active = {
 							id = GER_power_balance
 							side = default_right_side
@@ -147,13 +164,19 @@ on_actions = {
 							is_core_of = GER
 						}
 					}
-					if = { 
+					if = {
 						limit = {
-							check_variable = { GER_reclaimed_core = 0 }
+							check_variable = {
+								GER_reclaimed_core = 0
+							}
 						}
-						
-						set_variable = { GER_reclaimed_core = FROM.FROM }
-						country_event = { id = ger_lost_core.2 hours = 1 }
+						set_variable = {
+							GER_reclaimed_core = FROM.FROM
+						}
+						country_event = {
+							id = ger_lost_core.2
+							hours = 1
+						}
 					}
 					else = {
 						GER_bop_medium_increase_effect = yes
@@ -165,8 +188,7 @@ on_actions = {
 				}
 			}
 		}
-    }
-
+	}
 	on_capitulation = {
 		effect = {
 			if = {
@@ -178,13 +200,15 @@ on_actions = {
 					}
 				}
 				GER = {
-					country_event = { id = ger_kaiser_in_exile.7 hours = 3 }  
+					country_event = {
+						id = ger_kaiser_in_exile.7
+						hours = 3
+					}
 					clr_global_flag = GER_BLOCKED_KAISER
 				}
 			}
 		}
 	}
-
 	on_annex = {
 		effect = {
 			if = {
@@ -196,13 +220,15 @@ on_actions = {
 					}
 				}
 				GER = {
-					country_event = { id = ger_kaiser_in_exile.7 hours = 3 } 
+					country_event = {
+						id = ger_kaiser_in_exile.7
+						hours = 3
+					}
 					clr_global_flag = GER_BLOCKED_KAISER
 				}
 			}
 		}
 	}
-
 	on_puppet = {
 		effect = {
 			if = {
@@ -214,19 +240,23 @@ on_actions = {
 					}
 				}
 				GER = {
-					country_event = { id = ger_kaiser_in_exile.7 hours = 3 }  
+					country_event = {
+						id = ger_kaiser_in_exile.7
+						hours = 3
+					}
 					clr_global_flag = GER_BLOCKED_KAISER
 				}
 			}
 		}
 	}
-
 	on_capitulation = {
 		effect = {
 			if = {
 				limit = {
 					tag = POL
-					NOT = { has_global_flag = GER_CAP_POL }
+					NOT = {
+						has_global_flag = GER_CAP_POL
+					}
 					GER = {
 						has_completed_focus = GER_danzig_or_war
 						has_war_with = POL
@@ -237,61 +267,75 @@ on_actions = {
 					}
 				}
 				GER = {
-					country_event = { id = ger_around_maginot_event.1 hours = 6 } 
+					country_event = {
+						id = ger_around_maginot_event.1
+						hours = 6
+					}
 					set_global_flag = GER_CAP_POL
 				}
 			}
 		}
 	}
-
 	on_puppet = {
 		effect = {
 			if = {
 				limit = {
 					tag = POL
-					NOT = { has_global_flag = GER_CAP_POL }
+					NOT = {
+						has_global_flag = GER_CAP_POL
+					}
 					GER = {
 						has_completed_focus = GER_danzig_or_war
 						has_war_with = POL
 					}
 				}
 				GER = {
-					country_event = { id = ger_around_maginot_event.1 hours = 6 } 
+					country_event = {
+						id = ger_around_maginot_event.1
+						hours = 6
+					}
 					set_global_flag = GER_CAP_POL
 				}
 			}
 		}
 	}
-
 	on_annex = {
 		effect = {
 			if = {
 				limit = {
 					tag = POL
-					NOT = { has_global_flag = GER_CAP_POL }
+					NOT = {
+						has_global_flag = GER_CAP_POL
+					}
 					GER = {
 						has_completed_focus = GER_danzig_or_war
 						has_war_with = POL
 					}
 				}
 				GER = {
-					country_event = { id = ger_around_maginot_event.1 hours = 6 } 
+					country_event = {
+						id = ger_around_maginot_event.1
+						hours = 6
+					}
 					set_global_flag = GER_CAP_POL
 				}
 			}
 		}
-	}	
-	
+	}
 	on_declare_war = {
 		effect = {
 			if = {
-				limit = { has_country_flag = WTT_support_from_soviet }
+				limit = {
+					has_country_flag = WTT_support_from_soviet
+				}
 				PRC_soviet_tribute_clear_all = yes
 				clr_country_flag = WTT_support_from_soviet
 			}
 			FROM = {
 				if = {
-					limit = { has_country_flag = WTT_support_from_soviet }
+					limit = {
+						has_country_flag = WTT_support_from_soviet
+					}
 					PRC_soviet_tribute_clear_all = yes
 					clr_country_flag = WTT_support_from_soviet
 				}
@@ -301,22 +345,28 @@ on_actions = {
 					OR = {
 						AND = {
 							tag = GER
-							FROM = { tag = SOV }
+							FROM = {
+								tag = SOV
+							}
 						}
 						AND = {
 							tag = SOV
-							FROM = { tag = GER }
+							FROM = {
+								tag = GER
+							}
 						}
 					}
-					GER = { has_completed_focus = GER_ussr_war_goal }
+					GER = {
+						has_completed_focus = GER_ussr_war_goal
+					}
 				}
 				hidden_effect = {
 					set_global_flag = GER_Operation_Barbarossa_running
 					complete_national_focus = GER_Attack_SOV
 					every_state = {
-						limit = { 
+						limit = {
 							is_owned_and_controlled_by = SOV
-						} 
+						}
 						set_state_flag = GER_Claim_lands
 					}
 					every_country = {
@@ -331,9 +381,14 @@ on_actions = {
 								has_completed_focus = GER_tank_warfare
 							}
 						}
-						GER = { 
-							add_timed_idea = { idea = GER_barbarossa days = 180 }
-							set_variable = { GER_Operation_Barb_time = 180 }
+						GER = {
+							add_timed_idea = {
+								idea = GER_barbarossa
+								days = 180
+							}
+							set_variable = {
+								GER_Operation_Barb_time = 180
+							}
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
@@ -349,9 +404,14 @@ on_actions = {
 								has_completed_focus = GER_Battle_Plan
 							}
 						}
-						GER = { 
-							add_timed_idea = { idea = GER_barbarossa days = 365 }
-							set_variable = { GER_Operation_Barb_time = 365 }
+						GER = {
+							add_timed_idea = {
+								idea = GER_barbarossa
+								days = 365
+							}
+							set_variable = {
+								GER_Operation_Barb_time = 365
+							}
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
@@ -362,9 +422,14 @@ on_actions = {
 						}
 					}
 					else = {
-						GER = { 
-							add_timed_idea = { idea = GER_barbarossa days = 180 }
-							set_variable = { GER_Operation_Barb_time = 180 }
+						GER = {
+							add_timed_idea = {
+								idea = GER_barbarossa
+								days = 180
+							}
+							set_variable = {
+								GER_Operation_Barb_time = 180
+							}
 							activate_mission = GER_conquer_Leningrad
 							activate_mission = GER_conquer_Misk
 							activate_mission = GER_conquer_Moscow
@@ -378,17 +443,20 @@ on_actions = {
 			}
 		}
 	}
-
 	on_declare_war = {
 		effect = {
 			if = {
-				limit = { has_country_flag = WTT_support_from_soviet }
+				limit = {
+					has_country_flag = WTT_support_from_soviet
+				}
 				PRC_soviet_tribute_clear_all = yes
 				clr_country_flag = WTT_support_from_soviet
 			}
 			FROM = {
 				if = {
-					limit = { has_country_flag = WTT_support_from_soviet }
+					limit = {
+						has_country_flag = WTT_support_from_soviet
+					}
 					PRC_soviet_tribute_clear_all = yes
 					clr_country_flag = WTT_support_from_soviet
 				}
@@ -398,14 +466,20 @@ on_actions = {
 					OR = {
 						AND = {
 							tag = GER
-							FROM = { tag = SOV }
+							FROM = {
+								tag = SOV
+							}
 						}
 						AND = {
 							tag = SOV
-							FROM = { tag = GER }
+							FROM = {
+								tag = GER
+							}
 						}
 					}
-					GER = { has_completed_focus = GER_strike_union }
+					GER = {
+						has_completed_focus = GER_strike_union
+					}
 				}
 				hidden_effect = {
 					add_ideas = {
@@ -415,7 +489,6 @@ on_actions = {
 			}
 		}
 	}
-			
 	on_civil_war_end_before_annexation = {
 		effect = {
 			if = {
@@ -428,7 +501,9 @@ on_actions = {
 						original_tag = GER
 						has_government = fascism
 					}
-					transfer_navy = { target = GER }
+					transfer_navy = {
+						target = GER
+					}
 					every_unit_leader = {
 						limit = {
 							OR = {
@@ -444,7 +519,6 @@ on_actions = {
 			}
 		}
 	}
-
 	on_civil_war_end = {
 		effect = {
 			if = {
@@ -458,19 +532,27 @@ on_actions = {
 				}
 				set_global_flag = GER_civil_war_end
 				clr_global_flag = GER_civil_war
-				set_global_flag = { flag = civil_war_olympics value = 1 days = 30 }
-				country_event = { id = GER_civil_war_end_com.1 days = 1 }
+				set_global_flag = {
+					flag = civil_war_olympics
+					value = 1
+					days = 30
+				}
+				country_event = {
+					id = GER_civil_war_end_com.1
+					days = 1
+				}
 			}
-		}	
+		}
 	}
-
 	on_declare_war = {
 		effect = {
 			if = {
 				limit = {
 					tag = GER
 					has_global_flag = GER_nohelp_denmark
-					FROM = { tag = DEN }
+					FROM = {
+						tag = DEN
+					}
 				}
 				DEN = {
 					add_timed_idea = {
@@ -481,13 +563,15 @@ on_actions = {
 			}
 		}
 	}
-
 	on_declare_war = {
 		effect = {
 			if = {
 				limit = {
 					tag = GER
-					FROM = { tag = ENG }
+					FROM = {
+						tag = ENG
+					}
+					has_completed_focus = GER_BetterFuhrer
 				}
 				GER = {
 					complete_national_focus = GER_war_with_britain
@@ -495,13 +579,30 @@ on_actions = {
 			}
 		}
 	}
-
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					FROM = {
+						tag = ENG
+					}
+					has_completed_focus = GER_BetterFuhrer
+				}
+				GER = {
+					complete_national_focus = GER_war_with_britain
+				}
+			}
+		}
+	}
 	on_declare_war = {
 		effect = {
 			if = {
 				limit = {
 					tag = GER
-					FROM = { tag = ENG }
+					FROM = {
+						tag = ENG
+					}
 					has_completed_focus = GER_operation_sealion
 					has_idea = Operation_Sea_Lion
 				}
@@ -513,18 +614,18 @@ on_actions = {
 			}
 		}
 	}
-
 	on_declare_war = {
 		effect = {
 			if = {
 				limit = {
 					tag = GER
 					has_completed_focus = GER_strike_union
-					FROM = { tag = SOV }
+					FROM = {
+						tag = SOV
+					}
 				}
 				add_ideas = GER_strike_union
 			}
 		}
 	}
-
 }

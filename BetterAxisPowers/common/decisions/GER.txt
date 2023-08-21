@@ -1636,7 +1636,7 @@ GER_Rhineland_demilitarized = {
 		}
 
 		cost = 35
-		priority = 70
+		priority = 80
 
 		fire_only_once = yes
 
@@ -1696,7 +1696,7 @@ GER_Rhineland_demilitarized = {
 
 		complete_effect = {
             set_global_flag = rhineland_remilitarized
-			set_country_flag = GER_SELECTED_DESC
+			set_country_flag = GER_RHINELAND_SIDE_REMI
             custom_effect_tooltip = GER_rhineland_ultimatum
 			if = {
 				limit = { FRA = { is_subject = no } }
@@ -1745,7 +1745,8 @@ GER_Rhineland_demilitarized = {
 		}
 
 		visible = {
-			NOT = { has_country_flag = GER_SELECTED_DESC } #TEMP FIX
+			has_active_mission = GER_Rhineland_demilitarized_b
+			NOT = { has_country_flag = GER_RHINELAND_SIDE_REMIL }
 		}
 
 		complete_effect = {

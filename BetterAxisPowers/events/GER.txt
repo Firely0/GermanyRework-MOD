@@ -512,6 +512,8 @@ country_event = {
 		GER = {
 			transfer_state = 69
 			add_state_core = 69
+			transfer_state = 74
+			add_state_core = 74
 		}
 	}
 }
@@ -530,6 +532,8 @@ country_event = {
 		GER = {
 			transfer_state = 69
 			add_state_core = 69
+			transfer_state = 74
+			add_state_core = 74
 		}
 		add_to_faction = CZE
 		CZE = {
@@ -4309,7 +4313,7 @@ country_event = {
 country_event = {
 	id = GER_rudolf_hess.1
 	title = "Negotiate Peace?"
-	desc = "Rudolf Hess, who flew alone from France to England, stated that he was going to negotiate peace in England and successfully reached the location despite being unauthorized to do so. He stated that he was waiting for official authorization to negotiate the terms of peace."
+	desc = GER_rudolf_hess.1.d
 	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
@@ -4556,7 +4560,11 @@ country_event = {
 			}
 			if = {
 				limit = {
-					Always = yes
+					has_war_with = ENG
+					ITA = {
+						is_in_faction_with = GER
+						has_war_with = ENG
+					}
 				}
 				rudolf_hess_africa_front_ITA = yes
 			}
@@ -4781,6 +4789,18 @@ country_event = {
 					annex_country = {
 						target = FRA
 						transfer_troops = yes
+					}
+					set_rule = {
+						can_join_factions = yes
+					}
+					set_capital = {
+						state = 16
+						remember_old_capital = no
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = GER
+						value = 50
 					}
 				}
 				clr_global_flag = GER_allow_france_comp

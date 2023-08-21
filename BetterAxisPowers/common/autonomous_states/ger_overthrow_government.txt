@@ -43,17 +43,12 @@ autonomy_state = {
 	}
 
 	allowed = {
-		NOT = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
+		always = no
 	}
 
 	can_take_level = {
+		has_war = no
 		NOT = {
-			has_war = yes 
 			OR = {
 				has_government = fascism
 				has_government = neutrality

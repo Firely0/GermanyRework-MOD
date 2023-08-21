@@ -3076,3 +3076,23 @@ SOV_keep_peace_with_Germany = {
 		value = 200
 	}
 }
+
+ENG_keep_peace_with_Germany = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_global_flag = GER_WORLD_WAR_II_WIN
+	}
+	abort = {
+		OR ={
+			GER = { has_war_with = ENG }
+		}
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "GER"
+		value = 10
+	}
+}

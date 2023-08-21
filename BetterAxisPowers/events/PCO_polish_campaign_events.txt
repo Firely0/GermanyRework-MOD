@@ -7417,6 +7417,7 @@ country_event = { #SOV is not interested in Lithuania
 				transfer_state = 93
 				transfer_state = 91
 				transfer_state = 89
+				transfer_state = 784
 				
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -7880,6 +7881,16 @@ country_event = { #SOV leaves us the territories we conquered
 					transfer_state = 89
 				}
 			}
+			if = {
+				limit = {
+					SOV = {
+						controls_state = 784
+					}
+				}
+				SOV = {
+					transfer_state = 784
+				}
+			}
 			SOV = {
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -7999,6 +8010,7 @@ country_event = {
 				transfer_state = 93
 				transfer_state = 91
 				transfer_state = 89
+				transfer_state = 784
 				
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -8205,6 +8217,7 @@ country_event = { #GER ask us to hand them over their territories
 				transfer_state = 93
 				transfer_state = 91
 				transfer_state = 89
+				transfer_state = 784
 				
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
