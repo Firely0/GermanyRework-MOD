@@ -18,7 +18,6 @@ German_historical = {
 				}	
 			}
 			has_country_flag = GER_AI_RANDOM_FASCIST
-			NOT = { has_global_flag = Adolf_killed }
 			has_game_rule = {
 				rule = GER_ai_behavior
 				option = FASCIST
@@ -27,6 +26,7 @@ German_historical = {
 	}
 	abort = {
 		OR = {
+			has_global_flag = Adolf_killed
 			SWE = {
 				has_government = communism #prio 1, crush Sweden
 			}
@@ -80,12 +80,12 @@ German_historical = {
 		GER_Europe_in_flames
 
 		GER_four_year_plan_a
-        GER_autarky_a
-		GER_Hide_Arms_Industrialization
-		GER_establish_abwehr
-		GER_Interve_Civilwars
 		GER_grosraumwirtschaft_a
 		GER_Civlian_Mobilization
+		GER_establish_abwehr
+		GER_Interve_Civilwars
+		GER_Hide_Arms_Industrialization
+		GER_autarky_a
 		GER_hermann_goring_werke_a
 		GER_kdf_wagen_a
 		GER_extra_tech_slot_a
