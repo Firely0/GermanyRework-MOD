@@ -1759,7 +1759,7 @@ GER_Rhineland_demilitarized = {
 GER_expand_support = {
 
 	GER_conquer_hamburg = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -1797,17 +1797,9 @@ GER_expand_support = {
 		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
-			add_popularity = {
-				ideology = communism 
-				popularity = -0.1
-			}
 		}
 	
 		complete_effect = { 
-			add_popularity = {
-				ideology = communism 
-				popularity = 0.1
-			}
 			add_war_support = 0.1
 			add_stability = 0.1
 			random_country = {
@@ -1825,7 +1817,7 @@ GER_expand_support = {
 	}
 
 	GER_conquer_berlin = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_ger_berlin
 	
 		allowed = {
 			tag = GER
@@ -1860,20 +1852,12 @@ GER_expand_support = {
 		cancel_effect = {
 		}
 	
-		timeout_effect = { 
+		timeout_effect = {
 			add_stability = -0.05
 			add_war_support = -0.05
-			add_popularity = {
-				ideology = communism 
-				popularity = -0.1
-			}
 		}
 	
 		complete_effect = { 
-			add_popularity = {
-				ideology = communism 
-				popularity = 0.1
-			}
 			add_war_support = 0.1
 			add_stability = 0.1
 			random_country = {
@@ -1891,7 +1875,7 @@ GER_expand_support = {
 	}
 
 	GER_conquer_munich = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -1929,10 +1913,6 @@ GER_expand_support = {
 		timeout_effect = { 
 			add_stability = -0.05
 			add_war_support = -0.05
-			add_popularity = {
-				ideology = communism 
-				popularity = -0.1
-			}
 		}
 	
 		complete_effect = { 

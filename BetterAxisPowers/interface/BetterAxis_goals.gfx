@@ -6,6 +6,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_goal_shadowofpast"
+		texturefile = "gfx/interface/goals/shadowofpast.dds"	
+	}
+
+	spriteType = {
 		name = "GFX_goal_GER_second_vienna_award"
 		texturefile = "gfx/interface/goals/GER_second_vienna_award.dds"	
 	}
@@ -444,6 +449,11 @@ spriteTypes = {
 		name = "GFX_goal_Ger_Sov_Flag"
 		texturefile = "gfx/interface/goals/Ger_Sov_Flag.dds"			
 	} 
+
+	SpriteType = {
+		name = "GFX_goal_gernonflag"
+		texturefile = "gfx/interface/goals/gernonflag.dds"			
+	}
 
 	SpriteType = {
 		name = "GFX_goal_gercomflag"

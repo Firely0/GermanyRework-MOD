@@ -1077,6 +1077,21 @@ on_actions = {
 				set_global_flag = { flag = civil_war_olympics value = 1 days = 30 }
 				country_event = { id = wtt_germany.18 days = 1 }
 			}
+			#End of German Civil War / Fascism Wins
+			if = {
+				limit = {
+					FROM = {
+						original_tag = GER
+						has_government = neutrality
+					}
+					original_tag = GER
+					has_government = fascism
+				}
+				country_event = {
+					id = GER_civil_war_end_fascm.1
+					days = 1
+				}
+			}
 			#End of US civil war
 			if = {
 				limit = {

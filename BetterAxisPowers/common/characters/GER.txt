@@ -32,8 +32,8 @@ characters={
 		}
 	}
 
-	GER_Com_Civilwar={
-		name=GER_Com_Civilwar
+	GER_Com_Civilwar ={
+		name= GER_Com_Civilwar
 		portraits={
 			civilian={
 				large=GFX_portrait_Comsidecivilwar
@@ -41,8 +41,8 @@ characters={
 		}
 	}
 
-	GER_Non_Civilwar={
-		name=GER_Non_Civilwar
+	GER_Non_Civilwar ={
+		name= GER_Non_Civilwar
 		portraits={
 			civilian={
 				large=GFX_portrait_Nonsidecivilwar
@@ -84,7 +84,7 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_ger_wilhelm_ii"
-			}	
+			}
 		}
 	}
 
@@ -93,13 +93,13 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_ger_wilhelm_iii"
-			}	
+			}
 		}
 	}
 
-	GER_victoria={ #Empty Vicky3 
+	GER_victoria={ #Empty Vicky3
 		name=GER_victoria
-		gender = female 
+		gender = female
 		portraits={
 			civilian={
 				large="GFX_portrait_ger_victoria_louise"
@@ -139,7 +139,7 @@ characters={
 				factor = 1.500
 			}
 		}
-		
+
 		field_marshal={
 			traits={ old_guard urban_assault_specialist defensive_doctrine }
 			skill=3
@@ -226,7 +226,7 @@ characters={
 				factor = 8.000
 			}
 		}
-		
+
 		corps_commander={
 			traits={ trait_reckless armor_officer war_hero trickster }
 			skill=4
@@ -258,7 +258,7 @@ characters={
 				mobile_warfare_expert
 			}
 		}
-		
+
 		corps_commander={
 			traits={ brilliant_strategist armor_officer trickster trait_engineer }
 			skill=4
@@ -293,7 +293,7 @@ characters={
 				has_completed_focus = GER_tank_warfare
 			}
 		}
-		
+
 		corps_commander={
 			traits={ brilliant_strategist career_officer armor_officer trickster panzer_leader }
 			skill=4
@@ -480,7 +480,7 @@ characters={
 				factor = 1.000
 			}
 		}
-		
+
 		corps_commander={
 			traits={ trait_reckless commando }
 			skill=4
@@ -686,7 +686,7 @@ characters={
 				factor = 1.000
 			}
 		}
-		
+
 		corps_commander={
 			traits={ brilliant_strategist trait_cautious war_hero }
 			skill=4
@@ -776,7 +776,7 @@ characters={
 			}
 			traits = { naval_theorist }
 		}
-		
+
 		navy_leader={
 			traits = { navy_career_officer superior_tactician bold cuts_corners }
 			skill = 4
@@ -798,7 +798,7 @@ characters={
 				small="GFX_idea_Conrad_Albrecht"
 			}
 		}
-		
+
 		navy_leader={
 			traits = { navy_career_officer superior_tactician bold cuts_corners }
 			skill = 2
@@ -820,7 +820,7 @@ characters={
 				small="GFX_idea_Rolf_Carls"
 			}
 		}
-		
+
 		navy_leader={
 			traits = { navy_career_officer battleship_adherent naval_lineage }
 			skill = 2
@@ -842,7 +842,7 @@ characters={
 				small="GFX_idea_Otto_Kretschmer"
 			}
 		}
-		
+
 		navy_leader={
 			traits = { seawolf bold media_personality }
 			skill = 3
@@ -864,7 +864,7 @@ characters={
 				small="GFX_idea_Theodore_Krancke"
 			}
 		}
-		
+
 		navy_leader={
 			traits = { spotter cruiser_captain }
 			skill = 3
@@ -886,7 +886,7 @@ characters={
 				small="GFX_idea_Herbert_Schultze"
 			}
 		}
-		
+
 		navy_leader={
 			traits = { seawolf }
 			skill = 2
@@ -922,7 +922,7 @@ characters={
 				factor = 0.100
 			}
 		}
-		
+
 		navy_leader={
 			traits={ navy_career_officer seawolf }
 			skill=5
@@ -959,7 +959,7 @@ characters={
 				factor = 0.100
 			}
 		}
-		
+
 		navy_leader={
 			traits={ battleship_adherent naval_lineage }
 			skill=4
@@ -994,7 +994,7 @@ characters={
 				submarine_specialist
 			}
 		}
-		
+
 		navy_leader={
 			traits={ old_guard_navy bold }
 			skill=4
@@ -1070,7 +1070,7 @@ characters={
 				factor = 1.000
 			}
 		}
-		
+
 		navy_leader={
 			traits={ gentlemanly navy_career_officer superior_tactician }
 			skill=3
@@ -1087,7 +1087,7 @@ characters={
 		portraits = {
 			army = {
 				large="GFX_portrait_chi_alexander_von_falkenhausen"
-				small="GFX_idea_CHI_alexander_von_falkenhausen" 
+				small="GFX_idea_CHI_alexander_von_falkenhausen"
 			}
 		}
 		corps_commander = {
@@ -1265,13 +1265,13 @@ characters={
 			}
 			available = {
 				OR = {
-				 has_government = fascism
-				 custom_trigger_tooltip = {
-					tooltip = GER_Kaiser_in_Country_tt
-					has_country_flag = GER_Kaiser_in_Country
-				 }
-				 has_country_flag = GER_Fuhrer_in_Country
-			    }
+					has_government = fascism
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+					has_country_flag = GER_Fuhrer_in_Country
+				}
 			}
 			traits = {
 				army_chief_drill_2
@@ -1280,7 +1280,7 @@ characters={
 			ai_will_do = {
 				factor = 0.000
 			}
-		}		
+		}
 	}
 
 	GER_franz_halder={
@@ -1313,7 +1313,7 @@ characters={
 				small="GFX_idea_walther_von_brauchitsch"
 			}
 		}
-		advisor={	
+		advisor={
 			slot = army_chief
 			idea_token = walther_von_brauchitsch
 			allowed = {
@@ -1550,7 +1550,7 @@ characters={
 			}
 		}
 	}
-	
+
 	GER_viktor_schutze={
 		name=GER_viktor_schutze
 		portraits={
@@ -1574,7 +1574,7 @@ characters={
 			}
 		}
 	}
-	
+
 
 	### POLITICAL ADVISORS ###
 
@@ -1584,7 +1584,7 @@ characters={
 			army={
 				small="GFX_idea_todt"
 			}
-			
+
 		}
 		advisor={
 			slot = political_advisor
@@ -1593,10 +1593,10 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_west_wall 
+				has_completed_focus = GER_west_wall
 			}
 			traits = {
-				fortification_engineer 
+				fortification_engineer
 			}
 			ai_will_do = {
 				factor = 0.500
@@ -1604,7 +1604,7 @@ characters={
 		}
 	}
 
-	GER_albert_speer={ 
+	GER_albert_speer={
 		name=GER_albert_speer
 		portraits={
 			army={
@@ -1623,7 +1623,7 @@ characters={
 			traits = {
 				armaments_organizer2
 			}
-		}	
+		}
 	}
 
 	GER_eva_braun ={
@@ -1652,7 +1652,7 @@ characters={
 			on_add = {
 				custom_effect_tooltip = GER_asign_eva_braun
 			}
-		}	
+		}
 	}
 
 	GER_hjalmar_schacht={
@@ -1676,12 +1676,12 @@ characters={
 				}
 			}
 			traits = {
-				captain_of_industry 
+				captain_of_industry
 			}
 			ai_will_do = {
 				factor = 1000
 			}
-		}		
+		}
 	}
 
 	GER_walther_funk={
@@ -1698,12 +1698,12 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				war_industrialist 
+				war_industrialist
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
-		}		
+		}
 	}
 
 	GER_ernst_thalmann={
@@ -1731,11 +1731,11 @@ characters={
 				has_completed_focus = GER_against_fuhrer
 			}
 			traits = {
-				communist_revolutionary 
+				communist_revolutionary
 			}
 			do_effect = {
 				not = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
@@ -1770,21 +1770,21 @@ characters={
 					limit = {
 						has_dlc = "Waking the Tiger"
 					}
-					has_completed_focus = GER_reestablish_free_elections 
+					has_completed_focus = GER_against_fuhrer
 				}
 			}
 			traits = {
-				democratic_reformer 
+				democratic_reformer
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic 
+					has_government = democratic
 				}
 			}
 			ai_will_do = {
 				factor = 0.000
 			}
-		}		
+		}
 	}
 
 	GER_joseph_goebbels={
@@ -1813,11 +1813,11 @@ characters={
 				}
 			}
 			traits = {
-				fascist_demagogue propaganda_expert 
+				fascist_demagogue propaganda_expert
 			}
 			do_effect = {
 				NOT = {
-					has_government = fascism 
+					has_government = fascism
 				}
 			}
 			ai_will_do = {
@@ -1844,8 +1844,8 @@ characters={
 					has_country_flag = flight_of_hess
 				}
 				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_government = fascism
+					has_country_flag = GER_reinstated_nazi_leadership
 					custom_trigger_tooltip = {
 						tooltip = GER_Kaiser_in_Country_tt
 						has_country_flag = GER_Kaiser_in_Country
@@ -1884,12 +1884,12 @@ characters={
 					has_country_flag = GER_HIMMLER_RETIRED
 				}
 				OR = {
-					has_government = fascism 
+					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
 			}
 			traits = {
-				prince_of_terror 
+				prince_of_terror
 			}
 		}
 	}
@@ -1909,12 +1909,8 @@ characters={
 			}
 			available = {
 				OR = {
-					has_government = fascism 
+					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					} 
 					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
@@ -1922,9 +1918,9 @@ characters={
 				factor = 50
 			}
 			traits = {
-				silent_workhorse 
+				silent_workhorse
 			}
-		}		
+		}
 	}
 
 	GER_joachim_von_ribbentrop={
@@ -1942,8 +1938,8 @@ characters={
 			}
 			available = {
 				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_government = fascism
+					has_country_flag = GER_reinstated_nazi_leadership
 					custom_trigger_tooltip = {
 						tooltip = GER_Kaiser_in_Country_tt
 						has_country_flag = GER_Kaiser_in_Country
@@ -1952,7 +1948,7 @@ characters={
 				}
 			}
 			traits = {
-				backroom_backstabber 
+				backroom_backstabber
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -1974,7 +1970,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				smooth_talking_charmer 
+				smooth_talking_charmer
 			}
 		}
 	}
@@ -1994,10 +1990,10 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_oppose_hitler_a
+				has_completed_focus = GER_the_German_Republic
 			}
 			traits = {
-				anti_fascist_agent 
+				anti_fascist_agent
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -2021,23 +2017,22 @@ characters={
 			}
 			available = {
 				OR = {
-				  has_completed_focus = GER_revive_the_kaiserreich 
-				  custom_trigger_tooltip = {
-					tooltip = GER_Kaiser_in_Country_tt
-					has_country_flag = GER_Kaiser_in_Country
-				  }
-				  has_country_flag = GER_Fuhrer_in_Country
-			    }
+					has_completed_focus = GER_against_fuhrer
+					custom_trigger_tooltip = {
+						tooltip = GER_Kaiser_in_Country_tt
+						has_country_flag = GER_Kaiser_in_Country
+					}
+				}
 			}
 			traits = {
-				monarchist_media_mogul 
+				monarchist_media_mogul
 			}
 			ai_will_do = {
 				factor = 0.000
 			}
 		}
 	}
-	
+
 	GER_carl_friedrich_goerdeler={
 		name=GER_carl_friedrich_goerdeler
 		portraits={
@@ -2054,23 +2049,22 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = GER_revive_the_kaiserreich 
+					has_completed_focus = GER_revive_the_kaiserreich
 					custom_trigger_tooltip = {
 						tooltip = GER_Kaiser_in_Country_tt
 						has_country_flag = GER_Kaiser_in_Country
 					}
-					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
 			traits = {
-				economist 
+				economist
 			}
 			ai_will_do = {
 				factor = 0.000
 			}
-		}		
+		}
 	}
-	
+
 	GER_julius_leber={
 		name=GER_julius_leber
 		portraits={
@@ -2086,17 +2080,17 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_reestablish_free_elections 
+				has_completed_focus = GER_reestablish_free_elections
 			}
 			traits = {
-				connected_citizen 
+				connected_citizen
 			}
 			ai_will_do = {
 				factor = 0.000
 			}
 		}
 	}
-	
+
 	GER_theodor_heuss={
 		name=GER_theodor_heuss
 		portraits={
@@ -2112,10 +2106,10 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-				has_completed_focus = GER_reestablish_free_elections 
+				has_completed_focus = GER_reestablish_free_elections
 			}
 			traits = {
-				liberal_journalist 
+				liberal_journalist
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -2134,16 +2128,16 @@ characters={
 			slot = political_advisor
 			idea_token = ger_wilhelm_canaris
 			available = {
-				has_intelligence_agency = yes 
+				has_intelligence_agency = yes
 			}
 			allowed = {
 				original_tag = GER
 				has_dlc = "La Resistance"
 			}
 			traits = {
-				head_of_intelligence 
+				head_of_intelligence
 			}
-		}		
+		}
 	}
 
 	GER_ernst_busch={
@@ -2164,7 +2158,7 @@ characters={
 			legacy_id=811
 		}
 	}
-	
+
 	GER_friedrich_dollmann={
 		name="Friedrich Dollmann"
 		portraits={
@@ -2183,7 +2177,7 @@ characters={
 			legacy_id=812
 		}
 	}
-	
+
 	GER_nikolaus_von_falkenhorst={
 		name="Nikolaus von Falkenhorst"
 		portraits={
@@ -2202,7 +2196,7 @@ characters={
 			legacy_id=813
 		}
 	}
-	
+
 	GER_walter_von_reichenau={
 		name="Walter von Reichenau"
 		portraits={
@@ -2221,7 +2215,7 @@ characters={
 			legacy_id=814
 		}
 	}
-	
+
 	GER_adolf_strauss={
 		name="Adolf Strauss"
 		portraits={
@@ -2240,7 +2234,7 @@ characters={
 			legacy_id=815
 		}
 	}
-	
+
 	GER_Carl_Stulpnagel={
 		name="Carl Stulpnagel"
 		portraits={
@@ -2259,7 +2253,7 @@ characters={
 			legacy_id=816
 		}
 	}
-	
+
 	GER_Eberhard_von_Mackensen={
 		name="Eberhard von Mackensen"
 		portraits={
@@ -2278,7 +2272,7 @@ characters={
 			legacy_id=817
 		}
 	}
-	
+
 	GER_Erich_Hoepner={
 		name="Erich Hoepner"
 		portraits={
@@ -2297,7 +2291,7 @@ characters={
 			legacy_id=818
 		}
 	}
-	
+
 	GER_Georg_Lindemann={
 		name="Georg Lindemann"
 		portraits={
@@ -2316,7 +2310,7 @@ characters={
 			legacy_id=819
 		}
 	}
-	
+
 	GER_Rudolf_Schmidt={
 		name="Rudolf Schmidt"
 		portraits={
@@ -2335,7 +2329,7 @@ characters={
 			legacy_id=820
 		}
 	}
-	
+
 	GER_Walter_Kuntze={
 		name="Walter Kuntze"
 		portraits={
@@ -2373,7 +2367,7 @@ characters={
 			legacy_id=822
 		}
 	}
-	
+
 	GER_gustave_von_zangen={
 		name="Gustav von Zangen"
 		portraits={
@@ -2392,7 +2386,7 @@ characters={
 			legacy_id=823
 		}
 	}
-	
+
 	GER_traugott_herr={
 		name="Traugott Herr"
 		portraits={

@@ -1,6 +1,6 @@
 German_historical = {
-	name = "German historical plan"
-	desc = "Essentially historical behaviour for Germany"
+	name = "German Adolf Hitler is Death"
+	desc = ""
 
 	allowed = {
 		original_tag = GER
@@ -18,7 +18,7 @@ German_historical = {
 				}	
 			}
 			has_country_flag = GER_AI_RANDOM_FASCIST
-			NOT = { has_global_flag = Adolf_killed }
+			has_global_flag = Adolf_killed
 			has_game_rule = {
 				rule = GER_ai_behavior
 				option = FASCIST
@@ -64,6 +64,28 @@ German_historical = {
 	}
 
 	ai_national_focuses = {
+		#Death of Adolf Hitler Tree Mixed Ver.
+		GER_purge_party
+		GER_take_advantage_of_Turmoil
+		GER_reorganize_party
+
+		GER_we_must_not_fall
+		GER_blackout_tactics
+		GER_no_time_for_warrules
+		GER_Loyal_to_Cause
+		GER_for_germany
+		GER_Emergency_Orders_himmler
+		GER_Emergency_Orders_goring
+		GER_Case_North_a
+		GER_Case_North
+		GER_Case_Western
+		GER_Case_Western_a
+		GER_refuse_surrender
+		GER_End_Handicraft_Production
+		GER_New_Rejime
+		GER_Case_Black
+		GER_expand_local_resources
+		GER_militarism_him
 		# grab as fast as you can if available
 		GER_Total_War
 		GER_Panther

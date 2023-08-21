@@ -33,8 +33,7 @@ country_event = {
 				set_war_support = 0.8
 				load_oob = "GER_German_Civil_War_fascist"
 			}
-			hidden_effect = { news_event = { id = wtt_news.1 hours = 6 } }
-			
+			hidden_effect = { news_event = { id = wtt_news.1 hours = 6 } }			
 			add_popularity = {
 				ideology = communism
 				popularity = 0.2
@@ -717,7 +716,7 @@ country_event = {
 		name = wtt_germany.18.a
 		add_stability = 0.05
 		add_popularity = { ideology = fascism popularity = -0.05 }
-		delete_unit_template_and_units = { division_template = "Landsturmregiment" }
+		delete_unit_template_and_units = { division_template = "Irregulare Truppe" }
 		if = { 
 			limit = { is_faction_leader = yes } 
 			leave_faction = yes

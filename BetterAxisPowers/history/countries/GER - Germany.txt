@@ -1,5 +1,15 @@
 ﻿capital = 64
 
+set_cosmetic_tag = GER_the_third_reich
+#AI Tweaks
+if = {
+	limit = {
+		is_ai = yes
+	}
+	set_technology = { mobile_warfare = 1 popup = no }
+	add_ideas = i_dont_use_wargoal
+}
+
 # Adolf, you just need to rest.
 set_variable = { adolf_hitler_rest = 1 }
 set_variable = { adolf_hitler_rest_bad = 1 }
@@ -8,7 +18,7 @@ set_variable = { best_doctors = 1 }
 set_variable = { Adolf_Health_Year_TIME = 365 }
 
 #Rhineland Timeout
-set_variable = { ger_rhi_timeout = 140 }
+set_variable = { ger_rhi_timeout = 160 }
 
 #Sea Lion Time
 set_variable = { GER_sealion_ph1_time = 120 }
@@ -17,6 +27,11 @@ set_variable = { GER_sealion_ph2_time = 120 }
 #Training Programs
 activate_mission = GER_SOV_TRAINING 
 activate_mission = GER_ITA_TRAINING
+
+#Rhineland Starts
+activate_mission = GER_Rhineland_demilitarized_a
+activate_mission = GER_Rhineland_demilitarized_b
+activate_mission = GER_Rhineland_demilitarized_e 
 
 add_opinion_modifier = {
     target = SOV
