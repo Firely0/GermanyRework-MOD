@@ -761,7 +761,7 @@ GER_training_program = {
 GER_Operation_Sealion_ph_2 = {
 
 	GER_conquer_Birmigham = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -818,7 +818,7 @@ GER_Operation_Sealion_ph_2 = {
 	}
 
 	GER_conquer_Landon = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_london
 	
 		allowed = {
 			tag = GER
@@ -875,7 +875,7 @@ GER_Operation_Sealion_ph_2 = {
 	}
 
 	GER_conquer_Liverpool = {
-		icon = GFX_decision_generic_operation
+		icon = GFX_decision_SOV_place_hq
 	
 		allowed = {
 			tag = GER
@@ -930,6 +930,46 @@ GER_Operation_Sealion_ph_2 = {
 			complete_national_focus = GER_battle_of_liverpool
 		}
 	}
+
+	GER_end_of_operation_sea_lion = {
+		icon = GFX_decision_generic_intelligence_operation
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			NOT = { 
+				has_active_mission = GER_conquer_Liverpool
+				has_active_mission = GER_conquer_Landon
+				has_active_mission = GER_conquer_Birmigham
+		    }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		visible = {
+			has_global_flag = GER_Operation_Sealion_ph2_running
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			country_event = { id = GER_health_adolf.2 hours = 12 }
+		}
+	
+		complete_effect = {
+		}
+	}
 }
 
 GER_Operation_Sealion_ph_1 = {
@@ -975,6 +1015,7 @@ GER_Operation_Sealion_ph_1 = {
 				activate_mission = GER_conquer_Birmigham
 				activate_mission = GER_conquer_Landon
 				activate_mission = GER_conquer_Liverpool
+				activate_mission = GER_end_of_operation_sea_lion
 			}
 		}
 	}
