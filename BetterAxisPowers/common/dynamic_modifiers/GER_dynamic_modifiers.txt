@@ -47,6 +47,47 @@ Germany_state_dynamic_modifier = {
 	
 }
 
+NO_SUPPLY_STATE = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_low_supply
+
+	unit_upkeep_attrition_factor = 0.1
+}
+
+LOW_SUPPLY_STATE = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_supply
+
+	unit_upkeep_attrition_factor = -0.1
+	army_fuel_consumption_factor = -0.05
+	supply_consumption_factor = -0.05
+	supply_factor = 0.0025
+}
+
+NORMAL_SUPPLY_STATE = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_supply
+
+	unit_upkeep_attrition_factor = -0.1
+	army_fuel_consumption_factor = -0.1
+	supply_consumption_factor = -0.1
+	supply_factor = 0.05
+}
+
+EXTRA_SUPPLY_STATE = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_supply
+
+	unit_upkeep_attrition_factor = -0.2
+	army_fuel_consumption_factor = -0.15
+	supply_consumption_factor = -0.15
+	supply_factor = 0.05
+}
+
 Krupp_PH1_modifier = {
 	enable = { always = yes }
 

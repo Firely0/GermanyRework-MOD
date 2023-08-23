@@ -1,14 +1,6 @@
 ﻿capital = 64
 
 set_cosmetic_tag = GER_the_third_reich
-#AI Tweaks
-if = {
-	limit = {
-		is_ai = yes
-	}
-	set_technology = { mobile_warfare = 1 popup = no }
-	add_ideas = i_dont_use_wargoal
-}
 
 # Adolf, you just need to rest.
 set_variable = { adolf_hitler_rest = 1 }
@@ -25,18 +17,18 @@ set_variable = { GER_sealion_ph1_time = 120 }
 set_variable = { GER_sealion_ph2_time = 120 }
 
 #Training Programs
-activate_mission = GER_SOV_TRAINING 
+activate_mission = GER_SOV_TRAINING
 activate_mission = GER_ITA_TRAINING
 
 #Rhineland Starts
 activate_mission = GER_Rhineland_demilitarized_a
 activate_mission = GER_Rhineland_demilitarized_b
-activate_mission = GER_Rhineland_demilitarized_e 
+activate_mission = GER_Rhineland_demilitarized_e
 
 add_opinion_modifier = {
-    target = SOV
-    modifier = gertrainingprogram
-} 
+	target = SOV
+	modifier = gertrainingprogram
+}
 
 SOV = {
 	add_opinion_modifier = {
@@ -46,8 +38,8 @@ SOV = {
 }
 
 add_opinion_modifier = {
-    target = ITA
-    modifier = gertrainingprogram
+	target = ITA
+	modifier = gertrainingprogram
 }
 
 ITA = {
@@ -60,8 +52,8 @@ ITA = {
 #Old Friend Sweden.
 
 add_opinion_modifier = {
-    target = SWE
-    modifier = oldtradeparterns
+	target = SWE
+	modifier = oldtradeparterns
 }
 
 SWE = {
@@ -69,11 +61,11 @@ SWE = {
 		target = GER
 		modifier = oldtradeparterns
 	}
-} 
+}
 
 add_opinion_modifier = {
-    target = SWE
-    modifier = oldtradeparterns
+	target = SWE
+	modifier = oldtradeparterns
 }
 
 SWE = {
@@ -83,9 +75,9 @@ SWE = {
 	}
 }
 
-#You Want Total War? 
+#You Want Total War?
 set_country_flag = GER_BLOCKED_TOTAL_WAR
- # Yeah but maybe later
+# Yeah but maybe later
 
 #Wehrmacht
 set_variable = {
@@ -160,20 +152,20 @@ if = {
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "GER_1936_air_bba"
-		set_technology = {
-			aa_lmg = 1
-			aa_cannon_1 = 1
-			engines_1 = 1
-			engines_2 = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			iw_small_airframe = 1
-			basic_small_airframe = 1
-			iw_medium_airframe = 1
-			basic_medium_airframe = 1
-			iw_large_airframe = 1
-		}
+	set_air_oob = "GER_1936_air_bba"
+	set_technology = {
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_medium_airframe = 1
+		iw_large_airframe = 1
+	}
 	else = {
 		set_air_oob = "GER_1936_air_legacy"
 		set_technology = {
@@ -198,7 +190,7 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
@@ -300,14 +292,14 @@ set_variable = { var = ss_anger value = 0 }
 
 set_research_slots = 4
 set_convoys = 200
-set_stability = 0.75 
+set_stability = 0.75
 set_war_support = 0.3
 
 #Trade
 create_import = {
-		resource = tungsten
-		factories = 1
-		exporter = SWE
+	resource = tungsten
+	factories = 1
+	exporter = SWE
 }
 
 1939.1.1 = {
@@ -316,7 +308,7 @@ create_import = {
 
 	add_political_power = 1197
 	add_command_power = 100
-	
+
 	#adding ministers
 	add_ideas = {
 		henschel
@@ -331,12 +323,12 @@ create_import = {
 		war_economy
 		extensive_conscription
 	}
-	
+
 	set_autonomy = {
 		target = SLO
 		autonomous_state = autonomy_puppet
 	}
-	
+
 	give_military_access = SLO
 	create_wargoal = {
 		type = take_state_focus
@@ -344,18 +336,18 @@ create_import = {
 		generator = { 72 88 90 87 86 } # Zaolzie Krakow Kielce Lodz Poznan
 	}
 
-    #Trade
+	#Trade
 	create_import = {
-			resource = oil
-			factories = 2
-			exporter = SOV
+		resource = oil
+		factories = 2
+		exporter = SOV
 	}
 
 	#MR pact effect, Also has a part scripted in soviet history file
 	unlock_national_focus = GER_mol_rib_pact
 	every_other_country = {
 		limit = {
-			has_government = fascism 
+			has_government = fascism
 		}
 		add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
 	}
@@ -375,7 +367,7 @@ create_import = {
 		add_opinion_modifier = { target = GER modifier = sov_ger_treaty_trade }
 	}
 	#Soviet treaty end
-	
+
 	unlock_national_focus = GER_rhineland
 	unlock_national_focus = GER_anschluss
 	unlock_national_focus = GER_demand_sudetenland
@@ -388,7 +380,7 @@ create_import = {
 
 	set_global_flag = end_of_czechoslovakia
 	set_global_flag = olympics_1936
-	
+
 	complete_national_focus = GER_autobahn
 	complete_national_focus = GER_west_wall
 	complete_national_focus = GER_army_innovation
@@ -398,7 +390,7 @@ create_import = {
 	complete_national_focus = GER_extra_tech_slot
 
 	#BUILDINGS
-	
+
 
 	set_technology = {
 		interwar_artillery = 1
@@ -408,7 +400,7 @@ create_import = {
 		support_weapons = 1
 		support_weapons2 = 1
 		paratroopers = 1
-		
+
 
 		#doctrines
 		delay = 1
@@ -420,7 +412,7 @@ create_import = {
 		unrestricted_submarine_warfare = 1
 		raider_patrols = 1
 		#air
-		formation_flying = 1		
+		formation_flying = 1
 		dive_bombing = 1
 		direct_ground_support = 1
 
@@ -458,18 +450,18 @@ create_import = {
 			}
 		}
 		set_technology = {
-			basic_medium_tank = 1 
+			basic_medium_tank = 1
 		}
 		set_oob = "GER_1939"
 	}
 	if = {
 		limit = {
-			
+
 			has_dlc = "No Step Back"
-			
+
 		}
 		set_technology = {
-			basic_medium_tank_chassis = 1 
+			basic_medium_tank_chassis = 1
 		}
 		set_oob = "GER_1939_nsb"
 	}
@@ -505,7 +497,7 @@ create_import = {
 	}
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "GER_1939_air_bba"
+		set_air_oob = "GER_1939_air_bba"
 		else = {
 			set_air_oob = "GER_1939_air_legacy"
 			set_technology = {
@@ -809,7 +801,7 @@ if = {
 		name_group = GER_CA_HISTORICAL
 		parent_version = 0
 		modules = {
-        	fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_battery_slot = ship_heavy_battery_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
@@ -817,7 +809,7 @@ if = {
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			rear_1_custom_slot = ship_torpedo_1
 			mid_1_custom_slot = ship_airplane_launcher_1
-    	}
+		}
 	}
 	create_equipment_variant = {
 		name = "Type 24 Class"
@@ -1036,7 +1028,7 @@ if = {
 		}
 		obsolete = yes
 	}
-	
+
 	create_equipment_variant = {
 		name = "Do 17"
 		type = tac_bomber_equipment_0
@@ -1103,7 +1095,7 @@ if = {
 		}
 		icon = "GFX_GER_tactical_bomber1_medium"
 	}
-	
+
 	create_equipment_variant = {
 		name = "Do 17"
 		type = small_plane_cas_airframe_0
@@ -1341,7 +1333,7 @@ if = {
 				tank_nsb_engine_upgrade = 3
 				tank_nsb_armor_upgrade = 3
 			}
-			
+
 			icon = "GFX_CZE_basic_main_tank"
 		}
 	}
@@ -1352,7 +1344,7 @@ if = {
 			type = fighter_equipment_1
 			upgrades = {
 				plane_gun_upgrade = 1
-				plane_range_upgrade = 1  
+				plane_range_upgrade = 1
 				plane_engine_upgrade = 0
 				plane_reliability_upgrade = 2
 			}
@@ -1362,7 +1354,7 @@ if = {
 			type = fighter_equipment_1
 			upgrades = {
 				plane_gun_upgrade = 2
-				plane_range_upgrade = 1  
+				plane_range_upgrade = 1
 				plane_engine_upgrade = 2
 				plane_reliability_upgrade = 4
 			}

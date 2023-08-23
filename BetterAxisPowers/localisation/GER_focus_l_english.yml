@@ -42,6 +42,10 @@
  Germany_state_dynamic_modifier:0 "Fascism State for Civil-War"
  Ger_non_vichy_state_dynamic_modifier:0 "Non-Vichy Occupation Zone"
  Ger_warsaw_state_dynamic_modifier:0 "Destroyed City"
+ NO_SUPPLY_STATE:0 "No Supply Reserved"
+ LOW_SUPPLY_STATE:0 "Low Supply Reserved"
+ NORMAL_SUPPLY_STATE:0 "Supply Reserved"
+ EXTRA_SUPPLY_STATE:0 "Extra Supply Reserved"
 
  #ui ideas
  Wehrmacht_UI:0 "Wehrmacht"
@@ -77,6 +81,20 @@
  rebuild_warsaw:0 "Rebuild Warsaw"
  rebuild_paris:0 "Rebuild Paris"
 
+ #New Laws for New Germany
+
+ New_Laws_fuhrer_category:0 "New Laws Adolf Hitler"
+ New_Laws_fuhrer_Eco:0 "New Economy Laws"
+ New_Laws_fuhrer_civilian:0 "Supress Civilian Rights"
+ New_Laws_fuhrer_health:0 "Reforms in Health Service"
+ New_Laws_fuhrer_arms:0 "New Army Laws"
+
+ New_Laws_wilhelm_category:0 "New Laws Wilhelm"
+ New_Laws_wilhelm_Eco:0 "Reforms in Economy Laws"
+ New_Laws_wilhelm_civilian:0 "Grant Civilian Rights"
+ New_Laws_wilhelm_health:0 "Reforms in Health Services"
+ New_Laws_wilhelm_arms:0 "Reinforce Army Laws"
+
  #Operation Sea Lion
 
  GER_Operation_Sealion_ph_1:0 "Operation §CSea lion§! / Phase §R1§!"
@@ -110,6 +128,11 @@
  sent_rommel_to_mla:0 "Sent Erwin Rommel to Mittelafrica"
  recall_rommel_to_ger:0 "Recall Erwin Rommel from Mittelafrica"
  GER_SENT_ROMMEL_MLA:0 "Serving in Mittelafrica"
+
+ GER_Africa_Operations:0 "Africa Korps: Africa Operations"
+ GER_start_Battle_of_El_Alamein:0 "Start Operation EL-Alamein"
+ GER_extra_Supply_for_Africa:0 "Extra Supply for Libya"
+ GER_Supply_for_Africa:0 "Supply for Africa"
  
  #German Training Program
  
@@ -430,6 +453,11 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ GER_allow_reforms_in_laws:0 "It allows the two Leaders to make changes to the main laws."
+ New_Law_arms_Fuhrer_tt:0 "The Army Law drafted by Adolf Hitler must be in place."
+ New_Law_Eco_Fuhrer_tt:0 "The New Economy Law drafted by Adolf Hitler must be in place."
+ New_Law_arms_wilhelm_tt:0 "The Army Law drafted by Wilhelm II must be in place."
+ New_Laws_civilian_tt:0 "The Civil Law drafted by Wilhelm II must be in place."
  ger_allow_atlantikwall_consruction:0 "Allows Defensive Line Building in Certain Areas."
  GER_working_on_atlantikwall:0 "Not Available"
  GER_GOERING_RETIRED:0 "Retired"

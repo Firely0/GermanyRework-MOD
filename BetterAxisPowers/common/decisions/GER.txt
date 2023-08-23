@@ -145,6 +145,294 @@ health_of_adolf_category = {
 
 }
 
+New_Laws_fuhrer_category = {
+
+	New_Laws_fuhrer_Eco = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_Eco_wilhelm
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_Eco_Fuhrer
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_fuhrer_civilian = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_civilian_wilhelm
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_civilian_Fuhrer
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_fuhrer_health = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_health_wilhelm
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_health_Fuhrer
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_fuhrer_arms = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_arms_wilhelm
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_arms_Fuhrer
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+}
+
+New_Laws_wilhelm_category = {
+
+	New_Laws_wilhelm_Eco = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_Eco_Fuhrer
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_Eco_wilhelm
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_wilhelm_civilian = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_civilian_Fuhrer
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_civilian_wilhelm
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_wilhelm_health = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_health_Fuhrer
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_health_wilhelm
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+	New_Laws_wilhelm_arms = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = recently_signed_law
+				has_country_flag = New_Law_arms_Fuhrer
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = New_Law_arms_wilhelm
+			set_country_flag = {
+				flag = recently_signed_law
+				value = 1
+				days = 90	
+			}
+		}
+	}
+
+}
+
 eva_braun_category = {
 
 	eva_braun_work_as_health_care = {
@@ -1515,6 +1803,185 @@ GER_Operation_Barbarossa_V = {
 		complete_effect = {
 		}
 	}
+}
+
+GER_Africa_Operations = {
+
+	GER_Supply_for_Africa = {
+		icon = GFX_decision_ger_military_buildup 
+		priority = 100
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			always = no
+		}
+	
+		activation = {
+			has_idea = GER_Afrika_Korps
+			has_completed_focus = GER_Set_HQ_in_Libya
+		}
+	
+		visible = {
+		}
+		is_good = no                         
+		selectable_mission = no                
+		days_mission_timeout = 30        
+		timeout_effect = {
+			GER_supply_for_libya_effect = yes
+		}
+		complete_effect = {           
+		}
+	}
+
+	GER_Battle_of_El_Alamein = {
+		icon = GFX_decision_generic_operation
+		priority = 95
+	
+		allowed = {
+			tag = GER
+		}
+	
+		available = {
+			447 = { is_controlled_by_ROOT_or_ally = yes }
+			907 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	
+		activation = {
+			always = no
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 447 907 #El-Alamein Cairo
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		cancel_if_not_visible = yes
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 90
+	
+		cancel_effect = {
+		}
+	
+		timeout_effect = {
+			add_war_support = -0.05
+			country_event = { id = GER_health_adolf.2 hours = 12 }
+		}
+	
+		complete_effect = {
+			ENG = {
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+			}
+			GER_erwin_rommel = {
+				add_unit_leader_trait = media_personality
+				add_unit_leader_trait = desert_fox
+			}
+		}
+	}
+
+	GER_extra_Supply_for_Africa = {
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 90
+
+		available = {
+			has_completed_focus = GER_Libya_war_logistics
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		fire_only_once = yes
+
+		visible = {
+		}
+		ai_will_do = {
+		}
+		complete_effect = {
+			set_global_flag = {
+				flag = extra_supply_to_africa
+				value = 1
+				days = 31
+			}
+		}
+	}
+
+	GER_start_Battle_of_El_Alamein = {
+		icon = GFX_decision_gre_faction_management
+		priority = 80
+
+		available = {
+			has_idea = GER_Afrika_Korps
+			452 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		visible = {
+		}
+		ai_will_do = {
+		}
+		complete_effect = {
+			activate_mission = GER_Battle_of_El_Alamein
+			GER_erwin_rommel = {
+				add_logistics = 1
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 447
+						state = 907
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = El_Alamein_Atack_dynamic_modifier
+					scope = GER
+					days = 90
+				}
+				if = {
+					limit = {
+						ITA = {
+							is_in_faction_with = GER
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = El_Alamein_Atack_dynamic_modifier
+						scope = ITA
+						days = 90
+					}
+				}
+			}
+			452 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 10061
+				}
+			}
+			build_railway = {
+				level = 1
+				start_province = 1130
+				target_province = 10061
+			}
+		}
+	}
+
 }
 
 GER_Rhineland_demilitarized = {

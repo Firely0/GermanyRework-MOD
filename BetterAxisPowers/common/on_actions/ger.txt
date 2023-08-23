@@ -9,6 +9,16 @@ on_actions = {
 				add_ideas = Luftwaffe_debuff
 				add_ideas = Kriegsmarine_Debuff_Version
 			}
+			if = {
+				limit = {
+					tag = GER
+					is_ai = yes
+				}
+				GER = {
+					set_technology = { mobile_warfare = 1 popup = no }
+					add_ideas = i_dont_use_wargoal
+				}
+			}
 		}
 	}
 	on_startup = {
