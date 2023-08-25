@@ -554,4 +554,84 @@ on_actions = {
 			}
 		}
 	}
+
+	on_state_control_changed = {
+		limit = {
+			OR = {
+				TO = { tag = ITA }
+				TO = { tag = LIB }
+			} # Italy gains control of a state
+			NOT = {
+				has_global_flag = NO_MORE_SUPPLY_REQ_LIB
+			}
+		}
+		effect = {
+			every_state = {
+				limit = {
+					has_state_flag = LIBYA_SUPPLY_FLAG
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = NO_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = LOW_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = NORMAL_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = EXTRA_SUPPLY_STATE
+							}
+						}
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		limit = {
+			OR = {
+				FROM = { tag = ITA }
+				FROM = { tag = LIB }
+			}  # Italy or Libya loses control of a state
+		}
+		effect = {
+			every_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = {
+							modifier = NO_SUPPLY_STATE
+						}
+						has_dynamic_modifier = {
+							modifier = LOW_SUPPLY_STATE
+						}
+						has_dynamic_modifier = {
+							modifier = NORMAL_SUPPLY_STATE
+						}
+						has_dynamic_modifier = {
+							modifier = EXTRA_SUPPLY_STATE
+						}
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = NO_SUPPLY_STATE
+				}
+				remove_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
+				remove_dynamic_modifier = {
+					modifier = NORMAL_SUPPLY_STATE
+				}
+				remove_dynamic_modifier = {
+					modifier = EXTRA_SUPPLY_STATE
+				}
+			}
+		}
+	}
+	
 }

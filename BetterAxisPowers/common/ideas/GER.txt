@@ -3990,6 +3990,10 @@ ideas = {
 					663 = { is_controlled_by_ROOT_or_ally = no }
 					451 = { is_controlled_by_ROOT_or_ally = no }
 				}
+
+				on_remove = {
+					set_global_flag = NO_MORE_SUPPLY_REQ_LIB
+				}
 				
 				removal_cost = -1
 	
@@ -4003,15 +4007,10 @@ ideas = {
 		
 	
 				modifier = {
-	
 					max_planning_factor = 0.03 
 					planning_speed = 0.03
-
-					supply_node_range = 0.1
 					truck_attrition_factor = -0.05
-
 					acclimatization_hot_climate_gain_factor = 0.1
-
 				}
 			}
 
@@ -4038,16 +4037,11 @@ ideas = {
 		
 	
 				modifier = {
-	
 					planning_speed = 0.03
 					land_night_attack = 0.03
 					recon_factor = 0.03
-
 					truck_attrition_factor = -0.05
-
-					acclimatization_cold_climate_gain_factor = 0.05
 					acclimatization_hot_climate_gain_factor = 0.05
-
 				}
 			}
 
@@ -7216,7 +7210,11 @@ ideas = {
 		ita_dont_core_about_eth = { 
 
 			allowed = {
-				always = no
+				tag = ITA
+				is_in_faction_with = GER
+				is_ai = yes
+				is_at_peace_exiled_countries_excluded = yes
+				NOT = { has_global_flag = ITA_BLOCKED_DONT_CARE_ETH }
 			}
 	
 			allowed_civil_war = {
@@ -7230,6 +7228,10 @@ ideas = {
 					has_idea = ITA_italian_irredentism_ns
 					16 = { is_controlled_by_ROOT_or_ally = yes }
 				}
+			}
+
+			on_remove = {
+				set_global_flag = ITA_BLOCKED_DONT_CARE_ETH
 			}
 	
 			removal_cost = -1

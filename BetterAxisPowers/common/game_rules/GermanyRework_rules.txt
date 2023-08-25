@@ -1,0 +1,17 @@
+#####---------------------------------------------------------------------> by Firely
+GERMANY_REWORK_TEST = {
+	name = "GERMANY_REWORK_TEST_ITALY_AI"
+	group = "GERMANY_REWORK_TEST"
+	default = {
+		name = "GERMANY_REWORK_TEST_ITALY_AI_OFF"
+		text = "RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF"
+		desc = "RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GERMANY_REWORK_TEST_ITALY_AI_ON"
+		text = "RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON"
+		desc = "RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON_DESC"
+		allow_achievements = no
+	}
+}

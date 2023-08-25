@@ -1,0 +1,129 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+# building_target
+
+Italy_Naval_Prio = { # Keep Ships Safe V1
+	enable = {
+		tag = ITA
+		ITA = {
+			NOT = { has_completed_focus = ITA_supermarina }
+		}
+		has_war_with = ENG
+		has_game_rule = {
+			rule = GERMANY_REWORK_TEST
+			option = GERMANY_REWORK_TEST_ITALY_AI_ON
+		}
+	}
+	abort = {
+		has_completed_focus = ITA_supermarina
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = 500 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = 500 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 202
+		value = 500 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 168
+		value = 500 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29
+		value = 500 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169
+		value = 500 # avoid doing missions as well
+	}
+}
+
+Italy_Naval_Prio = { # Keep Ships Safe V2
+	enable = {
+		tag = ITA
+		has_war_with = ENG
+		has_completed_focus = ITA_supermarina
+		has_completed_focus = ITA_incrociatori_pesanti
+		has_game_rule = {
+			rule = GERMANY_REWORK_TEST
+			option = GERMANY_REWORK_TEST_ITALY_AI_ON
+		}
+	}
+	abort = {
+		907 = {
+			is_controled_by = ITA
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = 150 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = 150 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 202
+		value = 150 # avoid doing missions as well
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 168
+		value = 150 # avoid doing missions as well
+	}
+}
+
+ITA_ETH_WAR_FRONT = {
+	allowed = {
+		tag = ITA
+		has_game_rule = {
+			rule = GERMANY_REWORK_TEST
+			option = GERMANY_REWORK_TEST_ITALY_AI_ON
+		}
+	}
+	enable = {
+		date < 1937.03.01
+	}
+	abort = {
+		date > 1937.03.01
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -10
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = ETH
+		area = 550
+		value = 10
+	}
+}

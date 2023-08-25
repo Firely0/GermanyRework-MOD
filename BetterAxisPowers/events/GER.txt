@@ -1787,7 +1787,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
-			factor = 60
+			factor = 100
 		}
 		name = "Yes"
 		GER = {
@@ -1824,7 +1824,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			factor = 40
+			factor = 0
 		}
 		name = "No"
 		GER = {

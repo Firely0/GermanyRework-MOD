@@ -2623,204 +2623,171 @@ GER_add_cost_of_forts = {
 }
 
 GER_supply_for_libya_effect = {
-	if = {
+	GER = { #Should Reactive Mission so yeah.
+		activate_mission = GER_Supply_for_Africa
+	}
+}
+
+GER_lower_supply_for_libya_effect = { #Just Lower
+	every_controlled_state = {
 		limit = {
-			has_global_flag = extra_supply_to_africa
-		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = NO_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = NO_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+			has_dynamic_modifier = {
 				modifier = LOW_SUPPLY_STATE
 			}
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+		remove_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = NO_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
 				modifier = NORMAL_SUPPLY_STATE
 			}
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = NORMAL_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = NORMAL_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+		remove_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
 				modifier = EXTRA_SUPPLY_STATE
 			}
 		}
-	}
-	else_if = {
-		limit = {
-			NOT = { has_global_flag = extra_supply_to_africa }
-			ITA = {
-				ships_in_area = { area = 29 size > 32 } 
-			}
+		remove_dynamic_modifier = {
+			modifier = EXTRA_SUPPLY_STATE
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+		add_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+	}
+} 
+
+GER_low_supply_for_libya_effect = { #Stop At Low Supply
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
 				modifier = NO_SUPPLY_STATE
 			}
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = NORMAL_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = NORMAL_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+		remove_dynamic_modifier = {
+			modifier = NO_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			
+			has_dynamic_modifier = {
 				modifier = LOW_SUPPLY_STATE
 			}
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = EXTRA_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = EXTRA_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+		# Still Low Supply Sorry
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
 				modifier = NORMAL_SUPPLY_STATE
 			}
 		}
-	}
-	else_if = {
-		limit = {
-			NOT = { has_global_flag = extra_supply_to_africa }
-			ITA = {
-				ships_in_area = { area = 29 size < 33 } 
-			}	
+		remove_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = NO_SUPPLY_STATE
-				}
+		add_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = EXTRA_SUPPLY_STATE
 			}
-			remove_dynamic_modifier = {
+		}
+		remove_dynamic_modifier = {
+			modifier = EXTRA_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+	}
+}
+
+GER_normal_supply_for_libya_effect = { #Stop at Normal Supply
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = LOW_SUPPLY_STATE
+			}
+		}
+		remove_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
 				modifier = NO_SUPPLY_STATE
 			}
-			add_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
-			}
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
-			}
-			# Still Low Supply Sorry
+		remove_dynamic_modifier = {
+			modifier = NO_SUPPLY_STATE
 		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = NORMAL_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = NORMAL_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
-			}
-		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = EXTRA_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = EXTRA_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
-				modifier = NORMAL_SUPPLY_STATE
-			}
+		add_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
 		}
 	}
-	else_if = {
+}
+
+GER_extra_supply_for_libya_effect = { # Cost you Something you know
+	every_controlled_state = {
 		limit = {
-			NOT = { has_global_flag = extra_supply_to_africa }
-			ITA = {
-				ships_in_area = { area = 29 size > 64 }
-			} 
-		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
-			}
-			add_dynamic_modifier = {
+			has_dynamic_modifier = {
 				modifier = NORMAL_SUPPLY_STATE
 			}
+		}
+		remove_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = EXTRA_SUPPLY_STATE
 		}
 	}
-	else_if = { #Same as Before
+	every_controlled_state = {
 		limit = {
-			NOT = { has_global_flag = extra_supply_to_africa }
-			ITA = {
-				ships_in_area = { area = 29 size > 96 }
-			} 
-		}
-		every_controlled_state = {
-			limit = {
-				has_state_flag = LIBYA_SUPPLY_FLAG
-				has_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
-			}
-			remove_dynamic_modifier = {
+			has_dynamic_modifier = {
 				modifier = LOW_SUPPLY_STATE
 			}
-			add_dynamic_modifier = {
-				modifier = NORMAL_SUPPLY_STATE
+		}
+		remove_dynamic_modifier = {
+			modifier = LOW_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
+		}
+	}
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = NO_SUPPLY_STATE
 			}
+		}
+		remove_dynamic_modifier = {
+			modifier = NO_SUPPLY_STATE
+		}
+		add_dynamic_modifier = {
+			modifier = NORMAL_SUPPLY_STATE
 		}
 	}
 }

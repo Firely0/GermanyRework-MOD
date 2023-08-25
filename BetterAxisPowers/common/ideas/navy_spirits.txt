@@ -45,6 +45,14 @@ ideas = {
 					has_dlc = "No Step Back"
 					tag = GER
 				}
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = GERMANY_REWORK_TEST
+						option = GERMANY_REWORK_TEST_ITALY_AI_ON
+					}
+					tag = ITA
+				}
 			}
 		}
 		fleet_in_being_academy_spirit = {
@@ -227,6 +235,14 @@ ideas = {
 					has_dlc = "No Step Back"
 					tag = GER
 				}
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = GERMANY_REWORK_TEST
+						option = GERMANY_REWORK_TEST_ITALY_AI_ON
+					}
+					tag = ITA
+				}
 			}
 		}
 		#naval_modernism_spirit = {
@@ -320,6 +336,14 @@ ideas = {
 					factor = 100
 					has_dlc = "No Step Back"
 					tag = GER
+				}
+				modifier = {
+					factor = 100
+					has_game_rule = {
+						rule = GERMANY_REWORK_TEST
+						option = GERMANY_REWORK_TEST_ITALY_AI_ON
+					}
+					tag = ITA
 				}
 			}
 		}

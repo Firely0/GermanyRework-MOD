@@ -1,5 +1,14 @@
 ﻿l_english:
 
+ #Game Rules
+
+ GERMANY_REWORK_TEST:0 "TESTING - AI CONFIG"
+ GERMANY_REWORK_TEST_ITALY_AI:0 "Germany Rework - Italy Test AI Config"
+ RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF:0 "Expert Config - Disabled"
+ RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF_DESC:0 ""
+ RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON:0 "Expert Config - Enabled"
+ RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON_DESC:0 ""
+
  #Mittelaafrika
 
  MLA_fascism:0 "Mittelafrika"
@@ -130,7 +139,9 @@
  GER_SENT_ROMMEL_MLA:0 "Serving in Mittelafrica"
 
  GER_Africa_Operations:0 "Africa Korps: Africa Operations"
+ GER_Africa_Operations_desc:0 "Africa Korps' HQ in Libya is an important location for our future operations, and we will have to rely on Italy's navy in the Central Mediterranean to provide equipment and reinforcements on a regular basis."
  GER_start_Battle_of_El_Alamein:0 "Start Operation EL-Alamein"
+ GER_Battle_of_El_Alamein_decision:0 "Battle of El-Alamein"
  GER_extra_Supply_for_Africa:0 "Extra Supply for Libya"
  GER_Supply_for_Africa:0 "Supply for Africa"
  
@@ -745,6 +756,10 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
 
+ GER_no_reds_in_europe:0 "No Reds in Europe"
+ GER_no_reds_in_europe_desc:0 ""
+ GER_expand_aliance:0 "Expand Alliance"
+ GER_expand_aliance_desc:0 ""
  GER_shadow_of_past:0 "Shadow of Past"
  GER_shadow_of_past_desc:0 ""
  GER_United_People:0 "United German People"

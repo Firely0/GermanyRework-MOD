@@ -53,6 +53,9 @@ NO_SUPPLY_STATE = {
 	icon = GFX_modifiers_generic_low_supply
 
 	unit_upkeep_attrition_factor = 0.1
+	army_fuel_consumption_factor = 0.1
+	supply_consumption_factor = 0.1
+	supply_factor = -0.25
 }
 
 LOW_SUPPLY_STATE = {
@@ -60,10 +63,9 @@ LOW_SUPPLY_STATE = {
 
 	icon = GFX_modifiers_generic_supply
 
-	unit_upkeep_attrition_factor = -0.1
-	army_fuel_consumption_factor = -0.05
-	supply_consumption_factor = -0.05
-	supply_factor = 0.0025
+	unit_upkeep_attrition_factor = 0.05
+	army_fuel_consumption_factor = -0.025
+	supply_consumption_factor = -0.025
 }
 
 NORMAL_SUPPLY_STATE = {
