@@ -4831,7 +4831,14 @@ country_event = {
 		}
 
 		hidden_effect = {
-			set_country_flag = flight_of_hess
+			GER_rudolf_hess = {
+				set_character_flag = rudolf_aressted_by_uk
+				set_portraits = {
+					army={
+						small="GFX_idea_rudolf_hess_prison"
+					}
+				}
+			}
 			if = {
 				limit = {
 					has_idea = rudolf_hess

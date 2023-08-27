@@ -2,12 +2,15 @@
 
  #Game Rules
 
- GERMANY_REWORK_TEST:0 "TESTING - AI CONFIG"
+ GERMANY_REWORK_TEST:0 "TESTING - CONFIG"
  GERMANY_REWORK_TEST_ITALY_AI:0 "Germany Rework - Italy Test AI Config"
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF:0 "Expert Config - Disabled"
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF_DESC:0 ""
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON:0 "Expert Config - Enabled"
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON_DESC:0 ""
+ GERMANY_REWORK_GER_NAVY:0 "Germany Rework - German Naval Focus"
+ RULE_OPTION_GERMANY_REWORK_GER_NAVY_OFF:0 "Off"
+ RULE_OPTION_GERMANY_REWORK_GER_NAVY_ON:0 "Naval Focuses Completed"
 
  #Mittelaafrika
 
@@ -37,6 +40,8 @@
  #unit trait
  purged_by_hitler:0 "Purged by Hitler"
  purged_by_hitler_desc:0 "After military failure and delayed plans, he incurred the wrath of Adolf Hitler."
+ trait_GER_SS:0 "SS Member"
+ trait_GER_SS_desc:0 "The person is known to be registered in SS"
 
  #leader
 
@@ -593,6 +598,7 @@
  GER_Stalingrad_win:0 "Battle of §YStalingrad§! Completed"
  GER_Operation_Barbarossa_running:0 "§YOperation Barbarossa§! is going as planned."
  vlasov_in_ss_flag:0 "Andrey Vlasov Imprisoned"
+ rudolf_aressted_by_uk:0 "is currently in prison (Located in the UK.)"
  GER_Four_Year_Plan_Start_tt:0 "Starts §YFour Year Plan§! for §G1460§! days"
  GER_staff_tt:0 "\nif Selected; §RMobile Warfare§! \n\n"
  GER_staff_a_tt:0 "if Selected; §RSuperior Firepower§! \n\n"
@@ -756,6 +762,8 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
 
+ GER_progress_eu_union:0 "Hold European Conference"
+ GER_progress_eu_union_desc:0 ""
  GER_no_reds_in_europe:0 "No Reds in Europe"
  GER_no_reds_in_europe_desc:0 ""
  GER_expand_aliance:0 "Expand Alliance"

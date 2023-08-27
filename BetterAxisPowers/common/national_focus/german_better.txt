@@ -31,7 +31,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland_ab
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_goal_rhineland_cs
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
 		}
@@ -85,7 +85,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland_demilitarized
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_goal_rhineland_keep
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
@@ -263,7 +263,7 @@ focus_tree = {
 			focus = GER_against_fuhrer
 		}
 		relative_position_id = GER_against_fuhrer
-		x = 5
+		x = 3
 		y = 1
 		cost = 2
 		available = {
@@ -5416,7 +5416,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Start_Operation
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_goal_gerhegenomy
 		prerequisite = { focus = GER_Take_Out_USA }
 		prerequisite = { focus = GER_Take_Out_Japan }
 		prerequisite = { focus = GER_Take_Out_Soviet }
@@ -5539,7 +5539,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_fascism_take_over
-		icon = GFX_focus_ITA_generic_fascist_workers
+		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = GER_Purge_in_low_countries }
 		available = {
 		}
@@ -5590,7 +5590,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Thousand_Week_Reich
-		icon = GFX_goal_gerhegenomy
+		icon = GFX_goal_presavegermany
 		cancel_if_invalid = no
 		prerequisite = { 
 			focus = GER_German_hegemony
@@ -9659,6 +9659,25 @@ focus_tree = {
 					set_value = -0.2
 				}
 				activate_mission = Adolf_Hitler_Yearly_Check_ups
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = GERMANY_REWORK_NAVY
+							option = GERMANY_REWORK_GER_NAVY_ON
+						}
+					}
+					complete_national_focus = GER_naval_rearmament_a
+					complete_national_focus = GER_plan_z_a
+					complete_national_focus = GER_rebuild_the_high_seas_fleet_a
+					complete_national_focus = GER_Bismarck
+					complete_national_focus = GER_carrier_war
+					complete_national_focus = GER_Graf_Zeppelin
+					complete_national_focus = GER_naval_air_effort_a
+					complete_national_focus = GER_u_boat_effort
+					complete_national_focus = GER_modular_construction_a
+				}
 			}	
 		}
 	}
@@ -9922,7 +9941,7 @@ focus_tree = {
 			has_completed_focus = GER_against_fuhrer
 		}
 		prerequisite = { focus = GER_against_fuhrer }
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_goal_supremewehrmacht
 		available = {
 			has_completed_focus = GER_the_German_Republic
 			custom_trigger_tooltip = {
@@ -9961,7 +9980,7 @@ focus_tree = {
 			}
 		}		
 		cancel_if_invalid = no
-		x = 3
+		x = -3
 		y = 1
 		
 		relative_position_id = GER_establish_abwehr
@@ -12000,7 +12019,7 @@ focus = {
 
 	focus = {
 		id = GER_against_fuhrer
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		icon = GFX_focus_generic_anti_fascist_diplomacy
 		prerequisite = {
 			focus = GER_rhineland_demilitarized focus = GER_rhineland_ab
 		}
@@ -12013,11 +12032,11 @@ focus = {
 			}
 		}
 		relative_position_id = GER_rhineland_demilitarized
-		x = -24
+		x = -18
 		y = 1
 		cost = 1
 		offset = {
-			x = 25
+			x = 19
 			y = 0
 			trigger = {
 				has_completed_focus = GER_against_fuhrer
@@ -12092,7 +12111,7 @@ focus = {
 
 	focus = {
 		id = GER_prepare_for_innovative
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_goal_anti_fasicm_ger
 		text = GER_Working_on
 		mutually_exclusive = {
 			focus = GER_assassinate_adolf_hitler
@@ -12135,7 +12154,7 @@ focus = {
 		}
 		relative_position_id = GER_against_fuhrer
 		x = 0
-		y = 4
+		y = 2
 		cost = 5
 		available = {
 			has_global_flag = GER_civil_war_end
@@ -12404,6 +12423,7 @@ focus = {
 		mutually_exclusive = { focus = GER_expatriate_the_communists }
 		allow_branch = {
 			NOT = { has_completed_focus = GER_expatriate_the_communists }
+			NOT = { has_completed_focus = GER_establish_abwehr }
 		}
 		available = {
 			is_subject = no
@@ -12424,8 +12444,8 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_war_support = 0.05
 			add_named_threat = { threat = 5 name = GER_focus_on_the_true_enemy }
+			add_war_support = 0.05
 			swap_ideas = {
 				remove_idea = GER_revive_the_kaiserreich
 				add_idea = GER_revive_the_kaiserreich2
@@ -12450,6 +12470,7 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
+			add_named_threat = { threat = 5 name = GER_our_place_in_the_sun }
 			add_war_support = 0.05
 			ENG = {
 				add_opinion_modifier = {
@@ -12463,7 +12484,6 @@ focus = {
 					modifier = GER_our_place_in_the_sun
 				}
 			}
-			add_named_threat = { threat = 5 name = GER_our_place_in_the_sun }
 			if = {
 				limit = {
 					743 = { is_controlled_by = event_target:WTT_current_china_leader }
@@ -12939,6 +12959,7 @@ focus = {
 		}
 		allow_branch = {
 			NOT = { has_completed_focus = GER_focus_on_the_true_enemy }
+			NOT = { has_completed_focus = GER_establish_abwehr }
 		}
 		cancel_if_invalid = yes
 		x = -3
@@ -12950,12 +12971,11 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_war_support = 0.05
+			add_named_threat = { threat = 5 name = GER_expatriate_the_communists }
 			add_timed_idea = {
 				idea = GER_expatriate_the_communists
 				days = 720
 			}
-			add_named_threat = { threat = 5 name = GER_expatriate_the_communists }
 			FRA = { 
 				add_timed_idea = {
 					idea = GER_communist_refugees
@@ -12963,6 +12983,7 @@ focus = {
 				}
 				country_event = { id = wtt_germany.17 }
 			}
+			add_war_support = 0.05
 			hidden_effect = {
 				if = {
 					limit = {
@@ -14507,6 +14528,8 @@ focus = {
 						is_subject = no
 					}
 				}
+				SOV = { country_event = { id = wtt_germany.23 } }
+				add_named_threat = { threat = 5 name = GER_finnish_membership }
 				FIN = {
 					country_event = { id = generic.5 }
 					add_ai_strategy = {
@@ -14516,8 +14539,6 @@ focus = {
 					}	
 				}
 			}
-			add_named_threat = { threat = 5 name = GER_finnish_membership }
-			SOV = { country_event = { id = wtt_germany.23 } }
 			EST = {
 				add_ai_strategy = {
 					type = alliance
@@ -14847,6 +14868,7 @@ focus = {
 		prerequisite = { focus = GER_low_countries_membership }
 		prerequisite = { focus = GER_danubian_membership }
 		available = {
+			always = no
 		}
 		bypass = {
 		}
@@ -14859,21 +14881,6 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			create_wargoal = {
-				type = topple_government
-				target = SOV
-				expire = 0
-			}
-			if = {
-				limit = {
-					FRA = { has_government = communism }
-				}
-				add_ai_strategy = {
-					type = antagonize
-					id = "GER"
-					value = 200
-				}
-			}
 		}
 	}
 
@@ -14929,6 +14936,7 @@ focus = {
 		prerequisite = { focus = GER_bulwark_against_bolshevism }
 		available = {
 			is_subject = no
+			is_faction_leader = yes
 			is_in_faction_with = NOR
 		}
 		x = -2

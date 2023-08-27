@@ -16,19 +16,18 @@
 Italy_Naval_Prio = { # Keep Ships Safe V1
 	enable = {
 		tag = ITA
-		ITA = {
-			NOT = { has_completed_focus = ITA_supermarina }
-		}
+		ITA = { NOT = { has_completed_focus = ITA_supermarina } }
 		has_war_with = ENG
 		has_game_rule = {
 			rule = GERMANY_REWORK_TEST
 			option = GERMANY_REWORK_TEST_ITALY_AI_ON
 		}
 	}
+
 	abort = {
 		has_completed_focus = ITA_supermarina
 	}
-	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 68
@@ -66,18 +65,18 @@ Italy_Naval_Prio = { # Keep Ships Safe V2
 		tag = ITA
 		has_war_with = ENG
 		has_completed_focus = ITA_supermarina
-		has_completed_focus = ITA_incrociatori_pesanti
 		has_game_rule = {
 			rule = GERMANY_REWORK_TEST
 			option = GERMANY_REWORK_TEST_ITALY_AI_ON
 		}
 	}
+
 	abort = {
 		907 = {
-			is_controled_by = ITA
+			is_controlled_by = ITA
 		}
 	}
-	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 68

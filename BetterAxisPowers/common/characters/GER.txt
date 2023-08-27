@@ -179,7 +179,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious armor_officer }
+			traits={ trait_GER_SS trait_cautious armor_officer }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -447,7 +447,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless armor_officer politically_connected }
+			traits={ trait_reckless armor_officer trait_GER_SS politically_connected }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -558,7 +558,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ armor_officer politically_connected }
+			traits={ armor_officer trait_GER_SS politically_connected }
 			skill=4
 			attack_skill=3
 			defense_skill=3
@@ -633,7 +633,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist trait_reckless armor_officer politically_connected }
+			traits={ brilliant_strategist trait_reckless armor_officer trait_GER_SS politically_connected }
 			skill=4
 			attack_skill=2
 			defense_skill=3
@@ -745,6 +745,7 @@ characters={
 			}
 		}
 		corps_commander={
+			traits = { trait_GER_SS }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -1266,10 +1267,6 @@ characters={
 			available = {
 				OR = {
 					has_government = fascism
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					}
 					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
@@ -1365,10 +1362,6 @@ characters={
 				or = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					}
 					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
@@ -1841,15 +1834,14 @@ characters={
 			}
 			available = {
 				NOT = {
-					has_country_flag = flight_of_hess
+					OR = {
+						has_character_flag = rudolf_aressted_by_uk
+						has_country_flag = flight_of_hess
+					}
 				}
 				OR = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					}
 					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}
@@ -1940,10 +1932,6 @@ characters={
 				OR = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
-					custom_trigger_tooltip = {
-						tooltip = GER_Kaiser_in_Country_tt
-						has_country_flag = GER_Kaiser_in_Country
-					}
 					has_country_flag = GER_Fuhrer_in_Country
 				}
 			}

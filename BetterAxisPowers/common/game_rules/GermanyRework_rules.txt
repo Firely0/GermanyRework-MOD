@@ -15,3 +15,19 @@ GERMANY_REWORK_TEST = {
 		allow_achievements = no
 	}
 }
+GERMANY_REWORK_NAVY = {
+	name = "GERMANY_REWORK_GER_NAVY"
+	group = "GERMANY_REWORK_TEST"
+	default = {
+		name = "GERMANY_REWORK_GER_NAVY_OFF"
+		text = "RULE_OPTION_GERMANY_REWORK_GER_NAVY_OFF"
+		desc = "RULE_OPTION_GERMANY_REWORK_GER_NAVY_OFF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GERMANY_REWORK_GER_NAVY_ON"
+		text = "RULE_OPTION_GERMANY_REWORK_GER_NAVY_ON"
+		desc = "RULE_OPTION_GERMANY_REWORK_GER_NAVY_ON_DESC"
+		allow_achievements = no
+	}
+}

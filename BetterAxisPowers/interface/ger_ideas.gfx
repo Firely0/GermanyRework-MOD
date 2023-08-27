@@ -155,10 +155,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/engconflict.dds"
 	} 
 
-	#Temp Trait
+	#Temp Traits
 	spriteType = {
 		name = "GFX_trait_purged_by_hitler"
 		texturefile = "gfx/interface/traits/trait_purged_by_hitler.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_trait_GER_SS"
+		texturefile = "gfx/interface/traits/personal/trait_GER_SS.dds"
 	}
 
 }	

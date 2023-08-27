@@ -1360,6 +1360,14 @@ country_event = {
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = AOV_news.409 }
+			if = {
+				limit = {
+					ITA = { 
+						is_in_faction = no
+					}
+				}
+				ITA = { country_event = { hours = 3 id = italian_reaction.16 } }
+			}
 		}
 	}
 	option = {
@@ -1398,6 +1406,17 @@ country_event = {
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = AOV_news.409 }
+			if = {
+				limit = {
+					ITA = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+			}
 		}
 	}
 	option = {
@@ -1436,6 +1455,17 @@ country_event = {
 		}
 		hidden_effect = {
 			news_event = { hours = 6 id = AOV_news.409 }
+			if = {
+				limit = {
+					ITA = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+			}
 		}
 	}
 	option = {
@@ -2672,11 +2702,9 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.12
 		}
-		hidden_effect = {
-			ITA = {
-				country_event = { hours = 3 id = italian_reaction.16 }
-			}
-		}
+		#hidden_effect = {
+		#	country_event = { hours = 3 id = italian_reaction.16 }
+		#}
 	}
 	option = {
 		name = italian_reaction.1.b #Better stay out of that
@@ -2768,12 +2796,12 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.12
 		}
-		hidden_effect = {
-			country_event = { hours = 3 id = italian_reaction.16 }
-		}
+		#hidden_effect = {
+		#	country_event = { hours = 3 id = italian_reaction.16 }
+		#}
 	}
 	option = {
-		name = italian_reaction.1.e #nope! 
+		name = italian_reaction.1.e #nope! (if has completed ITA_guarantee_austrian_independence)
 		ai_chance = {
 			base = 0
 		}
@@ -2902,19 +2930,19 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.13
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					ITA = { 
-						is_in_faction = no
-						NOT = {
-							has_completed_focus = ITA_defy_the_duce
-						}
-					}
-				}
-				ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			ITA = { 
+		#				is_in_faction = no
+		#				NOT = {
+		#					has_completed_focus = ITA_defy_the_duce
+		#				}
+		#			}
+		#		}
+		#		ITA = { country_event = { hours = 4 id = italian_reaction.14 } }
+		#	}
+		#}
 	}
 	option = {
 		name = italian_reaction.2.b #Better stay out of that
@@ -3011,19 +3039,19 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.13
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					ROOT = { 
-						is_in_faction = no
-						NOT = {
-							has_completed_focus = ITA_defy_the_duce
-						}
-					}
-				}
-				ROOT = { country_event = { hours = 4 id = italian_reaction.14 } }
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			ROOT = { 
+		#				is_in_faction = no
+		#				NOT = {
+		#					has_completed_focus = ITA_defy_the_duce
+		#				}
+		#			}
+		#		}
+		#		ROOT = { country_event = { hours = 4 id = italian_reaction.14 } }
+		#	}
+		#}
 	}
 	option = {
 		name = italian_reaction.2.e #Nope! (if has completed focus ITA_guarantee_austrian_independence)
@@ -3149,19 +3177,19 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.14
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					ROOT = { 
-						is_in_faction = no
-						NOT = {
-							has_completed_focus = ITA_defy_the_duce
-						}
-					}
-				}
-				country_event = { hours = 4 id = italian_reaction.14 }
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			ROOT = { 
+		#				is_in_faction = no
+		#				NOT = {
+		#					has_completed_focus = ITA_defy_the_duce
+		#				}
+		#			}
+		#		}
+		#		country_event = { hours = 4 id = italian_reaction.14 }
+		#	}
+		#}
 	}
 	option = {
 		name = italian_reaction.3.b #Better stay out of that
@@ -3255,19 +3283,19 @@ country_event = {
 		GER = {
 			country_event = anschluss_reaction.14
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					ROOT = { 
-						is_in_faction = no
-						NOT = {
-							has_completed_focus = ITA_defy_the_duce
-						}
-					}
-				}
-				country_event = { hours = 4 id = italian_reaction.14 }
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			ROOT = { 
+		#				is_in_faction = no
+		#				NOT = {
+		#					has_completed_focus = ITA_defy_the_duce
+		#				}
+		#			}
+		#		}
+		#		country_event = { hours = 4 id = italian_reaction.14 }
+		#	}
+		#}
 	}
 	option = {
 		name = italian_reaction.3.e #Nope! (if has completed ITA_guarantee_austrian_independence)
@@ -3757,6 +3785,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
@@ -3793,6 +3834,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
@@ -3809,6 +3863,9 @@ country_event = {
 		name = italian_reaction.9.a #Disapprove too then
 		GER = {
 			country_event = italian_refusals.3
+		}
+		hidden_effect = {
+			country_event = { hours = 3 id = italian_reaction.16 }
 		}
 	}
 }
@@ -3846,6 +3903,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
@@ -3882,6 +3952,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.406 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
@@ -3902,6 +3985,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
@@ -3922,6 +4018,19 @@ country_event = {
 		#hidden_effect = {
 		#	news_event = { hours = 6 id = AOV_news.407 }
 		#}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						is_in_faction = no
+						NOT = {
+							has_completed_focus = ITA_defy_the_duce
+						}
+					}
+				}
+				country_event = { hours = 4 id = italian_reaction.14 }
+			}
+		}
 	}
 }
 
