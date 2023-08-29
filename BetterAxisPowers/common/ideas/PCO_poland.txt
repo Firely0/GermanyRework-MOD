@@ -41,6 +41,10 @@ ideas = {
 				defense_bonus_against = -0.1
 			}
 
+			cancel = {
+				has_capitulated = yes
+			}
+
 			on_remove = {
 				if = {
 					limit = {
@@ -52,6 +56,7 @@ ideas = {
 						transfer_state = 96
 					}
 				}
+				GER_SOV_white_peace_check = yes # JUST IN CASE
 			}
 
 			picture = PolandArmyProblems

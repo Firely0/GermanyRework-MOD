@@ -13,7 +13,7 @@ country_event = {
 	id = mrpact_initial.1
 	title = mrpact_initial.1.t
 	desc =  mrpact_initial.1.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -25,7 +25,7 @@ country_event = {
 		}
 		SOV = {
 			country_event = { hours = 4 id = mrpact.1 }
-		} 
+		}
 	}
 }
 
@@ -34,7 +34,7 @@ country_event = {
 	id = mrpact_initial.2
 	title = mrpact_initial.2.t
 	desc =  mrpact_initial.2.d
-	
+
 	picture = GFX_report_event_stalin_meeting
 
 	is_triggered_only = yes
@@ -99,7 +99,7 @@ country_event = {
 	id = mrpact_initial.3
 	title = mrpact_initial.3.t
 	desc =  mrpact_initial.3.d
-	
+
 	picture = GFX_report_event_stalin_01
 
 	is_triggered_only = yes
@@ -156,7 +156,7 @@ country_event = {
 				factor = 0
 				is_historical_focus_on = yes
 				GER = {
-					NOT = { 
+					NOT = {
 						OR = {
 							has_wargoal_against = SOV
 							is_justifying_wargoal_against = SOV
@@ -191,7 +191,7 @@ country_event = {
 	id = mrpact_negociations_finland.1
 	title = mrpact_negociations_finland.1.t
 	desc =  mrpact_negociations_finland.1.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -234,7 +234,7 @@ country_event = {
 	id = mrpact_negociations_finland.2
 	title = mrpact_negociations_finland.2.t
 	desc =  mrpact_negociations_finland.2.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -268,7 +268,7 @@ country_event = {
 	id = mrpact_negociations_finland.3
 	title = mrpact_negociations_finland.3.t
 	desc =  mrpact_negociations_finland.3.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -302,7 +302,7 @@ country_event = {
 	id = mrpact_negociations_finland.4
 	title = mrpact_negociations_finland.4.t
 	desc =  mrpact_negociations_finland.4.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -405,7 +405,7 @@ country_event = {
 	id = mrpact_negociations_finland.5
 	title = mrpact_negociations_finland.5.t
 	desc =  mrpact_negociations_finland.5.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -507,7 +507,7 @@ country_event = {
 	id = mrpact_negociations_finland.6
 	title = mrpact_negociations_finland.6.t
 	desc =  mrpact_negociations_finland.6.d
-	
+
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
@@ -541,7 +541,7 @@ country_event = {
 	id = mrpact_negociations_finland.7
 	title = mrpact_negociations_finland.7.t
 	desc =  mrpact_negociations_finland.7.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -643,7 +643,7 @@ country_event = {
 	id = mrpact_negociations_finland.8
 	title = mrpact_negociations_finland.8.t
 	desc =  mrpact_negociations_finland.8.d
-	
+
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
@@ -677,7 +677,7 @@ country_event = {
 	id = mrpact_negociations_finland.9
 	title = mrpact_negociations_finland.9.t
 	desc =  mrpact_negociations_finland.9.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -779,7 +779,7 @@ country_event = {
 	id = mrpact_negociations_finland.10
 	title = mrpact_negociations_finland.10.t
 	desc =  mrpact_negociations_finland.10.d
-	
+
 	picture = GFX_report_event_tur_the_montreux_convention
 
 	is_triggered_only = yes
@@ -798,7 +798,7 @@ country_event = {
 	id = mrpact_negociations_finland.11
 	title = mrpact_negociations_finland.11.t
 	desc =  mrpact_negociations_finland.11.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -908,7 +908,7 @@ country_event = {
 	id = mrpact_negociations_estonia.1
 	title = mrpact_negociations_estonia.1.t
 	desc =  mrpact_negociations_estonia.1.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -951,7 +951,7 @@ country_event = {
 	id = mrpact_negociations_estonia.2
 	title = mrpact_negociations_estonia.2.t
 	desc =  mrpact_negociations_estonia.2.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -969,7 +969,7 @@ country_event = {
 	id = mrpact_negociations_estonia.3
 	title = mrpact_negociations_estonia.3.t
 	desc =  mrpact_negociations_estonia.3.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -1003,7 +1003,7 @@ country_event = {
 	id = mrpact_negociations_estonia.4
 	title = mrpact_negociations_estonia.4.t
 	desc =  mrpact_negociations_estonia.4.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1086,7 +1086,7 @@ country_event = {
 	id = mrpact_negociations_estonia.5
 	title = mrpact_negociations_estonia.5.t
 	desc =  mrpact_negociations_estonia.5.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1172,7 +1172,7 @@ country_event = {
 	id = mrpact_negociations_estonia.6
 	title = mrpact_negociations_estonia.6.t
 	desc =  mrpact_negociations_estonia.6.d
-	
+
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
@@ -1206,7 +1206,7 @@ country_event = {
 	id = mrpact_negociations_estonia.7
 	title = mrpact_negociations_estonia.7.t
 	desc =  mrpact_negociations_estonia.7.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1292,7 +1292,7 @@ country_event = {
 	id = mrpact_negociations_estonia.8
 	title = mrpact_negociations_estonia.8.t
 	desc =  mrpact_negociations_estonia.8.d
-	
+
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
@@ -1326,7 +1326,7 @@ country_event = {
 	id = mrpact_negociations_estonia.9
 	title = mrpact_negociations_estonia.9.t
 	desc =  mrpact_negociations_estonia.9.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1412,7 +1412,7 @@ country_event = {
 	id = mrpact_negociations_estonia.10
 	title = mrpact_negociations_estonia.10.t
 	desc =  mrpact_negociations_estonia.10.d
-	
+
 	picture = GFX_report_event_tur_the_montreux_convention
 
 	is_triggered_only = yes
@@ -1431,7 +1431,7 @@ country_event = {
 	id = mrpact_negociations_estonia.11
 	title = mrpact_negociations_estonia.11.t
 	desc =  mrpact_negociations_estonia.11.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1525,7 +1525,7 @@ country_event = {
 	id = mrpact_negociations_latvia.1
 	title = mrpact_negociations_latvia.1.t
 	desc =  mrpact_negociations_latvia.1.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -1568,7 +1568,7 @@ country_event = {
 	id = mrpact_negociations_latvia.2
 	title = mrpact_negociations_latvia.2.t
 	desc =  mrpact_negociations_latvia.2.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -1586,7 +1586,7 @@ country_event = {
 	id = mrpact_negociations_latvia.3
 	title = mrpact_negociations_latvia.3.t
 	desc =  mrpact_negociations_latvia.3.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -1620,7 +1620,7 @@ country_event = {
 	id = mrpact_negociations_latvia.4
 	title = mrpact_negociations_latvia.4.t
 	desc =  mrpact_negociations_latvia.4.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1688,7 +1688,7 @@ country_event = {
 	id = mrpact_negociations_latvia.5
 	title = mrpact_negociations_latvia.5.t
 	desc =  mrpact_negociations_latvia.5.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1759,7 +1759,7 @@ country_event = {
 	id = mrpact_negociations_latvia.6
 	title = mrpact_negociations_latvia.6.t
 	desc =  mrpact_negociations_latvia.6.d
-	
+
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
@@ -1793,7 +1793,7 @@ country_event = {
 	id = mrpact_negociations_latvia.7
 	title = mrpact_negociations_latvia.7.t
 	desc =  mrpact_negociations_latvia.7.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1864,7 +1864,7 @@ country_event = {
 	id = mrpact_negociations_latvia.8
 	title = mrpact_negociations_latvia.8.t
 	desc =  mrpact_negociations_latvia.8.d
-	
+
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
@@ -1898,7 +1898,7 @@ country_event = {
 	id = mrpact_negociations_latvia.9
 	title = mrpact_negociations_latvia.9.t
 	desc =  mrpact_negociations_latvia.9.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -1969,7 +1969,7 @@ country_event = {
 	id = mrpact_negociations_latvia.10
 	title = mrpact_negociations_latvia.10.t
 	desc =  mrpact_negociations_latvia.10.d
-	
+
 	picture = GFX_report_event_tur_the_montreux_convention
 
 	is_triggered_only = yes
@@ -1988,7 +1988,7 @@ country_event = {
 	id = mrpact_negociations_latvia.11
 	title = mrpact_negociations_latvia.11.t
 	desc =  mrpact_negociations_latvia.11.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2067,7 +2067,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.1
 	title = mrpact_negociations_lithuania.1.t
 	desc =  mrpact_negociations_lithuania.1.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2116,7 +2116,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.2
 	title = mrpact_negociations_lithuania.2.t
 	desc =  mrpact_negociations_lithuania.2.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2137,7 +2137,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.3
 	title = mrpact_negociations_lithuania.3.t
 	desc =  mrpact_negociations_lithuania.3.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2189,7 +2189,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.4
 	title = mrpact_negociations_lithuania.4.t
 	desc =  mrpact_negociations_lithuania.4.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2259,7 +2259,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.5
 	title = mrpact_negociations_lithuania.5.t
 	desc =  mrpact_negociations_lithuania.5.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2345,7 +2345,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.6
 	title = mrpact_negociations_lithuania.6.t
 	desc =  mrpact_negociations_lithuania.6.d
-	
+
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
@@ -2389,7 +2389,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.7
 	title = mrpact_negociations_lithuania.7.t
 	desc =  mrpact_negociations_lithuania.7.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2475,7 +2475,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.8
 	title = mrpact_negociations_lithuania.8.t
 	desc =  mrpact_negociations_lithuania.8.d
-	
+
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
@@ -2519,7 +2519,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.9
 	title = mrpact_negociations_lithuania.9.t
 	desc =  mrpact_negociations_lithuania.9.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2605,7 +2605,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.10
 	title = mrpact_negociations_lithuania.10.t
 	desc =  mrpact_negociations_lithuania.10.d
-	
+
 	picture = GFX_report_event_tur_the_montreux_convention
 
 	is_triggered_only = yes
@@ -2624,7 +2624,7 @@ country_event = {
 	id = mrpact_negociations_lithuania.11
 	title = mrpact_negociations_lithuania.11.t
 	desc =  mrpact_negociations_lithuania.11.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -2705,7 +2705,7 @@ country_event = {
 	id = mrpact_negociations_poland.1
 	title = mrpact_negociations_poland.1.t
 	desc =  mrpact_negociations_poland.1.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2750,7 +2750,7 @@ country_event = {
 	id = mrpact_negociations_poland.2
 	title = mrpact_negociations_poland.2.t
 	desc =  mrpact_negociations_poland.2.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2768,7 +2768,7 @@ country_event = {
 	id = mrpact_negociations_poland.3
 	title = mrpact_negociations_poland.3.t
 	desc =  mrpact_negociations_poland.3.d
-	
+
 	picture = GFX_report_event_military_planning
 
 	is_triggered_only = yes
@@ -2822,7 +2822,7 @@ country_event = {
 	id = mrpact_negociations_poland.4
 	title = mrpact_negociations_poland.4.t
 	desc =  mrpact_negociations_poland.4.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -3040,7 +3040,7 @@ country_event = {
 	id = mrpact_negociations_poland.5
 	title = mrpact_negociations_poland.5.t
 	desc =  mrpact_negociations_poland.5.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -3116,7 +3116,7 @@ country_event = {
 				}
 				89 = { set_state_flag = mr_pact_sov_reserved_state_unnegotiable }
 			}
-			
+
 			if = {
 				limit = {
 					GER = {
@@ -3259,7 +3259,7 @@ country_event = {
 	id = mrpact_negociations_poland.6
 	title = mrpact_negociations_poland.6.t
 	desc =  mrpact_negociations_poland.6.d
-	
+
 	picture = GFX_report_event_SOV_demands
 
 	is_triggered_only = yes
@@ -3300,7 +3300,7 @@ country_event = {
 	id = mrpact_negociations_poland.7
 	title = mrpact_negociations_poland.7.t
 	desc =  mrpact_negociations_poland.7.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -3376,7 +3376,7 @@ country_event = {
 				}
 				89 = { set_state_flag = mr_pact_sov_reserved_state_unnegotiable }
 			}
-			
+
 			if = {
 				limit = {
 					GER = {
@@ -3519,7 +3519,7 @@ country_event = {
 	id = mrpact_negociations_poland.8
 	title = mrpact_negociations_poland.8.t
 	desc =  mrpact_negociations_poland.8.d
-	
+
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
@@ -3563,7 +3563,7 @@ country_event = {
 	id = mrpact_negociations_poland.9
 	title = mrpact_negociations_poland.9.t
 	desc =  mrpact_negociations_poland.9.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -3639,7 +3639,7 @@ country_event = {
 				}
 				89 = { set_state_flag = mr_pact_sov_reserved_state_unnegotiable }
 			}
-			
+
 			if = {
 				limit = {
 					GER = {
@@ -3782,7 +3782,7 @@ country_event = {
 	id = mrpact_negociations_poland.10
 	title = mrpact_negociations_poland.10.t
 	desc =  mrpact_negociations_poland.10.d
-	
+
 	picture = GFX_report_event_tur_the_montreux_convention
 
 	is_triggered_only = yes
@@ -3801,7 +3801,7 @@ country_event = {
 	id = mrpact_negociations_poland.11
 	title = mrpact_negociations_poland.11.t
 	desc =  mrpact_negociations_poland.11.d
-	
+
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
@@ -4049,7 +4049,7 @@ country_event = {
 			ENG = {
 				if = {
 					limit = {
-						NOT = {	
+						NOT = {
 							OR = {
 								has_government = neutrality
 								has_government = fascism
@@ -4640,7 +4640,7 @@ country_event = { #operation himmler (GER POV)
 				}
 				add_opinion_modifier = {
 					target = GER
-   					modifier = protest_action_strong
+					modifier = protest_action_strong
 				}
 			}
 		}
@@ -4721,15 +4721,15 @@ country_event = { #operation himmler (GER POV)
 					days = 70
 				}
 			}
-			sound_effect = war_pol
+			SOVnd_effect = war_pol
 			if = {
 				limit = {
 					OR = {
 						SOV = { is_ai = no }
 						GER = { is_ai = no }
 					}
-				}	
-				POL = {	
+				}
+				POL = {
 					add_ideas = POL_the_ultimate_struggle
 				}
 			}
@@ -4796,7 +4796,7 @@ country_event = {
 	picture = GFX_report_event_soviet_tanks
 
 	is_triggered_only = yes
-	
+
 	#trigger = {
 	#	SOV = {
 	#		is_ai = yes
@@ -4875,7 +4875,7 @@ country_event = {
 						}
 					}
 				}
-				POL = {	
+				POL = {
 					add_ideas = POL_the_ultimate_struggle_3
 				}
 			}
@@ -4887,7 +4887,7 @@ country_event = {
 						GER = { is_ai = no }
 					}
 				}
-				POL = {	
+				POL = {
 					swap_ideas = {
 						remove_idea = POL_the_ultimate_struggle
 						add_idea = POL_the_ultimate_struggle_2
@@ -4919,7 +4919,7 @@ country_event = {
 					POL = {
 						is_in_faction_with = ENG
 					}
-					ENG = { 
+					ENG = {
 						is_faction_leader = yes
 						has_war_with = GER
 					}
@@ -4935,7 +4935,7 @@ country_event = {
 					POL = {
 						is_in_faction_with = FRA
 					}
-					FRA = { 
+					FRA = {
 						is_faction_leader = yes
 						has_war_with = GER
 					}
@@ -5012,7 +5012,7 @@ country_event = { #The soviets invade Poland! (ENG POV)
 				}
 			}
 		}
-		POL = { 
+		POL = {
 			add_opinion_modifier = { target = ENG modifier = remained_passive_to_the_soviet_invasion }
 		}
 		every_other_country = {
@@ -5022,7 +5022,7 @@ country_event = { #The soviets invade Poland! (ENG POV)
 			country_event = pol_sov_reaction.1
 		}
 	}
-} 
+}
 
 add_namespace = pol_sov_reaction
 
@@ -5039,7 +5039,7 @@ country_event = { #The soviets invade Poland, ENG don't want to intervene (rando
 		ai_chance = {
 			factor = 100
 		}
-		POL = { 
+		POL = {
 			add_opinion_modifier = { target = ROOT modifier = remained_passive_to_the_soviet_invasion }
 		}
 		hidden_effect = {
@@ -5073,7 +5073,7 @@ country_event = { #The soviets invade Poland, ENG don't want to intervene (rando
 			remove_ideas = POL_passive_to_the_soviet_invasion
 		}
 	}
-} 
+}
 
 country_event = { #The soviets invade Poland, ENG want to intervene (random other faction member pov)
 	id = pol_sov_reaction.2
@@ -5110,7 +5110,7 @@ country_event = { #The soviets invade Poland, ENG want to intervene (random othe
 			}
 		}
 		add_political_power = -80
-		POL = { 
+		POL = {
 			add_opinion_modifier = { target = ROOT modifier = remained_passive_to_the_soviet_invasion }
 		}
 		hidden_effect = {
@@ -5121,7 +5121,7 @@ country_event = { #The soviets invade Poland, ENG want to intervene (random othe
 			}
 		}
 	}
-} 
+}
 
 ###############################################################################
 # EVENT IF THE SOVIET INVASION OF POLAND TAKES TOO MUCH TIME
@@ -5176,7 +5176,7 @@ country_event = {
 					}
 					remove_ideas = POL_passive_to_the_soviet_invasion_2
 				}
-				
+
 				if = {
 					limit = {
 						has_idea = POL_the_ultimate_struggle_2
@@ -5694,7 +5694,7 @@ country_event = { #The soviets refuse our demands! (POL POV)
 		add_political_power = -20
 		add_war_support = -0.05
 	}
-	
+
 	option = {
 		ai_chance = {
 			base = 15
@@ -5716,7 +5716,7 @@ country_event = { #The soviets stops paying the war reparations! (either annexed
 	title = pol_soviet_retrayal.11.t
 	desc = pol_soviet_retrayal.11.d
 	picture = GFX_report_event_generic_battle
-	
+
 	fire_only_once = yes
 
 	trigger = {
@@ -5757,9 +5757,9 @@ country_event = { #War reparations to the polish stopped (they are either annexe
 	title = pol_soviet_retrayal.12.t
 	desc = pol_soviet_retrayal.12.d
 	picture = GFX_report_event_generic_battle
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		TAG = SOV
 		has_idea = SOV_war_reparations_to_pol
@@ -5820,9 +5820,9 @@ country_event = {
 	#	}
 	#	has_global_flag = sov_yes_pact
 	#	has_global_flag = sov_invade_poland
-	#	SOU = { exists = yes }
+	#	SOV = { exists = yes }
 	#	GER =  { has_war_with = POL }
-	#	GER =  { 
+	#	GER =  {
 	#		NOT = { has_war_with = SOV }
 	#	}
 	#	SOV = { has_war_with = POL }
@@ -5839,7 +5839,7 @@ country_event = {
 	#mean_time_to_happen = {
 	#	days = 1
 	#}
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -5863,7 +5863,7 @@ country_event = {
 					GER = { is_faction_leader = yes }
 					any_allied_country = {
 						NOT = { is_subject_of = GER }
-						NOT = { tag = SOU }
+						NOT = { tag = SOV }
 						OR = {
 							controls_state = 96
 							controls_state = 95
@@ -5882,7 +5882,7 @@ country_event = {
 					AND = {
 						is_in_faction_with = ROOT
 						NOT = { is_subject_of = GER }
-						NOT = { tag = SOU }
+						NOT = { tag = SOV }
 						OR = {
 							controls_state = 96
 							controls_state = 95
@@ -5993,8 +5993,10 @@ country_event = {
 				transfer_state = 97
 				transfer_state = 89
 				transfer_state = 784
-				
+
 				white_peace = POL
+				set_global_flag = GER_SOV_WHITE_PEACE_1
+				GER_SOV_white_peace_check = yes
 			}
 			every_other_country = {
 				limit = {
@@ -6062,7 +6064,7 @@ country_event = { #event for the end of the fighting
 	picture = GFX_report_event_soviet_german_soldier_handshake
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = poland_partitionned_flag
@@ -6496,14 +6498,15 @@ country_event = { #SOV ask us to hand them over their territories
 			SOV = {
 				transfer_state = 97
 				transfer_state = 92
-				
+
 				transfer_state = 96
 				transfer_state = 95
 				transfer_state = 94
 				transfer_state = 93
 				transfer_state = 91
 				transfer_state = 89
-				
+				transfer_state = 784
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -6881,8 +6884,8 @@ country_event = { #SOV wants to renegociate the pact since we're holding their a
 		}
 		name = pol_par_his_ger.5.a #Ok we'll keep it and give them Lithuania in exchange
 		custom_effect_tooltip = SOV_mr_pact_lithuania_if_transfer_tt
-		SOV = { 
-			country_event = { id = pol_par_his_ger.6 hours = 1 } 
+		SOV = {
+			country_event = { id = pol_par_his_ger.6 hours = 1 }
 		}
 	}
 	option = {
@@ -6922,7 +6925,7 @@ country_event = { #SOV wants to renegociate the pact since we're holding their a
 				transfer_state = 93
 				transfer_state = 91
 				transfer_state = 89
-				
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -7306,7 +7309,7 @@ country_event = { #GER wants to trade the territories they're holding for lithua
 				transfer_state = 91
 				transfer_state = 89
 				transfer_state = 784
-				
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -7410,7 +7413,7 @@ country_event = { #SOV is not interested in Lithuania
 			SOV = {
 				transfer_state = 97
 				transfer_state = 92
-				
+
 				transfer_state = 96
 				transfer_state = 95
 				transfer_state = 94
@@ -7418,7 +7421,7 @@ country_event = { #SOV is not interested in Lithuania
 				transfer_state = 91
 				transfer_state = 89
 				transfer_state = 784
-				
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -7952,7 +7955,7 @@ country_event = { #SOV leaves us the territories we conquered
 
 add_namespace = pol_par_his_nothing
 
-country_event = { 
+country_event = {
 	id = pol_par_his_nothing.1
 	title = pol_par_his_nothing.1.title
 	desc = pol_par_his_nothing.1.desc
@@ -8011,7 +8014,7 @@ country_event = {
 				transfer_state = 91
 				transfer_state = 89
 				transfer_state = 784
-				
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -8064,7 +8067,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = {
 	id = pol_par_his_nothing.2
 	title = pol_par_his_nothing.2.title
 	desc = pol_par_his_nothing.2.desc
@@ -8218,7 +8221,7 @@ country_event = { #GER ask us to hand them over their territories
 				transfer_state = 91
 				transfer_state = 89
 				transfer_state = 784
-				
+
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
 				GER_SOV_white_peace_check = yes
@@ -8329,7 +8332,7 @@ country_event = { #GER ask us to hand them over their territories
 			#	}
 			#	SOV = { transfer_state = PREV }
 			#}
-			
+
 			if = {
 				limit = {
 					SOV = {
@@ -8481,7 +8484,7 @@ country_event = { #GER ask us to hand them over their territories
 				}
 			}
 			#MODIFIER
-			
+
 			SOV = {
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -8652,7 +8655,7 @@ country_event = { #GER says we can  keep the territories
 			SOV = {
 				transfer_state = 97
 				transfer_state = 92
-				
+
 				transfer_state = 96
 				transfer_state = 95
 				transfer_state = 94
@@ -8953,7 +8956,7 @@ country_event = { #SOV ask us if we can hand each others territories
 			#	}
 			#	SOV = { transfer_state = PREV }
 			#}
-			
+
 			if = {
 				limit = {
 					SOV = {
@@ -9105,7 +9108,7 @@ country_event = { #SOV ask us if we can hand each others territories
 				}
 			}
 			#MODIFIER
-			
+
 			SOV = {
 				white_peace = POL
 				set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -9566,9 +9569,9 @@ country_event = { #event if GER conquered all of Poland without SOV joining as p
 	picture = GFX_report_event_germany_victory
 
 	#is_triggered_only = yes
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = SOV
 		has_global_flag = sov_accepted_mr_pact
@@ -9579,7 +9582,7 @@ country_event = { #event if GER conquered all of Poland without SOV joining as p
 			SOV = { has_war_with = POL }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -10107,7 +10110,7 @@ country_event = { #Ultimatum to Lithuania, what should we ask?
 	picture = GFX_report_event_germany_politician_handshake
 
 	is_triggered_only = yes
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -10286,7 +10289,7 @@ country_event = { #Lithuania Complies
 		add_political_power = 40
 		add_war_support = 0.05
 		GER = {
-			transfer_state = 814	
+			transfer_state = 814
 			if = {
 				limit = {
 					188 = { is_owned_by = LIT }

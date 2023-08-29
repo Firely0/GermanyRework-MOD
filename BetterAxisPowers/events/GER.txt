@@ -685,8 +685,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
-		GER = {
-			remove_ideas = POL_focused_on_the_eastern_front
+		hidden_effect = {
+			GER = {
+				remove_ideas = POL_focused_on_the_eastern_front
+			}
 		}
 	}
 	option = {
@@ -4027,7 +4029,7 @@ country_event = {
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
-			}	
+			}
 			set_stability = 0.9
 			set_war_support = 0.8
 			drop_cosmetic_tag = yes
@@ -5257,8 +5259,14 @@ country_event = {
 country_event = {
 	id = GER_health_adolf.2
 	title = "Purge of Army"
-	desc = "After the failure of the last military operation, Adolf Hitler, after a detailed presentation by the Wehrmacht and the SS, issued the new orders and changes in tasks that he considered necessary. We'll have to review some of our generals."
+	desc = "After the failure of the last military operation, after a detailed presentation by the Wehrmacht and the SS, Adolf Hitler issued the new orders and changes in tasks that he considered necessary. We'll have to review some of our generals."
 	picture = GFX_report_event_hitler_parade
+
+	immediate = {
+		hidden_effect = {
+			activate_mission = GER_hitler_purge_leaders
+		}
+	}
 
 	is_triggered_only = yes
 
@@ -5266,11 +5274,7 @@ country_event = {
 		name = "For a better Germany!"
 
 		ai_chance = {
-			base = 100
-		}
-
-		hidden_effect = {
-			activate_mission = GER_hitler_purge_leaders
+			factor = 100
 		}
 	}
 }

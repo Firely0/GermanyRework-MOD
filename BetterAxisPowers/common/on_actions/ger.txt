@@ -622,7 +622,7 @@ on_actions = {
 			OR = {
 				TO = { tag = ITA }
 				TO = { tag = LIB }
-			} # Italy gains control of a state
+			} # Italy or Libya gains control of a state
 			NOT = {
 				has_global_flag = NO_MORE_SUPPLY_REQ_LIB
 			}

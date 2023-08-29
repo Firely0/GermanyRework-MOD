@@ -184,7 +184,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = germany.11.a	#sounds good
+		name = germany.11.a	#SOVnds good
 		ai_chance = {
 			factor = 90
 			modifier = {
@@ -368,7 +368,7 @@ country_event = {
 			limit = {
 				NOT = { owns_state = 766 }
 			}
-			add_state_claim = 766 #SOUTHERN BESSARABIA (ROM)
+			add_state_claim = 766 #SOVTHERN BESSARABIA (ROM)
 		}
 
 		hidden_effect =  { add_timed_idea = { idea = SOV_molotov_ribbentrop_pact days = 730 } }
@@ -525,7 +525,7 @@ country_event = {
 		}
 		name = germany.14.a
 		MR_pact_transfer_state_effect = yes
-		SOU = { country_event = { id = germany.15 hours = 3 } }
+		SOV = { country_event = { id = germany.15 hours = 3 } }
 	}
 	option = {
 		name = germany.14.b
@@ -545,7 +545,7 @@ country_event = {
 				}
 			}
 		}
-		SOU = { country_event = germany.16 }
+		SOV = { country_event = germany.16 }
 		clr_global_flag = sov_yes_pact
 		diplomatic_relation = {
 			country = SOV
@@ -650,7 +650,7 @@ country_event = {
 			}
 			else = { #No more allies left to ask, actually do the MR pact
 				MR_pact_transfer_faction_state_effect = yes
-				SOU = { country_event = germany.15 }
+				SOV = { country_event = germany.15 }
 			}
 		}
 	}
@@ -666,7 +666,7 @@ country_event = {
 			}
 			country_event = germany.1003
 		}
-		SOU = { country_event = germany.16 }
+		SOV = { country_event = germany.16 }
 		clr_global_flag = sov_yes_pact
 		GER = {
 			diplomatic_relation = {
@@ -675,7 +675,7 @@ country_event = {
 				active = no
 			}
 		}
-		SOU = {
+		SOV = {
 			if = {
 				limit = {
 					NOT = { owns_state = 146 }
@@ -842,7 +842,7 @@ country_event = {
 				limit = {
 					NOT = { owns_state = 766 }
 				}
-				add_state_claim = 766 #SOUTHERN BESSARABIA (ROM)
+				add_state_claim = 766 #SOVTHERN BESSARABIA (ROM)
 			}
 			effect_tooltip = {
 				create_wargoal = {
@@ -876,7 +876,7 @@ country_event = {
 					active = no
 				}
 			}
-			SOU = {
+			SOV = {
 				if = {
 					limit = {
 						NOT = { owns_state = 146 }
@@ -1043,7 +1043,7 @@ country_event = {
 					limit = {
 						NOT = { owns_state = 766 }
 					}
-					add_state_claim = 766 #SOUTHERN BESSARABIA (ROM)
+					add_state_claim = 766 #SOVTHERN BESSARABIA (ROM)
 				}
 				effect_tooltip = {
 					create_wargoal = {
@@ -1069,7 +1069,7 @@ country_event = {
 		name = germany.12.a
 		if = {
 			limit = {
-				SOU = {
+				SOV = {
 					controls_state = 93
 					controls_state = 94
 				}
@@ -3960,7 +3960,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = germany.75.a	#sounds good
+		name = germany.75.a	#SOVnds good
 		GER = {
 			country_event = { days = 1 id = germany.76 }
 			add_opinion_modifier = {
@@ -5947,7 +5947,7 @@ country_event = {
 
 	immediate = {
 		set_global_flag = had_yalta_conference
-		SOU = {
+		SOV = {
 			save_event_target_as = yalta_partner
 		}
 		ROOT = {
@@ -6212,10 +6212,10 @@ country_event = {
 			60 = { set_state_flag = morgenthau_north_german } 	
 
 		#SGS
-			54 = { set_state_flag = morgenthau_south_german } 
-			50 = { set_state_flag = morgenthau_south_german } 
-			52 = { set_state_flag = morgenthau_south_german } 
-			53 = { set_state_flag = morgenthau_south_german } 		
+			54 = { set_state_flag = morgenthau_SOVth_german } 
+			50 = { set_state_flag = morgenthau_SOVth_german } 
+			52 = { set_state_flag = morgenthau_SOVth_german } 
+			53 = { set_state_flag = morgenthau_SOVth_german } 		
 		
 		hidden_effect = {
 			news_event = { days = 1 id = news.236 }

@@ -5196,6 +5196,15 @@ focus_tree = {
 		prerequisite = { focus = GER_Total_War focus = GER_underground_factories }
 		icon = GFX_goal_supremefuhrer
 		available = {
+			if = {
+				limit = {
+					has_country_flag = GER_Kaiser_in_Country
+				}
+				custom_trigger_tooltip = {
+					tooltip = New_Law_arms_Fuhrer_tt
+					has_country_flag = New_Law_arms_Fuhrer
+				}
+			}
 			date > 1943.01.01
 			has_country_leader = {
 				character = GER_adolf_hitler
@@ -10302,7 +10311,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = GER_Last_Strike
-				days = 183
+				days = 182
 			}
 		}
 	}
@@ -11266,7 +11275,7 @@ focus = {
 		id = GER_request_help
 		icon = GFX_goal_anschluss
 		relative_position_id = GER_against_fuhrer
-		x = 12
+		x = 9
 		y = 0
 		cost = 3
 		
@@ -11664,7 +11673,7 @@ focus = {
 			has_global_flag = GER_civil_war
 		}
 		relative_position_id = GER_against_fuhrer
-		x = -12
+		x = -9
 		y = 0
 		cost = 3
 		
@@ -12163,6 +12172,15 @@ focus = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				OR = {
+					has_completed_focus = GER_against_fuhrer
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
@@ -14528,8 +14546,6 @@ focus = {
 						is_subject = no
 					}
 				}
-				SOV = { country_event = { id = wtt_germany.23 } }
-				add_named_threat = { threat = 5 name = GER_finnish_membership }
 				FIN = {
 					country_event = { id = generic.5 }
 					add_ai_strategy = {
@@ -14538,6 +14554,8 @@ focus = {
 						value = 200
 					}	
 				}
+				SOV = { country_event = { id = wtt_germany.23 } }
+				add_named_threat = { threat = 5 name = GER_finnish_membership }
 			}
 			EST = {
 				add_ai_strategy = {

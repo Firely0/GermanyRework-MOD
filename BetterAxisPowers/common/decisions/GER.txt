@@ -336,6 +336,7 @@ health_of_adolf_category = {
 
 		visible = {
 		}
+
 		is_good = no
 		selectable_mission = no
 		days_mission_timeout = 3
@@ -2532,7 +2533,7 @@ GER_Africa_Operations = {
 		ai_will_do = {
 		}
 		complete_effect = {
-			activate_mission = GER_Battle_of_El_Alamein
+			activate_mission = GER_Battle_of_El_Alamein_decision
 			GER_erwin_rommel = {
 				add_logistics = 1
 			}

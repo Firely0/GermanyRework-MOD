@@ -1287,12 +1287,18 @@ GER_Vichy_state_modifier_remove = {
 GER_SOV_white_peace_check = {
 	if = {
 		limit = {
-			original_tag = SOV
-			has_war_with = POL
-			has_global_flag = GER_SOV_WHITE_PEACE_1
+			has_global_flag = GER_SOV_WHITE_PEACE_1 #We Should Check for White Peace
+			POL = {
+				has_capitulated = yes
+				has_war_with = SOV #Cap but Keep Fighting with SOV.
+			}
 		}
-		white_peace = POL
+		SOV = { white_peace = POL }
 		clr_global_flag = GER_SOV_WHITE_PEACE_1
+	}
+	if = {
+		limit = { 784 = { has_state_flag = mr_pact_sov_reserved_state NOT = { is_controlled_by = SOV } } }
+		transfer_state_to = SOV
 	}
 }
 
@@ -1577,7 +1583,7 @@ GER_Give_fascism_effect = {
 			target = GER
 			modifier = oldtradeparterns
 		}
-	} 
+	}
 	add_opinion_modifier = {
 		target = SWE
 		modifier = oldtradeparterns
@@ -2668,7 +2674,7 @@ GER_lower_supply_for_libya_effect = { #Just Lower
 			modifier = NORMAL_SUPPLY_STATE
 		}
 	}
-} 
+}
 
 GER_low_supply_for_libya_effect = { #Stop At Low Supply
 	every_controlled_state = {
@@ -2686,7 +2692,7 @@ GER_low_supply_for_libya_effect = { #Stop At Low Supply
 	}
 	every_controlled_state = {
 		limit = {
-			
+
 			has_dynamic_modifier = {
 				modifier = LOW_SUPPLY_STATE
 			}
