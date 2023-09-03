@@ -2931,6 +2931,20 @@ ideas = {
 			}
 		}
 
+		GER_rebuild_the_nation_fascm = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+
 		GER_national_revitalization = {
 			allowed = {
 				always = no

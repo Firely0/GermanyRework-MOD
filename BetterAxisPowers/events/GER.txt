@@ -4291,7 +4291,7 @@ country_event = {
 			base = 100
 		}
 		add_stability = 0.05
-		add_timed_idea = { idea = GER_rebuild_the_nation days = 180 }
+		add_timed_idea = { idea = GER_rebuild_the_nation_fascm days = 180 }
 		delete_unit_template_and_units = { division_template = "SS-Sturmbrigade" }
 	}
 }
