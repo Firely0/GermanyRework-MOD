@@ -707,6 +707,7 @@ country_event = {
 		hidden_effect = {
 			news_event = { id = wtt_news.8 hours = 6 }
 			clr_country_flag = GER_civil_war
+			clr_global_flag = GER_civil_war
 			set_global_flag = GER_civil_war_end
 		}
 	}
@@ -729,7 +730,7 @@ country_event = {
 		add_political_power = 75
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		set_country_flag = GER_imprisoned_fascist_leadership
-		delete_unit_template_and_units = { division_template = "Landsturmregiment" }
+		delete_unit_template_and_units = { division_template = "Irregulare Truppe" }
 		if = { 
 			limit = { is_faction_leader = yes } 
 			leave_faction = yes
