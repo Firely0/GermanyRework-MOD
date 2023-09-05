@@ -1142,9 +1142,9 @@ country_event = {
 		custom_effect_tooltip = GER_Fuhrer_Deposed_tt
 		hidden_effect = {
 			remove_ideas = Kaiser_idea
+			remove_ideas = Kaiser_Idea_king
 			add_ideas = Fuhrer_idea
 			set_country_flag = GER_Fuhrer_in_Country
-			clr_country_flag = GER_Kaiser_in_Country
 			remove_power_balance = {
 				id = GER_power_balance
 			}

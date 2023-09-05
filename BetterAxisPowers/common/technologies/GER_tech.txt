@@ -1,0 +1,106 @@
+technologies = {
+
+	masterful_blitz_GERV = {
+		enable_tactic = tactic_masterful_blitz_ger
+
+		doctrine = yes
+		research_cost = 1
+
+		#set at gamestart
+		allow = {
+			always = no
+		}
+	}
+
+	smoke_and_fire = {
+		enable_tactic = tactic_smoke_and_fire
+
+		doctrine = yes
+		research_cost = 1
+
+		#set at gamestart
+		allow = {
+			always = no
+		}
+	}
+
+	GER_SS_Field_Medic_tech = {
+		allow = { always = no }
+		field_hospital = {
+			casualty_trickleback = 0.20 
+			experience_loss_factor = -0.2
+		}
+	}
+
+	Gebirgsjager_mountaineers_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			Gebirgsjager_mountaineers
+		}
+	}
+	
+	Fallschirmjager_paratrooper_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			Fallschirmjager_paratrooper
+		}
+	}
+
+	Panzerschreck_at = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1940
+
+		category_all_infantry = {
+			hard_attack = 0.10
+			ap_attack = 0.5
+		}
+
+	}
+
+	Schutzstaffel_infantry_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			Schutzstaffel_infantry
+		}
+	}
+
+	irregular_infantry_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			irregular_infantry 
+		}
+	}
+}
