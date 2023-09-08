@@ -2307,7 +2307,7 @@ GER_Africa_Operations = {
 					}
 					LIB = { GER_normal_supply_for_libya_effect = yes }
 				}
-				if = {
+				else_if = {
 					limit = { # No Ships No Supply
 						NOT = { has_global_flag = extra_supply_to_africa }
 						ITA = { ships_in_area = { area = 29 size < 1 }  }
@@ -2318,6 +2318,7 @@ GER_Africa_Operations = {
 					limit = {
 						NOT = { has_global_flag = extra_supply_to_africa }
 						ITA = { ships_in_area = { area = 29 size > 32 }  }
+						ITA = { ships_in_area = { area = 29 size < 64 }  }
 					}
 					LIB = { GER_low_supply_for_libya_effect = yes }
 				}
@@ -2333,33 +2334,6 @@ GER_Africa_Operations = {
 						has_global_flag = extra_supply_to_africa
 					}
 					LIB = { GER_normal_supply_for_libya_effect = yes }
-				}
-				LIB = {
-					any_controlled_state = {
-						limit = {
-							has_state_flag = LIBYA_LOGISTICS_STATE
-							NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-							NOT = {
-								OR = {
-									has_dynamic_modifier = {
-										modifier = NO_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = LOW_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = NORMAL_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = EXTRA_SUPPLY_STATE
-									}
-								}
-							}
-						}
-						add_dynamic_modifier = {
-							modifier = LOW_SUPPLY_STATE
-						}
-					}
 				}
 			}
 			else_if = {
@@ -2380,6 +2354,7 @@ GER_Africa_Operations = {
 					limit = {
 						NOT = { has_global_flag = extra_supply_to_africa }
 						ITA = { ships_in_area = { area = 29 size > 32 }  }
+						ITA = { ships_in_area = { area = 29 size < 64 }  }
 					}
 					ITA = { GER_low_supply_for_libya_effect = yes }
 				}
@@ -2395,33 +2370,6 @@ GER_Africa_Operations = {
 						has_global_flag = extra_supply_to_africa
 					}
 					ITA = { GER_normal_supply_for_libya_effect = yes }
-				}
-				ITA = {
-					any_controlled_state = {
-						limit = {
-							has_state_flag = LIBYA_LOGISTICS_STATE
-							NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-							NOT = {
-								OR = {
-									has_dynamic_modifier = {
-										modifier = NO_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = LOW_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = NORMAL_SUPPLY_STATE
-									}
-									has_dynamic_modifier = {
-										modifier = EXTRA_SUPPLY_STATE
-									}
-								}
-							}
-						}
-						add_dynamic_modifier = {
-							modifier = LOW_SUPPLY_STATE
-						}
-					}
 				}
 			}
 			hidden_effect = {

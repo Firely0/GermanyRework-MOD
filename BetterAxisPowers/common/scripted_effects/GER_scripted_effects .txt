@@ -2633,6 +2633,71 @@ GER_supply_for_libya_effect = {
 	GER = { #Should Reactive Mission so yeah.
 		activate_mission = GER_Supply_for_Africa
 	}
+	ITA = {
+		if = {
+			limit = {
+				is_in_faction_with = GER
+			}
+			any_controlled_state = {
+				limit = {
+					has_state_flag = LIBYA_LOGISTICS_STATE
+					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = NO_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = LOW_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = NORMAL_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = EXTRA_SUPPLY_STATE
+							}
+						}
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
+			}
+		}
+	}
+	LIB = {
+		if = {
+			limit = {
+				is_puppet_of = ITA
+				is_in_faction_with = GER
+			}
+			any_controlled_state = {
+				limit = {
+					has_state_flag = LIBYA_LOGISTICS_STATE
+					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = NO_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = LOW_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = NORMAL_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = EXTRA_SUPPLY_STATE
+							}
+						}
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
+			}
+		}
+	}
 }
 
 GER_lower_supply_for_libya_effect = { #Just Lower

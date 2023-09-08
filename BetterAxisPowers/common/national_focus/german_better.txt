@@ -6933,6 +6933,7 @@ focus_tree = {
 								state = 662
 								state = 450 
 								state = 663
+								state = 451
 							}
 						}
 						set_state_flag = LIBYA_LOGISTICS_STATE
@@ -6976,6 +6977,7 @@ focus_tree = {
 								state = 662
 								state = 450 
 								state = 663
+								state = 451
 							}
 						}
 						set_state_flag = LIBYA_LOGISTICS_STATE
@@ -6988,7 +6990,6 @@ focus_tree = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 451
 						state = 452
 						state = 665
 					}
