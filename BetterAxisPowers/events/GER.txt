@@ -5029,6 +5029,8 @@ country_event = {
 	desc = "With the further deterioration of Adolf Hitler's health problems, a new leader is needed to replace the retired Adolf Hitler."
 	picture = GFX_report_event_generic_sign_treaty1
 
+	is_triggered_only = yes
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = Adolf_retired
@@ -5044,8 +5046,6 @@ country_event = {
 			complete_national_focus = GER_hitler_is_gone
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { # Himmler
 		name = germany.71.a
@@ -5091,7 +5091,6 @@ country_event = {
 				ideology = fascism
 				portrait = GFX_portrait_karl_donitz_new
 			}
-			GER_fix_Volkssturm = yes
 			complete_national_focus = GER_Power_Karl_Donitz
 			add_popularity = {
 				ideology = fascism
@@ -5275,6 +5274,111 @@ country_event = {
 
 		ai_chance = {
 			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = GER_health_adolf.3
+	title = "Death of Adolf Hitler"
+	desc = "Adolf Hitler and his wife Eva Braun, who were in the Führerbunker when Berlin fell under enemy control, committed suicide. We have to choose a new leader to rule temporarily as an emergency government."
+	picture = GFX_report_event_bunker_01
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_power_balance = {
+				id = GER_power_balance
+			}
+			GER_fix_Volkssturm = yes
+			uncomplete_national_focus = {
+				focus = GER_Fuhrer
+				uncomplete_children = yes
+				refund_political_power = no
+			}
+			complete_national_focus = GER_hitler_is_gone
+			news_event = {
+				hours = 6
+				id = ger_f_news.7
+			}
+			set_global_flag = Adolf_suicide
+		}
+	}
+
+	option = { # Himmler
+		name = germany.71.a
+		# Himmler becomes the new Fascist leader of Germany
+		kill_country_leader = yes
+		add_stability = 0.05
+		GER_heinrich_himmler = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			complete_national_focus = GER_Power_Heinrich_Himmler
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+		}
+	}
+
+	option = {
+		name = "Karl Dönitz is A Neutral Choice"
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		add_stability = 0.05
+		GER_karl_donitz = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = GFX_portrait_karl_donitz_new
+			}
+			complete_national_focus = GER_Power_Karl_Donitz
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+		}
+	}
+
+	option = { # Göring
+		name = germany.71.b
+		# Göring becomes the new Fascist leader of Germany
+		kill_country_leader = yes
+		add_stability = 0.1
+		GER_hermann_goring = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			complete_national_focus = GER_Power_hermann_goring
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
 		}
 	}
 }

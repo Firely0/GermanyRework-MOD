@@ -3,46 +3,46 @@ GER_germany_atlantikwall_rework_france = {
 	GER_atlantikwall_pyrenes = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
-		    OR = {
+			OR = {
 				GER = { has_full_control_of_state = 806 }
-				806 = { 
+				806 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 806
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 806
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            806 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			806 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = pyrenes_1
@@ -53,7 +53,7 @@ GER_germany_atlantikwall_rework_france = {
 					add_idea = Defense_Industry_2
 				}
 			}
-        }
+		}
 
 		cost = 25
 
@@ -65,233 +65,233 @@ GER_germany_atlantikwall_rework_france = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_pyrenes_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 806 }
-				806 = { 
+				806 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 806
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 806
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            806 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			806 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = pyrenes_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = pyrenes_1
+			has_country_flag = pyrenes_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_pyrenes_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 806 }
-				806 = { 
+				806 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 806
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 806
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            806 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			806 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = pyrenes_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = pyrenes_2
+			has_country_flag = pyrenes_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_pyrenes_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 806 }
-				806 = { 
+				806 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 806
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 806
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            806 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
+			806 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
 			clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
-        }
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = pyrenes_3
+			has_country_flag = pyrenes_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_aquitaine = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 19 }
-				19 = { 
+				19 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -301,42 +301,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 19
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 19
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            19 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			19 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = aquitaine_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -348,233 +348,233 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_aquitaine_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 19 }
-				19 = { 
+				19 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 19
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 19
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            19 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			19 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = aquitaine_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
-        }
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = aquitaine_1
+			has_country_flag = aquitaine_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_aquitaine_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 19 }
-				19 = { 
+				19 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 19
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 19
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            19 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			19 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = aquitaine_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = aquitaine_2
+			has_country_flag = aquitaine_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_aquitaine_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 19 }
-				19 = { 
+				19 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 19
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 19
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            19 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			19 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = aquitaine_3
+			has_country_flag = aquitaine_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_poitou = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 23 }
-				23 = { 
+				23 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -584,42 +584,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 23
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 23
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            23 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			23 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = poitou_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -631,234 +631,234 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_poitou_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 23 }
-				23 = { 
+				23 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 23
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 23
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            23 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			23 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = poitou_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = poitou_1
+			has_country_flag = poitou_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_poitou_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 23 }
-				23 = { 
+				23 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 23
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 23
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            23 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			23 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = poitou_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = poitou_2
+			has_country_flag = poitou_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_poitou_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 23 }
-				23 = { 
+				23 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 23
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 23
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            23 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			23 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = poitou_3
+			has_country_flag = poitou_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_loire = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 30 }
-				30 = { 
+				30 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -868,42 +868,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 30
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 30
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            30 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			30 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = loire_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -915,234 +915,234 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_loire_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 30 }
-				30 = { 
+				30 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 30
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 30
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            30 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			30 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = loire_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = loire_1
+			has_country_flag = loire_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_loire_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 30 }
-				30 = { 
+				30 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 30
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 30
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            30 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			30 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = loire_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = loire_2
+			has_country_flag = loire_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_loire_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 30 }
-				30 = { 
+				30 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 30
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 30
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            30 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			30 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = loire_3
+			has_country_flag = loire_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_britanny = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 14 }
-				14 = { 
+				14 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -1152,42 +1152,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 14
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 14
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            14 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			14 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = britanny_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -1199,234 +1199,234 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_britanny_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 14 }
-				14 = { 
+				14 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 14
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 14
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            14 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			14 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = britanny_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = britanny_1
+			has_country_flag = britanny_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_britanny_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 14 }
-				14 = { 
+				14 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 14
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 14
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            14 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			14 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = britanny_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = britanny_2
+			has_country_flag = britanny_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_britanny_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 14 }
-				14 = { 
+				14 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 14
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 14
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            14 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			14 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = britanny_3
+			has_country_flag = britanny_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_normandy = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = { 
+				15  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -1436,42 +1436,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 15
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 15
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            15 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			15 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = normandy_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -1483,234 +1483,234 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_normandy_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = { 
+				15  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 15
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 15
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            15 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			15 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = normandy_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = normandy_1
+			has_country_flag = normandy_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_normandy_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = { 
+				15  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 15
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 15
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            15 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			15 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = normandy_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = normandy_2
+			has_country_flag = normandy_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_normandy_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = { 
+				15  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 15
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 15
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            15 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			15 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = normandy_3
+			has_country_flag = normandy_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_picardy = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 785 }
-				785  = { 
+				785  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -1720,42 +1720,42 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 785
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 785
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            785 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			785 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = picardy_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -1767,234 +1767,21 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_picardy_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 785 }
-				785  = { 
-					CONTROLLER = {
-						is_puppet_of = GER
-					}
-				}
-			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
-		}
-
-		highlight_states = {
-         highlight_state_targets = {
-          state = 785
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
-
-		on_map_mode = map_and_decisions_view
-		
-		is_good = yes
-		selectable_mission = yes
-		days_remove = 30
-		
-		remove_effect = {
-            785 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
-			}
-			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
-			set_country_flag = picardy_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
-
-        }
-
-		cost = 25
-
-		fire_only_once = yes
-
-		visible = {
-		has_country_flag = picardy_1
-		}
-
-		cancel_if_not_visible = yes
-
-		complete_effect = {
-         GER_add_cost_of_forts = yes
-		}
-	}
-	
-	GER_atlantikwall_picardy_3 = {
-
-		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
-		available = {
-			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = { 
-					CONTROLLER = {
-						is_puppet_of = GER
-					}
-				}
-			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
-		}
-
-		highlight_states = {
-         highlight_state_targets = {
-          state = 785
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
-
-		on_map_mode = map_and_decisions_view
-		
-		is_good = yes
-		selectable_mission = yes
-		days_remove = 30
-		
-		remove_effect = {
-            785 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
-			}
-			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
-			set_country_flag = picardy_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
-
-        }
-
-		cost = 25
-
-		fire_only_once = yes
-
-		visible = {
-		has_country_flag = picardy_2
-		}
-
-		cancel_if_not_visible = yes
-
-		complete_effect = {
-         GER_add_cost_of_forts = yes
-		}
-	}
-	
-	GER_atlantikwall_picardy_4 = {
-
-		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
-		available = {
-			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = { 
-					CONTROLLER = {
-						is_puppet_of = GER
-					}
-				}
-			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
-		}
-
-		highlight_states = {
-         highlight_state_targets = {
-          state = 785
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
-
-		on_map_mode = map_and_decisions_view
-		
-		is_good = yes
-		selectable_mission = yes
-		days_remove = 30
-		
-		remove_effect = {
-            785 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
-
-        }
-
-		cost = 25
-
-		fire_only_once = yes
-
-		visible = {
-		has_country_flag = picardy_3
-		}
-
-		cancel_if_not_visible = yes
-
-		complete_effect = {
-         GER_add_cost_of_forts = yes
-		}
-	}
-	
-	GER_atlantikwall_calais = {
-
-		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
-		available = {
-			OR = {
-				GER = { has_full_control_of_state = 29 }
-				29 = { 
+				785  = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
@@ -2004,42 +1791,255 @@ effect_tooltip = {
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 29
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 785
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            29 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			785 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
+			set_country_flag = picardy_2
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = picardy_1
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			GER_add_cost_of_forts = yes
+		}
+	}
+
+	GER_atlantikwall_picardy_3 = {
+
+		icon = GFX_decision_setup_aa_3
+
+		allowed = { tag = GER }
+
+		available = {
+			OR = {
+				GER = { has_full_control_of_state = 785 }
+				785  = {
+					CONTROLLER = {
+						is_puppet_of = GER
+					}
+				}
+			}
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 785
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		is_good = yes
+		selectable_mission = yes
+		days_remove = 30
+
+		remove_effect = {
+			785 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
+			set_country_flag = picardy_3
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = picardy_2
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			GER_add_cost_of_forts = yes
+		}
+	}
+
+	GER_atlantikwall_picardy_4 = {
+
+		icon = GFX_decision_setup_radar_4
+
+		allowed = { tag = GER }
+
+		available = {
+			OR = {
+				GER = { has_full_control_of_state = 785 }
+				785  = {
+					CONTROLLER = {
+						is_puppet_of = GER
+					}
+				}
+			}
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 785
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		is_good = yes
+		selectable_mission = yes
+		days_remove = 30
+
+		remove_effect = {
+			785 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = picardy_3
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			GER_add_cost_of_forts = yes
+		}
+	}
+
+	GER_atlantikwall_calais = {
+
+		icon = GFX_decision_setup_forts_1
+
+		allowed = { tag = GER }
+
+		available = {
+			OR = {
+				GER = { has_full_control_of_state = 29 }
+				29 = {
+					CONTROLLER = {
+						is_puppet_of = GER
+					}
+				}
+			}
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 29
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		is_good = yes
+		selectable_mission = yes
+		days_remove = 30
+
+		remove_effect = {
+			29 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = calais_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -2051,275 +2051,275 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_calais_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 29 }
-				29 = { 
+				29 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 29
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 29
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            29 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			29 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = calais_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = calais_1
+			has_country_flag = calais_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_calais_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 29 }
-				29 = { 
+				29 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 29
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 29
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            29 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			29 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = calais_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = calais_2
+			has_country_flag = calais_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_calais_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 29 }
-				29 = { 
+				29 = {
 					CONTROLLER = {
 						is_puppet_of = GER
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 29
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 29
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            29 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			29 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = calais_3
+			has_country_flag = calais_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
 }
 
 GER_germany_atlantikwall_rework_benelux= {
 
-GER_atlantikwall_vlandeeren = {
+	GER_atlantikwall_vlandeeren = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 6
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 6
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 6
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            6 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			6 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = vlandeeren_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -2331,251 +2331,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_vlandeeren_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 6
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 6
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 6
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            6 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			6 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = vlandeeren_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vlandeeren_1
+			has_country_flag = vlandeeren_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_vlandeeren_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 6
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 6
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 6
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            6 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			6 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = vlandeeren_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vlandeeren_2
+			has_country_flag = vlandeeren_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_vlandeeren_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 6
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 6
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 6
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            6 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			6 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vlandeeren_3
+			has_country_flag = vlandeeren_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_brabant = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 35
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 35
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 35
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            35 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			35 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = brabant_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -2587,251 +2587,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_brabant_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 35
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 35
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 35
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            35 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			35 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = brabant_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = brabant_1
+			has_country_flag = brabant_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_brabant_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 35
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 35
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 35
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            35 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			35 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = brabant_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = brabant_2
+			has_country_flag = brabant_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_brabant_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 35
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 35
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 35
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            35 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			35 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = brabant_3
+			has_country_flag = brabant_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holland = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 7
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 7
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 7
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            7 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			7 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = holland_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -2843,251 +2843,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_holland_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 7
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 7
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 7
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            7 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			7 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = holland_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holland_1
+			has_country_flag = holland_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holland_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 7
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 7
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 7
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            7 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			7 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = holland_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holland_2
+			has_country_flag = holland_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holland_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 7
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 7
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 7
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            7 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			7 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holland_3
+			has_country_flag = holland_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_friesland = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 36
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 36
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 36
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            36 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			36 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = friesland_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -3099,200 +3099,200 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_friesland_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 36
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 36
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 36
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            36 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			36 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = friesland_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = friesland_1
+			has_country_flag = friesland_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_friesland_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 36
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 36
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 36
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            36 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			36 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = friesland_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = friesland_2
+			has_country_flag = friesland_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_friesland_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 36
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 36
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 36
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            36 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			36 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = friesland_3
+			has_country_flag = friesland_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
 
@@ -3300,54 +3300,54 @@ effect_tooltip = {
 
 GER_germany_atlantikwall_rework_germany= {
 
-GER_atlantikwall_weser-ems = {
+	GER_atlantikwall_weser-ems = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 56
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 56
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 56
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            56 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			56 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = weser-ems_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -3359,251 +3359,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_weser-ems_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 56
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 56
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 56
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            56 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			56 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = weser-ems_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = weser-ems_1
+			has_country_flag = weser-ems_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_weser-ems_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 56
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 56
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 56
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            56 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			56 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = weser-ems_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = weser-ems_2
+			has_country_flag = weser-ems_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_weser-ems_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 56
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 56
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 56
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            56 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			56 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = weser-ems_3
+			has_country_flag = weser-ems_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_hannover = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 59
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 59
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 59
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            59 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			59 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = hannover_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -3615,251 +3615,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_hannover_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 59
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 59
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 59
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            59 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			59 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = hannover_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = hannover_1
+			has_country_flag = hannover_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_hannover_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 59
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 59
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 59
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            59 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			59 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = hannover_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = hannover_2
+			has_country_flag = hannover_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_hannover_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 59
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 59
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 59
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            59 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			59 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = hannover_3
+			has_country_flag = hannover_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holstein = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 58
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 58
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 58
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            58 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			58 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = holstein_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -3871,200 +3871,200 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_holstein_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 58
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 58
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 58
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            58 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			58 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = holstein_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holstein_1
+			has_country_flag = holstein_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holstein_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 58
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 58
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 58
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            58 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			58 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = holstein_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holstein_2
+			has_country_flag = holstein_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_holstein_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 58
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 58
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 58
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            58 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			58 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = holstein_3
+			has_country_flag = holstein_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
 
@@ -4072,54 +4072,54 @@ effect_tooltip = {
 
 GER_germany_atlantikwall_rework_scandinavia= {
 
-GER_atlantikwall_jutland = {
+	GER_atlantikwall_jutland = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 99
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 99
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 99
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            99 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			99 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = jutland_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -4131,251 +4131,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_jutland_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 99
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 99
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 99
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            99 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			99 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = jutland_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = jutland_1
+			has_country_flag = jutland_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_jutland_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 99
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 99
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 99
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            99 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			99 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = jutland_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = jutland_2
+			has_country_flag = jutland_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_jutland_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 99
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 99
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 99
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            99 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			99 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = jutland_3
+			has_country_flag = jutland_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_vestlandet = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 142
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 142
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 142
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            142 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			142 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = vestlandet_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -4387,251 +4387,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_vestlandet_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 142
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 142
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 142
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            142 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			142 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = vestlandet_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vestlandet_1
+			has_country_flag = vestlandet_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_vestlandet_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 142
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 142
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 142
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            142 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			142 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = vestlandet_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vestlandet_2
+			has_country_flag = vestlandet_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_vestlandet_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 142
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 142
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 142
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            142 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			142 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = vestlandet_3
+			has_country_flag = vestlandet_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_trondelag = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 143
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 143
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 143
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            143 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			143 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = trondelag_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -4643,251 +4643,251 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_trondelag_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 143
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 143
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 143
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            143 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			143 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = trondelag_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = trondelag_1
+			has_country_flag = trondelag_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_trondelag_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 143
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 143
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 143
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            143 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			143 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = trondelag_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = trondelag_2
+			has_country_flag = trondelag_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_trondelag_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 143
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 143
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 143
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            143 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			143 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = trondelag_3
+			has_country_flag = trondelag_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_nord-norge = {
 
 		icon = GFX_decision_setup_forts_1
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 144
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 144
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 144
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            144 = {
-						add_building_construction = {
-            	    	    type = coastal_bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			144 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_manpower = 10000
 			set_country_flag = nord-norge_1
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
@@ -4899,200 +4899,200 @@ effect_tooltip = {
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
-		 add_manpower = -10000
+			GER_add_cost_of_forts = yes
+			add_manpower = -10000
 		}
 	}
-	
+
 	GER_atlantikwall_nord-norge_2 = {
 
 		icon = GFX_decision_setup_forts_2
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 144
-			NOT = { has_country_flag = GER_working_on_atlantikwall }		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 144
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 144
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            144 = {
-						add_building_construction = {
-            	    	    type = bunker
-            	    	    province = {
-            	    	        all_provinces = yes
-            	    	        limit_to_coastal = yes
-            	    	    }
-            	    	    level = 3
-            	    	    instant_build = yes
-            	    	}
+			144 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = infantry_equipment
-             amount = -1000
-             producer = GER
-            }
+				type = infantry_equipment
+				amount = -1000
+				producer = GER
+			}
 			set_country_flag = nord-norge_2
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = nord-norge_1
+			has_country_flag = nord-norge_1
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_nord-norge_3 = {
 
 		icon = GFX_decision_setup_aa_3
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 144
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = antiair2		
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = antiair2
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 144
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 144
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
+
 		remove_effect = {
-            144 = {
-						add_building_construction = {
-            	    	    type = anti_air_building
-            	    	    level = 2
-            	    	    instant_build = yes
-            	    	}
+			144 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
-             type = anti_air_equipment
-             amount = -100
-             producer = GER
-            }
+				type = anti_air_equipment
+				amount = -100
+				producer = GER
+			}
 			set_country_flag = nord-norge_3
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
 
-        }
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = nord-norge_2
+			has_country_flag = nord-norge_2
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
-	
+
 	GER_atlantikwall_nord-norge_4 = {
 
 		icon = GFX_decision_setup_radar_4
-        
-        allowed = { tag = GER }		
-		 
+
+		allowed = { tag = GER }
+
 		available = {
 			has_full_control_of_state = 144
-			NOT = { has_country_flag = GER_working_on_atlantikwall } 
-            has_tech = decimetric_radar	
+			NOT = { has_country_flag = GER_working_on_atlantikwall }
+			has_tech = decimetric_radar
 		}
 
 		highlight_states = {
-         highlight_state_targets = {
-          state = 144
-        }
-         highlight_color_while_active = 3
-         highlight_color_before_active = 2
-        }
+			highlight_state_targets = {
+				state = 144
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
 
 		on_map_mode = map_and_decisions_view
-		
+
 		is_good = yes
 		selectable_mission = yes
 		days_remove = 30
-		
-		remove_effect = {
-            144 = {
-						add_building_construction = {
-            	    	    type = radar_station
-            	    	    level = 1
-            	    	    instant_build = yes
-            	    	}
-			}
-				clr_country_flag = GER_working_on_atlantikwall
-effect_tooltip = {
-    swap_ideas = {
-        remove_idea = Defense_Industry_2_x
-        add_idea = Defense_Industry_2
-    }
-}
 
-        }
+		remove_effect = {
+			144 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			clr_country_flag = GER_working_on_atlantikwall
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Defense_Industry_2_x
+					add_idea = Defense_Industry_2
+				}
+			}
+
+		}
 
 		cost = 25
 
 		fire_only_once = yes
 
 		visible = {
-		has_country_flag = nord-norge_3
+			has_country_flag = nord-norge_3
 		}
 
 		cancel_if_not_visible = yes
 
 		complete_effect = {
-         GER_add_cost_of_forts = yes
+			GER_add_cost_of_forts = yes
 		}
 	}
 

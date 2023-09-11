@@ -252,6 +252,23 @@ GER_training_program = {
 
 }
 
+GER_Volkssturm_category = {
+	icon = GFX_decision_category_SOV_propaganda
+
+	allowed = {
+		original_tag = GER
+	}
+	
+	priority = 90
+
+	visible_when_empty = no
+	
+	visible = {
+		has_country_flag = GER_CAN_RISE_VOLKSSTURM
+		has_government = fascism
+	}
+}
+
 GER_case_anton_category = {
 	icon = military_operation
 

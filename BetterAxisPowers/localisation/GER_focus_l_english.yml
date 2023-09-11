@@ -158,6 +158,13 @@
  GER_SOV_TRAINING:0 "German-Soviet Air Training Program"
  GER_ITA_TRAINING:0 "German-Italian Naval Training Program"
 
+ #Volkssturm
+ GER_Volkssturm_category:0 "Volkssturm"
+ GER_hold_berlin:0 "Hold Berlin"
+ GER_raise_volksstrum_units:0 "Raise Volkssturm Unit in [FROM.GetName]"
+ GER_Volkssturm_Training_Min:0 "It significantly reduces the training time of the Volkssturm Troops and reduces the training levels."
+ GER_Volkssturm_Training_Basic:0 "Volkssturm Troops are trained in a shorter period of time with a sufficient level of training."
+
  #Adolf Hitler Healht
  health_of_adolf_category:0 "Adolf Hitler`s Health Checkups"
  health_of_adolf_category_desc:0 "Adolf Hitler's increasing illness and pain began to cause him to regularly go through medical examinations."
@@ -505,8 +512,8 @@
 
  GER_SS_focus_recruit:0 "\nAllow the recruitment of §Yforeign SS divisions§!.\n"
 
- GER_raise_penal_battalions:0 "Rise Penal Units"
- GER_raise_penal_battalion:0 "Rise Penal Unit"
+ GER_raise_penal_battalions:0 "Raise  Penal Units"
+ GER_raise_penal_battalion:0 "Raise  Penal Unit"
 
  GER_hide_mil_tt:0 "Modify §Y$Four_Year_Plan_1$§! by: \n§HDockyard §!And §HMilitary §!Factory Output§!: §G+5%§!"
 
@@ -595,6 +602,7 @@
  GER_Wilhelm_II_back_tt:0 "Wilhelm II Returns to Germany."
  GER_Fuhrer_Deposed_tt:0 "Wilhelm II Takes Control of Country, And Balance of Power Ends."
 
+ GER_CAN_RISE_VOLKSSTURM:0 "Can Raise Volkssturm Units"
  GER_Fin_help_y:0 "Finland Accepted our Help"
  GER_Swe_Trade:0 "Sweden Renewed our Trade Pact"
  GER_Leningrad_win:0 "Battle of §YLeningrad§! Completed"
@@ -628,6 +636,7 @@
  dictator_pp_v1:0 "Dictator"
  dictator_pp_n:0 "Dictator"
  dictator_pp_new_rj:0 "Dictator"
+ new_rj:0 "New Rejime"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
  armaments_organizer2:0 "Armaments Organizer"
@@ -744,6 +753,7 @@
  ger_f_news.11.d:0 "Despite the efforts of the local population to prevent it, the SS Army blew up the Eiffel Tower. Despite civilian casualties, Germany seems to have gotten what it wanted."
  ger_f_news.12.d:0 "With the increase of resistance and potential rebellion in the region, SS soldiers were sent to the region and 90% of Warsaw's buildings were destroyed, causing great civilian casualties and losses in historical buildings."
  ger_f_news.6.d:0 "After a long period of agreements, peace was finally restored in Europe, and with the Peace Treaty signed by England and Germany, the short-lived World War II came to an end."
+ ger_f_news.7.d:0 "The German Radio announced last night that Adolf Hitler had died yesterday afternoon In the aftermath, an emergency government took over and announced the new leader of Germany."
 
  #Around Moginot Line
 
@@ -760,6 +770,7 @@
  GER_hitler_is_gone1:0 "Adolf Hitler is Gone"
  GER_hitler_is_dead:0 "Adolf Hitler is Assassinated"
  GER_hitler_is_retired:0 "Adolf Hitler is retired"
+ GER_hitler_is_suicided:0 "Adolf Hitler is Suicided"
  
  #Molotov Ribbentrop
  GER_mol_rib_pact_a:0 "Molotov-Ribbentrop Pact"

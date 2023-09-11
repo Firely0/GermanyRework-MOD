@@ -3810,7 +3810,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_war_support = 0.05
-			add_country_leader_trait = dictator_pp_n
+			add_country_leader_trait = dictator_pp
 		}
 	}
 
@@ -3978,10 +3978,15 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_timed_idea = { idea = focus_on_liquidation days = 365 }
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 1
+			}
 			add_tech_bonus = {
 				name = GER_coal_liquidization
 				bonus = 1.0
-				uses = 4
+				uses = 2
 				category = synth_resources
 			}
 		}
@@ -4115,7 +4120,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			swap_ruler_traits = { remove = dictator_pp add = dictator_pp_new_rj }
+			add_country_leader_trait = new_rj
 		}
 	}
 
@@ -4347,6 +4352,24 @@ focus_tree = {
 			add_to_variable = {
 			   GER_volkssturm_experience_gain_army_factor = -0.1
 			}
+			set_country_flag = GER_CAN_RISE_VOLKSSTURM
+			hidden_effect = {
+				division_template = {
+					name = "Volkssturm"
+					division_names_group = GER_MILITA_01
+					is_locked = yes
+
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+			}
 		}
 	}
 
@@ -4372,7 +4395,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Volkssturm_Training_Min
 			custom_effect_tooltip = GER_Minimizes_Training_tt
+			set_country_flag = VOLKSSTURM_LESS_TRAINING
+			set_variable = { GER_DEPLOY_TIME_OF_VOLKSSTURM = 30 }
 			add_to_variable = {
 				GER_volkssturm_experience_gain_army_factor = -0.1
 			}
@@ -4407,7 +4433,9 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Volkssturm_Training_Basic
 			custom_effect_tooltip = GER_Basic_Training_tt
+			set_variable = { GER_DEPLOY_TIME_OF_VOLKSSTURM = 60 }
 			add_to_variable = {
 				GER_volkssturm_experience_gain_army_factor = -0.05
 			}
@@ -4613,7 +4641,7 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
-			swap_ruler_traits = { remove = dictator_pp_n add = dictator_pp_new_rj }
+			add_country_leader_trait = new_rj
 		}
 	}
 
@@ -10188,6 +10216,25 @@ focus_tree = {
 			add_to_variable = {
 			   GER_volkssturm_experience_gain_army_factor = -0.1
 			}
+			unlock_decision_category_tooltip = GER_Volkssturm_category
+			set_country_flag = GER_CAN_RISE_VOLKSSTURM
+			hidden_effect = {
+				division_template = {
+					name = "Volkssturm"
+					division_names_group = GER_MILITA_01
+					is_locked = yes
+
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+			}
 		}
 	}
 
@@ -10212,7 +10259,10 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Volkssturm_Training_Min
 			custom_effect_tooltip = GER_Minimizes_Training_tt
+			set_country_flag = VOLKSSTURM_LESS_TRAINING
+			set_variable = { GER_DEPLOY_TIME_OF_VOLKSSTURM = 30 }
 			add_to_variable = {
 				GER_volkssturm_experience_gain_army_factor = -0.1
 			}
@@ -10246,7 +10296,9 @@ focus_tree = {
 			factor = 10
 		}	
 		completion_reward = {
+			custom_effect_tooltip = GER_Volkssturm_Training_Basic
 			custom_effect_tooltip = GER_Basic_Training_tt
+			set_variable = { GER_DEPLOY_TIME_OF_VOLKSSTURM = 60 }
 			add_to_variable = {
 				GER_volkssturm_experience_gain_army_factor = -0.05
 			}

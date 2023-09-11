@@ -61,6 +61,12 @@ defined_text = {
 		localization_key = GER_hitler_is_dead
 	}
 	text = {
+		trigger = {
+			has_global_flag = Adolf_suicide
+		}
+		localization_key = GER_hitler_is_suicided
+	}
+	text = {
 		localization_key = GER_hitler_is_gone1
 	}
 }

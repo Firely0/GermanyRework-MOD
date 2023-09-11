@@ -6,11 +6,11 @@ news_event = {
 	title = "Netherlands Prevents Wilhelm II from Returning"
 	desc = "Tensions between the two countries are high after the Dutch and German governments failed to agree on the return of Wilhelm II."
 	picture = GFX_news_event_german_soldiers
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Then War."
 		trigger = {
@@ -19,7 +19,7 @@ news_event = {
 	}
 	option = {
 		name = "Again? Never!"
-		trigger = { 
+		trigger = {
 			NOT = { original_tag = GER }
 		}
 	}
@@ -31,11 +31,11 @@ news_event = {
 	title = "Wilhelm II Returns Germany"
 	desc = "After long negotiations with the German and Dutch governments, the Netherlands issued a declaration confirming the return of Wilhelm II to Germany. Wilhelm II crossed the German border and was welcomed by the jubilant German people."
 	picture = GFX_news_event_generic_parliament
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Germany United Again.."
 		trigger = {
@@ -44,7 +44,7 @@ news_event = {
 	}
 	option = {
 		name = "Germany Creates Problems Again.."
-		trigger = { 
+		trigger = {
 			NOT = { original_tag = GER }
 		}
 	}
@@ -56,11 +56,11 @@ news_event = {
 	title = "Wilhelm II Returns Germany"
 	desc = "After the conclusion of the war between the Netherlands and Germany, Wilhelm II crossed the German border and was welcomed by the jubilant German people."
 	picture = GFX_news_event_generic_parliament
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "None shall stop the Germany!"
 		trigger = {
@@ -69,14 +69,14 @@ news_event = {
 	}
 	option = {
 		name = wtt_news.4.b
-		trigger = { 
+		trigger = {
 			NOT = { original_tag = GER }
 			NOT = { original_tag = HOL }
 		}
 	}
 	option = {
 		name = wtt_news.4.c
-		trigger = { 
+		trigger = {
 			original_tag = HOL
 		}
 	}
@@ -87,11 +87,11 @@ news_event = {
 	title = "Eiffel Tower Destroyed"
 	desc = ger_f_news.11.d
 	picture = GFX_report_event_picture_last_eifel_photo
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Nice Photo"
 		trigger = {
@@ -138,11 +138,11 @@ news_event = {
 	title = "Destruction of Warsaw"
 	desc = ger_f_news.12.d
 	picture = GFX_report_news_event_warsaw_destory
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Uprising hahaha, Good luck."
 		trigger = {
@@ -182,11 +182,11 @@ news_event = {
 	title = "End of World War II"
 	desc = ger_f_news.6.d
 	picture = GFX_news_event_hitler_speech
-	
+
 	major = yes
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Total German victory!"
 		trigger = {
@@ -224,6 +224,57 @@ news_event = {
 				original_tag = ENG
 				is_in_faction_with = GER
 				is_in_faction_with = ENG
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ger_f_news.7
+	title = "Hitler Dead"
+	desc = ger_f_news.7.d
+	picture = GFX_news_event_german_reichstag_ruins
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sad Day for Reich"
+		trigger = {
+			original_tag = GER
+		}
+	}
+
+	option = {
+		name = "Damn it, we should've taken him alive"
+		trigger = {
+			original_tag = SOV
+			has_war_with = GER
+		}
+	}
+
+	option = {
+		name = "Victory is Ours!"
+		trigger = {
+			has_war_with = GER
+		}
+	}
+
+	option = {
+		name = "Dark Times"
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+
+	option = {
+		name = "Interesting Development"
+		trigger = {
+			NOT = {
+				has_war_with = GER
+				original_tag = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
