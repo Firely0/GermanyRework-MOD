@@ -2,6 +2,21 @@ ideas = {
 
 	country = {
 
+		GER_unexpected_attack = {
+			picture = chi_incompetent_officers
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
 		GER_new_laws_idea = {
 			picture = saf_history_of_segregation_2
 

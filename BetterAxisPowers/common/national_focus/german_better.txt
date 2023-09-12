@@ -3576,6 +3576,7 @@ focus_tree = {
 		allow_branch = { NOT = { has_completed_focus = GER_against_fuhrer } }
 		icon = GFX_focus_generic_fascist_troops
 		available = {
+			NOT = { has_global_flag = GER_civil_war }
 			OR = {
 				has_completed_focus = GER_Fuhrer
 				has_completed_focus = GER_hitler_is_gone
@@ -3609,6 +3610,11 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_for_our_revange }
 		available = {
 			has_idea = sour_loser
+			NOT = { has_global_flag = GER_civil_war }
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -3633,6 +3639,11 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_for_our_honor }
 		available = {
 			has_idea = sour_loser
+			NOT = { has_global_flag = GER_civil_war }
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -3660,6 +3671,11 @@ focus_tree = {
 		prerequisite = { focus = GER_for_our_revange }
 		available = {
 			has_idea = sour_loser_revange
+			NOT = { has_global_flag = GER_civil_war }
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
 		}
 		cancel_if_invalid = no
 		x = 1
@@ -3683,6 +3699,11 @@ focus_tree = {
 		prerequisite = { focus = GER_for_our_honor }
 		available = {
 			has_idea = sour_loser_our_honor
+			NOT = { has_global_flag = GER_civil_war }
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
+			}
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -3721,6 +3742,11 @@ focus_tree = {
 						controls_state = 16
 					}
 				}
+			}
+			NOT = { has_global_flag = GER_civil_war }
+			OR = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_hitler_is_gone
 			}
 		}
 		cancel_if_invalid = no
@@ -12263,7 +12289,6 @@ focus = {
 		prerequisite = { focus = GER_the_German_Republic }
 		mutually_exclusive = { focus = GER_reestablish_free_elections focus = GER_shadow_of_past }
 		bypass = {
-			has_country_flag = GER_mackensen_dead
 			NOT = { has_government = democratic }
 		}
 		available = {

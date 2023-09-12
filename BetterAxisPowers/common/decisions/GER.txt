@@ -1078,10 +1078,6 @@ GER_expand_support = {
 		}
 
 		complete_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
 			add_war_support = 0.1
 			add_stability = 0.1
 			random_country = {
@@ -1241,6 +1237,9 @@ GER_Volkssturm_category = {
 		is_good = yes
 
 		activation = {
+			NOT = {
+				has_country_flag = GER_Kaiser_in_Country
+			}
 			has_war = yes
 			has_civil_war = no
 			64 = {

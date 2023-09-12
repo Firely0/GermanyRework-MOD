@@ -1567,7 +1567,7 @@ GER_AI_DIV = {
 GER_Give_fascism_effect = {
 	load_focus_tree = {
 		tree = german_better
-		keep_completed = no
+		keep_completed = yes
 	}
 	set_variable = { adolf_hitler_rest = 1 }
 	set_variable = { adolf_hitler_rest_bad = 1 }

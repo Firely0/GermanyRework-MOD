@@ -29,7 +29,18 @@ German_alternate_kaiser = {
 	ai_national_focuses = {
 		GER_against_fuhrer
 		GER_oppose_hitler
+		GER_Emergency_Orders #Civilwar!
+		GER_request_help
+		GER_seek_help_from_communism
+		GER_order_firepower
+		GER_seek_help_from_democracy
+		GER_equipment_shipments
+		GER_war_time_logistics
+		GER_Offensive_front
+		GER_Strike_Munich
+		GER_plan_offensive
 		GER_the_German_Republic
+
 		GER_revive_the_kaiserreich
 		GER_rebuild_the_nation
 		GER_fan_the_prussian_militarism
@@ -122,7 +133,18 @@ German_alternate_democratic = {
 	ai_national_focuses = {
 		GER_against_fuhrer
 		GER_oppose_hitler
-		GER_the_German_Republic
+		GER_Emergency_Orders #Civilwar!
+		GER_request_help
+		GER_seek_help_from_communism
+		GER_order_firepower
+		GER_seek_help_from_democracy
+		GER_equipment_shipments
+		GER_war_time_logistics
+		GER_Offensive_front
+		GER_Strike_Munich
+		GER_plan_offensive
+		GER_the_German_Republic #End of Civilwar
+
 		GER_reestablish_free_elections
 		GER_rebuild_the_nation
 		GER_fan_the_prussian_militarism
