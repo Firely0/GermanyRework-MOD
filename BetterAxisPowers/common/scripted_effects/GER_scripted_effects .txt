@@ -1595,7 +1595,11 @@ GER_Give_fascism_effect = {
 		}
 	}
 	set_country_flag = GER_BLOCKED_TOTAL_WAR
-	unlock_national_focus = GER_rhineland_demilitarized
+	uncomplete_national_focus = {
+		focus = GER_against_fuhrer
+		uncomplete_children = yes
+		refund_political_power = no
+	}
 	complete_national_focus = GER_establish_abwehr
 	complete_national_focus = GER_Fuhrer
 	drop_cosmetic_tag = yes

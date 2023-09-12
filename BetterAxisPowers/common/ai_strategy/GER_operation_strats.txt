@@ -148,6 +148,7 @@ GER_blitz_com_civilwar = { #Good Luck!
 	enable = {
 		has_country_flag = GER_BLITZ_COM
 		has_government = fascism
+		NOT = { has_idea = GER_unexpected_attack }
 	}
 
 	abort_when_not_enabled = yes
@@ -187,7 +188,29 @@ GER_civilwar_ignore = {
 		has_government = fascism
 	}
 
+	abort = {
+		OR = {
+			has_war_with = CZE
+			has_war_with = POL
+			has_war_with = AUS
+			has_war_with = DEN
+		}
+	}
+
 	abort_when_not_enabled = yes
+
+	ai_strategy = { #Defult is Spain but idk the tag of spain
+		type = send_lend_lease_desire
+		id = SPR
+		value = -100
+	}
+
+	ai_strategy = { #Defult is Spain but idk the tag of spain
+		type = send_lend_lease_desire
+		id = SPA
+		value = -100
+	}
+
 	ai_strategy = {
 		type = ignore
 		id = "CZE"
@@ -209,6 +232,73 @@ GER_civilwar_ignore = {
 	ai_strategy = {
 		type = ignore
 		id = "DEN"
+		value = 10
+	}
+}
+
+GER_civilwar_ignore = {
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_global_flag = GER_civil_war
+		has_government = neutrality
+	}
+
+	abort = {
+		OR = {
+			has_war_with = HOL
+			has_war_with = BEL
+			has_war_with = LUX
+			has_war_with = FRA
+			has_war_with = AUS
+			has_war_with = CZE
+			has_war_with = SWI
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = "HOL"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "BEL"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "LUX"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "FRA"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "AUS"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "SWI"
+		value = 10
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "CZE"
 		value = 10
 	}
 }

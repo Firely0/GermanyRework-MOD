@@ -30,7 +30,7 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_completed_focus = GER_Graf_Zeppelin }
-		
+
 	}
 
 	GER_Visit_Bismarck_Ship = { #Bismarck Ship
@@ -62,8 +62,8 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_completed_focus = GER_Bismarck }
-		
-	}	
+
+	}
 
 	GER_low_increase_effect = { #Paris
 		priority = 90
@@ -94,7 +94,7 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_full_control_of_state = 16 }
-		
+
 	}
 
 	GER_low_increase_effect_1 = { #London
@@ -126,40 +126,40 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_full_control_of_state = 126 }
-		
+
 	}
 
 	GER_low_increase_effect_3 = {#Vienna
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
-	}
-
-	cost = 50
-
-	fire_only_once = yes
-
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
-	}
-
-	ai_will_do = {
-		base = 1
-		modifier = {
-			factor = 10
-			has_political_power < 150
+		allowed = {
+			original_tag = GER
 		}
-		modifier = {
-			factor = 100
-			has_war = no
-		}
-	}
 
-	visible = { has_full_control_of_state = 4 }
-	
-    }
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 100
+				has_war = no
+			}
+		}
+
+		visible = { has_full_control_of_state = 4 }
+
+	}
 
 	GER_low_increase_effect_2 = {#Moscow
 		priority = 90
@@ -190,26 +190,26 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_full_control_of_state = 219 }
-		
+
 	}
 
 	GER_low_increase_effect_4 = {#Stalingrad
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
-	}
+		allowed = {
+			original_tag = GER
+		}
 
-	cost = 50
+		cost = 50
 
-	fire_only_once = yes
+		fire_only_once = yes
 
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
-	}
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+		}
 
-	visible = { has_full_control_of_state = 217 }
+		visible = { has_full_control_of_state = 217 }
 
 		ai_will_do = {
 			base = 1
@@ -221,27 +221,27 @@ GER_balance_of_power_category = {
 				factor = 100
 				has_war = no
 			}
-		}    
-	
-    }
+		}
+
+	}
 
 	GER_low_increase_effect_5 = {#Leningrad
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
-	}
+		allowed = {
+			original_tag = GER
+		}
 
-	cost = 50
+		cost = 50
 
-	fire_only_once = yes
+		fire_only_once = yes
 
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
-	}
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+		}
 
-	visible = { has_full_control_of_state = 195 }
+		visible = { has_full_control_of_state = 195 }
 
 		ai_will_do = {
 			base = 1
@@ -254,90 +254,137 @@ GER_balance_of_power_category = {
 				has_war = no
 			}
 		}
-	
-    }
+
+	}
 
 	GER_low_increase_effect_6 = {#Mussolini
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 0
+
+		days_re_enable = 180
+
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+			ITA = { ITA_bop_very_low_increase_effect = yes }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			2 = { is_fully_controlled_by = ITA }
+			is_in_faction_with = ITA
+			ITA = {
+				has_country_leader = { character = ITA_benito_mussolini }
+			}
+		}
+
 	}
-
-	cost = 0
-
-	days_re_enable = 180
-
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
-        ITA = { ITA_bop_very_low_increase_effect = yes }
-	}
-
-	ai_will_do = {
-		factor = 100
-	}
-
-	visible = { 
-		2 = { is_fully_controlled_by = ITA } 
-		is_in_faction_with = ITA
-		ITA = {
-			has_country_leader = { character = ITA_benito_mussolini }
-		} 
-    }
-	
-    }
 
 	GER_low_increase_effect_8 = {#Roma
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
-	}
-
-	cost = 50
-
-	fire_only_once = yes
-
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
-        ITA = { ITA_bop_very_low_increase_effect = yes }
-	}
-
-	ai_will_do = {
-		base = 10
-	}
-
-	visible = { 
-		2 = { is_fully_controlled_by = ITA } 
-	    is_in_faction_with = ITA
-		ITA = {
-			NOT = { has_country_leader = { character = ITA_benito_mussolini } } 
+		allowed = {
+			original_tag = GER
 		}
-    }
-	
-    }
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+			ITA = { ITA_bop_very_low_increase_effect = yes }
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		visible = {
+			2 = { is_fully_controlled_by = ITA }
+			is_in_faction_with = ITA
+			ITA = {
+				NOT = { has_country_leader = { character = ITA_benito_mussolini } }
+			}
+		}
+
+	}
 
 	GER_low_increase_effect_7 = {#Madrid
-	priority = 90
-	icon = GFX_decision_eng_blackshirt_speech
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	allowed = {
-		original_tag = GER
+		allowed = {
+			original_tag = GER
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_bop_low_increase_effect = yes
+		}
+
+		visible = {
+			SPR = { NOT = { has_country_leader = { character = SPA_francisco_franco } } }
+			OR = {
+				has_completed_focus = GER_nationalist_spain_ally
+				is_in_faction_with = SPR
+			}
+			41 = { is_fully_controlled_by = SPR }
+			SPR = { has_government = fascism }
+		}
 	}
 
-	cost = 50
+	GER_low_increase_effect_9 = {#Visit Franco
+		priority = 90
+		icon = GFX_decision_eng_blackshirt_speech
 
-	fire_only_once = yes
+		allowed = {
+			original_tag = GER
+		}
 
-	complete_effect = {
-		GER_bop_low_increase_effect = yes
+		cost = 25
+
+		days_re_enable = 60
+
+		fire_only_once = no
+
+		complete_effect = {
+			random_list = {
+				60 = {
+					GER_bop_low_increase_effect = yes
+				}
+				20 = {
+					country_event = { id = GER_spain_talks.1 hours = 6 }
+				}
+				20 = {
+					country_event = { id = GER_spain_talks.2 hours = 6 }
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = GER_MAD_TO_SPAIN }
+			SPR = { has_country_leader = { character = SPA_francisco_franco } }
+			OR = {
+				has_completed_focus = GER_nationalist_spain_ally
+				is_in_faction_with = SPR
+			}
+			41 = { is_fully_controlled_by = SPR }
+			SPR = { has_government = fascism }
+		}
 	}
-
-	visible = { is_in_faction_with = SPR 41 = { is_fully_controlled_by = SPR } }
-	
-    }
 
 	GER_very_low_increase_effect = { #Wehrmacht
 
@@ -360,21 +407,21 @@ GER_balance_of_power_category = {
 			modifier = {
 				factor = 10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value < -0.11
 				}
 			}
 			modifier = {
 				factor = -10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value > 0.50
 				}
 			}
 		}
 
 		visible = { has_completed_focus = GER_Fuhrer  has_war_with_major = yes }
-		
+
 	}
 
 	GER_very_low_decrease_effect_1 = { # Wehrmacht Loyalty
@@ -404,8 +451,8 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_completed_focus = GER_SS_Trops }
-		
-	}	
+
+	}
 
 	GER_very_low_increase_effect_1 = {#Luftwaffe
 
@@ -428,21 +475,21 @@ GER_balance_of_power_category = {
 			modifier = {
 				factor = 10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value < -0.11
 				}
 			}
 			modifier = {
 				factor = -10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value > 0.50
 				}
 			}
 		}
 
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
-		
+
 	}
 
 	GER_very_low_increase_effect_2 = {#Kriegsmarine
@@ -466,21 +513,21 @@ GER_balance_of_power_category = {
 			modifier = {
 				factor = 10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value < -0.11
 				}
 			}
 			modifier = {
 				factor = -10
 				power_balance_value = {
-					id = GER_power_balance 
+					id = GER_power_balance
 					value > 0.50
 				}
 			}
 		}
 
 		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
-		
+
 	}
 
 	GER_very_low_decrease_effect = {#SS
@@ -500,7 +547,7 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_completed_focus = GER_SS }
-		
+
 	}
 
 	GER_very_low_decrease_effect_2 = { #SS Loyalty
@@ -530,214 +577,214 @@ GER_balance_of_power_category = {
 		}
 
 		visible = { has_completed_focus = GER_SS_Trops }
-		
-	}	
 
-    GER_very_low_decrease_effect_a = {#Panzer Ace
-	priority = 86
-	icon = GFX_decision_generic_tank
-
-	allowed = {
-		original_tag = GER
 	}
 
-	visible = {
-		date > 1940.01.01
-		has_completed_focus = GER_Lighting_Strike
-	}
+	GER_very_low_decrease_effect_a = {#Panzer Ace
+		priority = 86
+		icon = GFX_decision_generic_tank
 
-	ai_will_do = {
-		factor = 0
-		modifier = {
-			factor = 10
-			has_political_power < 110
+		allowed = {
+			original_tag = GER
 		}
-		modifier = {
-			factor = 100
-			GER = {
-				any_country_division = {
-					division_has_majority_template = medium_armor
-				}
-				has_political_power > 110
-			}
+
+		visible = {
+			date > 1940.01.01
+			has_completed_focus = GER_Lighting_Strike
 		}
-	}
 
-	cost = 10
-
-	fire_only_once = yes
-
-	complete_effect = {
-		GER_bop_very_low_decrease_effect = yes
-		custom_effect_tooltip = GER_Panzer_Ace
-		random_country_division = {
-			limit = {
-				OR = {
-					division_has_battalion_in_template = medium_armor
-				}
-				division_has_battalion_in_template = motorized
-				is_unit_template_reserves = no
-				unit_strength > 0.5
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 10
+				has_political_power < 110
 			}
-			add_history_entry = {
-				key = "This Unit has Been Recognised as an Elite Panzer Division."
-				subject = "Division Honor"
-				allow = yes
-			}
-			hidden_effect = {
-				add_unit_medal_to_latest_entry = {
-					unit_medals = knights_cross_oak_leaves
+			modifier = {
+				factor = 100
+				GER = {
+					any_country_division = {
+						division_has_majority_template = medium_armor
+					}
+					has_political_power > 110
 				}
-			}										
-		}
-	}
-	
-    }
-
-    GER_very_low_decrease_effect_b = { # Panzer Ace
-	priority = 86
-	icon = GFX_decision_generic_tank
-
-	allowed = {
-		original_tag = GER
-	}
-
-	visible = {
-		date > 1940.01.01
-		has_completed_focus = GER_Lighting_Strike
-	}
-
-	ai_will_do = {
-		factor = 0
-		modifier = {
-			factor = 100
-			GER = {
-				any_country_division = {
-					division_has_majority_template = medium_armor
-				}
-				has_political_power > 110
 			}
 		}
-	}
 
-	cost = 10
+		cost = 10
 
-	fire_only_once = yes
+		fire_only_once = yes
 
-	complete_effect = {
-		GER_bop_very_low_decrease_effect = yes
-		custom_effect_tooltip = GER_Panzer_Ace
-		random_country_division = {
-			limit = {
-				OR = {
-					division_has_battalion_in_template = medium_armor
+		complete_effect = {
+			GER_bop_very_low_decrease_effect = yes
+			custom_effect_tooltip = GER_Panzer_Ace
+			random_country_division = {
+				limit = {
+					OR = {
+						division_has_battalion_in_template = medium_armor
+					}
+					division_has_battalion_in_template = motorized
+					is_unit_template_reserves = no
+					unit_strength > 0.5
 				}
-				division_has_battalion_in_template = motorized
-				is_unit_template_reserves = no
-				unit_strength > 0.5
-			}
-			add_history_entry = {
-				key = "This Unit has Been Recognised as an Elite Panzer Division."
-				subject = "Division Honor 1"
-				allow = yes
-			}
-			hidden_effect = {
-				add_unit_medal_to_latest_entry = {
-					unit_medals = knights_cross_oak_leaves
+				add_history_entry = {
+					key = "This Unit has Been Recognised as an Elite Panzer Division."
+					subject = "Division Honor"
+					allow = yes
 				}
-			}										
+				hidden_effect = {
+					add_unit_medal_to_latest_entry = {
+						unit_medals = knights_cross_oak_leaves
+					}
+				}
+			}
 		}
-	}
-	
-    }
 
-#	GER_medium_increase_effect = {
-#		priority = 90
-#		icon = GFX_decision_generic_military
-#
-#		allowed = {
-#			original_tag = GER
-#		}
-#
-#		cost = 50
-#
-#		days_re_enable = 10
-#
-#		complete_effect = {
-#			GER_bop_medium_increase_effect = yes
-#		}
-#
-#		visible = { has_completed_focus = GER_rhineland }
-#		
-#	}
-	
-#	GER_absurdly_high_increase_effect = {
-#		priority = 90
-#		icon = GFX_decision_generic_military
-#
-#		allowed = {
-#			original_tag = GER
-#		}
-#
-#		cost = 50
-#
-#		days_re_enable = 10
-#
-#		complete_effect = {
-#			GER_bop_absurdly_high_increase_effect = yes
-#		}
-#
-#		visible = { has_completed_focus = GER_rhineland }
-#		
-#	}
-	
-#	GER_medium_decrease_effect = {
-#		priority = 90
-#		icon = GFX_decision_generic_military
-#
-#		allowed = {
-#			original_tag = GER
-#		}
-#
-#		cost = 50
-#
-#		days_re_enable = 10
-#
-#		complete_effect = {
-#			GER_bop_medium_decrease_effect = yes
-#		}
-#
-#		visible = { has_completed_focus = GER_rhineland }
-#		
-#	}
-		
-#	GER_absurdly_high_decrease_effect = {
-#		priority = 90
-#		icon = GFX_decision_generic_military
-#
-#		allowed = {
-#			original_tag = GER
-#		}
-#
-#		custom_cost_trigger = {
-#			command_power > 49
-#			has_political_power > 49
-#			has_army_experience > 14
-#		}
-#		custom_cost_text = decision_cost_CP_50_pp_50_ArmXP_15
-#		
-#		days_re_enable = 10
-#
-#		complete_effect = {
-#			GER_bop_absurdly_high_decrease_effect = yes
-#			hidden_effect = {
-#				add_command_power = -50
-#				add_political_power = -50
-#				army_experience = -15
-#			}
-#		}
-#
-#		visible = { has_completed_focus = GER_rhineland }
-#		
-#	}
+	}
+
+	GER_very_low_decrease_effect_b = { # Panzer Ace
+		priority = 86
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			date > 1940.01.01
+			has_completed_focus = GER_Lighting_Strike
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				GER = {
+					any_country_division = {
+						division_has_majority_template = medium_armor
+					}
+					has_political_power > 110
+				}
+			}
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GER_bop_very_low_decrease_effect = yes
+			custom_effect_tooltip = GER_Panzer_Ace
+			random_country_division = {
+				limit = {
+					OR = {
+						division_has_battalion_in_template = medium_armor
+					}
+					division_has_battalion_in_template = motorized
+					is_unit_template_reserves = no
+					unit_strength > 0.5
+				}
+				add_history_entry = {
+					key = "This Unit has Been Recognised as an Elite Panzer Division."
+					subject = "Division Honor 1"
+					allow = yes
+				}
+				hidden_effect = {
+					add_unit_medal_to_latest_entry = {
+						unit_medals = knights_cross_oak_leaves
+					}
+				}
+			}
+		}
+
+	}
+
+	#	GER_medium_increase_effect = {
+	#		priority = 90
+	#		icon = GFX_decision_generic_military
+	#
+	#		allowed = {
+	#			original_tag = GER
+	#		}
+	#
+	#		cost = 50
+	#
+	#		days_re_enable = 10
+	#
+	#		complete_effect = {
+	#			GER_bop_medium_increase_effect = yes
+	#		}
+	#
+	#		visible = { has_completed_focus = GER_rhineland }
+	#
+	#	}
+
+	#	GER_absurdly_high_increase_effect = {
+	#		priority = 90
+	#		icon = GFX_decision_generic_military
+	#
+	#		allowed = {
+	#			original_tag = GER
+	#		}
+	#
+	#		cost = 50
+	#
+	#		days_re_enable = 10
+	#
+	#		complete_effect = {
+	#			GER_bop_absurdly_high_increase_effect = yes
+	#		}
+	#
+	#		visible = { has_completed_focus = GER_rhineland }
+	#
+	#	}
+
+	#	GER_medium_decrease_effect = {
+	#		priority = 90
+	#		icon = GFX_decision_generic_military
+	#
+	#		allowed = {
+	#			original_tag = GER
+	#		}
+	#
+	#		cost = 50
+	#
+	#		days_re_enable = 10
+	#
+	#		complete_effect = {
+	#			GER_bop_medium_decrease_effect = yes
+	#		}
+	#
+	#		visible = { has_completed_focus = GER_rhineland }
+	#
+	#	}
+
+	#	GER_absurdly_high_decrease_effect = {
+	#		priority = 90
+	#		icon = GFX_decision_generic_military
+	#
+	#		allowed = {
+	#			original_tag = GER
+	#		}
+	#
+	#		custom_cost_trigger = {
+	#			command_power > 49
+	#			has_political_power > 49
+	#			has_army_experience > 14
+	#		}
+	#		custom_cost_text = decision_cost_CP_50_pp_50_ArmXP_15
+	#
+	#		days_re_enable = 10
+	#
+	#		complete_effect = {
+	#			GER_bop_absurdly_high_decrease_effect = yes
+	#			hidden_effect = {
+	#				add_command_power = -50
+	#				add_political_power = -50
+	#				army_experience = -15
+	#			}
+	#		}
+	#
+	#		visible = { has_completed_focus = GER_rhineland }
+	#
+	#	}
 }

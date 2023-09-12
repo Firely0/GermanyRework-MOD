@@ -38,6 +38,7 @@ add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
 add_namespace = GER_new_leader
 add_namespace = GER_health_adolf
+add_namespace = GER_spain_talks
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1472,12 +1473,11 @@ country_event = {
 		hidden_effect = {
 			GER = {
 				add_ideas = GER_Trade_with_Sweden
+				give_guarantee = SWE
 			}
 			SWE = {
 				add_ideas = GER_Trade_with_Sweden_SWE
-			}
-			GER = {
-				give_guarantee = SWE
+				give_resource_rights = { receiver = GER state = 666 }
 			}
 			set_global_flag = GER_Swe_Trade
 		}
@@ -5388,6 +5388,57 @@ country_event = {
 				popularity = -0.3
 			}
 		}
+	}
+}
+
+country_event = { # Things Gone Bad
+	id = GER_spain_talks.1
+	title = "Adolf Hitler in Spain"
+	desc = "Adolf Hitler, who met with Spanish President Franco, stated that he would not meet with Franco again."
+	picture = GFX_report_event_franco_adolf
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = GER_MAD_TO_SPAIN
+			GER_bop_low_decrease_effect = yes
+		}
+	}
+
+	option = {
+		name = "Fine.."
+	}
+}
+
+country_event = { # Things Gone Good
+	id = GER_spain_talks.2
+	title = "Adolf Hitler in Spain"
+	desc = "Adolf Hitler met with Spanish President Franco and announced that Spain had become an official Axis member."
+	picture = GFX_report_event_franco_adolf
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			ROOT = { add_to_faction = SPR }
+			SPR = {
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Welcome."
 	}
 }
 

@@ -1277,6 +1277,7 @@ GER_Volkssturm_category = {
 
 		target_trigger = {
 			FROM = {
+				is_controlled_by = ROOT
 				is_core_of = ROOT
 				OR = {
 					has_state_category = megalopolis

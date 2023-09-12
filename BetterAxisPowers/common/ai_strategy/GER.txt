@@ -704,6 +704,36 @@ spain_ally = {
 	}
 }
 
+SPR_spain_ger_ally = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		has_completed_focus = GER_nationalist_spain_ally
+		SPR = { has_government = fascism }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = 20
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = 200
+	}
+
+}
+
 spain_ally_resistance = {
 	allowed = {
 		original_tag = GER

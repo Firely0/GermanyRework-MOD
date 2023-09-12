@@ -1,0 +1,1214 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = wargn
+
+# The Fall of The Hague (Germany)
+news_event = {
+	id = wargn.100
+	title = wargn.100.t
+	desc = wargn.100.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		7 = { is_controlled_by = GER }
+		7 = { is_owned_by = HOL }
+		GER = { has_war_with = HOL }
+		NOT = { has_global_flag = fall_of_hague_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_hague_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.100.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = HOL
+			}
+		}
+	}
+	option = {
+		name = wargn.100.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.100.c
+		trigger = { TAG = HOL }
+	}
+}
+
+# The Fall of Brussles (Germany)
+news_event = {
+	id = wargn.101
+	title = wargn.101.t
+	desc = wargn.101.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		6 = { is_controlled_by = GER }
+		6 = { is_owned_by = BEL }
+		GER = { has_war_with = BEL }
+		NOT = { has_global_flag = fall_of_brussels_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_brussels_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.101.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = BEL
+			}
+		}
+	}
+	option = {
+		name = wargn.101.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.101.c
+		trigger = { TAG = BEL }
+	}
+}
+
+# The Fall of Copenhagen (Germany)
+news_event = {
+	id = wargn.102
+	title = wargn.102.t
+	desc = wargn.102.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		37 = { is_controlled_by = GER }
+		37 = { is_owned_by = DEN }
+		GER = { has_war_with = DEN }
+		NOT = { has_global_flag = fall_of_copen_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_copen_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.102.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = DEN
+			}
+		}
+	}
+	option = {
+		name = wargn.102.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.102.c
+		trigger = { TAG = DEN }
+	}
+}
+
+# The Fall of Stockholm (Germany)
+news_event = {
+	id = wargn.103
+	title = wargn.103.t
+	desc = wargn.103.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		141 = { is_controlled_by = GER }
+		141 = { is_owned_by = SWE }
+		GER = { has_war_with = SWE }
+		NOT = { has_global_flag = fall_of_stock_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_stock_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.103.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SWE
+			}
+		}
+	}
+	option = {
+		name = wargn.103.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.103.c
+		trigger = { TAG = SWE }
+	}
+}
+
+# The Fall of Lakehurst (Germany)
+news_event = {
+	id = wargn.104
+	title = wargn.104.t
+	desc = wargn.104.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		359 = { is_controlled_by = GER }
+		359 = { is_owned_by = USA }
+		GER = { has_war_with = USA }
+		NOT = { has_global_flag = fall_of_lakehurst_ger }
+		NOT = { has_global_flag = hindenburg_survives }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_lakehurst_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.104.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wargn.104.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.104.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Oslo (Germany)
+news_event = {
+	id = wargn.105
+	title = wargn.105.t
+	desc = wargn.105.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		110 = { is_controlled_by = GER }
+		110 = { is_owned_by = NOR }
+		GER = { has_war_with = NOR }
+		NOT = { has_global_flag = fall_of_oslo_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_oslo_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.105.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = NOR
+			}
+		}
+	}
+	option = {
+		name = wargn.105.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.105.c
+		trigger = { TAG = NOR }
+	}
+}
+
+# The Liberation of Vilnius (Germany)
+news_event = {
+	id = wargn.106
+	title = wargn.106.t
+	desc = wargn.106.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		11 = { is_controlled_by = GER }
+		11 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = liberation_of_vilnius_ger }
+	}
+	
+	immediate = {
+		set_global_flag = liberation_of_vilnius_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.106.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.106.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.106.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Liberation of Riga (Germany)
+news_event = {
+	id = wargn.107
+	title = wargn.107.t
+	desc = wargn.107.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		12 = { is_controlled_by = GER }
+		12 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = liberation_of_riga_ger }
+	}
+	
+	immediate = {
+		set_global_flag = liberation_of_riga_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.107.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.107.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.107.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Liberation of Tallinn (Germany)
+news_event = {
+	id = wargn.108
+	title = wargn.108.t
+	desc = wargn.108.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		13 = { is_controlled_by = GER }
+		13 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = liberation_of_tallinn_ger }
+	}
+	
+	immediate = {
+		set_global_flag = liberation_of_tallinn_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.108.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.108.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.108.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Edinburgh (Germany)
+news_event = {
+	id = wargn.109
+	title = wargn.109.t
+	desc = wargn.109.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		121 = { is_controlled_by = GER }
+		121 = { is_owned_by = ENG }
+		GER = { has_war_with = ENG }
+		NOT = { has_global_flag = fall_of_edin_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_edin_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.109.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = wargn.109.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.109.c
+		trigger = { TAG = ENG }
+	}
+}
+
+# The Fall of Rome (Germany)
+news_event = {
+	id = wargn.110
+	title = wargn.110.t
+	desc = wargn.110.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		2 = { is_controlled_by = GER }
+		2 = { is_owned_by = ITA }
+		GER = { has_war_with = ITA }
+		NOT = { has_global_flag = fall_of_rome_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_rome_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.110.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = wargn.110.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.110.c
+		trigger = { TAG = ITA }
+	}
+}
+
+# The Fall of Budapest (Germany)
+news_event = {
+	id = wargn.111
+	title = wargn.111.t
+	desc = wargn.111.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		2 = { is_controlled_by = GER }
+		2 = { is_owned_by = HUN }
+		GER = { has_war_with = HUN }
+		NOT = { has_global_flag = fall_of_buda_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_buda_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.111.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = HUN
+			}
+		}
+	}
+	option = {
+		name = wargn.111.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.111.c
+		trigger = { TAG = HUN }
+	}
+}
+
+# The Fall of Athens (Germany)
+news_event = {
+	id = wargn.112
+	title = wargn.112.t
+	desc = wargn.112.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		2 = { is_controlled_by = GER }
+		2 = { is_owned_by = GRE }
+		GER = { has_war_with = GRE }
+		NOT = { has_global_flag = fall_of_athens_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_athens_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.112.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = GRE
+			}
+		}
+	}
+	option = {
+		name = wargn.112.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.112.c
+		trigger = { TAG = GRE }
+	}
+}
+
+# The Fall of Belgrade (Germany)
+news_event = {
+	id = wargn.113
+	title = wargn.113.t
+	desc = wargn.113.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		107 = { is_controlled_by = GER }
+		107 = { is_owned_by = YUG }
+		GER = { has_war_with = YUG }
+		NOT = { has_global_flag = fall_of_belgrade_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_belgrade_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.113.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = YUG
+			}
+		}
+	}
+	option = {
+		name = wargn.113.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.113.c
+		trigger = { TAG = YUG }
+	}
+}
+
+# The Fall of Tokyo (Germany)
+news_event = {
+	id = wargn.114
+	title = wargn.114.t
+	desc = wargn.114.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		282 = { is_controlled_by = GER }
+		282 = { is_owned_by = JAP }
+		GER = { has_war_with = JAP }
+		NOT = { has_global_flag = fall_of_tokyo_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_tokyo_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.114.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = wargn.114.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.114.c
+		trigger = { TAG = JAP }
+	}
+}
+
+# The Fall of Ottawa (Germany)
+news_event = {
+	id = wargn.115
+	title = wargn.115.t
+	desc = wargn.115.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		276 = { is_controlled_by = GER }
+		276 = { is_owned_by = CAN }
+		GER = { has_war_with = CAN }
+		NOT = { has_global_flag = fall_of_ottawa_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_ottawa_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.115.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = CAN
+			}
+		}
+	}
+	option = {
+		name = wargn.115.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.115.c
+		trigger = { TAG = CAN }
+	}
+}
+
+# The Fall of Boston (Germany)
+news_event = {
+	id = wargn.116
+	title = wargn.116.t
+	desc = wargn.116.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		357 = { is_controlled_by = GER }
+		357 = { is_owned_by = USA }
+		GER = { has_war_with = USA }
+		NOT = { has_global_flag = fall_of_boston_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_boston_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.116.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wargn.116.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.116.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Philadelphia (Germany)
+news_event = {
+	id = wargn.117
+	title = wargn.117.t
+	desc = wargn.117.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		360 = { is_controlled_by = GER }
+		360 = { is_owned_by = USA }
+		GER = { has_war_with = USA }
+		NOT = { has_global_flag = fall_of_philly_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_philly_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.117.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wargn.117.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.117.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Detroit (Germany)
+news_event = {
+	id = wargn.118
+	title = wargn.118.t
+	desc = wargn.118.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		393 = { is_controlled_by = GER }
+		393 = { is_owned_by = USA }
+		GER = { has_war_with = USA }
+		NOT = { has_global_flag = fall_of_detroit_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_detroit_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.118.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wargn.118.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.118.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Liberation of Tehran (Germany)
+news_event = {
+	id = wargn.119
+	title = wargn.119.t
+	desc = wargn.119.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		266 = { is_controlled_by = GER }
+		266 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = lib_of_tehran_ger }
+	}
+	
+	immediate = {
+		set_global_flag = lib_of_tehran_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.119.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.119.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.119.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Los Angeles (Germany)
+news_event = {
+	id = wargn.120
+	title = wargn.120.t
+	desc = wargn.120.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		378 = { is_controlled_by = GER }
+		378 = { is_owned_by = USA }
+		GER = { has_war_with = USA }
+		NOT = { has_global_flag = fall_of_los_angeles_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_los_angeles_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.120.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = wargn.120.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.120.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Delhi (Germany)
+news_event = {
+	id = wargn.121
+	title = wargn.121.t
+	desc = wargn.121.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		439 = { is_controlled_by = GER }
+		439 = { is_owned_by = RAJ }
+		GER = { has_war_with = RAJ }
+		NOT = { has_global_flag = fall_of_delhi_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_delhi_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.121.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = RAJ
+			}
+		}
+	}
+	option = {
+		name = wargn.121.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.121.c
+		trigger = { TAG = RAJ }
+	}
+}
+
+# The Fall of Tehran (Germany)
+news_event = {
+	id = wargn.122
+	title = wargn.122.t
+	desc = wargn.122.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		266 = { is_controlled_by = GER }
+		266 = { is_owned_by = PER }
+		GER = { has_war_with = PER }
+		NOT = { has_global_flag = fall_of_tehran_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_tehran_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.122.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = PER
+			}
+		}
+	}
+	option = {
+		name = wargn.122.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.122.c
+		trigger = { TAG = PER }
+	}
+}
+
+# The Fall of Jerusalem (Germany)
+news_event = {
+	id = wargn.123
+	title = wargn.123.t
+	desc = wargn.123.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		454 = { is_controlled_by = GER }
+		454 = { is_owned_by = ENG }
+		GER = { has_war_with = ENG }
+		NOT = { has_global_flag = fall_of_jerusalem_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_jerusalem_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.123.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = wargn.123.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.123.c
+		trigger = { TAG = ENG }
+	}
+}
+
+# The Fall of Mecca (Germany)
+news_event = {
+	id = wargn.124
+	title = wargn.124.t
+	desc = wargn.124.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		679 = { is_controlled_by = GER }
+		679 = { is_owned_by = SAU }
+		GER = { has_war_with = SAU }
+		NOT = { has_global_flag = fall_of_mecca_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_mecca_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.124.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SAU
+			}
+		}
+	}
+	option = {
+		name = wargn.124.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.124.c
+		trigger = { TAG = SAU }
+	}
+}
+
+# The Fall of the Urals (Germany)
+news_event = {
+	id = wargn.125
+	title = wargn.125.t
+	desc = wargn.125.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		582 = { is_controlled_by = GER }
+		582 = { is_owned_by = SOV }
+		573 = { is_controlled_by = GER }
+		573 = { is_owned_by = SOV }
+		581 = { is_controlled_by = GER }
+		581 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = fall_of_urals_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_urals_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.125.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.125.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.125.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Vladivostok (Germany)
+news_event = {
+	id = wargn.126
+	title = wargn.126.t
+	desc = wargn.126.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		408 = { is_controlled_by = GER }
+		408 = { is_owned_by = SOV }
+		GER = { has_war_with = SOV }
+		NOT = { has_global_flag = fall_of_vladivostok_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_vladivostok_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.126.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = wargn.126.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.126.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Ulaanbaatar/Mongolia (Germany)
+news_event = {
+	id = wargn.127
+	title = wargn.127.t
+	desc = wargn.127.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		408 = { is_controlled_by = GER }
+		408 = { is_owned_by = MON }
+		GER = { has_war_with = MON }
+		NOT = { has_global_flag = fall_of_ulaanbaatar_ger }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_ulaanbaatar_ger
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = wargn.127.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = MON
+			}
+		}
+	}
+	option = {
+		name = wargn.127.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = wargn.127.c
+		trigger = { TAG = MON }
+	}
+}

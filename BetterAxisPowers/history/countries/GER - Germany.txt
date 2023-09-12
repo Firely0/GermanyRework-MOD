@@ -28,6 +28,9 @@ activate_mission = GER_Rhineland_demilitarized_a
 activate_mission = GER_Rhineland_demilitarized_b
 activate_mission = GER_Rhineland_demilitarized_e
 
+#Spain UPDATE
+set_rule = { can_send_volunteers = no }
+
 
 
 add_opinion_modifier = {

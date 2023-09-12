@@ -1145,9 +1145,10 @@ shared_focus = {
 		custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = hjalmar_schacht
-		set_country_flag = {
+		set_global_flag = {
 			flag = GER_FOUR_PLAN_FLAG
 			days = 1460
+			value = 1
 		}
 		hidden_effect = {
 			add_timed_idea = { idea = Four_Year_Plan_1 days = 1460 }
@@ -1165,7 +1166,13 @@ shared_focus = {
 	relative_position_id = GER_four_year_plan_a
 	cost = 10
 	available = {
-		has_country_flag = GER_FOUR_PLAN_FLAG
+		GER_four_year_plan_available = yes
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -1983,7 +1990,13 @@ shared_focus = {
 	relative_position_id = GER_four_year_plan_a
 	cost = 10
 	available = {
-		has_country_flag = GER_FOUR_PLAN_FLAG
+		GER_four_year_plan_available = yes
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
+		}
 	}
 	ai_will_do = {
 		factor = 9
@@ -2539,12 +2552,18 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
-		has_country_flag = GER_FOUR_PLAN_FLAG
+		GER_four_year_plan_available = yes
 		OR = {
 			has_full_control_of_state = 64
 			has_full_control_of_state = 59
 			has_full_control_of_state = 60
 			has_full_control_of_state = 54
+		}
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
 		}
 	}
 	available_if_capitulated = yes
@@ -2655,7 +2674,13 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
-		has_country_flag = GER_FOUR_PLAN_FLAG
+		GER_four_year_plan_available = yes
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
+		}
 	}
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3678,7 +3703,13 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
-		has_country_flag = GER_FOUR_PLAN_FLAG
+		GER_four_year_plan_available = yes
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
+		}
 	}
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }

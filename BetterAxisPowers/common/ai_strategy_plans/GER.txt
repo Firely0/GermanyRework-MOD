@@ -26,9 +26,20 @@ German_historical = {
 	}
 	abort = {
 		OR = {
+			has_completed_focus = GER_against_fuhrer
 			has_global_flag = Adolf_killed	
 			has_global_flag = Adolf_retired
 			has_global_flag = Adolf_suicide
+			has_country_flag = GER_AI_RANDOM_KAISER
+			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = KAISER
+			}
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = DEMOCRATIC
+			}
 		}
 	}
 
@@ -180,10 +191,11 @@ German_fuhrer_death_historical = {
 	desc = ""
 
 	allowed = {
-		original_tag = GER
+		always = no
 	}
 	enable = {
 		OR = {
+			has_completed_focus = GER_hitler_is_gone
 			has_global_flag = Adolf_killed	
 			has_global_flag = Adolf_retired
 			has_global_flag = Adolf_suicide
