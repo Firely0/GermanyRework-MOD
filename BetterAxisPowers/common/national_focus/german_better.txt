@@ -6515,12 +6515,6 @@ focus_tree = {
 				is_subject = no
 				NOT = { is_embargoing = GER }
 			}
-			SWE = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-			}
 		}
 
 		x = -3
@@ -6539,13 +6533,14 @@ focus_tree = {
 			effect_tooltip = {
 				SWE = {
 					custom_effect_tooltip = needs_approval
+					add_offsite_building = { type = industrial_complex level = 2 }
+					add_offsite_building = { type = arms_factory level = 1 }
 					give_resource_rights = { receiver = GER state = 666 }
-					
 					add_ideas = GER_Trade_with_Sweden_SWE
 				}
 				GER = {
-					add_ideas = GER_Trade_with_Sweden
 					give_guarantee = SWE
+					add_ideas = GER_Trade_with_Sweden
 				}
 			}
 		}
@@ -11023,7 +11018,7 @@ focus = {
 					}
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					SOV = {
 						neutrality < 0.3
@@ -11037,7 +11032,7 @@ focus = {
 					}
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					SOV = {
 						neutrality > 0.45
@@ -11047,6 +11042,14 @@ focus = {
 					add_popularity = {
 						ideology = neutrality 
 						popularity = 0.2
+					}
+				}
+			}
+			else = {
+				SOV = {
+					add_popularity = {
+						ideology = neutrality 
+						popularity = 0.05
 					}
 				}
 			}
@@ -12193,12 +12196,48 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			random_list = {
-				70 = {
-					country_event = GER_no_focus_ger_com_civilwar.1
+			if = {
+				limit = {
+					OR = {
+						neutrality > 0.6
+						communism > 0.6
+						democratic > 0.6
+					}
 				}
-				30 = {
-					country_event = GER_no_focus_ger_com_adolf_retire.1
+				random_list = {
+					30 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					70 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						neutrality > 0.35
+						communism > 0.35
+						democratic > 0.35
+					}
+				}
+				random_list = {
+					50 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					50 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
+				}
+			}
+			else = {
+				random_list = {
+					70 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					30 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
 				}
 			}
 		}

@@ -1092,6 +1092,7 @@ GER_Lands_in_Soviet = {
 			is_controlled_by_ROOT_or_ally = yes
 		}
 		transfer_state_to = GER
+		clr_state_flag = GER_Claim_lands
 	}
 	every_country = {
 		limit = {
@@ -1101,6 +1102,7 @@ GER_Lands_in_Soviet = {
 		every_owned_state = {
 			transfer_state_to = GER
 		}
+		clr_country_flag = GER_SOV_PUPPET_COUNTRY
 	}
 }
 
@@ -1108,13 +1110,31 @@ JAP_Lands_in_Soviet = {
 	if = {
 		limit = {
 			408 = {
-				is_owned_by = SOV
+				OR = {
+					OR = {
+						is_owned_by = SOV
+						is_owned_by = GER
+					}
+					is_owned_by = GER
+				}
 			}
 			409 = {
-				is_owned_by = SOV
+				OR = {
+					OR = {
+						is_owned_by = SOV
+						is_owned_by = GER
+					}
+					is_owned_by = GER
+				}
 			}
 			655 = {
-				is_owned_by = SOV
+				OR = {
+					OR = {
+						is_owned_by = SOV
+						is_owned_by = GER
+					}
+					is_owned_by = GER
+				}
 			}
 		}
 		JAP = {
@@ -1136,13 +1156,22 @@ ROM_Lands_in_Soviet = {
 	if = {
 		limit = {
 			80 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			78 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			766 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 		}
 		ROM = {
@@ -1163,13 +1192,22 @@ FIN_Lands_in_Soviet = {
 	if = {
 		limit = {
 			146 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			147 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			722 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 		}
 		FIN = {
@@ -1190,13 +1228,22 @@ TUR_Lands_in_Soviet = {
 	if = {
 		limit = {
 			231 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			229 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 			230 = {
-				is_owned_by = SOV
+				OR = {
+					is_owned_by = SOV
+					is_owned_by = GER
+				}
 			}
 		}
 		TUR = {

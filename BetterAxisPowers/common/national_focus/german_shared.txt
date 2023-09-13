@@ -2179,7 +2179,15 @@ shared_focus = {
 	y = 1
 	relative_position_id = GER_four_year_plan_a
 	cost = 10
-
+	available = {
+		GER_four_year_plan_available = yes
+	}
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = GER_four_year_plan_end
+			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
+		}
+	}
 	ai_will_do = {
 		factor = 9
 	}
@@ -2675,6 +2683,7 @@ shared_focus = {
 	}
 	available = {
 		GER_four_year_plan_available = yes
+		has_completed_focus = GER_Hide_Arms_Industrialization
 	}
 	bypass = {
 		custom_trigger_tooltip = {
@@ -2685,26 +2694,10 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		if = {
-			limit = {
-				NOT = { has_completed_focus = GER_Hide_Arms_Industrialization }
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Arms_Mobilization
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_completed_focus = GER_Hide_Arms_Industrialization
-			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_Small_Arms
-					add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_2_Small_Arms
+				add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
 			}
 		}
 		hidden_effect = {
@@ -2772,7 +2765,7 @@ shared_focus = {
 	available = {
 		custom_trigger_tooltip = {
 			tooltip = GER_Four_Year_Plan_Finish_tt
-			has_country_flag =  {
+			has_global_flag =  {
 				flag = GER_FOUR_PLAN_FLAG
 				days > 1460
 			}

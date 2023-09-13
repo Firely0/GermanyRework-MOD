@@ -302,3 +302,41 @@ GER_civilwar_ignore = {
 		value = 10
 	}
 }
+
+GER_no_lend_lease_jap = { #Waste of EQ for Germany
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_government = fascism
+	}
+
+	abort = {
+		OR = {
+			is_in_faction = JAP
+			is_in_faction = MAN
+			is_in_faction = MEN
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = send_lend_lease_desire
+		id = JAP
+		value = -50
+	}
+
+	ai_strategy = { 
+		type = send_lend_lease_desire
+		id = MAN
+		value = -50
+	}
+
+	ai_strategy = { 
+		type = send_lend_lease_desire
+		id = MEN
+		value = -50
+	}
+}

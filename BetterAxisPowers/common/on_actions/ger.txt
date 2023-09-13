@@ -200,6 +200,25 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					has_global_flag = GER_BLOCKED_KAISER
+					has_government = fascism
+					FROM = {
+						original_tag = HOL
+					}
+					OR = {
+						7 = { is_controlled_by = GER }
+						HOL = { is_subject_of = GER }
+					}
+				}
+				country_event = { id = ger_kaiser_in_exile.7 }
+			}
+		}
+	}
 	on_capitulation = {
 		effect = {
 			if = {
