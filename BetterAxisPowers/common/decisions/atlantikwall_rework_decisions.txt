@@ -11,7 +11,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 806 }
 				806 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -81,7 +84,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 806 }
 				806 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -156,7 +162,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 806 }
 				806 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -228,7 +237,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 806 }
 				806 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -293,7 +305,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 19 }
 				19 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -364,7 +379,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 19 }
 				19 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -438,7 +456,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 19 }
 				19 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -510,7 +531,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 19 }
 				19 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -576,7 +600,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 23 }
 				23 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -647,7 +674,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 23 }
 				23 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -722,7 +752,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 23 }
 				23 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -794,7 +827,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 23 }
 				23 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -860,7 +896,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 30 }
 				30 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -931,7 +970,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 30 }
 				30 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1006,7 +1048,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 30 }
 				30 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1078,7 +1123,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 30 }
 				30 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1144,7 +1192,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 14 }
 				14 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1215,7 +1266,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 14 }
 				14 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1290,7 +1344,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 14 }
 				14 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1362,7 +1419,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 14 }
 				14 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1426,9 +1486,12 @@ GER_germany_atlantikwall_rework_france = {
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = {
+				15 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1497,9 +1560,12 @@ GER_germany_atlantikwall_rework_france = {
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = {
+				15 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1572,9 +1638,12 @@ GER_germany_atlantikwall_rework_france = {
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = {
+				15 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1644,9 +1713,12 @@ GER_germany_atlantikwall_rework_france = {
 		available = {
 			OR = {
 				GER = { has_full_control_of_state = 15 }
-				15  = {
+				15 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1709,14 +1781,16 @@ GER_germany_atlantikwall_rework_france = {
 
 		available = {
 			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
-			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
 		highlight_states = {
@@ -1780,10 +1854,13 @@ GER_germany_atlantikwall_rework_france = {
 
 		available = {
 			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1855,10 +1932,13 @@ GER_germany_atlantikwall_rework_france = {
 
 		available = {
 			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1927,10 +2007,13 @@ GER_germany_atlantikwall_rework_france = {
 
 		available = {
 			OR = {
-				GER = { has_full_control_of_state = 785 }
-				785  = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -1996,7 +2079,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 29 }
 				29 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -2067,7 +2153,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 29 }
 				29 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -2142,7 +2231,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 29 }
 				29 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -2214,7 +2306,10 @@ GER_germany_atlantikwall_rework_france = {
 				GER = { has_full_control_of_state = 29 }
 				29 = {
 					CONTROLLER = {
-						is_puppet_of = GER
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
 					}
 				}
 			}
@@ -2279,7 +2374,27 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 6
+			OR = {
+				GER = { 			OR = {
+					GER = { has_full_control_of_state = 6 }
+					6 = {
+						CONTROLLER = {
+							OR = {
+								is_puppet_of = GER
+								tag = VIC
+							}
+						}
+					}
+				} }
+				6 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2343,7 +2458,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 6
+			OR = {
+				GER = { has_full_control_of_state = 6 }
+				6 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2411,7 +2536,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 6
+			OR = {
+				GER = { has_full_control_of_state = 6 }
+				6 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -2476,7 +2611,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 6
+			OR = {
+				GER = { has_full_control_of_state = 6 }
+				6 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -2535,7 +2680,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 35
+			OR = {
+				GER = { has_full_control_of_state = 35 }
+				35 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2599,7 +2754,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 35
+			OR = {
+				GER = { has_full_control_of_state = 35 }
+				35 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2667,7 +2832,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 35
+			OR = {
+				GER = { has_full_control_of_state = 35 }
+				35 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -2732,7 +2907,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 35
+			OR = {
+				GER = { has_full_control_of_state = 35 }
+				35 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -2791,7 +2976,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 7
+			OR = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2855,7 +3050,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 7
+			OR = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -2923,7 +3128,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 7
+			OR = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -2988,7 +3203,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 7
+			OR = {
+				GER = { has_full_control_of_state = 7 }
+				7 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -3047,7 +3272,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 36
+			OR = {
+				GER = { has_full_control_of_state = 36 }
+				36 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3111,7 +3346,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 36
+			OR = {
+				GER = { has_full_control_of_state = 36 }
+				36 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3179,7 +3424,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 36
+			OR = {
+				GER = { has_full_control_of_state = 36 }
+				36 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -3244,7 +3499,17 @@ GER_germany_atlantikwall_rework_benelux= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 36
+			OR = {
+				GER = { has_full_control_of_state = 36 }
+				36 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -3307,7 +3572,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 56
+			OR = {
+				GER = { has_full_control_of_state = 56 }
+				56 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3371,7 +3646,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 56
+			OR = {
+				GER = { has_full_control_of_state = 56 }
+				56 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3439,7 +3724,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 56
+			OR = {
+				GER = { has_full_control_of_state = 56 }
+				56 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -3504,7 +3799,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 56
+			OR = {
+				GER = { has_full_control_of_state = 56 }
+				56 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -3563,7 +3868,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 59
+			OR = {
+				GER = { has_full_control_of_state = 59 }
+				59 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3627,7 +3942,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 59
+			OR = {
+				GER = { has_full_control_of_state = 59 }
+				59 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3695,7 +4020,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 59
+			OR = {
+				GER = { has_full_control_of_state = 59 }
+				59 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -3760,7 +4095,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 59
+			OR = {
+				GER = { has_full_control_of_state = 59 }
+				59 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -3819,7 +4164,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 58
+			OR = {
+				GER = { has_full_control_of_state = 58 }
+				58 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3883,7 +4238,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 58
+			OR = {
+				GER = { has_full_control_of_state = 58 }
+				58 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -3951,7 +4316,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 58
+			OR = {
+				GER = { has_full_control_of_state = 58 }
+				58 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -4016,7 +4391,17 @@ GER_germany_atlantikwall_rework_germany= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 58
+			OR = {
+				GER = { has_full_control_of_state = 58 }
+				58 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -4079,7 +4464,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 99
+			OR = {
+				GER = { has_full_control_of_state = 99 }
+				99 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4143,7 +4538,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 99
+			OR = {
+				GER = { has_full_control_of_state = 99 }
+				99 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4211,7 +4616,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 99
+			OR = {
+				GER = { has_full_control_of_state = 99 }
+				99 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -4276,7 +4691,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 99
+			OR = {
+				GER = { has_full_control_of_state = 99 }
+				99 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -4335,7 +4760,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 142
+			OR = {
+				GER = { has_full_control_of_state = 142 }
+				142 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4399,7 +4834,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 142
+			OR = {
+				GER = { has_full_control_of_state = 142 }
+				142 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4467,7 +4912,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 142
+			OR = {
+				GER = { has_full_control_of_state = 142 }
+				142 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -4532,7 +4987,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 142
+			OR = {
+				GER = { has_full_control_of_state = 142 }
+				142 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -4591,7 +5056,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 143
+			OR = {
+				GER = { has_full_control_of_state = 143 }
+				143 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4655,7 +5130,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 143
+			OR = {
+				GER = { has_full_control_of_state = 143 }
+				143 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4723,7 +5208,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 143
+			OR = {
+				GER = { has_full_control_of_state = 143 }
+				143 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -4788,7 +5283,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 143
+			OR = {
+				GER = { has_full_control_of_state = 143 }
+				143 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}
@@ -4847,7 +5352,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 144
+			OR = {
+				GER = { has_full_control_of_state = 144 }
+				144 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4911,7 +5426,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 144
+			OR = {
+				GER = { has_full_control_of_state = 144 }
+				144 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 		}
 
@@ -4979,7 +5504,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 144
+			OR = {
+				GER = { has_full_control_of_state = 144 }
+				144 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = antiair2
 		}
@@ -5044,7 +5579,17 @@ GER_germany_atlantikwall_rework_scandinavia= {
 		allowed = { tag = GER }
 
 		available = {
-			has_full_control_of_state = 144
+			OR = {
+				GER = { has_full_control_of_state = 144 }
+				144 = {
+					CONTROLLER = {
+						OR = {
+							is_core_of = PREV
+							is_puppet_of = GER
+						}
+					}
+				}
+			}
 			NOT = { has_country_flag = GER_working_on_atlantikwall }
 			has_tech = decimetric_radar
 		}

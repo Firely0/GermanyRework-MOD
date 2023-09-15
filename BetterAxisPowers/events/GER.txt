@@ -1789,6 +1789,7 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+
 	option = {
 		ai_chance = {
 			factor = 100
@@ -1808,12 +1809,12 @@ country_event = {
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 1500
+				amount = 500
 				producer = GER
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
-				amount = 950
+				amount = 250
 				producer = GER
 			}
 			add_equipment_to_stockpile = {
@@ -1826,6 +1827,7 @@ country_event = {
 			set_global_flag = GER_Fin_help_y
 		}
 	}
+
 	option = {
 		ai_chance = {
 			factor = 0
@@ -1880,6 +1882,10 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 60
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
 		}
 		name = "Prepare for War"
 		GER = {
@@ -1898,7 +1904,7 @@ country_event = {
 				add_ai_strategy = {
 					type = alliance
 					id = "GER"
-					value = 500
+					value = 200
 				}
 			}
 		}
@@ -1906,6 +1912,10 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		name = "No"
 		GER = {

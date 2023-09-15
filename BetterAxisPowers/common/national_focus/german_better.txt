@@ -461,7 +461,15 @@ focus_tree = {
 				can_create_factions = yes
 			}
 			create_faction = "The Axis"
-		}	
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				complete_national_focus = GER_scandinavia_policy
+			}
+		}
 		}
 	}
 
@@ -6209,7 +6217,6 @@ focus_tree = {
 		prerequisite = { focus = GER_Axis_Powers }
 		available = {
 			is_faction_leader = yes
-			
 		}
 
 		x = -11
@@ -6620,6 +6627,14 @@ focus_tree = {
 		completion_reward = {
 			FIN = {
 				country_event = { id = GER_FIN_Support.1 days = 1 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					complete_national_focus = GER_influense_finland
+				}
 			}
 		}
 	}
@@ -9738,10 +9753,12 @@ focus_tree = {
 					complete_national_focus = GER_plan_z_a
 					complete_national_focus = GER_rebuild_the_high_seas_fleet_a
 					complete_national_focus = GER_Bismarck
+					complete_national_focus = GER_pride_of_the_modern_germany_a
 					complete_national_focus = GER_carrier_war
 					complete_national_focus = GER_Graf_Zeppelin
 					complete_national_focus = GER_naval_air_effort_a
-					complete_national_focus = GER_u_boat_effort
+					complete_national_focus = GER_prepare_for_the_next_blockade_a
+					complete_national_focus = GER_u_boat_effort_a
 					complete_national_focus = GER_modular_construction_a
 				}
 			}	
@@ -13773,7 +13790,6 @@ focus = {
 			is_subject = no
 			SOV = {
 				has_government = communism
-				has_war = yes
 			}
 			NOT = { is_in_faction_with = SOV }
 		}

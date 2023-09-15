@@ -11,13 +11,25 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = GER
-					is_ai = yes
+					GER = {
+						is_ai = yes
+					}
 				}
 				GER = {
 					set_technology = { mobile_warfare = 1 popup = no }
 					add_ideas = i_dont_use_wargoal
 				}
+			}
+			if = {
+				limit = {
+					ITA = {
+						is_ai = yes
+					}
+				}
+				ITA = {
+					add_ideas = ita_dont_core_about_eth
+				}
+				set_global_flag = DONT_ABUSE_ITA_FACTION
 			}
 		}
 	}

@@ -1,31 +1,4 @@
 leader_traits = {
-	#Tank Designer
-	axis_with_focus = {
-		random = no
-		equipment_bonus = {
-			armor = {
-				reliability = 0.05 soft_attack = 0.05 build_cost_ic = -0.10
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	army_arsenal_asian = {
-		random = no
-		equipment_bonus = {
-			armor = {
-				reliability = -0.10 soft_attack = 0.05 armor_value = 0.05 build_cost_ic = -0.05
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-	}
 
 	porsche_focus_trait = {
 		random = no
@@ -370,6 +343,16 @@ leader_traits = {
 		max_planning_factor = -0.15
 		dig_in_speed_factor = -0.05
 		army_defence_factor = -0.05
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	FRA_manpower_addon = {
+		random = no
+
+		non_core_manpower = 0.0025
 
 		ai_will_do = {
 			factor = 0
