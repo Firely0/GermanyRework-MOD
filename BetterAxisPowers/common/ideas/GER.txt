@@ -373,8 +373,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_dockyard = 0.1
-				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 
@@ -7253,12 +7253,10 @@ ideas = {
 
 			cancel = {
 				OR = {
-					is_ai = no
 					is_at_peace_exiled_countries_excluded = no
 					has_global_flag = ITA_GER_VICHY_ESTABLISHED
 					has_idea = ITA_italian_irredentism_ns
 					16 = { is_controlled_by_ROOT_or_ally = yes }
-					date > 1940.06.10
 				}
 			}
 

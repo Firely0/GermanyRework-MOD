@@ -1145,6 +1145,7 @@ shared_focus = {
 		custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = hjalmar_schacht
+		set_global_flag = GER_FOUR_PLAN_FLAG_1
 		set_global_flag = {
 			flag = GER_FOUR_PLAN_FLAG
 			days = 1460
@@ -2755,7 +2756,7 @@ shared_focus = {
 		custom_trigger_tooltip = {
 			tooltip = GER_Four_Year_Plan_Finish_tt
 			has_global_flag =  {
-				flag = GER_FOUR_PLAN_FLAG
+				flag = GER_FOUR_PLAN_FLAG_1
 				days > 1460
 			}
 		}
