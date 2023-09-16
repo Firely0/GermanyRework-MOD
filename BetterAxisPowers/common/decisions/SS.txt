@@ -339,6 +339,7 @@ GER_reichskommissariats = {
 						}
 						is_owned_by = GER
 					}
+					clr_state_flag = GER_Claim_lands
 					BLR = {
 						transfer_state = PREV
 					}
@@ -511,7 +512,6 @@ GER_reichskommissariats = {
 					puppet = PREV
 					set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 				}
-
 				hidden_effect = {
 					load_focus_tree = {
 						tree = SS_SOV_Side_focus
@@ -524,7 +524,6 @@ GER_reichskommissariats = {
 				set_variable = { SS_production_speed_industrial_complex_factor = -0.15 }
 				set_variable = { SS_production_speed_arms_factory_factor = -0.15 }
 				set_variable = { SS_production_speed_dockyard_factor = -0.15 }
-
 				add_dynamic_modifier = { modifier = SS_Eco_dynamic_modifier }
 
 				set_variable = { SS_UKR_org_loss_when_moving = 0.1 }
@@ -534,9 +533,17 @@ GER_reichskommissariats = {
 				set_variable = { SS_UKR_training_time_factor = 0.2 }
 				set_variable = { SS_UKR_atack_factor = -0.1 }
 				set_variable = { SS_UKR_defance_factor = -0.1 }
-
 				add_dynamic_modifier = { modifier = SS_UKR_Army_dynamic_modifier }
 
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = UKR
+						}
+						is_owned_by = GER
+					}
+					clr_state_flag = GER_Claim_lands
+				}
 				add_ideas = Block_WAR_ECO
 				set_cosmetic_tag = UKR_reichskommissariat
 				create_country_leader = {
