@@ -1088,20 +1088,25 @@ GER_upgrade_kriegsmarine_idea_effect = {
 GER_Lands_in_Soviet = {
 	every_state = {
 		limit = {
-			is_owned_by = SOV
-			has_state_flag = GER_Claim_lands
+			AND = {
+				is_owned_by = SOV
+				has_state_flag = GER_Claim_lands
+			}
 		}
 		transfer_state_to = GER
 	}
 	every_state = {
 		limit = {
 			NOT = {
-				is_owned_by = SOV
-				is_controlled_by_GER_or_subject = no
+				AND = {
+					is_owned_by = SOV
+					is_controlled_by_GER_or_subject = no
+					has_state_flag = GER_Claim_lands
+				}
 			}
-			has_state_flag = GER_Claim_lands
 		}
 		add_claim_by = GER
+		clr_state_flag = GER_Claim_lands
 	}
 	every_country = {
 		limit = {
