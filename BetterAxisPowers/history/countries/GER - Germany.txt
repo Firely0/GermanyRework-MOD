@@ -272,6 +272,7 @@ if = {
 		early_ship_hull_submarine = 1
 		basic_ship_hull_submarine = 1
 		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
 		mtg_transport = 1
 		basic_torpedo = 1
 		improved_ship_torpedo_launcher = 1
@@ -1019,6 +1020,21 @@ if = {
 		}
 		obsolete = yes
 	}
+	create_equipment_variant = {
+		name = "Graf Zeppelin Class"
+		type = ship_hull_carrier_conversion_ca
+		name_group = GER_CV_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_deck_slot_1 = ship_deck_space
+			fixed_ship_deck_slot_2 = ship_deck_space
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+		}
+		obsolete = no
+	}
 }
 if = {
 	limit = {
@@ -1054,7 +1070,19 @@ if = {
 	limit = {
 		has_dlc = "By Blood Alone"
 	}
-
+	create_equipment_variant = {
+		name = "Fieseler Fi 167"
+		type = cv_small_plane_naval_bomber_airframe_1
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "GFX_GER_cv_naval_bomber1_medium"
+	}
 	create_equipment_variant = {
 		name = "Do 23"
 		type = medium_plane_airframe_0

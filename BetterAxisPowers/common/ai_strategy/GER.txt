@@ -3069,6 +3069,18 @@ bba_air_prod_1 = {
 		value = -25
 	}
 
+	ai_strategy = {
+		type = unit_ratio
+		id = cv_fighter
+		value = 1
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cv_naval_bomber
+		value = 5
+	}
+
 }
 
 bba_air_prod_2 = {
@@ -3161,6 +3173,18 @@ bba_air_prod_2 = {
 		type = unit_ratio
 		id = heavy_fighter
 		value = -25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cv_fighter
+		value = 2
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cv_naval_bomber
+		value = 5
 	}
 
 }

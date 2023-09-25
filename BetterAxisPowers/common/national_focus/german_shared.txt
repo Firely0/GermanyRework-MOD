@@ -1169,12 +1169,6 @@ shared_focus = {
 	available = {
 		GER_four_year_plan_available = yes
 	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -1186,7 +1180,10 @@ shared_focus = {
 					NOT = { has_completed_focus = GER_four_year_plan_a }
 				}
 			}
-			custom_effect_tooltip = GER_gross_tt
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1
+				add_idea = Four_Year_Plan_2
+			}
 		}
 		if = {
 			limit = {
@@ -1402,6 +1399,15 @@ shared_focus = {
 	relative_position_id = GER_carrier_war
 	mutually_exclusive = { focus = GER_Convert_Civilian_Ships }
 	prerequisite = { focus = GER_carrier_war }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_NOT_LIMITED_NAVAL
+			NOT = {
+				has_idea = Landon_Treaty
+				has_idea = Landon_Treaty_sub_focus
+			}
+		}
+	}
 	x = 1
 	y = 1
 	cost = 5
@@ -1414,9 +1420,8 @@ shared_focus = {
 		add_to_variable = { GER_navy_carrier_air_agility_factor = 0.05 }
 		set_variable = { GER_navy_carrier_air_targetting_factor = 0.05 }
 		custom_effect_tooltip = GER_Graf_Zeppelin_Modify
-		unlock_decision_tooltip = GER_Visit_Graf_Zeppelin
 		create_equipment_variant = {
-			name = "Graf Zeppelin"
+			name = "Flugzeugträger B"
 			type = ship_hull_carrier_conversion_bb
 			name_group = GER_CV_HISTORICAL
 			parent_version = 0
@@ -1426,20 +1431,20 @@ shared_focus = {
 				fixed_ship_deck_slot_2 = ship_deck_space
 				fixed_ship_anti_air_slot = ship_anti_air_2
 				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_2
+				fixed_ship_engine_slot = carrier_ship_engine_1
 				fixed_ship_secondaries_slot = ship_secondaries_2
-				mid_1_custom_slot = ship_armor_carrier_deck
+				mid_1_custom_slot = ship_deck_space
 			}
 		}
 		add_equipment_production = {
 			equipment = {
 				type = ship_hull_carrier_conversion_bb
 				creator = "GER"
-				version_name = "Graf Zeppelin"
+				version_name = "Flugzeugträger B"
 			}
-			name = "Graf Zeppelin"
-			requested_factories = 5
-			progress = 0.80
+			name = "Flugzeugträger B"
+			requested_factories = 1
+			progress = 0
 			amount = 1
 		}
 	}
@@ -1514,7 +1519,15 @@ shared_focus = {
 	ai_will_do = {
 		factor = 1
 	}
-
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = GER_NOT_LIMITED_NAVAL
+			NOT = {
+				has_idea = Landon_Treaty
+				has_idea = Landon_Treaty_sub_focus
+			}
+		}
+	}
 	completion_reward = {
 		custom_effect_tooltip = GER_Bismarck_Modify
 		set_variable = {
@@ -1993,12 +2006,7 @@ shared_focus = {
 	available = {
 		GER_four_year_plan_available = yes
 	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
+
 	ai_will_do = {
 		factor = 9
 	}
@@ -2010,7 +2018,20 @@ shared_focus = {
 					NOT = { has_completed_focus = GER_four_year_plan_a}
 				}
 			}
-			custom_effect_tooltip = GER_autarky_tt
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1
+				add_idea = Four_Year_Plan_1_autarky
+			}
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
 		}
 		if = {
 			limit = {
@@ -2180,15 +2201,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = GER_four_year_plan_a
 	cost = 10
-	available = {
-		GER_four_year_plan_available = yes
-	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
+
 	ai_will_do = {
 		factor = 9
 	}
@@ -2558,12 +2571,7 @@ shared_focus = {
 			has_full_control_of_state = 54
 		}
 	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
+
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -2675,12 +2683,7 @@ shared_focus = {
 		GER_four_year_plan_available = yes
 		has_completed_focus = GER_Hide_Arms_Industrialization
 	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
+
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -3688,12 +3691,7 @@ shared_focus = {
 	available = {
 		GER_four_year_plan_available = yes
 	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = GER_four_year_plan_end
-			NOT = { has_global_flag = GER_FOUR_PLAN_FLAG }
-		}
-	}
+
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -3703,7 +3701,10 @@ shared_focus = {
 					NOT = { has_completed_focus = GER_four_year_plan_a }
 				}
 			}
-			custom_effect_tooltip = GER_hide_mil_tt
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1
+				add_idea = Four_Year_Plan_1_Hide_ARMS
+			}
 		}
 		if = {
 			limit = {
