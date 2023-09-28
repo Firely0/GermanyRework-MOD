@@ -9,6 +9,12 @@ on_actions = {
 				add_ideas = Luftwaffe_debuff
 				add_ideas = Kriegsmarine_Debuff_Version
 			}
+			ITA = {
+				add_ideas = ITA_GER_TRAINING
+			}
+			SOV = {
+				add_ideas = SOV_GER_TRAINING
+			}
 			if = {
 				limit = {
 					GER = {
@@ -23,20 +29,24 @@ on_actions = {
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
-					is_ai = yes
-				}
-				create_equipment_variant = {
-					name = "Fieseler Fi 167"
-					type = cv_small_plane_naval_bomber_airframe_1
-					parent_version = 0
-					modules = {
-						fixed_main_weapon_slot = torpedo_mounting
-						fixed_auxiliary_weapon_slot_1 = empty
-						engine_type_slot = engine_2_1x
-						special_type_slot_1 = empty
-						special_type_slot_2 = empty
+					GER = {
+						is_ai = yes
 					}
-					icon = "GFX_GER_cv_naval_bomber1_medium"
+				}
+				GER = {
+					create_equipment_variant = {
+						name = "Fieseler Fi 167"
+						type = cv_small_plane_naval_bomber_airframe_1
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = torpedo_mounting
+							fixed_auxiliary_weapon_slot_1 = empty
+							engine_type_slot = engine_2_1x
+							special_type_slot_1 = empty
+							special_type_slot_2 = empty
+						}
+						icon = "GFX_GER_cv_naval_bomber1_medium"
+					}
 				}
 			}
 		}
