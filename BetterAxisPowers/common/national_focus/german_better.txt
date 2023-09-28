@@ -5228,11 +5228,6 @@ focus_tree = {
 					add_war_support = 0.1
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen_t
-			add_ideas = GER_volkswagen_idea
 			random_owned_controlled_state = {
 				prioritize = { 64 }
 				limit = {
@@ -5249,6 +5244,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GER_Volkswagen
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GER_Volkswagen_t
+			add_ideas = GER_volkswagen_idea
 		}
 	}
 

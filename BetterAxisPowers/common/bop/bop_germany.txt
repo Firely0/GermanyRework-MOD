@@ -12,9 +12,9 @@ GER_power_balance = {
 			sickness_chance = 0.1
 		}
 	}
-	side = {
+	side = { # Retire Route / Bad State of Adolf Hitler
 		id = default_left_side
-		icon = GFX_bop_Fuhrer_Bad
+		icon = GFX_bop_GER_fuhrer_bad_side
 		range = {
 			id = left_side_range
 			min = -0.5
@@ -88,11 +88,31 @@ GER_power_balance = {
 				conscription_factor = -0.15
 				army_morale_factor = -0.06
 				political_power_gain = -0.2
-			}	
+			}
 			on_activate = {
 				GER_bop_increase_need_checkup_modifier = yes
+				if = { # Replace Bad State with So Bad!
+					limit = {
+						NOT = { has_idea = Kaiser_Idea }
+					}
+					set_power_balance_gfx = {
+						id = GER_power_balance
+						side = default_left_side
+						gfx = GFX_bop_GER_fuhrer_sobad_side
+					}
+				}
 			}
 			on_deactivate = {
+				if = { # Replace So Bad State with Bad!
+					limit = {
+						NOT = { has_idea = Kaiser_Idea }
+					}
+					set_power_balance_gfx = {
+						id = GER_power_balance
+						side = default_left_side
+						gfx = GFX_bop_GER_fuhrer_bad_side
+					}
+				}
 			}
 		}
 		range = {
@@ -132,14 +152,14 @@ GER_power_balance = {
 				}
 			}
 			on_deactivate = {
-				
-			}	
+
+			}
 		}
 	}
 
 	side = {
 		id = default_right_side
-		icon = GFX_bop_Fuhrer_Good
+		icon = GFX_bop_GER_fuhrer_good_side
 		range = {
 			id = right_side_range
 			min = 0.1
@@ -167,7 +187,7 @@ GER_power_balance = {
 			id = far_right_side_range
 			min = 0.8
 			max = 0.99
-			modifier = {					
+			modifier = {
 				experience_gain_army_factor = 0.05
 				experience_gain_navy_factor = 0.05
 				experience_gain_air_factor = 0.05
@@ -175,12 +195,26 @@ GER_power_balance = {
 				industrial_capacity_factory = 0.03
 				industrial_capacity_dockyard = 0.03
 			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GER_power_balance
+					side = default_right_side
+					gfx = GFX_bop_GER_fuhrer_good_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = GER_power_balance
+					side = default_right_side
+					gfx = GFX_bop_GER_fuhrer_start_side
+				}
+			}
 		}
 		range = {
 			id = good_ending_right_side_range
 			min = 0.99
 			max = 1
-			modifier = {					
+			modifier = {
 				experience_gain_army_factor = 0.1
 				experience_gain_navy_factor = 0.1
 				experience_gain_air_factor = 0.1
@@ -191,6 +225,6 @@ GER_power_balance = {
 			}
 		}
 	}
-	
+
 }
 

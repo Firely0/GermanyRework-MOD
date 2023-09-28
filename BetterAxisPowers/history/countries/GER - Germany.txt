@@ -19,19 +19,17 @@ set_variable = { GER_sealion_ph2_time = 120 }
 #Volkssturm Time
 set_variable = { GER_DEPLOY_TIME_OF_VOLKSSTURM = 90 }
 
-#Training Programs
-activate_mission = GER_SOV_TRAINING
-activate_mission = GER_ITA_TRAINING
-
 #Rhineland Starts
 activate_mission = GER_Rhineland_demilitarized_a
 activate_mission = GER_Rhineland_demilitarized_b
 activate_mission = GER_Rhineland_demilitarized_e
 
-#Spain UPDATE
+#Allowed with Focus
 set_rule = { can_send_volunteers = no }
 
-
+#Training Programs 
+activate_mission = GER_SOV_TRAINING
+activate_mission = GER_ITA_TRAINING
 
 add_opinion_modifier = {
 	target = SOV
@@ -87,6 +85,14 @@ SWE = {
 set_country_flag = GER_BLOCKED_TOTAL_WAR
 # Yeah but maybe later
 
+#German Rapid Mobilization
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	add_ideas = german_rapid_mobilization_spirit
+}
+
 #Wehrmacht
 set_variable = {
 	GER_max_command_power = -20
@@ -128,6 +134,8 @@ set_variable = {
 set_variable = {
 	GER_naval_doctrine_cost_factor = 0.1
 }
+
+# Army Navy Air 
 
 add_dynamic_modifier = {
 	modifier = Wehrmacht_dynamic_modifier
@@ -209,7 +217,7 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
-	electronic_mechanical_engineering = 1
+	# electronic_mechanical_engineering = 1
 }
 if = {
 	limit = {
@@ -250,6 +258,7 @@ if = {
 		early_battleship = 1
 		basic_battleship = 1
 		early_battlecruiser = 1
+		early_carrier = 1
 		transport = 1
 	}
 	set_naval_oob = "GER_1936_naval"
@@ -539,9 +548,12 @@ add_ideas = {
 	Wehrmacht
 	Luftwaffe
 	Kriegsmarine
+
+	# Laws
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+
 	krupp_starter_ver
 }
 
@@ -1269,7 +1281,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Graf Zeppelin Class"
-			type = ship_hull_carrier_1
+			type = ship_hull_carrier_conversion_ca
 			name_group = GER_CV_HISTORICAL
 			parent_version = 0
 			modules = {
@@ -1279,7 +1291,6 @@ if = {
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = carrier_ship_engine_2
 				fixed_ship_secondaries_slot = ship_secondaries_1
-				front_1_custom_slot = ship_deck_space
 			}
 		}
 	}

@@ -835,7 +835,6 @@ add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
-	SOV_GER_TRAINING
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
@@ -1395,7 +1394,8 @@ if = {
 			tank_nsb_engine_upgrade = 8
 			tank_nsb_armor_upgrade = 1
 		}
-		icon = "GFX_SOV_improved_light_tank_medium"
+		icon = "GFX_SOV_improved_light_tank_medium" #More similar to BT-7 than to T-26
+		model = "SOV_light_armor_entity" #More similar to BT-7 than to T-26
 	}
 	create_equipment_variant = {
 		name = "BT-7"
@@ -1433,7 +1433,8 @@ if = {
 			tank_nsb_armor_upgrade = 3
 			tank_nsb_engine_upgrade = 10
 		}
-		icon = "GFX_SOV_basic_heavy_tank_medium"
+		icon = "GFX_SOV_basic_heavy_tank_medium" #Closer to T-35
+		#model = "SOV_heavy_armor_0" #Closer to T-35 but dependant on Soviet Tanks DLC
 	}
 	create_equipment_variant = {
 		name = "T-35"
@@ -1670,6 +1671,7 @@ if = {
 		type = ship_hull_cruiser_1				# minelayer
 		name_group = SOV_MINELAYERS_HISTORICAL
 		parent_version = 0
+		role_icon_index = 4
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1

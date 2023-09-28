@@ -1,17 +1,33 @@
 spriteTypes = {
+
+	# Good State of Adolf
 	
 	spriteType = {
-		name = "GFX_bop_Fuhrer_Bad"
-		texturefile = "gfx/interface/bop/FuhrerBad.dds"
+		name = "GFX_bop_GER_fuhrer_start_side"
+		texturefile = "gfx/interface/bop/bop_GER_fuhrer_start_side.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_bop_Fuhrer_Good"
-		texturefile = "gfx/interface/bop/FuhrerGood.dds"
+		name = "GFX_bop_GER_fuhrer_good_side"
+		texturefile = "gfx/interface/bop/bop_GER_fuhrer_good_side.dds"
+	}
+
+	#Bad State of Adolf
+
+	spriteType = {
+		name = "GFX_bop_GER_fuhrer_bad_side"
+		texturefile = "gfx/interface/bop/bop_GER_fuhrer_bad_side.dds"
 	}
 
 	spriteType = {
-		name = "GFX_bop_Wilhelm"
-		texturefile = "gfx/interface/bop/Wilhelm.dds"
+		name = "GFX_bop_GER_fuhrer_sobad_side"
+		texturefile = "gfx/interface/bop/bop_GER_fuhrer_sobad_side.dds"
+	}
+
+	# Kaiser
+	
+	spriteType = {
+		name = "GFX_bop_GER_kaiser_side"
+		texturefile = "gfx/interface/bop/bop_GER_kaiser_side.dds"
 	}
 }

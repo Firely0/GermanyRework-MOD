@@ -1,5 +1,24 @@
 ideas = {
 
+	army_spirit = { # Should Work at Here
+
+		german_rapid_mobilization_spirit = {
+			ledger = army
+			available = { OR = { NOT = { has_war = yes } NOT = { date > 1939.01.01 } } }
+			visible = { tag = GER }
+
+			modifier = {
+				training_time_army_factor = -0.1 # Seems fine by me
+				weekly_manpower = 250 #
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+	}
+
 	country = {
 
 		GER_unexpected_attack = {
