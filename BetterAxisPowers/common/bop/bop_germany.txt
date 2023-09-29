@@ -38,6 +38,16 @@ GER_power_balance = {
 					}
 					GER_bop_increase_need_checkup_modifier = yes
 				}
+				if = { # Replace So Bad State with Bad!
+					limit = {
+						NOT = { has_idea = Kaiser_Idea }
+					}
+					set_power_balance_gfx = {
+						id = GER_power_balance
+						side = default_left_side
+						gfx = GFX_bop_GER_fuhrer_bad_side
+					}
+				}
 			}
 			on_deactivate = {
 			}
@@ -67,6 +77,16 @@ GER_power_balance = {
 					}
 					GER_bop_increase_need_checkup_modifier = yes
 				}
+				if = { # Replace Bad State with So Bad!
+					limit = {
+						NOT = { has_idea = Kaiser_Idea }
+					}
+					set_power_balance_gfx = {
+						id = GER_power_balance
+						side = default_left_side
+						gfx = GFX_bop_GER_fuhrer_sobad_side
+					}
+				}
 			}
 			on_deactivate = {
 			}
@@ -91,28 +111,8 @@ GER_power_balance = {
 			}
 			on_activate = {
 				GER_bop_increase_need_checkup_modifier = yes
-				if = { # Replace Bad State with So Bad!
-					limit = {
-						NOT = { has_idea = Kaiser_Idea }
-					}
-					set_power_balance_gfx = {
-						id = GER_power_balance
-						side = default_left_side
-						gfx = GFX_bop_GER_fuhrer_sobad_side
-					}
-				}
 			}
 			on_deactivate = {
-				if = { # Replace So Bad State with Bad!
-					limit = {
-						NOT = { has_idea = Kaiser_Idea }
-					}
-					set_power_balance_gfx = {
-						id = GER_power_balance
-						side = default_left_side
-						gfx = GFX_bop_GER_fuhrer_bad_side
-					}
-				}
 			}
 		}
 		range = {
@@ -184,6 +184,13 @@ GER_power_balance = {
 
 				sickness_chance = -0.1
 			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GER_power_balance
+					side = default_right_side
+					gfx = GFX_bop_GER_fuhrer_start_side
+				}
+			}
 		}
 		range = {
 			id = far_right_side_range
@@ -205,11 +212,6 @@ GER_power_balance = {
 				}
 			}
 			on_deactivate = {
-				set_power_balance_gfx = {
-					id = GER_power_balance
-					side = default_right_side
-					gfx = GFX_bop_GER_fuhrer_start_side
-				}
 			}
 		}
 		range = {
