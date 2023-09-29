@@ -4,8 +4,21 @@ ideas = {
 
 		german_rapid_mobilization_spirit = {
 			ledger = army
-			available = { OR = { NOT = { has_war = yes } NOT = { date > 1939.01.01 } } }
 			visible = { tag = GER }
+
+			available = {
+				AND = {
+					has_war = no
+					date < 1939.01.01 
+				}
+			}
+
+			cancel = {
+				OR = { 
+					has_war = yes
+					date > 1939.01.01
+				}
+			}
 
 			modifier = {
 				training_time_army_factor = -0.1 # Seems fine by me
@@ -13,7 +26,11 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 0
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
 			}
 		}
 		
