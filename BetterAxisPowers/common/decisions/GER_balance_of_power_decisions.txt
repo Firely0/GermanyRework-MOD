@@ -579,7 +579,7 @@ GER_balance_of_power_category = {
 
 	GER_very_low_decrease_effect_a = {#Panzer Ace
 		priority = 86
-		icon = GFX_decision_generic_tank
+		icon = GFX_decision_ger_grant_medal_tank
 
 		allowed = {
 			original_tag = GER
@@ -602,7 +602,6 @@ GER_balance_of_power_category = {
 					any_country_division = {
 						division_has_majority_template = medium_armor
 					}
-					has_political_power > 110
 				}
 			}
 		}
@@ -640,7 +639,7 @@ GER_balance_of_power_category = {
 
 	GER_very_low_decrease_effect_b = { # Panzer Ace
 		priority = 86
-		icon = GFX_decision_generic_tank
+		icon = GFX_decision_ger_grant_medal_tank
 
 		allowed = {
 			original_tag = GER
@@ -659,7 +658,6 @@ GER_balance_of_power_category = {
 					any_country_division = {
 						division_has_majority_template = medium_armor
 					}
-					has_political_power > 110
 				}
 			}
 		}

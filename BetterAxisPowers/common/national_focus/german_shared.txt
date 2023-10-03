@@ -2900,9 +2900,11 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		set_country_flag = GER_ECO_1
-		swap_ideas = {
-			remove_idea = German_Eco_Plan_B
-			add_idea = German_Eco_Plan_A
+		GER = {
+			swap_ideas = {
+				remove_idea = German_Eco_Plan_B
+				add_idea = German_Eco_Plan_A
+			}
 		}
 	}
 }
@@ -3186,9 +3188,11 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		set_country_flag = GER_ECO_1
-		swap_ideas = {
-			remove_idea = German_Eco_Plan_B
-			add_idea = German_Eco_Plan_B_A
+		GER = {
+			swap_ideas = {
+				remove_idea = German_Eco_Plan_B
+				add_idea = German_Eco_Plan_B_A
+			}
 		}
 	}
 }

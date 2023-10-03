@@ -3156,7 +3156,7 @@ country_event = { #Event For France
 				}
 				ROOT = {
 					diplomatic_relation = {
-						country = LUX
+						country = HOL
 						relation = guarantee
 						active = yes
 					}
@@ -3171,7 +3171,7 @@ country_event = { #Event For France
 				}
 				ROOT = {
 					diplomatic_relation = {
-						country = LUX
+						country = BEL
 						relation = guarantee
 						active = yes
 					}
@@ -3447,13 +3447,14 @@ country_event = { #Event For UK
 				}
 				ROOT = {
 					diplomatic_relation = {
-						country = LUX
+						country = HOL
 						relation = guarantee
 						active = yes
 					}
 				}
 			}
 		}
+
 		BEL = {
 			if = {
 				limit = {
@@ -3462,13 +3463,14 @@ country_event = { #Event For UK
 				}
 				ROOT = {
 					diplomatic_relation = {
-						country = LUX
+						country = BEL
 						relation = guarantee
 						active = yes
 					}
 				}
 			}
 		}
+
 		LUX = {
 			if = {
 				limit = {
