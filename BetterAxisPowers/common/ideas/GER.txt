@@ -632,73 +632,6 @@ ideas = {
 			}
 		}
 
-		ENG_resource_efficiency = {
-
-			picture = ast_all_in
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				local_resources = 0.1
-			}
-		}
-
-		ENG_tank_production = {
-
-			picture = generic_armor
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		ENG_anti_tank_production = {
-
-			picture = generic_artillery_regiments
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-			}
-
-			equipment_bonus = {
-				anti_tank_equipment = {
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
 		Japan_Side_Intel = {
 			picture = generic_the_london_naval_treaty
 			allowed = {
@@ -3351,6 +3284,12 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = fascism
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 
 			cancel = {
