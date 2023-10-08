@@ -1879,6 +1879,7 @@ country_event = {
 	desc = "Germany wants us to join war Against Soviet Union!, They Promised Give our Lost Land Back to us"
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+	
 	option = {
 		ai_chance = {
 			factor = 60
@@ -1909,6 +1910,7 @@ country_event = {
 			}
 		}
 	}
+
 	option = {
 		ai_chance = {
 			factor = 40
@@ -1971,30 +1973,36 @@ country_event = {
 	title = "Request from Finland"
 	desc = "Finland Request Control of Their Pre-Winter War lands."
 	picture = GFX_report_event_finnish_soldiers_snow
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Fine"
 
-		every_state = {
-			limit = {
-				has_state_flag = GER_FIN_granted_lands_state
-				OR = {
-					is_controlled_by = GER
-					controller = {
-						is_in_faction_with = GER
-						NOT = { tag = FIN }
+	is_triggered_only = yes
+
+	immediate = { # Transfer State and Stop.
+		hidden_effect = {
+			every_state = {
+				limit = {
+					has_state_flag = GER_FIN_granted_lands_state
+					OR = {
+						is_controlled_by = GER
+						controller = {
+							is_in_faction_with = GER
+							NOT = { tag = FIN }
+						}
+					}		
+				}
+				FIN = {
+					transfer_state = PREV
+					hidden_effect = {
+						set_state_controller = PREV
 					}
 				}
 			}
-			FIN = {
-				transfer_state = PREV
-				hidden_effect = {
-					set_state_controller = PREV
-				}
-			}
+		}
+	}
+
+	option = {
+		name = "Fine"
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -3085,7 +3093,7 @@ country_event = { #Event For France
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b
@@ -3239,7 +3247,7 @@ country_event = { #Event For France / Not Diplo Side
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = {
 		name = "We Always Have Other Plans"
@@ -3396,7 +3404,7 @@ country_event = { #Event For UK
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b
@@ -3500,7 +3508,7 @@ country_event = { #Event For UK - For Trade Ban
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b
@@ -3549,7 +3557,7 @@ country_event = { #Event For UK - Security of Benelux
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b
@@ -3636,7 +3644,7 @@ country_event = { #Event For UK isolate
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b
@@ -3679,7 +3687,7 @@ country_event = { #Event For UK issue ultimatum
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	timeout_days = 3
+	
 
 	option = { #Historical
 		name = germany.60.b

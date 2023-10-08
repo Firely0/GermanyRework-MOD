@@ -24,28 +24,6 @@
     }
 }
 
-GER_put_agent_on_NOR = {
-	allowed = {
-		tag = GER
-	}
-
-    enable = {
-	   date > 1937.01.01
-    }
-
-	abort = {
-		date > 1941.03.01
-	}
-
-	ai_strategy = {
-		type = operative_mission
-		mission = build_intel_network
-		value = 100
-		mission_target = NOR
-	}
-
-}
-
 GER_blitz_norway_denmark = {
 	allowed = {
 		tag = GER
@@ -64,6 +42,13 @@ GER_blitz_norway_denmark = {
 			NOT = { has_idea = Operation_Weserubung_AI }
 			date > 1941.01.01
 		}
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 100
+		mission_target = NOR
 	}
 
 	ai_strategy = {
@@ -97,12 +82,9 @@ GER_blitz_norway_denmark = {
 		value = 20
 	}
 
-	ai_strategy = { type = strategic_air_importance id = 6 value = 50000 }
-	ai_strategy = { type = front_armor_score id = "DEN" value = 50000 }
-
 	ai_strategy = {
 		type = naval_invasion_focus
-		value = 100
+		value = 10
 	}
 
 	ai_strategy = {
@@ -119,12 +101,8 @@ GER_blitz_norway_denmark = {
 
 	ai_strategy = {
 		type = invasion_unit_request
-		state = 142
-	}
-
-	ai_strategy = {
-		type = invasion_unit_request
 		state = 110
+		value = 100
 	}
 
 	ai_strategy = {
@@ -135,8 +113,89 @@ GER_blitz_norway_denmark = {
 		execute_order = yes
 	}
 
+	ai_strategy = { type = strategic_air_importance id = 6 value = 50000 }
+	ai_strategy = { type = front_armor_score id = "DEN" value = 50000 }
 	ai_strategy = { type = strategic_air_importance id = 11 value = 50000 }
 	ai_strategy = { type = front_armor_score id = "NOR" value = -50000 }
+
+}
+
+GER_blitz_denmark_before_norway = {
+	allowed = {
+		tag = GER
+	}
+
+    enable = {
+	   has_idea	= Operation_Weserubung_AI
+    }
+
+	abort = {
+		OR = {
+			AND = {
+				DEN = { has_capitulated = yes }
+			}
+			date > 1941.01.01
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 173
+		value = 600
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 174
+		value = 600
+	}
+
+}
+
+GER_operation_sealion_strats = {
+	allowed = {
+		tag = GER
+	}
+
+    enable = {
+	   has_idea	= Operation_Sea_Lion
+    }
+
+	abort = {
+		OR = {
+			AND = {
+				ENG = { has_capitulated = yes }
+			}
+			date > 1940.06.01
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 10
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 123
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 127
+		value = 100
+	}
 
 }
 
@@ -338,5 +397,67 @@ GER_no_lend_lease_jap = { #Waste of EQ for Germany
 		type = send_lend_lease_desire
 		id = MEN
 		value = -50
+	}
+}
+
+ENG_ignore_baltics_sea = {
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		GER = {
+			has_war_with = DEN
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 207 #Dont Stuck
+		value = 600
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 206 #Dont Stuck
+		value = 600
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 9 #Dont Stuck
+		value = 600
+	}
+}
+
+ENG_leave_norway_alone = {
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		GER = {
+			has_war_with = NOR
+		}
+	}
+
+	abort = {
+		date > 1941.01.01
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 173 #Dont Stuck
+		value = 600
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = NOR
+		value = 10
 	}
 }

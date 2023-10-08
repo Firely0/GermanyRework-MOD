@@ -1336,6 +1336,7 @@ GER_start_the_blitz = {
 		FRA = { has_capitulated = yes }
 		NOT = { has_war_with = SOV }
 		date > 1940.1.1
+		date < 1940.2.15
 	}
 
 	abort_when_not_enabled = yes
@@ -1350,50 +1351,6 @@ GER_start_the_blitz = {
 		type = strategic_air_importance
 		id = 18 #Strategic Region ID - English Channel
 		value = -20000 #Too easy to lose planes here
-	}
-}
-
-GER_upgrade_the_blitz = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		is_historical_focus_on = yes
-		has_war_with = ENG
-		ENG = { controls_state = 1 }
-		FRA = { has_capitulated = yes }
-		NOT = { has_war_with = SOV }
-		date > 1940.3.1
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 1 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
-	}
-}
-
-GER_upgrade_the_blitz_again = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		is_historical_focus_on = yes
-		has_war_with = ENG
-		ENG = { controls_state = 1 }
-		FRA = { has_capitulated = yes }
-		NOT = { has_war_with = SOV }
-		date > 1940.6.1
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 1 #Strategic Region ID - Southern England
-		value = 10000 #value of stocked main front in active combat is usually around 35,000
 	}
 }
 
@@ -1533,6 +1490,7 @@ axis_stay_away_from_the_royal_navy = {
 	enable = {
 		has_war_with = ENG
 		date < 1942.1.1
+		NOT = { has_idea = Operation_Sea_Lion }
 
 		OR = {
 			GER = {
@@ -1558,6 +1516,7 @@ axis_stay_away_from_the_royal_navy = {
 			divisions_in_state = { state = 133 size < 1 }
 		}
 	}
+
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -1565,6 +1524,31 @@ axis_stay_away_from_the_royal_navy = {
 		id = 18 #english channel
 		value = 600 # avoid doing missions as well
 	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 16 #around UK
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 42
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 43 #around UK
+		value = 100
+	}
+}
+
+Operation_Sea_Lion_navy = {
+	enable = {
+		has_war_with = ENG
+		has_idea = Operation_Sea_Lion
+	}
+
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 16 #around UK
