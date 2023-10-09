@@ -38,6 +38,38 @@ ideas = {
 
 	country = {
 
+		GER_focus_on_tanks = {
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+			}
+
+		}
+
+		GER_focus_on_air = {
+			picture = man_five_year_plan_air
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+			}
+
+		}
+
 		GER_unexpected_attack = {
 			picture = chi_incompetent_officers
 
@@ -3282,14 +3314,13 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				has_government = fascism
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.15
 			}
 
-			targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+			allowed_civil_war = {
+				has_government = fascism
 			}
 
 			cancel = {
@@ -3306,7 +3337,7 @@ ideas = {
 						has_global_flag = GER_Moscow_win
 						has_global_flag = GER_Stalingrad_win
 					}
-					add_ideas = GER_barbarossa
+					add_ideas = GER_barbarossa # Keep Idea
 				}
 				if = {
 					limit = {
@@ -3319,7 +3350,37 @@ ideas = {
 					}
 					clr_global_flag = GER_Operation_Barbarossa_running
 					set_global_flag = GER_Operation_Barbarossa_Failed
+					add_ideas = GER_barbarossa_war # Replace
 				}
+			}
+
+		}
+
+		GER_barbarossa_war = {
+			picture = generic_acquire_tanks
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.15
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			cancel = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+
+			on_remove = {
+				clr_global_flag = Operation_barb_run_global
 			}
 
 		}
@@ -3394,7 +3455,6 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
 
 			removal_cost = -1
 

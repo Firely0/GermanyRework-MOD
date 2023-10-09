@@ -558,6 +558,248 @@ GER_reichskommissariats = {
 			}
 		}
 	}
+
+	GER_reichskommissariat_moscow = {
+		icon = ger_reichskommissariats
+		cost = 0
+
+		available = {
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+			controls_state = 208
+			controls_state = 244
+			controls_state = 209
+			controls_state = 263
+			controls_state = 264
+			controls_state = 210
+			controls_state = 246
+			controls_state = 247
+			controls_state = 248
+			controls_state = 242
+			controls_state = 219
+			controls_state = 253
+			controls_state = 243
+			controls_state = 224
+			controls_state = 205
+			controls_state = 223
+			controls_state = 254
+			controls_state = 255
+			controls_state = 222
+			controls_state = 258
+			controls_state = 220
+			controls_state = 257
+			controls_state = 260
+			controls_state = 252
+			controls_state = 351
+			controls_state = 879
+			controls_state = 880
+			controls_state = 214
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 208
+						state = 244
+						state = 209
+						state = 263
+						state = 264
+						state = 210
+						state = 246
+						state = 247
+						state = 248
+						state = 242
+						state = 219
+						state = 253
+						state = 243
+						state = 224
+						state = 205
+						state = 223
+						state = 254
+						state = 255
+						state = 222
+						state = 258
+						state = 220
+						state = 257
+						state = 260
+						state = 252
+						state = 351
+						state = 879
+						state = 880
+						state = 214
+					}
+				}
+				RMK = {
+					transfer_state = PREV
+					hidden_effect = {
+						add_state_core = PREV
+					}
+
+				}
+			}
+			set_autonomy = { target = RMK autonomy_state = autonomy_reichskommissariat}
+		}
+	}
+
+	GER_reichskommissariat_caucasus = {
+		icon = ger_reichskommissariats
+		cost = 0
+	
+		available = {
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+			controls_state = 238
+			controls_state = 237
+			controls_state = 236
+			controls_state = 234
+			controls_state = 235
+			controls_state = 232
+			controls_state = 233
+			controls_state = 827
+			controls_state = 826
+			controls_state = 828
+			controls_state = 821
+			controls_state = 231
+			controls_state = 229
+			controls_state = 230
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		visible = {
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+		}
+	
+		fire_only_once = yes
+	
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 238
+						state = 237
+						state = 236
+						state = 234
+						state = 235
+						state = 232
+						state = 233
+						state = 827
+						state = 826
+						state = 828
+						state = 821
+						state = 231
+						state = 229
+						state = 230
+					}
+				}
+				RKS = {
+					transfer_state = PREV
+					hidden_effect = {
+						add_state_core = PREV
+					}
+				}
+			}
+			set_autonomy = { target = RKS autonomy_state = autonomy_reichskommissariat}
+		}
+	}
+
+	GER_reichskommissariat_turkestan = {
+
+		icon = ger_reichskommissariats
+		cost = 0
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = rksplus.tooltip.56
+				407
+				406
+				402
+				583
+				590
+				882
+				588
+				589
+				587
+				881
+				404
+				586
+				732
+				742
+				405
+				830
+				585
+				823
+				831
+				832
+				584
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 407
+						state = 406
+						state = 402
+						state = 583
+						state = 590
+						state = 882
+						state = 588
+						state = 589
+						state = 587
+						state = 881
+						state = 404
+						state = 586
+						state = 732
+						state = 742
+						state = 405
+						state = 830
+						state = 585
+						state = 823
+						state = 831
+						state = 832
+						state = 584
+					}
+				}
+				RTK = {
+					transfer_state = PREV
+					hidden_effect = {
+						add_state_core = PREV
+					}
+				}
+			}
+			set_autonomy = { target = RTK autonomy_state = autonomy_reichskommissariat}
+		}
+	}
+
 }
 
 SS_recruitment = {
@@ -624,37 +866,37 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			110 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			110 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			142 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			142 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			143 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			143 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			144 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			144 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -689,33 +931,33 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			
-			36 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+
+			36 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			7 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			7 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			35 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			35 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-				
-			
+
+
 		}
 		visible = {
 			OR = {
@@ -749,22 +991,22 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			6 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			6 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			34 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
-			}	
+			34 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
 		}
 		visible = {
 			OR = {
@@ -798,37 +1040,37 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			29 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			29 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			16 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			16 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 			15 = {
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			14 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			14 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -863,21 +1105,21 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			13 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			13 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			191 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			191 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -917,21 +1159,21 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			12 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			12 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			190 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			190 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -971,22 +1213,22 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			
-			11 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+
+			11 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			189 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			189 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -1026,37 +1268,37 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			126 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			126 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 			127 = {
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			123 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			123 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			338 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			338 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -1150,37 +1392,37 @@ SS_recruitment = {
 				has_completed_focus = GER_SS_Trops
 				has_country_leader = { character = GER_heinrich_himmler }
 			}
-			141 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			141 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			139 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			139 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			138 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			138 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
-			140 = { 
-				CONTROLLER = { 
-					OR = { 
-						original_tag = GER 
-						is_subject_of = GER 
-					} 
-				} 
+			140 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
 			}
 		}
 		visible = {
@@ -1226,7 +1468,7 @@ SS_loot = {
 		available = {
 			any_controlled_state= {
 				NOT = { is_core_of = ROOT }
-			}	
+			}
 		}
 
 		ai_will_do = {
@@ -1246,14 +1488,14 @@ SS_loot = {
 
 		complete_effect = {
 			custom_effect_tooltip = add_equipment_effect
-		    add_equipment_to_stockpile = {
-			 type = infantry_equipment
-			 amount = 1500
-		    }
-	    }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+			}
+		}
 
-	  visible = { has_completed_focus = GER_SS }
-		
+		visible = { has_completed_focus = GER_SS }
+
 	}
 
 	GER_SS_Take_Over_Arms = {
@@ -1265,9 +1507,9 @@ SS_loot = {
 		}
 
 		available = {
-			any_controlled_state= {
+			any_controlled_state = {
 				NOT = { is_core_of = ROOT }
-			}	
+			}
 		}
 
 		cost = 50
@@ -1289,7 +1531,7 @@ SS_loot = {
 		}
 
 		visible = { has_completed_focus = GER_SS }
-		
+
 	}
 
 	GER_SS_Take_Over = {
@@ -1325,7 +1567,7 @@ SS_loot = {
 		}
 
 		visible = { has_completed_focus = GER_SS }
-		
+
 	}
 
 	GER_SS_Loot_France = {
@@ -1377,7 +1619,7 @@ SS_loot = {
 		}
 
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED }
-		
+
 	}
 
 	GER_SS_Last_Loot_France = {
@@ -1427,7 +1669,7 @@ SS_loot = {
 		}
 
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED has_country_flag = ss_loot NOT = { has_idea = GER_loot_france } }
-		
+
 	}
 
 	GER_SS_Take_Over_France = {
@@ -1454,7 +1696,7 @@ SS_loot = {
 		}
 
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED  NOT = { has_global_flag = GER_destroyed_eiffel } }
-		
+
 	}
 
 	GER_SS_Destroy_eifel_tower = {
@@ -1476,7 +1718,7 @@ SS_loot = {
 		complete_effect = {
 			random_controlled_state = {
 				limit = {
-					state = 16 
+					state = 16
 				}
 				add_resistance = 60
 				damage_building = {
@@ -1495,11 +1737,11 @@ SS_loot = {
 				}
 			}
 			16 = {
-				add_manpower = -50000 
+				add_manpower = -50000
 				add_dynamic_modifier = {
 					modifier = Ger_warsaw_state_dynamic_modifier
 				}
-			}	
+			}
 			news_event = { id = ger_f_news.4 hours = 3 }
 			custom_effect_tooltip = can_increase_resistance_d
 			set_global_flag = GER_destroyed_eiffel
@@ -1509,7 +1751,7 @@ SS_loot = {
 		}
 
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED has_country_flag = ss_loot }
-		
+
 	}
 
 	GER_SS_destroy_warsaw = {
@@ -1541,7 +1783,7 @@ SS_loot = {
 		complete_effect = {
 			random_controlled_state = {
 				limit = {
-					state = 10 
+					state = 10
 				}
 				add_resistance = -60
 				add_compliance = 20
@@ -1557,7 +1799,7 @@ SS_loot = {
 					type = industrial_complex
 					damage = 100
 				}
-				add_manpower = -720000 
+				add_manpower = -720000
 				add_dynamic_modifier = {
 					modifier = Ger_warsaw_state_dynamic_modifier
 				}
@@ -1566,11 +1808,11 @@ SS_loot = {
 			news_event = { id = ger_f_news.5 hours = 3 }
 		}
 
-		visible = { 
+		visible = {
 			POL = { has_completed_focus = POL_niech_zyje_opor }
 			controls_state = 10
 		}
-		
+
 	}
 }
 
@@ -1600,7 +1842,7 @@ SS_demands = {
 					defense_skill = 1
 					planning_skill = 1
 					logistics_skill = 1
-				} 
+				}
 			}
 		}
 	}
