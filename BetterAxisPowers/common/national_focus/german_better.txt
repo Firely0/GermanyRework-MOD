@@ -905,6 +905,9 @@ focus_tree = {
 			unlock_decision_tooltip = GER_reichskommissariat_norwegen
 			unlock_decision_tooltip = GER_reichskommissariat_niederlande
 			unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
+			unlock_decision_tooltip = GER_reichskommissariat_moscow
+			unlock_decision_tooltip = GER_reichskommissariat_caucasus
+			unlock_decision_tooltip = GER_reichskommissariat_turkestan
 		}
 	}
 
@@ -10952,10 +10955,6 @@ focus = {
 		}
 		
 		completion_reward = {
-			unlock_decision_tooltip = GER_reichskommissariat_caucasus
-			unlock_decision_tooltip = GER_reichskommissariat_turkestan
-			unlock_decision_tooltip = GER_reichskommissariat_moscow
-			
 			custom_effect_tooltip = GER_SS_Soviet_tt
 			show_ideas_tooltip = SS_Fake_tooltip_idea
 		}

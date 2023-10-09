@@ -73,7 +73,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = GFX_portrait_GER_AFRIKA
+		name = "GFX_Portrait_GER_AFRIKA"
 		texturefile = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
 	}
 
@@ -85,11 +85,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Alfred_Rosenberg"
 		texturefile = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_Portrait_Germany_Military_Administration"
-		texturefile = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds" # Replace REQ
 	}
 
 	#Ideas

@@ -1,33 +1,42 @@
+RMK_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+RKS_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
+RTK_reichskommissariat = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
+}
 BEL_september_plan_reichskommissariat = {
-	color = rgb { 131 126 94 }
-	color_ui = rgb { 131 126 94 }
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 122 145 93 }
 }
 
-BAL_september_plan_reichskommissariat = {
+#
+
+BAL_september_plan_reichskommissariat = { 
 	color = rgb { 92 102 92 }
 	color_ui = rgb { 92 102 92 }
 }
-
 POL_september_plan_reichskommissariat = {
 	color = rgb { 122 97 97 }
 	color_ui = rgb { 122 97 97 }
 }
-
 LIT_september_plan_reichskommissariat = {
 	color = rgb { 136 136 116 }
 	color_ui = rgb { 136 136 116 }
 }
-
 BLR_september_plan_reichskommissariat = {
 	color = rgb { 128 136 130 }
 	color_ui = rgb { 128 136 130 }
 }
-
 UKR_september_plan_reichskommissariat = {
 	color = rgb { 102 112 133 }
 	color_ui = rgb { 102 112 133 }
 }
-
 UKR_september_plan_reichskommissariat = {
 	color = rgb { 102 112 133 }
 	color_ui = rgb { 102 112 133 }
@@ -37,6 +46,8 @@ MITTEL_AFR = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 115 115 115 }
 }
+
+# 
 
 MAL_UK = {
 	color = rgb { 201 56 93 }

@@ -566,34 +566,32 @@ GER_reichskommissariats = {
 		available = {
 			has_completed_focus = GER_Local_Police_force_in_soviet
 			has_government = fascism
+			controls_state = 195
 			controls_state = 208
-			controls_state = 244
 			controls_state = 209
 			controls_state = 263
 			controls_state = 264
+			controls_state = 244
 			controls_state = 210
 			controls_state = 246
 			controls_state = 247
-			controls_state = 248
-			controls_state = 242
 			controls_state = 219
-			controls_state = 253
+			controls_state = 242
 			controls_state = 243
 			controls_state = 224
 			controls_state = 205
 			controls_state = 223
 			controls_state = 254
-			controls_state = 255
 			controls_state = 222
-			controls_state = 258
 			controls_state = 220
+			controls_state = 258
 			controls_state = 257
+			controls_state = 240
 			controls_state = 260
-			controls_state = 252
-			controls_state = 351
-			controls_state = 879
-			controls_state = 880
-			controls_state = 214
+			controls_state = 265
+			controls_state = 217
+			controls_state = 245
+			controls_state = 218
 		}
 
 		ai_will_do = {
@@ -603,7 +601,7 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_completed_focus = GER_form_the_reichskommissariats
 			has_government = fascism
 		}
 
@@ -611,34 +609,32 @@ GER_reichskommissariats = {
 			every_state = {
 				limit = {
 					OR = {
+						state = 195
 						state = 208
-						state = 244
 						state = 209
 						state = 263
-						state = 264
 						state = 210
+						state = 264
+						state = 244
 						state = 246
 						state = 247
-						state = 248
-						state = 242
 						state = 219
-						state = 253
+						state = 242
 						state = 243
 						state = 224
 						state = 205
 						state = 223
 						state = 254
-						state = 255
 						state = 222
-						state = 258
 						state = 220
+						state = 258
 						state = 257
+						state = 240
 						state = 260
-						state = 252
-						state = 351
-						state = 879
-						state = 880
-						state = 214
+						state = 265
+						state = 217
+						state = 245
+						state = 218
 					}
 				}
 				RMK = {
@@ -646,8 +642,8 @@ GER_reichskommissariats = {
 					hidden_effect = {
 						add_state_core = PREV
 					}
-
 				}
+				RMK = { set_cosmetic_tag = RMK_reichskommissariat }
 			}
 			set_autonomy = { target = RMK autonomy_state = autonomy_reichskommissariat}
 		}
@@ -656,7 +652,7 @@ GER_reichskommissariats = {
 	GER_reichskommissariat_caucasus = {
 		icon = ger_reichskommissariats
 		cost = 0
-	
+
 		available = {
 			has_completed_focus = GER_Local_Police_force_in_soviet
 			has_government = fascism
@@ -675,18 +671,18 @@ GER_reichskommissariats = {
 			controls_state = 229
 			controls_state = 230
 		}
-	
+
 		ai_will_do = {
 			factor = 10
 		}
-	
+
 		visible = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_completed_focus = GER_form_the_reichskommissariats
 			has_government = fascism
 		}
-	
+
 		fire_only_once = yes
-	
+
 		complete_effect = {
 			every_state = {
 				limit = {
@@ -715,6 +711,7 @@ GER_reichskommissariats = {
 				}
 			}
 			set_autonomy = { target = RKS autonomy_state = autonomy_reichskommissariat}
+			RKS = { set_cosmetic_tag = RKS_reichskommissariat }
 		}
 	}
 
@@ -724,31 +721,29 @@ GER_reichskommissariats = {
 		cost = 0
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = rksplus.tooltip.56
-				407
-				406
-				402
-				583
-				590
-				882
-				588
-				589
-				587
-				881
-				404
-				586
-				732
-				742
-				405
-				830
-				585
-				823
-				831
-				832
-				584
-			}
-
+			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_government = fascism
+			controls_state = 407
+			controls_state = 406
+			controls_state = 402
+			controls_state = 583
+			controls_state = 590
+			controls_state = 882
+			controls_state = 588
+			controls_state = 589
+			controls_state = 587
+			controls_state = 881
+			controls_state = 404
+			controls_state = 586
+			controls_state = 732
+			controls_state = 742
+			controls_state = 405
+			controls_state = 830
+			controls_state = 585
+			controls_state = 823
+			controls_state = 831
+			controls_state = 832
+			controls_state = 584
 		}
 
 		ai_will_do = {
@@ -756,7 +751,7 @@ GER_reichskommissariats = {
 		}
 
 		visible = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
+			has_completed_focus = GER_form_the_reichskommissariats
 			has_government = fascism
 		}
 
@@ -797,6 +792,7 @@ GER_reichskommissariats = {
 				}
 			}
 			set_autonomy = { target = RTK autonomy_state = autonomy_reichskommissariat}
+			RTK = { set_cosmetic_tag = RTK_reichskommissariat }
 		}
 	}
 
