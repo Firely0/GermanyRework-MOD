@@ -793,6 +793,19 @@ GER_reichskommissariats = {
 			}
 			set_autonomy = { target = RTK autonomy_state = autonomy_reichskommissariat}
 			RTK = { set_cosmetic_tag = RTK_reichskommissariat }
+			hidden_effect = {
+				RTK = {
+					create_country_leader = {
+						name = "Military Administration of Turkestan"
+						desc = ""
+						picture = "gfx/leaders/GER/Portrait_GER_AFRIKA.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+			}
 		}
 	}
 

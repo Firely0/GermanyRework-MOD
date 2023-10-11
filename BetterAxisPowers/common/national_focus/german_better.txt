@@ -57,7 +57,7 @@ focus_tree = {
 		bypass = {
 			42 = { is_demilitarized_zone = no }
 			51 = { is_demilitarized_zone = no }
-			909 = { is_demilitarized_zone = no }
+			50 = { is_demilitarized_zone = no }
 		}
 		ai_will_do = {
 			factor = 10
@@ -67,7 +67,7 @@ focus_tree = {
 			hidden_effect = {
 				42 = { set_demilitarized_zone = no }
 				51 = { set_demilitarized_zone = no } 
-				909 = { set_demilitarized_zone = no }
+				50 = { set_demilitarized_zone = no }
 			}
 			hidden_effect = {
 				if = {
@@ -4325,7 +4325,7 @@ focus_tree = {
 					OR = {
 						state = 28
 						state = 8
-						state = 909
+						state = 50
 						state = 42
 						state = 51
 						state = 50
@@ -4919,7 +4919,7 @@ focus_tree = {
 					OR = {
 						state = 28
 						state = 8
-						state = 909
+						state = 50
 						state = 42
 						state = 51
 						state = 50

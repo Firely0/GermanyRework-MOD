@@ -13,6 +13,7 @@
 # area_priority
 # building_target
 
+#Italy
 Italy_Naval_Prio = { # Keep Ships Safe V1
 	enable = {
 		tag = ITA
@@ -31,35 +32,34 @@ Italy_Naval_Prio = { # Keep Ships Safe V1
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 68
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 69
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 202
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 168
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 29
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 169
-		value = 500 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 }
-
 Italy_Naval_Prio = { # Keep Ships Safe V2
 	enable = {
 		tag = ITA
@@ -80,25 +80,24 @@ Italy_Naval_Prio = { # Keep Ships Safe V2
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 68
-		value = 150 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 69
-		value = 150 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 202
-		value = 150 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 168
-		value = 150 # avoid doing missions as well
+		value = 600 # avoid doing missions as well
 	}
 }
-
 ITA_ETH_WAR_FRONT = {
 	allowed = {
 		tag = ITA
@@ -125,4 +124,208 @@ ITA_ETH_WAR_FRONT = {
 		area = 550
 		value = 10
 	}
+}
+#SOV
+SOV_some_safer_places_to_build = {
+	allowed = { original_tag = SOV }
+
+	enable = { always = yes }
+	abort = { always = no }
+
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  219
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  586
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  252
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  652
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  653
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  405
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  651
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  229
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  253
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  248
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  205
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  568
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  258
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  251
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  571
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target =  255
+		value = 300
+	}
+}
+SOV_better_civ_plan = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		date < 1939.09.01
+	}
+	abort = {
+		date > 1939.09.01
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 200
+	}
+}
+SOV_better_mil_plan = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		date > 1939.09.01
+	}
+	abort = {
+		num_of_military_factories > 200
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 200
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+}
+SOV_no_dockyards = {
+	allowed = {
+		tag = SOV
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = -500
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = -200
+	}
+}
+SOV_dockyards_useless_now_sov = {
+	allowed = {original_tag = SOV}
+	enable = {always = yes}
+	abort = {always = no}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = -500
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = -200
+	}
+}
+SOV_better_naval_invasions = {
+	allowed = {original_tag = SOV}
+	enable = {always = yes}
+	abort = {always = no}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -200
+	}
+}
+SOV_no_more_useless_divisions = {
+	allowed = {original_tag = SOV}
+	enable = {always = yes}
+	abort = {always = no}
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -200
+	}
+}
+SOV_be_careful_pls  = {
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		has_war_with = GER
+		num_divisions < 220
+	}
+	abort = {
+		OR = {
+			num_divisions > 220
+			NOT = {has_war_with = GER}
+		}
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GER
+		ratio = 0.6
+		priority = 100
+		ordertype = front
+		execution_type = careful
+	}
+
 }

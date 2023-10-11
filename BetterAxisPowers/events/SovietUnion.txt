@@ -223,7 +223,7 @@ country_event = {
 		name = soviet.5.a
 		create_wargoal = {
 			type = take_state
-			target = ROM
+			target = FROM
 			generator = { 78 }
 		}
 		hidden_effect = {
@@ -370,8 +370,18 @@ country_event = {
 		name = soviet.12.a
 		SOV = { 
 			transfer_state = 146
+			custom_effect_tooltip = FIN_remove_soviet_claims_in_other_states_tt
 		}
 		hidden_effect = {
+			FIN = {
+				every_core_state = {
+					limit = {
+						is_owned_by = PREV
+						is_claimed_by = ROOT
+					}
+					remove_claim_by = ROOT 
+				} 
+			}
 			SOV = {
 				country_event = { days = 1 id = news.13 }
 			}
@@ -397,7 +407,7 @@ country_event = {
 		}				
 		hidden_effect = {
 			SOV = {
-				country_event = { days = 1 id = news.12 }				
+				country_event = { days = 1 id = news.12 }
 			}
 		}
 	}
@@ -1184,7 +1194,7 @@ country_event = {
 	}
 }
 
-# Demand Karjala
+# Demand Karjala - UNUSED
 country_event = {
 	id = soviet.31
 	title = soviet.31.t
@@ -2082,13 +2092,41 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		AND = {
-			tag = SOV
-			has_global_flag = sov_yes_pact
-			NOT = { has_global_flag = poland_partitionned_flag }
-			GER = {
-				exists = yes
-				NOT = { has_war_with = POL }
+		tag = SOV
+		has_global_flag = sov_yes_pact
+		GER = {
+			exists = yes
+			is_subject = no
+		}
+		NOT =  { has_war_with = GER }
+		NOT = { has_global_flag = germany_lost_the_war }
+		OR = {
+			OR = {
+				owns_state = 88 #KRAKOW
+				owns_state = 92 #LUBLIN
+				owns_state = 90 #KIELCE
+				owns_state = 86 #POZNAN
+				owns_state = 87 #LODZ
+				owns_state = 85 #DANZIG
+				owns_state = 98 #PLOCK
+				owns_state = 10 #WARSAW
+				owns_state = 762 #KATOWICE
+				owns_state = 807 #GDYNIA
+			}
+			AND = {
+				POL = { has_capitulated = yes }
+				OR = {
+					controls_state = 88 #KRAKOW
+					controls_state = 92 #LUBLIN
+					controls_state = 90 #KIELCE
+					controls_state = 86 #POZNAN
+					controls_state = 87 #LODZ
+					controls_state = 85 #DANZIG
+					controls_state = 98 #PLOCK
+					controls_state = 10 #WARSAW
+					controls_state = 762 #KATOWICE
+					controls_state = 807 #GDYNIA
+				}
 			}
 			NOT =  { has_war_with = GER }
 			NOT = { has_global_flag = germany_lost_the_war }
@@ -2439,3 +2477,132 @@ country_event = {
 #		name = soviet.73.a
 #	}
 #}
+
+
+# Polish event for Returning occupied territory
+country_event = {
+	id = soviet.74
+	title = soviet.74.t
+	desc = soviet.74.d
+	picture = GFX_report_event_SOV_demands
+	is_triggered_only = yes 
+
+	trigger = {
+		
+	}
+	#fire_only_once = yes
+	
+	option = {
+		name = soviet.74.a
+		ai_chance = {
+			base = 1
+		}
+		POL = {
+			add_autonomy_score = { 
+				value = -250 
+				localization = POL_accepted_states
+			}
+			add_popularity = {
+				ideology = FROM
+				popularity = 0.05
+			}
+		}
+		FROM  ={
+			every_owned_state = {
+				limit = {
+					is_core_of = POL 
+					OR = {
+						# Białystok
+						state = 97 
+						# Uncontested Polish Cores
+						NOT = {
+							any_country_with_core = {
+								NOT = { tag = POL }
+							}
+						}
+					}
+					
+				}
+				transfer_state_to = POL
+			}
+		}
+		FROM = {
+			country_event = {
+				id = soviet.75
+				hours = 2 
+				random_hours = 6 
+			}
+		}
+	}
+	option = {
+		name = soviet.74.b
+		ai_chance = {
+			base = 0
+		}
+		POL = {
+			add_autonomy_score = { 
+				value = 250 
+				localization = POL_refused_states
+			}
+		}
+		FROM = {
+			every_owned_state = {
+				limit = {
+					is_core_of = POL 
+					OR = {
+						# Białystok
+						state = 97 
+						# Uncontested Polish Cores
+						NOT = {
+							any_country_with_core = {
+								NOT = { tag = POL }
+							}
+						}
+					}
+					
+				}
+				remove_core_of = POL  
+				add_core_of = SOV
+				add_claim_by = POL 
+			}
+		}
+		FROM = {
+			country_event = {
+				id = soviet.76
+				hours = 2 
+				random_hours = 6 
+			}
+		}
+	}
+}
+
+# Poland Accepted
+country_event = {
+	id = soviet.75
+	title = soviet.75.t
+	desc = soviet.75.d
+	picture = GFX_report_event_SOV_demands
+	is_triggered_only = yes 
+	option = {
+		name = soviet.75.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+# Poland refused
+country_event = {
+	id = soviet.76
+	title = soviet.76.t
+	desc = soviet.76.d
+	picture = GFX_report_event_SOV_demands
+	is_triggered_only = yes 
+	option = {
+		name = soviet.76.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
