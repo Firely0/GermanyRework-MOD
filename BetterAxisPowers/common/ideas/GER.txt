@@ -3351,6 +3351,7 @@ ideas = {
 					clr_global_flag = GER_Operation_Barbarossa_running
 					set_global_flag = GER_Operation_Barbarossa_Failed
 					add_ideas = GER_barbarossa_war # Replace
+					GER = { country_event = { id = GER_health_adolf.2 hours = 6 } }
 				}
 			}
 

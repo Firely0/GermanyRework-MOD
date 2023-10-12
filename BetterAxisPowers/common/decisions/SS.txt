@@ -10,6 +10,12 @@ GER_reichskommissariats = {
 			controls_state = 142
 			controls_state = 143
 			controls_state = 144
+			controls_state = 920
+			controls_state = 921
+			controls_state = 922
+			controls_state = 923
+			controls_state = 924
+			controls_state = 925
 		}
 
 		cost = 0
@@ -38,17 +44,28 @@ GER_reichskommissariats = {
 						set_state_controller = 142
 						set_state_controller = 143
 						set_state_controller = 144
+						set_state_controller = 920
+						set_state_controller = 921
+						set_state_controller = 922
+						set_state_controller = 923
+						set_state_controller = 924
+						set_state_controller = 925
 					}
 				}
 				NOR = {
 					start_civil_war = {
 						ideology = fascism
 						size = 1
-
 						transfer_state = 110
 						transfer_state = 142
 						transfer_state = 143
 						transfer_state = 144
+						transfer_state = 920
+						transfer_state = 921
+						transfer_state = 922
+						transfer_state = 923
+						transfer_state = 924
+						transfer_state = 925
 						GER = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
@@ -72,6 +89,12 @@ GER_reichskommissariats = {
 					transfer_state = 142
 					transfer_state = 143
 					transfer_state = 144
+					transfer_state = 920
+					transfer_state = 921
+					transfer_state = 922
+					transfer_state = 923
+					transfer_state = 924
+					transfer_state = 925
 					set_cosmetic_tag = NOR_reichskommissariat
 					create_country_leader = {
 						name = "Josef Terboven"

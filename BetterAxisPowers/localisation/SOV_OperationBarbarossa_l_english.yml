@@ -1,0 +1,50 @@
+﻿l_english: 
+ decision_cost_CP_25:0 "£command_power  §Y25§!"
+ decision_cost_CP_25_blocked: "£command_power  §R25§!"
+ decision_cost_CP_25_tooltip: "It costs £command_power  §Y25§! to take the decision"
+
+ decision_cost_CP_50_pp_15_f:0 "£command_power  §R50§! £pol_power  §R15§!" # Temp Fix for decision_cost_CP_50_pp_15_blocked
+ decision_cost_CP_50_pp_15_f_blocked: "£command_power  §R50§! £pol_power  §R15§!"
+ decision_cost_CP_50_pp_15_f_tooltip: "It costs £command_power  §Y25§! to take the decision"
+
+ SOV_Local_Defense:0 "Local Defence" # ---> Main Decision
+ SOV_Local_Defense_desc:0 ""
+ SOV_build_trech_minsk:0 "Build Defence: Minsk"
+ SOV_build_trech_minsk_desc:0 ""
+ SOV_build_trech_vitebsk:0 "Build Defence: Vitebsk"
+ SOV_build_trech_vitebsk_desc:0 ""
+ SOV_build_trech_kiev:0 "Build Defence: Kiev"
+ SOV_build_trech_kiev_desc:0 ""
+ SOV_build_trech_Dniprropetrovsk:0 "Build Defence: Dniprropetrovsk"
+ SOV_build_trech_Dniprropetrovsk_desc:0 ""
+
+ SOV_Local_offensive:0 "Local Offensive" # ---> Main Decision
+ SOV_Local_offensive_desc:0 ""
+
+ SOV_Development_and_Deployment:0 "Defence Industry: Development and Deployment" # ---> Main Decision
+ SOV_Development_and_Deployment_desc:0 ""
+ SOV_tank_development_t34_85:0 "Development: T34-85"
+ SOV_tank_development_t34_85_desc:0 "It's Time to Upgrade Our Tanks with Evolving War Conditions"
+ SOV_tank_development_su_85:0 "Development: SU-85M"
+ SOV_tank_development_su_85_desc:0 "Time to Improve Existing Tank Destroyer Variants as a Solution Against Evolving German Tanks"
+ Deploy_Heavy_Artilery_main:0 "Deploy Heavy Artillery"
+ Deploy_Heavy_Artilery_main_desc:0 ""
+ Deploy_Heavy_Artilery_sub_leningrad:0 "Deploy Heavy Artillery at Leningrad"
+ Deploy_Heavy_Artilery_sub_leningrad_desc:0 ""
+ Deploy_Heavy_Artilery_sub_moscow:0 "Deploy Heavy Artillery at Moscow"
+ Deploy_Heavy_Artilery_sub_moscow_desc:0 ""
+ Deploy_Heavy_Artilery_sub_stalingrad:0 "Deploy Heavy Artillery at Stalingrad"
+ Deploy_Heavy_Artilery_sub_stalingrad_desc:0 ""
+ SOV_bomb_state:0 "Strategic Bombing Target: [FROM.GetName]"
+ SOV_state_bombed_modifier:0 "Strategic Bombing State"
+ HEAVY_DEPLOYED_HERE:0 "Has Deployed Heavy Artillery"
+
+ SOV_great_patriotic_war_Orders:0 "Great Patriotic War Orders" # ---> Main Decision
+ SOV_great_patriotic_war_Orders_desc:0 ""
+
+ SOV_hold_key_of_union:0 "Last Stand of Soviet Union"
+ SOV_hold_key_of_union_desc:0 ""
+
+
+
+

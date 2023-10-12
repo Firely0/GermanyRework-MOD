@@ -12834,6 +12834,7 @@ focus = {
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
 		available = {
+			always = no
 			has_government = neutrality
 		}
 		x = -2
@@ -12845,6 +12846,7 @@ focus = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = Disabled_for_rework_or_else
 			custom_effect_tooltip = GER_september_plan_tt
 		}
 	}

@@ -56,6 +56,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_setup_forts"
+		texturefile = "gfx/interface/decisions/decision_setup_forts.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_setup_forts_with_art"
+		texturefile = "gfx/interface/decisions/decision_setup_forts_with_art.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_setup_artillery"
+		texturefile = "gfx/interface/decisions/decision_setup_artillery.dds"
+	}
+
+	spriteType = {
 		name = "GFX_decision_setup_forts_1"
 		texturefile = "gfx/interface/decisions/decision_setup_forts_1.dds"
 	}

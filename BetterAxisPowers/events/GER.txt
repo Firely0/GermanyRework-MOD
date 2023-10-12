@@ -2035,6 +2035,7 @@ country_event = {
 	desc = "What Should We Do With Andrey Vlasov?"
 	picture = GFX_report_event_german_italian_pact
 	is_triggered_only = yes
+	
 	option = {
 		ai_chance = {
 			factor = 100
@@ -2050,6 +2051,7 @@ country_event = {
 			}
 		}
 	}
+
 	option = {
 		ai_chance = {
 			factor = 0
