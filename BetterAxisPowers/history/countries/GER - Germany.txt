@@ -181,6 +181,7 @@ if = {
 		iw_medium_airframe = 1
 		basic_medium_airframe = 1
 		iw_large_airframe = 1
+		air_torpedoe_1 = 1
 	}
 	else = {
 		set_air_oob = "GER_1936_air_legacy"
@@ -309,6 +310,8 @@ set_variable = { var = ger_gateway_to_europe_influence value = 0 }
 
 set_variable = { var = wehrmacht_anger value = 0 }
 set_variable = { var = ss_anger value = 0 }
+set_variable = { GER_narvik_shipments = 0 }
+set_variable = { GER_narvik_civs = 0 }
 
 set_research_slots = 4
 set_convoys = 200
@@ -645,7 +648,7 @@ recruit_character = GER_august_von_mackensen
 
 recruit_character = GER_ernst_busch
 recruit_character = GER_friedrich_dollmann
-recruit_character = GER_nikolaus_von_falkenhorst
+#recruit_character = GER_nikolaus_von_falkenhorst REMOVE FOR DLC
 recruit_character = GER_walter_von_reichenau
 recruit_character = GER_adolf_strauss
 recruit_character = GER_Carl_Stulpnagel
@@ -1148,9 +1151,9 @@ if = {
 
 	create_equipment_variant = {
 		name = "Do 17"
-		type = small_plane_cas_airframe_0
+		type = medium_plane_airframe_1
 		modules = {
-			fixed_main_weapon_slot = small_bomb_bay
+			fixed_main_weapon_slot = medium_bomb_bay
 			engine_type_slot = engine_1_2x
 			special_type_slot_1 = lmg_defense_turret_2x
 		}

@@ -506,6 +506,7 @@ armored_GER = {
 
 		allowed_types = {
 			medium_armor
+			medium_tank_destroyer_brigade
 			motorized
 			mechanized
 			armored_car_recon
@@ -922,6 +923,7 @@ mountaineers_GER = {
 		
 		allowed_types = {
 			mountaineers
+			artillery_brigade
 			artillery
 			recon
 			logistics_company
@@ -1028,6 +1030,7 @@ marines_GER = {
 		
 		allowed_types = {
 			marine
+			artillery_brigade
 			engineer
 			logistics_company
 			artillery
@@ -1253,7 +1256,8 @@ anti_armor_GER = {
 		}
 		
 		allowed_types = {
-			infantry		
+			infantry
+			recon		
 			engineer
 			logistics_company
 			anti_tank

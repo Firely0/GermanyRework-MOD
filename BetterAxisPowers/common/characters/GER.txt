@@ -2198,24 +2198,24 @@ characters={
 		}
 	}
 
-	GER_nikolaus_von_falkenhorst={
-		name="Nikolaus von Falkenhorst"
-		portraits={
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.tga"
-				small="gfx/interface/ideas/idea_GER_nikolaus_von_falkenhorst.tga"
-			}
-		}
-		corps_commander={
-			traits={ }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=813
-		}
-	}
+	#GER_nikolaus_von_falkenhorst={ # Disabled for FINLAND & DLC
+	#	name="Nikolaus von Falkenhorst"
+	#	portraits={
+	#		army={
+	#			large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.tga"
+	#			small="gfx/interface/ideas/idea_GER_nikolaus_von_falkenhorst.tga"
+	#		}
+	#	}
+	#	corps_commander={
+	#		traits={ }
+	#		skill=2
+	#		attack_skill=2
+	#		defense_skill=2
+	#		planning_skill=1
+	#		logistics_skill=2
+	#		legacy_id=813
+	#	}
+	#}
 
 	GER_walter_von_reichenau={
 		name="Walter von Reichenau"
