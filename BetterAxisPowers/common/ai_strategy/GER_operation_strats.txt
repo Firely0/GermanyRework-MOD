@@ -71,14 +71,14 @@ GER_blitz_norway_denmark = {
 
 	ai_strategy = {
 		type = front_control
-		strategic_region = 6
+		strategic_region = 275
 		ordertype = front
 		execution_type = rush
 	}
 
 	ai_strategy = {
 		type = front_unit_request
-		strategic_region = 6
+		strategic_region = 275
 		value = 20
 	}
 
@@ -102,7 +102,13 @@ GER_blitz_norway_denmark = {
 	ai_strategy = {
 		type = invasion_unit_request
 		state = 110
-		value = 100
+		value = 50
+	}
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 921
+		value = 50
 	}
 
 	ai_strategy = {
