@@ -1004,7 +1004,7 @@ GER_upgrade_kriegsmarine_effect = {
 				has_dynamic_modifier = {
 					modifier = Kriegsmarine_dynamic_modifier
 				}
-				has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+				has_completed_focus = GER_modular_construction_a
 			}
 			remove_dynamic_modifier = {
 				modifier = Kriegsmarine_dynamic_modifier
@@ -1046,7 +1046,7 @@ GER_upgrade_kriegsmarine_idea_effect = {
 	if = {
 		limit = {
 			has_idea = Kriegsmarine_Debuff_Version
-			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_completed_focus = GER_modular_construction_a
 		}
 		swap_ideas = {
 			remove_idea = Kriegsmarine_Debuff_Version
@@ -1076,7 +1076,7 @@ GER_upgrade_kriegsmarine_idea_effect = {
 	if = {
 		limit = {
 			has_idea = Kriegsmarine_Debuff_Version_Carrier
-			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_completed_focus = GER_modular_construction_a
 		}
 		swap_ideas = {
 			remove_idea = Kriegsmarine_Debuff_Version_Carrier
@@ -2929,6 +2929,52 @@ GER_extra_supply_for_libya_effect = { # Cost you Something you know
 		}
 		add_dynamic_modifier = {
 			modifier = NORMAL_SUPPLY_STATE
+		}
+	}
+}
+
+GER_add_cost_of_ship_search = {
+	add_manpower = -1500
+	add_equipment_to_stockpile = {
+		type = convoy
+		amount = -100
+		producer = GER
+	}
+}
+
+GER_add_refund_of_ship_search = {
+	random_list = {
+		25 = {
+			add_manpower = 1500
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 100
+				producer = GER
+			}
+		}
+		25 = {
+			add_manpower = 1250
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 75
+				producer = GER
+			}
+		}
+		25 = {
+			add_manpower = 1000
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = GER
+			}
+		}
+		25 = {
+			add_manpower = 1000
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = GER
+			}
 		}
 	}
 }

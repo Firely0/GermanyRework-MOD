@@ -4834,6 +4834,7 @@ country_event = {
 
 	option = {
 		name = germany.89.a
+		mark_focus_tree_layout_dirty = yes
 		dismantle_faction = yes
 		add_stability = -0.1
 		every_other_country = {

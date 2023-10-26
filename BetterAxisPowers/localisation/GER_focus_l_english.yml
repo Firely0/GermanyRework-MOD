@@ -1,8 +1,5 @@
 ﻿l_english:
 
- #Strategicregion
- STRATEGICREGION_279:0 "Gulf of Bothnia"
-
  #Game Rules
 
  GERMANY_REWORK_TEST:0 "TESTING - CONFIG"
@@ -57,6 +54,7 @@
 
  #state modifier
 
+ GER_ship_resources:0 "Ship Resources"
  NON_Germany_state_dynamic_modifier:0 "Non-Aligned State for Civil-War"
  CON_Germany_state_dynamic_modifier:0 "Communism State for Civil-War"
  Germany_state_dynamic_modifier:0 "Fascism State for Civil-War"
@@ -93,6 +91,7 @@
  #Reichskommissariat
  GER_reichskommissariat_turkestan:0 "Establish Reichskommissariat Turkestan"
  GER_reichskommissariat_moscow:0 "Establish Reichskommissariat Moskowien"
+ GER_expand_reichskommissariat_moscow:0 "Expand Reichskommissariat Moskowien"
  GER_reichskommissariat_caucasus:0 "Establish Reichskommissariat Kaukasien"
 
  #New Laws for New Germany
@@ -178,6 +177,42 @@
  GER_Battle_of_El_Alamein_decision:0 "Battle of El-Alamein"
  GER_extra_Supply_for_Africa:0 "Extra Supply for Libya"
  GER_Supply_for_Africa:0 "Supply for Africa"
+
+ #Kriegsmarine Rework
+ GER_rebuild_the_high_seas_fleet_project:0 "Rebuilding & Repairing the High Seas Fleet"
+ GER_rebuild_the_high_seas_fleet_project_desc:0 ""
+ GER_offer_job_Ernest_Cox:0 "Offer Job to Ernest Cox"
+ GER_offer_job_Ernest_Cox_desc:0 ""
+
+ GER_buy_ship_SMS_Friedrich_der_GrosseE:0 "Buy Ship: Friedrich der Grosse"
+ GER_buy_ship_SMS_Friedrich_der_GrosseE_desc:0 ""
+ GER_buy_ship_SMS_Grosser_Kurfurst:0 "Buy Ship: Grosser Kurfurst"
+ GER_buy_ship_SMS_Grosser_Kurfurst_desc:0 ""
+ GER_buy_ship_SMS_Kaiser:0 "Buy Ship: Kaiser"
+ GER_buy_ship_SMS_Kaiser_desc:0 ""
+ GER_buy_ship_SMS_Kaiserin:0 "Buy Ship: Kaiserin"
+ GER_buy_ship_SMS_Kaiserin_desc:0 ""
+ GER_buy_ship_SMS_Konig:0 "Search for Ship: Konig"
+ GER_buy_ship_SMS_Konig_desc:0 ""
+ GER_buy_ship_SMS_Kronprinz:0 "Search for Ship: Kronprinz"
+ GER_buy_ship_SMS_Kronprinz_desc:0 ""
+ GER_buy_ship_SMS_Markgraf:0 "Search for Ship: Markgraf"
+ GER_buy_ship_SMS_Markgraf_desc:0 ""
+ GER_buy_ship_SMS_Derfflinger:0 "Buy Ship: Derfflinger"
+ GER_buy_ship_SMS_Derfflinger_desc:0 ""
+ GER_buy_ship_SMS_Brummer:0 "Search for Ship: Brummer"
+ GER_buy_ship_SMS_Brummer_desc:0 ""
+ GER_buy_ship_SMS_Coln:0 "Search for Ship: Coln"
+ GER_buy_ship_SMS_Coln_desc:0 ""
+ GER_buy_ship_SMS_Dresden:0 "Search for Ship: Dresden"
+ GER_buy_ship_SMS_Dresden_desc:0 ""
+ GER_buy_ship_SMS_Karlsruhe:0 "Search for Ship: Karlsruhe"
+ GER_buy_ship_SMS_Karlsruhe_desc:0 ""
+
+ Operation_Rheinubung:0 "Operation Rheinübung"
+
+ GER_plan_z_build:0 "Plan Z Buildup: [FROM.GetName]"
+ GER_plan_z_build_desc:0 ""
  
  #German Training Program
  
@@ -519,6 +554,8 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ GER_progress_chanced_by_luck:0 "\nThe ship will be taken out of the sea and put into repair and development operations. The repair time for the ship to be put back into service will vary depending on the condition of the ship."
+ Ernest_Cox_Fired:0 "Ernest Cox Hired"
  Disabled_for_rework_or_else:0 "Disabled for Rework or Bugfix"
  High_Command_Issued_Orders:0 "High Command Issued Orders"
  decision_cost_CP_19: "£command_power  §Y20§!"
@@ -702,6 +739,8 @@
  GER_Mercedes_t:0 "Mercedes-Benz"
  GER_Volkswagen:0 "Volkswagen"
  GER_Volkswagen_t:0 "Volkswagen"
+ Deschimag:0 "Deschimag"
+ Cox_and_Danks:0 "Cox and Danks"
  GER_skoda_t:0 "Skoda"
  GER_skoda:0 "Skoda"
  krupp_starter_ver:0 "Krupp"
@@ -712,6 +751,7 @@
  siemens_focus:0 "Siemens"
  junkers_focus:0 "Junkers"
  dornier_focus:0 "Dornier"
+ repair_and_refurbishment:0 "Repair-Refurbishment"
  dornier_focus_naval:0 "Aircraft Designer"
  junkers_focus_cass:0 "Aircraft Designer"
  messerschmitt_focus:0 "Messerschmitt"
@@ -1416,8 +1456,6 @@
  GER_Bismarck_desc:0 ""
  GER_carrier_war:0 "Carrier Primacy"
  GER_carrier_war_desc:0 ""
- GER_last_battle_of_bismarck:0 "Operation Rheinübung"
- GER_last_battle_of_bismarck_desc:0 "Last battle of Bismarck"
  GER_tank_warfare:0 "Mobile Warfare"
  GER_tank_warfare_desc:0 ""
  GER_Battle_Plan:0 "Superior Firepower Doctrine"
@@ -1624,7 +1662,8 @@
  GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
  GER_Kriegsmarine_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_Kriegsmarine_Carrierfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
- GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n\n"
+ GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
+ GER_Kriegsmarine_final_mix_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
 
  GER_PLAN_Z_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£ships_contact_texticon Positioning: §Y+10.0%§! \n£armor_texticon Screening Efficiency §Y+10.0%§! \n\n"
  GER_Graf_Zeppelin_Modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£attack_texticon Naval Air Attacks from Carriers: §G+5.0%§! \n£naval_strike_targetting_texticon Naval Air Targeting from Carriers: §G+5.0%§! \n£attacker_speed_texticon Naval Air Agility from Carriers: §G+5.0%§! \n\n"
@@ -1633,7 +1672,7 @@
  GER_doctrine_cost_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£navy_doctrine_cost_texticon Naval Doctrine Cost §G-5%§! \n\n"
  GER_Convert_Civilian_Ships_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£night_texticon  Carrier Night Penalty Reduction: §G+20%§! \n£carrier_texticon  Carrier Night Traffic: §G+20%§! \n\n"
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
- GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n\n"
+ GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
  GER_prepare_next_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£consumer_goods_texticon Consumer Goods Factories§!: §G-3%§!"
  GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nDockyard output§!: £dockyard_output §Y+20.0%§! \nFactory Output§!: £factory_output §R-10.0%§!"
  GER_focus_on_land_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nFactory Output§!: £factory_output §G+5.0%§!"

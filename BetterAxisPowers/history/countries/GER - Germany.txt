@@ -135,6 +135,7 @@ set_variable = {
 	GER_naval_doctrine_cost_factor = 0.1
 }
 
+
 # Army Navy Air 
 
 add_dynamic_modifier = {
@@ -282,7 +283,6 @@ if = {
 		pre_dreadnoughts = 1
 		early_ship_hull_submarine = 1
 		basic_ship_hull_submarine = 1
-		cruiser_submarines = 1
 		early_ship_hull_carrier = 1
 		mtg_transport = 1
 		basic_torpedo = 1

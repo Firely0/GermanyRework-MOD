@@ -49,8 +49,7 @@ focus_tree = {
 			y = 1
 			trigger = {
 				OR = {
-					has_completed_focus = GER_against_fuhrer
-					has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_establish_abwehr
 				}
 			}
 		}
@@ -97,8 +96,7 @@ focus_tree = {
 			y = 1
 			trigger = {
 				OR = {
-					has_completed_focus = GER_against_fuhrer
-					has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_establish_abwehr
 				}
 			}
 		}
@@ -153,10 +151,7 @@ focus_tree = {
 			x = -20
 			y = 1
 			trigger = {
-				OR = {
-					has_completed_focus = GER_against_fuhrer
-					has_completed_focus = GER_Fuhrer
-				}
+				has_completed_focus = GER_establish_abwehr
 			}
 		}
 		available = {
@@ -1004,6 +999,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_war_support = 0.05
+			add_state_claim = 912
 			add_state_claim = 69  
 			add_state_claim = 4  
 			add_state_claim = 848
@@ -1101,7 +1097,6 @@ focus_tree = {
 				GER = {
 					country_event = austria.1
 				}				
-				#custom_effect_tooltip = anschluss_mefo_bills_tt
 			}
 			if = {
 				limit = {
@@ -5848,7 +5843,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_German_hegemony
-		icon = GFX_goal_gerhegenomy
+		icon = GFX_goal_r56_goal_GER_european_reich_v2
 		prerequisite = { focus = GER_secure_supremacry focus = GER_secure_supremacry_in_air focus = GER_secure_supremacry_in_navy }
 		available = {
 		}
@@ -6301,7 +6296,6 @@ focus_tree = {
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
-			
 			has_army_manpower = { size > 499999 }
 			is_subject = no
 			has_government = fascism
@@ -6399,15 +6393,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_global_flag = GER_ultimatum_norway_n
+					has_global_flag = GER_ultimatum_denkmark_y
 				}
-				create_wargoal = {
-					target = DEN
-					type = annex_everything
+				GER = {
+					transfer_state = 912
 				}
-				add_threat = 3
-				clr_global_flag = GER_ultimatum_norway_n
-				set_global_flag = GER_nohelp_denmark
 			}
 			if = {
 				limit = {
@@ -6416,6 +6406,16 @@ focus_tree = {
 				create_wargoal = {
 					target = DEN
 					type = puppet_wargoal_focus
+				}
+				add_threat = 3
+			}
+			if = {
+				limit = {
+					has_global_flag = GER_ultimatum_denmark_n
+				}
+				create_wargoal = {
+					target = DEN
+					type = annex_everything
 				}
 				add_threat = 3
 			}
@@ -6462,7 +6462,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_global_flag = GER_ultimatum_denkmark_n
+					has_global_flag = GER_ultimatum_norway_n
 				}
 				create_wargoal = {
 					target = NOR
@@ -6533,7 +6533,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Renew_Sweden_Steel_Trade
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_GER_swedish_trade_agreement
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_Befriend_Sweden }
 		available = {	
@@ -10923,6 +10923,7 @@ focus = {
 		}				
 	}	
 	completion_reward = {
+		mark_focus_tree_layout_dirty = yes
 		if = {
 			limit = { is_faction_leader = yes }
 			custom_effect_tooltip = ger_sov_buddies_tooltip_2
@@ -12156,7 +12157,7 @@ focus = {
 
 	focus = {
 		id = GER_against_fuhrer
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_goal_r56_goal_GER_take_advantage_of_political_turmoil
 		prerequisite = {
 			focus = GER_rhineland_demilitarized focus = GER_rhineland_ab
 		}
@@ -12213,117 +12214,10 @@ focus = {
 	}
 
 	focus = {
-		id = GER_oppose_hitler
-		text = GER_assassinate_adolf_hitler
-		icon = GFX_goal_Assassination_Fuhrer
-		prerequisite = {
-			focus = GER_against_fuhrer
-		}
-		mutually_exclusive = {
-			focus = GER_prepare_for_innovative
-		}
-		relative_position_id = GER_against_fuhrer
-		x = -1
-		y = 1
-		cost = 10
-		available = {
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						neutrality > 0.6
-						communism > 0.6
-						democratic > 0.6
-					}
-				}
-				random_list = {
-					30 = {
-						country_event = GER_no_focus_ger_com_civilwar.1
-					}
-					70 = {
-						country_event = GER_no_focus_ger_com_adolf_retire.1
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						neutrality > 0.35
-						communism > 0.35
-						democratic > 0.35
-					}
-				}
-				random_list = {
-					50 = {
-						country_event = GER_no_focus_ger_com_civilwar.1
-					}
-					50 = {
-						country_event = GER_no_focus_ger_com_adolf_retire.1
-					}
-				}
-			}
-			else = {
-				random_list = {
-					70 = {
-						country_event = GER_no_focus_ger_com_civilwar.1
-					}
-					30 = {
-						country_event = GER_no_focus_ger_com_adolf_retire.1
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_prepare_for_innovative
-		icon = GFX_goal_anti_fasicm_ger
-		text = GER_Working_on
-		mutually_exclusive = {
-			focus = GER_assassinate_adolf_hitler
-		}
-		prerequisite = {
-			focus = GER_against_fuhrer
-		}
-		relative_position_id = GER_against_fuhrer
-		x = 1
-		y = 1
-		cost = 10
-		available = {
-			always = no
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
-		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 64	
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = Germany_state_dynamic_modifier
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = GER_the_German_Republic
 		icon = GFX_goal_gernonflag
 		prerequisite = {
-			focus = GER_prepare_for_innovative focus = GER_oppose_hitler
+			focus = GER_against_fuhrer
 		}
 		relative_position_id = GER_against_fuhrer
 		x = 0

@@ -582,6 +582,41 @@ GER_reichskommissariats = {
 		}
 	}
 
+	GER_expand_reichskommissariat_moscow = {
+		icon = ger_reichskommissariats
+		cost = 0
+
+		available = {
+			RMK = { exists = yes }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = no
+
+		visible = {
+			RMK = { exists = yes }
+			has_government = fascism
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SOV
+					is_controlled_by = GER
+				}
+				RMK = {
+					transfer_state = PREV
+					hidden_effect = {
+						add_state_core = PREV
+					}
+				}
+			}
+		}
+	}
+
 	GER_reichskommissariat_moscow = {
 		icon = ger_reichskommissariats
 		cost = 0

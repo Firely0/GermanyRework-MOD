@@ -121,6 +121,57 @@ special_projects = {
 	}
 }
 
+operations = {
+
+	Operation_Rheinubung = {
+		priority = 100
+
+		icon = GFX_decision_generic_naval
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1941.05.01
+			}
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = GER_Bismarck
+		}
+
+		days_remove = 60
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		modifier = {
+			naval_speed_factor = 0.15
+			navy_visibility = -0.1
+			critical_receive_chance = -0.1
+			naval_retreat_chance = -1.0
+			naval_enemy_retreat_chance = -0.5
+		}
+
+		remove_effect = {
+		}
+	}
+}
+
 GER_Rhineland_demilitarized = {
 
 	GER_Rhineland_demilitarized_a = {
@@ -2006,7 +2057,7 @@ GER_Operation_Sealion_ph_2 = {
 		}
 
 		timeout_effect = {
-			GER = { country_event = { id = GER_health_adolf.2 hours = 12 } }  
+			GER = { country_event = { id = GER_health_adolf.2 hours = 12 } }
 		}
 
 		complete_effect = {
@@ -2831,7 +2882,7 @@ GER_Operation_Barbarossa_war_efforts = {
 
 	Focus_on_air_production = {
 		icon = GFX_decision_generic_merge_plant_aircraft
-		priority = 95 
+		priority = 95
 		days_remove = 180
 		fire_only_once = no
 
@@ -2880,7 +2931,7 @@ GER_Operation_Barbarossa_war_efforts = {
 
 	Focus_on_mobilization = {
 		icon = GFX_decision_generic_military
-		priority = 90 
+		priority = 90
 		days_remove = 180
 		fire_only_once = no
 
@@ -3528,6 +3579,7 @@ GER_military_buildup = {
 	GER_plan_z = {
 
 		icon = generic_naval
+		priority = 100
 
 		available = {
 			has_navy_size = {
@@ -3576,9 +3628,76 @@ GER_military_buildup = {
 
 	}
 
+	GER_plan_z_build = {
+		icon = GFX_decision_generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		cost = 25
+		days_remove = 365
+		priority = 80
+
+		ai_will_do = {
+			base = 0
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_2 }
+				is_core_of = GER
+				is_coastal = yes
+				dockyard < 4
+			}
+		}
+
+		target_root_trigger = {
+			has_active_mission = GER_plan_z
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		modifier = {
+			production_speed_buildings_factor = -0.05
+		}
+
+		available = {
+			FROM = {
+				is_core_of = GER
+				is_coastal = yes
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						has_state_flag = GER_PLAN_Z_DEVELOPED_1
+					}
+					set_state_flag = GER_PLAN_Z_DEVELOPED_2
+				}
+				if = {
+					limit = {
+						NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_1 }
+					}
+					set_state_flag = GER_PLAN_Z_DEVELOPED_1
+				}
+			}
+		}
+
+	}
+
 	GER_jaegernotprogramm = {
 
 		icon = generic_air
+		priority = 95
 
 		available = {
 			has_war = yes
@@ -3624,6 +3743,1343 @@ GER_military_buildup = {
 			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
 		}
 	}
+}
+
+GER_rebuild_the_high_seas_fleet_project = {
+
+	GER_offer_job_Ernest_Cox = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		priority = 100
+		fire_only_once = yes
+		days_remove = 14
+		cost = 25
+
+		ai_will_do = {
+			factor = 100 # Good and Free Ship Thanks.
+		}
+
+		available = {
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_country_flag = Ernest_Cox_Fired
+				GER = { country_event = { id = GER_Ernest_Cox.1 days = 3 } }
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = Cox_and_Danks
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	GER_buy_ship_SMS_Friedrich_der_GrosseE = {
+		icon = GFX_decision_generic_buy_ship
+		priority = 100
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Friedrich der Grossee Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = empty
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Friedrich der Grossee Class"
+							}
+							name = "SMS Friedrich der Grosse"
+							requested_factories = 1
+							progress = 0.5
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Friedrich der Grossee Class"
+							}
+							name = "SMS Friedrich der Grosse"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Friedrich der Grossee Class"
+							}
+							name = "SMS Friedrich der Grosse"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Friedrich der Grossee Class"
+							}
+							name = "SMS Friedrich der Grosse"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Grosser_Kurfurst = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Grosser kurfurst Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Grosser kurfurst Class"
+							}
+							name = "SMS Grosser Kurfürst"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Grosser kurfurst Class"
+							}
+							name = "SMS Grosser Kurfürst"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Grosser kurfurst Class"
+							}
+							name = "SMS Grosser Kurfürst"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Grosser kurfurst Class"
+							}
+							name = "SMS Grosser Kurfürst"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Kaiser = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Kaiser Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiser Class"
+							}
+							name = "SMS Kaiser"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiser Class"
+							}
+							name = "SMS Kaiser"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiser Class"
+							}
+							name = "SMS Kaiser"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiser Class"
+							}
+							name = "SMS Kaiser"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Kaiserin = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Kaiserin Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiserin Class"
+							}
+							name = "SMS Kaiserin"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiserin Class"
+							}
+							name = "SMS Kaiserin"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiserin Class"
+							}
+							name = "SMS Kaiserin"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kaiserin Class"
+							}
+							name = "SMS Kaiserin"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Konig = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "König class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "König class"
+							}
+							name = "SMS König"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Königsberg Class"
+							}
+							name = "SMS König"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Königsberg Class"
+							}
+							name = "SMS König"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Königsberg Class"
+							}
+							name = "SMS König"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Kronprinz = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Kronprinz class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kronprinz Class"
+							}
+							name = "SMS Kronprinz"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kronprinz Class"
+							}
+							name = "SMS Kronprinz"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kronprinz Class"
+							}
+							name = "SMS Kronprinz"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Kronprinz Class"
+							}
+							name = "SMS Kronprinz"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Markgraf = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Markgraf Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Markgraf Class"
+							}
+							name = "SMS Markgraf"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Markgraf Class"
+							}
+							name = "SMS Markgraf"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Markgraf Class"
+							}
+							name = "SMS Markgraf"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Markgraf Class"
+							}
+							name = "SMS Markgraf"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Derfflinger = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Derfflinger Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = empty
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Brummer = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 2 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Brummer Class"
+				type = ship_hull_cruiser_1
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+					mid_1_custom_slot = ship_mine_layer_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_mine_layer_1
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Coln = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+	
+		ai_will_do = {
+			factor = 2
+		}
+	
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+	
+		modifier = {
+			civilian_factory_use = 2 # Fine For Me
+		}
+	
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+	
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Coln Class"
+				type = ship_hull_cruiser_1
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					mid_1_custom_slot = ship_mine_layer_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_light_battery_1
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Coln Class"
+							}
+							name = "SMS Coln"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Coln Class"
+							}
+							name = "SMS Coln"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Coln Class"
+							}
+							name = "SMS Coln"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Coln Class"
+							}
+							name = "SMS Coln"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Dresden = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+	
+		ai_will_do = {
+			factor = 2
+		}
+	
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+	
+		modifier = {
+			civilian_factory_use = 2 # Fine For Me
+		}
+	
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+	
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Dresden Class"
+				type = ship_hull_cruiser_1
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					mid_1_custom_slot = ship_mine_layer_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_light_battery_2
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Dresden Class"
+							}
+							name = "SMS Dresden"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Dresden Class"
+							}
+							name = "SMS Dresden"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Dresden Class"
+							}
+							name = "SMS Dresden"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Dresden Class"
+							}
+							name = "SMS Dresden"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	GER_buy_ship_SMS_Karlsruhe = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+	
+		ai_will_do = {
+			factor = 2
+		}
+	
+		available = {
+            has_manpower > 1500
+            has_equipment = {
+                convoy > 100
+            }
+		}
+	
+		modifier = {
+			civilian_factory_use = 2 # Fine For Me
+		}
+	
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
+	
+		remove_effect = {
+			GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Karlsruhe Class"
+				type = ship_hull_cruiser_1
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					mid_1_custom_slot = ship_mine_layer_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_light_battery_2
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Karlsruhe Class"
+							}
+							name = "SMS Karlsruhe"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Karlsruhe Class"
+							}
+							name = "SMS Karlsruhe"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Karlsruhe Class"
+							}
+							name = "SMS Karlsruhe"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Karlsruhe Class"
+							}
+							name = "SMS Karlsruhe"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
 
 special_projects = {

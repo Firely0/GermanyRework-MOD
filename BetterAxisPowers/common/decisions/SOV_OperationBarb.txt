@@ -556,13 +556,14 @@ SOV_Development_and_Deployment = {
 		}
 
 		visible = {
+			has_dlc = "No Step Back"
 			has_completed_focus = SOV_found_the_pcdi #
 			has_war = yes
 			has_war_with = GER
 			surrender_progress > 0.1
 		}
 
-		days_mission_timeout = 180
+		days_mission_timeout = SOV_TANK_DEVELOP_TIME
 
 		fire_only_once = yes
 
@@ -606,6 +607,70 @@ SOV_Development_and_Deployment = {
 		}
 	}
 
+	SOV_tank_development_IS_1 = { # Develop Tanks Against German Tank/s
+		icon = GFX_decision_generic_merge_plant_tank
+		priority = 100
+
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			has_dlc = "No Step Back"
+			has_completed_focus = SOV_found_the_pcdi #
+			has_war = yes
+			has_war_with = GER
+			surrender_progress > 0.1
+		}
+
+		days_mission_timeout = 180 #
+
+		fire_only_once = yes
+
+		is_good = yes
+
+		activation = {
+			NOT = { has_completed_focus = SOV_they_will_know_fear }
+			has_completed_focus = SOV_found_the_pcdi #
+			has_tech = improved_heavy_tank_chassis
+			has_war = yes
+			has_war_with = GER
+			surrender_progress > 0.1
+			has_civil_war = no
+			any_enemy_country = {
+				is_major = yes
+			}
+		}
+
+		timeout_effect = {
+			create_equipment_variant = { #Same as T-34 VER. Just Cost More
+				name = "IS-1"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_medium_cannon_2
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_christie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = tank_radio_2
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 9
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+	}
+
 	SOV_tank_development_su_85 = {  # Develop Anti-Tank Against German Tank/s
 		icon = GFX_decision_generic_merge_plant_tank
 		priority = 95
@@ -619,13 +684,14 @@ SOV_Development_and_Deployment = {
 		}
 
 		visible = {
+			has_dlc = "No Step Back"
 			has_completed_focus = SOV_found_the_pcdi #
 			has_war = yes
 			has_war_with = GER
 			surrender_progress > 0.15
 		}
 
-		days_mission_timeout = 180
+		days_mission_timeout = 90
 
 		fire_only_once = yes
 
@@ -676,10 +742,6 @@ SOV_Development_and_Deployment = {
 		days_re_enable = 180
 		cost = 25
 
-		ai_will_do = {
-			factor = 20 # Small Chance for AI
-		}
-
 		allowed = {
 			original_tag = SOV
 		}
@@ -722,10 +784,6 @@ SOV_Development_and_Deployment = {
 		priority = 75
 		days_re_enable = 180
 		cost = 25
-
-		ai_will_do = {
-			factor = 60
-		}
 
 		allowed = {
 			original_tag = SOV
@@ -771,12 +829,12 @@ SOV_Development_and_Deployment = {
 		days_re_enable = 180
 		cost = 25
 
-		ai_will_do = {
-			factor = 20 # Small Chance for AI
-		}
-
 		allowed = {
 			original_tag = SOV
+		}
+
+		ai_will_do = {
+			factor = 100 # Small Chance for AI
 		}
 
 		available =  {
@@ -1063,6 +1121,230 @@ SOV_Local_offensive = {
 SOV_Local_Defense = {
 
 	# Build Trench --->
+
+	SOV_build_trech_leningrad = {
+		icon = GFX_decision_setup_forts
+		fire_only_once = yes
+		days_remove = 3
+		cost = 10
+
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		available = {
+			has_war = yes
+			controls_state = 195
+		}
+
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			NOT = { has_country_flag = SOV_order_227_flag }
+			has_active_mission = SOV_hold_leningrad
+			has_war = yes
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			195 = {
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 3151
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 149
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 6174
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 79
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 11068
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	SOV_build_trech_moscow = {
+		icon = GFX_decision_setup_forts
+		fire_only_once = yes
+		days_remove = 3
+		cost = 10
+
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		available = {
+			has_war = yes
+			controls_state = 219
+			controls_state = 242
+		}
+
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			NOT = { has_country_flag = SOV_order_227_flag }
+			has_active_mission = SOV_hold_moscow
+			has_war = yes
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			219 = {
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 366
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 9302
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 11282
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 301
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 3290
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 11330
+				}
+			}
+			242 = {
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 3279
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 2
+					instant_build = yes
+					province = 11384
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	SOV_build_trech_Stalingrad = {
+		icon = GFX_decision_setup_forts
+		fire_only_once = yes
+		days_remove = 3
+		cost = 10
+
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		available = {
+			has_war = yes
+			controls_state = 217
+			controls_state = 265
+		}
+
+		visible = {
+			has_completed_focus = SOV_desperate_measures
+			NOT = { has_country_flag = SOV_order_227_flag }
+			has_active_mission = SOV_hold_stalingrad
+			has_war = yes
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			265 = {
+				add_building_construction = {
+					type = trench_building
+					level = 3
+					instant_build = yes
+					province = 3582
+				}
+			}
+			217 = {
+				add_building_construction = {
+					type = trench_building
+					level = 3
+					instant_build = yes
+					province = 9504
+				}
+				add_building_construction = {
+					type = trench_building
+					level = 3
+					instant_build = yes
+					province = 6527
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
 
 	SOV_build_trech_minsk = {
 		icon = GFX_decision_setup_forts

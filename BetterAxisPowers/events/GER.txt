@@ -39,6 +39,7 @@ add_namespace = GER_force_anti_jewish
 add_namespace = GER_new_leader
 add_namespace = GER_health_adolf
 add_namespace = GER_spain_talks
+add_namespace = GER_Ernest_Cox
 
 country_event = {
 	id = ger_request_qingdao.1
@@ -1591,7 +1592,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		name = "Send Ultimatum"
+		name = "Demand Jutland"
 		DEN = {
 			country_event = {
 				id = GER_denmark_problem.2
@@ -1599,14 +1600,14 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			set_global_flag = GER_ultimatum_denkmark_sent
+			set_global_flag = GER_denkmark_demand_sent
 		}
 	}
 	option = {
 		ai_chance = {
 			factor = 100
 		}
-		name = "Send Puppet Demand"
+		name = "Send Ultimatum"
 		DEN = {
 			country_event = {
 				id = GER_denmark_problem.3
@@ -1631,7 +1632,7 @@ country_event = {
 country_event = {
 	id = GER_denmark_problem.2
 	title = "Ultimatum from Germany!"
-	desc = "They Demanding Fully Annexation of our Country."
+	desc = "They Demanding Jutland From Us!"
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
@@ -1650,7 +1651,7 @@ country_event = {
 		}
 		name = "No"
 		hidden_effect = {
-			set_global_flag = GER_ultimatum_denkmark_n
+			set_global_flag = GER_ultimatum_denmark_n
 		}
 	}
 }
@@ -5543,6 +5544,67 @@ country_event = { # Things Gone Good
 
 	option = {
 		name = "Welcome."
+	}
+}
+
+country_event = {
+	id = GER_Ernest_Cox.1
+	title = "Ernest Cox Offers Ship?"
+	desc = "Ernest Cox, who came to Germany after our job offer, suggested that the SMS Moltke, which had previously served in our Navy, be refitted and put back into service. Although it is outdated for its former role, it can be refitted and used as a Light Carrier"
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Another beautiful ship.."
+
+		ai_chance = {
+			factor = 100
+		}
+		
+		create_equipment_variant = {
+			name = "Moltke Class"
+			type = ship_hull_carrier_conversion_ca
+			name_group = GER_CV_HISTORICAL
+			parent_version = 0
+			allow_without_tech = yes
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_conversion_ca
+				creator = "GER"
+				version_name = "Moltke Class"
+			}
+			name = "Moltke"
+			requested_factories = 1
+			progress = 0.2
+			amount = 1
+		}
+	}
+
+	option = {
+		name = "Transfer Ship's Resources to New Projects."
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 56
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = GER_ship_resources
+				scope = GER
+				days = 90
+			}
+		}
 	}
 }
 

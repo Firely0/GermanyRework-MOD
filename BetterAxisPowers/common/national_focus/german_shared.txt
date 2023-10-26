@@ -90,27 +90,6 @@ shared_focus = {
 	icon = GFX_focus_generic_coastal_fort
 	prerequisite = { focus = GER_west_wall }
 	available = {
-		OR = {
-			FRA = { has_capitulated = yes }
-			NOT = { country_exists = FRA }
-		}
-		OR = {
-			has_full_control_of_state = 19
-			has_full_control_of_state = 23
-			has_full_control_of_state = 30
-			has_full_control_of_state = 14
-			has_full_control_of_state = 15
-			has_full_control_of_state = 29
-			has_full_control_of_state = 6
-			has_full_control_of_state = 7
-			has_full_control_of_state = 36
-			has_full_control_of_state = 99
-			has_full_control_of_state = 110
-			has_full_control_of_state = 142
-			has_full_control_of_state = 143
-			has_full_control_of_state = 144
-			has_full_control_of_state = 785
-		}
 	}
 	cancel_if_invalid = yes
 	x = 3
@@ -150,7 +129,10 @@ shared_focus = {
 			}
 		}
 		set_country_flag = GER_germany_atlantikwall_rework
-		custom_effect_tooltip = ger_allow_atlantikwall_consruction
+		unlock_decision_category_tooltip = GER_germany_atlantikwall_rework_france
+		unlock_decision_category_tooltip = GER_germany_atlantikwall_rework_benelux
+		unlock_decision_category_tooltip = GER_germany_atlantikwall_rework_germany
+		unlock_decision_category_tooltip = GER_germany_atlantikwall_rework_scandinavia
 	}
 }
 
@@ -1247,7 +1229,7 @@ shared_focus= {
 	icon = GFX_goal_planz
 	text = GER_plan_z
 	prerequisite = { focus = GER_naval_rearmament_a }
-	x = 0
+	x = -2
 	y = 1
 	cost = 10
 	ai_will_do = {
@@ -1266,23 +1248,8 @@ shared_focus= {
 			}
 		}
 		custom_effect_tooltip = GER_PLAN_Z_modify
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_plan_z_dockyards
-		}
+		activate_mission = GER_plan_z
+		unlock_decision_tooltip = GER_plan_z_build
 		add_tech_bonus = {
 			name = bc_bonus
 			bonus = 1.0
@@ -1305,7 +1272,7 @@ shared_focus = {
 	text = GER_rebuild_the_high_seas_fleet
 	relative_position_id = GER_naval_rearmament_a
 	prerequisite = { focus = GER_plan_z_a }
-	x = 3
+	x = 0
 	y = 2
 	cost = 10
 	ai_will_do = {
@@ -1314,28 +1281,7 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		custom_effect_tooltip = GER_rebuild_the_high_seas_fleet_a_modify
-		hidden_effect = {
-			GER_upgrade_kriegsmarine_effect = yes
-		}
-		GER_upgrade_kriegsmarine_idea_effect = yes
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 2
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_rebuild_the_high_seas_fleet_dockyards
-		}
+		unlock_decision_tooltip = GER_offer_job_Ernest_Cox
 		add_tech_bonus = {
 			name = bc_bonus
 			bonus = 1.0
@@ -1357,7 +1303,7 @@ shared_focus = {
 	icon = GFX_goal_r56_goal_generic_carrier
 	relative_position_id = GER_naval_rearmament_a
 	prerequisite = { focus = GER_plan_z_a }
-	x = -3
+	x = -4
 	y = 2
 	cost = 10
 	ai_will_do = {
@@ -1369,22 +1315,6 @@ shared_focus = {
 			GER_upgrade_kriegsmarine_effect = yes
 		}
 		GER_upgrade_kriegsmarine_idea_effect = yes
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
 	}
 }
 
@@ -1465,40 +1395,8 @@ shared_focus = {
 		add_tech_bonus = {
 			name = cv_bonus
 			bonus = 1.0
-			uses = 2
-			category = cv_tech
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_His_Ship
-	icon = GFX_focus_generic_navy_battleship2
-	prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
-	relative_position_id = GER_rebuild_the_high_seas_fleet_a
-	x = -1
-	y = 1
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	completion_reward = {
-		custom_effect_tooltip = GER_navy_visibility_modify
-		add_to_variable = {
-			GER_navy_visibility = -0.05
-		}
-		add_tech_bonus = {
-			name = dd_bonus
-			bonus = 1.0
 			uses = 1
-			category = dd_tech
-		}
-		add_tech_bonus = {
-			name = cl_bonus
-			bonus = 1.0
-			uses = 2
-			category = cl_tech
+			category = cv_tech
 		}
 	}
 }
@@ -1508,7 +1406,7 @@ shared_focus = {
 	icon = GFX_goal_build_bismarck
 	prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
 	relative_position_id = GER_rebuild_the_high_seas_fleet_a
-	x = 1
+	x = -1
 	y = 1
 	cost = 5
 	ai_will_do = {
@@ -1531,6 +1429,7 @@ shared_focus = {
 		add_to_variable = {
 			GER_navy_visibility = -0.05
 		}
+		unlock_decision_tooltip = Operation_Rheinubung
 		create_equipment_variant = {
 			name = "Bismarck Class"
 			type 	= ship_hull_heavy_2
@@ -1566,33 +1465,11 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = GER_last_battle_of_bismarck
-	icon = GFX_goal_generic_wolf_pack
-	relative_position_id = GER_Bismarck
-	prerequisite = { focus = GER_Bismarck }
-	x = 1
-	y = 1
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_timed_idea = {
-			idea = BismarcksLastDance
-			days = 60
-		}
-	}
-}
-
-shared_focus = {
 	id = GER_pride_of_the_modern_germany_a
 	icon = GFX_goal_Bismarck
 	text = GER_pride_of_the_modern_germany
 	relative_position_id = GER_rebuild_the_high_seas_fleet_a
-	prerequisite = { focus = GER_Bismarck focus = GER_His_Ship }
+	prerequisite = { focus = GER_Bismarck focus = GER_modular_construction_a }
 	x = 0
 	y = 2
 	cost = 10
@@ -1600,57 +1477,11 @@ shared_focus = {
 		factor = 9
 	}
 
-	complete_tooltip = {
-		every_state = {
-			limit = { has_state_flag = GER_rebuild_the_high_seas_fleet_dockyards }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		custom_effect_tooltip = GER_doctrine_cost_modify
 		add_to_variable = {
 			GER_naval_doctrine_cost_factor = -0.05
-		}
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 2
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_pride_of_the_modern_germany_dockyards
-		}
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 2
-					include_locked = yes
-				}
-				NOT = { has_state_flag = GER_pride_of_the_modern_germany_dockyards }
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_pride_of_the_modern_germany_dockyards
 		}
 		add_tech_bonus = {
 			name = GER_pride_of_the_modern_germany
@@ -1665,38 +1496,11 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = GER_prepare_for_the_next_blockade_a
-	icon = GFX_goal_generic_consumer_goods
-	text = GER_prepare_for_the_next_blockade
-	relative_position_id = GER_naval_rearmament_a
-	prerequisite = { focus = GER_naval_air_effort_a }
-	prerequisite = { focus = GER_pride_of_the_modern_germany_a }
-	available = {
-		is_subject = no
-	}
-	x = 0
-	y = 5
-
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-	completion_reward = {
-		custom_effect_tooltip = GER_prepare_next_tt
-		hidden_effect = {
-			GER_upgrade_kriegsmarine_effect = yes
-			set_variable = {
-				GER_consumer_goods_factor = -0.03
-			}
-		}
-	}
-}
-
-shared_focus = {
 	id = GER_crossing_the_atlantic_a
 	icon = GFX_goal_prepare_for_the_next_blockade
 	text = GER_crossing_the_atlantic
-	prerequisite = { focus = GER_prepare_for_the_next_blockade_a }
+	prerequisite = { focus = GER_naval_air_effort_a focus = GER_pride_of_the_modern_germany_a }
+	relative_position_id = GER_plan_z_a
 	available = {
 		is_subject = no
 		has_war_with = USA
@@ -1707,6 +1511,7 @@ shared_focus = {
 			}
 			SOV = { exists = no }
 			SOV = { is_puppet = yes }
+			SOV = { is_in_faction_with = GER }
 		}
 		NOT = {
 			any_country = {
@@ -1720,8 +1525,7 @@ shared_focus = {
 	}
 	cancel_if_invalid = yes
 	x = 0
-	y = 2
-	relative_position_id = GER_prepare_for_the_next_blockade_a
+	y = 4
 	cost = 10
 	ai_will_do = {
 		factor = 10
@@ -1815,11 +1619,11 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_u_boat_effort_a
-	icon = GFX_goal_generic_navy_submarine
+	icon = GFX_goal_ger_sabmarine
 	text = GER_u_boat_effort
 	relative_position_id = GER_naval_rearmament_a
 	prerequisite = { focus = GER_naval_rearmament_a }
-	x = 7
+	x = 2
 	y = 1
 	cost = 10
 	ai_will_do = {
@@ -1828,7 +1632,6 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		navy_experience = 25
 		if = {
 			limit = {
 				has_idea = Landon_Treaty
@@ -1838,6 +1641,8 @@ shared_focus = {
 				add_idea = Landon_Treaty_sub_focus
 			}
 		}
+		navy_experience = 25
+		set_technology = { cruiser_submarines = 1 popup = no }
 		random_owned_controlled_state = {
 			limit = {
 				dockyard > 0
@@ -1855,98 +1660,15 @@ shared_focus = {
 			}
 			set_state_flag = GER_u_boat_effort_2dockyards
 		}
-		add_tech_bonus = {
-			name = GER_u_boat_effort
-			bonus = 1.0
-			uses = 1
-			category = ss_tech
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_naval_effort2_a
-	icon = GFX_goal_generic_construct_naval_dockyard
-	prerequisite = { focus = GER_u_boat_effort_a }
-	text = GER_naval_effort2
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	relative_position_id = GER_u_boat_effort_a
-	x = 0
-	y = 2
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-
-	complete_tooltip = {
-		every_state = {
-			limit = { has_state_flag = GER_naval_effort_2dockyards }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-		every_state = {
-			limit = { has_state_flag = GER_naval_effort_2dockyards }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 2
-					include_locked = yes
-				}
-				NOT = { has_state_flag = GER_naval_effort2_2dockyards }
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_naval_effort2_2dockyards
-		}
-		random_owned_controlled_state = {
-			limit = {
-				dockyard > 0
-				free_building_slots = {
-					building = dockyard
-					size > 2
-					include_locked = yes
-				}
-				NOT = { has_state_flag = GER_naval_effort2_2dockyards }
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_naval_effort2_2dockyards
-		}
 	}
 }
 
 shared_focus = {
 	id = GER_trade_interdiction_a
-	icon = GFX_goal_generic_wolf_pack
+	icon = GFX_goal_GER_trade_interdiction
 	text = GER_trade_interdiction
 	prerequisite = { focus = GER_u_boat_effort_a }
-	x = 1
+	x = 0
 	y = 1
 	relative_position_id = GER_u_boat_effort_a
 	cost = 5
@@ -1972,9 +1694,10 @@ shared_focus = {
 	icon = GFX_focus_POL_develop_polish_shipbuilding
 	text = GER_modular_construction
 	prerequisite = { focus = GER_u_boat_effort_a }
-	x = -1
+	prerequisite = { focus = GER_rebuild_the_high_seas_fleet_a }
+	x = 1
 	y = 1
-	relative_position_id = GER_u_boat_effort_a
+	relative_position_id = GER_rebuild_the_high_seas_fleet_a
 	cost = 5
 	ai_will_do = {
 		factor = 1
@@ -1983,7 +1706,11 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		add_ideas = GER_modular_construction
+		custom_effect_tooltip = GER_rebuild_the_high_seas_fleet_a_modify
+		hidden_effect = {
+			GER_upgrade_kriegsmarine_effect = yes
+		}
+		GER_upgrade_kriegsmarine_idea_effect = yes
 	}
 }
 
@@ -4108,7 +3835,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Improve_TAC
-	icon = GFX_goal_r56_goal_generic_air_tactical_bomber_new
+	icon = GFX_focus_generic_armored_air_support
 	x = 3
 	y = 2
 	relative_position_id = GER_air_innovation_a
@@ -4133,7 +3860,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_tactical_air_effort_a
-	icon = GFX_goal_generic_CAS
+	icon = GFX_goal_r56_goal_generic_air_heavy_fighter_new
 	text = GER_tactical_air_effort
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	x = 5
@@ -4182,7 +3909,8 @@ shared_focus = {
 			name = nav_bomber_bonus
 			bonus = 1.0
 			uses = 2
-			category = naval_bomber
+			technology = air_torpedoe_2
+			technology = air_torpedoe_3
 		}
 	}
 }
@@ -4266,7 +3994,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Improve_CAS
-	icon = GFX_focus_generic_armored_air_support
+	icon = GFX_goal_r56_goal_generic_air_CAS_new
 	prerequisite = { focus = GER_CAS }
 	x = -1
 	y = 1
@@ -4296,7 +4024,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Improve_CAS_Range
-	icon = GFX_goal_r56_goal_generic_air_CAS_new
+	icon = GFX_goal_GER_tactical_air_effort
 	prerequisite = { focus = GER_CAS }
 	x = 1
 	y = 1
@@ -4346,7 +4074,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_strategic_air_effort_a
-	icon = GFX_focus_generic_long_range_aircraft
+	icon = GFX_goal_r56_goal_generic_air_bomber_new
 	text = GER_strategic_air_effort
 	prerequisite = { focus = GER_Strategic_Des }
 	x = -5
@@ -4372,7 +4100,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_long_range_escorts_a
-	icon = GFX_goal_r56_goal_generic_air_heavy_fighter_new
+	icon = GFX_goal_GER_long_range_escorts
 	text = GER_long_range_escorts
 	prerequisite = { focus = GER_Improve_TAC focus = GER_tactical_air_effort_a focus = GER_Improve_CAS }
 	x = 0
@@ -4397,7 +4125,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Improve_Des
-	icon = GFX_goal_r56_goal_generic_air_bomber_new
+	icon = GFX_goal_GER_strategic_air_effort
 	prerequisite = { focus = GER_Strategic_Des }
 	x = 1
 	y = 1
@@ -4721,7 +4449,11 @@ shared_focus = {
 	prerequisite = { focus = GER_Lighting_Strike }
 	mutually_exclusive = { focus = GER_follow_wehrmacht_design }
 	allow_branch = {
-		has_completed_focus = GER_shadow_of_past
+		NOT = { has_completed_focus = GER_Battle_Plan }
+		OR = {
+			has_completed_focus = GER_shadow_of_past
+			has_completed_focus = GER_soviet_ally
+		}
 	}
 	x = -2
 	y = 4
@@ -4731,7 +4463,13 @@ shared_focus = {
 	}
 
 	available = {
-		has_tech = mobile_warfare
+		SOV = {
+			OR = {
+				is_in_faction_with = GER
+				is_puppet_of = GER
+				exists = no
+			}
+		}
 	}
 
 	available_if_capitulated = yes
@@ -4739,6 +4477,16 @@ shared_focus = {
 	completion_reward = {
 		add_political_power = 100
 		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_soviet_ally
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
+		}
 	}
 }
 
@@ -4755,34 +4503,28 @@ shared_focus = {
 	}
 
 	available = {
-		has_tech = mobile_warfare
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
 		create_equipment_variant = {
-			name = "T34"
+			name = "T-34-85"
 			type = medium_tank_chassis_2
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_medium_cannon_2
 				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
+				suspension_type_slot = tank_christie_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_2
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = additional_machine_guns
-				special_type_slot_4 = expanded_fuel_tank
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 17
-				tank_nsb_armor_upgrade = 8
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 9
 			}
-			icon = "GFX_SOV_improved_medium_tank_medium"
-			model = "SOV_medium_armor_entity"
 		}
 	}
 }
@@ -4845,7 +4587,6 @@ shared_focus = {
 	}
 
 	available = {
-		has_tech = mobile_warfare
 	}
 
 	available_if_capitulated = yes
@@ -4884,7 +4625,7 @@ shared_focus = {
 	prerequisite = { focus = GER_Lighting_Strike }
 	mutually_exclusive = { focus = GER_follow_wehrmacht_design }
 	allow_branch = {
-		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_shadow_of_past } }
+		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_shadow_of_past has_completed_focus = GER_soviet_ally } }
 	}
 	x = -2
 	y = 4
@@ -5082,10 +4823,21 @@ shared_focus = {
 		if = {
 			limit = {
 				has_completed_focus = GER_Fuhrer
+				NOT = { has_completed_focus = GER_soviet_ally }
 			}
 			add_power_balance_value = {
 				id = GER_power_balance
 				value = -0.2
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = GER_Fuhrer
+				has_completed_focus = GER_soviet_ally
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = 0.1
 			}
 		}
 	}
@@ -5884,7 +5636,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_soviet_treaty_a
-	icon = GFX_goal_generic_scientific_exchange
+	icon = GFX_goal_GER_soviet_treaty
 	text = GER_soviet_treaty
 	prerequisite = { focus = GER_tank_warfare }
 	available = {
@@ -5894,12 +5646,7 @@ shared_focus = {
 			NOT = { has_completed_focus = GER_anti_soviet_pact }
 		}
 	}
-	#cancel = {
-	#	OR = {
-	#		has_war_with = SOV
-	#		NOT = { country_exists = SOV }
-	#	}
-	#}
+
 	bypass = {
 		OR = {
 			has_war_with = SOV
@@ -5927,12 +5674,10 @@ shared_focus = {
 				give_SOV_armor_research_bonuses = yes
 			}
 		}
-
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			#custom_effect_tooltip = GER_soviet_treaty_research_nsb_tt #Obsolete now
 			effect_tooltip = {
 				create_equipment_variant = {
 					name = "Panzer III Ausf. A"
@@ -6000,7 +5745,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_army_innovation_2_a
-	icon = GFX_focus_generic_tank_production
+	icon = GFX_goal_r56_goal_ger_panzer4
 	text = GER_army_innovation_2
 	prerequisite = { focus = GER_soviet_treaty_a }
 	x = -2
@@ -6123,7 +5868,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_rocketry_focus_a
-	icon = GFX_focus_rocketry
+	icon = GFX_goal_GER_rocketry_focus
 	text = GER_rocketry_focus
 	relative_position_id = GER_air_innovation_2_a
 	prerequisite = { focus = GER_air_innovation_2_a }
