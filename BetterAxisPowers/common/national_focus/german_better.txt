@@ -6485,7 +6485,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Befriend_Sweden
-		icon = GFX_goal_befriend_sweden
+		icon = GFX_focus_generic_befriend_sweden
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
@@ -6621,7 +6621,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_support_finland
-		icon = GFX_focus_invite_finland
+		icon = GFX_focus_FIN_right_wing_policies
 		relative_position_id = GER_scandinavia_policy
 		prerequisite = { focus = GER_scandinavia_policy }
 		available = {
@@ -12213,11 +12213,120 @@ focus = {
 		}
 	}
 
+
+	focus = {
+		id = GER_oppose_hitler
+		text = GER_assassinate_adolf_hitler
+		icon = GFX_goal_Assassination_Fuhrer
+		prerequisite = {
+			focus = GER_against_fuhrer
+		}
+		mutually_exclusive = {
+			focus = GER_prepare_for_innovative
+		}
+		relative_position_id = GER_against_fuhrer
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						neutrality > 0.6
+						communism > 0.6
+						democratic > 0.6
+					}
+				}
+				random_list = {
+					30 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					70 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						neutrality > 0.35
+						communism > 0.35
+						democratic > 0.35
+					}
+				}
+				random_list = {
+					50 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					50 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
+				}
+			}
+			else = {
+				random_list = {
+					70 = {
+						country_event = GER_no_focus_ger_com_civilwar.1
+					}
+					30 = {
+						country_event = GER_no_focus_ger_com_adolf_retire.1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_prepare_for_innovative
+		icon = GFX_goal_anti_fasicm_ger
+		text = GER_Working_on
+		mutually_exclusive = {
+			focus = GER_assassinate_adolf_hitler
+		}
+		prerequisite = {
+			focus = GER_against_fuhrer
+		}
+		relative_position_id = GER_against_fuhrer
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			always = no
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 64	
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Germany_state_dynamic_modifier
+				}
+			}
+		}
+	}
+
+
 	focus = {
 		id = GER_the_German_Republic
 		icon = GFX_goal_gernonflag
 		prerequisite = {
-			focus = GER_against_fuhrer
+			focus = GER_oppose_hitler focus = GER_prepare_for_innovative
 		}
 		relative_position_id = GER_against_fuhrer
 		x = 0

@@ -87,7 +87,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_atlantikwall
-	icon = GFX_focus_generic_coastal_fort
+	icon = GFX_focus_FIN_coastal_defense
 	prerequisite = { focus = GER_west_wall }
 	available = {
 	}
@@ -4492,7 +4492,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_t34
-	icon = GFX_goal_generic_army_tanks
+	icon = GFX_goal_t34_85
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_follow_red_army_design }
 	x = -2
@@ -4576,7 +4576,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_su_87
-	icon = GFX_goal_Anti_tank
+	icon = GFX_goal_su_85
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_t34 }
 	x = -2
@@ -4660,7 +4660,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_tiger_I
-	icon = GFX_goal_tiger
+	icon = GFX_goal_Tiger_1
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_follow_fuhrer_design }
 	x = -2
@@ -4677,7 +4677,6 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		set_technology = { masterful_blitz_GERV = 1 popup = no }
 		create_equipment_variant = {
 			name = "Tiger I"
 			type = heavy_tank_chassis_2
@@ -4706,7 +4705,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_tiger_destroyer
-	icon = GFX_goal_Anti_tank
+	icon = GFX_goal_Panzerjager_Tiger
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_tiger_I }
 	x = -2
@@ -4889,7 +4888,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Panther
-	icon = GFX_goal_generic_army_tanks
+	icon = GFX_goal_Panther
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_follow_wehrmacht_design }
 	#mutually_exclusive = { focus = GER_Anti_Tank }
@@ -4952,12 +4951,7 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		if = {
-			limit = {
-				NOT = { has_completed_focus = GER_follow_fuhrer_design }
-			}
-			set_technology = { masterful_blitz_GERV = 1 popup = no }
-		}
+		set_technology = { masterful_blitz_GERV = 1 popup = no }
 		create_equipment_variant = {
 			name = "King Tiger"
 			type = heavy_tank_chassis_3
@@ -4986,7 +4980,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Anti_Tank
-	icon = GFX_goal_Anti_tank
+	icon = GFX_goal_Jagdpanther
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_Panther }
 	#mutually_exclusive = { focus = GER_Panther }

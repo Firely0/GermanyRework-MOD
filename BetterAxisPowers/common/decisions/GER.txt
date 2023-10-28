@@ -2641,7 +2641,6 @@ GER_Operation_Barbarossa_High_Command = {
 
 		allowed = {
 			original_tag = GER
-			has_idea = GER_barbarossa
 		}
 
 		available =  {
@@ -2650,6 +2649,7 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		visible = {
+			has_idea = GER_barbarossa
 			has_global_flag = GER_Operation_Barbarossa_running
 		}
 
@@ -2692,7 +2692,6 @@ GER_Operation_Barbarossa_High_Command = {
 
 		allowed = {
 			original_tag = GER
-			has_idea = GER_barbarossa
 		}
 
 		available =  {
@@ -3807,12 +3806,11 @@ GER_rebuild_the_high_seas_fleet_project = {
 
 		remove_effect = {
 			create_equipment_variant = {
-				name = "Friedrich der Grossee Class"
+				name = "Friedrich der Grossee"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
-				obsolete = yes
 				obsolete = yes
 				modules = {
 					fixed_ship_battery_slot = ship_heavy_battery_1
@@ -3835,7 +3833,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Friedrich der Grossee Class"
+								version_name = "Friedrich der Grossee"
 							}
 							name = "SMS Friedrich der Grosse"
 							requested_factories = 1
@@ -3848,7 +3846,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Friedrich der Grossee Class"
+								version_name = "Friedrich der Grossee"
 							}
 							name = "SMS Friedrich der Grosse"
 							requested_factories = 1
@@ -3861,7 +3859,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Friedrich der Grossee Class"
+								version_name = "Friedrich der Grossee"
 							}
 							name = "SMS Friedrich der Grosse"
 							requested_factories = 1
@@ -3874,7 +3872,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Friedrich der Grossee Class"
+								version_name = "Friedrich der Grossee"
 							}
 							name = "SMS Friedrich der Grosse"
 							requested_factories = 1
@@ -3911,9 +3909,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 
 		remove_effect = {
 			create_equipment_variant = {
-				name = "Grosser kurfurst Class"
+				name = "Grosser kurfurst"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -3938,7 +3936,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Grosser kurfurst Class"
+								version_name = "Grosser kurfurst"
 							}
 							name = "SMS Grosser Kurfürst"
 							requested_factories = 1
@@ -3951,7 +3949,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Grosser kurfurst Class"
+								version_name = "Grosser kurfurst"
 							}
 							name = "SMS Grosser Kurfürst"
 							requested_factories = 1
@@ -3964,7 +3962,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Grosser kurfurst Class"
+								version_name = "Grosser kurfurst"
 							}
 							name = "SMS Grosser Kurfürst"
 							requested_factories = 1
@@ -3977,7 +3975,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Grosser kurfurst Class"
+								version_name = "Grosser kurfurst"
 							}
 							name = "SMS Grosser Kurfürst"
 							requested_factories = 1
@@ -4014,9 +4012,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 
 		remove_effect = {
 			create_equipment_variant = {
-				name = "Kaiser Class"
+				name = "Kaiser"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4041,7 +4039,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiser Class"
+								version_name = "Kaiser"
 							}
 							name = "SMS Kaiser"
 							requested_factories = 1
@@ -4054,7 +4052,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiser Class"
+								version_name = "Kaiser"
 							}
 							name = "SMS Kaiser"
 							requested_factories = 1
@@ -4067,7 +4065,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiser Class"
+								version_name = "Kaiser"
 							}
 							name = "SMS Kaiser"
 							requested_factories = 1
@@ -4080,7 +4078,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiser Class"
+								version_name = "Kaiser"
 							}
 							name = "SMS Kaiser"
 							requested_factories = 1
@@ -4117,9 +4115,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 
 		remove_effect = {
 			create_equipment_variant = {
-				name = "Kaiserin Class"
+				name = "Kaiserin"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4144,7 +4142,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiserin Class"
+								version_name = "Kaiserin"
 							}
 							name = "SMS Kaiserin"
 							requested_factories = 1
@@ -4157,7 +4155,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiserin Class"
+								version_name = "Kaiserin"
 							}
 							name = "SMS Kaiserin"
 							requested_factories = 1
@@ -4170,7 +4168,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiserin Class"
+								version_name = "Kaiserin"
 							}
 							name = "SMS Kaiserin"
 							requested_factories = 1
@@ -4183,7 +4181,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kaiserin Class"
+								version_name = "Kaiserin"
 							}
 							name = "SMS Kaiserin"
 							requested_factories = 1
@@ -4229,9 +4227,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "König class"
+				name = "König"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4256,7 +4254,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "König class"
+								version_name = "König"
 							}
 							name = "SMS König"
 							requested_factories = 1
@@ -4269,7 +4267,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Königsberg Class"
+								version_name = "Königsberg"
 							}
 							name = "SMS König"
 							requested_factories = 1
@@ -4282,7 +4280,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Königsberg Class"
+								version_name = "Königsberg"
 							}
 							name = "SMS König"
 							requested_factories = 1
@@ -4295,7 +4293,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Königsberg Class"
+								version_name = "Königsberg"
 							}
 							name = "SMS König"
 							requested_factories = 1
@@ -4341,9 +4339,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Kronprinz class"
+				name = "Kronprinz"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4368,7 +4366,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kronprinz Class"
+								version_name = "Kronprinz"
 							}
 							name = "SMS Kronprinz"
 							requested_factories = 1
@@ -4381,7 +4379,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kronprinz Class"
+								version_name = "Kronprinz"
 							}
 							name = "SMS Kronprinz"
 							requested_factories = 1
@@ -4394,7 +4392,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kronprinz Class"
+								version_name = "Kronprinz"
 							}
 							name = "SMS Kronprinz"
 							requested_factories = 1
@@ -4407,7 +4405,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Kronprinz Class"
+								version_name = "Kronprinz"
 							}
 							name = "SMS Kronprinz"
 							requested_factories = 1
@@ -4453,9 +4451,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Markgraf Class"
+				name = "Markgraf"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4480,7 +4478,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Markgraf Class"
+								version_name = "Markgraf"
 							}
 							name = "SMS Markgraf"
 							requested_factories = 1
@@ -4493,7 +4491,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Markgraf Class"
+								version_name = "Markgraf"
 							}
 							name = "SMS Markgraf"
 							requested_factories = 1
@@ -4506,7 +4504,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Markgraf Class"
+								version_name = "Markgraf"
 							}
 							name = "SMS Markgraf"
 							requested_factories = 1
@@ -4519,7 +4517,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Markgraf Class"
+								version_name = "Markgraf"
 							}
 							name = "SMS Markgraf"
 							requested_factories = 1
@@ -4556,9 +4554,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 
 		remove_effect = {
 			create_equipment_variant = {
-				name = "Derfflinger Class"
+				name = "Derfflinger"
 				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_BB_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4569,7 +4567,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = heavy_ship_engine_1
 					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bb_1
+					fixed_ship_armor_slot = ship_armor_bc_1
 					front_1_custom_slot = ship_anti_air_1
 					mid_1_custom_slot = empty
 					mid_2_custom_slot = ship_secondaries_2
@@ -4584,7 +4582,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Derfflinger Class"
+								version_name = "Derfflinger"
 							}
 							name = "SMS Derfflinger"
 							requested_factories = 1
@@ -4597,7 +4595,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Derfflinger Class"
+								version_name = "Derfflinger"
 							}
 							name = "SMS Derfflinger"
 							requested_factories = 1
@@ -4610,7 +4608,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Derfflinger Class"
+								version_name = "Derfflinger"
 							}
 							name = "SMS Derfflinger"
 							requested_factories = 1
@@ -4623,7 +4621,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_pre_dreadnought
 								creator = "GER"
-								version_name = "Derfflinger Class"
+								version_name = "Derfflinger"
 							}
 							name = "SMS Derfflinger"
 							requested_factories = 1
@@ -4665,9 +4663,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Brummer Class"
+				name = "Brummer"
 				type = ship_hull_cruiser_1
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_CA_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4692,7 +4690,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Brummer Class"
+								version_name = "Brummer"
 							}
 							name = "SMS Brummer"
 							requested_factories = 1
@@ -4705,7 +4703,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Brummer Class"
+								version_name = "Brummer"
 							}
 							name = "SMS Brummer"
 							requested_factories = 1
@@ -4718,7 +4716,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Brummer Class"
+								version_name = "Brummer"
 							}
 							name = "SMS Brummer"
 							requested_factories = 1
@@ -4731,7 +4729,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Brummer Class"
+								version_name = "Brummer"
 							}
 							name = "SMS Brummer"
 							requested_factories = 1
@@ -4777,9 +4775,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Coln Class"
+				name = "Coln"
 				type = ship_hull_cruiser_1
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_CA_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4804,7 +4802,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Coln Class"
+								version_name = "Coln"
 							}
 							name = "SMS Coln"
 							requested_factories = 1
@@ -4817,7 +4815,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Coln Class"
+								version_name = "Coln"
 							}
 							name = "SMS Coln"
 							requested_factories = 1
@@ -4830,7 +4828,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Coln Class"
+								version_name = "Coln"
 							}
 							name = "SMS Coln"
 							requested_factories = 1
@@ -4843,7 +4841,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Coln Class"
+								version_name = "Coln"
 							}
 							name = "SMS Coln"
 							requested_factories = 1
@@ -4889,9 +4887,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
             GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Dresden Class"
+				name = "Dresden"
 				type = ship_hull_cruiser_1
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_CA_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -4916,7 +4914,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Dresden Class"
+								version_name = "Dresden"
 							}
 							name = "SMS Dresden"
 							requested_factories = 1
@@ -4929,7 +4927,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Dresden Class"
+								version_name = "Dresden"
 							}
 							name = "SMS Dresden"
 							requested_factories = 1
@@ -4942,7 +4940,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Dresden Class"
+								version_name = "Dresden"
 							}
 							name = "SMS Dresden"
 							requested_factories = 1
@@ -4955,7 +4953,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Dresden Class"
+								version_name = "Dresden"
 							}
 							name = "SMS Dresden"
 							requested_factories = 1
@@ -5001,9 +4999,9 @@ GER_rebuild_the_high_seas_fleet_project = {
 		remove_effect = {
 			GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
-				name = "Karlsruhe Class"
+				name = "Karlsruhe"
 				type = ship_hull_cruiser_1
-				name_group = GER_BB_HISTORICAL
+				name_group = GER_CA_IMPERIAL
 				parent_version = 0
 				allow_without_tech = yes
 				obsolete = yes
@@ -5028,7 +5026,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Karlsruhe Class"
+								version_name = "Karlsruhe"
 							}
 							name = "SMS Karlsruhe"
 							requested_factories = 1
@@ -5041,7 +5039,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Karlsruhe Class"
+								version_name = "Karlsruhe"
 							}
 							name = "SMS Karlsruhe"
 							requested_factories = 1
@@ -5054,7 +5052,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Karlsruhe Class"
+								version_name = "Karlsruhe"
 							}
 							name = "SMS Karlsruhe"
 							requested_factories = 1
@@ -5067,7 +5065,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							equipment = {
 								type = ship_hull_cruiser_1
 								creator = "GER"
-								version_name = "Karlsruhe Class"
+								version_name = "Karlsruhe"
 							}
 							name = "SMS Karlsruhe"
 							requested_factories = 1
