@@ -8,7 +8,18 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-			195 = { is_controlled_by_ROOT_or_ally_with_fin = yes }
+			OR = {
+				195 = { is_controlled_by_ROOT_or_ally = yes }
+				AND = {
+					FIN = {
+						NOT = { has_war_with = GER }
+						has_war_with = SOV
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+					195 = { is_controlled_by = FIN }
+
+				}
+			}
 		}
 
 		activation = {
