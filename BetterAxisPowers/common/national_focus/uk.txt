@@ -9511,7 +9511,10 @@ focus_tree = {
 		id = ENG_take_out_the_regia_marina
 		prerequisite = { focus = ENG_noninterference_treaty_with_germany focus = ENG_alliance_with_germany }
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			country_exists = ITA
 			NOT = { is_in_faction_with = ITA }
 		}
@@ -10185,7 +10188,10 @@ focus_tree = {
 		id = ENG_reclaim_the_jewel_in_the_crown
 		prerequisite = { focus = ENG_ceylon_forward_operating_base }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 		}
 		bypass = {
 			OR = {
@@ -10273,10 +10279,16 @@ focus_tree = {
 		id = ENG_pre_empt_the_ideological_threat
 		prerequisite = { focus = ENG_reclaim_the_jewel_in_the_crown focus = ENG_noninterference_treaty_with_germany focus = ENG_alliance_with_germany	}	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			country_exists = SOV
 			NOT = { is_in_faction_with = SOV }
 			SOV = { has_government = communism }
+		}
+		bypass = {
+			has_war_with = SOV
 		}
 		will_lead_to_war_with = SOU
 		icon = GFX_focus_attack_soviet
@@ -10305,7 +10317,10 @@ focus_tree = {
 		id = ENG_expose_the_belly_of_the_bear
 		prerequisite = { focus = ENG_pre_empt_the_ideological_threat }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			OR = {
 				AND = {
 					country_exists = PER
@@ -10380,7 +10395,10 @@ focus_tree = {
 		id = ENG_consolidate_the_british_isles
 		prerequisite = { focus = ENG_god_save_the_king }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			country_exists = IRE
 			NOT = { is_in_faction_with = IRE }
 		}
@@ -10440,7 +10458,10 @@ focus_tree = {
 		prerequisite = { focus = ENG_reclaim_the_jewel_in_the_crown }
 		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			country_exists = USA
 			NOT = { is_in_faction_with = USA }
 		}
@@ -10481,7 +10502,10 @@ focus_tree = {
 		id = ENG_appeal_to_imperial_loyalists
 		prerequisite = { focus = ENG_god_save_the_king }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			OR = {
 				country_exists = CAN
 				country_exists = SAF
@@ -10548,7 +10572,10 @@ focus_tree = {
 		id = ENG_bring_the_dominions_back_into_the_fold
 		prerequisite = { focus = ENG_appeal_to_imperial_loyalists }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 		}
 		bypass = {
 			OR = {
@@ -10681,7 +10708,6 @@ focus_tree = {
 		id = ENG_the_sun_never_sets
 		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }	
 		available = {
-
 		}
 		icon = GFX_focus_eng_the_sun_never_sets
 		x = 0
@@ -10713,7 +10739,10 @@ focus_tree = {
 		id = ENG_pre_empt_the_strategic_threat
 		prerequisite = { focus = ENG_bring_the_dominions_back_into_the_fold }	
 		available = {
-			is_subject = no
+			OR = {
+				is_subject = no
+				has_autonomy_state = autonomy_Overthrown_Government_ITA
+			}
 			country_exists = JAP
 			NOT = { is_in_faction_with = JAP }
 			OR = {

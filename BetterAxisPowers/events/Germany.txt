@@ -7243,10 +7243,20 @@ country_event = {
 
 	trigger = {
 		tag = GER
-		GER = {
-			has_government = fascism
-			owns_state = 217
-			owns_state = 195
+		OR = {
+			AND = {
+				GER = {
+					has_government = fascism
+					owns_state = 217
+					owns_state = 195
+				}
+				RMK = {
+					is_puppet_of = GER
+					has_government = fascism
+					owns_state = 217
+					owns_state = 195
+				}
+			}
 		}
 	}
 

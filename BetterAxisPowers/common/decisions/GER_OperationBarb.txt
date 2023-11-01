@@ -1,0 +1,712 @@
+GER_Operation_Barbarossa_V = {
+
+	GER_conquer_Leningrad = {
+		icon = GFX_decision_SOV_lenin
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			195 = { is_controlled_by_ROOT_or_ally_with_fin = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195 #Leningrad
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Leningrad_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Misk = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			206 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206 #Misk
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+	GER_conquer_Moscow = {
+		icon = GFX_decision_SOV_moscow
+
+		allowed = {
+			tag = GER
+		}
+
+		available = { #GOAL
+			219 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219 #Moscow
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Moscow_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Kiev = {
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = { #GOAL
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202 #Kiev
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+	GER_conquer_Stalingrad = {
+		icon = GFX_decision_SOV_stalin
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			217 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217 #Stalingrad
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Stalingrad_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Sevastopol = {
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			137 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 137 #Sevastopol
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+}
+
+GER_Operation_Barbarossa_High_Command = {
+
+	High_Command_Tank_Warfare = {
+		icon = GFX_decision_generic_tank
+		priority = 100 # First
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 40 # Small Chance for AI
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+			has_completed_focus = GER_Lighting_Strike
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		modifier = { # Use Tank Warfare
+			army_armor_speed_factor = 0.05
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			breakthrough_bonus_against = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+	High_Command_land_combat = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		priority = 95
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.05
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+	High_Command_prio_Luftwaffe = {
+		icon = GFX_decision_generic_air
+		priority = 90
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+			OR = {
+				has_completed_focus = GER_Strategic_Des
+				has_completed_focus = GER_CAS
+				has_completed_focus = GER_Operational_Integratiy
+			}
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		modifier = { # Trust Luftwaffe Again..
+			ace_effectiveness_factor = 0.1
+			air_close_air_support_attack_factor = 0.1
+			air_cas_efficiency = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+}
+
+GER_Operation_Barbarossa_Operations = {
+
+	High_Command_Tank_Warfare = {
+		icon = hol_draw_up_staff_plans
+		priority = 100 # First
+		days_remove = 90
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 40 # Small Chance for AI
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+			has_completed_focus = GER_Lighting_Strike
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		modifier = { # Use Tank Warfare
+			army_armor_attack_factor = 0.15
+			army_armor_speed_factor = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+}
+
+GER_Operation_Barbarossa_war_efforts = {
+
+	Focus_on_tank_production = {
+		icon = GFX_decision_generic_merge_plant_tank
+		priority = 100
+		days_remove = 180
+		fire_only_once = no
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 5 # Small Chance for AI
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = Focused_on_production }
+		}
+
+		visible = {
+			OR = {
+				has_idea = GER_barbarossa
+				has_idea = GER_barbarossa_war
+			}
+		}
+
+		modifier = { # Debuff
+			industrial_capacity_dockyard = -0.1
+			mobilization_speed = -0.05
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GER_focus_on_tanks
+				days = 180
+			}
+			hidden_effect = {
+				set_country_flag = Focused_on_production
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = Focused_on_production
+			}
+		}
+	}
+
+	Focus_on_air_production = {
+		icon = GFX_decision_generic_merge_plant_aircraft
+		priority = 95
+		days_remove = 180
+		fire_only_once = no
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = Focused_on_production }
+		}
+
+		visible = {
+			OR = {
+				has_idea = GER_barbarossa
+				has_idea = GER_barbarossa_war
+			}
+		}
+
+		modifier = { # Debuff
+			industrial_capacity_dockyard = -0.1
+			mobilization_speed = -0.05
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = GER_focus_on_air
+				days = 180
+			}
+			hidden_effect = {
+				set_country_flag = Focused_on_production
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = Focused_on_production
+			}
+		}
+	}
+
+	Focus_on_mobilization = {
+		icon = GFX_decision_generic_military
+		priority = 90
+		days_remove = 180
+		fire_only_once = no
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = Focused_on_production }
+		}
+
+		visible = {
+			OR = {
+				has_idea = GER_barbarossa
+				has_idea = GER_barbarossa_war
+			}
+		}
+
+		modifier = {
+			conscription = 0.01
+			weekly_manpower = 1500
+			training_time_factor = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = Focused_on_production
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = Focused_on_production
+			}
+		}
+	}
+}

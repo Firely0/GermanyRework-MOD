@@ -45,8 +45,8 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -20
-			y = 1
+			x = -25
+			y = 0
 			trigger = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
@@ -92,8 +92,8 @@ focus_tree = {
 		y = 0
 		cost = 5
 		offset = {
-			x = -20
-			y = 1
+			x = -25
+			y = 0
 			trigger = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
@@ -148,8 +148,8 @@ focus_tree = {
 		y = 1
 		cost = 1
 		offset = {
-			x = -20
-			y = 1
+			x = -25
+			y = 0
 			trigger = {
 				has_completed_focus = GER_establish_abwehr
 			}
@@ -900,9 +900,6 @@ focus_tree = {
 			unlock_decision_tooltip = GER_reichskommissariat_norwegen
 			unlock_decision_tooltip = GER_reichskommissariat_niederlande
 			unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
-			unlock_decision_tooltip = GER_reichskommissariat_moscow
-			unlock_decision_tooltip = GER_reichskommissariat_caucasus
-			unlock_decision_tooltip = GER_reichskommissariat_turkestan
 		}
 	}
 
@@ -1283,18 +1280,6 @@ focus_tree = {
 					}
 					add_timed_idea = { idea = Operation_Weserubung_AI days = 160 }
 					GER_AI_EQ = yes
-				}
-				if = {
-					limit = {
-						ENG = {
-							is_ai = yes
-							has_government = democratic
-							NOT = { has_guaranteed = POL }
-						}
-					}
-					ENG = {
-						give_guarantee = POL
-					}
 				}
 				if = {
 					limit = {
@@ -2775,16 +2760,17 @@ focus_tree = {
 		prerequisite = { focus = GER_battle_of_landon }
 		prerequisite = { focus = GER_battle_of_liverpool }
 		prerequisite = { focus = GER_battle_of_Birmingham }
-		available = { 
-			NOT = { has_war_with = ENG }
-			ENG = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-				exists = yes
-			}
-			always = no
+		available = {
+			127 = { is_controlled_by_ROOT_or_ally = yes }
+			338 = { is_controlled_by_ROOT_or_ally = yes }
+			126 = { is_controlled_by_ROOT_or_ally = yes }
+			338 = { is_controlled_by_ROOT_or_ally = yes }
+			125 = { is_controlled_by_ROOT_or_ally = yes }
+			122 = { is_controlled_by_ROOT_or_ally = yes }
+			128 = { is_controlled_by_ROOT_or_ally = yes }
+			129 = { is_controlled_by_ROOT_or_ally = yes }
+			132 = { is_controlled_by_ROOT_or_ally = yes }
+			130 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -2794,6 +2780,121 @@ focus_tree = {
 		ai_will_do = {
 		}		
 		completion_reward = {
+			custom_effect_tooltip = GER_ENG_CIVIL_WAR_START
+			hidden_effect = {
+				if = {
+					limit = {
+						country_exists = ENG
+						NOT = { ENG = { has_government = neutrality } }
+					}
+					ENG = {
+						set_state_controller = 123
+						set_state_controller = 127
+						set_state_controller = 338
+						set_state_controller = 126
+						set_state_controller = 338
+						set_state_controller = 125
+						set_state_controller = 122
+						set_state_controller = 128
+						set_state_controller = 129
+						set_state_controller = 132
+						set_state_controller = 130
+					}
+					ENG = {
+						start_civil_war = {
+							ideology = neutrality
+							size = 0.5
+							transfer_state = 123
+							transfer_state = 127
+							transfer_state = 338
+							transfer_state = 126
+							transfer_state = 338
+							transfer_state = 125
+							transfer_state = 122
+							transfer_state = 128
+							transfer_state = 129
+							transfer_state = 132
+							transfer_state = 130
+							GER = {
+								puppet = PREV
+								set_autonomy = { target = PREV autonomy_state = autonomy_Overthrown_Government_ITA }
+							}
+							set_politics = {
+								ruling_party = neutrality
+								elections_allowed = no
+							}
+							hidden_effect = {
+								load_focus_tree = { tree = british_focus keep_completed = yes }
+								if = {
+									limit = {
+										has_dlc = "Man the Guns"
+									}
+									uncomplete_national_focus = {
+										focus = ENG_steady_as_she_goes
+										uncomplete_children = yes
+										refund_political_power = no
+									}
+									unlock_national_focus = ENG_a_change_in_course
+									unlock_national_focus = ENG_the_kings_party
+									set_rule = { can_send_volunteers = yes }
+									add_ideas = ENG_the_kings_party_idea
+									create_country_leader = {
+										name = "Edward VIII"
+										desc = "POLITICS_EDWARD_EDWARD_DESC"
+										picture = GFX_portrait_Edward_VIII
+										expire = "1965.1.1"
+										ideology = despotism
+										traits = {
+											inexperienced_imperialist
+										}
+									}
+									complete_national_focus = ENG_god_save_the_king
+									unlock_national_focus = ENG_reassess_continental_commitments
+									unlock_national_focus = ENG_isolate_the_mediterranean_threat
+									unlock_national_focus = ENG_alliance_with_germany
+									complete_national_focus = ENG_appeal_to_imperial_loyalists
+									if = {
+										limit = {
+											has_idea = ENG_the_war_to_end_all_wars
+										}
+										remove_ideas = ENG_the_war_to_end_all_wars
+									}
+									add_popularity = {
+										ideology = neutrality
+										popularity = 0.7
+									}
+								}
+								GER = {
+									every_controlled_state = {
+										limit = {
+											is_core_of = ENG
+										}
+										set_state_controller = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					set_autonomy = { target = ENG autonomy_state = ger_overthrow_government_ita }
+					ENG = {
+						set_rule = {
+							can_not_declare_war = no
+							can_decline_call_to_war = yes
+							can_join_opposite_factions = no
+						}
+					}
+					GER = {
+						every_controlled_state = {
+							limit = {
+								is_core_of = ENG
+							}
+							set_state_controller = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -6723,6 +6824,7 @@ focus_tree = {
 				is_subject = no
 				is_in_faction = no
 				NOT = { has_war_with = SOV }
+				NOT = { has_country_flag = FIN_pact_for_continuation_war_flag }
 			}
 		}
 		x = 3
@@ -10635,10 +10737,6 @@ focus_tree = {
 			}
 			hidden_effect = {
 				add_days_mission_timeout = {
-					mission = GER_end_of_operation_barbarossa
-					days = 60
-				}
-				add_days_mission_timeout = {
 					mission = GER_conquer_Misk
 					days = 60
 				}
@@ -10693,10 +10791,6 @@ focus_tree = {
 			}
 			hidden_effect = {
 				add_days_mission_timeout = {
-					mission = GER_end_of_operation_barbarossa
-					days = 60
-				}
-				add_days_mission_timeout = {
 					mission = GER_conquer_Misk
 					days = 60
 				}
@@ -10748,12 +10842,6 @@ focus_tree = {
 			add_days_mission_timeout = {
 				mission = GER_conquer_Leningrad
 				days = 60
-			}
-			hidden_effect = {
-				add_days_mission_timeout = {
-					mission = GER_end_of_operation_barbarossa
-					days = 60
-				}
 			}
 		}
 	}
@@ -10957,6 +11045,75 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = GER_SS_Soviet_tt
 			show_ideas_tooltip = SS_Fake_tooltip_idea
+			unlock_decision_tooltip = GER_reichskommissariat_moscow
+			unlock_decision_tooltip = GER_reichskommissariat_caucasus
+			unlock_decision_tooltip = GER_reichskommissariat_turkestan
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 93
+							state = 91
+							state = 89
+							state = 199
+							state = 201
+							state = 198
+							state = 202
+							state = 193
+							state = 192
+							state = 203
+							state = 197
+							state = 225
+							state = 259
+							state = 226
+							state = 196
+							state = 200
+							state = 221
+							state = 228
+							state = 227
+							state = 97
+							state = 94
+							state = 95
+							state = 96
+							state = 194
+							state = 204
+							state = 206
+							state = 207
+							state = 241
+							state = 11
+							state = 784
+							state = 189
+							state = 12
+							state = 190
+							state = 13
+							state = 191
+							state = 814
+							state = 815
+							state = 809
+							state = 808
+							state = 810
+							state = 813
+							state = 812
+							state = 811
+							state = 238
+							state = 237
+							state = 236
+							state = 234
+							state = 235
+							state = 232
+							state = 233
+							state = 827
+							state = 826
+							state = 828
+							state = 821
+							state = 231
+							state = 229
+							state = 230
+						}
+					}
+					set_state_flag = GER_MOSKOW_IGNORE_STATES
+				}
+			}
 		}
 	}
 

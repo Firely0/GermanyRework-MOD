@@ -198,15 +198,19 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_finland.1.a	#Who cares about Finland
+
 		ai_chance = {
 			factor = 100
 		}
+
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_finland.2 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_finland.1.b	#We want it
+
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -223,6 +227,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
+
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_finland.3 }
 		}
@@ -248,6 +253,7 @@ country_event = {
 			country_event = { hours = 1 id = mrpact_negociations_finland.4 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_finland.2.b	#We don't want it
 		ai_chance = {
@@ -916,12 +922,18 @@ country_event = {
 	option = {
 		name = mrpact_negociations_estonia.1.a	#Who cares about Estonia
 		ai_chance = {
-			factor = 100
+			factor = 0
+
+			modifier = {
+				factor = 100
+				is_ai = yes
+			}
 		}
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_estonia.2 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_estonia.1.b	#We want it
 		ai_chance = {
@@ -958,6 +970,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_estonia.2.a	#Of course
+
+		ai_chance = { # Just in Case
+			factor = 100
+		}
+
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_estonia.4 }
 		}
@@ -983,6 +1000,7 @@ country_event = {
 			country_event = { hours = 1 id = mrpact_negociations_estonia.6 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_estonia.3.b	#Ok
 		ai_chance = {
@@ -1532,9 +1550,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_latvia.1.a	#Who cares about Latvia
+
 		ai_chance = {
 			factor = 100
 		}
+
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_latvia.2 }
 		}
@@ -1575,6 +1595,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_latvia.2.a	#Of course
+
+		ai_chance = { # Just in Case
+			factor = 100
+		}
+
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_latvia.4 }
 		}
@@ -1593,9 +1618,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_latvia.3.a	#No way, it's ours!
+
 		ai_chance = {
 			factor = 99
 		}
+
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_latvia.6 }
 		}
@@ -2074,14 +2101,16 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_lithuania.1.a	#Who cares about Lithuania
+
 		ai_chance = {
 			factor = 0
 			modifier = {
-				factor = 1000
+				factor = 100
 				NOT = { LIT = { is_subject_of = GER } }
 				is_historical_focus_on = yes
 			}
 		}
+
 		SOV = {
 			country_event = { hours = 2 id = mrpact_negociations_lithuania.2 }
 		}
@@ -2123,9 +2152,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_lithuania.2.a	#Of course
+
 		ai_chance = {
 			factor = 100
 		}
+
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_lithuania.4 }
 		}
@@ -2173,6 +2204,7 @@ country_event = {
 			country_event = { hours = 1 id = mrpact_negociations_lithuania.6 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_lithuania.3.b	#Ok
 		ai_chance = {
@@ -2719,6 +2751,7 @@ country_event = {
 			country_event = { hours = 2 id = mrpact_negociations_poland.2 }
 		}
 	}
+
 	option = {
 		name = mrpact_negociations_poland.1.b	#We want it
 		ai_chance = {
@@ -2757,6 +2790,11 @@ country_event = {
 
 	option = {
 		name = mrpact_negociations_poland.2.a	#Of course
+
+		ai_chance = {
+			factor = 100
+		}
+
 		GER = {
 			country_event = { hours = 1 id = mrpact_negociations_poland.4 }
 		}
@@ -4209,7 +4247,7 @@ country_event = { #British-Polish pact (POL POV)
 				set_country_flag = eng_pol_pact
 			}
 			set_global_flag = eng_pol_pact_global
-			news_event = { hours = 6 id = news.55 }
+			news_event = { hours = 6 id = pco_news.55 }
 		}
 	}
 	option = {

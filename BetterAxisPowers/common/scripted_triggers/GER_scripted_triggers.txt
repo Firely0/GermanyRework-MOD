@@ -165,6 +165,29 @@ is_controlled_by_GER_or_subject = {
 	}
 }
 
+is_controlled_by_ROOT_or_ally_with_fin = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_ally
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+				AND = {
+					tag = FIN
+					GER = {
+						has_country_flag = FIN_pact_for_continuation_war_flag
+					}
+					FIN = {
+						NOT = { has_war_with = GER }
+						has_country_flag = FIN_pact_for_continuation_war_flag
+					}
+				}
+			}
+		}
+	}
+}
+
 is_controlled_by_target_or_subject = {
 	CONTROLLER = {
 		OR = {

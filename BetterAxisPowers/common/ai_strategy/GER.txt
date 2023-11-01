@@ -2702,6 +2702,33 @@ GER_pause_in_SOV = { #We got this far but our home is under siege
 
 }
 
+GER_pause_in_SOV_v2 = { #We got this far but our home is under siege
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_war_with = SOV
+		has_idea = GER_War_Exhaustion
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		tag = SOV
+
+		ratio = 0.60
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+	}
+
+}
+
 GER_we_dont_believe_in_mountain_tanks = {
 	enable = { always = yes }
 
@@ -3216,6 +3243,48 @@ SOV_keep_peace_with_Germany = {
 	ai_strategy = {
 		type = ignore
 		id = "UKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore
+		id = "RMK"
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore
+		id = "RTK"
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore
+		id = "RKS"
+		value = 200
+	}
+}
+
+SOV_keep_peace_with_Germany_and_finland = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		FIN = {
+			is_in_faction_with = GER
+		}
+		has_global_flag = SOV_Keep_peace_with_GER
+	}
+
+	abort = {
+		OR ={
+			GER = { has_war_with = SOV }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = "FIN"
 		value = 200
 	}
 }

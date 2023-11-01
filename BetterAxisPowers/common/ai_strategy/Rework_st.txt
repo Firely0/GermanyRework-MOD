@@ -60,6 +60,7 @@ Italy_Naval_Prio = { # Keep Ships Safe V1
 		value = 600 # avoid doing missions as well
 	}
 }
+
 Italy_Naval_Prio = { # Keep Ships Safe V2
 	enable = {
 		tag = ITA
@@ -98,6 +99,7 @@ Italy_Naval_Prio = { # Keep Ships Safe V2
 		value = 600 # avoid doing missions as well
 	}
 }
+
 ITA_ETH_WAR_FRONT = {
 	allowed = {
 		tag = ITA
@@ -125,6 +127,7 @@ ITA_ETH_WAR_FRONT = {
 		value = 10
 	}
 }
+
 #SOV
 SOV_some_safer_places_to_build = {
 	allowed = { original_tag = SOV }
@@ -213,6 +216,7 @@ SOV_some_safer_places_to_build = {
 		value = 300
 	}
 }
+
 SOV_better_civ_plan = {
 	allowed = {
 		tag = SOV
@@ -229,6 +233,7 @@ SOV_better_civ_plan = {
 		value = 200
 	}
 }
+
 SOV_better_mil_plan = {
 	allowed = {
 		tag = SOV
@@ -249,6 +254,7 @@ SOV_better_mil_plan = {
 		value = 50
 	}
 }
+
 SOV_no_dockyards = {
 	allowed = {
 		tag = SOV
@@ -267,6 +273,7 @@ SOV_no_dockyards = {
 		value = -200
 	}
 }
+
 SOV_dockyards_useless_now_sov = {
 	allowed = {original_tag = SOV}
 	enable = {always = yes}
@@ -281,6 +288,7 @@ SOV_dockyards_useless_now_sov = {
 		value = -200
 	}
 }
+
 SOV_better_naval_invasions = {
 	allowed = {original_tag = SOV}
 	enable = {always = yes}
@@ -290,6 +298,7 @@ SOV_better_naval_invasions = {
 		value = -200
 	}
 }
+
 SOV_no_more_useless_divisions = {
 	allowed = {original_tag = SOV}
 	enable = {always = yes}
@@ -305,20 +314,38 @@ SOV_no_more_useless_divisions = {
 		value = -200
 	}
 }
+
 SOV_be_careful_pls  = {
 	allowed = {
 		original_tag = SOV
 	}
 	enable = {
-		has_war_with = GER
-		num_divisions < 220
-	}
-	abort = {
-		OR = {
-			num_divisions > 220
-			NOT = {has_war_with = GER}
+		SOV = {
+			NOT = { has_completed_focus = SOV_lessons_of_war }
+		}
+		GER = {
+			OR = {
+				has_idea = GER_barbarossa
+				has_idea = GER_barbarossa_war
+			}
+			
 		}
 	}
+
+	abort = {
+		GER = {
+			has_idea = GER_War_Exhaustion
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		value = 2
+		id = 195
+	}
+
 	ai_strategy = {
 		type = front_control
 		tag = GER
@@ -328,4 +355,51 @@ SOV_be_careful_pls  = {
 		execution_type = careful
 	}
 
+	ai_strategy = {
+		type = front_unit_request
+		tag = GER
+		value = 100
+	}
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -10
+	}
+
 }
+
+SOV_test_german_army = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	GER = {
+		has_idea = GER_War_Exhaustion
+	}
+
+	abort = {
+		NOT = {
+			GER = {
+				has_idea = GER_War_Exhaustion
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GER
+		ratio = 0.6
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = GER
+		value = 100
+	}
+}
+

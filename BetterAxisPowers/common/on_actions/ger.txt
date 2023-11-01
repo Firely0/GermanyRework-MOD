@@ -31,9 +31,6 @@ on_actions = {
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
-					GER = {
-						is_ai = yes
-					}
 				}
 				GER = {
 					create_equipment_variant = {
@@ -589,6 +586,10 @@ on_actions = {
 						}
 						set_country_flag = GER_SOV_PUPPET_COUNTRY
 					}
+					SOV = {
+						add_ideas = SOV_Great_Patriotic_War
+					}
+					
 					if = {
 						limit = {
 							GER = {
@@ -609,7 +610,6 @@ on_actions = {
 							activate_mission = GER_conquer_Kiev
 							activate_mission = GER_conquer_Stalingrad
 							activate_mission = GER_conquer_Sevastopol
-							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 					if = {
@@ -632,7 +632,6 @@ on_actions = {
 							activate_mission = GER_conquer_Stalingrad
 							activate_mission = GER_conquer_Kiev
 							activate_mission = GER_conquer_Sevastopol
-							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 					else = {
@@ -650,7 +649,6 @@ on_actions = {
 							activate_mission = GER_conquer_Stalingrad
 							activate_mission = GER_conquer_Kiev
 							activate_mission = GER_conquer_Sevastopol
-							activate_mission = GER_end_of_operation_barbarossa
 						}
 					}
 				}

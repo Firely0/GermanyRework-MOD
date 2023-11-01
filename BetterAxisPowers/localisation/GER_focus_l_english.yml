@@ -8,6 +8,11 @@
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF_DESC:0 ""
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON:0 "Expert Config - Enabled"
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_ON_DESC:0 ""
+ GERMANY_REWORK_TEST_SOVIET_AI:0 "Germany Rework - Soviet Test AI Config"
+ RULE_OPTION_GERMANY_REWORK_TEST_SOVIET_AI_OFF:0 "Expert Config - Disabled"
+ RULE_OPTION_GERMANY_REWORK_TEST_SOVIET_AI_OFF_DESC:0 ""
+ RULE_OPTION_GERMANY_REWORK_TEST_SOVIET_AI_ON:0 "Expert Config - Enabled"
+ RULE_OPTION_GERMANY_REWORK_TEST_SOVIET_AI_ON_DESC:0 ""
  GERMANY_REWORK_GER_NAVY:0 "Germany Rework - German Naval Focus"
  RULE_OPTION_GERMANY_REWORK_GER_NAVY_OFF:0 "Off"
  RULE_OPTION_GERMANY_REWORK_GER_NAVY_OFF_DESC:0 ""
@@ -117,7 +122,6 @@
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
  GER_conquer_Kiev:0 "Canquer Kiev"
  GER_conquer_Sevastopol:0 "Canquer Sevastopol"
- GER_end_of_operation_barbarossa:0 "End of Operation Barbarossa"
 
  GER_Operation_Barbarossa_High_Command:0 "Operation Barbarossa - High Command"
  GER_Operation_Barbarossa_High_Command_desc:0 "After the start of the largest military operation in history, the German High Command is in charge of master planning, and the decisions taken here affect the tasks that commanders can perform."
@@ -258,6 +262,10 @@
  german_rapid_mobilization_spirit_desc:0 ""
  
  #Ideas
+ GER_War_Exhaustion:0 "War Exhaustion"
+ GER_War_Exhaustion_desc:0 "After our plan to quickly seize strategic locations against the Soviet Union did not pay off, our exhausted army will have to recover over a period of time.The effects are permanent if the Surrender Limit exceeds §R15%§! or the War Support is below §R50%§!."
+ SOV_Great_Patriotic_War:0 "Great Patriotic War"
+ SOV_Great_Patriotic_War_desc:0 ""
  GER_focus_on_air:0 "Focus on Fighter Production"
  GER_focus_on_air_desc:0 ""
  GER_focus_on_tanks:0 "Focus on Tank Production"
@@ -554,6 +562,7 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ GER_ENG_CIVIL_WAR_START:0 "A Pro-German Government Takes Over Britain"
  GER_progress_chanced_by_luck:0 "\nThe ship will be taken out of the sea and put into repair and development operations. The repair time for the ship to be put back into service will vary depending on the condition of the ship."
  Ernest_Cox_Fired:0 "Ernest Cox Hired"
  Disabled_for_rework_or_else:0 "Disabled for Rework or Bugfix"

@@ -1351,19 +1351,31 @@ GER_Vichy_state_modifier_remove = {
 GER_SOV_white_peace_check = {
 	if = {
 		limit = {
-			has_global_flag = GER_SOV_WHITE_PEACE_1 #We Should Check for White Peace
+			every_state = {
+				limit = {
+					OR = {
+						has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+						has_state_flag = mr_pact_sov_reserved_state
+					}
+					OR = {
+						is_controlled_by = GER
+						is_controlled_by = SOV
+					}
+				}
+				transfer_state = SOV
+			}
+		}
+	}
+	if = {
+		limit = {
 			POL = {
 				has_capitulated = yes
 				has_war_with = SOV #Cap but Keep Fighting with SOV.
 			}
 		}
 		SOV = { white_peace = POL }
-		clr_global_flag = GER_SOV_WHITE_PEACE_1
 	}
-	if = {
-		limit = { 784 = { has_state_flag = mr_pact_sov_reserved_state NOT = { is_controlled_by = SOV } } }
-		transfer_state_to = SOV
-	}
+	clr_global_flag = GER_SOV_WHITE_PEACE_1 # End of Checks 
 }
 
 GER_AUS_annex = {

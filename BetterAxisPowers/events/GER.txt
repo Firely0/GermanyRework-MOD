@@ -173,12 +173,14 @@ country_event = {
 
 country_event = {
 	id = ger_lost_core.1
-	title = "Fuhrer Worried About Lost Lands "
-	desc = ""
+	title = "Germany Fallen to the Enemy"
+	desc = "According to the latest information from the Wehrmacht, [FROM.GetName] Army Begin Occupation of German Territories. Upon learning this information, Adolf Hitler had a nervous breakdown and immediately ordered the recapture of the lost territory."
 	picture = GFX_report_event_generic_soldiers_surrendering
 	is_triggered_only = yes
+
 	option = {
-		name = "We Will Together Again Soon..."
+		name = "We Will Together Again Soon.."
+
 		GER_bop_medium_decrease_effect = yes
 		GER_bop_increase_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
@@ -188,12 +190,14 @@ country_event = {
 country_event = {
 	id = ger_lost_core.2
 	title = "We Have Recaptured Germany"
-	desc = ""
+	desc = "According to the latest information from the Wehrmacht, Lost Territories has been Recaptured by Wehrmacht. "
 	picture = GFX_report_event_german_troops
 	is_triggered_only = yes
 	fire_only_once = yes
+
 	option = {
 		name = BBA_italy_bop.3.a
+		
 		GER_bop_medium_increase_effect = yes
 		GER_bop_decrease_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_reclaiming_cores_tt
@@ -2416,7 +2420,6 @@ country_event = {
 
 		set_country_flag = GER_SOV_Demanded
 		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
-
 	}
 
 	option = { #Japan
@@ -2844,9 +2847,14 @@ country_event = {
 	desc = "Our Soldiers Have Seen German Soldiers in the Rhineland and are Standing for Possible Intervention."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+
 	option = {
 		ai_chance = {
-			factor = 100
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
 		}
 		name = "Not a Significant Problem."
 
@@ -2855,7 +2863,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			factor = 0
+			factor = 50
 		}
 		name = "The British Should Be Aware Of This Situation"
 
@@ -2878,7 +2886,12 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			factor = 0
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				FRA = { is_ai = no }
+				factor = 100
+			}
 		}
 		name = "To Keep the Peace, We Must Prepare for Possible War."
 
@@ -2893,8 +2906,14 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			factor = 100
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				FRA = { is_ai = yes }
+				factor = 100
+			}
 		}
+
 		name = "Not a Significant Problem."
 
 		add_stability = 0.05
@@ -3116,9 +3135,11 @@ country_event = { #Event For France
 		ai_chance = {
 			factor = 0
 		}
+
 		trigger = {
 			NOT = { has_global_flag = FRA_RHINELAND_CUT_TRADE }
 		}
+
 		add_stability = 0.05
 		add_political_power = -5
 		send_embargo = GER
@@ -3127,6 +3148,7 @@ country_event = { #Event For France
 			modifier = protest_action
 		}
 		set_global_flag = FRA_RHINELAND_CUT_TRADE
+
 		if = {
 			limit = {
 				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
@@ -3291,7 +3313,7 @@ country_event = { #Event For France / Not Diplo Side
 		trigger = {
 			has_global_flag = GER_FRA_ENG_ENG_SAID_NO
 		}
-		GER = { country_event = { id = GER_rhineland_remind_ger.7 hours = 6 } }
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -3307,6 +3329,9 @@ country_event = { #Event For France / Not Diplo Side
 				is_historical_focus_on = yes
 			}
 		}
+
+		GER = { country_event = { id = GER_rhineland_remind_ger.7 hours = 6 } }
+
 		if = {
 			limit = {
 				has_idea = FRA_disjointed_government
@@ -3337,10 +3362,12 @@ country_event = { #Event For France / Not Diplo Side
 
 	option = { # This means war!
 		name = germany.60.a
+
 		trigger = {
 			NOT = { has_global_flag = ISO_GER_Y }
 			NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
 		}
+
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -3357,6 +3384,7 @@ country_event = { #Event For France / Not Diplo Side
 				is_historical_focus_on = yes
 			}
 		}
+
 		add_political_power = -150
 		add_stability = -0.1
 		if = {
@@ -3745,6 +3773,7 @@ country_event = {
 			limit = {
 				has_government = democratic
 			}
+
 			add_stability = 0.05
 			add_political_power = -5
 			send_embargo = GER
@@ -3758,6 +3787,7 @@ country_event = {
 			limit = {
 				NOT = { has_government = democratic }
 			}
+
 			send_embargo = GER
 			add_opinion_modifier = {
 				target = GER
@@ -3833,11 +3863,12 @@ country_event = { #Event For Germany Embargo But Good News.
 	picture = GFX_report_event_german_troops_march_rhineland
 	is_triggered_only = yes
 
-	option = { #Historical
+	option = {
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
+
 		hidden_effect = {
 			complete_national_focus = GER_rhineland_ab
 			country_event = { hours = 6 id = news.25 }
@@ -3857,6 +3888,7 @@ country_event = { #Event For Germany Isolated But Good News.
 		ai_chance = {
 			factor = 100
 		}
+
 		hidden_effect = {
 			complete_national_focus = GER_rhineland_ab
 			country_event = { hours = 6 id = news.25 }
@@ -3876,6 +3908,7 @@ country_event = { #Event For Germany Secerutiy of Benelux But Good News.
 		ai_chance = {
 			factor = 100
 		}
+
 		hidden_effect = {
 			complete_national_focus = GER_rhineland_ab
 			country_event = { hours = 6 id = news.25 }
@@ -3924,10 +3957,12 @@ country_event = { #Event For UK - Ultimatum Not Aceppted.
 		ai_chance = {
 			factor = 100
 		}
+
 		declare_war_on = {
 			target = GER
 			type = puppet_wargoal_focus
 		}
+
 		FRA = {
 			declare_war_on = {
 				target = GER
@@ -3935,6 +3970,7 @@ country_event = { #Event For UK - Ultimatum Not Aceppted.
 			}
 		}
 		add_to_faction = FRA
+
 		hidden_effect = {
 			GER = { country_event = { id = news.26 hours = 6 } }
 		}
@@ -5221,6 +5257,14 @@ country_event = {
 			activate_mission = Adolf_Hitler_Yearly_Check_ups
 		}
 
+		trigger = {
+			check_variable = { theodor_morell < 4 }
+			power_balance_value = {
+				id = GER_power_balance
+				value > -0.01
+			}
+		}
+
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -5244,13 +5288,6 @@ country_event = {
 			}
 		}
 
-		trigger = {
-			check_variable = { theodor_morell < 4 }
-			power_balance_value = {
-				id = GER_power_balance
-				value > -0.01
-			}
-		}
 	}
 
 	option = {
@@ -5263,7 +5300,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { best_doctors = 1 }
 			subtract_from_variable = { theodor_morell = 2 }
-			activate_mission = Adolf_Hitler_Yearly_Check_ups
 		}
 
 		trigger = {
@@ -5324,6 +5360,7 @@ country_event = {
 
 		hidden_effect = {
 			add_to_variable = { adolf_hitler_rest = 1 }
+			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
 		}
 
 		trigger = {
@@ -5550,7 +5587,7 @@ country_event = { # Things Gone Good
 country_event = {
 	id = GER_Ernest_Cox.1
 	title = "Ernest Cox Offers Ship?"
-	desc = "Ernest Cox, who came to Germany after our job offer, suggested that the SMS Moltke, which had previously served in our Navy, be refitted and put back into service. Although it is outdated for its former role, it can be refitted and used as a Light Carrier"
+	desc = "Ernest Cox, who came to Germany after our job offer, suggested that the SMS Moltke, which had previously served in our Navy, be refitted and put back into service."
 	picture = GFX_report_event_merchant_ship_01
 
 	is_triggered_only = yes
@@ -5563,25 +5600,30 @@ country_event = {
 		}
 		
 		create_equipment_variant = {
-			name = "Moltke"
-			type = ship_hull_carrier_conversion_ca
-			name_group = GER_CV_IMPERIAL
+			name = "Moltke Class"
+			type = ship_hull_cruiser_1
+			name_group = GER_CA_IMPERIAL
 			parent_version = 0
 			allow_without_tech = yes
+			obsolete = yes
 			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_battery_slot = ship_light_battery_1
 				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = ship_torpedo_1
+				rear_1_custom_slot = ship_light_battery_2
 			}
 		}
 		add_equipment_production = {
 			equipment = {
-				type = ship_hull_carrier_conversion_ca
+				type = ship_hull_cruiser_1
 				creator = "GER"
-				version_name = "Moltke"
+				version_name = "Moltke Class"
 			}
 			requested_factories = 1
 			progress = 0.2

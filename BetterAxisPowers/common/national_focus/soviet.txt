@@ -4873,7 +4873,6 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_full_control_of_state = 219 #MOSCOW
 			has_equipment = { train_equipment > 119 } #20 trains per factory
 			OR = {
 				threat > 0.85
@@ -5075,9 +5074,8 @@ focus_tree = {
 	focus = {
 		id = SOV_the_road_of_life
 		icon = GFX_focus_SOV_the_road_of_life
-		prerequisite = { focus = SOV_leningrad_polytechnical_institute }
-		prerequisite = { focus = SOV_move_industry_to_the_urals }
-		x = 1
+		prerequisite = { focus = SOV_the_defense_of_moscow focus = SOV_defense_of_leningrad focus = SOV_defense_of_stalingrad }
+		x = 3
 		y = 1
 		relative_position_id = SOV_leningrad_polytechnical_institute
 		cost = 5
@@ -5134,7 +5132,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_the_molotov_line
-		icon = GFX_goal_fortify_the_westwall
+		icon = GFX_goal_r56_goal_generic_fortification
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = -1
 		y = 1
@@ -5374,6 +5372,25 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_arms_purchases
+		icon = GFX_goal_Goal_USA_arsenal_of_democracy
+		prerequisite = { focus = SOV_military_engineering_university }
+		x = 3
+		y = 1
+		relative_position_id = SOV_military_engineering_university
+		cost = 2
+
+		available = {
+			any_enemy_country = {
+				SOV_is_major_not_original_sov = yes
+			}
+		}
+		
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = SOV_improve_the_stalin_line
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = SOV_military_engineering_university }
@@ -5538,6 +5555,12 @@ focus_tree = {
 				}
 			}
 		}
+
+		bypass = {
+			219 = {
+				NOT = { is_controlled_by = ROOT } 
+			}
+		}
 		
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
@@ -5651,17 +5674,120 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_move_capital_to_sverdlovsk
+		icon = GFX_goal_r56_goal_generic_plan
+		prerequisite = { focus = SOV_move_industry_to_the_urals }
+		prerequisite = { focus = SOV_the_defense_of_moscow  }
+		x = 0
+		y = 1
+
+		relative_position_id = SOV_the_defense_of_moscow
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				NOT = { has_war_with = GER }
+			}
+		}
+
+		available = {
+			SOV = { surrender_progress > 0.4 }
+			219 = {
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+			653 = {
+				is_owned_and_controlled_by = SOV
+			}
+		}
+
+		completion_reward = {
+			army_experience = 10
+			custom_effect_tooltip = SOV_move_capital_to_sverdlovsk_effect
+			add_victory_points = {
+				province = 1821
+				value = 15    
+			}			
+			hidden_effect = {
+				set_capital = { state = 653 }				
+				653 = {
+					add_building_construction = {	#new supply source, so they don't struggle
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 1821
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10133
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 12567
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 9553
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 307
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 4
+					set_state_flag = SOV_capital_moved_1
+				}
+			}
+			hidden_effect = { #Soviet AI bailout
+				if = {
+					limit = {
+						difficulty > 1
+						SOV = {
+							is_ai = yes
+						}
+						GER = {
+							is_ai = yes
+						}
+					}
+					add_offsite_building = {
+						type = arms_factory level = 3
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2000
+						producer = SOV
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
 		id = SOV_impregnable_forts
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = SOV_improve_the_stalin_line focus = SOV_the_molotov_line }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SOV_improve_the_stalin_line
 		cost = 10
 
 		available = {
 			OR = {
-				has_full_control_of_state = 195 #LENINGRAD
 				has_full_control_of_state = 208 #LUGA
 				has_full_control_of_state = 137 #CRIMEA
 			}
@@ -5670,37 +5796,6 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_full_control_of_state = 195 #LENINGRAD
-				}
-				195 = { #LENINGRAD
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = {
-							id = 3151
-							id = 6174
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = {
-							id = 3151
-							id = 6174
-						}
-						instant_build = yes
-					}
-					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
-				}
-			}
 			if = {
 				limit = {
 					has_full_control_of_state = 208 #LUGA
@@ -5756,10 +5851,107 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_defense_of_stalingrad
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SOV_impregnable_forts }
+		available = {
+			217 = {
+				is_controlled_by = ROOT
+				OR = {
+					SOV = { surrender_progress > 0.15 }
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+			}
+		}
+		bypass = {
+			NOT = { 217 = { is_owned_and_controlled_by = ROOT } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_impregnable_forts
+		cost = 5
+		ai_will_do = {
+			factor = 4 #high importance
+			modifier = {
+				217 = {
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+				factor = 3 #more natural barriers
+			}
+		}
+
+		completion_reward = {
+			217 = {
+				custom_effect_tooltip = SOV_defense_of_stalingrad_forts	
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9501
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3555
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11484
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11474
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 498
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6527
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9504
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3529
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = SOV_protect_the_white_sea_baltic_canal
 		icon = GFX_focus_generic_provoke_border_clashes
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 2
+		prerequisite = { focus = SOV_improve_the_stalin_line focus = SOV_the_molotov_line }
+		x = 0
 		y = 2
 		relative_position_id = SOV_military_engineering_university
 		cost = 5
@@ -5871,11 +6063,91 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_defense_of_leningrad
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = SOV_protect_the_white_sea_baltic_canal }
+		available = {
+			195 = {
+				is_controlled_by = ROOT
+				OR = {
+					SOV = { surrender_progress > 0.15 }
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+			}
+		}
+		bypass = {
+			NOT = { 195 = { is_owned_and_controlled_by = ROOT } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = SOV_protect_the_white_sea_baltic_canal
+		cost = 5
+		ai_will_do = {
+			factor = 3 #slightly lower importance
+			modifier = {
+				195 = {
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+				factor = 4 #but less barriers
+			}
+		}
+
+		completion_reward = {
+			195 = {
+				custom_effect_tooltip = SOV_defense_of_leningrad_forts
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6174
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 79
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11068
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 149
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3151
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
 		id = SOV_far_east_fortification
 		icon = GFX_goal_fortify_the_westwall
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 3
-		y = 1
+		prerequisite = { focus = SOV_move_industry_to_the_urals }
+		prerequisite = { focus = SOV_move_capital_to_sverdlovsk }
+		x = -3
+		y = 4
 		relative_position_id = SOV_military_engineering_university
 		cost = 10
 

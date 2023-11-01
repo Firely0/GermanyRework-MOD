@@ -159,6 +159,7 @@ German_historical = {
 		infantry_tech = 15.0
 		artillery = 8.0
 		support_tech = 6.5
+		excavation_tech = -100.0
 	}
 
 	ideas = {
@@ -242,7 +243,9 @@ German_fuhrer_death_historical = {
 		GER_Case_Black
 		GER_expand_local_resources
 		GER_militarism_him
-		# grab as fast as you can if available
+
+		#
+
 		GER_Total_War
 		GER_Panther
 		GER_Anti_Tank

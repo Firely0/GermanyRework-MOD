@@ -1,0 +1,161 @@
+SOV_expert_historical_plan  = {
+	name = "SOV Expert plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SOV
+	}
+	
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = GERMANY_REWORK_Soviet_TEST
+					option = GERMANY_REWORK_TEST_SOVIET_AI_ON
+				}
+			}
+		}
+	}
+
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#Things to do ASAP
+		SOV_desperate_measures #35 (DO THIS ASAP)
+		SOV_lessons_of_war
+		SOV_move_capital_to_sverdlovsk
+		SOV_the_road_of_life
+		SOV_recover_the_kuril_islands
+
+		#1936
+		SOV_heavy_industry #35
+		SOV_the_path_of_marxism_leninism #35
+		SOV_the_centre #35
+		SOV_the_stalin_constitution # -> Dec 1936
+		SOV_the_zinovyevite_terrorist_center #35 -> Mid 1936
+		SOV_the_comintern
+		SOV_send_military_advisors_to_spain
+		SOV_infrastructure_effort_nsb #35
+		SOV_addressing_internal_affairs #35 -> 1936/1939	
+		SOV_the_new_soviet_woman #35 -> Dec 1936
+
+		#1937
+		SOV_the_anti_soviet_trotskyist_center #35 -> Early 1937
+		SOV_expand_the_agitprop #35
+		SOV_the_workers_dictatorship
+		SOV_found_the_pcdi
+		SOV_pc_of_mechanical_engineering #35 -> Aug 1937
+		SOV_strengthen_the_mobilization_plan #35
+		SOV_the_military_conspiracy #35 -> Mid 1937
+		SOV_finish_the_five_year_plan # -> Dec 1937
+
+		#1938
+		SOV_socialism_in_one_country #35
+		SOV_third_five_year_plan # -> 1938
+		SOV_the_bloc_of_rights_and_trotskyites #35 -> Early 1938
+		SOV_positive_heroism #35
+		SOV_the_komsomol #35
+		SOV_national_specialists #35
+		SOV_eastern_development #35
+		SOV_cohesion_first #35
+		SOV_found_the_pcdi #35
+
+		#1939
+		SOV_revive_the_stakhanovite_movement #35
+		SOV_develop_the_urals #35
+		SOV_the_ussr_academy_of_sciences
+		SOV_baltic_security #35 -> 1939
+		SOV_war_heroes # 35 -> May 1939
+		SOV_claims_in_baltic # -> 1940
+		SOV_secure_leningrad
+		SOV_military_engineering_university #35
+		SOV_behead_the_snake #35
+		#1940
+		SOV_nkvd_primacy #35 -> Feb 1940
+		SOV_claims_on_poland
+		SOV_secure_the_administration #35 -> May 1940 (raid)
+		SOV_the_collectivization_process #35
+		SOV_demand_eastern_poland # (IN CASE NO MOLOTOV-RIBENTROP)
+		SOV_claim_on_bessarabia # -> Jul 1940
+		
+		SOV_shift_to_armaments_production # -> Do this ASAP after dealing with claims 
+
+		#1941
+		SOV_optimize_production_lines
+		SOV_increase_state_reserves #35
+		SOV_rehabilitated_military
+		SOV_military_reorganization
+		SOV_the_defense_of_moscow #35
+		SOV_transpolar_flights #35 -> 1937
+		SOV_foster_flying_clubs #		1942
+		SOV_women_in_aviation 
+		SOV_pc_of_mortar_armament # -> Nov 1941
+		
+		#1942
+		SOV_the_means_to_wage_war
+		SOV_leningrad_polytechnical_institute
+		SOV_lessons_of_war #35
+		SOV_organization_of_the_partisans #35
+		SOV_swap_to_political_advisors #35 -> Aug 1941
+		SOV_experts_in_camouflage # -> 1942/43 (Oct 41 formation)
+		SOV_penal_battalions #35 -> 1942+
+
+		#1943 -----------> -0.5y (Compensated by the ASAP stuff)
+		SOV_the_road_of_life #35
+		SOV_stalins_cult_of_personality
+		SOV_smersh
+		SOV_barrier_troops #35
+		SOV_organization_centralization_discipline
+		SOV_arms_purchases
+		SOV_development_of_tankograd #35
+
+		#1944
+		SOV_soviet_artillery
+		SOV_merge_tank_and_materiel_plants
+		SOV_expand_the_aircraft_industry #35
+		SOV_modernize_aircraft_facilities
+		SOV_increase_aircraft_production #35
+		SOV_development_aid_for_eastern_allies #35
+		SOV_ground_support #35
+		
+		#1945
+		SOV_the_modern_war_in_the_skies #35
+		SOV_inheritor_of_the_mantle_of_lenin
+		SOV_brilliant_genius
+		SOV_leader_of_the_party_and_the_people
+		SOV_great_commander
+		SOV_father_of_nations
+		SOV_freedom_of_debate_unity_of_action
+		SOV_the_construction_of_communism
+		SOV_annex_tannu_tuva #35 -> Nov 1944
+		SOV_soviet_atomic_bomb_project
+	}
+
+	research = {
+		excavation_tech = -100.0
+		computing_tech = -100.0
+		synth_resources = -100.0
+	}
+
+	ideas = {
+		meticulous_preparation_spirit = 50
+		proper_heritage_spirit = 50
+		static_warfare_spirit = 50
+		branch_independence_spirit = 50
+		centralized_control_spirit = 50
+		mikhail_kalinin = 500
+	}
+	traits = {
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

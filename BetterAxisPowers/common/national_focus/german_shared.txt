@@ -2272,7 +2272,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = GER_grosraumwirtschaft_a
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -2389,7 +2389,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = GER_grosraumwirtschaft_a
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -4756,7 +4756,7 @@ shared_focus = {
 	#mutually_exclusive = { focus = GER_Anti_Tank }
 	x = 0
 	y = 5
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -5126,7 +5126,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_better_supply
-	icon = GFX_focus_generic_truck
+	icon = GFX_focus_generic_supply_line
 	prerequisite = { focus = GER_Battle_Plan }
 	relative_position_id = GER_army_innovation_a
 	x = 5
