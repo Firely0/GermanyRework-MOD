@@ -46,17 +46,6 @@ ideas = {
 			}
 
 			on_remove = {
-				if = {
-					limit = {
-						SOV = {
-							controls_state = 96
-						}
-					}
-					SOV = {
-						transfer_state = 96
-					}
-				}
-				GER_SOV_white_peace_check = yes # JUST IN CASE
 			}
 
 			picture = PolandArmyProblems

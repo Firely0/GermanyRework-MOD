@@ -2,7 +2,7 @@
 #### GERMANY ####
 #################
 
-health_of_adolf_category = {
+GER_last_stand_of_germany = {
 
 	icon = GFX_decision_generic_intelligence_operation
 	picture = GFX_decision_TheodorMorell
@@ -12,6 +12,23 @@ health_of_adolf_category = {
 	}
 	
 	priority = 100
+
+	visible_when_empty = no
+	
+	visible = {
+	}
+}
+
+health_of_adolf_category = {
+
+	icon = GFX_decision_generic_intelligence_operation
+	picture = GFX_decision_TheodorMorell
+
+	allowed = {
+		original_tag = GER
+	}
+	
+	priority = 98
 
 	visible_when_empty = no
 	

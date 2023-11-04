@@ -587,6 +587,7 @@ SOV_Development_and_Deployment = {
 				name = "T-34-85"
 				type = medium_tank_chassis_2
 				parent_version = 0
+				design_team = mio:SOV_morozov_design_bureau_organization
 				allow_without_tech = yes
 				modules = {
 					main_armament_slot = tank_medium_cannon_2

@@ -1279,7 +1279,6 @@ focus_tree = {
 						is_ai = yes
 					}
 					add_timed_idea = { idea = Operation_Weserubung_AI days = 160 }
-					GER_AI_EQ = yes
 				}
 				if = {
 					limit = {
@@ -4874,6 +4873,7 @@ focus_tree = {
 				name = "Me 262"
 				type = small_plane_airframe_4
 				parent_version = 0
+				design_team = GER_messerschmitt_organization
 				allow_without_tech = yes
 				modules = {
 						fixed_main_weapon_slot = heavy_mg_4x
@@ -11508,17 +11508,6 @@ focus = {
 				}
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_opinion_modifier = {
-						target = SOV
-						modifier = AI_SOV_WAR
-					}
-					GER_AI_DIV = yes
-					GER_AI_EQ = yes
-				}
 				SOV = {
 					add_opinion_modifier = {
 						target = ROOT

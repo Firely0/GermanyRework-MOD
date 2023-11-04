@@ -201,6 +201,8 @@ leader_traits = {
 	dictator_pp = {
 		random = no
 		political_power_gain = 0.15
+		communism_acceptance = -25
+		democratic_acceptance = -25
 		weekly_casualties_war_support = 0.001
 
 		ai_will_do = {
@@ -220,6 +222,8 @@ leader_traits = {
 	dictator_pp_v1 = {
 		random = no
 		political_power_gain = 0.15
+		communism_acceptance = -25
+		democratic_acceptance = -25
 		weekly_casualties_war_support = 0.001
 		weekly_convoys_war_support = 0.001
 		weekly_bombing_war_support = 0.001
@@ -239,6 +243,12 @@ leader_traits = {
 		}
 	}
 
+	Army_Interference = {
+		random = no
+		command_power_gain_mult = -0.15
+		max_planning_factor = -0.1
+	}
+	
 	ReDrawBorders = {
 		random = no
 		puppet_cost_factor = -0.1
@@ -314,7 +324,7 @@ leader_traits = {
 		sprite = 13
 
 		stability_factor = 0.1
-		consumer_goods_factor = -0.09
+		consumer_goods_factor = -0.1
 
 		ai_will_do = {
 			factor = 1
@@ -352,22 +362,6 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 1
-		}
-	}
-
-	blitzkrieg_theorist_ger = {
-		sprite = 14
-
-		equipment_bonus = {
-			armor = {
-				instant = yes
-				maximum_speed = 0.10
-			}
-		}
-		cat_mobile_warfare_cost_factor = -0.15
-
-		ai_will_do = {
-			factor = 500
 		}
 	}
 

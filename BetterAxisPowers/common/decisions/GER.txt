@@ -172,6 +172,73 @@ operations = {
 	}
 }
 
+GER_last_stand_of_germany = {
+	GER_hold_berlin = {
+
+		icon = GFX_decision_ger_berlin
+
+		allowed = {
+			original_tag = GER
+		}
+
+		#Fail trigger
+		available = {
+			NOT = { controls_state = 64 }
+		}
+
+		cancel_trigger = {
+		}
+
+		cancel_effect = {
+		}
+
+		days_mission_timeout = 180
+
+		fire_only_once = yes
+
+		is_good = no
+
+		activation = {
+			has_war = yes
+			has_civil_war = no
+			64 = {
+				is_controlled_by = ROOT
+				OR = {
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = ROOT
+						}
+						OWNER = { tag = ROOT }
+					}
+					NOT = { is_fully_controlled_by = ROOT }
+				}
+			}
+		}
+
+		#Success
+		timeout_effect = {
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+
+		#Fail
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = GER_adolf_hitler
+						ruling_only = yes
+					}
+				}
+				country_event = GER_health_adolf.3
+			}
+			else = {
+				add_war_support = -0.1
+			}
+		}
+	}
+}
+
 GER_Rhineland_demilitarized = {
 
 	GER_Rhineland_demilitarized_a = {
@@ -349,13 +416,9 @@ GER_Rhineland_demilitarized = {
 		}
 
 		complete_effect = {
-			army_experience = 5
-			if = {
-				limit = { FRA = { is_subject = no } }
-				FRA = {
-					country_event = { id = GER_rhineland_n.1 hours = 3 }
-					custom_effect_tooltip = may_provoke_hostility
-				}
+			FRA = {
+				country_event = { id = GER_rhineland_n.1 hours = 3 }
+				custom_effect_tooltip = may_provoke_hostility
 			}
 		}
 	}
@@ -1390,74 +1453,6 @@ GER_training_program = {
 }
 
 GER_Volkssturm_category = {
-
-	GER_hold_berlin = {
-
-		icon = GFX_decision_ger_berlin
-
-		allowed = {
-			original_tag = GER
-		}
-
-		#Fail trigger
-		available = {
-			NOT = { controls_state = 64 }
-		}
-
-		cancel_trigger = {
-			NOT = {
-				has_country_leader = {
-					character = GER_adolf_hitler
-					ruling_only = yes
-				}
-			}
-		}
-
-		cancel_effect = {
-
-		}
-
-		days_mission_timeout = 180
-
-		fire_only_once = yes
-
-		is_good = no
-
-		activation = {
-			has_country_leader = {
-				character = GER_adolf_hitler
-				ruling_only = yes
-			}
-			NOT = {
-				has_country_flag = GER_Kaiser_in_Country
-			}
-			has_war = yes
-			has_civil_war = no
-			64 = {
-				is_controlled_by = ROOT
-				OR = {
-					any_neighbor_state = {
-						CONTROLLER = {
-							has_war_with = ROOT
-						}
-						OWNER = { tag = ROOT }
-					}
-					NOT = { is_fully_controlled_by = ROOT }
-				}
-			}
-		}
-
-		#Success
-		timeout_effect = {
-			add_stability = 0.05
-			add_war_support = 0.05
-		}
-
-		#Fail
-		complete_effect = {
-			country_event = GER_health_adolf.3
-		}
-	}
 
 	GER_raise_volksstrum_units = {
 		priority = 10

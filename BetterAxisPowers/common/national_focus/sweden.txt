@@ -55,6 +55,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SWE_defense_act_tt
 			country_event = { id = AAT_Sweden.1 }
+			add_stability = 0.03
 		
 		}
 	}	
@@ -89,7 +90,7 @@ focus_tree = {
 		available = {
 			OR = {
 				threat > 0.1
-				has_war_support > 0.1
+				has_war_support > 0.08
 			}
 		}
 
@@ -424,6 +425,7 @@ focus_tree = {
 			every_military_industrial_organization = {
 				add_mio_funds = 300
 			}
+			add_war_support = 0.03
 			
 		}
 	}
@@ -434,7 +436,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_government_weapons_contract }
 		relative_position_id = SWE_government_weapons_contract
 		
@@ -444,7 +446,7 @@ focus_tree = {
 		}
 
 		available = {
-			arms_factory > 14
+			arms_factory > 9
 		}
 
 		bypass = {
@@ -1136,7 +1138,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_war_support = 0.1
-			add_stability = -0.05
+			add_stability = -0.06
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -1549,7 +1551,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SWE_deep_mining_complexes
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = industry
 			}
@@ -1660,7 +1662,7 @@ focus_tree = {
 			}
 
 			mio:SWE_husqvarna_organization = {
-				add_mio_funds = 1000
+				add_mio_size = 1
 			}
 		}
 	}
@@ -1671,7 +1673,7 @@ focus_tree = {
 		x = -8
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_government_weapons_contract }
 		relative_position_id = SWE_government_weapons_contract
 		
@@ -2873,7 +2875,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_bofors_fly_swatter }
 		relative_position_id = SWE_bofors_fly_swatter
 		
@@ -2986,7 +2988,7 @@ focus_tree = {
 				}
 			}
 			mio:SWE_saab_organization = {
-				add_mio_funds = 800
+				add_mio_size = 2
 				unlock_mio_trait_tooltip  = {
 					trait = SWE_mio_trait_forefront_of_aeroplane_development
 				}
@@ -3002,7 +3004,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_form_saab }
 		relative_position_id = SWE_form_saab
 		mutually_exclusive = { focus = SWE_foreign_designs }
@@ -3060,7 +3062,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_form_saab }
 		relative_position_id = SWE_form_saab
 		mutually_exclusive = { focus = SWE_domestic_designs }
@@ -3219,7 +3221,7 @@ focus_tree = {
 			}
 
 			mio:SWE_saab_organization = {
-				add_mio_funds = 500
+				add_mio_size = 1
 			}
 		}
 	}
@@ -3448,6 +3450,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_war_with = FIN }
 		}
 
 		bypass = {
@@ -3460,6 +3463,12 @@ focus_tree = {
 		search_filters = {  }
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
 			set_rule = { can_send_volunteers = yes }
 			if = {
 				limit = {
@@ -3479,25 +3488,33 @@ focus_tree = {
 				custom_effect_tooltip = SWE_swedes_not_sweden_to_finlands_aid_tt_2
 			}
 			
-			FIN = {
-				add_equipment_to_stockpile = { 
-					type = infantry_equipment_0
-					amount = 2000 
-					producer = PREV
+			if = {
+				limit = {
+					NOT = { FIN = { has_war_with = ROOT } }
 				}
 
-				add_equipment_to_stockpile = { 
-					type = anti_air_equipment_1
-					amount = 100 
-					producer = PREV
-				}
+				FIN = {
 
-				add_equipment_to_stockpile = { 
-					type = anti_tank_equipment_1
-					amount = 100 
-					producer = PREV
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = 2000 
+						producer = PREV
+					}
+
+					add_equipment_to_stockpile = { 
+						type = anti_air_equipment_1
+						amount = 100 
+						producer = PREV
+					}
+
+					add_equipment_to_stockpile = { 
+						type = anti_tank_equipment_1
+						amount = 100 
+						producer = PREV
+					}
 				}
 			}
+
 		}
 	}
 
@@ -4583,8 +4600,14 @@ focus_tree = {
 					}
 				}
 			}
-
-			unlock_decision_tooltip = SWE_pull_the_trigger_nor
+			if = {
+				limit = {
+					NOR = {
+						NOT = { has_completed_focus = NOR_a_resurgent_labor_movement }
+					}
+				}
+				unlock_decision_tooltip = SWE_pull_the_trigger_nor
+			}
 		}
 	}
 
@@ -4904,25 +4927,64 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_war_with = NOR
+			}
 			OR = {
 				144 = {
 					controller = { 
-						NOT = { tag = NOR }
-						has_war_with = NOR
+						OR = {
+							NOT = { original_tag = NOR }
+							AND = {
+								original_tag = NOR
+								OR = {
+									is_subject = yes
+									NOT = {
+										has_government = democratic
+										has_government = neutrality
+									}
+								}
+							}
+							
+						}
 					}
 				}
 
 				924 = {
 					controller = { 
-						NOT = { tag = NOR }
-						has_war_with = NOR
+						OR = {
+							NOT = { original_tag = NOR }
+							AND = {
+								original_tag = NOR
+								OR = {
+									is_subject = yes
+									NOT = {
+										has_government = democratic
+										has_government = neutrality
+									}
+								}
+							}
+							
+						}
 					}
 				}
 
 				925 = {
 					controller = { 
-						NOT = { tag = NOR }
-						has_war_with = NOR
+						OR = {
+							NOT = { original_tag = NOR }
+							AND = {
+								original_tag = NOR
+								OR = {
+									is_subject = yes
+									NOT = {
+										has_government = democratic
+										has_government = neutrality
+									}
+								}
+							}
+							
+						}
 					}
 				}
 
@@ -4940,13 +5002,66 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			144 = {
-				controller = {
-					set_country_flag = SWE_has_been_asked_about_narvik
-					country_event = { id = AAT_Sweden.13 hours = 2 }
+
+			#if = {
+			#	limit = {
+			#		NOR = { is_subject = yes }
+			#	}
+			#	if = {
+			#		limit = {
+			#			NOR = { is_ai = no }
+			#		}
+			#		NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } 
+			#	}
+			#	else = {
+			#		NOR = { OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 }  } }
+			#	}
+			#}
+
+
+
+			if = {
+				limit = {
+					144 = {
+						controller = {
+							NOT = {
+								original_tag = SWE
+							}
+						}
+					}
+				}
+
+				144 = {
+					controller = {
+						if = {
+							limit = { 
+								original_tag = NOR 
+								is_subject = no
+							}
+							 country_event = { id = AAT_Sweden.13 hours = 2 } 
+						}
+						else_if = {
+							limit = {
+								original_tag = NOR
+								is_subject = yes
+								is_ai = no
+								OVERLORD = { is_ai = yes }
+							}
+							controller = { country_event = { id = AAT_Sweden.13 hours = 2 } } 
+						}
+						else_if = {
+							limit = {
+								is_subject = yes
+								OVERLORD = { is_ai = no }
+							}
+							OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else = {
+							controller = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+					}
 				}
 			}
-
 
 			if = {
 				limit = {
@@ -4954,16 +5069,41 @@ focus_tree = {
 					 	controller = {
 					 		NOT = { 
 					 			controls_state = 144
-					 			tag = NOR
+					 			original_tag = SWE
 					 		}
 					 	}
 					 }
 				}
 
 				924 = { 
-					controller = { 
-						country_event = { id = AAT_Sweden.13 hours = 2 } 
-					} 
+					controller = {
+						if = {
+							limit = { 
+								original_tag = NOR 
+								is_subject = no
+							}
+							NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else_if = {
+							limit = {
+								original_tag = NOR
+								is_subject = yes
+								is_ai = no
+								OVERLORD = { is_ai = yes }
+							}
+							NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else_if = {
+							limit = {
+								is_subject = yes
+								OVERLORD = { is_ai = no }
+							}
+							OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else = {
+							controller = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+					}
 				}
 			}
 
@@ -4976,25 +5116,45 @@ focus_tree = {
 					 				controls_state = 144
 					 				controls_state = 924
 					 			}
-					 			tag = NOR
+					 			original_tag = SWE
 					 		}
 					 	}
 					 }
 				}
 				925 = { 
-					controller = { 
-						country_event = { id = AAT_Sweden.13 hours = 2 } 
-					} 
+					controller = {
+						if = {
+							limit = { 
+								original_tag = NOR 
+								is_subject = no
+							}
+							NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else_if = {
+							limit = {
+								original_tag = NOR
+								is_subject = yes
+								is_ai = no
+								OVERLORD = { is_ai = yes }
+							}
+							NOR = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else_if = {
+							limit = {
+								is_subject = yes
+								OVERLORD = { is_ai = no }
+							}
+							OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+						else = {
+							controller = { country_event = { id = AAT_Sweden.13 hours = 2 } }
+						}
+					}
 				}
 			}
 
-			if = {
-				limit = {
-					NOR = { is_subject = yes }
-				}
 
-				NOR = { OVERLORD = { country_event = { id = AAT_Sweden.13 hours = 2 }  } }
-			}
+							
 
 			custom_effect_tooltip = if_they_accept
 			effect_tooltip = {
@@ -5092,8 +5252,8 @@ focus_tree = {
 				limit = {
 					is_ai = no
 				}
-				has_war_support > 0.3
-				has_stability > 0.69
+				has_war_support > 0.24
+				has_stability > 0.6
 			}
 			else = {
 				has_war_support > 0.1
@@ -5237,7 +5397,7 @@ focus_tree = {
 		}
 
 		available = {
-			num_of_controlled_factories > 40
+			num_of_controlled_factories > 29
 			is_subject = no
 		}
 
@@ -5251,6 +5411,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
+			set_rule = { can_create_factions = yes }
 			set_cosmetic_tag = SWE_nordic_defense_council
 			retire_country_leader = yes
 			promote_character = {
@@ -5300,7 +5461,9 @@ focus_tree = {
 					}
 				}
 				ICE = { country_event = { id = AAT_Sweden_nordic_defense_council.1 hours = 3 } }
+
 			}
+
 
 			#unlock_decision_category_tooltip = SWE_coax_nordic_defense_council_cat
 			hidden_effect = {
@@ -5321,17 +5484,10 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 					add_ideas = SWE_nordic_centralized_army
-					transfer_units_fraction = {
-						target = ROOT         # the recipient
-						size = 1             # [0,1] Default value for the ratio below if they are not specified
-						stockpile_ratio = 1  # [0,1] Overrides size modifier for the stockpiled equipment and fuel
-						army_ratio = 1       # [0,1] Overrides size modifier for army
-						navy_ratio = 0      # [0,1] Overrides size modifier for navy
-						air_ratio = 0        # [0,1] Overrides size modifier for air
-					}
 				}
 			}
-			custom_effect_tooltip = SWE_central_nordic_army_command_tt
+
+			#custom_effect_tooltip = SWE_central_nordic_army_command_tt
 			show_ideas_tooltip = SWE_nordic_centralized_army
 			custom_effect_tooltip = SWE_central_nordic_army_command_tt_2
 		}
@@ -5562,6 +5718,7 @@ focus_tree = {
 					limit = { 
 						has_capitulated = no 
 						is_subject_of = ROOT
+						NOT = { original_tag = SWE }
 					}
 					transfer_units_fraction = {
 						target = ROOT         # the recipient
@@ -5643,7 +5800,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_centralized_military_aid }
 		relative_position_id = SWE_centralized_military_aid
 		
@@ -6007,7 +6164,7 @@ focus_tree = {
 
 			custom_effect_tooltip = SWE_decentralized_nordic_army_command_tt_2
 			effect_tooltip = {
-				remove_ideas =SWE_nordic_centralized_army
+				remove_ideas = SWE_nordic_centralized_army
 			}
 
 		}
@@ -6020,7 +6177,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		#mutually_exclusive = {focus = SWE_finlands_cause_is_ours}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_central_nordic_army_command }
 		relative_position_id = SWE_central_nordic_army_command
 		
@@ -6051,25 +6208,8 @@ focus_tree = {
 						has_capitulated = no 
 						is_subject_of = ROOT
 					}
-					add_manpower = 2000 
-					ROOT = { add_manpower = 2000 }
-					if = {
-						limit = {
-							NOT = { original_tag = SWE }
-							NOT = { has_idea = SWE_nordic_centralized_army }
-							has_autonomy_state = autonomy_aat_defense_council_member
-						}
-						add_ideas = SWE_nordic_centralized_army
-					}
-					transfer_units_fraction = {
-						target = ROOT         # the recipient
-						size = 1             # [0,1] Default value for the ratio below if they are not specified
-						stockpile_ratio = 1  # [0,1] Overrides size modifier for the stockpiled equipment and fuel
-						army_ratio = 1       # [0,1] Overrides size modifier for army
-						navy_ratio = 0      # [0,1] Overrides size modifier for navy
-						air_ratio = 0        # [0,1] Overrides size modifier for air
-					}
-
+					add_manpower = 5000 
+					ROOT = { add_manpower = 5000 }
 				}
 			}
 
@@ -6483,9 +6623,6 @@ focus_tree = {
 		}
 
 		available = {
-			any_army_leader = {
-				has_trait = ranger
-			}
 		}
 
 		bypass = {
@@ -6795,7 +6932,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		#mutually_exclusive = {focus = SWE_land_air_warfare}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_beneath_sticks_and_stones focus = SWE_tank_development }
 		relative_position_id = SWE_beneath_sticks_and_stones
 		
@@ -6945,7 +7082,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			democratic > 0.75
 		}
 
 		bypass = {
@@ -7577,7 +7714,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		mutually_exclusive = {focus = SWE_revoke_anti_militia_laws}
-		cost = 10
+		cost = 5
 		prerequisite = { focus = SWE_prevent_a_red_dictatorship }
 		relative_position_id = SWE_prevent_a_red_dictatorship
 		
@@ -8012,7 +8149,7 @@ focus_tree = {
 		relative_position_id = SWE_attack_Landsorganisationen
 		cost = 10
 		available = {
-			neutrality > 0.4
+			neutrality > 0.65
 		}
 	                
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8545,8 +8682,9 @@ focus_tree = {
 			}
 			set_country_flag = SWE_nordland_created
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = SWE_nordland_ger
-
+			custom_effect_tooltip = SWE_establish_nordland_tt
+			#set_cosmetic_tag = SWE_nordland_ger
+			add_manpower = 65482
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				if = {
@@ -8679,7 +8817,11 @@ focus_tree = {
 	                
 		search_filters = {}
 		completion_reward = {
+			custom_effect_tooltip = SWE_the_new_order_tt_2
 			drop_cosmetic_tag = yes
+			hidden_effect = {
+				set_cosmetic_tag = SWE_the_new_order
+			}
 			every_country = {
 				limit = {
 					has_War_with = ROOT
@@ -8848,7 +8990,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SWE_restoring_order
-		cost = 10
+		cost = 5
 		available = {
 		}
 	                
@@ -8880,6 +9022,26 @@ focus_tree = {
 				}
 				activate_mission = SWE_implement_rural_reforms_countdown
 			}
+			if = {
+				limit = {
+					has_completed_focus = SWE_revoke_anti_militia_laws
+				}
+				add_popularity = {
+					ideology = fascism 
+					popularity = 0.1
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = neutrality 
+					popularity = 0.1
+				}
+			}
+
+
+			add_political_power = 120
+
+
 		}
 	}
 
@@ -8891,7 +9053,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				ENG = {
@@ -9104,7 +9266,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
-		cost = 10
+		cost = 5
 		available = {
 			has_war_support > 0.4
 			has_army_manpower = { size > 80000 }
@@ -9133,6 +9295,8 @@ focus_tree = {
 				transfer_state = 925
 				
 			}
+
+			custom_effect_tooltip = SWE_crisis_affecting_variables
 		}
 	}
 	focus = {
@@ -9178,6 +9342,8 @@ focus_tree = {
 			effect_tooltip = {
 				transfer_state = 910
 			}
+
+			custom_effect_tooltip = SWE_crisis_affecting_variables
 		}
 	}
 	focus = {
@@ -9234,6 +9400,7 @@ focus_tree = {
 				}
 				
 			}
+			custom_effect_tooltip = SWE_crisis_affecting_variables
 		}
 	}
 
@@ -9283,6 +9450,8 @@ focus_tree = {
 				create_wargoal = {
 					target = LAT
 					type = puppet_wargoal_focus
+					generator = { 11 }
+					expire = 0
 				}
 			}
 			IF = {
@@ -9295,6 +9464,8 @@ focus_tree = {
 				create_wargoal = {
 					target = LIT
 					type = puppet_wargoal_focus
+					generator = { 808 }
+					expire = 0
 				}
 			}
 			IF = {
@@ -9307,6 +9478,8 @@ focus_tree = {
 				create_wargoal = {
 					target = EST
 					type = puppet_wargoal_focus
+					generator = { 812 }
+					expire = 0
 				}
 			}
 		}
@@ -9320,7 +9493,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = SWE_mythologize_swedish_history
-		cost = 10
+		cost = 5
 		available = {
 		}
 	                
@@ -9339,14 +9512,17 @@ focus_tree = {
 				set_country_flag = {
 					flag = SWE_GER_avoid_dow_nordics
 					value = 1
-					days = 547
+					days = 730
 				}
 				add_opinion_modifier = { target = ROOT modifier = anti_comintern_pact_opinion } 
 			}
 			add_opinion_modifier = { target = GER modifier = anti_comintern_pact_opinion }
 
 			add_ideas = anti_soviet_pact
-			SOV = {
+			every_other_country = {
+				limit = {
+					original_tag = SOV
+				}
 				add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us }
 			}
 
@@ -9361,7 +9537,7 @@ focus_tree = {
 		x = 0 
 		y = 1
 		relative_position_id = SWE_bornholm_crisis
-		cost = 10
+		cost = 5
 		available = {
 			910 = {
 				is_owned_and_controlled_by = SWE
@@ -9415,7 +9591,7 @@ focus_tree = {
 				transfer_state = 101
 				transfer_state = 337
 			}
-
+			custom_effect_tooltip = SWE_crisis_affecting_variables
 		}
 	}
 	focus = {
@@ -9454,6 +9630,8 @@ focus_tree = {
 
 				add_war_support = 0.06
 			}
+
+			custom_effect_tooltip = SWE_crisis_affecting_variables
 		}
 	}
 	focus = {
@@ -9728,7 +9906,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SWE_universal_basic_income
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				NOR = { 
@@ -9923,10 +10101,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_WAR_SUPPORT}
 
 		completion_reward = {
-			add_war_support = 0.15
-			army_experience = 50
-			navy_experience = 50
-			air_experience = 50
+			add_war_support = 0.1
+			add_manpower = 26000
 		}
 	}
 	focus = {
@@ -10365,19 +10541,7 @@ focus_tree = {
 		}
 
 		available = {
-			AND = {
-				OR = {
-					has_completed_focus = SWE_vasa_ii
-					has_completed_focus = SWE_archapeligo_harrasment
-				}
-
-				OR = {
-					has_completed_focus = SWE_the_barrel
-					has_completed_focus = SWE_rockets
-				}
-			}
-
-			industrial_complex > 34
+			num_of_factories > 80
 		}
 
 		bypass = {
