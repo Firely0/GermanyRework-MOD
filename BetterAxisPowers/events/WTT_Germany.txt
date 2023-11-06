@@ -2231,61 +2231,6 @@ country_event = { #----------------> REPLACED WITH HEALTH EVENT
 
 	option = {
 		name = wtt_germany.50.a
-		random_other_country = {
-			limit = {
-				original_tag = GER
-				has_government = fascism
-			}
-			kill_country_leader = yes
-			GER_heinrich_himmler = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = "1965.1.1.1"
-						traits = {}
-					}
-				}
-			}
-			hidden_effect = {
-				set_global_flag = Adolf_killed
-				uncomplete_national_focus = {
-					focus = GER_Fuhrer
-					uncomplete_children = yes
-					refund_political_power = no
-				}
-				complete_national_focus = GER_hitler_is_gone
-				complete_national_focus = GER_Power_Heinrich_Himmler
-				GER_bop_remove_bop_effect = yes
-			}
-		}
-		hidden_effect = {
-			random_list = {
-				1 = {
-					if = {
-						limit = {
-							ARG = {
-								is_ai = yes
-							}
-						}
-						ARG = {
-							add_timed_idea = { idea = fascism_drift_ARG days = 1460 }
-							country_event = { id = wtt_germany.1004 days = 1095 random_days = 365 }
-						}
-					}
-				}
-				1 = {
-					set_global_flag = MTG_flag_955
-				}
-				1 = {
-					if = {
-						limit = { has_dlc = "La Resistance" }
-						country_event = { id = wtt_germany.1005 days = 1095 random_days = 365 }
-					}
-				}
-				297 = {}
-			}
-		}
 	}
 }
 

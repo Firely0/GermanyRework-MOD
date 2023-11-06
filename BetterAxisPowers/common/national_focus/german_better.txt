@@ -12982,7 +12982,6 @@ focus = {
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = GER_break_the_anglo_french_colonial_hegemony }
 		available = {
-			always = no
 			has_government = neutrality
 		}
 		x = -2

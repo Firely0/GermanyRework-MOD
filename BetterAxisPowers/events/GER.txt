@@ -5473,6 +5473,7 @@ country_event = {
 	option = { # Himmler
 		name = germany.71.a
 		# Himmler becomes the new Fascist leader of Germany
+		ai_chance = { factor = 100 }
 		kill_country_leader = yes
 		add_stability = 0.05
 		GER_heinrich_himmler = {
@@ -5496,7 +5497,10 @@ country_event = {
 
 	option = {
 		name = "Karl Dönitz is A Neutral Choice"
-		ai_chance = { factor = 100 }
+		trigger = {
+			has_civil_war = no # Karl Donitz Goes to Other Side so Disabled.
+		}
+
 		kill_country_leader = yes
 		add_stability = 0.05
 		GER_karl_donitz = {
@@ -5510,10 +5514,6 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			set_country_leader_portrait = {
-				ideology = fascism
-				portrait = GFX_portrait_karl_donitz_new
-			}
 			complete_national_focus = GER_Power_Karl_Donitz
 			add_popularity = {
 				ideology = fascism
@@ -5525,6 +5525,9 @@ country_event = {
 	option = { # Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany
+		trigger = {
+			has_civil_war = no # Karl Donitz Goes to Other Side so Disabled.
+		}
 		kill_country_leader = yes
 		add_stability = 0.1
 		GER_hermann_goring = {

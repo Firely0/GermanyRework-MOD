@@ -898,17 +898,22 @@ characters={
 		}
 	}
 
-	GER_karl_donitz={
-		name=GER_karl_donitz
+	GER_karl_donitz = {
+		name= GER_karl_donitz
+		
 		portraits={
 			army={
 				large=GFX_portrait_GER_karl_donitz
 				small=GFX_portrait_GER_karl_donitz_small
 			}
+			civilian = {
+				large= GFX_portrait_karl_donitz_new
+			}
 			army={
 				small="GFX_idea_donitz"
 			}
 		}
+
 		advisor={
 			slot = navy_chief
 			idea_token = donitz
