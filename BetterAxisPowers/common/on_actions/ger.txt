@@ -569,7 +569,6 @@ on_actions = {
 					SOV = {
 						add_ideas = SOV_Great_Patriotic_War
 					}
-					
 					if = {
 						limit = {
 							GER = {
@@ -629,6 +628,14 @@ on_actions = {
 							activate_mission = GER_conquer_Stalingrad
 							activate_mission = GER_conquer_Kiev
 							activate_mission = GER_conquer_Sevastopol
+						}
+					}
+					if = {
+						limit = {
+							GER = {
+								is_ai = yes
+							}
+							add_command_power = 20 #Just Get the Buff
 						}
 					}
 				}

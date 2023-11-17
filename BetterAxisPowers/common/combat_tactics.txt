@@ -923,6 +923,8 @@ tactic_masterful_blitz = {
 	defender = -0.2
 }
 
+# German Tactics ----------------------->
+
 tactic_masterful_blitz_ger = {
 	only_show_for = GER
 
@@ -989,34 +991,33 @@ tactic_smoke_and_fire = {
 	defender = -0.2
 }
 
+# Urban Tactics Here ------------------->
+
 tactic_cc_street_battle_attack = {
+	picture = cc_street_battle_attack
 	countered_by = street_battle_ambush
-	is_attacker = yes
+	display_phase = street_battle
+	active = yes
+
 	trigger = {
 		is_attacker = yes
-		phase = street_battle
 		is_fighting_in_terrain = urban
 	}
-	active = yes
+
 	base = {
 		factor = 2
 		modifier = {
-			add = 2
-			OR = {
-				has_trait = urban_assault_specialist
-			}
+			add = 3
+			is_fighting_in_terrain = urban
 		}
 	}
-	picture = cc_street_battle_attack
-	display_phase = street_battle
+
 	attacker = 0.15
-	combat_width = 0.1
-	attacker_movement_speed = 0.2
+	attacker_movement_speed = 0.3
 }
 
 tactic_cc_street_battle_defend = {
 	countered_by = tactic_overwhelming_fire
-	is_attacker = no
 	picture = cc_street_battle_defend
 	display_phase = street_battle
 	phase = street_battle
@@ -1024,92 +1025,76 @@ tactic_cc_street_battle_defend = {
 
 	trigger = {
 		is_attacker = no
-		OR = {
-			phase = close_combat
-			phase = street_battle
-			phase = no
-		}
 		is_fighting_in_terrain = urban
 	}
 
 
 	base = {
-		factor = 4
+		factor = 2
 		modifier = {
-			add = 2
-			OR = {
-				has_trait = urban_assault_specialist
-			}
+			add = 3
+			is_fighting_in_terrain = urban
 		}
 	}
 
 	defender = 0.2
-	combat_width = 0.1
 }
 
 tactic_street_battle_ambush = {
 	picture = street_battle_ambush
 	display_phase = street_battle
-	is_attacker = no
 	active = yes
 	countered_by = tactic_street_battle_breakthrough
 	trigger = {
 		is_attacker = no
-		phase = street_battle
 		is_fighting_in_terrain = urban
 	}
 
 	base = { # So Much Damage so low chance
-		factor = 0
+		factor = 1
 		modifier = {
-			add = 5
+			add = 4
 			OR = {
 				has_trait = urban_assault_specialist
 				has_trait = ambusher
 			}
-			skill_advantage > 1
 		}
 	}
 
 	attacker = -0.2
 	defender = 0.4
-	combat_width = 0.1
 	attacker_movement_speed = -1.0
 }
 
 tactic_street_battle_breakthrough = { #counters ambush v2
+	display_phase = street_battle
 	is_attacker = yes
-	active = no
+	active = yes
 	picture = street_battle_ambush_breakthrough
 
 	base =  {
-		factor = 4
+		factor = 1
 		modifier = {
 			add = 4
 			OR = {
 				has_trait = panzer_expert
 				has_trait = combined_arms_expert
 			}
+			is_fighting_in_terrain = urban
 		}
 	}
 
 	trigger = {
-		is_attacker = yes
-		phase = no
-		OR = {
-			hardness > 0.5
-			skill_advantage > 1
-		}
 		OWNER = {
 			OR = {
 				has_tech = blitzkrieg has_tech = combined_arms has_tech = shock_and_awe has_tech = assault_breakthrough has_tech = breakthrough_priority
 			}
 		}
+		OR = {
+			hardness > 0.5
+			skill_advantage > 1
+		}
 	}
-
-
-
-	countered_by = tactic_backhand_blow
 
 	attacker_movement_speed = 0.5
 	attacker = 0.25

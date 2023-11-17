@@ -6801,7 +6801,7 @@ focus_tree = {
 						has_government = fascism
 					}
 				}
-				add_timed_idea = { idea = fascist_influence days = 1095 }
+				add_timed_idea = { idea = fascist_influence_cs days = 1095 }
 			}
 			country_event = { id = generic.1 }
 		}	
@@ -11109,6 +11109,7 @@ focus = {
 							state = 231
 							state = 229
 							state = 230
+							state = 754
 						}
 					}
 					set_state_flag = GER_MOSKOW_IGNORE_STATES
@@ -12454,16 +12455,6 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }	
 		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 64	
-					}
-				}
-				add_dynamic_modifier = {
-					modifier = Germany_state_dynamic_modifier
-				}
-			}
 		}
 	}
 
@@ -12993,7 +12984,6 @@ focus = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = Disabled_for_rework_or_else
 			custom_effect_tooltip = GER_september_plan_tt
 		}
 	}

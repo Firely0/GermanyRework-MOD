@@ -1355,6 +1355,7 @@ GER_SOV_white_peace_check = {
 				limit = {
 					OR = {
 						has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+						has_state_flag = mr_pact_sov_reserved_state_special
 						has_state_flag = mr_pact_sov_reserved_state
 					}
 					OR = {
@@ -1375,7 +1376,65 @@ GER_SOV_white_peace_check = {
 		}
 		SOV = { white_peace = POL }
 	}
-	clr_global_flag = GER_SOV_WHITE_PEACE_1 # End of Checks 
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_ger_reserved_state_special
+				has_state_flag = mr_pact_ger_reserved_state
+			}
+			is_controlled_by = GER # We Have it Remove Icon/s
+		}
+		remove_dynamic_modifier = {
+			modifier = Germany_state_dynamic_modifier
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				has_state_flag = mr_pact_sov_reserved_state_special
+				has_state_flag = mr_pact_sov_reserved_state
+			}
+			is_controlled_by = SOV # We Have it Remove Icon/s
+		}
+		remove_dynamic_modifier = {
+			modifier = Soviet_state_dynamic_modifier
+		}
+	}
+	every_state = {
+		limit = {
+			state = 92 # Check 
+			OR = {
+				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				has_state_flag = mr_pact_sov_reserved_state_special
+				has_state_flag = mr_pact_sov_reserved_state
+			}
+			is_controlled_by = GER # Germans Have it Remove İcon.
+		}
+		remove_dynamic_modifier = {
+			modifier = Soviet_state_dynamic_modifier
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_dynamic_modifier = {
+					modifier = Soviet_state_dynamic_modifier
+				}
+				has_dynamic_modifier = {
+					modifier = Germany_state_dynamic_modifier
+				}
+			}
+		}
+		remove_dynamic_modifier = {
+			modifier = Soviet_state_dynamic_modifier
+		}
+		remove_dynamic_modifier = {
+			modifier = Germany_state_dynamic_modifier
+		}
+	}
+	clr_global_flag = GER_SOV_WHITE_PEACE_1 # End of Checks
+	 
 }
 
 GER_AUS_annex = {

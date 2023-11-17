@@ -38,6 +38,25 @@ ideas = {
 
 	country = {
 
+		fascist_influence_cs = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+
+			modifier = {
+				fascism_acceptance = 85
+			}
+		}
+
 		GER_focus_on_tanks = {
 			picture = man_five_year_plan_tank
 			removal_cost = -1
@@ -3352,6 +3371,28 @@ ideas = {
 
 		}
 
+		SOV_Great_Patriotic_War_v2 = { # SOV Idea
+			picture = Great_patriotic_war
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				weekly_casualties_war_support = 0.001
+				max_command_power = 35
+				command_power_gain_mult = 0.2
+			}
+
+			cancel = {
+				NOT = {
+					has_war_with = GER
+				}
+			}
+
+		}
+
 		GER_barbarossa = {
 			picture = generic_acquire_tanks
 			removal_cost = -1
@@ -3383,11 +3424,10 @@ ideas = {
 						has_global_flag = GER_Moscow_win
 						has_global_flag = GER_Stalingrad_win
 					}
-					add_ideas = GER_barbarossa # Keep Idea
+					GER = { add_ideas = GER_barbarossa }
 				}
 				if = {
 					limit = {
-						NOT = { has_global_flag = SOV_Keep_peace_with_GER }
 						NOT = {
 							has_global_flag = GER_Leningrad_win
 							has_global_flag = GER_Moscow_win
@@ -3396,10 +3436,12 @@ ideas = {
 					}
 					clr_global_flag = GER_Operation_Barbarossa_running
 					set_global_flag = GER_Operation_Barbarossa_Failed
-					add_ideas = GER_barbarossa_war # Replace
-					add_timed_idea = {
-						idea = GER_War_Exhaustion
-						days = 180
+					GER = {
+						add_ideas = GER_barbarossa_war
+						add_timed_idea = {
+							idea = GER_War_Exhaustion
+							days = 180
+						}
 					}
 					GER = { country_event = { id = GER_health_adolf.2 hours = 6 } }
 				}

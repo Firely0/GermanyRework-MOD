@@ -5,7 +5,11 @@
 
  decision_cost_CP_50_pp_15_f:0 "£command_power  §R50§! £pol_power  §R15§!" # Temp Fix for decision_cost_CP_50_pp_15_blocked
  decision_cost_CP_50_pp_15_f_blocked: "£command_power  §R50§! £pol_power  §R15§!"
- decision_cost_CP_50_pp_15_f_tooltip: "It costs £command_power  §Y25§! to take the decision"
+ decision_cost_CP_50_pp_15_f_tooltip: "It costs £command_power  §Y50§! to take the decision"
+
+ decision_cost_CP_20_pp_15:0 "£command_power  §R20§! £pol_power  §R15§!"
+ decision_cost_CP_20_pp_15_blocked: "£command_power  §R20§! £pol_power  §R15§!"
+ decision_cost_CP_20_pp_15_tooltip: "It costs £command_power  §Y20§! to take the decision"
 
  SOV_Local_Defense:0 "Local Defence" # ---> Main Decision
  SOV_Local_Defense_desc:0 ""
@@ -35,6 +39,9 @@
  SOV_tank_development_su_85_desc:0 "Time to Improve Existing Tank Destroyer Variants as a Solution Against Evolving German Tanks"
  SOV_tank_development_IS_1:0 "IS-1"
  SOV_tank_development_IS_1_desc:0 ""
+ SOV_Focus_on_tank_production:0 "Focus on Tank Production"
+ SOV_Focus_on_air_production:0 "Focus on Air Production"
+ SOV_Focus_on_mobilization:0 "Focus on Mobilization"
  Deploy_Heavy_Artilery_main:0 "Deploy Heavy Artillery"
  Deploy_Heavy_Artilery_main_desc:0 ""
  Deploy_Heavy_Artilery_sub_leningrad:0 "Deploy Heavy Artillery at Leningrad"
@@ -52,6 +59,11 @@
 
  SOV_hold_key_of_union:0 "Last Stand of Soviet Union"
  SOV_hold_key_of_union_desc:0 ""
+
+ SOV_Great_Patriotic_War:0 "Great Patriotic War"
+ SOV_Great_Patriotic_War_desc:0 ""
+ SOV_Great_Patriotic_War_v2:0 "Great Patriotic War"
+ SOV_Great_Patriotic_War_v2_desc:0 ""
 
  #from Road to 56
  SOV_defense_of_leningrad:0 "Luga Defense Line"

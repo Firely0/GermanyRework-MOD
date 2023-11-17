@@ -242,12 +242,12 @@ SOV_great_patriotic_war_Orders = {
 
 		fire_only_once = yes
 
-		ai_hint_pp_cost = 50
+		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
-			command_power > 49
-			has_political_power > 49
+			command_power > 19
+			has_political_power > 14
 		}
-		custom_cost_text = decision_cost_CP_50_pp_50
+		custom_cost_text = decision_cost_CP_20_pp_15
 
 		complete_effect = {
 			hidden_effect = {
@@ -286,10 +286,10 @@ SOV_great_patriotic_war_Orders = {
 
 		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
-			command_power > 49
+			command_power > 19
 			has_political_power > 14
 		}
-		custom_cost_text = decision_cost_CP_50_pp_15_f
+		custom_cost_text = decision_cost_CP_20_pp_15
 
 		days_remove = 90
 
@@ -299,7 +299,7 @@ SOV_great_patriotic_war_Orders = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -50
+				add_command_power = -20
 				add_political_power = -15
 			}
 		}
@@ -332,12 +332,12 @@ SOV_great_patriotic_war_Orders = {
 			surrender_progress > 0.15
 		}
 
-		ai_hint_pp_cost = 50
+		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
-			command_power > 49
-			has_political_power > 49
+			command_power > 19
+			has_political_power > 14
 		}
-		custom_cost_text = decision_cost_CP_50_pp_50
+		custom_cost_text = decision_cost_CP_20_pp_15
 
 		fire_only_once = yes
 		visible = {
@@ -368,172 +368,6 @@ SOV_great_patriotic_war_Orders = {
 				}
 				custom_effect_tooltip = SOV_order_227_scorched_earth_decisions_tt
 			}
-		}
-	}
-
-	SOV_operation_iskra = { #SPECIAL OFFENSIVE - LENINGRAD HAS NOT FALLEN BUT IT IS SURROUNDED
-		priority = 85
-
-		icon = GFX_decision_generic_operation
-
-		ai_will_do = {
-			base = 1
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 208 #LUGA
-				state = 244 #VOLKHOV
-			}
-		}
-
-		on_map_mode = map_and_decisions_view
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			NOT = { has_country_flag = SOV_military_offensive_in_progress_flag }
-			command_power > 49
-			OR = {
-				controls_state = 263 #NOVGOROD
-				controls_state = 264 #TIKHVIN
-			}
-		}
-
-		visible = {
-			has_war = yes
-			has_country_flag = SOV_order_227_flag
-			244 = {
-				controller = { has_war_with = ROOT }
-			}
-			208 = {
-				controller = { has_war_with = ROOT }
-			}
-			195 = { is_controlled_by = ROOT }
-		}
-
-		ai_hint_pp_cost = 15
-		custom_cost_trigger = {
-			command_power > 49
-			has_political_power > 14
-		}
-		custom_cost_text = decision_cost_CP_50_pp_15
-
-		fire_only_once = yes
-
-		days_remove = 14
-
-		modifier = {
-			command_power_gain_mult = -0.5
-		}
-
-		complete_effect = {
-			hidden_effect = {
-				add_command_power = -50
-				add_political_power = -15
-			}
-			set_country_flag = SOV_military_offensive_in_progress_flag
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = SOV_operation_iskra_tt
-			hidden_effect = {
-				195 = {
-					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
-				}
-				208 = {
-					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
-				}
-				244 = {
-					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
-				}
-				SOV_set_military_offensive_effect = yes
-
-				activate_mission = SOV_operation_iskra_ongoing
-			}
-			custom_effect_tooltip = SOV_operation_iskra_activate_decision_tt
-		}
-	}
-
-	SOV_operation_iskra_ongoing = {
-
-		icon = hol_draw_up_staff_plans
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		fire_only_once = yes
-
-		days_mission_timeout = 30
-
-		is_good = no
-
-		activation = {
-			always = no
-		}
-
-		cancel_trigger = {
-			hidden_trigger = {
-				has_war = no
-			}
-		}
-
-		cancel_effect = {
-			hidden_effect = {
-				SOV_clean_military_offensive_effect = yes
-			}
-		}
-
-		visible = {
-			has_country_flag = SOV_order_227_flag
-			has_war = yes
-			has_country_flag = SOV_military_offensive_in_progress_flag
-		}
-
-		available = { #You succeed by having Leningrad being connected to the rest of the country at the end of the mission
-			custom_trigger_tooltip = {
-				tooltip = SOV_operation_iskra_ongoing_objective_tt
-				195 = { is_in_home_area = yes }
-			}
-		}
-
-		timeout_effect = {  #FAIL
-			custom_effect_tooltip = SOV_operation_iskra_ongoing_success_effects_tt
-			effect_tooltip = {
-				add_war_support = 0.1
-				add_political_power = 50
-			}
-			custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_effects_tt
-			effect_tooltip = {
-				add_war_support = -0.1
-				add_political_power = -75
-			}
-
-			if = {
-				limit = {
-					195 = { is_in_home_area = yes }
-				}
-				custom_effect_tooltip = SOV_operation_iskra_ongoing_success_tt
-				hidden_effect = {
-					add_war_support = 0.1
-					add_political_power = 50
-				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_tt
-				hidden_effect = {
-					add_war_support = -0.1
-					add_political_power = -75
-				}
-			}
-			SOV_clean_military_offensive_effect = yes
-		}
-
-		complete_effect = {
-			SOV_clean_military_offensive_effect = yes
 		}
 	}
 
@@ -610,7 +444,7 @@ SOV_Development_and_Deployment = {
 
 	SOV_tank_development_IS_1 = { # Develop Tanks Against German Tank/s
 		icon = GFX_decision_generic_merge_plant_tank
-		priority = 100
+		priority = 98
 
 		allowed = {
 			tag = SOV
@@ -674,7 +508,7 @@ SOV_Development_and_Deployment = {
 
 	SOV_tank_development_su_85 = {  # Develop Anti-Tank Against German Tank/s
 		icon = GFX_decision_generic_merge_plant_tank
-		priority = 95
+		priority = 97
 
 		allowed = {
 			tag = SOV
@@ -928,6 +762,172 @@ SOV_Development_and_Deployment = {
 }
 
 SOV_Local_offensive = {
+	SOV_operation_iskra = { #SPECIAL OFFENSIVE - LENINGRAD HAS NOT FALLEN BUT IT IS SURROUNDED
+		priority = 85
+
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 1
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 208 #LUGA
+				state = 244 #VOLKHOV
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			NOT = { has_country_flag = SOV_military_offensive_in_progress_flag }
+			command_power > 49
+			OR = {
+				controls_state = 263 #NOVGOROD
+				controls_state = 264 #TIKHVIN
+			}
+		}
+
+		visible = {
+			has_war = yes
+			has_country_flag = SOV_order_227_flag
+			244 = {
+				controller = { has_war_with = ROOT }
+			}
+			208 = {
+				controller = { has_war_with = ROOT }
+			}
+			195 = { is_controlled_by = ROOT }
+		}
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 14
+		}
+		custom_cost_text = decision_cost_CP_50_pp_15
+
+		fire_only_once = yes
+
+		days_remove = 14
+
+		modifier = {
+			command_power_gain_mult = -0.5
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -15
+			}
+			set_country_flag = SOV_military_offensive_in_progress_flag
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = SOV_operation_iskra_tt
+			hidden_effect = {
+				195 = {
+					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
+				}
+				208 = {
+					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
+				}
+				244 = {
+					ROOT = { add_to_array = { SOV_military_offensive_states = PREV } }
+				}
+				SOV_set_military_offensive_effect = yes
+
+				activate_mission = SOV_operation_iskra_ongoing
+			}
+			custom_effect_tooltip = SOV_operation_iskra_activate_decision_tt
+		}
+	}
+
+	SOV_operation_iskra_ongoing = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+		days_mission_timeout = 30
+
+		is_good = no
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_war = no
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				SOV_clean_military_offensive_effect = yes
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_order_227_flag
+			has_war = yes
+			has_country_flag = SOV_military_offensive_in_progress_flag
+		}
+
+		available = { #You succeed by having Leningrad being connected to the rest of the country at the end of the mission
+			custom_trigger_tooltip = {
+				tooltip = SOV_operation_iskra_ongoing_objective_tt
+				195 = { is_in_home_area = yes }
+			}
+		}
+
+		timeout_effect = {  #FAIL
+			custom_effect_tooltip = SOV_operation_iskra_ongoing_success_effects_tt
+			effect_tooltip = {
+				add_war_support = 0.1
+				add_political_power = 50
+			}
+			custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_effects_tt
+			effect_tooltip = {
+				add_war_support = -0.1
+				add_political_power = -75
+			}
+
+			if = {
+				limit = {
+					195 = { is_in_home_area = yes }
+				}
+				custom_effect_tooltip = SOV_operation_iskra_ongoing_success_tt
+				hidden_effect = {
+					add_war_support = 0.1
+					add_political_power = 50
+				}
+			}
+			else = {
+				custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_tt
+				hidden_effect = {
+					add_war_support = -0.1
+					add_political_power = -75
+				}
+			}
+			SOV_clean_military_offensive_effect = yes
+		}
+
+		complete_effect = {
+			SOV_clean_military_offensive_effect = yes
+		}
+	}
+
 	SOV_military_offensive_ongoing = {
 
 		icon = hol_draw_up_staff_plans
@@ -1277,7 +1277,7 @@ SOV_Local_Defense = {
 					province = 11384
 				}
 			}
-			
+
 		}
 
 		ai_will_do = {
@@ -1339,13 +1339,15 @@ SOV_Local_Defense = {
 					province = 6527
 				}
 			}
-			
+
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 	}
+
+	# Initial Versions
 
 	SOV_build_trech_minsk = {
 		icon = GFX_decision_setup_forts

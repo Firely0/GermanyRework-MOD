@@ -5,7 +5,7 @@ ideas = {
 		ENG_tank_production = {
 
 			picture = generic_armor
-			
+
 			allowed = {
 				always = no
 			}
@@ -15,7 +15,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 			}
 
@@ -29,7 +29,7 @@ ideas = {
 		ENG_anti_tank_production = {
 
 			picture = generic_artillery_regiments
-			
+
 			allowed = {
 				always = no
 			}
@@ -39,7 +39,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 			}
 
@@ -49,5 +49,109 @@ ideas = {
 				}
 			}
 		}
+
+		# No Focus REQ Initial Versions
+
+		SOV_focus_on_tanks = { # Initial Version
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+			}
+
+		}
+
+		SOV_focus_on_air = { # Initial Version
+			picture = man_five_year_plan_air
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05 reliability = 0.05
+				}
+			}
+
+		}
+
+		# REQ Focus; SOV_shift_to_armaments_production
+
+		SOV_focus_on_tanks_shift_to_ver = {
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 reliability = -0.05
+				}
+			}
+
+		}
+
+		SOV_focus_on_air_shift_to_ver = { 
+			picture = man_five_year_plan_air
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1 reliability = -0.05
+				}
+			}
+
+		}
+
+		# REQ Focus; SOV_reorganize_the_pc_of_heavy_industry
+
+		SOV_focus_on_tanks_reorganize_ver = {
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 reliability = 0.05
+				}
+			}
+
+		}
+
+		SOV_focus_on_air_reorganize_ver = { 
+			picture = man_five_year_plan_air
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1 reliability = 0.05
+				}
+			}
+
+		}
+
+
 	}
 }

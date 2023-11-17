@@ -6481,7 +6481,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_desperate_measures_ns
-				days = 365
+				days = 180
 			}
 
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
@@ -6553,6 +6553,10 @@ focus_tree = {
 						has_trait = trait_SOV_cowed_by_stalin_navy
 					}
 					remove_unit_leader_trait =  trait_SOV_cowed_by_stalin_navy
+				}
+				swap_ideas = {
+					remove_idea = SOV_Great_Patriotic_War
+					add_idea = SOV_Great_Patriotic_War_v2
 				}
 			}
 		}

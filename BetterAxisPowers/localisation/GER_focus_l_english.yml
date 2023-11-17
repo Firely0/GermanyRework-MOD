@@ -62,13 +62,18 @@
  GER_ship_resources:0 "Ship Resources"
  NON_Germany_state_dynamic_modifier:0 "Non-Aligned State for Civil-War"
  CON_Germany_state_dynamic_modifier:0 "Communism State for Civil-War"
- Germany_state_dynamic_modifier:0 "Fascism State for Civil-War"
  Ger_non_vichy_state_dynamic_modifier:0 "Non-Vichy Occupation Zone"
  Ger_warsaw_state_dynamic_modifier:0 "Destroyed City"
  NO_SUPPLY_STATE:0 "No Supply Reserved"
  LOW_SUPPLY_STATE:0 "Low Supply Reserved"
  NORMAL_SUPPLY_STATE:0 "Supply Reserved"
  EXTRA_SUPPLY_STATE:0 "Extra Supply Reserved"
+
+ # Molotov-Ribbentrop
+ Germany_state_dynamic_modifier:0 "Molotov-Ribbentrop Assigned Territory"
+ Germany_state_dynamic_modifier_desc:0 "Territory Assigned to the German Reich"
+ Soviet_state_dynamic_modifier:0 "Molotov-Ribbentrop Assigned Territory"
+ Soviet_state_dynamic_modifier_desc:0 "Territory Assigned to the Soviet Union"
 
  #ui ideas
  Wehrmacht_UI:0 "Wehrmacht"
@@ -117,7 +122,7 @@
 
  GER_Operation_Barbarossa_V:0 "Operation Barbarossa"
  GER_conquer_Leningrad:0 "Conquer Leningrad"
- GER_conquer_Misk:0 "Conquer Misk"
+ GER_conquer_Misk:0 "Conquer Minsk"
  GER_conquer_Moscow:0 "Conquer Moscow"
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
  GER_conquer_Kiev:0 "Canquer Kiev"
@@ -265,14 +270,10 @@
  german_rapid_mobilization_spirit_desc:0 ""
  
  #Ideas
+ fascist_influence_cs:0 "Fascist Influence"
+ fascist_influence_cs_desc:0 ""
  GER_War_Exhaustion:0 "War Exhaustion"
  GER_War_Exhaustion_desc:0 "After our plan to quickly seize strategic locations against the Soviet Union did not pay off, our exhausted army will have to recover over a period of time.The effects are permanent if the Surrender Limit exceeds §R15%§! or the War Support is below §R50%§!."
- SOV_Great_Patriotic_War:0 "Great Patriotic War"
- SOV_Great_Patriotic_War_desc:0 ""
- GER_focus_on_air:0 "Focus on Fighter Production"
- GER_focus_on_air_desc:0 ""
- GER_focus_on_tanks:0 "Focus on Tank Production"
- GER_focus_on_tanks_desc:0 ""
  GER_barbarossa_war:0 "Unternehmen Barbarossa"
  GER_barbarossa_war_desc:0 ""
  GER_unexpected_attack:0 "Unexpected Attack"

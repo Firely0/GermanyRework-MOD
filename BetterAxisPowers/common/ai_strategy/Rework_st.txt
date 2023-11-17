@@ -278,23 +278,15 @@ SOV_dockyards_useless_now_sov = {
 	allowed = {original_tag = SOV}
 	enable = {always = yes}
 	abort = {always = no}
+
 	ai_strategy = {
 		type = dockyard_to_military_factory_ratio
 		value = -500
 	}
+	
 	ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = -200
-	}
-}
-
-SOV_better_naval_invasions = {
-	allowed = {original_tag = SOV}
-	enable = {always = yes}
-	abort = {always = no}
-	ai_strategy = {
-		type = naval_invasion_focus
 		value = -200
 	}
 }
@@ -315,10 +307,46 @@ SOV_no_more_useless_divisions = {
 	}
 }
 
+SOV_German_with_fin_preparation = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		GER = {
+			focus_progress = {
+				focus = GER_ussr_war_goal
+				progress > 0.01
+			}
+		}
+		FIN = {
+			has_completed_focus = FIN_cooperation_with_germany
+		}
+	}
+
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = FIN
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+}
+
 SOV_be_careful_pls  = {
 	allowed = {
 		original_tag = SOV
 	}
+	
 	enable = {
 		SOV = {
 			NOT = { has_completed_focus = SOV_lessons_of_war }
@@ -355,17 +383,6 @@ SOV_be_careful_pls  = {
 		execution_type = careful
 	}
 
-	ai_strategy = {
-		type = front_unit_request
-		tag = GER
-		value = 100
-	}
-
-	ai_strategy = {
-		type = spare_unit_factor
-		value = -10
-	}
-
 }
 
 SOV_test_german_army = {
@@ -373,8 +390,10 @@ SOV_test_german_army = {
 		original_tag = SOV
 	}
 
-	GER = {
-		has_idea = GER_War_Exhaustion
+	enable = {
+		GER = {
+			has_idea = GER_War_Exhaustion
+		}
 	}
 
 	abort = {
@@ -395,11 +414,7 @@ SOV_test_german_army = {
 		ordertype = front
 		execution_type = rush_weak
 	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = GER
-		value = 100
-	}
 }
+
+
 
