@@ -732,7 +732,6 @@ ignore_vichy = { #No Need to Put Div. if AI and his on
 			original_tag = FRA
 			has_government = fascism
 			is_dynamic_country = yes
-			tag = VIC
 			is_ai = yes
 			has_war = no
 		}
@@ -740,15 +739,11 @@ ignore_vichy = { #No Need to Put Div. if AI and his on
 	}
 
 	abort = {
-		OR = {
-			any_country = {
-				original_tag = FRA
-				has_government = fascism
-				is_dynamic_country = yes
-				tag = VIC
-				is_ai = no
-				has_war = yes
-			}
+		any_country = {
+			original_tag = FRA
+			has_government = fascism
+			is_dynamic_country = yes
+			has_war = yes
 		}
 	}
 
@@ -853,6 +848,48 @@ iron_pact_italy = {
 	}
 }
 
+dont_join_gie_wars_early = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		is_in_faction_with = ITA
+		ITA = {
+			all_enemy_country = {
+				is_government_in_exile = yes
+			}
+		}
+	}
+	abort = {
+		OR = {
+			GER = {
+				any_enemy_country = {
+					is_government_in_exile = no
+				}
+			}
+			ITA = {
+				any_enemy_country = {
+					is_government_in_exile = no
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+	    type = diplo_action_desire
+	    id = ITA
+	    value = -9999
+	    target = join_allies
+	}
+
+	ai_strategy = {
+	    type = diplo_action_acceptance
+	    id = ITA
+	    value = -9999
+	    target = call_allies
+	}
+}
+
 japan_ally = {
 	allowed = {
 		original_tag = GER
@@ -951,29 +988,31 @@ spain_ally = {
 	}
 }
 
-SPR_spain_ger_ally = {
+spain_ally_resistance = {
 	allowed = {
-		OR = {
-			original_tag = SPR
-			original_tag = SPA
-		}
+		original_tag = GER
+		has_dlc = "La Resistance"
 	}
 	enable = {
 		has_completed_focus = GER_nationalist_spain_ally
-		SPR = { has_government = fascism }
+		country_exists = SPA
 	}
-
-	abort_when_not_enabled = yes
+	abort = {
+		OR = {
+			NOT = { country_exists = SPA }
+			SPA = { has_completed_focus = SPA_join_the_allies }
+		}
+	}
 
 	ai_strategy = {
 		type = befriend
-		id = "GER"
-		value = 20
+		id = "SPA"
+		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "GER"
-		value = 20
+		id = "SPA"
+		value = 100
 	}
 
 	ai_strategy = {
@@ -1196,6 +1235,7 @@ GER_naval_role_ratios_historical = {
 	enable = {
 		always = yes #We Like Ships.
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -1264,6 +1304,7 @@ GER_area_priority = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -1703,6 +1744,7 @@ GER_industry_we_are_the_baddies_2 = {
 	enable = {
 		date > 1940.1.1
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = added_military_to_civilian_factory_ratio
@@ -1854,6 +1896,127 @@ GER_we_dont_fight_pathetic_sweden_on_historical = { # :O
 		type = protect
 		id = SWE
 		value = 50 #keep the iron coming and no one gets hurt
+	}
+}
+
+GER_trade_with_sweden = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		# if we're not communist and they're not communist
+		NOT = { has_government = communism }
+		NOT = { SWE = { has_government = communism } }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = SWE
+		value = 60
+	}
+}
+
+GER_trade_with_italy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = fascism
+		ITA = { has_government = fascism }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = ITA
+		value = 40
+	}
+}
+
+GER_market_management_after_anschluss = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = fascism
+		has_completed_focus = GER_anschluss
+	}
+	abort_when_not_enabled = yes
+
+	# Time to start buffer for war
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = infantry
+		value = 10000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = support
+		value = 500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = artillery
+		value = 500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = armor
+		value = 500
+	}
+}
+
+GER_market_management_after_sudetenland = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_government = fascism
+		has_completed_focus = GER_demand_sudetenland
+	}
+	abort_when_not_enabled = yes
+
+	# Oh nein, we're not gonna sell this, we're... "saving" it...
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = infantry
+		value = 20000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = support
+		value = 1500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = artillery
+		value = 1500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = anti_air
+		value = 1500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = anti_tank
+		value = 1500
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = armor
+		value = 1000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = motorized
+		value = 2000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = train
+		value = 200
 	}
 }
 
@@ -2260,6 +2423,7 @@ GER_vichy_has_served_its_purpose = {
 			}
 		}
 	}
+	abort = { always = no }
 
 	ai_strategy = {
 		type = prepare_for_war
@@ -2414,7 +2578,7 @@ GER_tanks_in_the_snow = {
 	ai_strategy = {
 		type = front_armor_score
 		id = "SOV"
-		value = 1000
+		value = 200
 	}
 
 	ai_strategy = {
@@ -2750,12 +2914,7 @@ GER_make_some_radar_1 = {
 		original_tag = GER
 	}
 	enable = {
-		OR = {
-			has_war_with = POL
-			POL = {
-				has_capitulated = yes
-			}
-		}
+		has_war_with_major = yes  # Oy, we need some radar tech!
 	}
 
 	abort = {
@@ -2764,7 +2923,7 @@ GER_make_some_radar_1 = {
 
 	ai_strategy = {
 		type = research_tech
-		id = 288 #Radio Detection
+		id = radio_detection
 		value = 2000
 	}
 }
@@ -2783,7 +2942,7 @@ GER_make_some_radar_2 = {
 
 	ai_strategy = {
 		type = research_tech
-		id = 289 #Decimetric Radar
+		id = decimetric_radar
 		value = 2000
 	}
 }
@@ -2802,7 +2961,7 @@ GER_make_some_radar_3 = {
 
 	ai_strategy = {
 		type = research_tech
-		id = 290 #Improved Decimetric Radar
+		id = improved_decimetric_radar
 		value = 200
 	}
 } #After this, you're on your own chaps
@@ -2814,6 +2973,7 @@ GER_make_some_radar_4 = {
 	enable = {
 		has_tech = radio_detection
 		90 = {
+			is_controlled_by = FROM
 			free_building_slots = {
 				building = radar_station
 				size > 0
@@ -2838,6 +2998,7 @@ GER_make_some_radar_5 = {
 	enable = {
 		has_tech = radio_detection
 		763 = {
+			is_controlled_by = FROM
 			free_building_slots = {
 				building = radar_station
 				size > 0
@@ -2862,6 +3023,7 @@ GER_make_some_radar_6 = {
 	enable = {
 		has_tech = radio_detection
 		36 = {
+			is_controlled_by = FROM
 			free_building_slots = {
 				building = radar_station
 				size > 0
@@ -2886,6 +3048,7 @@ GER_make_some_radar_7 = {
 	enable = {
 		has_tech = radio_detection
 		42 = {
+			is_controlled_by = FROM
 			free_building_slots = {
 				building = radar_station
 				size > 0
@@ -3100,6 +3263,7 @@ bba_air_prod_2 = {
 	enable = {
 		date > 1940.1.1
 	}
+	abort_when_not_enabled = yes
 
 	#Air unit factors
 	ai_strategy = {
@@ -3217,6 +3381,154 @@ GER_dont_act_on_danzig_if_things_went_south = {
 	}
 }
 
+GER_protect_swedish_ore = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		NOT = { has_war_with = SWE }
+		SWE = { has_capitulated = no }
+		
+ 		142 = { is_fully_controlled_by = ROOT }
+ 		110 = { is_fully_controlled_by = ROOT }
+ 		143 = { is_fully_controlled_by = ROOT }
+ 		144 = { is_fully_controlled_by = ROOT }
+	}
+	abort_when_not_enabled = yes
+
+	 ai_strategy = {
+	 	type = put_unit_buffers
+
+		# ratio of total armeis in country to be buffered
+	 	ratio = 0.05
+
+		# you can specify an order id. ratio of same orders ids will be share same ratio
+	 	order_id = 1
+
+	 	# states to put garrison orders (if no state is friendly, strat is invalid)
+	 	states = {
+	 		142
+	 		110
+	 		143
+	 		144
+	 	} 
+
+		# ai areas that the orders will use these buffers in
+	 	area = europe
+	 }
+	
+}
+
+TEMP_avoid_sweden = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		country_exists = SWE
+		is_historical_focus_on = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = "SWE"
+		value = -999
+	}
+}
+
+SWE_nils_flyg_is_in_charge_and_he_is_a_weird_communist_that_does_not_like_stalin_so_we_like_him = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		country_exists = SWE
+		SWE = {
+			has_country_leader = {
+				ruling_only = yes 
+				character = SWE_nils_flyg 
+			}
+			has_government = communism
+		}
+	}
+	abort = {
+		SWE = {
+			NOT = {
+				has_government = communism
+				has_country_leader = {
+					ruling_only = yes 
+					character = SWE_nils_flyg 
+				}
+			}
+		}
+	}	
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		id = "SWE"
+		value = 200
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 1000
+	}
+}
+
+Sweden_was_a_puppet_and_broke_free_so_now_we_are_angry = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_country_flag = sweden_was_a_puppet_and_has_broken_free
+	}
+
+	abort = {
+		NOT = { has_country_flag = sweden_was_a_puppet_and_has_broken_free }
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SWE"
+		value = 200
+	}
+}
+
+Sweden_joined_our_pact_so_we_are_kinda_happy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		SWE = { has_completed_focus = SWE_join_the_anti_soviet_pact }
+	}
+
+	abort = {
+		SWE = { has_war_with = GER }
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 50
+	}
+	ai_strategy = {
+		type = protect
+		id = "SWE"
+		value = 70
+	}
+}
+
 SOV_keep_peace_with_Germany = {
 	allowed = {
 		original_tag = SOV
@@ -3311,3 +3623,4 @@ ENG_keep_peace_with_Germany = {
 		value = 10
 	}
 }
+

@@ -90,3 +90,53 @@ defined_text = {
 		localization_key = SOV_MOLOTOV_RIBBENTROP_NAME_EXILES
 	}
 }
+
+defined_text = {
+	name = GetFrancedesc
+	text = {
+		trigger = {
+			NOT = { has_global_flag = GER_SOV_END_OF_PACT_EVENT }
+		}
+		localization_key = GER_around_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_SOV_END_OF_PACT_EVENT
+		}
+		localization_key = GER_around_a_desc
+	}
+}
+
+defined_text = {
+	name = lendlease
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_CUSTOM_EQUIPMENT_SHERMAN 
+		}
+		localization_key = "Sherman Tanks"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_custom_equipment_hawker
+		}
+		localization_key = "Hawker Hurricanes"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_custom_equipment_renault
+		}
+		localization_key = "Renault R35 Tanks"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_EQUIPMENT
+		}
+		localization_key = "Equipment"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+		}
+		localization_key = "Supply and Food"
+	}
+}

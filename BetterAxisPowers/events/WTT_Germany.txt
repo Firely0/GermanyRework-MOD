@@ -723,6 +723,22 @@ country_event = {
 			limit = { is_faction_leader = yes }
 			leave_faction = yes
 		}
+
+		custom_effect_tooltip = ger_aid
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Global Volunteer Division"
+			}
+			remove_ideas = {
+				GER_plan_offensive
+				GER_aid_production
+				Emergency_Orders
+				Emergency_Orders_def
+				Emergency_Orders_attack
+				GER_war_time_logistics
+				GER_foreign_training_staff
+			}
+		}
 	}
 
 	# Imprison head nazis for life
@@ -735,6 +751,22 @@ country_event = {
 		if = {
 			limit = { is_faction_leader = yes }
 			leave_faction = yes
+		}
+
+		custom_effect_tooltip = ger_aid
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Global Volunteer Division"
+			}
+			remove_ideas = {
+				GER_plan_offensive
+				GER_aid_production
+				Emergency_Orders
+				Emergency_Orders_def
+				Emergency_Orders_attack
+				GER_war_time_logistics
+				GER_foreign_training_staff
+			}
 		}
 	}
 }

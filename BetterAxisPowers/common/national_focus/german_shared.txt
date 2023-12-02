@@ -4452,7 +4452,11 @@ shared_focus = {
 		NOT = { has_completed_focus = GER_Battle_Plan }
 		OR = {
 			has_completed_focus = GER_shadow_of_past
-			has_completed_focus = GER_soviet_ally
+			AND = {
+				has_completed_focus = GER_soviet_ally
+				SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
+			}
+			
 		}
 	}
 	x = -2

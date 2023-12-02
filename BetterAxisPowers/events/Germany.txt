@@ -4837,6 +4837,7 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		dismantle_faction = yes
 		add_stability = -0.1
+		set_country_flag = SOV_GER_ALIANCE_Y
 		every_other_country = {
 			limit = {
 				OR = {

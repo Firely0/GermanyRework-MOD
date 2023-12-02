@@ -16,6 +16,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_goal_gernonflagdec"
+		texturefile = "gfx/interface/goals/gernonflagdec.dds"
+	}
+
+	spriteType = {
 		name = "GFX_goal_Jagdpanther"
 		texturefile = "gfx/interface/goals/Jagdpanther.dds"
 	}
@@ -563,6 +568,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_gernonflag"
 		texturefile = "gfx/interface/goals/gernonflag.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_gerdecflag"
+		texturefile = "gfx/interface/goals/gerdecflag.dds"
 	}
 
 	SpriteType = {

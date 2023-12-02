@@ -20,6 +20,83 @@ focus_tree = {
 	default = no
 
 	focus = {
+		id = limited_rearmament_focus
+		icon = GFX_goal_generic_build_tank
+		x = -15
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = construction_effort_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_limited_rearmament_focus_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ENG_limited_rearmament_focus_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ENG_limited_rearmament_focus_2IC
+			}
+		}
+	}
+
+	focus = {
 		id = crypto_bomb_focus
 		relative_position_id = limited_rearmament_focus
 		available = {
@@ -114,6 +191,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = maud_focus
 		available = { is_in_faction_with = USA }
@@ -140,84 +218,6 @@ focus_tree = {
 		}
 	}
 	
-	
-	focus = {
-		id = limited_rearmament_focus
-		icon = GFX_goal_generic_build_tank
-		x = -15
-		y = 0
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = construction_effort_tt
-				NOT = {
-					any_owned_state = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = ENG_limited_rearmament_focus_2IC }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = ENG_limited_rearmament_focus_2IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = ENG_limited_rearmament_focus_2IC
-			}
-		}
-	}
-
 	focus = {
 		id = radar_focus1
 		prerequisite = { focus = limited_rearmament_focus }
@@ -559,6 +559,31 @@ focus_tree = {
 	}
 
 	focus = {
+		id = uk_industrial_focus
+		text = industrial_effort
+		prerequisite = { focus = limited_rearmament_focus }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -3
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
 		id = uk_industrial_focus_1
 		text = construction_effort
 		prerequisite = { focus = uk_industrial_focus }
@@ -599,31 +624,6 @@ focus_tree = {
 					instant_build = yes
 				}
 				set_state_flag = industrial_effort_fc_IC
-			}
-		}
-	}
-
-	focus = {
-		id = uk_industrial_focus
-		text = industrial_effort
-		prerequisite = { focus = limited_rearmament_focus }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = -3
-		y = 1
-		relative_position_id = limited_rearmament_focus
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}	
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1.0
-				uses = 2
-				category = industry
 			}
 		}
 	}
@@ -689,28 +689,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = ENG_special_air_service
-		prerequisite = { focus = air_rearmament_focus }
-		prerequisite = { focus = army_rearmament_focus }
-		available = { 
-		}
-		continue_if_invalid = yes
-		icon = GFX_focus_eng_special_air_service
-		x = 2
-		y = 1
-		relative_position_id = army_rearmament_focus
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-			add_ideas = ENG_special_air_service_idea
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ENG_david_stirling
-		}
-	}
-	
 	focus = {
 		id = royal_ordinance_focus
 		available = {
@@ -1309,6 +1287,28 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
+		}
+	}
+
+	focus = {
+		id = ENG_special_air_service
+		prerequisite = { focus = air_rearmament_focus }
+		prerequisite = { focus = army_rearmament_focus }
+		available = { 
+		}
+		continue_if_invalid = yes
+		icon = GFX_focus_eng_special_air_service
+		x = 2
+		y = 1
+		relative_position_id = army_rearmament_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = ENG_special_air_service_idea
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ENG_david_stirling
 		}
 	}
 
@@ -5570,220 +5570,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = uk_burma_focus
-		prerequisite = { focus = uk_china_focus  } 
-		available = {
-			CHI = { 
-				has_war_with = JAP 
-				NOT = { has_war_with = ENG }
-			}
-			JAP = { NOT = { is_in_faction_with = ENG } }
-		}
-
-		bypass = {
-			CHI = { exists = no }
-		}
-
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 2
-		relative_position_id = uk_china_focus
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		bypass = {
-			640 = {
-				free_building_slots = {
-					building = infrastructure
-					size < 1
-				}
-			}
-			325 = {
-				free_building_slots = {
-					building = infrastructure
-					size < 1
-				}
-			}
-			601 = {
-				free_building_slots = {
-					building = infrastructure
-					size < 2
-				}
-				free_building_slots = {
-					building = air_base
-					size < 1
-				}
-				free_building_slots = {
-					building = arms_factory
-					size < 1
-					include_locked = yes
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
-		completion_reward = {
-			640 = {
-				if = {
-					limit = { 
-						OR = { 
-							ENG = { controls_state = 640 }
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_state = 640
-							} 
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			325 = {
-				if = {
-					limit = { 
-					OR = { 
-							CHI = { controls_state = 325 }
-							any_other_country = {
-								is_in_faction_with = CHI
-								controls_state = 640
-							} 
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			601 = {
-				if = {
-					limit = { 
-						OR = { 
-							CHI = { controls_state = 601 }
-							any_other_country = {
-								is_in_faction_with = CHI
-								controls_state = 601
-							} 
-						} }
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			add_war_support = 0.05
-			if = {
-				limit = {
-					has_dlc = "Waking the Tiger"
-				}
-				unlock_decision_tooltip = CHI_expand_the_burma_road
-			}
-			CHI = {
-				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
-				country_event = britain.4
-			}
-			YUN = {
-				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
-				country_event = britain.5
-			}
-			JAP = {
-				add_opinion_modifier = { target = ENG modifier = burma_road_bad } 
-			} 
-		}
-	}
-
-	focus = {
-		id = uk_sanction_japan_focus
-		available = {
-			JAP = { 
-				ENG_focus_available_embargo_sanction = yes
-			}	
-			has_government = democratic
-		}
-		bypass = {
-			has_war_with = JAP
-		}
-		prerequisite = { focus = uk_burma_focus }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 1
-		relative_position_id = uk_burma_focus
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-	
-		available_if_capitulated = yes
-	
-		completion_reward = {
-			send_embargo = JAP
-			custom_effect_tooltip = embargo_relation_tt
-		}
-	}
-
-	focus = {
-		id = ENG_war_with_japan
-		available = {
-			has_offensive_war = no
-			JAP = {
-				ENG_focus_available_war = yes
-			}	
-			has_government = democratic
-		}
-		bypass = {
-			has_war_with = JAP
-		}
-		will_lead_to_war_with = JAP
-		prerequisite = { focus = peninsular_focus }
-		prerequisite = { focus = hk_air_focus }
-		icon = GFX_focus_attack_japan
-		x = 1
-		y = 1
-		relative_position_id = peninsular_focus
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = JAP
-				expire = 0
-			} 
-		}
-	}
-
-
-	focus = {
 		id = singapore_focus
 		prerequisite = { focus = uk_asia_focus }
 		icon = GFX_goal_generic_fortify_city
@@ -6103,6 +5889,38 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = ENG_war_with_japan
+		available = {
+			has_offensive_war = no
+			JAP = {
+				ENG_focus_available_war = yes
+			}	
+			has_government = democratic
+		}
+		bypass = {
+			has_war_with = JAP
+		}
+		will_lead_to_war_with = JAP
+		prerequisite = { focus = peninsular_focus }
+		prerequisite = { focus = hk_air_focus }
+		icon = GFX_focus_attack_japan
+		x = 1
+		y = 1
+		relative_position_id = peninsular_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP
+				expire = 0
+			} 
+		}
+	}
 	
 	focus = {
 		id = uk_china_focus 
@@ -6142,6 +5960,187 @@ focus_tree = {
 				}
 				add_opinion_modifier = { target = CHI modifier = democratic_leanings_bad }
 			}
+		}
+	}
+
+	focus = {
+		id = uk_burma_focus
+		prerequisite = { focus = uk_china_focus  } 
+		available = {
+			CHI = { 
+				has_war_with = JAP 
+				NOT = { has_war_with = ENG }
+			}
+			JAP = { NOT = { is_in_faction_with = ENG } }
+		}
+
+		bypass = {
+			CHI = { exists = no }
+		}
+
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 2
+		relative_position_id = uk_china_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			640 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+			}
+			325 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+			}
+			601 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 2
+				}
+				free_building_slots = {
+					building = air_base
+					size < 1
+				}
+				free_building_slots = {
+					building = arms_factory
+					size < 1
+					include_locked = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			640 = {
+				if = {
+					limit = { 
+						OR = { 
+							ENG = { controls_state = 640 }
+							any_other_country = {
+								is_in_faction_with = ENG
+								controls_state = 640
+							} 
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			325 = {
+				if = {
+					limit = { 
+					OR = { 
+							CHI = { controls_state = 325 }
+							any_other_country = {
+								is_in_faction_with = CHI
+								controls_state = 640
+							} 
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			601 = {
+				if = {
+					limit = { 
+						OR = { 
+							CHI = { controls_state = 601 }
+							any_other_country = {
+								is_in_faction_with = CHI
+								controls_state = 601
+							} 
+						} }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				unlock_decision_tooltip = CHI_expand_the_burma_road
+			}
+			CHI = {
+				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
+				country_event = britain.4
+			}
+			YUN = {
+				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
+				country_event = britain.5
+			}
+			JAP = {
+				add_opinion_modifier = { target = ENG modifier = burma_road_bad } 
+			} 
+		}
+	}
+
+	focus = {
+		id = uk_sanction_japan_focus
+		available = {
+			JAP = { 
+				ENG_focus_available_embargo_sanction = yes
+			}	
+			has_government = democratic
+		}
+		bypass = {
+			has_war_with = JAP
+		}
+		prerequisite = { focus = uk_burma_focus }
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		relative_position_id = uk_burma_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+	
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			send_embargo = JAP
+			custom_effect_tooltip = embargo_relation_tt
 		}
 	}
 	

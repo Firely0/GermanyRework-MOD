@@ -224,7 +224,10 @@ GER_colonial_management_category = {
 	}
 
 	visible = {
-		has_completed_focus = GER_form_colonial_police
+		OR = {
+			has_completed_focus = GER_form_colonial_police
+			has_completed_focus = GER_Military_Police
+		}
 		MLA = {
 			exists = yes
 		}

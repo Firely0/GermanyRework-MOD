@@ -1,44 +1,63 @@
+# RHINELAND
 add_namespace = GER_rhineland_n
 add_namespace = GER_rhineland
 add_namespace = GER_rhineland_isolete
 add_namespace = GER_rhineland_remind_ger
 add_namespace = GER_rhineland_remind_fra
-add_namespace = gerb
-add_namespace = ger_lost_core
-add_namespace = ger_request_qingdao
-add_namespace = ger_around_maginot_event
-add_namespace = ger_kaiser_in_exile
-add_namespace = ger_fuhrer_end
-add_namespace = GER_Create_Afrika_Corps_event
-add_namespace = GER_ITA_HQ_LOC
-add_namespace = GER_ENG_ETH_event
-add_namespace = GER_ETH_ITA_Interve
-add_namespace = GER_SWE_renew
-add_namespace = GER_denmark_problem
-add_namespace = GER_norway_problem
-add_namespace = GER_FIN_Support
-add_namespace = GER_FIN_War_Sov
-add_namespace = GER_FIN_lands
-add_namespace = GER_fate_of_andrey
-add_namespace = GER_VIC_Syria
-add_namespace = GER_offer_support_irq
-add_namespace = GER_jap_coal_trade
-add_namespace = GER_CHI_Cooperation
-add_namespace = GER_SOV_ultimatom
 add_namespace = GER_request_help
 add_namespace = GER_request_fra_help
-add_namespace = GER_no_focus_ger_com_civilwar
-add_namespace = GER_no_focus_ger_com_adolf_retire
-add_namespace = GER_civil_war_end_fascm
-add_namespace = GER_eng_trade_agreement
-add_namespace = GER_eng_naval_agreement
-add_namespace = GER_trade_danzig
+
+# Health of Adolf Hitler
+add_namespace = GER_health_adolf
+add_namespace = ger_lost_core
+add_namespace = GER_new_leader
+
+# Victory is OURS!
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
-add_namespace = GER_new_leader
-add_namespace = GER_health_adolf
 add_namespace = GER_spain_talks
+
+# War with France.. #To Do Rework
+add_namespace = ger_around_maginot_event
+
+# Kaiser in Exile
+add_namespace = ger_kaiser_in_exile
+add_namespace = ger_fuhrer_end
+
+#Operation Barbarossa
+add_namespace = GER_fate_of_andrey
+add_namespace = GER_SOV_ultimatom
+
+# the Axis
+add_namespace = GER_jap_coal_trade
+add_namespace = GER_CHI_Cooperation
+add_namespace = GER_FIN_Support
+add_namespace = GER_FIN_War_Sov
+add_namespace = GER_FIN_lands
+add_namespace = GER_SWE_renew
+add_namespace = GER_denmark_problem
+add_namespace = GER_norway_problem
+add_namespace = GER_VIC_Syria
+add_namespace = GER_offer_support_irq
+add_namespace = ger_request_qingdao
+add_namespace = GER_Create_Afrika_Corps_event
+add_namespace = GER_ITA_HQ_LOC
+
+# Diplo with United Kingdom
+add_namespace = GER_eng_trade_agreement
+add_namespace = GER_eng_naval_agreement
+
+# Civil War/s
+add_namespace = GER_no_focus_ger_com_civilwar
+add_namespace = GER_no_focus_ger_com_adolf_retire
+add_namespace = GER_civil_war_end_fascm
+
+# Other
+add_namespace = gerb
+add_namespace = GER_ENG_ETH_event
+add_namespace = GER_ETH_ITA_Interve
+add_namespace = GER_trade_danzig
 add_namespace = GER_Ernest_Cox
 
 country_event = {
@@ -685,11 +704,12 @@ country_event = {
 
 country_event = {
 	id = ger_around_maginot_event.1
-	title = "War With France"
-	desc = "GER_Around_ds"
-	picture = GFX_report_event_german_troops
-	is_triggered_only = yes
+	title = "Victory in Poland"
+	desc = "[Root.GetFrancedesc]"
+	picture = GFX_report_event_germany_victory
+	is_triggered_only = yes # Triggered with on_actions
 	fire_only_once = yes
+
 	immediate = {
 		hidden_effect = {
 			GER = {
@@ -697,183 +717,360 @@ country_event = {
 			}
 		}
 	}
+
 	option = {
-		name = ger_around_maginot_event.1.a
+		name = "Now it's France's turn.."
+
 		ai_chance = {
-			factor = 60
+			factor = 1
+		}
+
+		hidden_effect = {
+			country_event = { id = ger_around_maginot_event.2 hours = 3 }
+		}
+
+	}
+}
+
+country_event = {
+	id = ger_around_maginot_event.2
+	title = "Plans for France"
+	desc = ger_around_maginot_event.2.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes # Triggered with on_actions
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = "Erich von Manstein's Plan"
+	
+		ai_chance = {
+			base = 5
 			modifier = {
 				factor = 100
-				has_completed_focus = GER_tank_warfare
+				is_historical_focus_on = yes
 			}
 		}
-		if = {
-			limit = {
-				country_exists = BEL
-				NOT = {
-					BEL = {
-						is_in_faction_with = GER
+	
+		set_country_flag = GER_BLITZ
+		country_event = { id = ger_around_maginot_event.3 hours = 1 }
+		
+		hidden_effect = {
+			news_event = {
+				hours = 6
+				id = news.234
+			}
+		}
+	}
+	
+	option = {
+		name = "Franz Halder`s Plan"
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	
+		set_country_flag = GER_OLD_PLAN
+		complete_national_focus = GER_around_maginot
+
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = BEL
+					NOT = {
+						BEL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = BEL
 					}
 				}
-				NOT = {
-					has_war_with = BEL
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					expire = 0
+					generator = {
+						6
+					}
 				}
 			}
-			create_wargoal = {
-				type = take_state_focus
-				target = BEL
-				expire = 0
-				generator = {
-					6
+			if = {
+				limit = {
+					country_exists = LUX
+					NOT = {
+						LUX = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = LUX
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+					expire = 0
+					generator = {
+						8
+					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				country_exists = HOL
-				NOT = {
-					HOL = {
-						is_in_faction_with = GER
+	
+		hidden_effect = {
+			news_event = {
+				hours = 6
+				id = news.234
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = ger_around_maginot_event.3
+	title = "Fall Gelb Ready to Launch"
+	desc = "After the plan against France has been agreed, our soldiers are waiting for orders to launch the operation. But before that, we must choose who will command the plan."
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes # Triggered with on_actions
+	fire_only_once = yes
+
+	option = {
+		name = "Erich von Manstein will command."
+	
+		ai_chance = {
+			base = 5
+		}
+	
+		GER_erich_von_manstein = {
+			promote_leader = yes
+			add_planning = 1
+		}
+
+		hidden_effect = {
+			complete_national_focus = GER_around_maginot
+			if = {
+				limit = {
+					country_exists = BEL
+					NOT = {
+						BEL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = BEL
 					}
 				}
-				NOT = {
-					has_war_with = HOL
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					expire = 0
+					generator = {
+						6
+					}
 				}
-				NOT = {
+			}
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = {
+						HOL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = HOL
+					}
+					NOT = {
+						HOL = {
+							has_completed_focus = HOL_cave_to_the_germans
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					expire = 0
+					generator = {
+						7
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = {
+						HOL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = HOL
+					}
 					HOL = {
 						has_completed_focus = HOL_cave_to_the_germans
 					}
-				}
-			}
-			create_wargoal = {
-				type = take_state_focus
-				target = HOL
-				expire = 0
-				generator = {
-					7
-				}
-			}
-		}
-		if = {
-			limit = {
-				country_exists = HOL
-				NOT = {
-					HOL = {
-						is_in_faction_with = GER
+					NOT = {
+						HOL = {
+							has_completed_focus = HOL_the_netherlands_first
+						}
 					}
-				}
-				NOT = {
-					has_war_with = HOL
 				}
 				HOL = {
-					has_completed_focus = HOL_cave_to_the_germans
-				}
-				NOT = {
-					HOL = {
-						has_completed_focus = HOL_the_netherlands_first
+					country_event = {
+						id = mtg_germany.1
+						hours = 6
 					}
 				}
 			}
-			HOL = {
-				country_event = {
-					id = mtg_germany.1
-					hours = 6
-				}
-			}
-		}
-		if = {
-			limit = {
-				country_exists = LUX
-				NOT = {
-					LUX = {
-						is_in_faction_with = GER
+			if = {
+				limit = {
+					country_exists = LUX
+					NOT = {
+						LUX = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = LUX
 					}
 				}
-				NOT = {
-					has_war_with = LUX
-				}
-			}
-			create_wargoal = {
-				type = take_state_focus
-				target = LUX
-				expire = 0
-				generator = {
-					8
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+					expire = 0
+					generator = {
+						8
+					}
 				}
 			}
 		}
-		set_country_flag = GER_BLITZ
-		complete_national_focus = GER_around_maginot
-		hidden_effect = {
-			news_event = {
-				hours = 6
-				id = news.234
-			}
-		}
+	
 	}
+	
 	option = {
-		name = ger_around_maginot_event.1.b
+		name = "We don't have time for this."
+	
 		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 80
-				has_completed_focus = GER_Battle_Plan
-			}
+			factor = 5
 			modifier = {
 				factor = 100
-				has_completed_focus = GER_better_supply
+				is_historical_focus_on = yes
 			}
 		}
-		if = {
-			limit = {
-				country_exists = BEL
-				NOT = {
-					BEL = {
-						is_in_faction_with = GER
-					}
-				}
-				NOT = {
-					has_war_with = BEL
-				}
-			}
-			create_wargoal = {
-				type = take_state_focus
-				target = BEL
-				expire = 0
-				generator = {
-					6
-				}
-			}
+	
+		GER_erich_von_manstein = {
+			add_planning = 1
 		}
-		if = {
-			limit = {
-				country_exists = LUX
-				NOT = {
-					LUX = {
-						is_in_faction_with = GER
-					}
-				}
-				NOT = {
-					has_war_with = LUX
-				}
-			}
-			create_wargoal = {
-				type = take_state_focus
-				target = LUX
-				expire = 0
-				generator = {
-					8
-				}
-			}
-		}
-		set_country_flag = GER_OLD_PLAN
-		complete_national_focus = GER_around_maginot
+
 		hidden_effect = {
-			news_event = {
-				hours = 6
-				id = news.234
+			complete_national_focus = GER_around_maginot
+						if = {
+				limit = {
+					country_exists = BEL
+					NOT = {
+						BEL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = BEL
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					expire = 0
+					generator = {
+						6
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = {
+						HOL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = HOL
+					}
+					NOT = {
+						HOL = {
+							has_completed_focus = HOL_cave_to_the_germans
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = HOL
+					expire = 0
+					generator = {
+						7
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = {
+						HOL = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = HOL
+					}
+					HOL = {
+						has_completed_focus = HOL_cave_to_the_germans
+					}
+					NOT = {
+						HOL = {
+							has_completed_focus = HOL_the_netherlands_first
+						}
+					}
+				}
+				HOL = {
+					country_event = {
+						id = mtg_germany.1
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LUX
+					NOT = {
+						LUX = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						has_war_with = LUX
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+					expire = 0
+					generator = {
+						8
+					}
+				}
 			}
 		}
+		
 	}
+
 }
 
 country_event = {
@@ -900,16 +1097,37 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		GER = {
+
+		if = {
+			limit = {
+				has_completed_focus = GER_anschluss
+				NOT = {
+					has_completed_focus = GER_first_vienna_award
+					has_completed_focus = GER_first_ljubljana_award
+				}
+			}
 			random_list = {
-				50 = {
+				55 = {
 					country_event = { id = ger_kaiser_in_exile.2 days = 3 }
 				}
-				50 = {
+				45 = {
 					country_event = { id = ger_kaiser_in_exile.3 days = 3 }
 				}
 			}
 		}
+		else = {
+			GER = {
+				random_list = {
+					50 = {
+						country_event = { id = ger_kaiser_in_exile.2 days = 3 }
+					}
+					50 = {
+						country_event = { id = ger_kaiser_in_exile.3 days = 3 }
+					}
+				}
+			}
+		}
+
 	}
 }
 
@@ -919,8 +1137,6 @@ country_event = {
 	desc = "In a long conversation between Wilhelm II and Hermann Goring, Wilhelm II told Goring what he did not like about the regime and what needed to be done better. Goring says that the talks were fruitful and that Wilhelm was sincere."
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-
-	#Historical
 
 	option = {
 		name = "Send Official Notice to the Netherlands for his Return."
@@ -945,8 +1161,6 @@ country_event = {
 	desc = "The Dutch troops assigned to protect Wilhelm II did not allow Goring to see him. Probably Wilhelm told them not to let him in."
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-
-	#Historical
 
 	option = {
 		name = "That Poor Fool."
@@ -5342,10 +5556,6 @@ country_event = {
 	option = {
 		name = "He is Fine."
 
-		hidden_effect = {
-			activate_mission = Adolf_Hitler_Yearly_Check_ups
-		}
-
 		trigger = {
 			check_variable = { theodor_morell < 4 }
 			power_balance_value = {
@@ -5377,19 +5587,14 @@ country_event = {
 			}
 		}
 
+		hidden_effect = {
+			activate_mission = Adolf_Hitler_Yearly_Check_ups
+		}
+
 	}
 
 	option = {
 		name = "Seek Treatment with Europe`s Best Doctors"
-
-		GER_adolf_search_costs_idea_effect = yes
-		GER_adolf_best_doctor_effect = yes
-		GER_bop_decrease_need_checkup_modifier = yes
-
-		hidden_effect = {
-			add_to_variable = { best_doctors = 1 }
-			subtract_from_variable = { theodor_morell = 2 }
-		}
 
 		trigger = {
 			check_variable = { theodor_morell < 4 }
@@ -5398,14 +5603,29 @@ country_event = {
 				value < -0.01
 			}
 		}
+
+		GER_adolf_search_costs_idea_effect = yes
+		GER_adolf_best_doctor_effect = yes
+		GER_bop_decrease_need_checkup_modifier = yes
+
+		hidden_effect = {
+			add_to_variable = { best_doctors = 1 }
+			subtract_from_variable = { theodor_morell = 2 }
+			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
+		}
+
 	}
 
 	option = { #Theodor Morell
 		name = "Adolf's Personal Doctor"
 
-		GER_adolf_personal_doctor_idea_effect = yes
-		GER_adolf_personal_doctor_effect = yes
-		GER_bop_decrease_need_checkup_modifier = yes
+		trigger = {
+			check_variable = { best_doctors < 4 }
+			power_balance_value = {
+				id = GER_power_balance
+				value < -0.01
+			}
+		}
 
 		ai_chance = {
 			base = 5
@@ -5428,29 +5648,19 @@ country_event = {
 			}
 		}
 
+		GER_adolf_personal_doctor_idea_effect = yes
+		GER_adolf_personal_doctor_effect = yes
+		GER_bop_decrease_need_checkup_modifier = yes
+
 		hidden_effect = { # Adolf`s Health Getting Bad
 			add_to_variable = { adolf_hitler_rest_bad = 1 }
 			add_to_variable = { theodor_morell = 1 }
 		}
 
-		trigger = {
-			check_variable = { best_doctors < 4 }
-			power_balance_value = {
-				id = GER_power_balance
-				value < -0.01
-			}
-		}
 	}
 
 	option = {
 		name = "He just needs to rest."
-
-		GER_adolf_rest_effect = yes
-
-		hidden_effect = {
-			add_to_variable = { adolf_hitler_rest = 1 }
-			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
-		}
 
 		trigger = {
 			check_variable = { adolf_hitler_rest_bad < 5 }
@@ -5459,6 +5669,14 @@ country_event = {
 				value < -0.01
 			}
 		}
+
+		GER_adolf_rest_effect = yes
+
+		hidden_effect = {
+			add_to_variable = { adolf_hitler_rest = 1 }
+			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
+		}
+
 	}
 
 }
@@ -5740,6 +5958,8 @@ country_event = {
 		}
 	}
 }
+
+
 
 
 

@@ -2282,3 +2282,147 @@ SOV_Local_Defense = {
 	}
 
 }
+
+SOV_export_guns = {
+
+	SOV_lend_lease_coming = {
+		icon = GFX_decision_SWE_set_navy_budget
+		days_mission_timeout = 60
+		is_good = yes
+		
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOV_LEND_LEASE_EQUIPMENT
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = event_target:SOV_LEND_LEASE_SENDER
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = event_target:SOV_LEND_LEASE_SENDER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = event_target:SOV_LEND_LEASE_SENDER
+				}
+				clr_country_flag = SOV_LEND_LEASE_EQUIPMENT
+			}
+			if = {
+				limit = {
+					has_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+				}
+				add_timed_idea = {
+					idea = lend_lease_supply
+					days = 120
+				}
+				clr_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+			}
+			clr_country_flag = SOV_LEND_LEASE_REQ
+		}
+
+		complete_effect = {
+		}
+	}
+
+	SOV_ask_for_lend_lease_usa = {
+		icon = GFX_decision_ger_military_buildup
+		days_remove = 7
+		cost = 15
+
+		available = {
+			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
+			USA = {
+				has_capitulated = no 
+				OR = {
+					has_war_with = GER
+					has_completed_focus = USA_lend_lease_act
+				}
+				NOT = {
+					has_war_with = SOV
+					is_in_faction_with = SOV
+					has_government = fascism
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			USA = { country_event = sov_req_arms_event.1 }
+		}
+
+		ai_will_do = {
+			factor = 1.5
+		}
+	}
+
+	SOV_ask_for_lend_lease_eng = {
+		icon = GFX_decision_ger_military_buildup
+		cost = 15
+
+		available = {
+			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
+			ENG = {
+				has_capitulated = no 
+				has_war_with = GER
+				NOT = {
+					has_war_with = SOV
+					is_in_faction_with = SOV
+					has_government = fascism
+				}
+			}
+		}
+
+		complete_effect = {
+			ENG = { country_event = sov_req_arms_event.1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SOV_ask_for_lend_lease_fra = {
+		icon = GFX_decision_ger_military_buildup
+		cost = 15
+
+		available = {
+			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
+			FRA = {
+				has_capitulated = no 
+				has_war_with = GER
+				NOT = {
+					has_war_with = SOV
+					is_in_faction_with = SOV
+					has_government = fascism
+				}
+			}
+		}
+
+		complete_effect = {
+			FRA = { country_event = sov_req_arms_event.1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

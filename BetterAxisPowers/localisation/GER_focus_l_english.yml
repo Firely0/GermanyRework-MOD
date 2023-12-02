@@ -92,6 +92,7 @@
  ss_police:0 "Schutzstaffel"
  ss_police_final_sov:0 "Schutzstaffel"
  GER_colonial_police:0 "Colonial Police"
+ GER_military_governor_occupation:0 "Military Governor"
 
  #Repair
 
@@ -438,6 +439,7 @@
  SS_Fake_tooltip_idea:0 "Schutzstaffel"
  GER_Colonial_Police_Fake_tooltip_idea:0 "Colonial Police"
  SS_Fake_tooltip_idea_1:0 "Schutzstaffel"
+ GER_military_governor_occupation_idea:0 "Military Governor"
 
  sour_loser_v:0 "Bitter Loser"
  sour_loser_v_desc:0 "Bitterness over defeat in the Great War dominates the politics of this nation."
@@ -701,6 +703,7 @@
  GER_staff_tt:0 "\nif Selected; §RMobile Warfare§! \n\n"
  GER_staff_a_tt:0 "if Selected; §RSuperior Firepower§! \n\n"
  GER_SS_tt:0 "Unlocks Occupation Law;"
+ GER_wehrmacht_tt:0 "Unlocks a Modified Occupation Law;"
  GER_SS_Final_tt:0 "Improves Occupation Law; §YSchutzstaffel§!"
  GER_SS_Soviet_tt:0 "Unlocks Occupation Law in §YSoviet Union§! States;"
  GER_Africa_tt:0 "Unlocks Occupation Law in §YAfrica§! States;"
@@ -847,12 +850,9 @@
  ger_f_news.6.d:0 "After a long period of agreements, peace was finally restored in Europe, and with the Peace Treaty signed by England and Germany, the short-lived World War II came to an end."
  ger_f_news.7.d:0 "The German Radio announced last night that Adolf Hitler had died. an emergency government took over and announced the new leader of Germany."
 
- #Around Moginot Line
-
- ger_around_maginot_event.1.a:0 "Listen Heinz Guderian"
- ger_around_maginot_event.1.b:0 "Schlieffen 2.0"
-
- GER_Around_ds:0 "After End of War With Poland Our Generals Prepareing War With France. Invadeing France from Moginot Line is Cause us so much problems and not worth, \nWe should try go around moginot line, Our Generals Have Plans For It But After Lost of World War One They Mostly Not Beliveing We Going to Win This War, \nThey Mostly Recommanding Old Plans And Trying to Not Directly Fight With France And British, They Recommanding Occupation Of Belguim And Strike France. \nOr We Can Always Listen Heinz Guderian`s Plan. He is Recommanding Occupation of Holland and Belguim and Strike France with Blitzkrieg."
+ GER_around_desc:0 "After the victory in Poland, our armies were moved to the French border and other areas. Meanwhile, our commanders began to plan for a war with France."
+ GER_around_a_desc:0 "After the victory in Poland and the conclusion of the agreements with the Soviet Union, our commanders deployed our troops to France and other necessary areas. Now it's France's turn."
+ ger_around_maginot_event.2.d:0 "After our troops have been deployed to their designated positions, planning for our attack against France has begun. Our senior commanders are developing plans to ensure strategic superiority over France. The plans presented to us so far are Franz Halder's plan and Erich von Manstein's plan that Heinz Guderian shared with us. Whichever option we choose, we will have the chance to revise the plan."
 
  #Focus And Others
 
@@ -869,6 +869,26 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
 
+ GER_revange:0 "For our Revenge"
+ GER_revange_desc:0 ""
+ GER_anti_fascist_diplomacy:0 "Eliminate Fascism in Europe"
+ GER_anti_fascist_diplomacy_desc:0 ""
+ GER_shadow_of_past:0 "Shadow of Past"
+ GER_shadow_of_past_desc:0 ""
+ GER_Military_Police:0 "Military Police"
+ GER_Military_Police_desc:0 ""
+ GER_trust_in_wehrmacht:0 "Trust in Wehrmacht"
+ GER_trust_in_wehrmacht_desc:0 ""
+ GER_legacy_of_germany:0 "Legacy of Germany"
+ GER_legacy_of_germany_desc:0 ""
+ GER_the_germany:0 "the [Root.getname]"
+ GER_the_germany_desc:0 ""
+ GER_secure_the_nation:0 "Allow Limited Self Armament"
+ GER_secure_the_nation_desc:0 ""
+ GER_invite_usa:0 "Invite United States for alliance"
+ GER_invite_usa_desc:0 ""
+ GER_support_from_usa:0 "Support from United States"
+ GER_support_from_usa_desc:0 ""
  GER_progress_eu_union:0 "Hold European Conference"
  GER_progress_eu_union_desc:0 ""
  GER_no_reds_in_europe:0 "No Reds in Europe"
@@ -1218,7 +1238,7 @@
  GER_prepare_for_innovative_desc:0 ""
  GER_assassinate_adolf_hitler:0 "Assassinate Adolf Hitler"
  GER_assassinate_adolf_hitler_desc:0 ""
- GER_the_German_Republic:0 "the German Republic"
+ GER_the_German_Republic:0 "Secure the New State"
  GER_the_German_Republic_desc:0 ""
  GER_for_Greater_Reich:0 "Pro-Claim Greater Reich"
  GER_for_Greater_Reich_desc:0 ""

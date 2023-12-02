@@ -1,16 +1,12 @@
 ﻿add_namespace = renew_event
-
 country_event = {
 	id = renew_event.1
-	title = "Britain Wants a Special Sherman Variant"	
+	title = "Britain Wants a Special Sherman Variant"
 	desc = "After the existing tanks began to be ineffective against German tanks, the British Government created the Sherman variant that was expected to be effective against German tanks and stated that they would start production quickly if we allowed it. However, it may not be beneficial for us to share our Sherman Tank Production Plans with another government."
 	picture = GFX_report_event_tank_factory
-	
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "Of course."
-
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -18,58 +14,61 @@ country_event = {
 				factor = 100
 			}
 		}
-
-		ENG = { country_event = { id = renew_event.2 hours = 6  } }
-
+		ENG = {
+			country_event = {
+				id = renew_event.2
+				hours = 6
+			}
+		}
 		create_equipment_variant = {
 			name = "Sherman Firefly"
 			type = medium_tank_destroyer_chassis_2
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
-			main_armament_slot = tank_high_velocity_cannon
-			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_interleaved_suspension
-			armor_type_slot = tank_cast_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_2
-			special_type_slot_2 = stabilizer
-			special_type_slot_3 = squeezebore_adaptor
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = stabilizer
+				special_type_slot_3 = squeezebore_adaptor
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 13
 				tank_nsb_armor_upgrade = 9
 			}
 			# Sherman GFX not Working for UK
-			icon = "GFX_USA_improved_medium_td_medium" 
+			icon = "GFX_USA_improved_medium_td_medium"
 			model = "USA_medium_armor_entity"
 		}
-
 	}
-
-	option = { 
+	option = {
 		name = "These plans will be very useful to us."
-
 		ai_chance = {
 			factor = 1
 		}
-
-		ENG = { country_event = { id = renew_event.3 hours = 6  } }
-
+		ENG = {
+			country_event = {
+				id = renew_event.3
+				hours = 6
+			}
+		}
 		create_equipment_variant = {
 			name = "Sherman Firefly"
 			type = medium_tank_destroyer_chassis_2
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
-			main_armament_slot = tank_high_velocity_cannon
-			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_interleaved_suspension
-			armor_type_slot = tank_cast_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_2
-			special_type_slot_2 = stabilizer
-			special_type_slot_3 = squeezebore_adaptor
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = stabilizer
+				special_type_slot_3 = squeezebore_adaptor
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 13
@@ -78,63 +77,488 @@ country_event = {
 			icon = "GFX_USA_improved_medium_td_medium"
 			model = "USA_medium_armor_entity"
 		}
-		
 	}
 }
 
-country_event = { # USA Accepted
+country_event = {
+	# USA Accepted
 	id = renew_event.2
-	title = "Our Request Accepted"	
+	title = "Our Request Accepted"
 	desc = ""
 	picture = GFX_report_event_tank_factory
-	
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "Good"
-
 		create_equipment_variant = {
 			name = "Sherman Firefly"
 			type = medium_tank_destroyer_chassis_2
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
-			main_armament_slot = tank_high_velocity_cannon
-			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_interleaved_suspension
-			armor_type_slot = tank_cast_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_2
-			special_type_slot_2 = stabilizer
-			special_type_slot_3 = squeezebore_adaptor
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = stabilizer
+				special_type_slot_3 = squeezebore_adaptor
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 13
 				tank_nsb_armor_upgrade = 9
 			}
 		}
-
 		ai_chance = {
 			factor = 100
 		}
-
 	}
 }
 
-country_event = { # USA Steel Tech. Nice Job..
+country_event = {
+	# USA Steel Tech. Nice Job..
 	id = renew_event.3
-	title = "Our Request Not Accepted"	
+	title = "Our Request Not Accepted"
 	desc = ""
 	picture = GFX_report_event_tank_factory
-	
 	is_triggered_only = yes
-
-	option = { 
+	option = {
 		name = "Shit.."
-
 		ai_chance = {
 			factor = 100
 		}
 	}
 }
+
+add_namespace = sov_unlock_arms_focus
+country_event = {
+	id = sov_unlock_arms_focus.1
+	title = "Allied Support"
+	desc = "Following our entry into the war with Germany, a large amount of equipment has been provided by the USA in support of our current war. The equipment is expected to arrive soon."
+	picture = GFX_report_event_tank_factory
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = SOV_arms_purchases
+			set_country_flag = SOV_UNLOCKED_ARMS_FOCUS
+		}
+	}
+	trigger = {
+		tag = SOV
+		has_war_with = GER
+		NOT = {
+			has_country_flag = SOV_UNLOCKED_ARMS_FOCUS
+		}
+		USA = {
+			has_completed_focus = USA_lend_lease_act
+			has_war_with = GER
+			NOT = {
+				has_war_with = SOV
+			}
+			exists = yes
+			has_capitulated = no
+		}
+	}
+	option = {
+		name = "I don't know what you're talking about"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 12500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 2500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 1500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = 1000
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+			producer = USA
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = sov_unlock_arms_focus.2
+	title = "Allied Support"
+	desc = "Following our entry into the war with Germany, a large amount of equipment has been provided by the Allied Countries in support of our current war. The equipment is expected to arrive soon."
+	picture = GFX_report_event_tank_factory
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		has_war_with = GER
+		NOT = {
+			has_country_flag = SOV_UNLOCKED_ARMS_FOCUS
+		}
+		any_other_country = {
+			has_war_with = GER
+			NOT = {
+				has_war_with = SOV
+			}
+			has_capitulated = no
+			is_major = yes
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = SOV_arms_purchases
+			set_country_flag = SOV_UNLOCKED_ARMS_FOCUS
+		}
+	}
+
+	option = {
+		name = "I don't know what you're talking about"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 10000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+add_namespace = sov_req_arms_event
+country_event = {
+	id = sov_req_arms_event.1
+	title = "[FROM.getname] Requests Lend Lease"
+	desc = ""
+	picture = GFX_report_event_tank_factory
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_REQ
+			}
+			save_event_target_as = SOV_LEND_LEASE_SENDER
+		}
+	}
+
+	# ---> NO
+	option = {
+		name = "I don't know what you're talking about"
+
+		ai_chance = {
+			factor = 1
+		}
+
+		hidden_effect = {
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.3
+					hours = 12
+				}
+			}
+		}
+	}
+	# ---> Custom Versions per country
+	option = {
+		name = "Send a Certain Number of Sherman Tanks"
+		trigger = {
+			tag = USA
+			has_tech = improved_medium_tank_chassis
+			has_equipment = {
+				# Should have Related equipment in stockpile
+				medium_tank_chassis_2 > 499
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1944.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
+			}
+		}
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_CUSTOM_EQUIPMENT_SHERMAN
+			}
+			# To-do Tooltip for this
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+			# Same Event for all Text Chanced Based on SOV_LEND_LEASE_CUSTOM_EQUIPMENT_* Flags
+			send_equipment = {
+				equipment = medium_tank_chassis_2
+				amount = 500
+				target = SOV
+			}
+			activate_mission = SOV_lend_lease_coming
+		}
+	}
+	option = {
+		name = "Send a Certain Number of Hawker Hurricanes"
+		trigger = {
+			tag = ENG
+			has_tech = improved_fighter
+			has_equipment = {
+				# Should have Related equipment in stockpile
+				small_plane_airframe_2 > 499
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1940.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
+			}
+		}
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_CUSTOM_EQUIPMENT_HAWKER
+			}
+			# To-do Tooltip for this
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+			send_equipment = {
+				equipment = small_plane_airframe_2
+				amount = 500
+				target = SOV
+			}
+			activate_mission = SOV_lend_lease_coming
+		}
+	}
+	option = {
+		name = "Send a Certain Number of Renault R35 Tanks"
+		trigger = {
+			tag = FRA
+			has_tech = basic_medium_tank
+			has_equipment = {
+				# Should have Related equipment in stockpile
+				medium_tank_chassis_1 > 499
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1940.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
+			}
+		}
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_CUSTOM_EQUIPMENT_RENAULT
+			}
+			# To-do Tooltip for this
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+			send_equipment = {
+				equipment = medium_tank_chassis_1
+				amount = 500
+				target = SOV
+			}
+			activate_mission = SOV_lend_lease_coming
+		}
+	}
+	# --- END --- # To-do Planing to Add Other but not for now..
+	option = {
+		name = "Let's Give Equipment Support"
+		ai_chance = {
+			factor = 2.5
+			modifier = {
+			}
+		}
+		trigger = {
+			has_equipment = {
+				infantry_equipment > 1499
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1500
+		}
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_EQUIPMENT
+				activate_mission = SOV_lend_lease_coming				# Lend Lease Equipment comming with mission
+			}
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+		}
+	}
+	option = {
+		name = "Send Supply and Food Support"
+		ai_chance = {
+			factor = 2.5
+		}
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+				activate_mission = SOV_lend_lease_coming
+			}
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sov_req_arms_event.2
+	title = "[FROM.getname] Sends [lendlease] for support"
+	desc = "We are waiting for the support they sent to reach our ports soon."
+	picture = GFX_report_event_merchant_ship_01
+	is_triggered_only = yes
+	minor_flavor = yes
+
+	option = {
+		name = "Thanks.."
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = sov_req_arms_event.3
+	title = "[FROM.getname] Decided to Send Something"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	minor_flavor = yes
+
+	option = {
+		name = "Not good."
+
+		clr_country_flag = SOV_LEND_LEASE_REQ
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+
 

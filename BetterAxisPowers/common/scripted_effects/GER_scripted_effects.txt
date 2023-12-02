@@ -1349,23 +1349,19 @@ GER_Vichy_state_modifier_remove = {
 }
 
 GER_SOV_white_peace_check = {
-	if = {
+	every_state = {
 		limit = {
-			every_state = {
-				limit = {
-					OR = {
-						has_state_flag = mr_pact_sov_reserved_state_unnegotiable
-						has_state_flag = mr_pact_sov_reserved_state_special
-						has_state_flag = mr_pact_sov_reserved_state
-					}
-					OR = {
-						is_controlled_by = GER
-						is_controlled_by = SOV
-					}
-				}
-				transfer_state = SOV
+			OR = {
+				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				has_state_flag = mr_pact_sov_reserved_state_special
+				has_state_flag = mr_pact_sov_reserved_state
+			}
+			OR = {
+				is_controlled_by = GER
+				is_controlled_by = SOV
 			}
 		}
+		transfer_state = SOV
 	}
 	if = {
 		limit = {
@@ -1434,7 +1430,117 @@ GER_SOV_white_peace_check = {
 		}
 	}
 	clr_global_flag = GER_SOV_WHITE_PEACE_1 # End of Checks
+	set_global_flag = GER_SOV_END_OF_PACT_EVENT
 	 
+}
+
+GER_mr_pact_next_event = {
+	if = {
+		limit = {
+			country_exists = FIN
+			NOT = { FIN = { has_country_flag = mr_pact_sent_event } }
+		}
+		FIN = { set_country_flag = mr_pact_sent_event }
+		GER = {
+			country_event = mrpact_negociations_finland.1
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = EST
+			NOT = { EST = { has_country_flag = mr_pact_sent_event } }
+		}
+
+		EST = { set_country_flag = mr_pact_sent_event }
+		GER = {
+			country_event = {
+				id = mrpact_negociations_estonia.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = LAT
+			NOT = { LAT = { has_country_flag = mr_pact_sent_event } }
+		}
+		LAT = { set_country_flag = mr_pact_sent_event }
+		GER = {
+			country_event = {
+				id = mrpact_negociations_latvia.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = LIT
+			NOT = { LIT = { has_country_flag = mr_pact_sent_event } }
+		}
+
+		LIT = { set_country_flag = mr_pact_sent_event }
+		GER = {
+			country_event = {
+				id = mrpact_negociations_lithuania.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = POL
+			NOT = { POL = { has_country_flag = mr_pact_sent_event } }
+		}
+
+		POL = { set_country_flag = mr_pact_sent_event }
+		GER = {
+			country_event = {
+				id = mrpact_negociations_poland.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				FIN = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				LAT = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				LIT = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				EST = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				POL = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+		}
+
+		SOV = {
+			country_event = {
+				id = mrpact_final.1
+				hours = 5
+			}
+		}
+	}
 }
 
 GER_AUS_annex = {
@@ -1484,39 +1590,6 @@ GER_AUS_annex = {
 	add_war_support = 0.1
 	add_stability = 0.05
 	army_experience = 10
-}
-
-GER_AI_EQ = {
-	if = {
-		limit = {
-			is_ai = yes
-		}
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_2
-			amount = 20000
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = support_equipment
-			amount = 3500
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = artillery_equipment_2
-			amount = 3500
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = anti_air_equipment_2
-			amount = 3500
-			producer = GER
-		}
-		add_equipment_to_stockpile = {
-			type = motorized_equipment
-			amount = 4000
-			producer = GER
-		}
-	}
 }
 
 GER_AI_EQ_1 = {
@@ -2777,31 +2850,31 @@ GER_supply_for_libya_effect = {
 		if = {
 			limit = {
 				is_in_faction_with = GER
-			}
-			any_controlled_state = {
-				limit = {
-					has_state_flag = LIBYA_LOGISTICS_STATE
-					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-					NOT = {
-						OR = {
-							has_dynamic_modifier = {
-								modifier = NO_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = LOW_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = NORMAL_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = EXTRA_SUPPLY_STATE
+				any_controlled_state = {
+					limit = {
+						has_state_flag = LIBYA_LOGISTICS_STATE
+						NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+						NOT = {
+							OR = {
+								has_dynamic_modifier = {
+									modifier = NO_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = LOW_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = NORMAL_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = EXTRA_SUPPLY_STATE
+								}
 							}
 						}
 					}
 				}
-				add_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
+			}
+			add_dynamic_modifier = {
+				modifier = LOW_SUPPLY_STATE
 			}
 		}
 	}
@@ -2810,31 +2883,31 @@ GER_supply_for_libya_effect = {
 			limit = {
 				is_puppet_of = ITA
 				is_in_faction_with = GER
-			}
-			any_controlled_state = {
-				limit = {
-					has_state_flag = LIBYA_LOGISTICS_STATE
-					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-					NOT = {
-						OR = {
-							has_dynamic_modifier = {
-								modifier = NO_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = LOW_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = NORMAL_SUPPLY_STATE
-							}
-							has_dynamic_modifier = {
-								modifier = EXTRA_SUPPLY_STATE
+				any_controlled_state = {
+					limit = {
+						has_state_flag = LIBYA_LOGISTICS_STATE
+						NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+						NOT = {
+							OR = {
+								has_dynamic_modifier = {
+									modifier = NO_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = LOW_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = NORMAL_SUPPLY_STATE
+								}
+								has_dynamic_modifier = {
+									modifier = EXTRA_SUPPLY_STATE
+								}
 							}
 						}
 					}
 				}
-				add_dynamic_modifier = {
-					modifier = LOW_SUPPLY_STATE
-				}
+			}
+			add_dynamic_modifier = {
+				modifier = LOW_SUPPLY_STATE
 			}
 		}
 	}
@@ -3049,3 +3122,4 @@ GER_add_refund_of_ship_search = {
 		}
 	}
 }
+

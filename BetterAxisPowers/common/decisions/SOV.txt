@@ -3312,6 +3312,7 @@ SOV_propaganda_campaigns = {
 		visible = {
 			OR = {
 				has_completed_focus = SOV_smersh
+				has_completed_focus = SOV_smersh_copy
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 			has_dlc = "La Resistance"
@@ -3394,6 +3395,7 @@ SOV_propaganda_campaigns = {
 		visible = {
 			OR = {
 				has_completed_focus = SOV_smersh
+				has_completed_focus = SOV_smersh_copy
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 		}

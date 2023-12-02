@@ -5381,13 +5381,14 @@ focus_tree = {
 		cost = 2
 
 		available = {
-			always = no
-			any_enemy_country = {
-				SOV_is_major_not_original_sov = yes
+			custom_trigger_tooltip = {
+				tooltip = only_unlocked_by_events
+				always = No
 			}
 		}
 		
 		completion_reward = {
+			unlock_decision_category_tooltip = SOV_export_guns
 		}
 	}
 
@@ -6465,6 +6466,14 @@ focus_tree = {
 		id = SOV_desperate_measures
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		allow_branch = {
+			NOT = { 
+				AND = {
+					GER = { has_completed_focus = GER_soviet_ally }
+					has_country_flag = SOV_GER_ALIANCE_Y
+				}
+			}
+		}
 		x = 3
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
@@ -6489,17 +6498,101 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_military_modernization
+		icon = GFX_goal_military_academy_1
+		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		x = 3
+		y = 2
+		relative_position_id = SOV_strengthen_the_mobilization_plan
+		cost = 5
+
+		allow_branch = {
+			GER = { 
+				has_completed_focus = GER_soviet_ally
+			}
+			has_country_flag = SOV_GER_ALIANCE_Y
+		}
+
+		available = {
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
+			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
+			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
+			
+			custom_effect_tooltip = SOV_lessons_of_war_ns_tt
+			
+			custom_effect_tooltip = SOV_lessons_of_war_cowed_trait_tt
+			hidden_effect = {
+				every_army_leader = {
+					limit = {
+						has_trait = trait_SOV_cowed_by_stalin_army
+					}
+					remove_unit_leader_trait =  trait_SOV_cowed_by_stalin_army
+				}
+				every_navy_leader = {
+					limit = {
+						has_trait = trait_SOV_cowed_by_stalin_navy
+					}
+					remove_unit_leader_trait =  trait_SOV_cowed_by_stalin_navy
+				}
+				swap_ideas = {
+					remove_idea = SOV_Great_Patriotic_War
+					add_idea = SOV_Great_Patriotic_War_v2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_new_military_doctrine
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = SOV_military_modernization }
+		x = 3
+		y = 3
+		relative_position_id = SOV_strengthen_the_mobilization_plan
+		cost = 5
+
+		available = {
+		}
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mobile_warfare
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_an_adaptable_army
 		icon = GFX_focus_prc_infiltration
 		prerequisite = { focus = SOV_rehabilitated_military }
 		prerequisite = { focus = SOV_desperate_measures }
+		prerequisite = { focus = SOV_military_modernization }
 		x = 1
 		y = 1
 		relative_position_id = SOV_rehabilitated_military
 		cost = 10
 
-		available = {
+		allow_branch = {
+			NOT = {
+				has_global_flag = SOV_HIDE_ALWAYS
+			}
+		}
 
+		available = {
 		}
 		
 		search_filters = {}
@@ -6566,10 +6659,17 @@ focus_tree = {
 		id = SOV_penal_battalions
 		icon = GFX_focus_SOV_penal_battalions
 		prerequisite = { focus = SOV_desperate_measures }
+		prerequisite = { focus = SOV_military_modernization }
 		x = 2
 		y = 1
 		relative_position_id = SOV_desperate_measures
 		cost = 5
+
+		allow_branch = {
+			NOT = {
+				has_global_flag = SOV_HIDE_ALWAYS
+			}
+		}
 
 		available = {
 			has_war = yes
@@ -6693,7 +6793,47 @@ focus_tree = {
 		cost = 10
 
 		available = {
+		}
+		
+		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_ideas = SOV_smersh
+			}
+			else = {
+				add_ideas = SOV_smersh_no_lar
+			}
+
+			if = {
+				limit = {
+					has_government = communism
+				}
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				if = {
+					limit ={ has_dlc = "La Resistance" }
+					unlock_decision_tooltip = SOV_propaganda_treacherous_enemy
+				}
+				unlock_decision_tooltip = SOV_propaganda_do_not_blab
+				custom_effect_tooltip = propaganda_campaign_requirement_tt
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_smersh_copy
+		text = SOV_smersh
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_new_military_doctrine }
+		x = -1
+		y = 2
+		relative_position_id = SOV_military_modernization
+		cost = 10
+
+		available = {
 		}
 		
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
@@ -6746,6 +6886,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_barrier_troops_copy
+		text = SOV_barrier_troops
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SOV_new_military_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = SOV_penal_battalions
+		cost = 5
+
+		available = {
+
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_to_variable = { SOV_the_red_army_army_org_regain = 0.1 }
+			custom_effect_tooltip = SOV_barrier_troops_ns_tt
+		}
+	}
+
+	focus = {
 		id = SOV_experts_in_camouflage
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = SOV_military_reorganization }
@@ -6773,6 +6935,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
+		prerequisite = { focus = SOV_new_military_doctrine }
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
@@ -6879,6 +7042,7 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
+		prerequisite = { focus = SOV_new_military_doctrine }
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
@@ -6886,8 +7050,13 @@ focus_tree = {
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
 
-		available = {
+		allow_branch = {
+			NOT = {
+				has_global_flag = SOV_HIDE_ALWAYS
+			}
+		}
 
+		available = {
 		}
 
 		bypass = {

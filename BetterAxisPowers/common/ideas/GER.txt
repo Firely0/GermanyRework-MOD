@@ -1846,6 +1846,27 @@ ideas = {
 			}
 		}
 
+		GER_military_governor_occupation_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = -0.35
+				compliance_gain = -0.045
+				required_garrison_factor = 0.0
+				local_factories = 0.05
+				local_resources = 0.10
+				local_manpower 	= 0.08
+			}
+		}
+
 		SS_Fake_tooltip_idea = {
 
 			allowed = {
@@ -2527,8 +2548,7 @@ ideas = {
 
 			modifier = {
 				max_planning_factor = 0.1
-				planning_speed = 0.1
-				land_night_attack = 0.1
+				land_night_attack = 0.05
 			}
 		}
 
@@ -2552,8 +2572,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				breakthrough_factor = 0.1
-				coordination_bonus = 0.1
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.05
+				coordination_bonus = 0.05
 			}
 		}
 
