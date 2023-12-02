@@ -171,7 +171,7 @@ focus_tree = {
 		}
 		x = 70
 		y = 1
-		cost = 1
+		cost = 5
 		offset = {
 			x = -25
 			y = 0
@@ -198,6 +198,13 @@ focus_tree = {
 			}
 			add_ideas = abwehr_agent
 			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_global_flag = GER_UNLOCK_HITLER_1 }
+					}
+					complete_national_focus = GER_Fuhrer
+					set_global_flag = GER_UNLOCK_HITLER_1
+				}	
 				if = {
 					limit = {
 						is_ai = yes
@@ -3395,7 +3402,7 @@ focus_tree = {
 										limit = {
 											is_core_of = ENG
 										}
-										set_state_controller = PREV
+										transfer_state_to = ENG
 									}
 								}
 							}
@@ -6237,6 +6244,7 @@ focus_tree = {
 				}
 				GER = {
 					transfer_state = 912
+					add_state_core = 912
 				}
 			}
 			if = {
@@ -9990,15 +9998,10 @@ focus_tree = {
 			}
 		}
 		available = {
-			is_puppet = no
-			has_government = fascism
-			has_country_leader = {
-				character = GER_adolf_hitler
-				ruling_only = yes
-			}
-			NOT = {
-				has_completed_focus = GER_against_fuhrer
-			}
+			custom_trigger_tooltip = {
+				tooltip = GER_hitler_focus_unlock
+				always = no
+			}	
 		}
 		offset = {
 			x = -1
@@ -11203,7 +11206,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = GER_German_People_idea
-			add_state_core = 912
 			add_state_core = 69
 			add_state_core = 4
 			add_state_core = 848
@@ -11240,22 +11242,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
-			add_state_core = 912
-			add_state_core = 69
-			add_state_core = 4
-			add_state_core = 848
-			add_state_core = 153
-			add_state_core = 152
-			add_state_core = 653
-			add_state_core = 86
-			add_state_core = 807
-			add_state_core = 85
-			add_state_core = 188
-			add_state_core = 102
-			add_state_core = 39
-			add_state_core = 850
-			add_state_core = 28
-			add_state_core = 8
 		}
 	}
 	focus = {
@@ -13014,7 +13000,7 @@ focus_tree = {
 		relative_position_id = GER_rhineland_demilitarized
 		x = -23
 		y = 1
-		cost = 1
+		cost = 5
 		offset = {
 			x = 24
 			y = 0

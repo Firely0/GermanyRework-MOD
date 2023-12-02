@@ -2371,6 +2371,8 @@ GER_ignore_vichy_we_will_annex_them_later = {
 	enable = {
 		country_exists = VIC
 	}
+	abort_when_not_enabled = yes
+
 
 	ai_strategy = {
 		type = ignore
@@ -2894,7 +2896,11 @@ GER_pause_in_SOV_v2 = { #We got this far but our home is under siege
 }
 
 GER_we_dont_believe_in_mountain_tanks = {
-	enable = { always = yes }
+	enable = { date < 1943.1.1 }
+
+	abort = {
+		date > 1943.1.1
+	}
 
 	ai_strategy = {
 		type = front_armor_score

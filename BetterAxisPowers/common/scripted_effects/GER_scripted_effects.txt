@@ -1361,7 +1361,7 @@ GER_SOV_white_peace_check = {
 				is_controlled_by = SOV
 			}
 		}
-		transfer_state = SOV
+		transfer_state_to = SOV
 	}
 	if = {
 		limit = {
@@ -2850,31 +2850,31 @@ GER_supply_for_libya_effect = {
 		if = {
 			limit = {
 				is_in_faction_with = GER
-				any_controlled_state = {
-					limit = {
-						has_state_flag = LIBYA_LOGISTICS_STATE
-						NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-						NOT = {
-							OR = {
-								has_dynamic_modifier = {
-									modifier = NO_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = LOW_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = NORMAL_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = EXTRA_SUPPLY_STATE
-								}
+			}
+			every_controlled_state = {
+				limit = {
+					has_state_flag = LIBYA_LOGISTICS_STATE
+					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = NO_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = LOW_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = NORMAL_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = EXTRA_SUPPLY_STATE
 							}
 						}
 					}
 				}
-			}
-			add_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
+				add_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
 			}
 		}
 	}
@@ -2883,31 +2883,31 @@ GER_supply_for_libya_effect = {
 			limit = {
 				is_puppet_of = ITA
 				is_in_faction_with = GER
-				any_controlled_state = {
-					limit = {
-						has_state_flag = LIBYA_LOGISTICS_STATE
-						NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
-						NOT = {
-							OR = {
-								has_dynamic_modifier = {
-									modifier = NO_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = LOW_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = NORMAL_SUPPLY_STATE
-								}
-								has_dynamic_modifier = {
-									modifier = EXTRA_SUPPLY_STATE
-								}
+			}
+			every_controlled_state = {
+				limit = {
+					has_state_flag = LIBYA_LOGISTICS_STATE
+					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = NO_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = LOW_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = NORMAL_SUPPLY_STATE
+							}
+							has_dynamic_modifier = {
+								modifier = EXTRA_SUPPLY_STATE
 							}
 						}
 					}
 				}
-			}
-			add_dynamic_modifier = {
-				modifier = LOW_SUPPLY_STATE
+				add_dynamic_modifier = {
+					modifier = LOW_SUPPLY_STATE
+				}
 			}
 		}
 	}

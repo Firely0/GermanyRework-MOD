@@ -3232,39 +3232,49 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = dornier_focus
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = junkers_focus
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = messerschmitt_focus
-
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = dornier
-				}
-				swap_ideas = {
-					remove_idea = dornier
-					add_idea = dornier_focus
-				}
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
 			}
-			else_if = {
-				limit = {
-					has_idea = junkers
+			mio:GER_messerschmitt_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_junkers_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_dornier_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = dornier_focus
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = junkers_focus
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = messerschmitt_focus
+	
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = dornier
+					}
+					swap_ideas = {
+						remove_idea = dornier
+						add_idea = dornier_focus
+					}
 				}
-				swap_ideas = {
-					remove_idea = junkers
-					add_idea = junkers_focus
+				else_if = {
+					limit = {
+						has_idea = junkers
+					}
+					swap_ideas = {
+						remove_idea = junkers
+						add_idea = junkers_focus
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = messerschmitt
-				}
-				swap_ideas = {
-					remove_idea = messerschmitt
-					add_idea = messerschmitt_focus
+				else_if = {
+					limit = {
+						has_idea = messerschmitt
+					}
+					swap_ideas = {
+						remove_idea = messerschmitt
+						add_idea = messerschmitt_focus
+					}
 				}
 			}
 		}
@@ -3334,38 +3344,48 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = porsche_focus
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = henschel_focus
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = GER_MAN_Focus
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = porsche
-				}
-				swap_ideas = {
-					remove_idea = porsche
-					add_idea = porsche_focus
-				}
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
 			}
-			else_if = {
-				limit = {
-					has_idea = henschel
+			mio:GER_man_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_henschel_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_porsche_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = porsche_focus
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = henschel_focus
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GER_MAN_Focus
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = porsche
+					}
+					swap_ideas = {
+						remove_idea = porsche
+						add_idea = porsche_focus
+					}
 				}
-				swap_ideas = {
-					remove_idea = henschel
-					add_idea = henschel_focus
+				else_if = {
+					limit = {
+						has_idea = henschel
+					}
+					swap_ideas = {
+						remove_idea = henschel
+						add_idea = henschel_focus
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = GER_MAN
-				}
-				swap_ideas = {
-					remove_idea = GER_MAN
-					add_idea = GER_MAN_Focus
+				else_if = {
+					limit = {
+						has_idea = GER_MAN
+					}
+					swap_ideas = {
+						remove_idea = GER_MAN
+						add_idea = GER_MAN_Focus
+					}
 				}
 			}
 		}

@@ -479,8 +479,38 @@ country_event = {
 	option = {
 		name = "Let's Give Equipment Support"
 		ai_chance = {
-			factor = 2.5
+			base = 1
 			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1940.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
 			}
 		}
 		trigger = {
@@ -507,11 +537,108 @@ country_event = {
 	option = {
 		name = "Send Supply and Food Support"
 		ai_chance = {
-			factor = 2.5
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1940.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
+			}
+		}
+		trigger = {
+			NOT = {
+				SOV = { has_idea = lend_lease_supply }
+			}
 		}
 		hidden_effect = {
 			SOV = {
 				set_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+				activate_mission = SOV_lend_lease_coming
+			}
+			SOV = {
+				country_event = {
+					id = sov_req_arms_event.2
+				}
+			}
+		}
+	}
+	option = {
+		name = "Send Transport Support"
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				add = 2
+			}
+			modifier = {
+				date > 1940.1.1
+				add = -2
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.15
+				}
+				add = -5
+			}
+			modifier = {
+				GER = {
+					surrender_progress > 0.25
+				}
+				add = -10
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.15
+				}
+				add = 2.5
+			}
+			modifier = {
+				SOV = {
+					surrender_progress > 0.25
+				}
+				add = 5
+			}
+		}
+
+		trigger = {
+			has_equipment = {
+				train_equipment_1 > 99
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment_1
+			amount = -100
+		}
+		
+		hidden_effect = {
+			SOV = {
+				set_country_flag = SOV_LEND_LEASE_TRANSPORT
 				activate_mission = SOV_lend_lease_coming
 			}
 			SOV = {

@@ -2298,7 +2298,8 @@ SOV_export_guns = {
 			always = no
 		}
 
-		visible = {
+		activation = {
+			always = no
 		}
 
 		timeout_effect = {
@@ -2332,6 +2333,19 @@ SOV_export_guns = {
 					days = 120
 				}
 				clr_country_flag = SOV_LEND_LEASE_SUPPLY_FOOD
+			}
+			if = {
+				limit = {
+					has_country_flag = SOV_LEND_LEASE_TRANSPORT
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = truck_equipment_1
+					amount = 250
+				}
 			}
 			clr_country_flag = SOV_LEND_LEASE_REQ
 		}

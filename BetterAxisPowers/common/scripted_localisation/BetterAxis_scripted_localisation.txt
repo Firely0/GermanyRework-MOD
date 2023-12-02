@@ -139,4 +139,10 @@ defined_text = {
 		}
 		localization_key = "Supply and Food"
 	}
+	text = {
+		trigger = {
+			has_country_flag = SOV_LEND_LEASE_TRANSPORT
+		}
+		localization_key = "Trains and Trucks"
+	}
 }

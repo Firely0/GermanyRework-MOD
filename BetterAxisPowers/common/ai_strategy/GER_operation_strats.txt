@@ -2,9 +2,12 @@
  	allowed = {
  		tag = GER
  	}
+
 	enable = {
 		has_completed_focus = GER_establish_abwehr
 	}
+
+	abort = { always = no }
 
   	ai_strategy = {
  		type = intelligence_agency_usable_factories
