@@ -2,12 +2,10 @@ GER_the_red_reich = {
 	color = rgb { 175 0 42 }
 	color_ui = rgb { 175 0 42 }
 }
-
 GER_the_third_reich = {
 	color = HSV { 0 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
-
 RMK_reichskommissariat = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
@@ -53,6 +51,48 @@ UKR_september_plan_reichskommissariat = {
 MITTEL_AFR = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 115 115 115 }
+}
+
+#
+
+GER_revolution = {
+	color = rgb { 176  0  0 } #{ 250  10  10 }
+	color_ui = rgb { 220  50  50 } #{ 220  50  50 }
+}
+
+GER_sov_republic = {
+	color = rgb { 176  0  0 } #{ 250  10  10 }
+	color_ui = rgb { 220  50  50 } #{ 220  50  50 }
+}
+
+GER_peoples_republic = {
+	color = rgb { 128 128 128 } #{ 250  10  10 }
+	color_ui = rgb { 115 115 115 } #{ 220  50  50 }
+}
+
+GER_ddr = {
+	color = rgb { 119  130  145 } #{ 250  10  10 }
+	color_ui = rgb { 119  130  145 } #{ 220  50  50 }
+}
+
+GER_ddr_austria = {
+	color = rgb { 119  130  145 } #{ 250  10  10 }
+	color_ui = rgb { 119  130  145 } #{ 220  50  50 }
+}
+
+GER_united = {
+	color = rgb { 140 24 13 }
+	color_ui = rgb { 250 50 50 }
+}
+
+GER_anarchy = {
+	color = rgb { 80  10  0 } #{ 250  10  10 }
+	color_ui = rgb { 80  10  0 } #{ 220  50  50 }
+}
+
+GER_wirmer_flag = {
+	color = rgb { 128 128 128 } #{ 250  10  10 }
+	color_ui = rgb { 115 115 115 } #{ 220  50  50 }
 }
 
 # END OF MOD
