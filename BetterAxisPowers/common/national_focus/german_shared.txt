@@ -1945,10 +1945,18 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = krupp
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = krupp_nofocusver
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			custom_effect_tooltip = available_designer
+			show_mio_tooltip = GER_Krupp_tank_organization 
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = krupp
+			show_ideas_tooltip = krupp_nofocusver
+		}
 	}
 }
 

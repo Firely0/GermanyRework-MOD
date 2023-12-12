@@ -38,6 +38,24 @@ ideas = {
 
 	country = {
 
+		GER_underground_factories_idea = {
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				industry_air_damage_factor = -0.25
+				production_speed_arms_factory_factor = -0.15
+			}
+		}
+
 		fascist_influence_cs = {
 
 			allowed = {
@@ -4627,7 +4645,7 @@ ideas = {
 			}
 		}
 
-		Four_Year_Plan_1_Hide_ARMS-autarky = {
+		Four_Year_Plan_1_Hide_ARMS_autarky = {
 			picture = FourYearPlan
 			allowed = {
 				original_tag = GER
@@ -4959,8 +4977,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.25
-				production_speed_dockyard_factor = 0.25
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.33
 
@@ -5001,8 +5019,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.35
-				production_speed_dockyard_factor = 0.35
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
 
 				consumer_goods_factor = -0.33
 
@@ -5043,8 +5061,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.25
-				production_speed_dockyard_factor = 0.25
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 
 				consumer_goods_factor = -0.33
 
@@ -5086,8 +5104,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.35
-				production_speed_dockyard_factor = 0.35
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
 
 				consumer_goods_factor = -0.33
 
@@ -5128,8 +5146,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.35
-				production_speed_dockyard_factor = 0.35
+				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
 
 				consumer_goods_factor = -0.33
 
@@ -5180,7 +5198,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_naval_base_factor = 0.05
 				production_speed_radar_station_factor = 0.05
 				production_speed_air_base_factor = 0.05
@@ -5222,7 +5240,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_naval_base_factor = 0.05
 				production_speed_radar_station_factor = 0.05
 				production_speed_air_base_factor = 0.05
@@ -5252,8 +5270,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
 
 				consumer_goods_factor = -0.33
 
@@ -5261,7 +5279,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.35
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
 				production_speed_radar_station_factor = 0.05
 				production_speed_air_base_factor = 0.05
@@ -5294,8 +5312,8 @@ ideas = {
 
 			modifier = {
 
-				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
 
 				consumer_goods_factor = -0.33
 
@@ -5303,7 +5321,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor  = 0.1
 
-				production_speed_industrial_complex_factor = 0.35
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_naval_base_factor = 0.05
 				production_speed_radar_station_factor = 0.05
 				production_speed_air_base_factor = 0.05
@@ -6013,35 +6031,6 @@ ideas = {
 
 		designer = yes
 
-		krupp = {
-
-			picture = krupp
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-			}
-
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = krupp_used_tt
-					krupp_used = yes
-				}
-				has_completed_focus = GER_krupp_eco_focus
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { krupp_tank }
-
-			ai_will_do = {
-				factor = 15
-			}
-		}
-
 		porsche = {
 
 			picture = porsche
@@ -6198,9 +6187,38 @@ ideas = {
 			}
 		}
 
+		krupp_tank_idea = {
+
+			picture = krupp_tank_gfx
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = krupp_used_tt
+					krupp_used = yes
+				}
+				has_completed_focus = GER_krupp_eco_focus
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { krupp_tank }
+
+			ai_will_do = {
+				factor = 15
+			}
+		}
+
 		GER_Volkswagen = {
 
-			picture = volkswagen
+			picture = volkswagen_tank
 
 			allowed = {
 				original_tag = GER
@@ -6226,7 +6244,7 @@ ideas = {
 
 		GER_Mercedes = {
 
-			picture = Mercedes
+			picture = Mercedes_tank
 
 			allowed = {
 				original_tag = GER
@@ -6252,7 +6270,7 @@ ideas = {
 
 		GER_skoda = {
 
-			picture = CZE_skoda_works
+			picture = CZE_skoda_armor
 
 			allowed = {
 				original_tag = GER
@@ -6561,6 +6579,29 @@ ideas = {
 
 		}
 
+		GER_skoda_shipyards = {
+
+			picture = CZE_skoda_shipyards
+
+			allowed = {
+				original_tag = GER
+			}
+
+			available = {
+				has_idea = GER_skoda_t
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			equipment_bonus = {
+			}
+
+			traits = { coastal_defence_naval_manufacturer }
+
+		}
+
 		GER_aeb = {
 			picture = FRA_aeb
 
@@ -6761,6 +6802,32 @@ ideas = {
 			}
 		}
 
+		GER_Mercedes_t = {
+
+			picture = Mercedes
+
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+			}
+
+			available = {
+
+			}
+
+			research_bonus = {
+				air_equipment = 0.1
+			}
+
+			traits = { Mercedes_1_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 		junkers = {
 			allowed = {
 				original_tag = GER
@@ -6899,32 +6966,6 @@ ideas = {
 			}
 
 			traits = { dornier_focus_naval }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		GER_Mercedes_t = {
-
-			picture = Mercedes
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-			}
-
-			available = {
-
-			}
-
-			research_bonus = {
-				air_equipment = 0.1
-			}
-
-			traits = { Mercedes_1_trait }
 
 			ai_will_do = {
 				factor = 1
@@ -7362,6 +7403,30 @@ ideas = {
 
 			ai_will_do = {
 				factor = 15
+			}
+		}
+
+		GER_skoda_artillery = {
+
+			picture = CZE_skoda_artillery
+
+
+			allowed = {
+				original_tag = GER
+			}
+
+			available = {
+				has_idea = GER_skoda_t
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+
+			equipment_bonus = {
+
 			}
 		}
 	}

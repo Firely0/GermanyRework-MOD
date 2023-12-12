@@ -141,8 +141,23 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_Mercedes_tank"
+		texturefile = "gfx/interface/ideas/mercedes_tank.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_volkswagen"
 		texturefile = "gfx/interface/ideas/volkswagen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_volkswagen_tank"
+		texturefile = "gfx/interface/ideas/volkswagen_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_krupp_tank_gfx"
+		texturefile = "gfx/interface/ideas/krupp_tank.dds"
 	}
 
 	spriteType = {
@@ -168,6 +183,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_trait_GER_SS"
 		texturefile = "gfx/interface/traits/personal/trait_GER_SS.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_country_leader_trait"
+		texturefile = "gfx/interface/traits/personal/trait_supreme_commander.dds"
 	}
 
 }	

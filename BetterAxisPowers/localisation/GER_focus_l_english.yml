@@ -1,17 +1,19 @@
 ﻿l_english:
 
  #MIO`s 
-  # AIR - NAVY - LAND
+  # Land - Air - Naval
  GER_Mercedes_benz_organization:0 "Mercedes-Benz"
- GER_Volkswagen_organization:0 "Volkswagen"
- GER_skoda_organization:0 "Skoda"
+ GER_Volkswagen_organization:0 "Volkswagen Armor"
+ GER_Krupp_tank_organization:0 "Krupp Armor"
+ GER_Volkswagen_motorized_organization:0 "Volkswagen"
+ GER_skoda_armor_organization:0 "Skoda Armor"
+ GER_skoda_artillery_organization:0 "Skoda Artillery"
 
  GER_Mercedes_thrust:0 "Mercedes-Benz"
  
- GER_Volkswagen_motorized_organization:0 "Volkswagen"
-
  Deschimag_organization:0 "Deschimag"
  Cox_and_Danks_organization:0 "Cox and Danks"
+ GER_skoda_shipyards_organization:0 "Skoda Shipyards"
 
   # Custom Things idk.
  generic_mio_initial_trait_high_thrust_fighters_designer:0 "High Thrust Ligh Aircraft Designer"
@@ -71,6 +73,8 @@
  purged_by_hitler_desc:0 "After military failure and delayed plans, he incurred the wrath of Adolf Hitler."
  trait_GER_SS:0 "SS Member"
  trait_GER_SS_desc:0 "The person is known to be registered in SS"
+ country_leader_trait:0 "Supreme Leader"
+ country_leader_trait_desc:0 "As both the leader of the country and the head of the army, he does not have to wait for orders, but he is not interested in learning something because he is the best."
 
  #leader
 
@@ -292,6 +296,8 @@
  german_rapid_mobilization_spirit_desc:0 ""
  
  #Ideas
+ GER_underground_factories_idea:0 "Underground Factories"
+ GER_underground_factories_idea_desc:0 ""
  fascist_influence_cs:0 "Fascist Influence"
  fascist_influence_cs_desc:0 ""
  GER_War_Exhaustion:0 "War Exhaustion"
@@ -775,17 +781,21 @@
  german_kaiser_tt:0 "Changes The National Focus Tree To §YOppose Hitler§!"
 
  GER_MAN_Focus:0 "Man"
- GER_Mercedes:0 "Mercedes-Benz"
+ GER_Mercedes:0 "Mercedes-Benz Armor"
  GER_Mercedes_t:0 "Mercedes-Benz"
- GER_Volkswagen:0 "Volkswagen"
+ GER_Volkswagen:0 "Volkswagen Armor"
  GER_Volkswagen_t:0 "Volkswagen"
  Deschimag:0 "Deschimag"
  Cox_and_Danks:0 "Cox and Danks"
  GER_skoda_t:0 "Skoda"
- GER_skoda:0 "Skoda"
+ GER_skoda:0 "Skoda Armor"
+ GER_skoda_artillery:0 "Skoda Artillery"
+ GER_skoda_armor:0 "Skoda Armor"
+ GER_skoda_shipyards:0 "Skoda Shipyards"
  krupp_starter_ver:0 "Krupp"
  krupp_idea_focus:0 "Krupp"
  krupp_nofocusver:0 "Krupp"
+ krupp_tank_idea:0 "Krupp Armor"
  porsche_focus:0 "Porsche"
  henschel_focus:0 "Henschel"
  siemens_focus:0 "Siemens"
@@ -797,16 +807,16 @@
  messerschmitt_focus:0 "Messerschmitt"
  krupp_inds_focus:0 "Industrial Concern"
  electronics_concern_focus:0 "Electronics Concern"
- krupp_tank:0 "Tank Designer"
  MAN_focus_trait:0 "Tank Designer"
  henschel_focus_trait:0 "Tank Designer"
  porsche_focus_trait:0 "Tank Designer"
+ krupp_tank:0 "Multi-Role Designer"
  Skoda_trait:0 "Multi-Role Designer"
- Skoda_1_trait:0 "Multi-Role Designer"
- Volkswagen_trait:0 "Multi-Role Designer"
+ Skoda_1_trait:0 "Industrial Concern"
+ Volkswagen_trait:0 "Motorized Equipment Designer"
  Volkswagen_1_trait:0 "Multi-Role Designer"
  Mercedes_trait:0 "Multi-Role Designer"
- Mercedes_1_trait:0 "Multi-Role Designer"
+ Mercedes_1_trait:0 "Light Aircraft Designer"
 
  #Vichy Colob. With Germans!
 
@@ -885,6 +895,12 @@
  GER_hitler_is_dead:0 "Adolf Hitler is Assassinated"
  GER_hitler_is_retired:0 "Adolf Hitler is retired"
  GER_hitler_is_suicided:0 "Adolf Hitler is Suicided"
+
+ #Sleep Well Sov
+ GER_Sleep_Well_SOV:0 "[Root.GetSleepWellSovText]"
+ GER_Sleep_Well_SOV_desc:0 ""
+ GER_Sleep_Well_SOV1:0 "Diplomacy with the Soviet Union"
+ GER_Sleep_Well_SOV2:0 "Lebensraum Policy"
  
  #Molotov Ribbentrop
  GER_mol_rib_pact_a:0 "Molotov-Ribbentrop Pact"
@@ -939,7 +955,7 @@
  GER_Kaiser_desc:0 ""
  GER_flying_aces:0 "Flying Aces"
  GER_flying_aces_desc:0 ""
- GER_new_are_of_fighters:0 "New Are of Fighters"
+ GER_new_are_of_fighters:0 "New Era of Fighters"
  GER_new_are_of_fighters_desc:0 ""
  GER_new_laws:0 "New Laws"
  GER_new_laws_desc:0 ""
@@ -1380,8 +1396,6 @@
  GER_protect_reichsautobahn_desc:0 ""
  GER_protect_Berlin:0 "Protect Berlin"
  GER_protect_Berlin_desc:0 ""
- GER_Sleep_Well_SOV:0 "Lebensraum Policy"
- GER_Sleep_Well_SOV_desc:0 ""
  GER_Approach_Soviet:0 "Approach Soviet Union"
  GER_Approach_Soviet_desc:0 ""
  GER_Belarus:0 "Approach Belarus"

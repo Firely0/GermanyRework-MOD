@@ -16,7 +16,6 @@ add_namespace = GER_new_leader
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
-add_namespace = GER_spain_talks
 
 # War with France.. #To Do Rework
 add_namespace = ger_around_maginot_event
@@ -43,6 +42,7 @@ add_namespace = GER_offer_support_irq
 add_namespace = ger_request_qingdao
 add_namespace = GER_Create_Afrika_Corps_event
 add_namespace = GER_ITA_HQ_LOC
+add_namespace = GER_spain_talks
 
 # Diplo with United Kingdom
 add_namespace = GER_eng_trade_agreement
@@ -5607,6 +5607,7 @@ country_event = {
 		GER_adolf_search_costs_idea_effect = yes
 		GER_adolf_best_doctor_effect = yes
 		GER_bop_decrease_need_checkup_modifier = yes
+		GER_army_leader_convert_health = yes
 
 		hidden_effect = {
 			add_to_variable = { best_doctors = 1 }
@@ -5651,6 +5652,7 @@ country_event = {
 		GER_adolf_personal_doctor_idea_effect = yes
 		GER_adolf_personal_doctor_effect = yes
 		GER_bop_decrease_need_checkup_modifier = yes
+		GER_army_leader_convert_health = yes
 
 		hidden_effect = { # Adolf`s Health Getting Bad
 			add_to_variable = { adolf_hitler_rest_bad = 1 }

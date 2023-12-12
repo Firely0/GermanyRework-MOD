@@ -10314,11 +10314,20 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen_t
-			add_ideas = GER_volkswagen_idea
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_designer
+				show_mio_tooltip = GER_Volkswagen_organization
+				show_mio_tooltip = GER_Volkswagen_motorized_organization
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = GER_Volkswagen
+				show_ideas_tooltip = GER_Volkswagen_t
+				add_ideas = GER_volkswagen_idea
+			}
 		}
 	}
 	focus = {
@@ -10405,6 +10414,7 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
+			add_ideas = GER_underground_factories_idea
 			64 = {
 				remove_building = {
 					type = arms_factory
@@ -10428,8 +10438,6 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = {
 			focus = GER_Total_War
-		}
-		prerequisite = {
 			focus = GER_underground_factories
 		}
 		available = {
@@ -10487,6 +10495,7 @@ focus_tree = {
 			add_field_marshal_role = {
 				character = GER_SUPREM_adolf_hitler
 				traits = {
+					country_leader_trait
 					politically_connected
 					offensive_doctrine
 					old_guard
@@ -10495,7 +10504,7 @@ focus_tree = {
 				attack_skill = 3
 				defense_skill = 1
 				planning_skill = 1
-				logistics_skill = 2
+				logistics_skill = 1
 			}
 			GER_SUPREM_adolf_hitler = {
 				set_unit_leader_flag = {
@@ -11931,6 +11940,7 @@ focus_tree = {
 	focus = {
 		id = GER_Sleep_Well_SOV
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		dynamic = yes
 		prerequisite = {
 			focus = GER_foregin_affairs
 		}

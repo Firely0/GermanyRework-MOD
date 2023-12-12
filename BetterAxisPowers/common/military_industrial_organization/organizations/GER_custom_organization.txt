@@ -304,7 +304,7 @@ generic_Volkswagen_motorized_mechanized_organization = {
 
 		equipment_bonus = {
 			reliability = 0.05
-			build_cost_ic = -0.05
+			build_cost_ic = -0.1
 		}
 
 		organization_modifier = {
@@ -582,7 +582,7 @@ generic_Volkswagen_motorized_mechanized_organization = {
 	}
 }
 
-generic_skoda_ger_tank_organization = {
+generic_hardness_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
@@ -602,13 +602,14 @@ generic_skoda_ger_tank_organization = {
 		x = 7
 	}
 
+	
 	initial_trait = {
 		name = generic_mio_initial_trait_standardized_production
 		
 		equipment_bonus = {
-			ap_attack = 0.1
-			armor_value = 0.03
-			build_cost_ic = 0.03
+			hardness = 0.1
+			reliability = 0.05
+			defense = 0.05
 		}
 	}
 
@@ -807,7 +808,7 @@ generic_skoda_ger_tank_organization = {
 	}
 }
 
-generic_hardness_tank_organization = {
+generic_krupp_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
@@ -832,9 +833,8 @@ generic_hardness_tank_organization = {
 		name = generic_mio_initial_trait_standardized_production
 		
 		equipment_bonus = {
-			hardness = 0.1
-			reliability = 0.05
-			defense = 0.05
+			reliability = -0.15
+			build_cost_ic = -0.1
 		}
 	}
 

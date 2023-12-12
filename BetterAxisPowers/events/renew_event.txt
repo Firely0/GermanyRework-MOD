@@ -686,6 +686,95 @@ country_event = {
 	}
 }
 
+add_namespace = rew_generic
+
+# Notification event that leader has gotten sick
+unit_leader_event = {
+	id = rew_generic.1
+	title = generic.17.t
+	desc = generic.17.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				set_unit_leader_flag = {
+					flag = recently_sick
+					value = 1
+				}
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.25
+			}
+			add_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_sick_effect
+			}
+		}
+	}
+
+	option = {
+		name = unfortunate
+		effect_tooltip = {
+			FROM = {
+				add_unit_leader_trait = sick
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.25
+			}
+			add_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_sick_effect
+			}
+		}
+	}	
+}
+
+# Notification event that leader has been wounded
+country_event = {
+	id = rew_generic.2
+	title = generic.18.t
+	desc = generic.18.d
+	
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.35
+			}
+			add_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_wounded_effect
+			}
+		}
+	}
+
+	option = {
+		name = unfortunate
+		effect_tooltip = {
+			FROM = {
+				add_unit_leader_trait = wounded
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.35
+			}
+			add_power_balance_modifier = {
+				id = GER_power_balance
+				modifier = GER_power_balance_need_wounded_effect
+			}
+		}
+	}	
+}
 
 
 

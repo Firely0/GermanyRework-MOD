@@ -16,6 +16,20 @@ leader_traits = {
 		}
 	}
 
+	country_leader_trait = {
+		type = land
+		trait_type = personality_trait
+
+		non_shared_modifier = {
+			coordination_bonus = 0.1
+			initiative_factor = 0.05
+			experience_gain_factor = -0.25
+			sickness_chance = 0.15
+			wounded_chance_factor = 0.15
+		}
+		
+	}
+
 	trait_GER_SS = {
 		type = land
 		trait_type = personality_trait

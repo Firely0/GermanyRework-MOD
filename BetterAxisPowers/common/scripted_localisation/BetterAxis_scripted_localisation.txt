@@ -92,6 +92,25 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetSleepWellSovText
+	text = {
+		trigger = {
+			OR = {
+				NOT = { has_completed_focus = GER_ussr_war_goal }
+				#NOT = { has_completed_focus = GER_soviet_ally }
+			}
+		}
+		localization_key = GER_Sleep_Well_SOV1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = GER_ussr_war_goal
+		}
+		localization_key = GER_Sleep_Well_SOV2
+	}
+}
+
+defined_text = {
 	name = GetFrancedesc
 	text = {
 		trigger = {

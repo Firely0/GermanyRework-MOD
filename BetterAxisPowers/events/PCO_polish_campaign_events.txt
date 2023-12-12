@@ -2457,6 +2457,26 @@ country_event = {
 					set_state_flag = mr_pact_ger_reserved_state
 				}
 			}
+			if = {
+				limit = {
+					LIT = {
+						NOT = {
+							OR = {
+								has_country_flag = mr_pact_into_german_sphere_of_influence
+								has_country_flag = mr_pact_into_soviet_sphere_of_influence
+							}
+						}
+					}
+					784 = {
+						NOT = {
+							has_state_flag = mr_pact_sov_reserved_state_special
+						}
+					}
+				}
+				784 = {
+					set_state_flag = mr_pact_sov_reserved_state_special
+				}
+			}
 			SOV = {
 				country_event = {
 					id = mrpact_final.1
@@ -2745,6 +2765,26 @@ country_event = {
 				}
 				72 = {
 					set_state_flag = mr_pact_ger_reserved_state
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						NOT = {
+							OR = {
+								has_country_flag = mr_pact_into_german_sphere_of_influence
+								has_country_flag = mr_pact_into_soviet_sphere_of_influence
+							}
+						}
+					}
+					784 = {
+						NOT = {
+							has_state_flag = mr_pact_sov_reserved_state_special
+						}
+					}
+				}
+				784 = {
+					set_state_flag = mr_pact_sov_reserved_state_special
 				}
 			}
 			SOV = {
@@ -3087,6 +3127,26 @@ country_event = {
 				}
 				72 = {
 					set_state_flag = mr_pact_ger_reserved_state
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						NOT = {
+							OR = {
+								has_country_flag = mr_pact_into_german_sphere_of_influence
+								has_country_flag = mr_pact_into_soviet_sphere_of_influence
+							}
+						}
+					}
+					784 = {
+						NOT = {
+							has_state_flag = mr_pact_sov_reserved_state_special
+						}
+					}
+				}
+				784 = {
+					set_state_flag = mr_pact_sov_reserved_state_special
 				}
 			}
 			SOV = {
@@ -3434,6 +3494,26 @@ country_event = {
 					set_state_flag = mr_pact_ger_reserved_state
 				}
 			}
+			if = {
+				limit = {
+					LIT = {
+						NOT = {
+							OR = {
+								has_country_flag = mr_pact_into_german_sphere_of_influence
+								has_country_flag = mr_pact_into_soviet_sphere_of_influence
+							}
+						}
+					}
+					784 = {
+						NOT = {
+							has_state_flag = mr_pact_sov_reserved_state_special
+						}
+					}
+				}
+				784 = {
+					set_state_flag = mr_pact_sov_reserved_state_special
+				}
+			}
 			SOV = {
 				country_event = {
 					id = mrpact_final.1
@@ -3741,6 +3821,26 @@ country_event = {
 				}
 				72 = {
 					set_state_flag = mr_pact_ger_reserved_state
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						NOT = {
+							OR = {
+								has_country_flag = mr_pact_into_german_sphere_of_influence
+								has_country_flag = mr_pact_into_soviet_sphere_of_influence
+							}
+						}
+					}
+					784 = {
+						NOT = {
+							has_state_flag = mr_pact_sov_reserved_state_special
+						}
+					}
+				}
+				784 = {
+					set_state_flag = mr_pact_sov_reserved_state_special
 				}
 			}
 			SOV = {
