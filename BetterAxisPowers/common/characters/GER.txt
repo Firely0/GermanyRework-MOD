@@ -64,21 +64,6 @@ characters={
 		}
 	}
 
-	GER_wilhelm_pieck={
-		name=GER_wilhelm_pieck
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_wilhelm_pieck
-			}
-		}
-		country_leader={
-			ideology=stalinism
-			traits={ exiled }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
 	GER_wilhelm_ii={ #Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
 		name=GER_wilhelm_ii
 		portraits={
@@ -662,41 +647,7 @@ characters={
 		}
 	}
 
-	GER_albert_kesselring={
-		name=GER_albert_kesselring
-		portraits={
-			army={
-				small="GFX_idea_albert_kesselring"
-			}
-			army={
-				large=GFX_portrait_GER_albert_kesselring
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = albert_kesselring
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				air_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 
-		corps_commander={
-			traits={ brilliant_strategist trait_cautious war_hero }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=32
-		}
-	}
 
 	GER_gotthard_heinrici={
 		name=GER_gotthard_heinrici
@@ -925,7 +876,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do = {
-				factor = 0
+				factor = 0.100
 			}
 		}
 
@@ -1109,7 +1060,6 @@ characters={
 			}
 		}
 	}
-
 
 	### THEORISTS ###
 
@@ -1701,6 +1651,9 @@ characters={
 				not = {
 					has_completed_focus = GER_demand_sudetenland
 				}
+				not = {
+					has_government = communism
+				}
 			}
 			traits = {
 				captain_of_industry
@@ -1736,13 +1689,23 @@ characters={
 	GER_ernst_thalmann={
 		name=GER_ernst_thalmann
 		portraits={
+			civilian={
+				large="GFX_portrait_ger_ernst_thalmann"
+			}
 			army={
 				small="GFX_idea_ernst_thalmann"
 			}
 		}
+		country_leader={
+			ideology=stalinism
+			traits={ political_prisoner }
+			expire="1956.1.1.1"
+			id=-1
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = ernst_thalmann
+			cost = 75.000
 			allowed = {
 				original_tag = GER
 			}
@@ -1755,21 +1718,26 @@ characters={
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				has_completed_focus = GER_against_fuhrer
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_a_shadow_of_past
+				}
+				NOT = { has_country_flag = thalmann_killed }
 			}
 			traits = {
 				communist_revolutionary
+				political_prisoner 
 			}
 			do_effect = {
 				not = {
-					has_government = communism
+					has_government = communism 
 				}
 			}
 			ai_will_do = {
-				factor = 0.000
+				factor = 1.000
 			}
 		}
-	}
+	}	
 
 	GER_kurt_schumacher={
 		name=GER_kurt_schumacher
@@ -1873,6 +1841,9 @@ characters={
 						has_country_flag = flight_of_hess
 					}
 				}
+				NOT = {
+					has_government = communism
+				}
 				OR = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
@@ -1908,6 +1879,7 @@ characters={
 			available = {
 				NOT = {
 					has_country_flag = GER_HIMMLER_RETIRED
+					has_government = communism
 				}
 				OR = {
 					has_government = fascism
@@ -1939,6 +1911,9 @@ characters={
 					has_country_flag = GER_reinstated_nazi_leadership
 					has_country_flag = GER_Fuhrer_in_Country
 				}
+				NOT = {
+					has_government = communism
+				}
 			}
 			ai_will_do = {
 				factor = 50
@@ -1964,13 +1939,15 @@ characters={
 			}
 			available = {
 				OR = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-					has_country_flag = GER_Fuhrer_in_Country
+					has_government = fascism 
+					has_country_flag = GER_reinstated_nazi_leadership 
+				}
+				NOT = {
+					has_government = communism
 				}
 			}
 			traits = {
-				backroom_backstabber
+				backroom_backstabber 
 			}
 			ai_will_do = {
 				factor = 0.000
@@ -1991,11 +1968,13 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
-			traits = {
-				smooth_talking_charmer
+			available = {
+				NOT = {
+					has_government = communism
+				}
 			}
-			ai_will_do = {
-				factor = 0.000
+			traits = {
+				smooth_talking_charmer 
 			}
 		}
 	}
@@ -2447,6 +2426,359 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=825
+		}
+	}
+
+	GER_wilhelm_pieck={
+		name=GER_wilhelm_pieck
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_wilhelm_pieck
+			}
+			army={
+				small="GFX_idea_wilhelm_pieck"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = wilhelm_pieck
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_a_shadow_of_past
+				}
+				NOT = {
+					has_completed_focus = GER_radical_left
+					has_completed_focus = GER_right_wing
+					has_completed_focus = GER_criticise_soviet
+				}
+			}
+			traits = {
+				silent_workhorse
+				stalins_puppet
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GER_ruth_fischer={
+		name=GER_ruth_fischer
+		gender = female 
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_ruth_fischer"
+			}
+		}
+	}
+
+	GER_heinrich_brandler={
+		name=GER_heinrich_brandler
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_heinrich_brandler"
+			}
+		}
+	}	
+
+	GER_albert_kesselring={
+		name=GER_albert_kesselring
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+			army={
+				small="GFX_idea_albert_kesselring"
+			}
+			army={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = albert_kesselring
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious war_hero }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=32
+		}
+	}	
+
+	GER_otto_korfes={
+		name = GER_otto_korfes
+		portraits = {
+			army = {
+				large="GFX_portrait_ger_otto_korfes"
+			}
+		}
+	}
+
+	GER_hans_gunter_van_hooven={ 
+		name = GER_hans_gunter_van_hooven
+		portraits = {
+			army = {
+				large="GFX_portrait_ger_hans_gunter_van_hooven"
+			}
+		}
+	}
+
+	GER_vincenz_muller={ 
+		name = GER_vincenz_muller
+		portraits = {
+			army = {
+				large="GFX_portrait_ger_vincenz_muller"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = GER_vincenz_muller
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_NVA
+			}
+			
+			traits = {
+				mobilization_staff
+			}
+		}
+	}
+
+	GER_fritz_paul_schmenkel={ 
+		name = GER_fritz_paul_schmenkel
+		portraits = {
+			army = {
+				large="GFX_portrait_ger_fritz_paul_schmenkel"
+			}
+		}
+	}
+
+	GER_luitpold_steidle={ 
+		name = GER_luitpold_steidle
+		portraits = {
+			army = {
+				large="GFX_portrait_ger_luitpold_steidle"
+			}
+		}
+	}	
+
+	GER_walter_ulbricht={
+		name=GER_walter_ulbricht
+		portraits={
+			army={
+				small="GFX_idea_walter_ulbricht"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = walter_ulbricht
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_a_shadow_of_past
+				}
+			}
+			traits = {
+				propaganda_expert
+				editor
+
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+
+	GER_erich_mielke={
+		name=GER_erich_mielke
+		portraits={
+			army={
+				large="GFX_portrait_ger_erich_mielke"
+				small="GFX_idea_erich_mielke"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = erich_mielke
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_rot_front
+				}
+			}
+			traits = {
+				prince_of_terror
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+	}	
+
+	GER_karl_artelt={
+		name=GER_karl_artelt
+		portraits={
+			army={
+				small="GFX_idea_karl_artelt"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = karl_artelt
+			cost = 75.000
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_a_shadow_of_past
+				}
+				has_country_flag = thalmann_killed
+			}
+			traits = {
+				communist_revolutionary
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+
+	GER_erich_weinert={
+		name=GER_erich_weinert
+		portraits={
+			army={
+				small="GFX_idea_erich_weinert"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = erich_weinert
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = communism
+					has_completed_focus = GER_a_shadow_of_past
+				}
+			}
+			traits = {
+				socialist_novelist
+			}
+		}
+	}	
+
+	GER_felix_scheffler={
+		name=GER_felix_scheffler
+		portraits={
+			army={
+				large=GFX_portrait_GER_felix_scheffler
+				small=GFX_portrait_GER_felix_scheffler_small
+			}
+			army={
+				small="GFX_idea_felix_scheffler"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GER_felix_scheffler
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_NVA
+			}
+			traits = {
+				navy_chief_reform_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 }

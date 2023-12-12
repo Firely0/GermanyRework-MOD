@@ -723,6 +723,7 @@ GER_last_stand_of_germany = {
 		is_good = no
 
 		activation = {
+			has_government = fascism
 			has_war = yes
 			has_civil_war = no
 			64 = {

@@ -38,7 +38,7 @@ country_event = {
 			ruling_party = communism
 			ideology = neutrality
 			size = 0.2
-			states = { 56 58 59 61 5 67 }
+			states = { 56 58 59 61 5 67 909 }
 			keep_unit_leaders = { 2 3 4 5 35 21 1000 }
 		}
 		# GER = {
@@ -2063,7 +2063,7 @@ country_event = {
 
 	trigger = {
 		original_tag = GER
-		has_completed_focus = GER_reds_amnesty
+		has_completed_focus = GER_a_shadow_of_past
 		}
 		mean_time_to_happen = { days = 60 }	
 
@@ -2089,8 +2089,9 @@ country_event = {
 
 	trigger = {
 		original_tag = GER
-		has_completed_focus = GER_reds_amnesty	
-		}
+		has_completed_focus = GER_a_shadow_of_past	
+		NOT = { has_global_flag = GER_block_civilwar_events }
+	}
 
 		mean_time_to_happen = { days = 10 }
 
@@ -2320,7 +2321,7 @@ country_event = {
 		}
 		hidden_effect = {
 			uncomplete_national_focus = {
-				focus = GER_reds_amnesty
+				focus = GER_a_shadow_of_past
 			}				
 		}
 	}
@@ -2359,7 +2360,7 @@ country_event = {
 		}
 		hidden_effect = {
 			unlock_national_focus = GER_oppose_hitler
-			unlock_national_focus = GER_reds_amnesty #顧問はcompleteじゃなくunlockでも雇用条件の「国家方針の達成」を満たす
+			unlock_national_focus = GER_a_shadow_of_past #顧問はcompleteじゃなくunlockでも雇用条件の「国家方針の達成」を満たす
 			complete_national_focus = GER_rot_front #国家方針による将軍の追加はcompleteで国家方針の効果を発動させないとできない
 			unlock_national_focus = GER_second_civil_war 
 			remove_ideas = GER_rot_front_idea #GER_rot_frontで追加される国民精神（安定度下がって共産主義支持率上がる期限付き精神）を削除
@@ -3249,7 +3250,7 @@ country_event = { #Release Thalmann or not
 	trigger = {
 		tag = GER
 		focus_progress = {
-			focus = GER_reds_amnesty
+			focus = GER_a_shadow_of_past
 			progress > 0.1
 		}
 		NOT = { has_country_flag = thalmann_killed }

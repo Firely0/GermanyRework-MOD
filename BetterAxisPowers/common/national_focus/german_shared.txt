@@ -4479,7 +4479,7 @@ shared_focus = {
 	allow_branch = {
 		NOT = { has_completed_focus = GER_Battle_Plan }
 		OR = {
-			has_completed_focus = GER_shadow_of_past
+			has_completed_focus = GER_a_shadow_of_past
 			AND = {
 				has_completed_focus = GER_soviet_ally
 				SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
@@ -4657,7 +4657,7 @@ shared_focus = {
 	prerequisite = { focus = GER_Lighting_Strike }
 	mutually_exclusive = { focus = GER_follow_wehrmacht_design }
 	allow_branch = {
-		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_shadow_of_past has_completed_focus = GER_soviet_ally } }
+		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_a_shadow_of_past has_completed_focus = GER_soviet_ally } }
 	}
 	x = -2
 	y = 4
@@ -4850,7 +4850,7 @@ shared_focus = {
 		add_political_power = 100
 		if = {
 			limit = {
-				has_completed_focus = GER_shadow_of_past
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -5401,7 +5401,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_King_Tiger }
 	prerequisite = { focus = GER_anti_air_tank }
-	allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_shadow_of_past } NOT = { has_completed_focus = GER_Battle_Plan } }
+	allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_a_shadow_of_past } NOT = { has_completed_focus = GER_Battle_Plan } }
 	x = -5
 	y = 8
 	cost = 10
@@ -5471,7 +5471,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_anti_air_tank }
 	prerequisite = { focus = GER_King_Tiger }
-	allow_branch = { has_completed_focus = GER_shadow_of_past NOT = { has_completed_focus = GER_follow_red_army_design } NOT = { has_completed_focus = GER_revive_the_kaiserreich } }
+	allow_branch = { has_completed_focus = GER_a_shadow_of_past NOT = { has_completed_focus = GER_follow_red_army_design } NOT = { has_completed_focus = GER_revive_the_kaiserreich } }
 	x = -5
 	y = 8
 	cost = 10
@@ -5494,7 +5494,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_anti_air_tank }
 	prerequisite = { focus = GER_King_Tiger }
-	allow_branch = { has_completed_focus = GER_shadow_of_past has_completed_focus = GER_follow_red_army_design }
+	allow_branch = { has_completed_focus = GER_a_shadow_of_past has_completed_focus = GER_follow_red_army_design }
 	x = -5
 	y = 8
 	cost = 10
@@ -5540,7 +5540,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_Better_Anti_Tank }
 	prerequisite = { focus = GER_repair_old_guns }
-	allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_shadow_of_past } NOT = { has_completed_focus = GER_tank_warfare } }
+	allow_branch = { has_government = fascism NOT = { has_completed_focus = GER_a_shadow_of_past } NOT = { has_completed_focus = GER_tank_warfare } }
 	x = 5
 	y = 8
 	cost = 10
@@ -5610,7 +5610,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_Better_Anti_Tank }
 	prerequisite = { focus = GER_repair_old_guns }
-	allow_branch = { has_completed_focus = GER_shadow_of_past }
+	allow_branch = { has_completed_focus = GER_a_shadow_of_past }
 	x = 5
 	y = 8
 	cost = 10
