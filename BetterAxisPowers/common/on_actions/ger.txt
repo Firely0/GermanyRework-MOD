@@ -25,6 +25,7 @@ on_actions = {
 				}
 				GER = {
 					set_technology = { mobile_warfare = 1 popup = no }
+					set_technology = { formation_flying = 1 popup = no }
 					add_ideas = i_dont_use_wargoal
 				}
 			}

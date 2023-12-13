@@ -11651,8 +11651,8 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 9
-		y = 2
-		relative_position_id = GER_Fuhrer
+		y = 4
+		relative_position_id = GER_establish_abwehr
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -14100,6 +14100,7 @@ focus_tree = {
 	focus = {
 		id = GER_the_German_Republic
 		icon = GFX_focus_generic_support_the_left_right
+		text = GER_secure_the_new_state
 		prerequisite = {
 			focus = GER_oppose_hitler
 			focus = GER_prepare_for_innovative
@@ -14963,9 +14964,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-				add_country_leader_trait = staunch_stalinist
-				add_political_power = 150
-				add_stability = 0.05
+			add_country_leader_trait = staunch_stalinist
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -22615,18 +22615,21 @@ focus_tree = {
 			factor = 3
 		}
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					capital_scope = { is_on_continent = europe }
-					NOT = { is_in_faction_with = ROOT }
-					has_government = fascism
-				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = topple_government
+			custom_effect_tooltip = GER_exile_fascism_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						capital_scope = { is_on_continent = europe }
+						NOT = { is_in_faction_with = ROOT }
+						has_government = fascism
 					}
-				}			
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = topple_government
+						}
+					}			
+				}
 			}
 		}
 	}

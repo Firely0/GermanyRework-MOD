@@ -4013,6 +4013,10 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = GER_hugo_sperrle
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = GER_ernst_udet
 		custom_effect_tooltip = GER_CAS_modifier_tt
 		hidden_effect = {
 			GER_upgrade_luftwaffe_effect = yes
@@ -4195,7 +4199,7 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		army_experience = 50
-		custom_effect_tooltip = available_political_advisor
+		custom_effect_tooltip = available_chief_of_army
 		show_ideas_tooltip = walther_von_brauchitsch
 	}
 }
@@ -4233,7 +4237,7 @@ shared_focus = {
 			uses = 4
 			category = cat_mobile_warfare
 		}
-		custom_effect_tooltip = available_political_advisor
+		custom_effect_tooltip = available_military_high_command
 		show_ideas_tooltip = erwin_rommel
 	}
 }

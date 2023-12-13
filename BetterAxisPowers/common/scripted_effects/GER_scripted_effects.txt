@@ -1789,7 +1789,7 @@ GER_Give_fascism_effect = {
 	}
 	SWE = {
 		add_opinion_modifier = {
-			target = GER
+			target = ROOT
 			modifier = oldtradeparterns
 		}
 	}
@@ -1799,7 +1799,7 @@ GER_Give_fascism_effect = {
 	}
 	SWE = {
 		add_opinion_modifier = {
-			target = GER
+			target = ROOT
 			modifier = oldtradeparterns
 		}
 	}
@@ -1810,7 +1810,6 @@ GER_Give_fascism_effect = {
 		refund_political_power = no
 	}
 	complete_national_focus = GER_establish_abwehr
-	complete_national_focus = GER_Fuhrer
 	drop_cosmetic_tag = yes
 	set_cosmetic_tag = GER_the_third_reich
 	save_event_target_as = fascist_germany_civil_war
