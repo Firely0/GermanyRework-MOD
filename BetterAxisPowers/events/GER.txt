@@ -5457,7 +5457,7 @@ country_event = {
 			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
-				uncomplete_children = yes
+				uncomplete_children = no
 				refund_political_power = no
 			}
 			complete_national_focus = GER_hitler_is_gone
@@ -5724,7 +5724,7 @@ country_event = {
 			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
-				uncomplete_children = yes
+				uncomplete_children = no
 				refund_political_power = no
 			}
 			complete_national_focus = GER_hitler_is_gone

@@ -14293,8 +14293,6 @@ focus_tree = {
 		completion_reward = {
 		custom_effect_tooltip = GER_second_civil_war_tt
 		country_event = { id = rot_germany.1 }
-		add_threat = 5
-		add_political_power = 100
 		}
 	}
 	focus = {
@@ -14380,6 +14378,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = GER_vincenz_muller
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = GER_felix_scheffler
 			add_corps_commander_role = {
 				character = GER_otto_korfes
 				traits={ JAP_communist_sympathizer } #Added in KPD2.0 update
@@ -14441,10 +14443,6 @@ focus_tree = {
 				planning_skill=2 # This should be coordination_skill, but there is a bug in the base game regarding add_naval_commander_role and it will not work properly unless it is replaced by planning_skill.
 				legacy_id=0
 			}
-			custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = GER_vincenz_muller
-			custom_effect_tooltip = available_chief_of_navy
-			show_ideas_tooltip = GER_felix_scheffler
 		}
 	}
 	focus = {
@@ -15067,7 +15065,6 @@ focus_tree = {
 					add_idea = GER_scientists_purged_2
 				}
 			}
-			add_political_power = 100
 		}
 	}
 	focus = {
@@ -15088,7 +15085,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = SAF_soviet_advisers
 			add_doctrine_cost_reduction = {
 				name = SAF_invite_soviet_advisers
@@ -15128,7 +15124,6 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { idea = GER_five_year_mixed_idea days = 1825 }
 			add_stability = -0.05
-			add_political_power = 100
 		}
 	}
 	focus = {
@@ -15148,36 +15143,35 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}	
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}	
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}	
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-			add_stability = -0.05
 			add_popularity = { ideology = communism popularity = -0.05 }
-			add_political_power = 100
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	focus = {
@@ -15304,7 +15298,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_political_power = 100
 		}
 	}
 	focus = {
