@@ -4484,7 +4484,6 @@ shared_focus = {
 				has_completed_focus = GER_soviet_ally
 				SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
 			}
-			
 		}
 	}
 	x = -2
@@ -4499,7 +4498,6 @@ shared_focus = {
 			OR = {
 				is_in_faction_with = GER
 				is_puppet_of = GER
-				exists = no
 			}
 		}
 	}
@@ -5075,6 +5073,13 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
+		OR = {
+			has_completed_focus = GER_Fuhrer
+			has_completed_focus = GER_hitler_is_gone
+			has_completed_focus = GER_reestablish_free_elections
+			has_completed_focus = GER_revive_the_kaiserreich
+			has_completed_focus = GER_NVA
+		}
 		OR = {
 			has_tech = mobile_warfare
 			has_tech = superior_firepower

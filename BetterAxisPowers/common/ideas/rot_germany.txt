@@ -219,7 +219,7 @@ ideas = {
 			modifier = {
 				training_time_factor = 0.1
 				army_org_Factor = -0.25
-				planning_speed = -0.55
+				planning_speed = -0.5
 			}
 		}
 		GER_general_loyality_questioned_idea = {
@@ -812,8 +812,7 @@ ideas = {
 				mobilization_speed = -0.300
 				production_speed_buildings_factor = -0.1
 				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1	
-				stability_weekly = -0.005									
+				industrial_capacity_dockyard = -0.1									
 			}
 		}
 		GER_communist_partisans = {

@@ -41,11 +41,20 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -25
+			x = -35
 			y = 0
 			trigger = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
+				}
+			}
+		}
+		offset = {
+			x = -35
+			y = 0
+			trigger = {
+				OR = {
+					has_completed_focus = GER_against_fuhrer
 				}
 			}
 		}
@@ -107,11 +116,20 @@ focus_tree = {
 		y = 0
 		cost = 5
 		offset = {
-			x = -25
+			x = -35
 			y = 0
 			trigger = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
+				}
+			}
+		}
+		offset = {
+			x = -35
+			y = 0
+			trigger = {
+				OR = {
+					has_completed_focus = GER_against_fuhrer
 				}
 			}
 		}
@@ -173,7 +191,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		offset = {
-			x = -25
+			x = -35
 			y = 0
 			trigger = {
 				has_completed_focus = GER_establish_abwehr
@@ -11764,10 +11782,6 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_No_Step_Back
-		prerequisite = {
-			focus = GER_Basic_Training
-			focus = GER_minimize_training
-		}
 		icon = GFX_goal_Berlinflagwfort
 		available = {
 			has_war = yes
@@ -11776,9 +11790,13 @@ focus_tree = {
 				casualties > 1500000
 			}
 		}
+		prerequisite = {
+			focus = GER_volksopper
+			focus = GER_reroute_supplies
+		}
 		cancel_if_invalid = no
 		x = 1
-		y = 2
+		y = 3
 		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
@@ -11797,8 +11815,10 @@ focus_tree = {
 	focus = {
 		id = GER_the_last_offensive
 		prerequisite = {
-			focus = GER_Basic_Training
-			focus = GER_minimize_training
+			focus = GER_volksopper
+		}
+		prerequisite = {
+			focus = GER_reroute_supplies
 		}
 		icon = GFX_goal_lastoffensive
 		available = {
@@ -11830,8 +11850,8 @@ focus_tree = {
 	focus = {
 		id = GER_reroute_supplies
 		prerequisite = {
-			focus = GER_No_Step_Back
-			focus = GER_the_last_offensive
+			focus = GER_Basic_Training
+			focus = GER_minimize_training
 		}
 		icon = GFX_focus_SOV_the_road_of_life
 		available = {
@@ -11843,7 +11863,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = -1
-		y = 3
+		y = 2
 		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
@@ -11868,8 +11888,8 @@ focus_tree = {
 	focus = {
 		id = GER_volksopper
 		prerequisite = {
-			focus = GER_No_Step_Back
-			focus = GER_the_last_offensive
+			focus = GER_Basic_Training
+			focus = GER_minimize_training
 		}
 		icon = GFX_focus_generic_concessions
 		available = {
@@ -11881,7 +11901,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		x = 1
-		y = 3
+		y = 2
 		relative_position_id = GER_Volkssturm
 		cost = 5
 		ai_will_do = {
@@ -11910,10 +11930,8 @@ focus_tree = {
 		id = GER_Europe_in_flames
 		icon = GFX_goal_EUinFlames
 		prerequisite = {
-			focus = GER_volksopper
-		}
-		prerequisite = {
-			focus = GER_reroute_supplies
+			focus = GER_No_Step_Back 
+			focus = GER_the_last_offensive
 		}
 		available = {
 			has_war = yes
@@ -13146,7 +13164,7 @@ focus_tree = {
 		cancel_if_invalid = no
 		x = -3
 		y = 1
-		relative_position_id = GER_establish_abwehr
+		relative_position_id = GER_against_fuhrer
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -14362,7 +14380,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = GER_NVA_general_staff
 			add_corps_commander_role = {
 				character = GER_otto_korfes
 				traits={ JAP_communist_sympathizer } #Added in KPD2.0 update
@@ -14516,6 +14533,9 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			set_rule = {
+				can_send_volunteers = yes
+			}
 			every_other_country = {
 				limit = {
 					is_neighbor_of = GER
@@ -14924,6 +14944,7 @@ focus_tree = {
 				news_event = { hours = 24 id = rot_news.5 }
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = GER_ddr
+				mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -15681,6 +15702,7 @@ focus_tree = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_peoples_republic
 			news_event = { hours = 6 id = rot_news.12 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -17147,6 +17169,7 @@ focus_tree = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_sov_republic
 			news_event = { hours = 6 id = rot_news.11 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -18307,6 +18330,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
+			has_completed_focus = GER_a_shadow_of_past
 			NOT = {
 				OR = {
 					has_completed_focus = GER_radical_left
@@ -18338,6 +18362,7 @@ focus_tree = {
 			}
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_sov_republic
+			mark_focus_tree_layout_dirty = yes
 			news_event = { hours = 6 id = rot_news.14 }	
 		}
 	}
@@ -18351,8 +18376,6 @@ focus_tree = {
 		available = {
 			is_in_faction = no
 		}
-#		x = 82
-#		y = 6
 		x = 0
 		y = 1
 		relative_position_id = GER_criticise_soviet
@@ -18369,6 +18392,7 @@ focus_tree = {
 				create_faction = "GER_fifth_internationale_faction"
 				set_rule = { can_create_factions = yes }
 				news_event = { hours = 12 id = rot_news.15 }
+				mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -18926,7 +18950,12 @@ focus_tree = {
 			is_subject = no
 		}
 		allow_branch = {
-			NOT = { has_completed_focus = GER_a_shadow_of_past }
+			NOT = { 
+				OR = {
+					has_completed_focus = GER_establish_abwehr
+					has_completed_focus = GER_a_shadow_of_past  
+				}
+			}
 		}
 		x = -2
 		y = 3
@@ -20846,7 +20875,12 @@ focus_tree = {
 			is_subject = no
 		}
 		allow_branch = {
-			NOT = { has_completed_focus = GER_a_shadow_of_past }
+			NOT = { 
+				OR = {
+					has_completed_focus = GER_establish_abwehr
+					has_completed_focus = GER_a_shadow_of_past  
+				}
+			}
 		}
 		cancel_if_invalid = yes
 		x = 2

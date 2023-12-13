@@ -13,11 +13,11 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_flag = GER_civil_war_fired
-			}
+		}
 		tag = GER
 		has_completed_focus = GER_second_civil_war
 		NOT = { is_subject = yes }
-		}
+	}
 
 	mean_time_to_happen = { days = 2 }	
 
@@ -41,11 +41,6 @@ country_event = {
 			states = { 56 58 59 61 5 67 909 }
 			keep_unit_leaders = { 2 3 4 5 35 21 1000 }
 		}
-		# GER = {
-		# 	GER_albert_kesselring = {
-		# 		set_nationality = GMJ
-		# 	}
-		# }
 		hidden_effect = {
 			every_other_country = {
 				limit = {
@@ -60,7 +55,6 @@ country_event = {
 					ideology = democratic
 					popularity = 0.30
 				}
-				set_cosmetic_tag = GER_provisional_gvt 
 				add_war_support = 0.9
 				add_manpower = 700000
 				add_ideas = GER_fight_till_the_end1 
@@ -106,41 +100,9 @@ country_event = {
 					amount = 600
 					producer = "POL"
 				}
-				# add_country_leader_role = {
-				# 	character = GER_albert_kesselring
-				# 	country_leader = {
-				# 		expire = "1965.1.1" #Changed from 1956.1.1 at KPD2.0 update
-				# 		ideology = despotism
-				# 		traits = {
-				# 			great_war_hero
-				# 		}
-				# 	}
-				# 	promote_leader = yes
-				# }
 
-				create_country_leader = { # This is a dummy for temporary use, and will be replaced with a character identical to the General at an event an hour later.
-					name = "GER_albert_kesselring"
-					desc = "POLITICS_ALBERT_KESSELRING_DESC"
-					picture = GFX_portrait_GER_albert_kesselring
-					expire = "1965.1.1"
-					ideology = despotism
-					traits = {
-						great_war_hero
-					}
-				}
-
-				# set_country_leader_name = { # This is a dummy for temporary use, and will be replaced with a character identical to the General at an event an hour later.
-				# 	ideology = neutrality
-				# 	name = "Herr Kesselring" # You mustn't set here a name which equals to be "Albert Kesselring", $GER_albert_kesselring$ or $albert_kesselring$, because that breaks the rot_germany.46 event. # This section is intentionally hard-coded. This is because a bug will occur if the same contents as $albert_kesselring$ are assigned in some accidental situation by using soft code. # ここはわざとハードコーディングにしています。というのも、下手にソフトコードにして何かの拍子に$albert_kesselring$と同内容を代入されるとバグが発生するからです。
-				# }
-				# set_country_leader_portrait = {
-				# 	ideology = neutrality
-				# 	portrait = GFX_portrait_GER_albert_kesselring
-				# }
-				# add_country_leader_trait = tough
 				country_event = { id = rot_germany.46 hours = 1}
 			}
-			remove_ideas = sour_loser
 			set_cosmetic_tag = GER_revolution
 		}
 				
@@ -150,7 +112,6 @@ country_event = {
 		add_ideas = GER_industry_wo_owner_idea
 		add_ideas = GER_dissidents_idea
 		add_ideas = GER_fight_till_the_end2
-		remove_ideas = general_staff
 		hidden_effect = {
 			load_oob = GER_German_Civil_War_2_communism
 			every_country = {
@@ -158,9 +119,6 @@ country_event = {
 					original_tag = GER
 					has_government = neutrality
 				}
-				# POL = {
-				# 	give_military_access = PREV
-				# }
 				set_country_flag = GER_civil_war_fired
 				load_oob = GER_German_Civil_War_2_neutrality
 			}
@@ -3204,40 +3162,6 @@ country_event = { #Denied
 		ai_chance = {
 			base = 100
 		}			
-	}
-}
-
-# Hidden event to make kesselring to leader of the junta. 内戦→ケッセルリング移動→ケッセルリング指導者化　を順番に実行する必要がある。
-country_event = {
-	id = rot_germany.46
-
-	hidden = yes
-	
-	is_triggered_only = yes
-
-	immediate = {
-		kill_country_leader = yes # Delete dummy to solve the error
-		GER = {
-			GER_albert_kesselring = {
-				set_nationality = GMJ
-			}
-		}
-	}
-
-	option = {
-		GMJ = {
-			add_country_leader_role = {
-				character = GER_albert_kesselring
-				country_leader = {
-					expire = "1965.1.1" #Changed from 1956.1.1 at KPD2.0 update
-					ideology = despotism
-					traits = {
-						great_war_hero
-					}
-				}
-				promote_leader = yes
-			}
-		}
 	}
 }
 
