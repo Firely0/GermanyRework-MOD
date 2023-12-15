@@ -1696,8 +1696,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.04
-				consumer_goods_factor = -0.09
+				fascism_drift = 0.1
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -3456,34 +3456,7 @@ ideas = {
 			}
 
 			on_remove = {
-				if = {
-					limit = {
-						has_war_with = SOV
-						has_global_flag = GER_Leningrad_win
-						has_global_flag = GER_Moscow_win
-						has_global_flag = GER_Stalingrad_win
-					}
-					GER = { add_ideas = GER_barbarossa }
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = GER_Leningrad_win
-							has_global_flag = GER_Moscow_win
-							has_global_flag = GER_Stalingrad_win
-						}
-					}
-					clr_global_flag = GER_Operation_Barbarossa_running
-					set_global_flag = GER_Operation_Barbarossa_Failed
-					GER = {
-						add_ideas = GER_barbarossa_war
-						add_timed_idea = {
-							idea = GER_War_Exhaustion
-							days = 180
-						}
-					}
-					GER = { country_event = { id = GER_health_adolf.2 hours = 6 } }
-				}
+				GER_readd_barbarossa = yes
 			}
 
 		}

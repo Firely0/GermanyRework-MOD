@@ -2934,7 +2934,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_B_Main_A
-	icon = GFX_focus_generic_combined_arms
+	icon = GFX_goal_generic_production2
 	prerequisite = { focus = GER_Eco_Plan_B }
 	x = 4
 	y = 5
@@ -2998,7 +2998,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_B_Main_B
-	icon = GFX_focus_generic_tank_production
+	icon = GFX_focus_generic_combined_arms
 	prerequisite = { focus = GER_Eco_Plan_B_Main_A }
 	x = 4
 	y = 8
@@ -3224,7 +3224,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_Side_A_1
-	icon = GFX_goal_generic_build_airforce
+	icon = GFX_focus_generic_air_bases
 	prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A }
 	x = 0
 	y = 6
@@ -3291,7 +3291,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_Side_A_2
-	icon = GFX_goal_generic_construction
+	icon = GFX_focus_generic_modernize_industry
 	prerequisite = { focus = GER_Eco_Plan_A_Main_A }
 	x = -2
 	y = 6
@@ -3336,7 +3336,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_Side_A_3
-	icon = GFX_goal_generic_army_tanks
+	icon = GFX_focus_generic_tank_production
 	prerequisite = { focus = GER_Eco_Plan_B_Main_A }
 	x = 2
 	y = 6
@@ -4014,9 +4014,9 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		custom_effect_tooltip = available_military_high_command
-		show_ideas_tooltip = GER_hugo_sperrle
+		show_ideas_tooltip = hugo_sperrle
 		custom_effect_tooltip = available_theorist
-		show_ideas_tooltip = GER_ernst_udet
+		show_ideas_tooltip = ernst_udet
 		custom_effect_tooltip = GER_CAS_modifier_tt
 		hidden_effect = {
 			GER_upgrade_luftwaffe_effect = yes

@@ -33,11 +33,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_portrait_karl_donitz_new"
-		texturefile = "gfx/leaders/GER/karl_donitz.dds"
-	}
-
-	spriteType = {
 		name = GFX_portrait_Germany_Rolf_Carls_AGA
 		texturefile = "gfx/leaders/GER/Portrait_Germany_Rolf_Carls_AGA.dds"
 	}
@@ -85,48 +80,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Alfred_Rosenberg"
 		texturefile = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
-	}
-
-	#Ideas
-
-	spriteType = { # Wrong fix later
-		name = "GFX_idea_eva_braun"
-		texturefile = "gfx/leaders/GER/Eva_Braun.dds"
-	}
-
-	spriteType = {
-		name = "GFX_idea_GER_erwin_rommel_africa"
-		texturefile = "gfx/interface/ideas/idea_GER_erwin_rommel_africa.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Otto_Ciliax_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Otto_Ciliax_AGA.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Conrad_Albrecht_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Conrad_Albrecht_AGA.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Herbert_Schultze_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Herbert_Schultze_AGA.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Rolf_Carls_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Rolf_Carls_AGA.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Otto_Kretschmer_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Otto_Kretschmer_AGA.dds"
-	}
-
-	spriteType = {
-		name = GFX_portrait_Germany_Theodore_Krancke_AGA_small
-		texturefile = "gfx/interface/ideas/idea_Germany_Theodore_Krancke_AGA.dds"
 	}
 
 }

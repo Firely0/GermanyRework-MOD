@@ -5504,10 +5504,6 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			set_country_leader_portrait = {
-				ideology = fascism
-				portrait = GFX_portrait_karl_donitz_new
-			}
 			complete_national_focus = GER_Power_Karl_Donitz
 			add_popularity = {
 				ideology = fascism

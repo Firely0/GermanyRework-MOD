@@ -53,6 +53,7 @@
  #Autonomy
  autonomy_Overthrown_Government:0 "Overthrown Government"
  autonomy_Overthrown_Government_ITA:0 "Overthrown Government"
+ autonomy_loyal_state:0 "Loyal State"
 
  #Tech Sharing
 
@@ -283,6 +284,9 @@
  eva_braun_work_as_health_care:0 "Asign as; Ministry of Health"
  eva_braun_remove_from_job:0 "Resign Eva Braun"
 
+ # Wilhelm
+ GER_demand_netherlands_puppet:0 "Align with Netherlands"
+
  #Expand Support
 
  GER_expand_support:0 "Expand Support"
@@ -454,7 +458,7 @@
  GER_Trade_with_Iran:0 "Trade Pact With Germany"
  GER_Trade_with_Iran_desc:0 ""
 
- GER_purge_comunist_support_idea:0 "Purge Communist Party"
+ GER_purge_comunist_support_idea:0 "Purge Communist Support"
  GER_purge_comunist_support_idea_desc:0 ""
 
  GER_purge_fascism_support_idea:0 "Purge Fascist Party"
@@ -860,7 +864,7 @@
 
  #Kaiser Rewrite
 
- ger_kaiser_in_exile.1.t:0 "Exiled Leader Wilhelm II"
+ ger_kaiser_in_exile.1.t:0 "Wilhelm II Speaks Against Government"
  ger_kaiser_in_exile.1.d:0 "Wilhelm II, who has been in the Netherlands for a long time, creates problems in our country with his supporters as well as his criticism of the government, and it is time to do something about this problem. But even if he did not support us in 1931, we think that the time will come when he will be called to duty for his country. What should we do?"
 
  ger_kaiser_in_exile.1.a:0 "Just Prevent It From Causing Trouble"
@@ -1307,12 +1311,12 @@
  GER_fascism_for_our_glory:0 "Establish RVP"
  GER_fascism_for_our_glory_desc:0 ""
  GER_rhineland_england:0 "Anglo-German Agreement"
- GER_rhineland_england_desc:0 ""
+ GER_rhineland_england_desc:0 "Following the failure of our attempt to militarise the Rhineland, the Communist nations in the region present a great threat to the areas where we have no troops, and we must negotiate with Britain to resolve this situation."
  GER_rhineland_france:0 "France-German Agreement"
- GER_rhineland_france_desc:0 ""
- GER_purge_comunist_support:0 "Purge Comunist Support"
+ GER_rhineland_france_desc:0 "Following the failure of our attempt to militarise the Rhineland, the Communist nations in the region present a great threat to the areas where we have no troops, and we must negotiate with France to resolve this situation."
+ GER_purge_comunist_support:0 "Anti-Communist Propaganda"
  GER_purge_comunist_support_desc:0 ""
- GER_purge_fascism_support:0 "Purge Fascist Party"
+ GER_purge_fascism_support:0 "Anti-Fascist Propaganda"
  GER_purge_fascism_support_desc:0 ""
  GER_expand_defance:0 "Cheap Production"
  GER_expand_defance_desc:0 ""

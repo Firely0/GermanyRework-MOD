@@ -31,7 +31,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_demilitarized
 		}
-		x = 71
+		x = 61
 		y = 0
 		cost = 5
 		available = {
@@ -76,6 +76,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				42 = {
 					set_demilitarized_zone = no
@@ -112,7 +113,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_rhineland_ab
 		}
-		x = 69
+		x = 59
 		y = 0
 		cost = 5
 		offset = {
@@ -187,7 +188,7 @@ focus_tree = {
 				has_completed_focus = GER_against_fuhrer
 			}
 		}
-		x = 70
+		x = 60
 		y = 1
 		cost = 5
 		offset = {
@@ -294,6 +295,13 @@ focus_tree = {
 				has_completed_focus = GER_against_fuhrer
 			}
 		}
+		offset = {
+			x = -10
+			y = 0
+			trigger = {
+				has_completed_focus = GER_rhineland_ab
+			}
+		}
 		relative_position_id = GER_establish_abwehr
 		cost = 2
 		ai_will_do = {
@@ -320,7 +328,10 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_against_fuhrer
+				OR = {
+					has_completed_focus = GER_rhineland_ab
+					has_completed_focus = GER_against_fuhrer
+				}
 			}
 		}
 		relative_position_id = GER_establish_abwehr
@@ -374,7 +385,10 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_against_fuhrer
+				OR = {
+					has_completed_focus = GER_rhineland_ab
+					has_completed_focus = GER_against_fuhrer
+				}
 			}
 		}
 		relative_position_id = GER_establish_abwehr
@@ -3491,7 +3505,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_uk_trade_agreements
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_focus_generic_british_trade
 		prerequisite = {
 			focus = GER_uk_friend
 		}
@@ -5235,7 +5249,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_luftwaffe_supremacry_jet
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_generic_jet_planes
 		prerequisite = {
 			focus = GER_Legacy_of_German_air_force
 		}
@@ -11318,6 +11332,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = GER_allow_reforms_in_laws
+			unlock_decision_tooltip = GER_demand_netherlands_puppet
 		}
 	}
 	focus = {
@@ -11603,7 +11618,7 @@ focus_tree = {
 					has_war_with = GER
 				}
 				NOT = {
-					has_completed_focus = HOL_the_only_man_in_the_dutch_government
+					has_completed_focus = HOL_wilhelminism
 				}
 			}
 		}
@@ -11621,6 +11636,10 @@ focus_tree = {
 			country_event = {
 				id = ger_kaiser_in_exile.1
 				days = 1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
 			}
 		}
 	}
@@ -13026,11 +13045,11 @@ focus_tree = {
 			}
 		}
 		relative_position_id = GER_rhineland_demilitarized
-		x = -23
+		x = -20
 		y = 1
 		cost = 5
 		offset = {
-			x = 24
+			x = 21
 			y = 0
 			trigger = {
 				has_completed_focus = GER_against_fuhrer
@@ -13107,6 +13126,86 @@ focus_tree = {
 		text = GER_improve_national_spirit
 		allow_branch = {
 			has_completed_focus = GER_against_fuhrer
+			NOT = { has_completed_focus = GER_a_shadow_of_past }
+		}
+		prerequisite = {
+			focus = GER_against_fuhrer
+		}
+		icon = GFX_goal_supremewehrmacht
+		available = {
+			has_completed_focus = GER_against_fuhrer
+			custom_trigger_tooltip = {
+				tooltip = GER_improve_national_spirit_tooltip
+				OR = {
+					GER = {
+						controls_state = 126
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 126
+					}
+				}
+				OR = {
+					GER = {
+						controls_state = 16
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 16
+					}
+				}
+			}
+		}
+		cancel = {
+			AND = {
+				has_war = no
+				126 = {
+					owner = {
+						NOT = {
+							tag = GER
+						}
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				16 = {
+					owner = {
+						NOT = {
+							tag = GER
+						}
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+			}
+		}
+		cancel_if_invalid = no
+		x = -3
+		y = 1
+		relative_position_id = GER_against_fuhrer
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = sour_loser
+				}
+				swap_ideas = {
+					remove_idea = sour_loser
+					add_idea = triumphant_will
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_National_sprit_b
+		text = GER_improve_national_spirit
+		allow_branch = {
+			has_completed_focus = GER_a_shadow_of_past
 		}
 		prerequisite = {
 			focus = GER_against_fuhrer
@@ -14494,7 +14593,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_new_workers_culture
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_communist_industry
 		prerequisite = { focus = GER_nationalisation }
 		prerequisite = { focus = GER_fight_with_counterrevolutionary }
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -22532,7 +22631,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_support_from_usa
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_focus_generic_american_investments
 		prerequisite = {
 			focus = GER_invite_usa
 		}
