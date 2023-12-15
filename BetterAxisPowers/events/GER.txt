@@ -4567,8 +4567,8 @@ country_event = {
 				elections_allowed = no
 			}
 			drop_cosmetic_tag = yes
-			set_global_flag = GER_civil_war_end
-			set_global_flag = GER_block_civilwar_events
+			set_cosmetic_tag = GER_provisional_gvt
+			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
 			create_country_leader = {
 				name = GER_Non_Civilwar
 				desc = ""
@@ -4578,6 +4578,14 @@ country_event = {
 				traits = {
 				}
 			}
+			every_unit_leader = {
+				limit = {
+					has_trait = trait_GER_SS
+				}
+				retire = yes
+			}
+			set_global_flag = GER_civil_war_end
+			set_global_flag = GER_block_civilwar_events
 		}
 	}
 }

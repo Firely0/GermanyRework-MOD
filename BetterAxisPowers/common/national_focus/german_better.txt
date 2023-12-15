@@ -13869,7 +13869,7 @@ focus_tree = {
 			has_global_flag = GER_civil_war
 		}
 		relative_position_id = GER_against_fuhrer
-		x = -9
+		x = 18
 		y = 0
 		cost = 3
 		available = {
@@ -18374,6 +18374,22 @@ focus_tree = {
 			}
 		}
 
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+				has_completed_focus = GER_establish_fifth_internationale
+			}
+		}
+
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_completed_focus = GER_radical_left
+			}
+		}
+
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 
@@ -18431,9 +18447,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = -9
+		x = 12
 		y = 1
-		relative_position_id = GER_support_trotsky_coup
+		relative_position_id = GER_second_civil_war
 
 		cost = 10
 		ai_will_do = {

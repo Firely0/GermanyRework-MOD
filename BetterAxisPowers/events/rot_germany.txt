@@ -26,6 +26,7 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
+
 		hidden_effect = {
 			remove_ideas = strikes_1
 			remove_ideas = strikes_3
@@ -119,6 +120,8 @@ country_event = {
 				}
 				set_country_flag = GER_civil_war_fired
 				load_oob = GER_German_Civil_War_2_neutrality
+				set_cosmetic_tag = GER_provisional_gvt
+				set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
 			}
 
 			set_country_flag = GER_civil_war_fired
