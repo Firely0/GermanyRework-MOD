@@ -223,13 +223,6 @@ focus_tree = {
 					}
 					complete_national_focus = GER_Fuhrer
 					set_global_flag = GER_UNLOCK_HITLER_1
-				}	
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					upgrade_intelligence_agency = upgrade_passive_defense
-					upgrade_intelligence_agency = upgrade_interrogation_techniques
 				}
 			}
 		}
@@ -1318,15 +1311,6 @@ focus_tree = {
 				name = GER_danzig_or_war
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_timed_idea = {
-						idea = Operation_Weserubung_AI
-						days = 160
-					}
-				}
 				if = {
 					limit = {
 						POL = {

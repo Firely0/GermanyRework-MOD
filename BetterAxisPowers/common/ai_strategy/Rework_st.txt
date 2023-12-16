@@ -222,10 +222,10 @@ SOV_better_civ_plan = {
 		tag = SOV
 	}
 	enable = {
-		date < 1939.09.01
+		date < 1939.01.01
 	}
 	abort = {
-		date > 1939.09.01
+		date > 1939.01.01
 	}
 	ai_strategy = {
 		type = building_target
@@ -239,7 +239,7 @@ SOV_better_mil_plan = {
 		tag = SOV
 	}
 	enable = {
-		date > 1939.09.01
+		date > 1939.01.01
 	}
 	abort = {
 		num_of_military_factories > 200

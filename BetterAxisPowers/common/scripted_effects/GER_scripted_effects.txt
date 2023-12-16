@@ -3132,14 +3132,7 @@ GER_readd_barbarossa = {
 		}
 		GER = { add_ideas = GER_barbarossa }
 	}
-	if = {
-		limit = {
-			NOT = {
-				has_global_flag = GER_Leningrad_win
-				has_global_flag = GER_Moscow_win
-				has_global_flag = GER_Stalingrad_win
-			}
-		}
+	else = {
 		clr_global_flag = GER_Operation_Barbarossa_running
 		set_global_flag = GER_Operation_Barbarossa_Failed
 		GER = {
