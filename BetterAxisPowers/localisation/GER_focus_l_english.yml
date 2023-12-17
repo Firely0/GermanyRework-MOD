@@ -54,6 +54,7 @@
  autonomy_Overthrown_Government:0 "Overthrown Government"
  autonomy_Overthrown_Government_ITA:0 "Overthrown Government"
  autonomy_loyal_state:0 "Loyal State"
+ autonomy_reichskommissariat_custom:0 "Reichskommissariat"
 
  #Tech Sharing
 
@@ -125,11 +126,19 @@
  rebuild_warsaw:0 "Rebuild Warsaw"
  rebuild_paris:0 "Rebuild Paris"
 
+ #Policy Changes
+ GER_end_policy_kinder_kuche_kirche:0 "End Policy: Kinder, Küche, Kirche"
+
  #Reichskommissariat
  GER_reichskommissariat_turkestan:0 "Establish Reichskommissariat Turkestan"
  GER_reichskommissariat_moscow:0 "Establish Reichskommissariat Moskowien"
- GER_expand_reichskommissariat_moscow:0 "Expand Reichskommissariat Moskowien"
  GER_reichskommissariat_caucasus:0 "Establish Reichskommissariat Kaukasien"
+ GER_expand_reichskommissariat_moscow:0 "Expand Reichskommissariat Moskowien"
+ GER_expand_reichskommissariat_ukraine:0 "Expand Reichskommissariat Ukraine"
+ GER_send_guns:0 "Send Guns to [FROM.GetName]" 
+ GER_send_manpower:0 "Send Manpower to [FROM.GetName]"
+ GER_suppress_the_resistance:0 "Suppress the Resistance in [FROM.GetName]"
+ 
 
  #New Laws for New Germany
 
@@ -300,6 +309,14 @@
  german_rapid_mobilization_spirit_desc:0 ""
  
  #Ideas
+ a_hope_in_independence:0 "A Hope in Independence"
+ a_hope_in_independence_desc:0 ""
+ a_farm_village:0 "Farm Village"
+ a_farm_village_desc:0 ""
+ reds_in_resistance:0 "Reds in Resistance"
+ reds_in_resistance_desc:0 "" 
+ reds_in_resistance_1:0 "Reds in Resistance"
+ reds_in_resistance_1_desc:0 ""
  GER_underground_factories_idea:0 "Underground Factories"
  GER_underground_factories_idea_desc:0 ""
  fascist_influence_cs:0 "Fascist Influence"

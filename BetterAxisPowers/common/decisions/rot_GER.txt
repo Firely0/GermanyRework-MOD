@@ -51,60 +51,6 @@ GER_weltrepublic_decision = {
 	GER_weltrepublik = {
 		allowed = {
 			original_tag = GER
-			OR = {
-				GER = {
-					controls_state = 126
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 126
-				}
-			}
-			OR = {
-				GER = {
-					controls_state = 16
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 16
-				}
-			}
-			OR = {
-				GER = {
-					controls_state = 2
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 2
-				}
-			}
-			OR = {
-				GER = {
-					controls_state = 219
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 219
-				}
-			}
-			OR = {
-				GER = {
-					controls_state = 195
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 195
-				}
-			}
-			OR = {
-				GER = {
-					controls_state = 361
-				}
-				any_other_country = {
-					is_in_faction_with = GER
-					controls_state = 361
-				}
-			}
 		}
 		available = {
 			has_government = communism

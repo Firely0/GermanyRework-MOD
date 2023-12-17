@@ -626,6 +626,36 @@ political_actions = {
 		}
 	}
 
+	GER_end_policy_kinder_kuche_kirche = {
+		icon = GFX_decision_eng_trade_unions_support
+		
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_government = fascism
+			has_idea = kinder_kuche_kirche
+		}
+
+		complete_effect = {
+			add_stability = -0.15
+			add_popularity = { ideology = fascism popularity = -0.05 }
+			remove_ideas = kinder_kuche_kirche
+		}
+	}
+
 }
 
 foreign_politics = {
@@ -1180,6 +1210,7 @@ health_of_adolf_category = {
 					NOT = { has_trait = purged_by_hitler }
 					NOT = { has_unit_leader_flag = recently_purged_by_hitler }
 					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
 				}
 				add_timed_unit_leader_trait = {
 					trait = purged_by_hitler
@@ -1196,6 +1227,7 @@ health_of_adolf_category = {
 					NOT = { has_trait = purged_by_hitler }
 					NOT = { has_unit_leader_flag = recently_purged_by_hitler }
 					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
 				}
 				add_timed_unit_leader_trait = {
 					trait = purged_by_hitler
@@ -1212,6 +1244,7 @@ health_of_adolf_category = {
 					NOT = { has_trait = purged_by_hitler }
 					NOT = { has_unit_leader_flag = recently_purged_by_hitler }
 					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
 				}
 				add_timed_unit_leader_trait = {
 					trait = purged_by_hitler
@@ -1642,7 +1675,10 @@ eva_braun_category = {
 		}
 
 		available = {
-			NOT = { has_country_flag = eva_braun_has_job }
+			NOT = { 
+				has_country_flag = eva_braun_has_job
+				has_idea = kinder_kuche_kirche 
+			}
 		}
 
 		cost = 150

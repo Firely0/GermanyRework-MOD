@@ -45,7 +45,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -60,7 +60,7 @@
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -80,7 +80,7 @@
 
 	shared_focus = {
 		id = SS_Inf_b
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_POL_warsaw_main_station
 		prerequisite = { focus = SS_Inf } 
 		relative_position_id = SS_Inf
 		x = 1
@@ -91,7 +91,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -106,7 +106,7 @@
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -198,7 +198,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -218,7 +218,7 @@
 
 	shared_focus = {
 		id = SS_Civlian_Industry_b
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_car_factory
 		prerequisite = { focus = SS_Civilian_Industry } 
 		relative_position_id = SS_Civilian_Industry
 		x = 1
@@ -229,7 +229,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -290,7 +290,7 @@
 
     shared_focus = {
 		id = SS_Arms_Industry_a
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_r56_goal_generic_construct_war_factory
 		prerequisite = { focus = SS_Arms_Industry } 
 		relative_position_id = SS_Arms_Industry
 		x = -1
@@ -301,7 +301,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -321,7 +321,7 @@
 
 	 shared_focus = {
 		id = SS_Arms_Industry_b
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_small_arms
 		prerequisite = { focus = SS_Arms_Industry } 
 		relative_position_id = SS_Arms_Industry
 		x = 1
@@ -332,7 +332,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
@@ -422,9 +422,14 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_timed_idea = {
-				idea = SS_Fund_Locals
-				days = 365
+			if = {
+				limit = {
+					202 = { is_controlled_by = ROOT }
+				}
+				add_ideas = a_farm_village
+			}
+			else = {
+				add_ideas = SS_Fund_Locals
 			}
 		}
 	}
@@ -441,7 +446,7 @@
 			factor = 12
 		}
 		completion_reward = {
-			random_owned_controlled_state = {
+			random_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
@@ -777,7 +782,7 @@
 						}
 					}
 				}
-				random_owned_controlled_state = {
+				random_controlled_state = {
 					limit = {
 						free_building_slots = {
 							building = air_base

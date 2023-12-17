@@ -66,8 +66,64 @@ ideas = {
 				attrition = -0.05
 				supply_consumption_factor = -0.05
 			}
+		}
+
+		reds_in_resistance = {
+			picture = chi_war_of_resistance3
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				resistance_activity = 0.15
+				communism_drift = 0.05
+			}
+		}
+
+		reds_in_resistance_1 = {
+			picture = chi_war_of_resistance3
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				resistance_activity = 0.25
+				communism_drift = 0.05
+			}
+		}
+
+		a_hope_in_independence = {
+
+			picture = DEN_occupation_laws
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+						
+			modifier = {
+				weekly_manpower = 250
+				fascism_drift = 0.05
+			}
 
 		}
+
+		a_farm_village = {
+			picture = POL_looming_peasants_strike
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				supply_consumption_factor = -0.15
+				supply_node_range = 0.05
+			}
+		}
+
+		
 
 	}
 }

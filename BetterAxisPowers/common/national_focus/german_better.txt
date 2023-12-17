@@ -11432,7 +11432,7 @@ focus_tree = {
 			}
 			GER_wilhelm_ii = {
 				set_unit_leader_flag = {
-					flag = GER_NOT_PURGE
+					flag = GER_NOT_PURGE_WILHELM
 				}
 			}
 		}
@@ -12467,6 +12467,29 @@ focus_tree = {
 							state = 229
 							state = 230
 							state = 754
+							state = 407
+							state = 406
+							state = 402
+							state = 583
+							state = 590
+							state = 882
+							state = 588
+							state = 589
+							state = 587
+							state = 881
+							state = 404
+							state = 586
+							state = 732
+							state = 742
+							state = 405
+							state = 830
+							state = 585
+							state = 823
+							state = 831
+							state = 832
+							state = 584	
+							state = 834	
+							state = 137		
 						}
 					}
 					set_state_flag = GER_MOSKOW_IGNORE_STATES
@@ -12492,11 +12515,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = GER_reichskommissariat_ukraine
-			hidden_effect = {
-				UKR = {
-					add_state_core = 137
-				}
-			}
 		}
 	}
 	focus = {
@@ -13408,8 +13426,8 @@ focus_tree = {
 		y = 1
 		cost = 3
 		available = {
-			56 = {
-				is_controlled_by = ROOT
+			any_controlled_state = {
+				is_coastal = yes
 			}
 		}
 		bypass = {
@@ -13506,7 +13524,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_equipment_shipments
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		relative_position_id = GER_seek_help_from_democracy
 		prerequisite = {
 			focus = GER_seek_help_from_democracy
@@ -13515,8 +13533,8 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
-			56 = {
-				is_controlled_by = ROOT
+			any_controlled_state = {
+				is_coastal = yes
 			}
 		}
 		bypass = {
@@ -13579,7 +13597,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_allied_production_factories
-		icon = GFX_goal_undergroundfactory
+		icon = GFX_focus_DEN_no_regulations
 		relative_position_id = GER_request_help
 		prerequisite = {
 			focus = GER_obtain_training_staff
@@ -13608,7 +13626,7 @@ focus_tree = {
 	focus = {
 		id = GER_allied_production_factories_2
 		text = GER_allied_production_factories
-		icon = GFX_goal_undergroundfactory
+		icon = GFX_focus_generic_communist_industry
 		relative_position_id = GER_request_help
 		prerequisite = {
 			focus = GER_order_firepower
@@ -13636,7 +13654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_expand_production
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_generic_reorient_production
 		relative_position_id = GER_request_help
 		prerequisite = {
 			focus = GER_allied_production_factories
@@ -13646,9 +13664,6 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available = {
-			56 = {
-				is_controlled_by = ROOT
-			}
 		}
 		bypass = {
 		}
@@ -13676,8 +13691,8 @@ focus_tree = {
 		y = 1
 		cost = 3
 		available = {
-			56 = {
-				is_controlled_by = ROOT
+			any_controlled_state = {
+				is_coastal = yes
 			}
 		}
 		bypass = {
@@ -13774,7 +13789,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_order_firepower
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_FIN_salvaged_and_retooled
 		relative_position_id = GER_seek_help_from_communism
 		prerequisite = {
 			focus = GER_seek_help_from_communism
@@ -13783,8 +13798,8 @@ focus_tree = {
 		y = 1
 		cost = 5
 		available = {
-			56 = {
-				is_controlled_by = ROOT
+			any_controlled_state = {
+				is_coastal = yes
 			}
 		}
 		bypass = {
@@ -13820,7 +13835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_war_time_logistics
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_supply_line
 		relative_position_id = GER_seek_help_from_communism
 		prerequisite = {
 			focus = GER_seek_help_from_communism
@@ -13980,7 +13995,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_reorder
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_generic_manpower
 		prerequisite = {
 			focus = GER_cut_the_lines
 			focus = GER_the_last_stand
@@ -14114,7 +14129,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_plan_offensive
-		icon = GFX_focus_generic_manpower
+		icon = GFX_goal_r56_goal_generic_plan
 		prerequisite = {
 			focus = GER_Strike_Hamburg
 			focus = GER_Strike_Munich

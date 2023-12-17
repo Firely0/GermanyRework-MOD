@@ -129,7 +129,7 @@
 
  SS_Inf_a:0 "Build Infrastructure"
  SS_Inf_a_desc:0 ""
- SS_Inf_b:0 "Expand Infrastructure"
+ SS_Inf_b:0 "Expand Existing Infrastructure"
  SS_Inf_b_desc:0 ""
 
  #No Rush for Berlin 
@@ -182,6 +182,9 @@
  can_increase_resistance:0 "This may increase resistance in area" # Well This Increase Resistance in Area...
  increased_resistance:0 "This will increase resistance in occupied states of france. "
  can_increase_resistance_d:0 "We Should Run, you know"
+
+ SS_Country_Core_State:0 "Country Land Management"
+ Core_State:0 "Integrate State [FROM.GetName]" 
 
  RKS_communism:0 "Reichskommissariat Kaukasien"
  RKS_communism_DEF:0 "das Reichskommissariat Kaukasien"
