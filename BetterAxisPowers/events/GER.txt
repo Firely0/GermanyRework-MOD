@@ -4935,16 +4935,37 @@ country_event = {
 					transfer_troops = no
 				}
 			}
-			if = {
+			if = { # Non DLC Version
 				limit = {
 					has_war_with = NOR
 					NOR = {
 						is_in_faction_with = ENG
+						has_civil_war = no
 					}
 				}
 				annex_country = {
 					target = NOR
 					transfer_troops = no
+				}
+			}
+			if = { # DLC Version - Civilwars 
+				limit = {
+					has_war_with = NOR
+					NOR = {
+						is_in_faction_with = ENG
+						has_civil_war = yes
+					}
+				}
+				every_country = { 
+					limit = {
+						original_tag = NOR
+					}
+					GER = {
+						annex_country = {
+							target = PREV
+							transfer_troops = no
+						}
+					}
 				}
 			}
 			if = {
