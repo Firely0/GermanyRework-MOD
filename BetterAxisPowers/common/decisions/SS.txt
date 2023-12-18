@@ -209,24 +209,26 @@ GER_reichskommissariats = {
 			}
 			else = {
 				NOR = {
-					transfer_state = 110
-					transfer_state = 142
-					transfer_state = 143
-					transfer_state = 144
-					transfer_state = 920
-					transfer_state = 921
-					transfer_state = 922
-					transfer_state = 923
-					transfer_state = 924
-					transfer_state = 925
-					set_cosmetic_tag = NOR_reichskommissariat
-					create_country_leader = {
-						name = "Josef Terboven"
-						desc = "POLITICS_JOSEF_TERBOVEN_DESC"
-						picture = GFX_portrait_Josef_Terboven
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
+					hidden_effect = {
+						transfer_state = 110
+						transfer_state = 142
+						transfer_state = 143
+						transfer_state = 144
+						transfer_state = 920
+						transfer_state = 921
+						transfer_state = 922
+						transfer_state = 923
+						transfer_state = 924
+						transfer_state = 925
+						set_cosmetic_tag = NOR_reichskommissariat
+						create_country_leader = {
+							name = "Josef Terboven"
+							desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+							picture = GFX_portrait_Josef_Terboven
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
 						}
 					}
 				}
@@ -279,43 +281,52 @@ GER_reichskommissariats = {
 					start_civil_war = { ideology = fascism size = 1 }
 				}
 				random_country = {
-					limit= {
+					limit = {
 						original_tag = HOL
 						has_government = fascism
 					}
-					transfer_state = 7
-					transfer_state = 35
-					transfer_state = 36
 					GER = {
 						puppet = PREV
 						set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 					}
-
-					set_cosmetic_tag = HOL_reichskommissariat
-					create_country_leader = {
-						name = "Arthur Seyss-Inquart"
-						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
-						picture = "gfx/leaders/GER/Portrait_Germany_Arthur_Seyss-Inquart.dds"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
+				}
+				hidden_effect = {
+					random_country = {
+						limit= {
+							original_tag = HOL
+							has_government = fascism
+						}
+						transfer_state = 7
+						transfer_state = 35
+						transfer_state = 36
+						set_cosmetic_tag = HOL_reichskommissariat
+						create_country_leader = {
+							name = "Arthur Seyss-Inquart"
+							desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Arthur_Seyss-Inquart.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
 						}
 					}
-				}
+				}	
 			}
 			else = {
 				HOL = {
-					transfer_state = 7
-					transfer_state = 35
-					transfer_state = 36
-					set_cosmetic_tag = HOL_reichskommissariat
-					create_country_leader = {
-						name = "Arthur Seyss-Inquart"
-						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
-						picture = "gfx/leaders/GER/Portrait_Germany_Arthur_Seyss-Inquart.dds"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
+					hidden_effect = {
+						transfer_state = 7
+						transfer_state = 35
+						transfer_state = 36
+						set_cosmetic_tag = HOL_reichskommissariat
+						create_country_leader = {
+							name = "Arthur Seyss-Inquart"
+							desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Arthur_Seyss-Inquart.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
 						}
 					}
 				}
@@ -367,45 +378,55 @@ GER_reichskommissariats = {
 					start_civil_war = { ideology = fascism size = 1 }
 				}
 				random_country = {
-					limit= {
+					limit = {
 						original_tag = BEL
 						has_government = fascism
 					}
-					transfer_state = 6
-					transfer_state = 29
-					transfer_state = 34
 					GER = {
 						puppet = PREV
 						set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 					}
-					set_cosmetic_tag = BEL_reichskommissariat
-					create_country_leader = {
-						name = "Josef Grohe"
-						desc = "POLITICS_JOSEF_GROHE_DESC"
-						picture = "gfx/leaders/GER/Portrait_Germany_Josef_Grohe.dds"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
+				}
+				hidden_effect = {
+					random_country = {
+						limit= {
+							original_tag = BEL
+							has_government = fascism
 						}
-					}
-					hidden_effect = {
-						29 = { add_core_of = PREV }
+						transfer_state = 6
+						transfer_state = 29
+						transfer_state = 34
+						set_cosmetic_tag = BEL_reichskommissariat
+						create_country_leader = {
+							name = "Josef Grohe"
+							desc = "POLITICS_JOSEF_GROHE_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Josef_Grohe.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+						hidden_effect = {
+							29 = { add_core_of = PREV }
+						}
 					}
 				}
 			}
 			else = {
 				BEL = {
-					transfer_state = 6
-					transfer_state = 29
-					transfer_state = 34
-					set_cosmetic_tag = BEL_reichskommissariat
-					create_country_leader = {
-						name = "Josef Grohe"
-						desc = "POLITICS_JOSEF_GROHE_DESC"
-						picture = "gfx/leaders/GER/Portrait_Germany_Josef_Grohe.dds"
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
+					hidden_effect = {
+						transfer_state = 6
+						transfer_state = 29
+						transfer_state = 34
+						set_cosmetic_tag = BEL_reichskommissariat
+						create_country_leader = {
+							name = "Josef Grohe"
+							desc = "POLITICS_JOSEF_GROHE_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Josef_Grohe.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
 						}
 					}
 				}
@@ -464,89 +485,65 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 			hidden_effect = {	
-				every_state = {
-					limit = {
-						OR = {
-							state = 11
-							state = 189
-							state = 12
-							state = 190
-							state = 13
-							state = 191
-							state = 784
-							state = 97
-							state = 814
-							state = 815
-							state = 809
-							state = 808
-							state = 810
-							state = 813
-							state = 812
-							state = 811
-							state = 206
-							state = 241
-							state = 97
-							state = 94
-							state = 95
-							state = 96
-							state = 194
-							state = 204
-							state = 207
-							state = 11
-							state = 784
-							state = 189
-							state = 12
-							state = 190
-							state = 13
-							state = 191
-							state = 814
-							state = 815
-							state = 809
-							state = 808
-							state = 810
-							state = 813
-							state = 812
-							state = 811							
-						}
-						is_owned_by = GER
-					}
-					clr_state_flag = GER_Claim_lands
-					transfer_state_to = BLR
-					add_compliance = 15
-					set_state_flag = SS_Country_Core_State
-				}
+				release_on_controlled = BLR
+				SOV = { add_core_of = BLR }
 				every_state = {
 					limit = {
 						is_core_of = BLR
 					}
 					remove_core_of = BLR
-				}
+				}			
 				BLR = {
-					set_state_controller = 11
-					set_state_controller = 784
-					set_state_controller = 189
-					set_state_controller = 12
-					set_state_controller = 190
-					set_state_controller = 13
-					set_state_controller = 191
-					set_state_controller = 97
-					set_state_controller = 94
-					set_state_controller = 95
-					set_state_controller = 96
-					set_state_controller = 194
-					set_state_controller = 204
-					set_state_controller = 206
-					set_state_controller = 207
-					set_state_controller = 241
-					set_state_controller = 784
-					set_state_controller = 814
-					set_state_controller = 815
-					set_state_controller = 809
-					set_state_controller = 808
-					set_state_controller = 810
-					set_state_controller = 813
-					set_state_controller = 812
-					set_state_controller = 811
+					every_state = {
+						limit = {
+							OR = {
+								state = 11
+								state = 189
+								state = 12
+								state = 190
+								state = 13
+								state = 191
+								state = 784
+								state = 97
+								state = 814
+								state = 815
+								state = 809
+								state = 808
+								state = 810
+								state = 813
+								state = 812
+								state = 811
+								state = 206
+								state = 241
+								state = 97
+								state = 94
+								state = 95
+								state = 96
+								state = 194
+								state = 204
+								state = 207
+								state = 11
+								state = 784
+								state = 189
+								state = 12
+								state = 190
+								state = 13
+								state = 191
+								state = 814
+								state = 815
+								state = 809
+								state = 808
+								state = 810
+								state = 813
+								state = 812
+								state = 811							
+							}
+						}
+						clr_state_flag = GER_Claim_lands
+						transfer_state_to = BLR
+						add_compliance = 15
+						set_state_flag = SS_Country_Core_State
+					}
 					add_ideas = reds_in_resistance_1
 					set_variable = { SS_consumer_goods_factor = 0.1 }
 					set_variable = { SS_industrial_capacity_dockyard = -0.1 }
@@ -678,90 +675,45 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 			hidden_effect = {	
-				every_state = {
-					limit = {
-						OR = {
-							state = 226
-							state = 202
-							state = 93
-							state = 91
-							state = 89
-							state = 199
-							state = 201
-							state = 198
-							state = 193
-							state = 192
-							state = 203
-							state = 197
-							state = 225
-							state = 259
-							state = 196
-							state = 200
-							state = 221
-							state = 228
-							state = 227
-							state = 834						
-						}
-						is_owned_by = GER
-					}
-					clr_state_flag = GER_Claim_lands
-					transfer_state_to = UKR
-				}
+				release_on_controlled = UKR
+				SOV = { add_core_of = UKR }
 				every_state = {
 					limit = {
 						is_core_of = UKR
 					}
 					set_state_flag = SS_Country_Core_State_2
 					remove_core_of = UKR
-				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 226
-							state = 202
-							state = 93
-							state = 91
-							state = 89
-							state = 199
-							state = 201
-							state = 198
-							state = 193
-							state = 192
-							state = 203
-							state = 197
-							state = 225
-							state = 259
-							state = 196
-							state = 200
-							state = 221
-							state = 228
-							state = 227
-							state = 834						
-						}
-					}
-					add_compliance = 15
-				}
+				}	
 				UKR = {
-					set_state_controller = 226
-					set_state_controller = 202
-					set_state_controller = 93
-					set_state_controller = 91
-					set_state_controller = 89
-					set_state_controller = 199
-					set_state_controller = 201
-					set_state_controller = 198
-					set_state_controller = 193
-					set_state_controller = 192
-					set_state_controller = 203
-					set_state_controller = 197
-					set_state_controller = 225
-					set_state_controller = 259
-					set_state_controller = 196
-					set_state_controller = 200
-					set_state_controller = 221
-					set_state_controller = 228
-					set_state_controller = 227	
-					set_state_controller = 834
+					every_state = {
+						limit = {
+							OR = {
+								state = 226
+								state = 202
+								state = 93
+								state = 91
+								state = 89
+								state = 199
+								state = 201
+								state = 198
+								state = 193
+								state = 192
+								state = 203
+								state = 197
+								state = 225
+								state = 259
+								state = 196
+								state = 200
+								state = 221
+								state = 228
+								state = 227
+								state = 834						
+							}
+						}
+						set_state_flag = SS_Country_Core_State_2
+						clr_state_flag = GER_Claim_lands
+						add_compliance = 15
+					}
 					add_ideas = reds_in_resistance
 					add_ideas = a_hope_in_independence
 					set_variable = { SS_consumer_goods_factor = 0.1 }
@@ -852,8 +804,13 @@ GER_reichskommissariats = {
 
 		available = {
 			UKR = { is_puppet_of = ROOT }
-			137 = {
-				is_controlled_by = ROOT
+			OR = {
+				137 = {
+					is_controlled_by = ROOT
+				}
+				78 = {
+					is_controlled_by = ROOT
+				}
 			}
 		}
 
@@ -866,21 +823,49 @@ GER_reichskommissariats = {
 		visible = {
 			has_government = fascism
 			UKR = { exists = yes }
-			137 = { is_controlled_by = ROOT }
 		}
 
 		complete_effect = {
-			UKR = {
-				set_state_controller = 137
+			if = {
+				limit = {
+					137 = {
+						is_controlled_by = ROOT
+					}
+				}
+				137 = {
+					transfer_state_to = UKR
+				}
+			}
+			if = {
+				limit = {
+					78 = {
+						is_controlled_by = ROOT
+					}
+				}
+				78 = {
+					transfer_state_to = UKR
+				}
 			}
 			hidden_effect = {
-				every_state = {
+				if = {
 					limit = {
-						OR = {
-							state = 137
+						137 = {
+							is_controlled_by = ROOT
 						}
 					}
-					clr_state_flag = GER_Claim_lands
+					137 = {
+						clr_state_flag = GER_Claim_lands
+					}
+				}
+				if = {
+					limit = {
+						78 = {
+							is_controlled_by = ROOT
+						}
+					}
+					78 = {
+						clr_state_flag = GER_Claim_lands
+					}
 				}
 			}
 		}

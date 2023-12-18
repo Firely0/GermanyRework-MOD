@@ -436,7 +436,7 @@
 
 	shared_focus = {
 		id = SS_Build_Hospital
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_field_hostpital
 		prerequisite = { focus = SS_Repair_Home } 
 		relative_position_id = SS_Repair_Home
 		x = 1
@@ -466,7 +466,7 @@
 
 	shared_focus = {
 		id = SS_Build_School
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_university_1
 		prerequisite = { focus = SS_Fund_Locals } 
 		prerequisite = { focus = SS_Build_Hospital }
 		relative_position_id = SS_Repair_Home
@@ -484,7 +484,7 @@
 
 	shared_focus = {
 		id = SS_Build_University
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_university_3
 		prerequisite = { focus = SS_Build_School } 
 		relative_position_id = SS_Repair_Home
 		x = 0

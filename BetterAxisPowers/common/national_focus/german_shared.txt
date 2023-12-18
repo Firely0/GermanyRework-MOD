@@ -1949,13 +1949,16 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = krupp_nofocusver
 			custom_effect_tooltip = available_designer
 			show_mio_tooltip = GER_Krupp_tank_organization 
 		}
 		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = krupp
+			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = krupp_nofocusver
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = krupp_tank_idea
 		}
 	}
 }
