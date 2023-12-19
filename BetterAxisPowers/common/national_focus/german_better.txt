@@ -5264,6 +5264,7 @@ focus_tree = {
 					special_type_slot_1 = armor_plate_small
 					special_type_slot_2 = armor_plate_small
 				}
+				design_team = mio:GER_messerschmitt_organization
 				icon = "GFX_GER_jet_plane_1_medium"
 			}
 		}
@@ -9893,10 +9894,16 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			TUR = {
-				country_event = {
-					id = gerb.79
-					days = 1
+			if = {
+				limit = {
+					has_completed_focus = GER_soviet_ally
+					SOV = { has_country_flag = GER_soviet_ally }
+				}
+				TUR = { country_event = { id = germany.79 days = 1 } }
+			}
+			else = {
+				TUR = {
+					country_event = { id = gerb.79 days = 1 }
 				}
 			}
 		}

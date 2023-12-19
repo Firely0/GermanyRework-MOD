@@ -578,7 +578,7 @@ GER_reichskommissariats = {
 					set_autonomy = { target = BLR autonomy_state = autonomy_integrated_puppet end_wars = no end_civil_wars = no }
 				}
 				else = {
-					set_autonomy = { target = BLR autonomy_state = autonomy_reichskommissariat_custom end_wars = no end_civil_wars = no }
+					set_autonomy = { target = BLR autonomy_state = autonomy_reichskommissariat end_wars = no end_civil_wars = no }
 				}
 			}
 			hidden_effect = {
@@ -747,7 +747,7 @@ GER_reichskommissariats = {
 					set_autonomy = { target = UKR autonomy_state = autonomy_integrated_puppet end_wars = no end_civil_wars = no }
 				}
 				else = {
-					set_autonomy = { target = UKR autonomy_state = autonomy_reichskommissariat_custom end_wars = no end_civil_wars = no }
+					set_autonomy = { target = UKR autonomy_state = autonomy_reichskommissariat end_wars = no end_civil_wars = no }
 				}
 			}
 			hidden_effect = {
@@ -804,13 +804,8 @@ GER_reichskommissariats = {
 
 		available = {
 			UKR = { is_puppet_of = ROOT }
-			OR = {
-				137 = {
-					is_controlled_by = ROOT
-				}
-				78 = {
-					is_controlled_by = ROOT
-				}
+			137 = {
+				is_controlled_by = ROOT
 			}
 		}
 
@@ -836,16 +831,6 @@ GER_reichskommissariats = {
 					transfer_state_to = UKR
 				}
 			}
-			if = {
-				limit = {
-					78 = {
-						is_controlled_by = ROOT
-					}
-				}
-				78 = {
-					transfer_state_to = UKR
-				}
-			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -854,16 +839,6 @@ GER_reichskommissariats = {
 						}
 					}
 					137 = {
-						clr_state_flag = GER_Claim_lands
-					}
-				}
-				if = {
-					limit = {
-						78 = {
-							is_controlled_by = ROOT
-						}
-					}
-					78 = {
 						clr_state_flag = GER_Claim_lands
 					}
 				}

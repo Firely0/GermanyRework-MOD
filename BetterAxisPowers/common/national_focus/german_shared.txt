@@ -1449,6 +1449,7 @@ shared_focus = {
 				mid_2_custom_slot = ship_secondaries_2
 				rear_1_custom_slot = ship_heavy_battery_3
 			}
+			design_team = mio:GER_blohm_und_voss_organization
 		}
 		add_equipment_production = {
 			equipment = {
@@ -2906,7 +2907,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_B
-	icon = GFX_goal_Focus_Military_Mobilisation
+	icon = GFX_focus_generic_combined_arms
 	prerequisite = { focus = GER_Finish_Ins }
 	prerequisite = {focus = GER_Finish_Civilian  }
 	mutually_exclusive = { focus = GER_Eco_Plan_A }
@@ -3001,7 +3002,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Eco_Plan_B_Main_B
-	icon = GFX_focus_generic_combined_arms
+	icon = GFX_goal_Focus_Military_Mobilisation
 	prerequisite = { focus = GER_Eco_Plan_B_Main_A }
 	x = 4
 	y = 8
@@ -3250,15 +3251,15 @@ shared_focus = {
 			mio:GER_messerschmitt_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_junkers_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_dornier_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_fieseler_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
 			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = dornier_focus
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = junkers_focus
-			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = messerschmitt_focus
-	
+			show_ideas_tooltip = junkers_focus
+			show_ideas_tooltip = dornier_focus
+			show_ideas_tooltip = fieseler_focus
+			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -3267,6 +3268,15 @@ shared_focus = {
 					swap_ideas = {
 						remove_idea = dornier
 						add_idea = dornier_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = fieseler
+					}
+					swap_ideas = {
+						remove_idea = fieseler
+						add_idea = fieseler_focus
 					}
 				}
 				else_if = {
@@ -4718,7 +4728,6 @@ shared_focus = {
 			name = "Tiger I"
 			type = heavy_tank_chassis_2
 			parent_version = 0
-			design_team = mio:GER_porsche_organization
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_heavy_cannon_2
@@ -4735,6 +4744,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 11
 				tank_nsb_armor_upgrade = 14
 			}
+			design_team = mio:GER_porsche_organization
 			icon = "GFX_GER_improved_heavy_tank_medium"
 			model = "GER_heavy_armor_entity"
 		}
@@ -4764,7 +4774,6 @@ shared_focus = {
 			name = "Panzerjäger Tiger"
 			type = heavy_tank_destroyer_chassis_2
 			parent_version = 0
-			design_team = mio:GER_porsche_organization
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_heavy_cannon_2
@@ -4781,6 +4790,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = 14
 			}
+			design_team = mio:GER_porsche_organization
 			icon = "GFX_GER_improved_heavy_tank_td"
 			model = "GER_heavy_tank_destroyer_brigade_1_entity"
 		}
@@ -4810,7 +4820,6 @@ shared_focus = {
 		create_equipment_variant = {
 			name = "Panzer VIII Maus"
 			type = super_heavy_tank_chassis_1
-			design_team = mio:GER_porsche_organization
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
@@ -4828,6 +4837,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 20
 				tank_nsb_armor_upgrade = 12
 			}
+			design_team = mio:GER_porsche_organization
 			icon = "GFX_GER_super_heavy_tank_medium"
 			model = "GER_super_heavy_armor_entity"
 		}
@@ -4908,7 +4918,7 @@ shared_focus = {
 			modules = {
 				main_armament_slot = tank_medium_howitzer_2
 				turret_type_slot = tank_medium_fixed_superstructure_turret
-				suspension_type_slot = tank_interleaved_suspension
+				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = sloped_armor
@@ -4950,7 +4960,6 @@ shared_focus = {
 			name = "PzKpfw Panther"
 			type = medium_tank_chassis_3
 			parent_version = 0
-			design_team = mio:GER_man_organization
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_medium_cannon_2
@@ -4967,6 +4976,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 14
 				tank_nsb_armor_upgrade = 14
 			}
+			design_team = mio:GER_man_organization
 			icon = "GFX_GER_medium_CBC"
 			model = "GER_medium_armor_2_entity"
 		}
@@ -4994,10 +5004,9 @@ shared_focus = {
 	completion_reward = {
 		set_technology = { masterful_blitz_GERV = 1 popup = no }
 		create_equipment_variant = {
-			name = "King Tiger"
+			name = "Tiger II"
 			type = heavy_tank_chassis_3
 			parent_version = 0
-			design_team = mio:GER_henschel_organization
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_high_velocity_cannon_3
@@ -5014,6 +5023,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 13
 				tank_nsb_armor_upgrade = 11
 			}
+			design_team = mio:GER_henschel_organization
 			icon = "GFX_GER_advanced_heavy_tank_medium"
 			model = "GER_heavy_armor_2_entity"
 		}
@@ -5044,7 +5054,6 @@ shared_focus = {
 			name = "Jagdpanther"
 			type = medium_tank_destroyer_chassis_3
 			parent_version = 0
-			design_team = mio:GER_daimler_benz_organization
 			allow_without_tech = yes
 			modules = {
 				main_armament_slot = tank_high_velocity_cannon_2
@@ -5061,6 +5070,7 @@ shared_focus = {
 				tank_nsb_engine_upgrade = 14
 				tank_nsb_armor_upgrade = 15
 			}
+			design_team = mio:GER_Mercedes_benz_organization
 			icon = "GFX_GER_advanced_medium_td_medium"
 			model = "GER_medium_tank_destroyer_brigade_2_entity"
 		}

@@ -1099,6 +1099,7 @@ if = {
 	create_equipment_variant = {
 		name = "Fieseler Fi 167"
 		type = cv_small_plane_naval_bomber_airframe_1
+		design_team = mio:GER_fieseler_organization
 		parent_version = 0
 		modules = {
 			fixed_main_weapon_slot = torpedo_mounting

@@ -634,7 +634,33 @@ GER_dornier_organization = {
 	}
 }
 
+GER_fieseler_organization = {
+	include = generic_naval_aircraft_organization
+	icon = GFX_idea_fieseler
+	
+	allowed = {	
+		tag = GER 
+	}
 
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 8 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+	}
+}
 
 # Support Organizations
 

@@ -6934,8 +6934,7 @@ focus_tree = {
 		id = SOV_keep_commissars_organization
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = SOV_military_reorganization }
-		prerequisite = { focus = SOV_lessons_of_war }
-		prerequisite = { focus = SOV_new_military_doctrine }
+		prerequisite = { focus = SOV_lessons_of_war focus = SOV_new_military_doctrine }
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
@@ -7041,8 +7040,7 @@ focus_tree = {
 		id = SOV_swap_to_political_advisors
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = SOV_military_reorganization }
-		prerequisite = { focus = SOV_lessons_of_war }
-		prerequisite = { focus = SOV_new_military_doctrine }
+		prerequisite = { focus = SOV_lessons_of_war focus = SOV_new_military_doctrine }
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
