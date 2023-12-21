@@ -445,6 +445,17 @@ GER_Operation_Barbarossa_High_Command = {
 				date > 1955.11.29
 				date > 1956.11.29
 			}
+			OR = {
+				has_idea = GER_barbarossa
+				has_idea = GER_barbarossa_war
+			}
+			NOT = {
+				OR = {
+					has_idea = GER_winter_war_harsh_winter
+					has_idea = GER_winter_war_logistics
+					has_idea = GER_winter_war_infantry
+				}
+			}
 		}
 
 		visible = {
@@ -501,7 +512,10 @@ GER_Operation_Barbarossa_High_Command = {
 					has_country_flag = problems_with_logistics
 					has_country_flag = problems_with_infantry
 				}
-				add_ideas = GER_winter_war_harsh_winter
+				add_timed_idea = {
+					idea = GER_winter_war_harsh_winter
+					days = 90
+				}
 				clr_country_flag = problems_with_logistics
 				clr_country_flag = problems_with_infantry
 			}
@@ -510,7 +524,10 @@ GER_Operation_Barbarossa_High_Command = {
 					has_country_flag = problems_with_logistics
 					NOT = { has_country_flag = problems_with_infantry }
 				}
-				add_ideas = GER_winter_war_logistics
+				add_timed_idea = {
+					idea = GER_winter_war_logistics
+					days = 90
+				}
 				clr_country_flag = problems_with_logistics
 			}
 			if = {
@@ -518,7 +535,10 @@ GER_Operation_Barbarossa_High_Command = {
 					NOT = { has_country_flag = problems_with_logistics }
 					has_country_flag = problems_with_infantry
 				}
-				add_ideas = GER_winter_war_infantry
+				add_timed_idea = {
+					idea = GER_winter_war_infantry
+					days = 90
+				}
 				clr_country_flag = problems_with_infantry
 			}
 		}

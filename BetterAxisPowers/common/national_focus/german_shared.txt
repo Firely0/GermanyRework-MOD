@@ -3811,7 +3811,9 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	complete_tooltip = {
-		air_experience = 25
+		air_experience = 50
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = ritter_von_greim
 		every_state = {
 			limit = { has_state_flag = GER_air_innovation_2air }
 			add_building_construction = {
@@ -3832,6 +3834,8 @@ shared_focus = {
 	completion_reward = {
 
 		air_experience = 50
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = ritter_von_greim
 
 		if = {
 			limit = {

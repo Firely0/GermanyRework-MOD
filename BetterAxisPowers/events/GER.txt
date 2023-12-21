@@ -14,7 +14,6 @@ add_namespace = GER_new_leader
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
-add_namespace = GER_hidden_vichy_event
 
 # War with France.. #To Do Rework
 add_namespace = ger_around_maginot_event
@@ -5779,23 +5778,6 @@ country_event = {
 				scope = GER
 				days = 90
 			}
-		}
-	}
-}
-
-country_event = {
-	id = GER_hidden_vichy_event.1
-
-	fire_only_once= yes
-	hidden = yes
-	
-	trigger = {
-		has_global_flag = vichy_france
-	}
-
-	immediate = {
-		hidden_effect = {
-			GER_Vichy_state_modifier = yes
 		}
 	}
 }
