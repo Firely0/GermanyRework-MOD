@@ -375,6 +375,7 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
+			always = no
 		}
 
 		activation = {
@@ -382,7 +383,6 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		visible = {
-			has_global_flag = GER_Operation_Barbarossa_running
 		}
 
 		cancel_if_not_visible = yes
