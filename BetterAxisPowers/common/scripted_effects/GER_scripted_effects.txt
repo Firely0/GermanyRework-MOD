@@ -3133,8 +3133,7 @@ GER_readd_barbarossa = {
 		GER = { add_ideas = GER_barbarossa }
 	}
 	else = {
-		clr_global_flag = GER_Operation_Barbarossa_running
-		set_global_flag = GER_Operation_Barbarossa_Failed
+		set_global_flag = GER_Operation_Barbarossa_Failed_phase_1
 		GER = {
 			add_ideas = GER_barbarossa_war
 			add_timed_idea = {

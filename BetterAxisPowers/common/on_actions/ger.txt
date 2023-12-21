@@ -562,6 +562,14 @@ on_actions = {
 						}
 						set_state_flag = GER_Claim_lands
 					}
+					if = {
+						limit = {
+							92 = {
+								is_owned_and_controlled_by = SOV
+							}
+						}
+						set_state_flag = GER_Claim_lands
+					}
 					every_country = {
 						limit = {
 							is_puppet_of = SOV
@@ -577,80 +585,36 @@ on_actions = {
 							add_command_power = 21
 						}
 					}
-					if = {
-						limit = {
-							GER = {
-								has_completed_focus = GER_tank_warfare
-							}
+					GER = {
+						add_timed_idea = {
+							idea = GER_barbarossa
+							days = 180
 						}
-						GER = {
-							add_timed_idea = {
-								idea = GER_barbarossa
-								days = 180
-							}
-							set_variable = {
-								GER_Operation_Barb_time = 180
-							}
-							activate_mission = GER_conquer_Leningrad
-							activate_mission = GER_conquer_Misk
-							activate_mission = GER_conquer_Moscow
-							activate_mission = GER_conquer_Kiev
-							activate_mission = GER_conquer_Stalingrad
-							activate_mission = GER_conquer_Sevastopol
-							if = {
-								limit = {
-									is_ai = yes
-								}
-								add_command_power = 21
-							}
+						set_variable = {
+							GER_Operation_Barb_time = 180
 						}
-					}
-					if = {
-						limit = {
-							GER = {
-								has_completed_focus = GER_Battle_Plan
-							}
+						set_variable = {
+							GER_Operation_Barb_time_1 = 181
 						}
-						GER = {
-							add_timed_idea = {
-								idea = GER_barbarossa
-								days = 365
-							}
-							set_variable = {
-								GER_Operation_Barb_time = 365
-							}
-							activate_mission = GER_conquer_Leningrad
-							activate_mission = GER_conquer_Misk
-							activate_mission = GER_conquer_Moscow
-							activate_mission = GER_conquer_Stalingrad
-							activate_mission = GER_conquer_Kiev
-							activate_mission = GER_conquer_Sevastopol
-						}
-					}
-					else = {
-						GER = {
-							add_timed_idea = {
-								idea = GER_barbarossa
-								days = 180
-							}
-							set_variable = {
-								GER_Operation_Barb_time = 180
-							}
-							activate_mission = GER_conquer_Leningrad
-							activate_mission = GER_conquer_Misk
-							activate_mission = GER_conquer_Moscow
-							activate_mission = GER_conquer_Stalingrad
-							activate_mission = GER_conquer_Kiev
-							activate_mission = GER_conquer_Sevastopol
-						}
-					}
-					if = {
-						limit = {
-							GER = {
+						activate_mission = GER_conquer_Leningrad
+						activate_mission = GER_conquer_Misk
+						activate_mission = GER_conquer_Moscow
+						activate_mission = GER_conquer_Kiev
+						activate_mission = GER_conquer_Stalingrad
+						activate_mission = GER_conquer_Sevastopol
+						activate_mission = GER_end_of_phase_one
+						if = {
+							limit = {
 								is_ai = yes
 							}
+							add_command_power = 21
 						}
-						add_command_power = 20
+						if = {
+							limit = {
+								SOV = { is_ai = yes }
+							}
+							SOV = { add_command_power = 21 }
+						}
 					}
 				}
 			}

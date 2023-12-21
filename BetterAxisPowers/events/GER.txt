@@ -4,8 +4,6 @@ add_namespace = GER_rhineland
 add_namespace = GER_rhineland_isolete
 add_namespace = GER_rhineland_remind_ger
 add_namespace = GER_rhineland_remind_fra
-add_namespace = GER_request_help
-add_namespace = GER_request_fra_help
 
 # Health of Adolf Hitler
 add_namespace = GER_health_adolf
@@ -16,6 +14,7 @@ add_namespace = GER_new_leader
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
+add_namespace = GER_hidden_vichy_event
 
 # War with France.. #To Do Rework
 add_namespace = ger_around_maginot_event
@@ -61,26 +60,6 @@ add_namespace = GER_trade_danzig
 add_namespace = GER_Ernest_Cox
 
 country_event = {
-	id = ger_request_qingdao.1
-	title = "Demand Qingdao"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		name = "Demand it"
-		random_country = {
-			limit = {
-				owns_state = 743
-			}
-			country_event = {
-				id = ger_request_qingdao.2
-				days = 1
-			}
-		}
-	}
-}
-
-country_event = {
 	id = ger_request_qingdao.2
 	title = "Germany Demands Qingdao"
 	desc = ""
@@ -123,6 +102,7 @@ country_event = {
 			}
 		}
 	}
+
 	option = {
 		name = "No"
 		ai_chance = {
@@ -164,6 +144,7 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+
 	option = {
 		name = "Prepare for War"
 		create_wargoal = {
@@ -2622,20 +2603,6 @@ country_event = {
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
 
-	option = { #German
-		ai_chance = {
-			base = 100
-		}
-		name = "Our Lands"
-
-		trigger = {
-			NOT = { has_country_flag = GER_SOV_Demanded }
-		}
-
-		set_country_flag = GER_SOV_Demanded
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
-	}
-
 	option = { #Japan
 		name = "Grant Japan Claims"
 		ai_chance = {
@@ -2660,6 +2627,16 @@ country_event = {
 
 	option = { #Finland
 		name = "We Must Keep our Promise"
+
+		trigger = {
+			FIN = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			has_global_flag = GER_FIN_granted_lands
+			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
+		}
+
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -2671,21 +2648,20 @@ country_event = {
 			}
 		}
 
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_FIN_Demanded
-
-		trigger = {
-			FIN = {
-				is_in_faction_with = GER
-				has_war_with = SOV
-			}
-			has_global_flag = GER_FIN_granted_lands
-			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
-		}
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 	}
 
 	option = { #Romania
 		name = "Maybe Romania Wants Their Pre-War Borders "
+
+		trigger = {
+			ROM = {
+				is_in_faction_with = GER
+				has_war_with = SOV
+			}
+			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
+		}
 
 		ai_chance = {
 			base = 0
@@ -2698,16 +2674,8 @@ country_event = {
 			}
 		}
 
-		trigger = {
-			ROM = {
-				is_in_faction_with = GER
-				has_war_with = SOV
-			}
-			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
-		}
-
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_ROM_Demanded
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 	}
 
 	option = { #Turkey
@@ -2735,17 +2703,13 @@ country_event = {
 			NOT = { has_country_flag = GER_SOV_TUR_Demanded }
 		}
 
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 		set_country_flag = GER_SOV_TUR_Demanded
+		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
 	}
 
 	option = { #END
 		ai_chance = {
 			base = 10
-			modifier = { #We Take Our Lands First
-				add = 5
-				has_country_flag = GER_SOV_Demanded
-			}
 			modifier = {
 				add = 85
 				OR = {
@@ -2761,7 +2725,6 @@ country_event = {
 		SOV = {
 			country_event = { id = GER_SOV_ultimatom.2 hours = 3 }
 		}
-
 	}
 
 }
@@ -2965,168 +2928,6 @@ country_event = {
 			base = 0
 		}
 		name = "War Must go on.."
-	}
-}
-
-country_event = {
-	id = GER_request_help.1
-	title = "Rhineland Question!"
-	desc = "Germany Needs to Militarize Rhineland Against Communism."
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Fine"
-
-		GER = { country_event = { id = GER_request_help.2 } }
-
-		if = {
-			limit = {
-				NOT = { has_government = communism }
-			}
-			add_stability = 0.1
-			add_political_power = 50
-		}
-
-		hidden_effect = {
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			909 = { set_demilitarized_zone = no }
-			clr_country_flag = GER_rhineland_challenge_met
-		}
-	}
-	option = {
-		ai_chance = {
-			factor = 0
-		}
-		name = "No"
-
-		GER = { country_event = { id = GER_request_help.3 } }
-
-		if = {
-			limit = {
-				has_government = democratic
-			}
-			add_stability = -0.1
-			add_war_support = -0.1
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
-		}
-	}
-}
-
-country_event = {
-	id = GER_request_help.2
-	title = "United Kingdom Accepted Our Request!"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Good"
-
-	}
-}
-
-country_event = {
-	id = GER_request_help.3
-	title = "United Kingdom Not Accepted Our Request!"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "We See You When You Invaded by Communists."
-
-	}
-}
-
-country_event = {
-	id = GER_request_fra_help.1
-	title = "Rhineland Question!"
-	desc = "Germany Needs to Militarize Rhineland Against Communism."
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Fine"
-
-		GER = { country_event = { id = GER_request_fra_help.2 } }
-
-		if = {
-			limit = {
-				NOT = { has_government = communism }
-			}
-			add_stability = 0.1
-			add_political_power = 50
-		}
-
-		hidden_effect = {
-			42 = { set_demilitarized_zone = no }
-			51 = { set_demilitarized_zone = no }
-			909 = { set_demilitarized_zone = no }
-			clr_country_flag = GER_rhineland_challenge_met
-		}
-	}
-	option = {
-		ai_chance = {
-			factor = 0
-		}
-		name = "No"
-
-		GER = { country_event = { id = GER_request_fra_help.3 } }
-
-		if = {
-			limit = {
-				has_government = democratic
-			}
-			add_stability = -0.1
-			add_war_support = -0.1
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
-		}
-	}
-}
-
-country_event = {
-	id = GER_request_fra_help.2
-	title = "France Accepted Our Request!"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "Good"
-
-	}
-}
-
-country_event = {
-	id = GER_request_fra_help.3
-	title = "France Not Accepted Our Request!"
-	desc = ""
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = "We See You When You Invaded by Communists."
-
 	}
 }
 
@@ -4153,7 +3954,7 @@ country_event = { #Event For Germany Good News.
 			factor = 100
 		}
 		hidden_effect = {
-			complete_national_focus = GER_rhineland_ab
+			complete_national_focus = GER_rhineland
 			country_event = { hours = 6 id = news.25 }
 		}
 	}
@@ -4173,7 +3974,7 @@ country_event = { #Event For Germany Embargo But Good News.
 		}
 
 		hidden_effect = {
-			complete_national_focus = GER_rhineland_ab
+			complete_national_focus = GER_rhineland
 			country_event = { hours = 6 id = news.25 }
 		}
 	}
@@ -4193,7 +3994,7 @@ country_event = { #Event For Germany Isolated But Good News.
 		}
 
 		hidden_effect = {
-			complete_national_focus = GER_rhineland_ab
+			complete_national_focus = GER_rhineland
 			country_event = { hours = 6 id = news.25 }
 		}
 	}
@@ -4213,7 +4014,7 @@ country_event = { #Event For Germany Secerutiy of Benelux But Good News.
 		}
 
 		hidden_effect = {
-			complete_national_focus = GER_rhineland_ab
+			complete_national_focus = GER_rhineland
 			country_event = { hours = 6 id = news.25 }
 		}
 	}
@@ -4300,7 +4101,7 @@ country_event = {
 
 	option = {
 		name = "We cannot back down!"
-		complete_national_focus = GER_rhineland_ab
+		complete_national_focus = GER_rhineland
 		ENG = {
 			country_event = wtt_germany.36
 			if = {
@@ -5978,6 +5779,23 @@ country_event = {
 				scope = GER
 				days = 90
 			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_hidden_vichy_event.1
+
+	fire_only_once= yes
+	hidden = yes
+	
+	trigger = {
+		has_global_flag = vichy_france
+	}
+
+	immediate = {
+		hidden_effect = {
+			GER_Vichy_state_modifier = yes
 		}
 	}
 }

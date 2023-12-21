@@ -1,0 +1,23 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = SWE
+						tag = FIN
+						tag = NOR
+						tag = DEN
+						tag = SOV
+						tag = EST
+						tag = LAT
+						tag = LIT
+						tag = TAN
+						tag = ICE
+					}
+				}
+				set_technology = { winter_clothes_gw = 1 popup = no }
+			}
+		}
+	}
+}

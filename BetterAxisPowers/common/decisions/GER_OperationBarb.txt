@@ -367,9 +367,165 @@ GER_Operation_Barbarossa_V = {
 		}
 	}
 
+	GER_end_of_phase_one = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			GER_readd_barbarossa = yes
+		}
+
+		complete_effect = {
+		}
+	}
+
 }
 
 GER_Operation_Barbarossa_High_Command = {
+
+	The_Soviet_Winter = {
+		icon = GFX_decision_generic_army_support
+		cancel_if_not_visible = yes
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			OR = {
+				date > 1936.11.29
+				date > 1937.11.29
+				date > 1938.11.29 
+				date > 1939.11.29
+				date > 1940.11.29 
+				date > 1941.11.29
+				date > 1942.11.29
+				date > 1943.11.29
+				date > 1944.11.29
+				date > 1945.11.29
+				date > 1946.11.29
+				date > 1947.11.29
+				date > 1948.11.29
+				date > 1949.11.29
+				date > 1950.11.29
+				date > 1951.11.29
+				date > 1952.11.29
+				date > 1953.11.29
+				date > 1954.11.29
+				date > 1955.11.29
+				date > 1956.11.29
+			}
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_winter_war_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						date < 1942.01.01
+						OR = {
+							NOT = { has_tech = mechanised_infantry }
+							NOT = { has_tech = tech_logistics_company2 }
+						}
+					}
+					set_country_flag = problems_with_logistics
+				}
+				if = {
+					limit = {
+						date < 1942.01.01
+						OR = {
+							NOT = { has_tech = winter_clothes_1939 }
+						}
+					}
+					set_country_flag = problems_with_infantry
+				}
+				if = {
+					limit = {
+						date > 1942.01.01
+						OR = {
+							NOT = { has_tech = mechanised_infantry2 }
+							NOT = { has_tech = tech_logistics_company3 }
+						}
+					}
+					set_country_flag = problems_with_logistics
+				}
+				if = {
+					limit = {
+						date > 1942.01.01
+						OR = {
+							NOT = { has_tech = winter_clothes_1940 }
+						}
+					}
+					set_country_flag = problems_with_infantry
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = problems_with_logistics
+					has_country_flag = problems_with_infantry
+				}
+				add_ideas = GER_winter_war_harsh_winter
+				clr_country_flag = problems_with_logistics
+				clr_country_flag = problems_with_infantry
+			}
+			if = {
+				limit = {
+					has_country_flag = problems_with_logistics
+					NOT = { has_country_flag = problems_with_infantry }
+				}
+				add_ideas = GER_winter_war_logistics
+				clr_country_flag = problems_with_logistics
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = problems_with_logistics }
+					has_country_flag = problems_with_infantry
+				}
+				add_ideas = GER_winter_war_infantry
+				clr_country_flag = problems_with_infantry
+			}
+		}
+
+		complete_effect = {
+		}
+	}
 
 	High_Command_Tank_Warfare = {
 		icon = GFX_decision_generic_tank
@@ -521,7 +677,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 		}
 	}
-	
+
 }
 
 GER_Operation_Barbarossa_Operations = {

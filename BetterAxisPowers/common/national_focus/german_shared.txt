@@ -1,3 +1,18 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+
 shared_focus = {
 	id = GER_west_wall
 	icon = GFX_goal_generic_construct_military
@@ -1116,7 +1131,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 12
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 	completion_reward = {
 		add_tech_bonus = {
 			name = GER_four_year_plan
@@ -1218,7 +1233,8 @@ shared_focus = {
 
 	bypass = {
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	search_filters = { FOCUS_FILTER_NAVY_XP }
 	completion_reward = {
 		navy_experience = 50
 	}
@@ -1279,7 +1295,7 @@ shared_focus = {
 		factor = 1
 	}
 
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		unlock_decision_tooltip = GER_offer_job_Ernest_Cox
 		add_tech_bonus = {
@@ -1478,7 +1494,7 @@ shared_focus = {
 		factor = 9
 	}
 
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		custom_effect_tooltip = GER_doctrine_cost_modify
 		add_to_variable = {
@@ -1631,8 +1647,10 @@ shared_focus = {
 		factor = 1
 	}
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 	completion_reward = {
+		navy_experience = 25
+		set_technology = { cruiser_submarines = 1 popup = no }
 		if = {
 			limit = {
 				has_idea = Landon_Treaty
@@ -1642,8 +1660,6 @@ shared_focus = {
 				add_idea = Landon_Treaty_sub_focus
 			}
 		}
-		navy_experience = 25
-		set_technology = { cruiser_submarines = 1 popup = no }
 		random_owned_controlled_state = {
 			limit = {
 				dockyard > 0
@@ -1944,7 +1960,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 9
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		if = {
 			limit = {
@@ -2235,6 +2251,7 @@ shared_focus = {
 	id = GER_extra_build_slot
 	icon = GFX_goal_r56_goal_generic_bills
 	prerequisite = { focus = GER_Civlian_Mobilization focus = GER_Arms_Mobilization }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	x = 0
 	y = 4
 	relative_position_id = GER_grosraumwirtschaft_a
@@ -2467,6 +2484,7 @@ shared_focus = {
 	x = 0
 	y = 6
 	relative_position_id = GER_four_year_plan_a
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	cost = 5
 	ai_will_do = {
 		factor = 1
@@ -2529,7 +2547,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 	}
 }
@@ -2550,7 +2568,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		random_state = {
 			limit = { is_fully_controlled_by = GER }
@@ -2589,7 +2607,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		random_owned_state = {
 			limit = {
@@ -2636,7 +2654,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		set_country_flag = GER_ECO_1
 		GER = {
@@ -2664,7 +2682,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -2737,6 +2755,7 @@ shared_focus = {
 	id = GER_Eco_Plan_A_Main_A
 	icon = GFX_focus_generic_industry_2
 	prerequisite = { focus = GER_Eco_Plan_A }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	x = 0
 	y = 3
 	relative_position_id = GER_Eco_Plan_A
@@ -2760,7 +2779,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -2846,7 +2864,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -2924,7 +2942,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		set_country_flag = GER_ECO_1
 		GER = {
@@ -2940,6 +2958,7 @@ shared_focus = {
 	id = GER_Eco_Plan_B_Main_A
 	icon = GFX_goal_generic_production2
 	prerequisite = { focus = GER_Eco_Plan_B }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	x = 4
 	y = 5
 	relative_position_id = GER_Finish_COPY
@@ -2963,7 +2982,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -3027,7 +3045,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -3101,7 +3119,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
 			GER = {
@@ -3213,7 +3231,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		64 = {
 			add_extra_state_shared_building_slots = 3
@@ -3242,7 +3260,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		if = {
 			limit = {
@@ -3318,7 +3336,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		custom_effect_tooltip = available_designer
 		show_ideas_tooltip = siemens_focus
@@ -3363,7 +3381,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		if = {
 			limit = {
@@ -3431,7 +3449,7 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 	}
 }
@@ -3672,7 +3690,7 @@ shared_focus = {
 			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 	completion_reward = {
 		if = {
 			limit = {
@@ -3681,6 +3699,8 @@ shared_focus = {
 			}
 			add_ideas = war_economy
 		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = speer
 		random_owned_controlled_state = {
 			limit = {
 				free_building_slots = {
@@ -3782,6 +3802,9 @@ shared_focus = {
 	x = 2
 	y = 0
 	cost = 5
+
+	search_filters = { FOCUS_FILTER_AIR_XP }
+
 	ai_will_do = {
 		factor = 1
 	}
@@ -3877,11 +3900,12 @@ shared_focus = {
 shared_focus = {
 	id = GER_Improve_TAC
 	icon = GFX_focus_generic_armored_air_support
+	prerequisite = { focus = GER_Operational_Integratiy }
+	relative_position_id = GER_air_innovation_a
 	x = 3
 	y = 2
-	relative_position_id = GER_air_innovation_a
-	prerequisite = { focus = GER_Operational_Integratiy }
 	cost = 5
+	
 	ai_will_do = {
 		factor = 0.25
 	}
@@ -4023,6 +4047,8 @@ shared_focus = {
 	available = {
 		has_tech = formation_flying
 	}
+
+	search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
 
 	available_if_capitulated = yes
 	completion_reward = {
@@ -4205,6 +4231,9 @@ shared_focus = {
 	x = -14
 	y = 0
 	cost = 5
+
+	search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER}
+
 	ai_will_do = {
 		factor = 1
 	}
@@ -4234,6 +4263,8 @@ shared_focus = {
 		has_tech = mobile_warfare
 	}
 
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+
 	available_if_capitulated = yes
 	completion_reward = {
 		custom_effect_tooltip = GER_tank_warfare_modify_tt
@@ -4250,6 +4281,8 @@ shared_focus = {
 			uses = 4
 			category = cat_mobile_warfare
 		}
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = heinz_guderian
 		custom_effect_tooltip = available_military_high_command
 		show_ideas_tooltip = erwin_rommel
 	}
@@ -4671,6 +4704,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_Lighting_Strike }
 	mutually_exclusive = { focus = GER_follow_wehrmacht_design }
+	search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
 	allow_branch = {
 		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_a_shadow_of_past has_completed_focus = GER_soviet_ally } }
 	}
@@ -4732,13 +4766,12 @@ shared_focus = {
 			modules = {
 				main_armament_slot = tank_heavy_cannon_2
 				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_cast_armor
-				engine_type_slot = tank_diesel_engine
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = armor_skirts
-				special_type_slot_4 = stabilizer
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = smoke_launchers
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 11
@@ -4778,17 +4811,17 @@ shared_focus = {
 			modules = {
 				main_armament_slot = tank_heavy_cannon_2
 				turret_type_slot = tank_heavy_fixed_superstructure_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_cast_armor
-				engine_type_slot = tank_diesel_engine
-				special_type_slot_1 = sloped_armor
-				special_type_slot_2 = squeezebore_adaptor
-				special_type_slot_3 = secondary_turret_small_cannon
-				special_type_slot_4 = secondary_turret_small_cannon
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = smoke_launchers
+				special_type_slot_4 = extra_ammo_storage
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 9
-				tank_nsb_armor_upgrade = 14
+				tank_nsb_armor_upgrade = 10
 			}
 			design_team = mio:GER_porsche_organization
 			icon = "GFX_GER_improved_heavy_tank_td"
@@ -4825,9 +4858,9 @@ shared_focus = {
 			modules = {
 				main_armament_slot = tank_super_heavy_cannon
 				turret_type_slot = tank_super_heavy_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_cast_armor
-				engine_type_slot = tank_diesel_engine
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_3
 				special_type_slot_2 = sloped_armor
 				special_type_slot_3 = armor_skirts
@@ -4850,6 +4883,7 @@ shared_focus = {
 	relative_position_id = GER_army_innovation_a
 	prerequisite = { focus = GER_Lighting_Strike }
 	mutually_exclusive = { focus = GER_follow_fuhrer_design focus = GER_follow_red_army_design }
+	search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
 	x = -4
 	y = 4
 	cost = 2
@@ -4965,16 +4999,16 @@ shared_focus = {
 				main_armament_slot = tank_medium_cannon_2
 				turret_type_slot = tank_medium_three_man_tank_turret
 				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_cast_armor
+				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_3
 				special_type_slot_2 = armor_skirts
-				special_type_slot_3 = sloped_armor
-				special_type_slot_4 = stabilizer
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = smoke_launchers
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 14
-				tank_nsb_armor_upgrade = 14
+				tank_nsb_engine_upgrade = 7
+				tank_nsb_armor_upgrade = 13
 			}
 			design_team = mio:GER_man_organization
 			icon = "GFX_GER_medium_CBC"
@@ -5012,16 +5046,15 @@ shared_focus = {
 				main_armament_slot = tank_high_velocity_cannon_3
 				turret_type_slot = tank_heavy_three_man_tank_turret
 				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_cast_armor
+				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_3
 				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = armor_skirts
-				special_type_slot_4 = wet_ammo_storage
+				special_type_slot_3 = smoke_launchers
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 13
-				tank_nsb_armor_upgrade = 11
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 8
 			}
 			design_team = mio:GER_henschel_organization
 			icon = "GFX_GER_advanced_heavy_tank_medium"
@@ -5056,19 +5089,19 @@ shared_focus = {
 			parent_version = 0
 			allow_without_tech = yes
 			modules = {
-				main_armament_slot = tank_high_velocity_cannon_2
+				main_armament_slot = tank_high_velocity_cannon_3
 				turret_type_slot = tank_medium_fixed_superstructure_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_cast_armor
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = sloped_armor
-				special_type_slot_2 = armor_skirts
-				special_type_slot_3 = squeezebore_adaptor
-				special_type_slot_4 = additional_machine_guns
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = extra_ammo_storage
+				special_type_slot_4 = smoke_launchers
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 14
-				tank_nsb_armor_upgrade = 15
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 12
 			}
 			design_team = mio:GER_Mercedes_benz_organization
 			icon = "GFX_GER_advanced_medium_td_medium"
@@ -5316,7 +5349,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_1
@@ -5432,7 +5464,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
 		set_variable = { GER_army_org_regain = 0.1 }
@@ -5571,7 +5602,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		custom_effect_tooltip = GER_Glory_of_wehrmacht_tt
 		set_variable = { GER_army_org_regain = 0.1 }
@@ -5664,6 +5694,8 @@ shared_focus = {
 	available = {
 		has_tech = superior_firepower
 	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
 
 	available_if_capitulated = yes
 	completion_reward = {
@@ -5856,7 +5888,6 @@ shared_focus = {
 	}
 
 	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		create_equipment_variant = {
 			name = "Flakpanzer IV Wirbelwind"
@@ -5866,15 +5897,15 @@ shared_focus = {
 			modules = {
 				main_armament_slot = tank_anti_air_cannon_2
 				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
+				suspension_type_slot = tank_interleaved_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = sloped_armor
-				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = secondary_turret_hmg
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 13
-				tank_nsb_armor_upgrade = 10
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 9
 			}
 			icon = "GFX_GER_improved_medium_spaa"
 			model = "GER_medium_sp_anti_air_brigade_2_entity"

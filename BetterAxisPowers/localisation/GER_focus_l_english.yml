@@ -155,8 +155,9 @@
  New_Laws_wilhelm_health:0 "Reforms in Health Services"
  New_Laws_wilhelm_arms:0 "Reinforce Army Laws"
 
- #Operation Barbarossa
+ #OPERATIN FIRESTORM UPDATE - Operation Barbarossa
 
+ #Main Decision - Timer 
  GER_Operation_Barbarossa_V:0 "Operation Barbarossa"
  GER_conquer_Leningrad:0 "Conquer Leningrad"
  GER_conquer_Misk:0 "Conquer Minsk"
@@ -164,24 +165,29 @@
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
  GER_conquer_Kiev:0 "Canquer Kiev"
  GER_conquer_Sevastopol:0 "Canquer Sevastopol"
+ GER_end_of_phase_one:0 "End of Phase One"
 
- GER_Operation_Barbarossa_High_Command:0 "Operation Barbarossa - High Command"
- GER_Operation_Barbarossa_High_Command_desc:0 "After the start of the largest military operation in history, the German High Command is in charge of master planning, and the decisions taken here affect the tasks that commanders can perform."
+ #High Command
+ GER_Operation_Barbarossa_High_Command:0 "High Command"
+ GER_Operation_Barbarossa_High_Command_desc:0 ""
  High_Command_Tank_Warfare:0 "Focus on Blitzkrieg"
  High_Command_land_combat:0 "Focus on Infantry Assault"
  High_Command_prio_Luftwaffe:0 "Focus on Air Supremacy"
 
- GER_Operation_Barbarossa_Operations:0 "Operation Barbarossa - Operations"
+ The_Soviet_Winter:0 "Winter is Coming"
+ GER_winter_war_tooltip:0 "Our Army will continue as normal according to our preparations for the winter or you will have to deal with additional problems until we find definite solutions suitable for the harsh winter conditions."
+
+ #Military Operations
+ GER_Operation_Barbarossa_Operations:0 "Military Operations"
  GER_Operation_Barbarossa_Operations_desc:0 ""
 
- GER_Operation_Barbarossa_war_efforts:0 "Operation Barbarossa - War Efforts"
- GER_Operation_Barbarossa_war_efforts_desc:0 ""
- Focus_on_tank_production:0 "Focus on Tank Production"
- Focus_on_air_production:0 "Focus on Air Production"
- Focus_on_mobilization:0 "Focus on Mobilization"
- Focused_on_production:0 "No Particular Focus"
-
- GER_Unexpected_Winter:0 "Unexpected Soviet Winter"
+ #Ideas for Operation Barbarossa
+ GER_winter_war_harsh_winter:0 "Harsh Winter Conditions"
+ GER_winter_war_harsh_winter_desc:0 ""
+ GER_winter_war_logistics:0 "Logistics Problems"
+ GER_winter_war_logistics_desc:0 ""
+ GER_winter_war_infantry:0 "Harsh Winter Conditions"
+ GER_winter_war_infantry_desc:0 ""
 
  #Operation Sea Lion
 
@@ -687,6 +693,7 @@
  GER_Rhineland_demilitarized_c:0 "Militarize §RRhineland§!"
  GER_Rhineland_demilitarized_d:0 "Let's Test the French Response"
  GER_Rhineland_demilitarized_back:0 "We Must Back Down"
+ GER_rhineland_focus:0 "Remilitarization of Rhineland"
  GER_communism_near_me:0 "Any Neighbor Country Ruled by Communism"
  GER_fascism_is_wrong:0 "Failure in Attempt of Militarize Rhineland"
  GER_experts_in_field_tt:0 "Unlocks §RGebirgsjager§! and §RFallschirmjager§! Special Units."

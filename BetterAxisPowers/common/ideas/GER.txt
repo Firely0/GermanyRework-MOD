@@ -3454,11 +3454,6 @@ ideas = {
 					has_war_with = SOV
 				}
 			}
-
-			on_remove = {
-				GER_readd_barbarossa = yes
-			}
-
 		}
 
 		GER_barbarossa_war = {
@@ -3488,6 +3483,54 @@ ideas = {
 				clr_global_flag = Operation_barb_run_global
 			}
 
+		}
+
+		GER_winter_war_harsh_winter = {
+			picture = tur_sub_zero_survival_training
+
+			allowed = {
+				always = no
+			}
+
+			modifier = { # Infantry Debuffs and Cold Weather Debuffs
+				acclimatization_cold_climate_gain_factor = -0.15
+				army_infantry_attack_factor = -0.1
+				army_infantry_defence_factor = -0.05
+
+				winter_attrition = 0.25
+				army_fuel_capacity_factor = -0.25
+				supply_consumption_factor = 0.15
+				truck_attrition_factor = 0.25
+			}
+		}
+
+		GER_winter_war_logistics = {
+			picture = tur_sub_zero_survival_training
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				winter_attrition = 0.25
+				army_fuel_capacity_factor = -0.25
+				supply_consumption_factor = 0.15
+				truck_attrition_factor = 0.25
+			}
+		}
+
+		GER_winter_war_infantry = {
+			picture = tur_sub_zero_survival_training
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				acclimatization_cold_climate_gain_factor = -0.15
+				army_infantry_attack_factor = -0.1
+				army_infantry_defence_factor = -0.05
+			}
 		}
 
 		GER_War_Exhaustion = {
