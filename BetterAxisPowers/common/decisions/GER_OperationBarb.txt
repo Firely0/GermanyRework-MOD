@@ -395,7 +395,10 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		timeout_effect = {
-			GER_readd_barbarossa = yes
+			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			hidden_effect = {
+				GER_readd_barbarossa = yes
+			}
 		}
 
 		complete_effect = {
@@ -422,32 +425,48 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		activation = {
+			has_global_flag = GER_Operation_Barbarossa_running
 			OR = {
-				date > 1936.11.29
-				date > 1937.11.29
-				date > 1938.11.29 
-				date > 1939.11.29
-				date > 1940.11.29 
-				date > 1941.11.29
-				date > 1942.11.29
-				date > 1943.11.29
-				date > 1944.11.29
-				date > 1945.11.29
-				date > 1946.11.29
-				date > 1947.11.29
-				date > 1948.11.29
-				date > 1949.11.29
-				date > 1950.11.29
-				date > 1951.11.29
-				date > 1952.11.29
-				date > 1953.11.29
-				date > 1954.11.29
-				date > 1955.11.29
-				date > 1956.11.29
-			}
-			OR = {
-				has_idea = GER_barbarossa
-				has_idea = GER_barbarossa_war
+				AND = {
+					date > 1936.12.01
+					date < 1937.03.01
+				}
+				AND = {
+					date > 1937.12.01
+					date < 1938.03.01
+				}
+				AND = {
+					date > 1938.12.01
+					date < 1939.03.01
+				}
+				AND = {
+					date > 1939.12.01
+					date < 1940.03.01
+				}
+				AND = {
+					date > 1940.12.01
+					date < 1941.03.01
+				}
+				AND = {
+					date > 1941.12.01
+					date < 1942.03.01
+				}
+				AND = {
+					date > 1942.12.01
+					date < 1943.03.01
+				}
+				AND = {
+					date > 1943.12.01
+					date < 1944.03.01
+				}
+				AND = {
+					date > 1944.12.01
+					date < 1945.03.01
+				}
+				AND = {
+					date > 1945.12.01
+					date < 1946.03.01
+				}
 			}
 			NOT = {
 				OR = {
@@ -456,10 +475,6 @@ GER_Operation_Barbarossa_High_Command = {
 					has_idea = GER_winter_war_infantry
 				}
 			}
-		}
-
-		visible = {
-			has_global_flag = GER_Operation_Barbarossa_running
 		}
 
 		cancel_effect = {
