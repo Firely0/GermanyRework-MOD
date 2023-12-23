@@ -384,6 +384,7 @@ focus_tree = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		cancel_if_invalid = no
 		x = 88
 		y = 1
@@ -426,6 +427,7 @@ focus_tree = {
 	focus = {
 		id = GER_Asian_Policy
 		icon = GFX_focus_usa_focus_on_asia
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_Axis_Powers
 		}
@@ -811,6 +813,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		allow_branch = {
 			NOT = {
 				has_completed_focus = GER_against_fuhrer
@@ -2843,6 +2846,7 @@ focus_tree = {
 	focus = {
 		id = GER_uk_friend
 		icon = GFX_focus_chi_british_cooperation
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_foregin_affairs
 		}
@@ -3317,7 +3321,29 @@ focus_tree = {
 						}
 					}
 				}
-				else = {
+				else_if = {
+					limit = {
+						has_global_flag = GCE_london_surrender
+					}
+					set_autonomy = {
+						target = ENG
+						autonomy_state = ger_overthrow_government_ita
+					}
+					ENG = {
+						set_rule = {
+							can_not_declare_war = no
+							can_decline_call_to_war = yes
+							can_join_opposite_factions = no
+						}
+					}
+					every_controlled_state = {
+						limit = {
+							is_core_of = ENG
+						}
+						transfer_state_to = ENG
+					}
+				}
+				else= {
 					set_autonomy = {
 						target = ENG
 						autonomy_state = ger_overthrow_government_ita
@@ -5315,6 +5341,7 @@ focus_tree = {
 						state = 56
 						state = 59
 						state = 60
+						state = 909
 					}
 				}
 				add_dynamic_modifier = {
@@ -5659,6 +5686,7 @@ focus_tree = {
 		id = GER_Middle_east_diplomacy
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		relative_position_id = GER_Axis_Powers
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_Axis_Powers
 		}
@@ -5712,6 +5740,9 @@ focus_tree = {
 			factor = 1
 		}
 		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
 			VIC = {
@@ -5978,6 +6009,7 @@ focus_tree = {
 		id = GER_scandinavia_policy
 		icon = GFX_focus_generic_scandinavian_alliance
 		relative_position_id = GER_Axis_Powers
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_Axis_Powers
 		}
@@ -6031,6 +6063,9 @@ focus_tree = {
 		}
 		bypass = {
 		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
 		completion_reward = {
 			country_event = {
 				id = GER_denmark_problem.1
@@ -6063,6 +6098,9 @@ focus_tree = {
 			factor = 0
 		}
 		bypass = {
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
 			country_event = {
@@ -6556,6 +6594,7 @@ focus_tree = {
 	focus = {
 		id = GER_EU_Policy
 		icon = GFX_focus_usa_focus_on_europe
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_Axis_Powers
 		}
@@ -8957,6 +8996,7 @@ focus_tree = {
 	focus = {
 		id = GER_BALKAN
 		icon = GFX_focus_generic_balkans_focus
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_Axis_Powers
 		}
@@ -10266,7 +10306,7 @@ focus_tree = {
 			focus = GER_fascism_for_our_glory
 		}
 		icon = GFX_goal_all_shall_serve
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 		available = {
 			if = {
 				limit = {
@@ -11894,6 +11934,7 @@ focus_tree = {
 		id = GER_Sleep_Well_SOV
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		dynamic = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_foregin_affairs
 		}

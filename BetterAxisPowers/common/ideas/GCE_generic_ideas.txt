@@ -1,0 +1,702 @@
+# Soviet Ideas
+
+# Refugee Flood
+ideas = {
+	country = {
+		refugee_flood = {
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			allowed = {
+				tag = SOV
+			}
+			cancel = {
+				controls_state = 219
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = 10
+				stability_factor = -0.05
+			}
+		}
+	}
+}
+
+# English Ideas
+# English Broken Crown
+ideas = {
+	country = {
+		broken_crown = {
+			picture = idea_broken_crown
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -0.2
+				political_power_cost = 0.2
+				stability_factor = -0.1
+			}
+		}
+	}
+}
+
+# English German Crown
+ideas = {
+	country = {
+		german_crown = {
+			picture = idea_german_crown
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fascism_acceptance = 50
+				autonomy_gain = -0.2
+				stability_factor = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.1
+			}
+		}
+	}
+}
+
+# Treaty of Brighton (small army)
+ideas = {
+	country = {
+		treaty_of_brighton_small_army = {
+			picture = hol_caved_to_the_british
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+				country_lock_all_division_template = yes
+				ENG = {
+					division_template = {
+						name = "Greater England Division"
+						priority = 1
+						regiments = {
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 0
+								y = 2
+							}
+							infantry = {
+								x = 0
+								y = 3
+							}
+							infantry = {
+								x = 0
+								y = 4
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 2
+							}
+							infantry = {
+								x = 1
+								y = 3
+							}
+							infantry = {
+								x = 1
+								y = 4
+							}
+							infantry = {
+								x = 2
+								y = 0
+							}
+							artillery_brigade = {
+								x = 2
+								y = 1
+							}
+							artillery_brigade = {
+								x = 2
+								y = 2
+							}
+							artillery_brigade = {
+								x = 2
+								y = 3
+							}
+							artillery_brigade = {
+								x = 2
+								y = 4
+							}
+						}
+						support = {
+							engineer = {
+								x = 0
+								y = 0
+							}
+							field_hospital = {
+								x = 0
+								y = 1
+							}
+							recon = {
+								x = 0
+								y = 2
+							}
+						}
+					}
+				}
+				126 = {
+					create_unit = {
+						division = "name = \"1. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"2. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"3. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"4. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"5. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"6. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"7. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"8. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"9. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+					create_unit = {
+						division = "name = \"10. Greater England Army\" division_template = \"Greater England Division\" start_experience_factor = 1"
+						owner = ENG
+					}
+				}
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+	}
+}
+
+# Treaty of Brighton 
+ideas = {
+	country = {
+		treaty_of_brighton = {
+			picture = hol_caved_to_the_british
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+			}
+		}
+	}
+}
+
+# Generic Ideas
+# Government Purged
+ideas = {
+	country = {
+		government_purged = {
+			picture = generic_purge
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				autonomy_gain = -0.5
+				stability_factor = -0.1
+				political_power_gain = -0.2
+			}
+		}
+	}
+}
+
+# High Reparations
+ideas = {
+	country = {
+		high_reparations = {
+			picture = chi_hyper_inflation5
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.3
+				political_power_gain = -0.3
+			}
+		}
+	}
+}
+
+# Medium Reparations
+ideas = {
+	country = {
+		medium_reparations = {
+			picture = chi_hyper_inflation3
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = -0.2
+				political_power_gain = -0.2
+			}
+		}
+	}
+}
+
+# Low Reparations
+ideas = {
+	country = {
+		low_reparations = {
+			picture = chi_hyper_inflation
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+	}
+}
+
+# Treaty of Brighton (no army)
+ideas = {
+	country = {
+		treaty_of_brighton_no_army = {
+			picture = hol_caved_to_the_british
+			removal_cost = -1
+			allowed = {
+				tag = ENG
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+				country_lock_all_division_template = yes
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.9
+				industrial_capacity_dockyard = -0.9
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+	}
+}
+
+# High Reparations
+ideas = {
+	country = {
+		receive_high_reparations = {
+			picture = SPR_relocate_the_gold_reserves
+			removal_cost = -1
+			allowed = {
+				tag = GER
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+}
+
+# Medium Reparations
+ideas = {
+	country = {
+		receive_medium_reparations = {
+			picture = SPR_relocate_the_gold_reserves
+			removal_cost = -1
+			allowed = {
+				tag = GER
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+}
+
+# Low Reparations
+ideas = {
+	country = {
+		receive_low_reparations = {
+			picture = SPR_relocate_the_gold_reserves
+			removal_cost = -1
+			allowed = {
+				tag = GER
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}
+
+# American Ideas
+# Treaty of New York (no army)
+ideas = {
+	country = {
+		treaty_of_new_york_no_army = {
+			picture = hol_the_foundations_of_defense
+			removal_cost = -1
+			allowed = {
+				tag = USA
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+				country_lock_all_division_template = yes
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.9
+				industrial_capacity_dockyard = -0.9
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+	}
+}
+
+# Treaty of New York (small army)
+ideas = {
+	country = {
+		treaty_of_new_york_small_army = {
+			picture = hol_the_foundations_of_defense
+			removal_cost = -1
+			allowed = {
+				tag = USA
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+				country_lock_all_division_template = yes
+				USA = {
+					division_template = {
+						name = "Greater America Division"
+						priority = 1
+						regiments = {
+							infantry = {
+								x = 0
+								y = 0
+							}
+							infantry = {
+								x = 0
+								y = 1
+							}
+							infantry = {
+								x = 0
+								y = 2
+							}
+							infantry = {
+								x = 0
+								y = 3
+							}
+							infantry = {
+								x = 0
+								y = 4
+							}
+							infantry = {
+								x = 1
+								y = 0
+							}
+							infantry = {
+								x = 1
+								y = 1
+							}
+							infantry = {
+								x = 1
+								y = 2
+							}
+							infantry = {
+								x = 1
+								y = 3
+							}
+							infantry = {
+								x = 1
+								y = 4
+							}
+							infantry = {
+								x = 2
+								y = 0
+							}
+							artillery_brigade = {
+								x = 2
+								y = 1
+							}
+							artillery_brigade = {
+								x = 2
+								y = 2
+							}
+							artillery_brigade = {
+								x = 2
+								y = 3
+							}
+							artillery_brigade = {
+								x = 2
+								y = 4
+							}
+						}
+						support = {
+							engineer = {
+								x = 0
+								y = 0
+							}
+							field_hospital = {
+								x = 0
+								y = 1
+							}
+							recon = {
+								x = 0
+								y = 2
+							}
+						}
+					}
+				}
+				360 = {
+					create_unit = {
+						division = "name = \"1. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"2. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"3. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"4. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"5. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"6. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"7. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"8. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"9. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"10. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"11. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"12. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"13. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"14. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"15. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"16. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"17. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"18. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"19. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+					create_unit = {
+						division = "name = \"20. Greater America Army\" division_template = \"Greater America Division\" start_experience_factor = 1"
+						owner = USA
+					}
+				}
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+	}
+}
+
+# Treaty of New York
+ideas = {
+	country = {
+		treaty_of_new_york = {
+			picture = hol_the_foundations_of_defense
+			removal_cost = -1
+			allowed = {
+				tag = USA
+			}
+			on_add = {
+				set_rule = {
+					can_not_declare_war = no
+				}
+			}
+			cancel = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+			}
+		}
+	}
+}

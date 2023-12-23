@@ -83,7 +83,6 @@
 
  GER_Com_Civilwar:0 "Military Junta"
  GER_Non_Civilwar:0 "Military Junta"
- GER_michael_wittmann:0 "Michael Wittmann"
 
  #state modifier
 
@@ -178,7 +177,7 @@
  The_Soviet_Winter:0 "Winter is Coming"
  GER_winter_war_tooltip:0 "Our Army will continue as normal according to our preparations for the winter or you will have to deal with additional problems until we find definite solutions suitable for the harsh winter conditions."
 
- #Military Operations
+ #Military Operations - Blitzkrieg - Infantry Assault - Air Supremacy
  GER_Operation_Barbarossa_Operations:0 "Military Operations"
  GER_Operation_Barbarossa_Operations_desc:0 ""
 
@@ -1685,7 +1684,7 @@
 
  GER_Battle_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §R-5.0%§! \n£planning_max_texticon Planning Speed: §Y+10.0%§! \n\n"
  GER_better_supply_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-10.0%§! \n\n"
- GER_new_supply_ways_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-90.0%§! \n\n"
+ GER_new_supply_ways_modify_tt:0 "$GER_Wehrmacht_tt$ \n£supply_texticon Supply Node Range: §Y+10.0%§! \n £supply_texticon Supply Factor: §Y+10.0%§! \n £attrition_supply_truck_texticon Truck Attrition Factor: §Y-15.0%§! \n\n"
  GER_staff_modify_tt:0 "$GER_Wehrmacht_tt$ \n£command_power_max_texticon Max Command Power §Y+15§! \n£planning_speed_texticon Planning Speed §Y+5.0%§! \n£planning_max_texticon  Max planning factor §Y+20.0%§! \n£MODIFIER_ARMY_SPEED_FACTOR Army Speed Factor: §Y+5.0%§! \n£training_texticon Minimum Training Level: §Y-10.0%§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_War_Plan_modify_tt:0 "$GER_Wehrmacht_tt$ \n£air_superiority_texticon Air Superiority Bonus In Combat §Y+10.0%§! \n£cas_texticon Cas Damage Reduction §Y+5.0%§! \n£railway_gun_texticon Railway Gun Bombardment Factor §Y+20.0§! \n£army_doctrine_cost_texticon Land Doctrine Cost: §Y-5.0%§! \n\n"
  GER_Cheap_EQ_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"

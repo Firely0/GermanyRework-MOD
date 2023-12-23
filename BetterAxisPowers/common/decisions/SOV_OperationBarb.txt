@@ -368,6 +368,9 @@ SOV_great_patriotic_war_Orders = {
 				}
 				custom_effect_tooltip = SOV_order_227_scorched_earth_decisions_tt
 			}
+			hidden_effect = {
+				play_song = "GR_Not_One_Step_Back"
+			}
 		}
 	}
 
@@ -1839,6 +1842,7 @@ SOV_Local_Defense = {
 						modifier = SOV_civilian_labor_in_defense_mod
 						scope = SOV
 					}
+					set_state_flag = SOV_civilian_labor_in_defense_flag
 				}
 			}
 			custom_effect_tooltip = SOV_civilian_labor_in_defense_state_modifier_tt
@@ -2343,7 +2347,7 @@ SOV_export_guns = {
 					amount = 100
 				}
 				add_equipment_to_stockpile = {
-					type = truck_equipment_1
+					type = motorized_equipment_1
 					amount = 250
 				}
 				clr_country_flag = SOV_LEND_LEASE_TRANSPORT

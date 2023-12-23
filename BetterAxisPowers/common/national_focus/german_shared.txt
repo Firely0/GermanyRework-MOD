@@ -1549,6 +1549,7 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		unlock_decision_category_tooltip = operation_wksa_category
 		every_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
@@ -3803,7 +3804,7 @@ shared_focus = {
 	y = 0
 	cost = 5
 
-	search_filters = { FOCUS_FILTER_AIR_XP }
+	search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
 	ai_will_do = {
 		factor = 1
@@ -5442,7 +5443,7 @@ shared_focus = {
 	completion_reward = {
 		custom_effect_tooltip = GER_new_supply_ways_modify_tt
 		set_variable = {
-			GER_truck_attrition_factor = -1.0
+			GER_truck_attrition_factor = 0.25
 		}
 		set_variable = {
 			GER_supply_factor = 0.2

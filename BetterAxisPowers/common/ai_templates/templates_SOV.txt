@@ -551,13 +551,10 @@ infantry_SOV = {
 			anti_tank
 			military_police
 			artillery
-	#		anti_air
 			rocket_artillery
 			anti_tank_brigade
 			artillery_brigade
 			rocket_artillery_brigade
-	#		light_tank_destroyer_brigade
-	#		medium_tank_destroyer_brigade
 		}
 		replace_at_match = 0.9
 		replace_with = infantry_improved_SOV
@@ -567,18 +564,16 @@ infantry_SOV = {
 	infantry_improved_SOV = {
 
 		upgrade_prio = {
-			factor = 2
+			factor = 0
 
 			modifier = {
-				factor = 0
-				date < 1942.6.1
+				factor = 5
+				OR = {
+					has_completed_focus = SOV_lessons_of_war
+					has_completed_focus = SOV_military_modernization
+				}
 			}
 
-			modifier = {
-				factor = 20
-				has_war_with_major = yes
-				date > 1942.6.1
-			}
 		}
 
 		can_upgrade_in_field = {
@@ -661,8 +656,6 @@ infantry_SOV = {
 			anti_tank_brigade
 			artillery_brigade
 			rocket_artillery_brigade
-	#		light_tank_destroyer_brigade
-	#		medium_tank_destroyer_brigade
 		}
 	}
 }
@@ -977,7 +970,6 @@ paratroopers_SOV = {
 	}
 }
 
-
 garrison_SOV = {
 
 	available_for = {
@@ -1074,7 +1066,6 @@ garrison_SOV = {
 		}
 	}
 }
-
 
 anti_armor_SOV = {
 

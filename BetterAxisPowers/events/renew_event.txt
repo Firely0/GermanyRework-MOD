@@ -485,10 +485,6 @@ country_event = {
 				add = 2
 			}
 			modifier = {
-				date > 1940.1.1
-				add = -2
-			}
-			modifier = {
 				GER = {
 					surrender_progress > 0.15
 				}
@@ -543,10 +539,6 @@ country_event = {
 				add = 2
 			}
 			modifier = {
-				date > 1940.1.1
-				add = -2
-			}
-			modifier = {
 				GER = {
 					surrender_progress > 0.15
 				}
@@ -595,10 +587,6 @@ country_event = {
 			modifier = {
 				is_historical_focus_on = yes
 				add = 2
-			}
-			modifier = {
-				date > 1940.1.1
-				add = -2
 			}
 			modifier = {
 				GER = {

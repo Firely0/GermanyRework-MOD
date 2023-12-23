@@ -1,0 +1,36 @@
+spriteTypes = {
+# Soviet
+ # New Moscow
+ spriteType = { 
+ name = "GFX_idea_New_Moscow"
+ texturefile = "gfx/interface/ideas/SOV_new_moscow.dds"
+ }
+ # Soviet Defeat
+ spriteType = { 
+ name = "GFX_idea_Soviet_Defeat"
+ texturefile = "gfx/interface/ideas/SOV_Idea_sad_soviet.dds"
+ }
+
+
+# English Ideas
+ # Broken Crown
+ spriteType = { 
+ name = "GFX_idea_broken_crown"
+ texturefile = "gfx/interface/ideas/Idea_eng_broken_crown.dds"
+ }
+
+ # German Crown
+ spriteType = { 
+ name = "GFX_idea_german_crown"
+ texturefile = "gfx/interface/ideas/Idea_eng_german_crown.dds"
+ }
+
+# Amerian Ideas
+ # Treaty of New York
+ spriteType = { 
+ name = "Idea_usa_treaty_of_new_york"
+ texturefile = "gfx/interface/ideas/Idea_USA_american_nazi_party.dds"
+ }
+
+
+}

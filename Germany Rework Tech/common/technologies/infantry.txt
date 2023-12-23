@@ -327,6 +327,16 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				tag = GER
+				date < "1942.06.01"
+			}
+			
+			modifier = {
+				factor = 0
+				date < "1941.01.01"
+			}
 		}
 	}
 

@@ -1,0 +1,2307 @@
+###########################    
+# More German Events -  Generic
+###########################
+add_namespace = GCE_GEN
+############################
+
+#Ireland takes nothern Ireland
+country_event = {
+	id = GCE_GEN.1
+	title = GCE_GEN.1.t
+	desc = GCE_GEN.1.desc
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#Ireland
+		name = GCE_GEN.1.a
+		trigger = {
+			119 = {
+				is_controlled_by = ENG
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		ENG = {
+			country_event = GCE_GEN.2
+		}
+	}
+	option = {
+		#we will not 
+		name = GCE_GEN.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+################################
+#England response to irish invation of northern ireland
+country_event = {
+	id = GCE_GEN.2
+	title = GCE_GEN.2.t
+	desc = GCE_GEN.2.desc
+	picture = GFX_report_event_french_british_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#let them have it
+		name = GCE_GEN.2.a
+		trigger = {
+			119 = {
+				is_controlled_by = ENG
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		IRE = {
+			transfer_state = 119
+		}
+		ENG = {
+			add_manpower = 22900
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					days = 2
+					id = GCE_news.5
+				}
+			}
+		}
+	}
+	option = {
+		#we will not 
+		name = GCE_GEN.2.b
+		ai_chance = {
+			base = 0
+		}
+		ENG = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = IRE
+			}
+		}
+	}
+}
+
+#Heinrich Initiative Volunteers
+country_event = {
+	id = GCE_GEN.3
+	title = GCE_GEN.3.t
+	desc = GCE_GEN.3.desc
+	picture = GFX_report_event_british_inspect_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#good
+		name = GCE_GEN.3.a
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			ENG = {
+				division_template = {
+					name = "Heinrich Initiative Volunteers"
+					priority = 1
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 0
+							y = 3
+						}
+						infantry = {
+							x = 0
+							y = 4
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+					}
+				}
+			}
+			126 = {
+				create_unit = {
+					division = "name = \"1. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"2. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"3. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"4. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"5. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"6. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"7. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"8. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"9. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"10. Heinrich Volunteer Army\" division_template = \"Heinrich Initiative Volunteers\" start_experience_factor = -0.5"
+					owner = ENG
+				}
+			}
+		}
+	}
+}
+
+############################
+#Finland takes sumo - Disabled for now
+country_event = { 
+	id = GCE_GEN.4
+	title = GCE_GEN.4.t
+	desc = GCE_GEN.4.desc
+	picture = GFX_report_event_finnish_soldiers_snow
+	#trigger = {
+	#	TAG = FIN
+	#	GER = {
+	#		controls_state = 195
+	#	}
+	#}
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		#Finlandia
+		name = GCE_GEN.4.a
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					FIN = {
+						has_offensive_war_with = SOV
+					}
+				}
+				white_peace = SOV
+			}
+			every_country = {
+				country_event = GCE_news.6
+			}
+			transfer_state = 146
+			transfer_state = 147
+			transfer_state = 722
+		}
+		transfer_state = 215
+		transfer_state = 213
+		transfer_state = 216
+		add_state_core = 215
+		add_state_core = 213
+		add_state_core = 216
+		213 = {
+			set_state_name = "Kuolan Nieminaa"
+		}
+		215 = {
+			set_state_name = "Pohjois-Karjala"
+		}
+		216 = {
+			set_state_name = "Etelä-Karjala"
+		}
+		set_province_name = {
+			id = 3134
+			name = "Kuola"
+		}
+		set_province_name = {
+			id = 11159
+			name = "Äänislinna"
+		}
+		set_cosmetic_tag = GR_FIN
+	}
+	option = {
+		#we will not 
+		name = GCE_GEN.4.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+############################
+# The New York Conference
+country_event = {
+	id = GCE_GEN.5
+	title = GCE_GEN.5.t
+	desc = GCE_GEN.5.desc
+	picture = GFX_report_event_generic_usa_treaty
+	trigger = {
+		TAG = USA
+		USA = {
+			controls_state = 358
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		# Yes
+		name = GCE_GEN.5.a
+		ai_chance = {
+			base = 100
+		}
+		# Tool Tip
+		custom_effect_tooltip = 1_GCE_GEN_tt
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					days = 7
+					id = GCE_news.7
+				}
+			}
+			set_global_flag = GCE_new_york_conference
+			# Remove British and Dutch Puppets Cosmetic TAG
+			CAN = {
+				drop_cosmetic_tag = yes
+			}
+			RAJ = {
+				drop_cosmetic_tag = yes
+			}
+			MAL = {
+				drop_cosmetic_tag = yes
+			}
+			AST = {
+				drop_cosmetic_tag = yes
+			}
+			NZL = {
+				drop_cosmetic_tag = yes
+			}
+			INS = {
+				drop_cosmetic_tag = yes
+			}
+			# New Faction - Organization of Free Nations
+			dismantle_faction = yes
+			create_faction = "Organization of Free Nations"
+			add_to_faction = USA
+			add_to_faction = CAN
+			add_to_faction = RAJ
+			add_to_faction = AST
+			add_to_faction = NZL
+			add_to_faction = MAL
+			add_to_faction = INS
+			IF = {
+				LIMIT = {
+					ICE = {
+						is_subject = no
+					}
+					country_exists = ICE
+					NOT = {
+						ICE = {
+							has_war_with = GER
+						}
+					}
+				}
+				add_to_faction = ICE
+			}
+			# Peace with Germany
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = CAN
+					CAN = {
+						has_war_with = GER
+					}
+				}
+				CAN = {
+					white_peace = GER
+				}
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = AST
+					AST = {
+						has_war_with = GER
+					}
+				}
+				AST = {
+					white_peace = GER
+				}
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = NZL
+					NZL = {
+						has_war_with = GER
+					}
+				}
+				NZL = {
+					white_peace = GER
+				}
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = MAL
+					MAL = {
+						has_war_with = GER
+					}
+				}
+				MAL = {
+					white_peace = GER
+				}
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = INS
+					INS = {
+						has_war_with = GER
+					}
+				}
+				INS = {
+					white_peace = GER
+				}
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						USA = {
+							has_war_with = GER
+						}
+					}
+					country_exists = RAJ
+					RAJ = {
+						has_war_with = GER
+					}
+				}
+				RAJ = {
+					white_peace = GER
+				}
+			}
+			# Freedom
+			IF = {
+				LIMIT = {
+					country_exists = RAJ
+					RAJ = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = RAJ
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = CAN
+					CAN = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = CAN
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = SAF
+					SAF = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = SAF
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = MAL
+					MAL = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = MAL
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = AST
+					AST = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = AST
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = NZL
+					NZL = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = NZL
+					autonomy_state = autonomy_free
+				}
+			}
+			IF = {
+				LIMIT = {
+					country_exists = INS
+					HOL = {
+						has_war_with = GER
+					}
+					HOL = {
+						has_capitulated = yes
+					}
+					INS = {
+						is_subject_of = ENG
+					}
+				}
+				set_autonomy = {
+					target = INS
+					autonomy_state = autonomy_free
+				}
+			}
+			# America British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 690
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 690
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 693
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 693
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 689
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 689
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 693
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 693
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 308
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 308
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 692
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 692
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 691
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 691
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 696
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 696
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 270
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 270
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 636
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 636
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 639
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 639
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 643
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 643
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 725
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 725
+				}
+			}
+			# America French
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 694
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 694
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 730
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 730
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 641
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 641
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 635
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 635
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 734
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 734
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 694
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 694
+				}
+			}
+			# America Danish
+			IF = {
+				LIMIT = {
+					DEN = {
+						controls_state = 101
+					}
+					DEN = {
+						has_war_with = GER
+					}
+					DEN = {
+						has_capitulated = yes
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 101
+				}
+			}
+			# America Dutch
+			IF = {
+				LIMIT = {
+					HOL = {
+						controls_state = 695
+					}
+					HOL = {
+						has_war_with = GER
+					}
+					HOL = {
+						has_capitulated = yes
+					}
+					country_exists = USA
+				}
+				USA = {
+					transfer_state = 695
+				}
+			}
+			# Canada British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 332
+					}
+					country_exists = CAN
+				}
+				CAN = {
+					transfer_state = 332
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 331
+					}
+					country_exists = CAN
+				}
+				USA = {
+					transfer_state = 331
+				}
+			}
+			# Guatemala British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 311
+					}
+					country_exists = GUA
+				}
+				GUA = {
+					transfer_state = 311
+				}
+			}
+			# Brazil British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 687
+					}
+					country_exists = BRA
+				}
+				BRA = {
+					transfer_state = 687
+				}
+			}
+			# Brazil Dutch
+			IF = {
+				LIMIT = {
+					HOL = {
+						controls_state = 309
+					}
+					HOL = {
+						has_war_with = GER
+					}
+					HOL = {
+						has_capitulated = yes
+					}
+					country_exists = BRA
+				}
+				BRA = {
+					transfer_state = 309
+				}
+			}
+			# Brazil French 
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 310
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = BRA
+				}
+				BRA = {
+					transfer_state = 310
+				}
+			}
+			# Spain British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 118
+					}
+					country_exists = SPR
+				}
+				SPR = {
+					transfer_state = 118
+				}
+			}
+			# Argentine British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 299
+					}
+					country_exists = ARG
+				}
+				ARG = {
+					transfer_state = 299
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 720
+					}
+					country_exists = ARG
+				}
+				ARG = {
+					transfer_state = 720
+				}
+			}
+			# Turkey French
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 799
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = TUR
+				}
+				TUR = {
+					transfer_state = 799
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 680
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = TUR
+				}
+				TUR = {
+					transfer_state = 680
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 677
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = TUR
+				}
+				TUR = {
+					transfer_state = 677
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 554
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = TUR
+				}
+				TUR = {
+					transfer_state = 554
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 553
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = TUR
+				}
+				TUR = {
+					transfer_state = 553
+				}
+			}
+			# Iraq British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 656
+					}
+					country_exists = IRQ
+				}
+				IRQ = {
+					transfer_state = 656
+				}
+			}
+			# Saudi Arabia British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 455
+					}
+					country_exists = SAU
+				}
+				SAU = {
+					transfer_state = 455
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 454
+					}
+					country_exists = SAU
+				}
+				SAU = {
+					transfer_state = 454
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 658
+					}
+					country_exists = SAU
+				}
+				SAU = {
+					transfer_state = 658
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 765
+					}
+					country_exists = SAU
+				}
+				SAU = {
+					transfer_state = 765
+				}
+			}
+			# Yemen British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 659
+					}
+					country_exists = YEM
+				}
+				YEM = {
+					transfer_state = 659
+				}
+			}
+			# India British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 422
+					}
+					country_exists = RAJ
+				}
+				RAJ = {
+					transfer_state = 422
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 281
+					}
+					country_exists = RAJ
+				}
+				RAJ = {
+					transfer_state = 281
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 710
+					}
+					country_exists = RAJ
+				}
+				RAJ = {
+					transfer_state = 710
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 733
+					}
+					country_exists = RAJ
+				}
+				RAJ = {
+					transfer_state = 733
+				}
+			}
+			# India French
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 320
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = RAJ
+				}
+				RAJ = {
+					transfer_state = 320
+				}
+			}
+			# Australia British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 712
+					}
+					country_exists = AST
+				}
+				AST = {
+					transfer_state = 712
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 711
+					}
+					country_exists = AST
+				}
+				AST = {
+					transfer_state = 711
+				}
+			}
+			# Chinese Treaty Ports British
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 326
+					}
+					GXC = {
+						controls_state = 593
+					}
+					country_exists = GXC
+				}
+				GXC = {
+					transfer_state = 326
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 326
+					}
+					CHI = {
+						controls_state = 593
+					}
+					country_exists = CHI
+				}
+				CHI = {
+					transfer_state = 326
+				}
+			}
+			IF = {
+				LIMIT = {
+					ENG = {
+						controls_state = 326
+					}
+					JAP = {
+						controls_state = 593
+					}
+					country_exists = JAP
+				}
+				JAP = {
+					transfer_state = 326
+				}
+			}
+			# Chinese Treaty Ports French
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 728
+					}
+					GXC = {
+						controls_state = 591
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = GXC
+				}
+				GXC = {
+					transfer_state = 728
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 728
+					}
+					CHI = {
+						controls_state = 591
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = CHI
+				}
+				CHI = {
+					transfer_state = 728
+				}
+			}
+			IF = {
+				LIMIT = {
+					FRA = {
+						controls_state = 728
+					}
+					JAP = {
+						controls_state = 591
+					}
+					FRA = {
+						has_war_with = GER
+					}
+					FRA = {
+						NOT = {
+							controls_state = 16
+						}
+					}
+					country_exists = JAP
+				}
+				JAP = {
+					transfer_state = 728
+				}
+			}
+		}
+	}
+	option = {
+		# No 
+		name = GCE_GEN.5.b
+		ai_chance = {
+			base = 0
+		}
+		add_stability = -0.05
+	}
+}
+
+############################
+# Scottish fascist coup
+country_event = {
+	id = GCE_GEN.6
+	title = GCE_GEN.6.t
+	desc = GCE_GEN.6.desc
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		# Scotland forever
+		name = GCE_GEN.6.a
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.33
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		create_country_leader = {
+			name = "William Weir Gilmour"
+			desc = ""
+			picture = "gfx/leaders/europe/portrait_europe_generic_5.dds"
+			expire = "1995.1.1"
+			ideology = fascism_ideology
+			traits = {
+				# }
+			}
+		}
+	}
+}
+
+############################
+# Japan Smelling Weakness
+country_event = {
+	id = GCE_GEN.7
+	title = GCE_GEN.7.t
+	desc = GCE_GEN.7.desc
+	picture = report_event_japanese_soldiers_03
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# BONZAIII
+		name = GCE_GEN.7.a
+		ai_chance = {
+			base = 99
+		}
+		trigger = {
+			JAP = {
+				has_war_with = USA
+			}
+			NOT = {
+				JAP = {
+					has_war_with = GER
+				}
+			}
+		}
+		add_manpower = -500000
+		add_stability = -0.2
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					days = 3
+					id = GCE_news.25
+				}
+			}
+			load_oob = JAP_WCI_OOB
+		}
+		custom_effect_tooltip = 2_GCE_GEN_tt
+	}
+	option = {
+		# We cannot
+		name = GCE_GEN.7.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#################################
+# USA annexes CAN
+country_event = {
+	id = GCE_GEN.8
+	title = GCE_GEN.8.t
+	desc = GCE_GEN.8.desc
+	picture = report_event_generic_army
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = GCE_GEN.8.a
+		ai_chance = {
+			base = 99
+		}
+		trigger = {
+			country_exists = CAN
+		}
+		annex_country = {
+			target = CAN
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			CAN = {
+				every_unit_leader = {
+					set_nationality = USA
+				}
+			}
+			add_state_core = 464
+			add_state_core = 465
+			add_state_core = 468
+			add_state_core = 276
+			add_state_core = 332
+			add_state_core = 331
+			add_state_core = 682
+			add_state_core = 683
+			add_state_core = 467
+			add_state_core = 469
+			add_state_core = 472
+			add_state_core = 470
+			add_state_core = 473
+			add_state_core = 471
+			add_state_core = 740
+			add_state_core = 739
+			set_global_flag = GCE_Canada_annexed_by_USA
+		}
+	}
+	option = {
+		# We cannot
+		name = GCE_GEN.8.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#################################
+# USA puppets CAN
+country_event = {
+	id = GCE_GEN.9
+	title = GCE_GEN.9.t
+	desc = GCE_GEN.9.desc
+	picture = report_event_generic_army
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = GCE_GEN.9.a
+		ai_chance = {
+			base = 99
+		}
+		trigger = {
+			country_exists = CAN
+		}
+		USA = {
+			puppet = CAN
+		}
+		hidden_effect = {
+			add_state_core = 464
+			add_state_core = 465
+			add_state_core = 468
+			add_state_core = 276
+			add_state_core = 332
+			add_state_core = 331
+			add_state_core = 682
+			add_state_core = 683
+			add_state_core = 467
+			add_state_core = 469
+			add_state_core = 472
+			add_state_core = 470
+			add_state_core = 473
+			add_state_core = 471
+			add_state_core = 740
+			add_state_core = 739
+		}
+	}
+	option = {
+		# We cannot
+		name = GCE_GEN.9.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+########################################################
+# Mosley hides when Germany invades Britian
+country_event = {
+	id = GCE_GEN.10
+	title = GCE_GEN.10.t
+	desc = GCE_GEN.10.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		TAG = ENG
+		has_global_flag = GCE_Isle_Invasion
+		ENG = {
+			surrender_progress > 0.5
+		}
+	}
+	immediate = {
+		set_global_flag = GCE_Mosley_Fled
+	}
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		# RUN!!!!!
+		name = GCE_GEN.10.a
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = Greater_Party
+				long_name = National_Socialist_Party_of_Greater_England
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+########################################################
+# Reset England Cosmetic Tag
+country_event = {
+	id = GCE_GEN.11
+	title = GCE_GEN.11.t
+	desc = GCE_GEN.11.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		TAG = ENG
+		country_exists = SCO
+		NOT = {
+			has_global_flag = GCE_England_renamed
+		}
+	}
+	immediate = {
+		set_cosmetic_tag = ENG_england
+		set_global_flag = GCE_England_renamed
+	}
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		#O.K.
+		name = GCE_GEN.11.a
+	}
+}
+
+###########################################################
+# USA has_capitulates to GER
+country_event = {
+	id = GCE_GEN.12
+	title = GCE_GEN.12.t
+	desc = GCE_GEN.12.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		GER = {
+			has_war_with = USA
+		}
+		USA = {
+			has_capitulated = yes
+		}
+	}
+	immediate = {
+		set_global_flag = GCE_USA_Capitulated_to_GER
+	}
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		#
+		name = GCE_GEN.12.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###########################################################
+# CAN has_capitulates to GER
+country_event = {
+	id = GCE_GEN.13
+	title = GCE_GEN.13.t
+	desc = GCE_GEN.13.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		GER = {
+			has_war_with = CAN
+		}
+		CAN = {
+			has_capitulated = yes
+		}
+	}
+	immediate = {
+		set_global_flag = GCE_CAN_Capitulated_to_GER
+	}
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		#
+		name = GCE_GEN.12.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###########################################################
+# ENG has_capitulates to GER
+country_event = {
+	id = GCE_GEN.14
+	title = GCE_GEN.14.t
+	desc = GCE_GEN.14.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		GER = {
+			has_war_with = ENG
+		}
+		ENG = {
+			has_capitulated = yes
+		}
+	}
+	immediate = {
+		set_global_flag = GCE_ENG_Capitulated_to_GER
+	}
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		#
+		name = GCE_GEN.14.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###########################################################
+# JAP was at war with USA
+country_event = {
+	id = GCE_GEN.15
+	title = GCE_GEN.15.t
+	desc = GCE_GEN.15.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		JAP = {
+			has_war_with = USA
+		}
+	}
+	fire_only_once = yes
+	immediate = {
+		set_global_flag = GCE_JAP_had_war_with_USA
+	}
+	hidden = yes
+	option = {
+		#
+		name = GCE_GEN.15.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###########################################################
+# Ritter becomes leader of England
+country_event = {
+	id = GCE_GEN.16
+	title = GCE_GEN.16.t
+	desc = GCE_GEN.16.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	trigger = {
+		ENG = {
+			is_subject_of = GER
+		}
+		has_global_flag = GCE_Mosley_Fled
+	}
+	fire_only_once = yes
+	immediate = {
+		set_global_flag = GCE_Ritter_in_ENG
+	}
+	hidden = yes
+	option = {
+		#
+		name = GCE_GEN.16.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			create_country_leader = {
+				name = "Wilhelm Ritter von Leeb"
+				desc = ""
+				picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb.dds"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+			IF = {
+				LIMIT = {
+					country_exists = SCO
+				}
+				set_cosmetic_tag = NA_ENG
+			}
+			IF = {
+				LIMIT = {
+					NOT = {
+						country_exists = SCO
+					}
+				}
+				set_cosmetic_tag = NA_BRI
+			}
+		}
+	}
+}
+
+############################################################
+# German Presure (Brazil)
+country_event = {
+	id = GCE_GEN.21
+	title = GCE_GEN.21.t
+	desc = GCE_GEN.21.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Join the Axis
+		name = GCE_GEN.21.a
+		ai_chance = {
+			factor = 33.3
+			modifier = {
+				factor = 120
+				has_global_flag = fall_of_london_ger
+			}
+			modifier = {
+				factor = 100
+				has_global_flag = fall_of_moscow
+			}
+			modifier = {
+				factor = -40
+				BRA = {
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = -60
+				BRA = {
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 80
+				BRA = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 60
+				BRA = {
+					has_government = neutrality
+				}
+			}
+		}
+		GER = {
+			country_event = {
+				id = GCE_GEN.22
+				days = 7
+			}
+		}
+	}
+	option = {
+		# Demand Neutrality
+		name = GCE_GEN.21.b
+		ai_chance = {
+			factor = 33.3
+			modifier = {
+				factor = 80
+				BRA = {
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 120
+				BRA = {
+					has_government = neutrality
+				}
+			}
+		}
+		GER = {
+			country_event = {
+				id = GCE_GEN.23
+				days = 7
+			}
+		}
+	}
+	option = {
+		# Join the Allies
+		name = GCE_GEN.21.c
+		ai_chance = {
+			factor = 33.3
+			modifier = {
+				factor = 200
+				BRA = {
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 60
+				BRA = {
+					has_government = neutrality
+				}
+			}
+		}
+		GER = {
+			country_event = {
+				id = GCE_GEN.24
+				days = 7
+			}
+		}
+	}
+}
+
+############################################################
+# Brazil joins Axis
+country_event = {
+	id = GCE_GEN.22
+	title = GCE_GEN.22.t
+	desc = GCE_GEN.22.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Very well
+		name = GCE_GEN.22.a
+		ai_chance = {
+			base = 100
+		}
+		GER = {
+			add_to_faction = BRA
+		}
+		BRA = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+		}
+	}
+	option = {
+		# We've changed our mind
+		name = GCE_GEN.22.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+############################################################
+# Brazil demands to stay neutral
+country_event = {
+	id = GCE_GEN.23
+	title = GCE_GEN.23.t
+	desc = GCE_GEN.23.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# There will be no neutrality
+		name = GCE_GEN.23.a
+		ai_chance = {
+			base = 60
+		}
+		GER = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = BRA
+			}
+		}
+	}
+	option = {
+		# Let them have their puny neutrality
+		name = GCE_GEN.23.b
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+############################################################
+# Brazil declears war on Germany and joins Allies
+country_event = {
+	id = GCE_GEN.24
+	title = GCE_GEN.24.t
+	desc = GCE_GEN.24.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# They will pay
+		name = GCE_GEN.24.a
+		ai_chance = {
+			base = 50
+		}
+		BRA = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = GER
+			}
+		}
+		IF = {
+			LIMIT = {
+				has_global_flag = GCE_new_york_conference
+			}
+			USA = {
+				add_to_faction = BRA
+			}
+		}
+		IF = {
+			LIMIT = {
+				NOT = {
+					has_global_flag = GCE_new_york_conference
+				}
+			}
+			ENG = {
+				add_to_faction = BRA
+			}
+		}
+	}
+}
+
+############################################################
+# Germany asked us to join the Axis (VEN)
+country_event = {
+	id = GCE_GEN.25
+	title = GCE_GEN.25.t
+	desc = GCE_GEN.25.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Very well
+		name = GCE_GEN.25.a
+		ai_chance = {
+			base = 80
+		}
+		GER = {
+			country_event = {
+				id = GCE_GEN.26
+				days = 7
+			}
+		}
+	}
+	option = {
+		# no
+		name = GCE_GEN.25.b
+		ai_chance = {
+			base = 20
+		}
+		GER = {
+			country_event = {
+				id = GCE_GEN.27
+				days = 7
+			}
+		}
+	}
+}
+
+############################################################
+# Venuzela Agrees
+country_event = {
+	id = GCE_GEN.26
+	title = GCE_GEN.26.t
+	desc = GCE_GEN.26.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Gut
+		name = GCE_GEN.26.a
+		ai_chance = {
+			base = 100
+		}
+		GER = {
+			add_to_faction = VEN
+		}
+		VEN = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+		}
+	}
+	option = {
+		# We've changed our mind
+		name = GCE_GEN.26.b
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+############################################################
+# Venuzela Rejects
+country_event = {
+	id = GCE_GEN.27
+	title = GCE_GEN.27.t
+	desc = GCE_GEN.27.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# War it is
+		name = GCE_GEN.27.a
+		ai_chance = {
+			base = 100
+		}
+		GER = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = VEN
+			}
+		}
+	}
+	option = {
+		# Verdammt
+		name = GCE_GEN.27.b
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+############################################################
+# Germany demands our territories!
+country_event = {
+	id = GCE_GEN.31
+	title = GCE_GEN.31.t
+	desc = GCE_GEN.31.desc
+	picture = GFX_report_event_german_italian_pact
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# We have to go our own way
+		name = GCE_GEN.31.a
+		ai_chance = {
+			base = 80
+		}
+		GER = {
+			country_event = {
+				id = GCE_GER.53
+				days = 7
+			}
+		}
+		add_war_support = 0.1
+		add_stability = 0.1
+		IF = {
+			LIMIT = {
+				NOT = {
+					ITA = {
+						has_cosmetic_tag = SPQR_UNIFIED
+					}
+				}
+			}
+			set_cosmetic_tag = IM_ITA
+		}
+		create_faction = "Mediterranean Pact"
+		GER = {
+			add_opinion_modifier = {
+				target = ITA
+				modifier = GCE_made_their_own_faction_GER
+			}
+		}
+		add_state_core = 1
+		add_state_core = 735
+		add_state_core = 103
+		add_state_core = 116
+		YUG = {
+			country_event = GCE_GEN.32
+		}
+		CRO = {
+			country_event = GCE_GEN.32
+		}
+		SER = {
+			country_event = GCE_GEN.32
+		}
+		GRE = {
+			country_event = GCE_GEN.32
+		}
+		TUR = {
+			country_event = GCE_GEN.32
+		}
+		SPR = {
+			country_event = GCE_GEN.32
+		}
+	}
+	option = {
+		# We cannot leave the Germans
+		name = GCE_GEN.31.b
+		ai_chance = {
+			base = 20
+		}
+		add_stability = -0.2
+		add_war_support = -0.2
+		GER = {
+			transfer_state = 39
+		}
+		GER = {
+			add_state_core = 39
+		}
+		IF = {
+			LIMIT = {
+				102 = {
+					is_owned_by = GER
+				}
+			}
+			GER = {
+				transfer_state = 736
+			}
+			GER = {
+				add_state_core = 736
+			}
+		}
+	}
+}
+
+############################################################
+# Italy invites us to Mediterranean Pact
+country_event = {
+	id = GCE_GEN.32
+	title = GCE_GEN.32.t
+	desc = GCE_GEN.32.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# sure!
+		name = GCE_GEN.0.a
+		ai_chance = {
+			base = 100
+		}
+		IF = {
+			LIMIT = {
+				is_subject = no
+			}
+			TUR = {
+				add_to_faction = ROOT
+			}
+		}
+		IF = {
+			LIMIT = {
+				is_subject_of = GER
+			}
+			TUR = {
+				add_to_faction = ROOT
+			}
+			ITA = {
+				puppet = ROOT
+			}
+		}
+	}
+	option = {
+		# never!
+		name = GCE_GEN.32.a
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+############################################################
+# Japand demands the Far Eastern Republic (JAP)
+country_event = {
+	id = GCE_GEN.33
+	title = GCE_GEN.33.t
+	desc = GCE_GEN.33.desc
+	picture = GFX_report_event_second_vienna_award_pact
+	fire_only_once = yes
+	trigger = {
+		TAG = JAP
+		OR = {
+			has_government = fascism
+			has_government = neutrality
+		}
+		GER = {
+			controls_state = 195
+		}
+		GER = {
+			controls_state = 219
+		}
+		GER = {
+			controls_state = 217
+		}
+		GER = {
+			controls_state = 229
+		}
+		NOT = {
+			has_war_with = GER
+		}
+		NOT = {
+			has_war_with = SOV
+		}
+	}
+	option = {
+		#
+		name = GCE_GEN.33.a
+		ai_chance = {
+			base = 90
+		}
+		SOV = {
+			country_event = {
+				id = GCE_GEN.34
+			}
+		}
+	}
+	option = {
+		#
+		name = GCE_GEN.33.b
+		ai_chance = {
+			base = 20
+		}
+		add_stability = 0.02
+	}
+}
+
+############################################################
+# Japand demands the Far Eastern Republic (SOV) 
+country_event = {
+	id = GCE_GEN.34
+	title = GCE_GEN.34.t
+	desc = GCE_GEN.34.desc
+	picture = GFX_report_event_second_vienna_award_pact
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = GCE_GEN.34.a
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+		}
+		JAP = {
+			transfer_state = 655
+		}
+		SOV = {
+			release = FER
+		}
+		JAP = {
+			puppet = FER
+		}
+		hidden_effect = {
+			every_country = {
+				country_event = {
+					id = GCE_news.34
+					days = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = GCE_GEN.34.b
+		ai_chance = {
+			base = 100
+		}
+		JAP = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+		every_country = {
+			country_event = {
+				id = GCE_news.35
+				days = 5
+			}
+		}
+	}
+}
+
+############################################################
+# temp
+country_event = {
+	id = GCE_GEN.0
+	title = GCE_GEN.0.t
+	desc = GCE_GEN.0.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	#trigger = {}
+	option = {
+		#
+		name = GCE_GEN.0.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}

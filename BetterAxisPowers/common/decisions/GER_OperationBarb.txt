@@ -62,7 +62,7 @@ GER_Operation_Barbarossa_V = {
 			SOV = {
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.05
+					popularity = 0.1
 				}
 				add_war_support = -0.05
 				add_stability = -0.05
@@ -78,7 +78,9 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
+			97 = { is_controlled_by_ROOT_or_ally = yes }
 			206 = { is_controlled_by_ROOT_or_ally = yes }
+			242 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 
 		activation = {
@@ -91,7 +93,9 @@ GER_Operation_Barbarossa_V = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 206 #Misk
+				state = 206 #Minsk
+				state = 97 #Bialystok
+				state = 242 #Smolensk
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -300,10 +304,10 @@ GER_Operation_Barbarossa_V = {
 			SOV = {
 				add_popularity = {
 					ideology = neutrality
-					popularity = 0.05
+					popularity = 0.1
 				}
 				add_war_support = -0.05
-				add_stability = -0.05
+				add_stability = -0.1
 			}
 		}
 	}
@@ -697,57 +701,6 @@ GER_Operation_Barbarossa_High_Command = {
 			ace_effectiveness_factor = 0.1
 			air_close_air_support_attack_factor = 0.1
 			air_cas_efficiency = 0.05
-		}
-
-		complete_effect = {
-			hidden_effect = {
-				add_command_power = -20
-				set_country_flag = High_Command_Issued_Orders
-			}
-		}
-
-		remove_effect = {
-			hidden_effect = {
-				clr_country_flag = High_Command_Issued_Orders
-			}
-		}
-	}
-
-}
-
-GER_Operation_Barbarossa_Operations = {
-
-	High_Command_Tank_Warfare = {
-		icon = hol_draw_up_staff_plans
-		priority = 100 # First
-		days_remove = 90
-		fire_only_once = yes
-
-		custom_cost_trigger = {
-			command_power > 19
-		}
-		custom_cost_text = decision_cost_CP_19
-
-		ai_will_do = {
-			factor = 40 # Small Chance for AI
-		}
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available =  {
-			NOT = { has_country_flag = High_Command_Issued_Orders }
-			has_completed_focus = GER_Lighting_Strike
-		}
-
-		visible = {
-			has_global_flag = GER_Operation_Barbarossa_running
-		}
-
-		modifier = { # Use Tank Warfare
-			army_armor_attack_factor = 0.15
-			army_armor_speed_factor = 0.05
 		}
 
 		complete_effect = {

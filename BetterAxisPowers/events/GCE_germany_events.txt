@@ -1,0 +1,2636 @@
+###########################    
+# More German Events - Germany
+###########################
+add_namespace = GCE_GER
+############################
+
+# Question of the Royal Family
+country_event = {
+	id = GCE_GER.23
+	title = GCE_GER.23.t
+	desc = GCE_GER.23.desc
+	picture = GFX_event_the_royal_family
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		# Enemy of the State
+		name = GCE_GER.23.a
+		ai_chance = {
+			base = 50
+		}
+		#custom_effect_tooltip = 1_GCE_GER.2_tt
+		set_global_flag = GCE_GER_Royal_Family_Enemy
+	}
+	option = {
+		# Friends of the State
+		name = GCE_GER.23.b
+		ai_chance = {
+			base = 50
+		}
+		#custom_effect_tooltip = 1_GCE_GER.2_tt
+		set_global_flag = GCE_GER_Royal_Family_Friend
+	}
+	option = {
+		# No interest
+		name = GCE_GER.23.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+###############################################
+# Royal Family Captured! (Enemy)
+country_event = {
+	id = GCE_GER.29
+	title = GCE_GER.29.t
+	desc = GCE_GER.29.desc
+	picture = GFX_event_the_royal_family
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		# Execute them
+		name = GCE_GER.29.a
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_GER_Royal_Family_Executed
+		ENG = {
+			add_stability = -0.2
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.20
+				}
+			}
+			ENG = {
+				remove_ideas = stiff_upper_lip
+			}
+			ENG = {
+				add_ideas = broken_crown
+			}
+		}
+	}
+	option = {
+		# Prison for Life
+		name = GCE_GER.29.b
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_GER_Royal_Family_Inprisoned
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.21
+				}
+			}
+			ENG = {
+				remove_ideas = ENG_king_edward
+			}
+			ENG = {
+				remove_ideas = ENG_george_vi
+			}
+			ENG = {
+				remove_ideas = stiff_upper_lip
+			}
+		}
+	}
+}
+
+# Royal Family Captured! (Friend)
+country_event = {
+	id = GCE_GER.30
+	title = GCE_GER.30.t
+	desc = GCE_GER.30.desc
+	picture = GFX_event_the_royal_family
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		# Full Power
+		name = GCE_GER.30.a
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_GER_Royal_Family_Full_power
+		ENG = {
+			add_stability = 0.2
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.21
+				}
+			}
+			ENG = {
+				add_ideas = german_crown
+			}
+			ENG = {
+				remove_ideas = stiff_upper_lip
+			}
+			ENG = {
+				add_ideas = ENG_king_edward
+			}
+		}
+	}
+	option = {
+		# Symbolic 
+		name = GCE_GER.30.b
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_GER_Royal_Family_Symbolic
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.21
+				}
+			}
+			ENG = {
+				add_ideas = german_crown
+			}
+			ENG = {
+				remove_ideas = stiff_upper_lip
+			}
+			ENG = {
+				add_ideas = ENG_king_edward
+			}
+		}
+	}
+}
+
+########################################################
+# Birmingham Trials (1) - Executions
+country_event = {
+	id = GCE_GER.31
+	title = GCE_GER.31.t
+	desc = GCE_GER.31.desc
+	picture = GFX_event_birmingham_trails
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Execute the whole British Highcommand
+		name = GCE_GER.31.a
+		ai_chance = {
+			base = 20
+		}
+		ENG = {
+			add_stability = -0.3
+		}
+		ENG = {
+			add_ideas = government_purged
+		}
+		custom_effect_tooltip = BHT1.1
+	}
+	option = {
+		# Only the leaders, the others just followed orders
+		name = GCE_GER.31.b
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			add_stability = -0.1
+		}
+		set_country_flag = GCE_recruit_british_generals
+	}
+	option = {
+		# Hang only Churchill
+		name = GCE_GER.31.c
+		ai_chance = {
+			base = 30
+		}
+		ENG = {
+			add_stability = 0.2
+		}
+		set_country_flag = GCE_recruit_british_generals
+	}
+}
+
+########################################################
+# Birmingham Trials (2)  - Reparations
+country_event = {
+	id = GCE_GER.32
+	title = GCE_GER.32.t
+	desc = GCE_GER.32.desc
+	picture = GFX_report_event_generic_lend_lease
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# High Reparations
+		name = GCE_GER.32.a
+		ai_chance = {
+			base = 30
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_high_reparations
+				days = 730
+			}
+		}
+		ENG = {
+			add_timed_idea = {
+				idea = high_reparations
+				days = 730
+			}
+		}
+	}
+	option = {
+		# Medium Reparations
+		name = GCE_GER.32.b
+		ai_chance = {
+			base = 50
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_medium_reparations
+				days = 730
+			}
+		}
+		ENG = {
+			add_timed_idea = {
+				idea = medium_reparations
+				days = 730
+			}
+		}
+	}
+	option = {
+		# Low Reparations
+		name = GCE_GER.32.c
+		ai_chance = {
+			base = 20
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_low_reparations
+				days = 730
+			}
+		}
+		ENG = {
+			add_timed_idea = {
+				idea = low_reparations
+				days = 730
+			}
+		}
+	}
+}
+
+########################################################
+# Birmingham Trials (3)  - Navy
+country_event = {
+	id = GCE_GER.33
+	title = GCE_GER.33.t
+	desc = GCE_GER.33.desc
+	picture = GFX_report_event_ast_navy
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Take it all
+		name = GCE_GER.33.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			transfer_navy = {
+				target = GER
+			}
+		}
+	}
+	option = {
+		# Give it to Italy
+		name = GCE_GER.33.b
+		trigger = {
+			ITA = {
+				is_in_faction_with = GER
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+		ENG = {
+			transfer_navy = {
+				target = ITA
+			}
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = POR_ships_trade
+			}
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GCE_awarded_british_ships
+			}
+		}
+	}
+	option = {
+		#
+		name = GCE_GER.33.c
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails (4) - Army / Treaty of Brighton
+country_event = {
+	id = GCE_GER.34
+	title = GCE_GER.34.t
+	desc = GCE_GER.34.desc
+	picture = GFX_report_event_soviet_army_greeted
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# No Army
+		name = GCE_GER.34.a
+		ai_chance = {
+			base = 20
+		}
+		ENG = {
+			add_ideas = treaty_of_brighton_no_army
+		}
+	}
+	option = {
+		# Some Army
+		name = GCE_GER.34.b
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			add_ideas = treaty_of_brighton_small_army
+		}
+	}
+	option = {
+		# No limitations
+		name = GCE_GER.34.c
+		ai_chance = {
+			base = 30
+		}
+		ENG = {
+			add_ideas = treaty_of_brighton
+		}
+	}
+}
+
+########################################################
+# End of the Birmingham Trials
+country_event = {
+	id = GCE_GER.36
+	title = GCE_GER.36.t
+	desc = GCE_GER.36.desc
+	picture = GFX_report_event_eng_mosley_march_on_downing_street
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Heil Hitler
+		name = GCE_GER.36.a
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					days = 5
+					id = GCE_news.18
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+########################################################
+# Birmingha Trails USA (1) - Executions
+country_event = {
+	id = GCE_GER.38
+	title = GCE_GER.38.t
+	desc = GCE_GER.38.desc
+	picture = GFX_event_birmingham_trails
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Kill them all
+		name = GCE_GER.38.a
+		ai_chance = {
+			base = 20
+		}
+		USA = {
+			add_ideas = government_purged
+		}
+		USA = {
+			add_stability = -0.3
+		}
+		custom_effect_tooltip = BHT1.2
+		custom_effect_tooltip = BHT1.3
+		set_country_flag = GCE_USA_government_purged
+	}
+	option = {
+		# Make them swear alliegence to the Führer
+		name = GCE_GER.38.b
+		ai_chance = {
+			base = 70
+		}
+		set_country_flag = GCE_mcauthur
+		USA = {
+			add_stability = -0.2
+		}
+	}
+	option = {
+		# Remove them from office
+		name = GCE_GER.38.c
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = GCE_mcauthur
+		USA = {
+			add_stability = -0.1
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails USA (2) - Reparations
+country_event = {
+	id = GCE_GER.39
+	title = GCE_GER.39.t
+	desc = GCE_GER.39.desc
+	picture = GFX_report_event_generic_lend_lease
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# High Reparations
+		name = GCE_GER.39.a
+		ai_chance = {
+			base = 30
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_high_reparations
+				days = 730
+			}
+		}
+		USA = {
+			add_timed_idea = {
+				idea = high_reparations
+				days = 730
+			}
+		}
+		USA = {
+			give_resource_rights = {
+				receiver = GER
+				state = 375
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 374
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 371
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 380
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 368
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 391
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 394
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 393
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 261
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 260
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 383
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 372
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 373
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 389
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 357
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 358
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 360
+			}
+		}
+	}
+	option = {
+		# Medium Reparations
+		name = GCE_GER.39.b
+		ai_chance = {
+			base = 50
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_medium_reparations
+				days = 730
+			}
+		}
+		USA = {
+			add_timed_idea = {
+				idea = medium_reparations
+				days = 730
+			}
+		}
+		USA = {
+			give_resource_rights = {
+				receiver = GER
+				state = 375
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 374
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 371
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 380
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 368
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 391
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 394
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 393
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 383
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 372
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 373
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 389
+			}
+		}
+	}
+	option = {
+		# Low Reparations
+		name = GCE_GER.39.c
+		ai_chance = {
+			base = 20
+		}
+		GER = {
+			add_timed_idea = {
+				idea = receive_low_reparations
+				days = 730
+			}
+		}
+		USA = {
+			add_timed_idea = {
+				idea = low_reparations
+				days = 730
+			}
+		}
+		USA = {
+			give_resource_rights = {
+				receiver = GER
+				state = 375
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 374
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 371
+			}
+			give_resource_rights = {
+				receiver = GER
+				state = 383
+			}
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails USA (3) - Navy
+country_event = {
+	id = GCE_GER.40
+	title = GCE_GER.40.t
+	desc = GCE_GER.40.desc
+	picture = GFX_report_event_ast_navy
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# German Navy
+		name = GCE_GER.40.a
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			transfer_navy = {
+				target = GER
+			}
+		}
+	}
+	option = {
+		# Japanse Navy
+		name = GCE_GER.40.c
+		trigger = {
+			has_global_flag = GCE_JAP_had_war_with_USA
+		}
+		USA = {
+			transfer_navy = {
+				target = JAP
+			}
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = POR_ships_trade
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		# US Navy
+		name = GCE_GER.40.c
+		ai_chance = {
+			base = 20
+		}
+		USA = {
+			add_stability = 0.2
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails USA (4) - Army / Treaty of New York
+country_event = {
+	id = GCE_GER.41
+	title = GCE_GER.41.t
+	desc = GCE_GER.41.desc
+	picture = GFX_report_event_soviet_army_greeted
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				days = 14
+				id = GCE_GER.46
+			}
+		}
+	}
+	option = {
+		# No Army
+		name = GCE_GER.41.a
+		ai_chance = {
+			base = 20
+		}
+		USA = {
+			add_ideas = treaty_of_new_york_no_army
+		}
+	}
+	option = {
+		# Some Army
+		name = GCE_GER.41.b
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			add_timed_idea = {
+				idea = treaty_of_new_york_small_army
+				days = 2160
+			}
+		}
+	}
+	option = {
+		# No limitations
+		name = GCE_GER.41.c
+		ai_chance = {
+			base = 30
+		}
+		USA = {
+			add_ideas = treaty_of_new_york
+		}
+	}
+}
+
+########################################################
+# MacArthur Questioned (Loyal to GER)
+country_event = {
+	id = GCE_GER.42
+	title = GCE_GER.42.t
+	desc = GCE_GER.42.desc
+	picture = GFX_report_event_usa_macarthur_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Ausgezeichnet
+		name = GCE_GER.42.a
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			retire_character = USA_douglas_macarthur
+		}
+		GER = {
+			create_field_marshal = {
+				name = "Douglas MacArthur"
+				id = 8857
+				picture = "Portrait_GER_Douglas_MacArthur.tga"
+				traits = {
+					offensive_doctrine
+					brilliant_strategist
+					career_officer
+					media_personality
+					politically_connected
+				}
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+			}
+		}
+	}
+	option = {
+		# Keep him in the New US Army
+		name = GCE_GER.42.b
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		# Discharge him
+		name = GCE_GER.42.c
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			remove_unit_leader = 57
+		}
+	}
+}
+
+########################################################
+# MacArthur Questioned (Disloyal to GER)
+country_event = {
+	id = GCE_GER.43
+	title = GCE_GER.43.t
+	desc = GCE_GER.43.desc
+	picture = GFX_report_event_usa_macarthur_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Attempt to Brainwash him
+		name = GCE_GER.43.a
+		ai_chance = {
+			base = 80
+		}
+		random_list = {
+			50 = {
+				GER = {
+					country_event = {
+						days = 7
+						id = GCE_GER.44
+					}
+				}
+			}
+			50 = {
+				GER = {
+					country_event = {
+						days = 7
+						id = GCE_GER.45
+					}
+				}
+			}
+		}
+	}
+	option = {
+		# Execute him
+		name = GCE_GER.43.b
+		ai_chance = {
+			base = 10
+		}
+		USA = {
+			remove_unit_leader = 57
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.24
+				}
+			}
+		}
+	}
+	option = {
+		# Discharge him
+		name = GCE_GER.43.c
+		ai_chance = {
+			base = 10
+		}
+		USA = {
+			remove_unit_leader = 57
+		}
+	}
+}
+
+########################################################
+# Brainwashing MacArthur (success.. kinda)
+country_event = {
+	id = GCE_GER.44
+	title = GCE_GER.44.t
+	desc = GCE_GER.44.desc
+	picture = GFX_report_event_usa_macarthur_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Sure im crazy, crazy in love i'd say
+		name = GCE_GER.44.a
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			retire_character = USA_douglas_macarthur
+		}
+		GER = {
+			create_field_marshal = {
+				name = "Douglas 'Bold Eagle' MacArthur"
+				id = 8857
+				picture = "Portrait_GER_Douglas_MacArthur_crazy.tga"
+				traits = {
+					offensive_doctrine
+					career_officer
+					media_personality
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 1
+			}
+		}
+	}
+	option = {
+		# Discharge
+		name = GCE_GER.44.b
+		ai_chance = {
+			base = 30
+		}
+		USA = {
+			remove_unit_leader = 57
+		}
+	}
+	option = {
+		# Execute
+		name = GCE_GER.44.c
+		ai_chance = {
+			base = 20
+		}
+		USA = {
+			retire_character = USA_douglas_macarthur
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.24
+				}
+			}
+		}
+	}
+}
+
+########################################################
+# Brainwashing MacArthur (failed)
+country_event = {
+	id = GCE_GER.45
+	title = GCE_GER.45.t
+	desc = GCE_GER.45.desc
+	picture = GFX_report_event_usa_macarthur_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Discharge
+		name = GCE_GER.45.a
+		ai_chance = {
+			base = 60
+		}
+		USA = {
+			retire_character = USA_douglas_macarthur
+		}
+	}
+	option = {
+		# Execute
+		name = GCE_GER.45.b
+		ai_chance = {
+			base = 40
+		}
+		USA = {
+			retire_character = USA_douglas_macarthur
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = {
+					id = GCE_news.24
+				}
+			}
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails USA (5) - Jews and Blacks
+country_event = {
+	id = GCE_GER.46
+	title = GCE_GER.46.t
+	desc = GCE_GER.46.desc
+	picture = GFX_report_event_portugal_navy_mutiny_prisoners
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# The Final solution
+		name = GCE_GER.46.a
+		ai_chance = {
+			base = 20
+		}
+		USA = {
+			add_manpower = -1490700
+		}
+		USA = {
+			add_stability = -0.2
+		}
+	}
+	option = {
+		# Send the blacks back to africa
+		name = GCE_GER.46.b
+		ai_chance = {
+			base = 50
+		}
+		USA = {
+			add_manpower = -1490700
+		}
+		USA = {
+			add_stability = -0.1
+		}
+	}
+	option = {
+		# Don't appy it to North America
+		name = GCE_GER.46.c
+		ai_chance = {
+			base = 50
+		}
+		GER = {
+			add_stability = -0.3
+		}
+		USA = {
+			add_stability = 0.5
+		}
+	}
+}
+
+########################################################
+# Birmingham Trails USA (6) - Japanese territorial claims
+country_event = {
+	id = GCE_GER.460
+	title = GCE_GER.460.t
+	desc = GCE_GER.460.desc
+	picture = GFX_report_event_japan_army_mountainside
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Reconize ALL Japanese Claims
+		name = GCE_GER.460.a
+		ai_chance = {
+			base = 20
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GCE_granted_all_claims
+			}
+		}
+		# USA starting territories
+		JAP = {
+			transfer_state = 378
+		}
+		JAP = {
+			transfer_state = 379
+		}
+		JAP = {
+			transfer_state = 386
+		}
+		JAP = {
+			transfer_state = 387
+		}
+		JAP = {
+			transfer_state = 380
+		}
+		JAP = {
+			transfer_state = 377
+		}
+		JAP = {
+			transfer_state = 463
+		}
+		JAP = {
+			transfer_state = 650
+		}
+		JAP = {
+			transfer_state = 638
+		}
+		JAP = {
+			transfer_state = 642
+		}
+		JAP = {
+			transfer_state = 727
+		}
+		JAP = {
+			transfer_state = 630
+		}
+		JAP = {
+			transfer_state = 631
+		}
+		JAP = {
+			transfer_state = 629
+		}
+		JAP = {
+			transfer_state = 385
+		}
+		# USA land gained through New York Conference
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 641
+				}
+			}
+			JAP = {
+				transfer_state = 641
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 635
+				}
+			}
+			JAP = {
+				transfer_state = 635
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 734
+				}
+			}
+			JAP = {
+				transfer_state = 734
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 725
+				}
+			}
+			JAP = {
+				transfer_state = 725
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 639
+				}
+			}
+			JAP = {
+				transfer_state = 639
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 643
+				}
+			}
+			JAP = {
+				transfer_state = 643
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 636
+				}
+			}
+			JAP = {
+				transfer_state = 636
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 270
+				}
+			}
+			JAP = {
+				transfer_state = 270
+			}
+		}
+		# Mexico
+		JAP = {
+			transfer_state = 484
+		}
+		JAP = {
+			transfer_state = 483
+		}
+		# Canada
+		IF = {
+			LIMIT = {
+				OR = {
+					CAN = {
+						is_in_faction_with = USA
+					}
+					USA = {
+						controls_state = 739
+					}
+					USA = {
+						controls_state = 740
+					}
+					USA = {
+						controls_state = 471
+					}
+					USA = {
+						controls_state = 473
+					}
+				}
+			}
+			JAP = {
+				transfer_state = 739
+			}
+			JAP = {
+				transfer_state = 740
+			}
+			JAP = {
+				transfer_state = 471
+			}
+			JAP = {
+				transfer_state = 473
+			}
+		}
+		IF = {
+			LIMIT = {
+				AST = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = AST
+			}
+		}
+		IF = {
+			LIMIT = {
+				NZL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = NZL
+			}
+		}
+		IF = {
+			LIMIT = {
+				RAJ = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = RAJ
+			}
+		}
+		IF = {
+			LIMIT = {
+				MAL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = MAL
+			}
+		}
+		IF = {
+			LIMIT = {
+				INS = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = INS
+			}
+		}
+		IF = {
+			LIMIT = {
+				PHI = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = PHI
+			}
+		}
+	}
+	option = {
+		# Do not reconize Idaho-Utah-Arizona
+		name = GCE_GER.460.b
+		ai_chance = {
+			base = 50
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GCE_granted_some_claims
+			}
+		}
+		# USA starting territories
+		JAP = {
+			transfer_state = 378
+		}
+		JAP = {
+			transfer_state = 379
+		}
+		JAP = {
+			transfer_state = 386
+		}
+		JAP = {
+			transfer_state = 463
+		}
+		JAP = {
+			transfer_state = 650
+		}
+		JAP = {
+			transfer_state = 638
+		}
+		JAP = {
+			transfer_state = 642
+		}
+		JAP = {
+			transfer_state = 727
+		}
+		JAP = {
+			transfer_state = 630
+		}
+		JAP = {
+			transfer_state = 631
+		}
+		JAP = {
+			transfer_state = 629
+		}
+		JAP = {
+			transfer_state = 385
+		}
+		# USA land gained through New York Conference
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 641
+				}
+			}
+			JAP = {
+				transfer_state = 641
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 635
+				}
+			}
+			JAP = {
+				transfer_state = 635
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 734
+				}
+			}
+			JAP = {
+				transfer_state = 734
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 725
+				}
+			}
+			JAP = {
+				transfer_state = 725
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 639
+				}
+			}
+			JAP = {
+				transfer_state = 639
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 643
+				}
+			}
+			JAP = {
+				transfer_state = 643
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 636
+				}
+			}
+			JAP = {
+				transfer_state = 636
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 270
+				}
+			}
+			JAP = {
+				transfer_state = 270
+			}
+		}
+		# Mexico
+		JAP = {
+			transfer_state = 484
+		}
+		# Canada
+		IF = {
+			LIMIT = {
+				OR = {
+					CAN = {
+						is_in_faction_with = USA
+					}
+					USA = {
+						controls_state = 739
+					}
+					USA = {
+						controls_state = 740
+					}
+					USA = {
+						controls_state = 471
+					}
+					USA = {
+						controls_state = 473
+					}
+				}
+			}
+			JAP = {
+				transfer_state = 739
+			}
+			JAP = {
+				transfer_state = 740
+			}
+			JAP = {
+				transfer_state = 471
+			}
+			JAP = {
+				transfer_state = 473
+			}
+		}
+		IF = {
+			LIMIT = {
+				AST = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = AST
+			}
+		}
+		IF = {
+			LIMIT = {
+				NZL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = NZL
+			}
+		}
+		IF = {
+			LIMIT = {
+				RAJ = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = RAJ
+			}
+		}
+		IF = {
+			LIMIT = {
+				MAL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = MAL
+			}
+		}
+		IF = {
+			LIMIT = {
+				INS = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = INS
+			}
+		}
+		IF = {
+			LIMIT = {
+				PHI = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = PHI
+			}
+		}
+	}
+	option = {
+		# They should be more than happy with the Islands
+		name = GCE_GER.460.c
+		ai_chance = {
+			base = 50
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = GCE_rejected_claims
+			}
+		}
+		# USA starting territories
+		JAP = {
+			transfer_state = 463
+		}
+		JAP = {
+			transfer_state = 650
+		}
+		JAP = {
+			transfer_state = 638
+		}
+		JAP = {
+			transfer_state = 642
+		}
+		JAP = {
+			transfer_state = 727
+		}
+		JAP = {
+			transfer_state = 630
+		}
+		JAP = {
+			transfer_state = 631
+		}
+		JAP = {
+			transfer_state = 629
+		}
+		# Canada
+		IF = {
+			LIMIT = {
+				OR = {
+					CAN = {
+						is_in_faction_with = USA
+					}
+					USA = {
+						controls_state = 739
+					}
+					USA = {
+						controls_state = 740
+					}
+				}
+			}
+			JAP = {
+				transfer_state = 739
+			}
+			JAP = {
+				transfer_state = 740
+			}
+		}
+		# USA land gained through New York Conference
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 641
+				}
+			}
+			JAP = {
+				transfer_state = 641
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 635
+				}
+			}
+			JAP = {
+				transfer_state = 635
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 734
+				}
+			}
+			JAP = {
+				transfer_state = 734
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 725
+				}
+			}
+			JAP = {
+				transfer_state = 725
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 639
+				}
+			}
+			JAP = {
+				transfer_state = 639
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 643
+				}
+			}
+			JAP = {
+				transfer_state = 643
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 636
+				}
+			}
+			JAP = {
+				transfer_state = 636
+			}
+		}
+		IF = {
+			LIMIT = {
+				USA = {
+					controls_state = 270
+				}
+			}
+			JAP = {
+				transfer_state = 270
+			}
+		}
+		IF = {
+			LIMIT = {
+				AST = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = AST
+			}
+		}
+		IF = {
+			LIMIT = {
+				NZL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = NZL
+			}
+		}
+		IF = {
+			LIMIT = {
+				RAJ = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = RAJ
+			}
+		}
+		IF = {
+			LIMIT = {
+				MAL = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = MAL
+			}
+		}
+		IF = {
+			LIMIT = {
+				INS = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = INS
+			}
+		}
+		IF = {
+			LIMIT = {
+				PHI = {
+					is_in_faction_with = USA
+				}
+			}
+			JAP = {
+				puppet = PHI
+			}
+		}
+	}
+}
+
+########################################################
+# Extended Trials come to an end
+country_event = {
+	id = GCE_GER.47
+	title = GCE_GER.47.t
+	desc = GCE_GER.47.desc
+	picture = GFX_event_birmingham_trails
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		#Heil Hitler
+		name = GCE_GER.47.a
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+########################################################
+# London Surrenders
+country_event = {
+	id = GCE_GER.54
+	title = GCE_GER.54.t
+	desc = GCE_GER.54.desc
+	picture = GFX_event_german_parade
+	fire_only_once = yes
+	trigger = {
+		TAG = GER
+		GER = {
+			has_government = fascism
+		}
+		GER = {
+			has_war_with = ENG
+		}
+		ENG = {
+			surrender_progress > 0.85
+		}
+	}
+	fire_only_once = yes
+
+	option = {
+		# Puppet
+		name = GCE_GER.54.b
+		ai_chance = {
+			base = 20
+		}
+
+		hidden_effect = {
+			set_global_flag = GCE_london_surrender
+		}
+
+		complete_national_focus = GER_return_of_king
+	}
+
+	option = {
+		# White Peace... for some reason?
+		name = GCE_GER.54.c
+		ai_chance = {
+			base = 0
+		}
+
+		white_peace = {
+			TAG = ENG
+		}
+		ENG = {
+			add_war_support = -0.2
+		}
+		add_stability = -0.05
+		add_war_support = -0.1
+	}
+}
+
+########################################################
+# Washington Surrenders
+country_event = {
+	id = GCE_GER.55
+	title = GCE_GER.55.t
+	desc = GCE_GER.55.desc
+	picture = GFX_event_german_parade
+	trigger = {
+		TAG = GER
+		GER = {
+			has_government = fascism
+		}
+		GER = {
+			has_war_with = USA
+		}
+		USA = {
+			surrender_progress > 0.85
+		}
+	}
+	fire_only_once = yes
+	option = {
+		# Hold Washington and Puppet
+		name = GCE_GER.55.a
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_USA_surrender
+		USA = {
+			add_stability = -0.1
+		}
+		USA = {
+			add_war_support = -0.5
+		}
+		GER = {
+			transfer_state = 361
+		}
+		set_autonomy = {
+			target = USA
+			autonomy_state = autonomy_reichskommissariat
+			end_wars = yes
+			end_civil_wars = no
+		}
+		hidden_effect = {
+			USA = {
+				kill_ideology_leader = fascism
+				set_party_name = {
+					ideology = fascism
+					name = American_Nazi_Party
+					long_name = American_Nazi_Party_long
+				}
+				create_country_leader = {
+					name = "Hermann Göring"
+					desc = ""
+					picture = "GFX_portrait_GER_hermann_goring"
+					expire = "1985.1.1"
+					ideology = fascism_ideology
+				}
+				load_focus_tree = generic_focus
+				set_cosmetic_tag = NA_USA
+			}
+		}
+	}
+	option = {
+		# Puppet
+		name = GCE_GER.55.b
+		ai_chance = {
+			base = 50
+		}
+		set_global_flag = GCE_USA_surrender
+		USA = {
+			add_stability = -0.1
+		}
+		USA = {
+			add_war_support = -0.5
+		}
+		set_autonomy = {
+			target = USA
+			autonomy_state = autonomy_reichskommissariat
+			end_wars = yes
+			end_civil_wars = no
+		}
+		hidden_effect = {
+			USA = {
+				kill_ideology_leader = fascism
+				set_party_name = {
+					ideology = fascism
+					name = American_Nazi_Party
+					long_name = American_Nazi_Party_long
+				}
+				create_country_leader = {
+					name = "Hermann Göring"
+					desc = ""
+					picture = "GFX_portrait_GER_hermann_goring"
+					expire = "1985.1.1"
+					ideology = fascism_ideology
+				}
+				load_focus_tree = generic_focus
+				set_cosmetic_tag = NA_USA
+			}
+		}
+	}
+	option = {
+		# White Peace
+		name = GCE_GER.55.c
+		ai_chance = {
+			base = 10
+		}
+		white_peace = {
+			TAG = USA
+		}
+		USA = {
+			add_war_support = -0.2
+		}
+		add_stability = -0.05
+		add_war_support = -0.1
+	}
+}
+
+########################################################
+# The Return of London
+country_event = {
+	id = GCE_GER.56
+	title = GCE_GER.56.t
+	desc = GCE_GER.56.desc
+	picture = GFX_report_event_eng_mosley_march_on_downing_street
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Return it
+		name = GCE_GER.56.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			transfer_state = 126
+		}
+		ENG = {
+			transfer_state = 125
+		}
+		ENG = {
+			transfer_state = 127
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_reichsprotectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+	}
+	option = {
+		# Promise the return within one year
+		name = GCE_GER.56.b
+		ai_chance = {
+			base = 30
+		}
+		country_event = {
+			days = 365
+			id = GCE_GER.57
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.56.c
+		ai_chance = {
+			base = 20
+		}
+		set_global_flag = GCE_England_rebellion
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+	}
+}
+
+########################################################
+# The Return of London - A year later
+country_event = {
+	id = GCE_GER.57
+	title = GCE_GER.57.t
+	desc = GCE_GER.57.desc
+	picture = GFX_report_event_eng_mosley_march_on_downing_street
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Return it
+		name = GCE_GER.57.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			transfer_state = 126
+		}
+		ENG = {
+			transfer_state = 125
+		}
+		ENG = {
+			transfer_state = 127
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_reichsprotectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.57.b
+		ai_chance = {
+			base = 20
+		}
+		set_global_flag = GCE_England_rebellion
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+	}
+}
+
+########################################################
+# The English Unification with Wales
+country_event = {
+	id = GCE_GER.58
+	title = GCE_GER.58.t
+	desc = GCE_GER.58.desc
+	picture = GFX_report_event_eng_mosley_speech
+	trigger = {
+		TAG = GER
+		has_global_flag = {
+			flag = GCE_wales_uprising
+			days > 2000
+		}
+		country_exists = WLS
+		has_global_flag = GCE_london_surrender
+		NOT = {
+			has_global_flag = GCE_England_rebellion_crushed
+		}
+	}
+	fire_only_once = yes
+	option = {
+		# Let it happen
+		name = GCE_GER.58.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			annex_country = {
+				target = WLS
+				transfer_troops = yes
+			}
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_satellite
+			end_wars = no
+			end_civil_wars = no
+		}
+	}
+	option = {
+		# Schedule unification within a year
+		name = GCE_GER.58.b
+		ai_chance = {
+			base = 30
+		}
+		country_event = {
+			days = 365
+			id = GCE_GER.59
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.58.c
+		ai_chance = {
+			base = 20
+		}
+		set_global_flag = GCE_England_rebellion
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+		ENG = {
+			declare_war_on = {
+				target = WLS
+				type = annex_everything
+			}
+		}
+	}
+}
+
+########################################################
+# The English Unification with Wales - A year later
+country_event = {
+	id = GCE_GER.59
+	title = GCE_GER.59.t
+	desc = GCE_GER.59.desc
+	picture = GFX_report_event_eng_mosley_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Return it
+		name = GCE_GER.59.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			annex_country = {
+				target = WLS
+				transfer_troops = yes
+			}
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_satellite
+			end_wars = no
+			end_civil_wars = no
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.59.b
+		ai_chance = {
+			base = 20
+		}
+		set_global_flag = GCE_England_rebellion
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+		ENG = {
+			declare_war_on = {
+				target = WLS
+				type = annex_everything
+			}
+		}
+	}
+}
+
+########################################################
+# The English Unification with Scotland
+country_event = {
+	id = GCE_GER.60
+	title = GCE_GER.60.t
+	desc = GCE_GER.60.desc
+	picture = GFX_report_event_eng_mosley_speech
+	trigger = {
+		TAG = GER
+		has_global_flag = {
+			flag = GCE_scottish_uprising
+			days > 3650
+		}
+		country_exists = SCO
+		has_global_flag = GCE_london_surrender
+		NOT = {
+			has_global_flag = GCE_England_rebellion_crushed
+		}
+	}
+	fire_only_once = yes
+	option = {
+		# Let it happen
+		name = GCE_GER.60.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			annex_country = {
+				target = SCO
+				transfer_troops = yes
+			}
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = no
+			end_civil_wars = no
+		}
+		IF = {
+			LIMIT = {
+				has_global_flag = GCE_london_surrender
+			}
+			ENG = {
+				set_cosmetic_tag = NA_BRI
+			}
+		}
+		ELSE = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	option = {
+		# Schedule unification within a year
+		name = GCE_GER.60.b
+		ai_chance = {
+			base = 30
+		}
+		country_event = {
+			days = 365
+			id = GCE_GER.61
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.60.c
+		ai_chance = {
+			base = 20
+		}
+		set_global_flag = GCE_England_rebellion
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+		ENG = {
+			declare_war_on = {
+				target = SCO
+				type = annex_everything
+			}
+		}
+	}
+}
+
+########################################################
+# The English Unification with Scotland - A year later
+country_event = {
+	id = GCE_GER.61
+	title = GCE_GER.61.t
+	desc = GCE_GER.61.desc
+	picture = GFX_report_event_eng_mosley_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# Return it
+		name = GCE_GER.61.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			annex_country = {
+				target = SCO
+				transfer_troops = yes
+			}
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = no
+			end_civil_wars = no
+		}
+		IF = {
+			LIMIT = {
+				has_global_flag = GCE_london_surrender
+			}
+			ENG = {
+				set_cosmetic_tag = NA_BRI
+			}
+		}
+		ELSE = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	option = {
+		# Refuse
+		name = GCE_GER.61.b
+		ai_chance = {
+			base = 20
+		}
+		set_autonomy = {
+			target = ENG
+			autonomy_state = autonomy_free
+			end_wars = yes
+			end_civil_wars = no
+		}
+		set_global_flag = GCE_England_rebellion
+		ENG = {
+			kill_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_Liberation_Front
+				long_name = English_Liberation_Front_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+		IF = {
+			LIMIT = {
+				OR = {
+					country_exists = SCO
+					has_global_flag = GCE_scottish_uprising
+					has_country_flag = GCE_Birmingham_Trials.15
+				}
+			}
+			ENG = {
+				set_cosmetic_tag = ENG_england
+			}
+		}
+		else = {
+			ENG = {
+				drop_cosmetic_tag = yes
+			}
+		}
+		ENG = {
+			leave_faction = yes
+		}
+		ENG = {
+			declare_war_on = {
+				target = GER
+				type = independence_wargoal
+			}
+		}
+		ENG = {
+			declare_war_on = {
+				target = SCO
+				type = annex_everything
+			}
+		}
+	}
+}
+
+########################################################
+# von Leeb resigns
+country_event = {
+	id = GCE_GER.62
+	title = GCE_GER.62.t
+	desc = GCE_GER.62.desc
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	fire_only_once = yes
+	trigger = {
+		TAG = GER
+		has_global_flag = {
+			flag = GCE_london_surrender
+			days > 700
+		}
+	}
+	option = {
+		# Oswald Mosley
+		name = GCE_GER.62.a
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_NS_Party
+				long_name = English_NS_Party_long
+			}
+			create_country_leader = {
+				name = "Sir Oswald Mosley"
+				desc = ""
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+				picture = "GFX_portrait_ENG_Portrait_Britain_Oswald_Mosley_War"
+			}
+		}
+	}
+	option = {
+		# Harold Alexander
+		name = GCE_GER.62.b
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			has_country_flag = GCE_Birmingham_Trials.5
+		}
+		ENG = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_NS_Party
+				long_name = English_NS_Party_long
+			}
+			create_country_leader = {
+				name = "Harold Alexander"
+				picture = "GFX_Portrait_GER_Harold_Alexander"
+				desc = ""
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+			}
+		}
+	}
+	option = {
+		# King Edward
+		name = GCE_GER.62.c
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			has_global_flag = GCE_GER_Royal_Family_Friend
+		}
+		ENG = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = English_NS_Party
+				long_name = English_NS_Party_long
+			}
+			create_country_leader = {
+				name = "Edward VIII"
+				desc = "POLITICS_EDWARD_EDWARD_DESC"
+				picture = GFX_portrait_Edward_VIII
+				expire = "1985.1.1"
+				ideology = fascism_ideology
+				traits = {
+					inexperienced_imperialist
+				}
+			}
+		}
+	}
+	option = {
+		# He cannot retire
+		trigger = {
+			NOT = {
+				has_country_flag = GCE_Birmingham_Trials.5
+				has_global_flag = GCE_GER_Royal_Family_Friend
+			}
+		}
+		name = GCE_GER.62.e
+		ai_chance = {
+			base = 50
+		}
+		ENG = {
+			add_stability = -0.1
+		}
+	}
+}

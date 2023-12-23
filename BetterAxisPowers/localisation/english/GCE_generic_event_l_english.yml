@@ -1,0 +1,178 @@
+﻿l_english:
+ ##############################
+#template
+ #GCE_GEN.0.t:0 "temp"
+ #GCE_GEN.0.desc:0 "temp"
+ #GCE_GEN.0.a:0 "temp
+ #GCE_GEN.0.b:0 "temp"
+ #GCE_GEN.0.c:0 "temp"
+
+  ##############################
+
+#Ireland takes northern ireland
+ GCE_GEN.1.t:0 "Question of northern Ireland"
+ GCE_GEN.1.desc:0 "With the recent German invation of the british isles, it is clear that the British Empire will not last much longer. With the Empire weak we should take back our rightfull claim of Northern Ireland to protect the Irish people from any further German ambitions."
+ GCE_GEN.1.a:0 "Ireland united."
+ GCE_GEN.1.b:0 "We cannot risk to anger the British."
+
+  ##############################
+
+#English respnse to irish invation
+ GCE_GEN.2.t:0 "Irish troops are moving into northern Ireland!"
+ GCE_GEN.2.desc:0 "After hearing that the Germans have landed on our home island, Ireland has started to move troops into northern ireland. The province is undermanned and undersupplied. what will be our response?"
+ GCE_GEN.2.a:0 "We have no means of stopping them, call back our men."
+ GCE_GEN.2.b:0 "If they want it they will have to fight for it!"
+
+  ##############################
+
+#English respnse to irish invation
+ GCE_GEN.3.t:0 "Heinrich Initiative proves sucessfull!"
+ GCE_GEN.3.desc:0 "With the threat of the Germans closer then ever the British people have taken up arms and met in our London HQ."
+ GCE_GEN.3.a:0 "We shall defend our island, whatever the cost may be."
+
+  ##############################
+
+#Finland invade east event
+ GCE_GEN.4.t:0 "Invation of the east"
+ GCE_GEN.4.desc:0 "The Soviets have just lost Leningrad. Now is our chance, \nSuurempaan Suomeen!"
+ GCE_GEN.4.a:0 "Finlandia, Finlandia!"
+ GCE_GEN.4.b:0 "We can't risk it."
+
+  ##############################
+# Germany lands in Britian
+ GCE_GEN.5.t:0 "Germany lands in Britian"
+ GCE_GEN.5.desc:0 "Now the Germans have landed in Britian it is not long until they march into London. We must secure their empire before it falls to the germans. We have to hold a conference in New York with what remains of the allies."
+ GCE_GEN.5.a:0 "Yes."
+ GCE_GEN.5.b:0 "No."
+ 1_GCE_GEN_tt:0 "We will devide all English possessions along the nations of the world so saveguard them from the Germans. \nIf we are in the allies we will leave and create the "Liberty Alliance" with what is left of Canada, Australia, New Zealand, Indonesia, Malaysia and India. \n\ndepending on who is left fighting the Germans we will take controll of the Bahamas, the Pacific, Newfoundland and Greenland. \n\nIf we are in the war we will keep fighting alongside our allies, if not we will pull them out of the war with the Germans. \nMay men stay free"
+
+ ##############################
+# Scotland localiatation
+ GEN_Scottish_Democratic_Fascist_Party:0 "Scottish Democratic Facist Party"
+ GEN_National_Socialist_Party_Scotland:0 "National Socialist Party Scotland"
+ 
+ SCO_GER_fascism_autonomy_reichskommissariat:0 "National Socialist Scotland"
+ SCO_GER_fascism_autonomy_reichsprotectorate:0 "National Socialist Scotland"
+ SCO_GER_fascism_autonomy_satellite:0 "National Socialist Scotland"
+
+  ##############################
+# Scotland turns Fascist
+ GCE_GEN.6.t:0 "March of the Blackshirts"
+ GCE_GEN.6.desc:0 "With our Allience with Germany and them keeping their promise Scottish Democratic Fascist Party memebers with support from the Wehrmacht have marched into St. Adrew's House and have taken control of the Goverment. "
+ GCE_GEN.6.a:0 "This is a great day for Scotland."
+
+
+  ##############################
+# The Suicide Offense
+ GCE_GEN.7.t:0 "Jisatsu Tora Kōsei"
+ GCE_GEN.7.desc:0 "The Suicidal Tiger Offensive, \nGermany has landed on the US mainland, word has it that American Troops stationed in the Pacific have been repositioned on the mainland and the Navy is busy fighting off the Krigsmarine and Luftwaffe on the East coast. \n\nThis is our chance, we must mobilize everything we have left and strike the US with a suprise blow they'll never expect. This will cost many lifes but it is necessary to ensure total victory for the Empire and for the Emperor!"
+ GCE_GEN.7.a:0 "Banzai!"
+ GCE_GEN.7.b:0 "By the Emperor, we cannot risk it."
+ 2_GCE_GEN_tt:0 "§GOur Army will independently from our command launch an invasion of the US-Mainland and Islands."
+
+  ##############################
+# USA annexes Canada
+ GCE_GEN.8.t:0 "The Question of Canada"
+ GCE_GEN.8.desc:0 "Germany is on our doorstep, while we fight relentlessly our northern neighbors seem to not be too interested in fighting on the fronts. \n\nTheir military may be weak compaired to ours but every bit counts. We have to make a move, we may seize their land, their military, their goverment, not for our own gain, but for the good and freedom of the North American People."
+ GCE_GEN.8.a:0 "It has to be done."
+ GCE_GEN.8.b:0 "Out of the question."
+
+  ##############################
+# USA puppets Canada
+ GCE_GEN.9.t:0 "The Question of Canadian Independence"
+ GCE_GEN.9.desc:0 "While Canada is being invaded by the Wehrmacht we cannot just stand here and watch as the Nazis move to our doorstep, we must take action. \n\nCanada has shown time and time again that it is not able to govern themselfes."
+ GCE_GEN.9.a:0 "We have no choice."
+ GCE_GEN.9.b:0 "Out of the question."
+
+  ##############################
+# GCE_GEN.10 Cosmentic Tags
+ Greater_Party:0 "Greater Party"
+ National_Socialist_Party_of_Greater_England:0 "National Socialist Party of Greater England"
+ German_Occupation_Council:0 "Besatzungsbund: England"
+ German_Occupation_Council_long:0 "Besatzungsbund: England"
+Welsh_National_Socialist_Party:0 "Besatzungsbund: Walhaz"
+Welsh_National_Socialist_Party_long:0 "Besatzungsbund: Walhaz"
+
+  ##############################
+# German Presures Brazil for Axis membership
+ GCE_GEN.21.t:0 "[GER.GetNameDef] pressures for [GER.GetFactionName] membership"
+ GCE_GEN.21.desc:0 "With Germany's recent war with the USA and their effort to reach closer to the Americas they have requested us to join 'Die Achsenmächte'. A large percent of our population is German and would be honored to fight for their Vaterland far away."
+ GCE_GEN.21.a:0 "For the Fatherland!."
+ GCE_GEN.21.b:0 "Brazil is and will stay an neutral nation."
+ GCE_GEN.21.c:0 "Request the Allied help, the Germans have overstepped their bonderies."
+
+  ##############################
+# Brazil agrees to join Axis
+ GCE_GEN.22.t:0 "[BRA.GetNameDef] agrees to join the [GER.GetFactionName]"
+ GCE_GEN.22.desc:0 "The [BRA.GetAdjective] government has agreed to join the [GER.GetFactionName] and in solidarity have offered to declear war on [USA.GetNameDef] and fight side by side with the Wehrmacht."
+ GCE_GEN.22.a:0 "Exellent."
+ GCE_GEN.22.b:0 "We've changed our mind."
+
+  ##############################
+# Brazil insists on Neutrality
+ GCE_GEN.23.t:0 "[BRA.GetNameDef] insists on their Neutrality"
+ GCE_GEN.23.desc:0 "The [BRA.GetAdjective] government has made it clear that they will stay neutral in this war and will not join either side."
+ GCE_GEN.23.a:0 "Neutrality is a lie!"
+ GCE_GEN.23.b:0 "It's their choice."
+
+  ##############################
+# Brazil joins Allies
+ GCE_GEN.24.t:0 "The [BRA.GetAdjective] Backstap"
+ GCE_GEN.24.desc:0 "The traitorus [BRA.GetAdjective] government has backstabbed us on our request and joined [USA.GetNameDef] in their war effort with an offical decleartion of war on us. They will pay for their treason and they will burn like all enemies of the Reich!"
+ GCE_GEN.24.a:0 "Traitors!"
+
+  ##############################
+# Germany Requests Axis membership
+ GCE_GEN.25.t:0 "[GER.GetNameDef] requests our membership in the [GER.GetFactionName]"
+ GCE_GEN.25.desc:0 "[GER.GetNameDef] in their war effort with [USA.GetNameDef] in an attempt to reach closer to the Americas have requested us to join the Faction."
+ GCE_GEN.25.a:0 "Die Americanos!"
+ GCE_GEN.25.b:0 "We cannot risk it."
+
+  ##############################
+# Venuzela agrees to join Axis
+ GCE_GEN.26.t:0 "[VEN.GetNameDef] agrees to join the [GER.GetFactionName]"
+ GCE_GEN.26.desc:0 "The [VEN.GetAdjective] Government has agreen to join the [GER.GetFactionName] and are ready to declear war on [USA.GetNameDef]."
+ GCE_GEN.26.a:0 "Gut."
+ GCE_GEN.26.b:0 "Actually, We don't need them after all."
+
+  ##############################
+# Venuzela refuses to join Axis
+ GCE_GEN.27.t:0 "[VEN.GetNameDef] refuses to join the [GER.GetFactionName]"
+ GCE_GEN.27.desc:0 "The [VEN.GetAdjective] Government has refused to join our Faction and claim they are neutral."
+ GCE_GEN.27.a:0 "Send in the troops."
+ GCE_GEN.27.b:0 "Fine!"
+
+  ##############################
+# Germany demands our territory 
+ GCE_GEN.31.t:0 "[GER.GetNameDef] demands our territory!"
+ GCE_GEN.31.desc:0 "Today we have recieved a letter from [GER.GetNameDef] demanding the German speaking territories in the North. Threatening military action we may not have a choice. \n\nAfter the war and the German centric carve up of the World many minors of the [GER.GetFactionName] do not feel too loyal to [GER.GetNameDef]. \n\nNow is our chance to take this doubt in the [GER.GetFactionName] and use it to build up our own Pact of Steel."
+ GCE_GEN.31.a:0 "Come and take it."
+ GCE_GEN.31.b:0 "We cannot risk a war with the Germans."
+
+  ##############################
+# Japan Demands the East 
+ GCE_GEN.33.t:0 "The Far East Question"
+ GCE_GEN.33.desc:0 "With the [SOV.GetName] on its last legs and their major cities captured by the [GER.GetAdjective] Wehrmacht we have to ask ourselves the question of the rightful heirs to the Siberian Far East."
+ GCE_GEN.33.a:0 "This land belongs to the Emperor!"
+ GCE_GEN.33.b:0 "We will not break a honorable signed pact of peace!"
+
+  ##############################
+# Japan Demands the Far East (SOV)
+ GCE_GEN.34.t:0 "[JAP.GetName] Demands the Far East!"
+ GCE_GEN.34.desc:0 "Today the [JAP.GetAdjective] ambassador as reached us with a demand signed by the [JAP.GetAdjective] head of state personally. Demanding the peaceful transfer of our most eastern holdings."
+ GCE_GEN.34.a:0 "We cannot afford another war."
+ GCE_GEN.34.b:0 "Pust oni prikhodyat!"
+
+  ##############################
+# Treaty of New York 
+ GCE_GEN.35.t:0 "Temp"
+ GCE_GEN.35.desc:0 "Temp"
+ GCE_GEN.35.a:0 "Temp"
+ GCE_GEN.35.b:0 "Temp"
+
+ ##############################
+# Temp 
+ GCE_GEN.0.t:0 "Temp"
+ GCE_GEN.0.desc:0 "Temp"
+ GCE_GEN.0.a:0 "Temp"
+ GCE_GEN.0.b:0 "Temp"

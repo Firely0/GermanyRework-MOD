@@ -1,0 +1,133 @@
+###########################    
+# More German Events - Soviet Union
+###########################
+add_namespace = GCE_SOV
+############################
+# New Moscow - Soviet Decision
+country_event = {
+	id = GCE_SOV.1
+	title = GCE_SOV.1.t
+	desc = GCE_SOV.1.desc
+	picture = GFX_Soviet_New_Moscow
+	trigger = {
+		TAG = SOV
+		has_war_with = GER
+		has_government = communism
+		GER = {
+			controls_state = 219
+		}
+	}
+	fire_only_once = yes
+	option = {
+		#New Moscow
+		trigger = {
+			SOV = {
+				controls_state = 653
+			}
+		}
+		name = GCE_SOV.1.a
+		ai_chance = {
+			base = 99
+		}
+		set_province_name = {
+			id = 1821
+			name = "New Moscow"
+		}
+		SOV = {
+			set_capital = {
+				state = 653
+			}
+		}
+		add_ideas = new_moscow
+		add_timed_idea = {
+			idea = refugee_flood
+			days = 5110
+		}
+		set_global_flag = GCE_SOV_new_moscow
+		653 = {
+			add_manpower = 1800000
+		}
+		219 = {
+			add_manpower = -1800000
+		}
+		every_country = {
+			news_event = {
+				id = GCE_news.1
+			}
+		}
+	}
+	option = {
+		#rather not
+		name = GCE_SOV.1.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = -0.2
+	}
+}
+
+###############################
+# Stalin returns from German capture
+country_event = {
+	id = GCE_SOV.2
+	title = GCE_SOV.2.t
+	desc = GCE_SOV.2.desc
+	picture = report_event_stalin_propaganda
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		# a relief
+		name = GCE_SOV.2.a
+		ai_chance = {
+			base = 100
+		}
+		set_global_flag = GCE_sov_re
+		hidden_effect = {
+			clr_global_flag = GCE_stalin_captured
+			every_country = {
+				news_event = {
+					days = 2
+					id = GCE_news.2
+				}
+			}
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Josef Stalin"
+				desc = "Punished_Stalin_desc"
+				#picture = "portrait_SOV_punished_stalin_2"
+				picture = "Portrait_Soviet_Joseph_Stalin_2"
+				expire = "1965.1.1"
+				ideology = stalinism
+				traits = {
+				}
+			}
+		}
+	}
+}
+
+########################################################
+# Soviet Defeat
+country_event = {
+	id = GCE_SOV.3
+	title = GCE_SOV.3.t
+	desc = GCE_SOV.3.desc
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		TAG = SOV
+		has_capitulated = yes
+	}
+	option = {
+		#
+		name = GCE_SOV.3.a
+		ai_chance = {
+			base = 100
+		}
+		add_timed_idea = {
+			idea = soviet_defeat
+			days = 7300
+		}
+		set_global_flag = GCE_soviet_defeat
+	}
+}
