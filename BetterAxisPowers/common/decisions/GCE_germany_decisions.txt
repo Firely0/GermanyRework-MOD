@@ -1560,7 +1560,7 @@ operation_wksa_north_category = {
 	############################################################
 	# Build infrastructure
 	wksa_build_infrastructure = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_construction
 		allowed = {
 			original_tag = GER
 		}
@@ -2011,7 +2011,7 @@ operation_wksa_south_category = {
 			original_tag = GER
 		}
 		available = {
-			always = yes
+			has_completed_focus = GER_experts_in_field
 		}
 		custom_cost_trigger = {
 			has_army_experience > 25
@@ -2039,83 +2039,6 @@ operation_wksa_south_category = {
 		}
 		remove_effect = {
 			set_country_flag = GCE_wksa_south.13
-		}
-	}
-	############################################################
-	# Intensive training for seebattalion
-	wksa_intensive_training_for_the_seebattalion = {
-		icon = GFX_decision_hol_draw_up_staff_plans
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-			always = yes
-		}
-		custom_cost_trigger = {
-			has_army_experience > 25
-			has_navy_experience > 25
-		}
-		custom_cost_text = army_and_navy_xp_more_than_25
-		visible = {
-			has_country_flag = GCE_wksa.3
-			GER = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_country_flag = GCE_wksa_south.14
-			}
-		}
-		days_remove = 180
-		modifier = {
-			naval_invasion_penalty = -0.5
-			amphibious_invasion = 0.5
-		}
-		complete_effect = {
-			hidden_effect = {
-				navy_experience = -25
-				army_experience = -25
-			}
-		}
-		remove_effect = {
-			set_country_flag = GCE_wksa_south.14
-		}
-	}
-	############################################################
-	# More efficiant naval invasion planning
-	wksa_faster_naval_invasion_planning = {
-		icon = GFX_decision_hol_draw_up_staff_plans
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-			always = yes
-		}
-		custom_cost_trigger = {
-			has_army_experience > 25
-			has_navy_experience > 25
-		}
-		custom_cost_text = army_and_navy_xp_more_than_25
-		visible = {
-			has_country_flag = GCE_wksa.3
-			GER = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_country_flag = GCE_wksa_south.15
-			}
-		}
-		days_remove = 180
-		modifier = {
-			invasion_preparation = -0.75
-		}
-		complete_effect = {
-			hidden_effect = {
-				navy_experience = -25
-				army_experience = -25
-			}
-		}
-		remove_effect = {
-			set_country_flag = GCE_wksa_south.15
 		}
 	}
 	############################################################
@@ -2231,45 +2154,10 @@ operation_wksa_south_category = {
 }
 
 operation_wksa_middle_category = {
-	wksa_reduce_naval_attrition = {
-		icon = GFX_decision_hol_draw_up_staff_plans
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-			always = yes
-		}
-		custom_cost_trigger = {
-			has_navy_experience > 50
-		}
-		custom_cost_text = navy_xp_more_than_50
-		days_remove = 180
-		visible = {
-			has_country_flag = GCE_wksa.2
-			GER = {
-				has_war_with = USA
-			}
-			NOT = {
-				has_country_flag = GCE_wksa_middle.1
-			}
-		}
-		modifier = {
-			navy_fuel_consumption_factor = 0.15
-			naval_attrition = -0.2
-		}
-		complete_effect = {
-			hidden_effect = {
-				navy_experience = -50
-			}
-		}
-		remove_effect = {
-			set_country_flag = GCE_wksa_middle.1
-		}
-	}
 	############################################################
 	# Extend Air Range
 	wksa_extend_airforce_range = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_air
 		allowed = {
 			original_tag = GER
 		}
@@ -2306,7 +2194,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Extend Air Range
 	wksa_naval_bombing_campaign = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_air
 		allowed = {
 			original_tag = GER
 		}
@@ -2343,7 +2231,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Hunt down the US Navy
 	wksa_hunt_us_navy = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_naval
 		allowed = {
 			original_tag = GER
 		}
@@ -2378,6 +2266,42 @@ operation_wksa_middle_category = {
 		}
 	}
 	############################################################
+	wksa_reduce_naval_attrition = {
+		icon = GFX_decision_generic_naval
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			always = yes
+		}
+		custom_cost_trigger = {
+			has_navy_experience > 50
+		}
+		custom_cost_text = navy_xp_more_than_50
+		days_remove = 180
+		visible = {
+			has_country_flag = GCE_wksa.2
+			GER = {
+				has_war_with = USA
+			}
+			NOT = {
+				has_country_flag = GCE_wksa_middle.1
+			}
+		}
+		modifier = {
+			navy_fuel_consumption_factor = 0.15
+			naval_attrition = -0.2
+		}
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -50
+			}
+		}
+		remove_effect = {
+			set_country_flag = GCE_wksa_middle.1
+		}
+	}
+	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda = {
 		icon = GFX_decision_hol_draw_up_staff_plans
@@ -2405,7 +2329,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda_infrastructure = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_construction
 		allowed = {
 			original_tag = GER
 		}
@@ -2442,7 +2366,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda_airport = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_construction
 		allowed = {
 			original_tag = GER
 		}
@@ -2479,7 +2403,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda_anti_air = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_construction
 		allowed = {
 			original_tag = GER
 		}
@@ -2516,7 +2440,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda_bunker = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_fortification
 		allowed = {
 			original_tag = GER
 		}
@@ -2560,7 +2484,7 @@ operation_wksa_middle_category = {
 	############################################################
 	# Build up Bermuda
 	wksa_build_up_bermuda_port = {
-		icon = GFX_decision_hol_draw_up_staff_plans
+		icon = GFX_decision_generic_fortification
 		allowed = {
 			original_tag = GER
 		}

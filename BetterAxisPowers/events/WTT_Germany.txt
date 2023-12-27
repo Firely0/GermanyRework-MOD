@@ -710,6 +710,7 @@ country_event = {
 			clr_country_flag = GER_civil_war
 			clr_global_flag = GER_civil_war
 			set_global_flag = GER_civil_war_end
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -728,6 +729,9 @@ country_event = {
 		hidden_effect = {
 			delete_unit_template_and_units = {
 				division_template = "Global Volunteer Division"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Netherlands Divisie"
 			}
 			remove_ideas = {
 				GER_plan_offensive

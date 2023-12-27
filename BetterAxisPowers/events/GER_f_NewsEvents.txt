@@ -280,3 +280,103 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = ger_f_news.8
+	title = "Wilhelm II Speaks Against the German Government"
+	desc = ger_f_news.8.d
+	picture = GFX_news_event_generic_read_write
+	immediate = {
+		hidden_effect = {
+			set_global_flag = GER_ALLOW_KAISER_CIVILWAR
+		}
+	}
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Keep Talking Nonsense"
+		trigger = {
+			original_tag = GER
+		}
+	}
+
+	option = {
+		name = "Interesting"
+		trigger = {
+			NOT = {
+				tag = GER
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ger_f_news.9
+	title = "Wilhelm II Crossed the German Border"
+	desc = ger_f_news.9.d
+	picture = GFX_news_event_generic_funeral
+	immediate = {
+		hidden_effect = {
+			GER = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = GER_german_empire
+				set_party_name = {
+					ideology = neutrality
+					long_name = GER_neutrality_party_kaiserreich_long
+					name = GER_neutrality_party_kaiserreich
+				}
+				set_country_flag = kaiser_wilhelm_ii
+				GER_wilhelm_ii = {
+					add_country_leader_role = {
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+								anti_democrat
+								imperial_connections				
+							}
+						}
+						promote_leader = yes
+					}
+				}				
+			}
+			HOL = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+				}
+			}
+		}
+	}
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome Kaiser"
+		trigger = {
+			tag = GER
+		}
+	}
+
+	option = {
+		name = "It's you again"
+		trigger = {
+			original_tag = GER
+			has_government = fascism
+		}
+	}
+
+	option = {
+		name = "Interesting"
+		trigger = {
+			NOT = {
+				original_tag = GER
+			}
+		}
+	}
+}

@@ -49,6 +49,7 @@ add_namespace = GER_eng_naval_agreement
 # Civil War/s
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
+add_namespace = GER_focus_civilwar
 add_namespace = GER_civil_war_end_fascm
 
 # Other
@@ -1323,6 +1324,122 @@ country_event = {
 
 		hidden_effect = {
 			news_event = { id = ger_f_news.3 hours = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.8
+	title = "Wilhelm wants us to join the war"
+	desc = "In the ongoing civil war in Germany, Wilhelm is asking for our support to end the war. Although the Queen has stated that we should prepare to enter the war, the final decision is up to us"
+	picture = GFX_report_event_czech_soldiers_01
+	is_triggered_only = yes
+
+	option = {
+		name = "There is a war to be won"
+		ai_chance = {
+			factor = 100
+		}
+
+		HOL = {
+			add_war_support = 0.1
+			HOL_shell_shocked_spectator_level_down = yes
+		}
+
+		hidden_effect = {
+			GER = { 
+				country_event = ger_kaiser_in_exile.9
+				create_faction = "GER_central_powers_faction"
+				add_to_faction = HOL
+			}
+			HOL = {
+				uncomplete_national_focus = {
+					focus = HOL_cave_to_the_germans
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				uncomplete_national_focus = {
+					focus = HOL_maintain_trade_neutrality
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				uncomplete_national_focus = {
+					focus = HOL_cave_to_the_british
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				complete_national_focus = HOL_maintain_trade_neutrality
+				complete_national_focus = HOL_oranje_boven
+				complete_national_focus = HOL_symbol_of_resistance
+				complete_national_focus = HOL_replace_the_defeatist_government
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = GFS
+					hostility_reason = asked_to_join
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "No"
+
+		add_war_support = -0.1
+
+		hidden_effect = {
+			GER = { country_event = ger_kaiser_in_exile.10 }
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.9 
+	title = "The Queen has honoured our request."
+	desc = ""
+	picture = GFX_report_event_czech_soldiers_01
+	is_triggered_only = yes
+
+	option = {
+		name = "There is a war to be won"
+		ai_chance = {
+			factor = 100
+		}
+
+		effect_tooltip = {
+			HOL = {
+				add_war_support = 0.1
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = event_target:fascist_germany_civil_war
+					hostility_reason = asked_to_join
+				}
+				HOL_shell_shocked_spectator_level_down = yes
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.10 
+	title = "Dutch Government Decides Not to Participate in the War"
+	desc = ""
+	picture = GFX_report_event_czech_soldiers_01
+	is_triggered_only = yes
+
+	option = {
+		name = "Fine.."
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -4202,7 +4319,7 @@ country_event = {
 
 country_event = {
 	id = GER_no_focus_ger_com_civilwar.1
-	title = "Our Attempt Cause Civil-War"
+	title = "Our Attempt Cause CivilWar!"
 	desc = ""
 	picture = GFX_report_event_ger_civil_war
 
@@ -4386,6 +4503,120 @@ country_event = {
 			}
 			set_global_flag = GER_civil_war_end
 			set_global_flag = GER_block_civilwar_events
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_civilwar.1
+	title = "Wilhelm II Cause Civilwar!"
+	desc = ""
+	picture = GFX_report_event_ger_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = "For the Empire!"
+		hidden_effect = {
+			set_capital = { state = 51 }
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.5
+				capital = 64
+				states = { 64 61 52 53 54 60 65 66 67 68 62 63 59 58 909 50 935 }
+			}
+			load_oob = "GER_German_Civil_War_neutrality"
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.30
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.35
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			set_stability = 0.9
+			set_war_support = 0.8
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_provisional_gvt
+			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
+			activate_mission = GER_conquer_hamburg
+			activate_mission = GER_conquer_berlin
+			activate_mission = GER_conquer_munich
+			remove_mission = GER_SOV_TRAINING
+			remove_mission = GER_ITA_TRAINING
+			set_global_flag = GER_civil_war
+			SOV = {
+				remove_ideas = SOV_GER_TRAINING
+			}
+			ITA = {
+				remove_ideas = ITA_GER_TRAINING
+			}
+			set_country_flag = WILHELM_CIVILWAR
+			create_country_leader = {
+				name = GER_Non_Civilwar
+				desc = ""
+				picture = GFX_portrait_Nonsidecivilwar
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+				}
+			}
+			set_global_flag = Paul_von_lettow_vorbeck_recalled
+			create_corps_commander = {
+				name = "Paul von Lettow-Vorbeck"
+				gfx = GFX_portrait_ger_von_lettow_vorbeck
+				traits = { trickster war_hero media_personality jungle_rat}
+				skill = 4
+				id = 499
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+			}			
+			set_rule = {
+				can_send_volunteers = yes
+			}
+			random_other_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				GER_Give_fascism_effect = yes
+				add_timed_idea = {
+					idea = GER_unexpected_attack
+					days = 180
+				}
+				set_stability = 0.9
+				set_war_support = 0.8
+				load_oob = "GER_German_Civil_War_fascist"
+				GER_AI_EQ_1 = yes
+				set_country_flag = GER_BLITZ_COM
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 15000
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1250
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1500
+					producer = GER
+				}
+			}
+			news_event = { id = ger_f_news.9 days = 30 }
 		}
 	}
 }

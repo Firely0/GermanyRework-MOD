@@ -7,16 +7,17 @@ communism_on_the_rise = {
 			tag = GER
 			has_completed_focus = GER_against_fuhrer
 			NOT = {
-				has_completed_focus = GER_expatriate_the_communists
+				OR = {
+					has_completed_focus = GER_expatriate_the_communists
+					has_completed_focus = GER_bulwark_against_bolshevism
+					has_completed_focus = GER_a_shadow_of_past
+				}
 			}
 			NOT = {
-				has_completed_focus = GER_bulwark_against_bolshevism
-			}
-			NOT = {
-				has_completed_focus = GER_a_shadow_of_past
-			}
-			NOT = {
-				has_country_flag = thalmann_killed
+				OR = {
+					has_country_flag = WILHELM_CIVILWAR
+					has_country_flag = thalmann_killed
+				}
 			}
 		}
 		remove_trigger = {

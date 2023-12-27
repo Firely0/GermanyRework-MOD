@@ -179,6 +179,9 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.1
 			}
+			hidden_effect = {
+				news_event = { id = ger_f_news.8 days = 2 }
+			}
 		}
 	}
 	focus = {
@@ -4680,6 +4683,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		allow_branch = {
+			NOT = { has_country_flag = GER_SIDE_LEADERS }
+		}
 		cancel_if_invalid = no
 		x = 4
 		y = 1
@@ -4964,6 +4970,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = GER_Power_Heinrich_Himmler
+		}
+		allow_branch = {
+			NOT = { has_country_flag = GER_SIDE_LEADERS }
 		}
 		cancel_if_invalid = no
 		x = -4
@@ -9728,7 +9737,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = GER_soviet_ally
-					SOV = { has_country_flag = GER_soviet_ally }
+					SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
 				}
 				TUR = { country_event = { id = germany.79 days = 1 } }
 			}
@@ -12898,7 +12907,7 @@ focus_tree = {
 		relative_position_id = GER_against_fuhrer
 		x = 3
 		y = 1
-		cost = 2
+		cost = 5
 		available = {
 			is_subject = no
 			NOT = {
@@ -13154,20 +13163,19 @@ focus_tree = {
 	focus = {
 		id = GER_prepare_for_innovative
 		icon = GFX_goal_anti_fasicm_ger
-		text = GER_Working_on
 		mutually_exclusive = {
 			focus = GER_oppose_hitler
 		}
 		prerequisite = {
 			focus = GER_against_fuhrer
 		}
+		available = {
+			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+		}
 		relative_position_id = GER_against_fuhrer
 		x = 1
 		y = 1
 		cost = 10
-		available = {
-			always = no
-		}
 		bypass = {
 		}
 		ai_will_do = {
@@ -13177,6 +13185,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			country_event = { id = GER_focus_civilwar.1 days = 4 }
 		}
 	}
 	focus = {
@@ -13191,6 +13200,7 @@ focus_tree = {
 		allow_branch = {
 			has_completed_focus = GER_against_fuhrer
 			has_global_flag = GER_civil_war
+			NOT = { has_global_flag = GER_ALLOW_KAISER_CIVILWAR }
 		}
 		ai_will_do = {
 			factor = 10
@@ -13451,34 +13461,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_expand_production
-		icon = GFX_focus_generic_reorient_production
-		relative_position_id = GER_request_help
-		prerequisite = {
-			focus = GER_allied_production_factories
-			focus = GER_allied_production_factories_2
-		}
-		x = 0
-		y = 4
-		cost = 5
-		available = {
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_aid_production
-				days = 730
-			}
-		}
-	}
-	focus = {
 		id = GER_seek_help_from_communism
 		icon = GFX_goal_support_communism
 		relative_position_id = GER_request_help
@@ -13669,7 +13651,12 @@ focus_tree = {
 		x = 18
 		y = 0
 		cost = 3
-		available = {
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+			}
 		}
 		bypass = {
 		}
@@ -13682,6 +13669,225 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = Emergency_Orders
+				days = 720
+			}
+		}
+	}
+	focus = {
+		id = GER_expand_production
+		icon = GFX_focus_generic_reorient_production
+		relative_position_id = GER_request_help
+		prerequisite = {
+			focus = GER_allied_production_factories
+			focus = GER_allied_production_factories_2
+		}
+		x = 0
+		y = 4
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_aid_production
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = GER_request_help_kaiser
+		icon = GFX_focus_hol_oranje_boven
+		relative_position_id = GER_against_fuhrer
+		x = 7
+		y = 0
+		cost = 10
+		available = {
+		}
+		allow_branch = {
+			has_completed_focus = GER_against_fuhrer
+			has_global_flag = GER_civil_war
+			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			HOL = {
+				add_war_support = 0.05
+				HOL_shell_shocked_spectator_level_down = yes
+			}
+			GER = {
+				hidden_effect = {
+					hidden_effect = {
+						division_template = {
+							name = "Netherlands Divisie"
+							is_locked = yes
+							priority = 0
+							regiments = {
+								infantry = {
+									x = 0
+									y = 0
+								}
+								infantry = {
+									x = 0
+									y = 1
+								}
+								infantry = {
+									x = 0
+									y = 2
+								}
+								infantry = {
+									x = 0
+									y = 3
+								}
+								infantry = {
+									x = 0
+									y = 4
+								}
+							}
+						}
+					}
+				}
+				random_controlled_state = {
+					create_unit = {
+						division = "name = \"Netherlands 1e Divisie\" division_template = \"Netherlands Divisie\" start_experience_factor = 0.50"
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Netherlands 2e Divisie\" division_template = \"Netherlands Divisie\" start_experience_factor = 0.50"
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Netherlands 3e Divisie\" division_template = \"Netherlands Divisie\" start_experience_factor = 0.50"
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Netherlands 4e Divisie\" division_template = \"Global Volunteer Division\" start_experience_factor = 0.50"
+						owner = GER
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_request_join_war
+		icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+		prerequisite = { focus = GER_request_help_kaiser }
+		relative_position_id = GER_request_help_kaiser
+		x = 0
+		y = 4
+		cost = 5
+		available = {
+			has_global_flag = GER_civil_war
+			HOL = {
+				has_war_support > 0.25
+			}
+		}
+		allow_branch = {
+			has_completed_focus = GER_against_fuhrer
+			has_global_flag = GER_civil_war
+			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			HOL = { country_event = { id = ger_kaiser_in_exile.8 hours = 5 } }
+		}
+	}
+	focus = {
+		id = GER_request_equipment_support
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		relative_position_id = GER_request_help_kaiser
+		text = GER_equipment_shipments
+		prerequisite = {
+			focus = GER_request_help_kaiser
+		}
+		x = 2
+		y = 1
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			HOL = {
+				add_war_support = 0.05
+				HOL_shell_shocked_spectator_level_down = yes
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+				producer = HOl
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1500
+				producer = HOl
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1500
+				producer = HOl
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 1500
+				producer = HOl
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = HOl
+			}
+		}
+	}
+	focus = {
+		id = GER_request_supply
+		icon = GFX_focus_generic_supply_line
+		relative_position_id = GER_request_help_kaiser
+		prerequisite = {
+			focus = GER_request_equipment_support
+		}
+		x = 2
+		y = 3
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			HOL = {
+				add_war_support = 0.05
+				HOL_shell_shocked_spectator_level_down = yes
+			}
+			add_timed_idea = {
+				idea = GER_war_time_logistics
 				days = 720
 			}
 		}
@@ -14054,6 +14260,13 @@ focus_tree = {
 					Emergency_Orders_attack
 					GER_war_time_logistics
 					GER_foreign_training_staff
+				}
+				if = {
+					limit = {
+						has_country_flag = WILHELM_CIVILWAR
+					}
+					complete_national_focus = GER_revive_the_kaiserreich
+					unlock_national_focus = GER_return_of_the_kaiser
 				}
 			}
 		}
@@ -19132,15 +19345,18 @@ focus_tree = {
 				has_completed_focus = GER_a_shadow_of_past
 			}
 		}
-		available = {
-			is_subject = no
-		}
 		offset = {
 			x = 4
 			y = 0
 			trigger = {
-				has_completed_focus = GER_focus_on_the_true_enemy
+				OR = {
+					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+					has_completed_focus = GER_focus_on_the_true_enemy
+				}
 			}
+		}
+		available = {
+			is_subject = no
 		}
 		x = -9
 		y = 1
@@ -19153,6 +19369,7 @@ focus_tree = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_named_threat = {
 				threat = 5
 				name = GER_focus_on_the_true_enemy
@@ -19805,7 +20022,10 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_focus_on_the_true_enemy
+				OR = {
+					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+					has_completed_focus = GER_focus_on_the_true_enemy
+				}	
 			}
 			NOT = {
 				has_completed_focus = GER_establish_abwehr
@@ -19826,6 +20046,7 @@ focus_tree = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_named_threat = {
 				threat = 5
 				name = GER_expatriate_the_communists
@@ -20014,10 +20235,13 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -1
-			y = -1
+			x = -3
+			y = 0
 			trigger = {
-				has_completed_focus = GER_focus_on_the_true_enemy
+				OR = {
+					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+					has_completed_focus = GER_focus_on_the_true_enemy
+				}
 			}
 		}
 		cancel_if_invalid = yes
@@ -20898,6 +21122,7 @@ focus_tree = {
 			factor = 8
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -20946,6 +21171,7 @@ focus_tree = {
 			factor = 8
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_named_threat = {
 				threat = 10
 				name = GER_the_great_red_menace
