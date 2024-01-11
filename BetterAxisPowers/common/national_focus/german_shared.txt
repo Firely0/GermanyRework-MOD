@@ -5192,6 +5192,12 @@ shared_focus = {
 				set_variable = { GER_minimum_training_level = 0 }
 				set_variable = { GER_max_planning_factor = 0 }
 			}
+			if = {
+				limit = {
+					has_country_flag = GER_UNLOCK_SS_ARMY_FOCUS
+				}
+				complete_national_focus = GER_SS_Trops
+			}
 		}
 	}
 }

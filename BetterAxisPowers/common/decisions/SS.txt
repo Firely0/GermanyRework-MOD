@@ -2056,34 +2056,39 @@ SS_loot = {
 		fire_only_once = yes
 
 		complete_effect = {
-			random_controlled_state = {
-				limit = {
-					state = 16
-				}
-				add_resistance = 60
-				damage_building = {
-					type = infrastructure
-					damage = 40
-				}
-			}
-			every_controlled_state = {
-				limit = {
-					is_core_of = FRA is_on_continent = europe NOT = { state = 16 }
-				}
-				add_resistance = 20
-				damage_building = {
-					type = infrastructure
-					damage = 10
-				}
-			}
 			16 = {
 				add_manpower = -50000
 				add_dynamic_modifier = {
 					modifier = Ger_warsaw_state_dynamic_modifier
 				}
 			}
+			hidden_effect = {
+				random_controlled_state = {
+					limit = {
+						state = 16
+					}
+					add_resistance = 60
+					damage_building = {
+						type = infrastructure
+						damage = 40
+					}
+				}
+				every_controlled_state = {
+					limit = {
+						is_core_of = FRA is_on_continent = europe NOT = { state = 16 }
+					}
+					add_resistance = 20
+					damage_building = {
+						type = infrastructure
+						damage = 10
+					}
+				}
+			}
 			news_event = { id = ger_f_news.4 hours = 3 }
 			custom_effect_tooltip = can_increase_resistance_d
+			custom_effect_tooltip = Wehrmacht_Increase_anger
+			subtract_from_variable = { var = SS_anger value = 10 }
+			add_to_variable = { var = wehrmacht_anger value = 5 }
 			set_global_flag = GER_destroyed_eiffel
 			clr_global_flag = GER_allow_france_comp
 			clr_global_flag = GER_allow_france_comp_bad
@@ -2145,6 +2150,9 @@ SS_loot = {
 				}
 			}
 			set_global_flag = GER_destroyed_warsaw
+			custom_effect_tooltip = Wehrmacht_Increase_anger
+			subtract_from_variable = { var = SS_anger value = 10 }
+			add_to_variable = { var = wehrmacht_anger value = 5 }
 			news_event = { id = ger_f_news.5 hours = 3 }
 		}
 
@@ -2162,12 +2170,15 @@ SS_demands = {
 		icon = generic_army_support
 
 		available = {
-			has_idea = heinrich_himmler
-			has_war = yes
 		}
+
 		visible = {
-			has_idea = heinrich_himmler
-			has_war = yes
+			OR = {
+				GER_heinrich_himmler = {
+					NOT = { has_character_flag = killed_by_bomb }
+				}
+				NOT = { has_country_flag = GER_HIMMLER_RETIRED }
+			}
 		}
 		cost = 25
 		fire_only_once = yes
@@ -2189,6 +2200,46 @@ SS_demands = {
 }
 
 wehrmacht_demands = {
+	Wehrmacht_retaire_ss_generals = {
+
+		icon = generic_army_support
+
+		available = {
+			NOT = {
+				OR = {
+					has_country_leader = {
+						character = GER_karl_donitz
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = GER_heinrich_himmler
+						ruling_only = yes
+					}
+				}	
+			}
+		}
+
+		visible = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = SS_Increase_anger
+			add_to_variable = { var = SS_anger value = 40 }
+			subtract_from_variable = { var = wehrmacht_anger value = 40 }
+			every_army_leader = {
+				limit = {
+					has_trait = trait_GER_SS
+				}
+				retire = yes
+			}
+		}
+	}
 }
 
 political_actions = {

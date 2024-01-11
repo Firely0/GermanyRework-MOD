@@ -470,3 +470,42 @@ ENG_leave_norway_alone = {
 		value = 10
 	}
 }
+
+GER_holy_ita_go_away = {
+	allowed = {
+		original_tag = ITA
+		original_tag = FRA
+		original_tag = SWI
+	}
+
+	enable = {
+		has_autonomy_state = autonomy_loyal_state
+	}
+
+	abort = {
+		always = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "SPM"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "OCC"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SPM"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "OCC"
+		value = 100
+	}
+}

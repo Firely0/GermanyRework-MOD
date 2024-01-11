@@ -301,6 +301,11 @@ news_event = {
 		trigger = {
 			original_tag = GER
 		}
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
 	}
 
 	option = {
@@ -377,6 +382,204 @@ news_event = {
 			NOT = {
 				original_tag = GER
 			}
+		}
+	}
+}
+
+news_event = {
+	id = ger_f_news.10
+	title = wtt_news.40.t
+	desc = ger_f_news.10.d
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.40.d
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.40.b
+		trigger = {
+			has_country_flag = blew_up_suez
+			owns_state = 446
+			#owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+		}
+	}
+	option = {
+		name = wtt_news.40.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 446
+					#owns_state = 453
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+}
+
+news_event = {
+	id = ger_f_news.11
+	title = wtt_news.41.t
+	desc = ger_f_news.11.d
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.41.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_panama }
+			owns_state = 685
+		}
+	}
+	option = {
+		name = wtt_news.41.e
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.41.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+		}
+	}
+	option = {
+		name = wtt_news.41.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+			}
+			has_country_flag = blew_up_panama
+		}
+		clr_country_flag = blew_up_panama
+	}
+	option = {
+		name = wtt_news.41.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_panama
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				NOT = { has_country_flag = blew_up_panama }
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 685
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = { has_country_flag = blew_up_panama }
 		}
 	}
 }

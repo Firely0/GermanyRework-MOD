@@ -2756,8 +2756,6 @@ country_event = {
 			}
 			HUN = { transfer_state = 73 }
 		}
-
-
 		if = {
 			limit = {
 				OR = {
@@ -2773,7 +2771,6 @@ country_event = {
 			}
 			SLO = { transfer_state = 73 }
 		}
-
 		if = {
 			limit = {
 				664 = {
@@ -3686,7 +3683,6 @@ country_event = {
 			remove_power_balance = {
 				id = GER_power_balance
 			}
-			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = yes
@@ -3725,7 +3721,6 @@ country_event = {
 			remove_power_balance = {
 				id = GER_power_balance
 			}
-			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = yes
@@ -3760,7 +3755,6 @@ country_event = {
 			remove_power_balance = {
 				id = GER_power_balance
 			}
-			GER_fix_Volkssturm = yes
 			set_global_flag = Adolf_killed
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
@@ -6005,50 +5999,48 @@ country_event = {
 		}
 	}
 
-#	# Morgenthau - to be continued
-#	option = {
-#		name = germany.118.c
-#		ai_chance = {
-#			factor = 0
-#		}
-#		trigger = {
-#			OR = {
-#				tag = USA
-#				is_in_faction_with = USA
-#			}
-#		}
-#		hidden_effect = {
-#			event_target:yalta_partner = {
-#				country_event = { days = 1 id = germany.1190 }
-#			}
-#		}
-#		custom_effect_tooltip = morgenthau_division_tt
-#		event_target:yalta_partner = {
-#			custom_effect_tooltip = needs_approval
-#		}
-#	}
-#
-#	# Churchill - leaving this out for now
-#	option = {
-#		name = germany.118.e
-#		ai_chance = {
-#			factor = 0
-#		}
-#		trigger = {
-#			tag = ENG 
-#			has_country_leader = {
-#				character = ENG_winston_churchill
-#				ruling_only = yes
-#			}
-#			is_ai = no 
-#		}
-#		hidden_effect = {
-#			event_target:yalta_partner = {
-#				country_event = { days = 1 id = germany.1191 }
-#			}
-#		}
-#		custom_effect_tooltip = churchill_plan_germany_tt
-#	}
+	option = {
+		name = germany.118.c
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
+		}
+		hidden_effect = {
+			event_target:yalta_partner = {
+				country_event = { days = 1 id = germany.1190 }
+			}
+		}
+		custom_effect_tooltip = morgenthau_division_tt
+		event_target:yalta_partner = {
+			custom_effect_tooltip = needs_approval
+		}
+	}
+
+	option = {
+		name = germany.118.e
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ENG 
+			has_country_leader = {
+				character = ENG_winston_churchill
+				ruling_only = yes
+			}
+			is_ai = no 
+		}
+		hidden_effect = {
+			event_target:yalta_partner = {
+				country_event = { days = 1 id = germany.1191 }
+			}
+		}
+		custom_effect_tooltip = churchill_plan_germany_tt
+	}
 
 	option = {
 		name = germany.118.b
@@ -6059,7 +6051,6 @@ country_event = {
 	
 	
 }
-
 
 #Yalta Conference Follow-up
 country_event = {
@@ -6290,7 +6281,6 @@ country_event = {
 		}
 	}
 }
-
 
 country_event = {
 	id = germany.120
@@ -7411,7 +7401,6 @@ country_event = { #Handed Over.. NOT
 		}
 	}
 }
-
 
 #country_event = {
 #	id = germany.1050

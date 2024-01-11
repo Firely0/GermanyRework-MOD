@@ -1061,6 +1061,7 @@ country_event = {
 		has_government = neutrality
 		date > 1939.1.1
 		has_country_leader = { ruling_only = yes character = GER_wilhelm_ii }
+		GER = { NOT = { has_country_flag = GER_KAISER_TAKE_OVER } }
 	}
 
 	mean_time_to_happen = {
@@ -2029,7 +2030,9 @@ country_event = {
 				limit = {
 					has_character = CHI_alexander_von_falkenhausen
 				}
-				retire_character = CHI_alexander_von_falkenhausen
+				CHI_alexander_von_falkenhausen = {
+					set_nationality = GER
+				}
 			}
 		}
 		set_global_flag = falkenhausen_recalled

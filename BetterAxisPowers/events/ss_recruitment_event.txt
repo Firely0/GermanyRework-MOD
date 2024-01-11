@@ -1607,6 +1607,7 @@ country_event = {
 			}
 			remove_ideas = heinrich_himmler
 		}
+		set_country_flag = GER_HIMMLER_RETIRED	
 		subtract_from_variable = { var = wehrmacht_anger value = 15 }	
 	}
 	option = { #placate
@@ -1696,6 +1697,7 @@ country_event = {
 			}
 			remove_ideas = heinrich_himmler
 		}
+		set_country_flag = GER_HIMMLER_RETIRED	
 		add_stability = -0.2
 		set_country_flag = GER_ss_himmler_purged
 		add_popularity = {
@@ -1771,6 +1773,7 @@ country_event = {
 			}
 			remove_ideas = heinrich_himmler
 		}
+		set_country_flag = GER_HIMMLER_RETIRED	
 		GER_hermann_goring = {
 			add_country_leader_role = {
 				promote_leader = yes
@@ -1779,7 +1782,7 @@ country_event = {
 					expire = "1965.1.1.1"
 					traits = {}
 				}
-			}		
+			}	
 		}
 		hidden_effect = {
 			uncomplete_national_focus = {
@@ -1813,6 +1816,7 @@ country_event = {
 			}
 			remove_ideas = heinrich_himmler
 		}
+		set_country_flag = GER_HIMMLER_RETIRED
 		create_country_leader = {
 			name = "Günther von Kluge"
 			desc = "POLITICS_HEINRICH_HIMMLER_DESC"

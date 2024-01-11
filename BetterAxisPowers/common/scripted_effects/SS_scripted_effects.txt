@@ -102,7 +102,6 @@ SS_set_templates = {
 		SS_armored_division_late = yes
 	}
 }
-
 SS_motorised_division = {
 	set_country_flag = SS_motorised_division
 	division_template = {
@@ -157,7 +156,6 @@ SS_mechanised_division_early = {
 		}
 	}
 }
-
 SS_mechanised_division_late = {
 	set_country_flag = SS_mechanised_division_late
 	division_template = {
@@ -185,7 +183,6 @@ SS_mechanised_division_late = {
 		}
 	}
 }
-
 SS_armored_division_early = {
 	set_country_flag = SS_armored_division_early
 	division_template = {
@@ -214,7 +211,6 @@ SS_armored_division_early = {
 		}
 	}
 }
-
 SS_armored_division_improved = {
 	set_country_flag = SS_armored_division_improved
 	division_template = {
@@ -298,6 +294,7 @@ SS_infantry_division = {
 		}
 	}
 }
+
 SS_resolve_effects_wehrmacht = {
 	if = {
 		limit = {
@@ -416,7 +413,6 @@ SS_resolve_effects_wehrmacht = {
 		}
 	}
 }
-
 SS_resolve_effects_ss = {
 	if = {
 		limit = {

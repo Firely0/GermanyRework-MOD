@@ -129,6 +129,9 @@
  #Policy Changes
  GER_end_policy_kinder_kuche_kirche:0 "End Policy: Kinder, Küche, Kirche"
 
+ #Wehrmacht Demands
+ Wehrmacht_retaire_ss_generals:0 "Retire SS Generals"
+
  #Reichskommissariat
  GER_reichskommissariat_turkestan:0 "Establish Reichskommissariat Turkestan"
  GER_reichskommissariat_moscow:0 "Establish Reichskommissariat Moskowien"
@@ -146,13 +149,13 @@
  New_Laws_fuhrer_Eco:0 "New Economy Laws"
  New_Laws_fuhrer_civilian:0 "Supress Civilian Rights"
  New_Laws_fuhrer_health:0 "Reforms in Health Service"
- New_Laws_fuhrer_arms:0 "New Army Laws"
+ New_Laws_fuhrer_arms:0 "Reinforce Army Laws"
 
  New_Laws_wilhelm_category:0 "New Laws Wilhelm"
  New_Laws_wilhelm_Eco:0 "Reforms in Economy Laws"
  New_Laws_wilhelm_civilian:0 "Grant Civilian Rights"
  New_Laws_wilhelm_health:0 "Reforms in Health Services"
- New_Laws_wilhelm_arms:0 "Reinforce Army Laws"
+ New_Laws_wilhelm_arms:0 "New Army Laws"
 
  #OPERATION FIRESTORM UPDATE - Operation Barbarossa
 
@@ -262,6 +265,8 @@
  GER_buy_ship_SMS_Karlsruhe_desc:0 ""
 
  Operation_Rheinubung:0 "Operation Rheinübung"
+ Operation_Alexandria:0 "Operation Alexandria"
+ Operation_Colon:0 "Operation Colon"
 
  GER_plan_z_build:0 "Plan Z Buildup: [FROM.GetName]"
  GER_plan_z_build_desc:0 ""
@@ -287,6 +292,7 @@
  health_of_adolf_category_desc:0 "Adolf Hitler's increasing illness and pain began to cause him to regularly go through medical examinations."
  Adolf_Hitler_Yearly_Check_ups:0 "Go for Health Checkup"
  GER_hitler_purge_leaders:0 "Purge of Army"
+ GER_eliminate_traitor:0 "Eliminate Traitors"
 
  GER_sick_leader:0 "Sick Leader"
 
@@ -311,11 +317,35 @@
  GER_conquer_munich:0 "Conquer Munich"
  GER_the_last_stand:0 "The Last Stand"
 
+ # Rise of Empire
+ Holy_Roman_Empire_mng_category:0 "Imperial Management"
+ imperial_mng:0 "Imperial Government: [FROM.getname]"
+ Empire_plan_army:0 "Army Expansion"
+ Empire_plan_civil_inds:0 "Civil Industry expansion"
+ Empire_plan_army_inds:0 "Military Industry Expansion"
+ GER_wilhelm_ii_emperor:0 "Emperor Wilhelm II"
+ ITA_autonomy_loyal_state:0 "Papal State"
+ SWI_autonomy_loyal_state:0 "Swiss Confederacy"
+ HOL_autonomy_loyal_state:0 "Dutch Republic" 
+ FRA_autonomy_loyal_state:0 "Kingdom of France"
+ SPM_autonomy_loyal_state:0 "Kingdom of Sardinia"
+ OCC_autonomy_loyal_state:0 "Duchy of Savoy"
+
+ #Recall Advisors
+ GER_recall_generals_advisors:0 "Recall Generals or Advisors"
+
+
  #Army Ideas
  german_rapid_mobilization_spirit:0 "Rapid Mobilization"
  german_rapid_mobilization_spirit_desc:0 ""
  
  #Ideas
+ GER_empire_focus_on_army:0 "Imperial Army Expansion"
+ GER_empire_focus_on_army_desc:0 ""
+ GER_empire_focus_on_civil:0 "Imperial Civilian Industry Expansion"
+ GER_empire_focus_on_civil_desc:0 ""
+ GER_empire_focus_on_mil:0 "Imperial Military Industrial Expansion"
+ GER_empire_focus_on_mil_desc:0 ""
  a_hope_in_independence:0 "A Hope in Independence"
  a_hope_in_independence_desc:0 ""
  a_farm_village:0 "Farm Village"
@@ -623,6 +653,12 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ recall_generals_with_war_with_us:0 "Call back our advisors and generals in countries that are likely to go to war with us"
+ killed_by_bomb:0 "Victim of Assassination"
+ GER_CALLED_AS_Greater:0 "§HDeutsches Reich§! will be known as §HGroßgermanisches Reich§!"
+ GER_CALLED_AS_HOLY:0 "§HThe German Empire§! will be known as §HHoly Roman Empire§!"
+ focus_chance_to_defeat_tree:0 "Replaces the Focus Tree with the Surrender Tree."
+ GER_defeat_tt:0 "Yalta Conference Signed"
  GER_ENG_CIVIL_WAR_START:0 "A Pro-German Government Takes Over Britain"
  GER_progress_chanced_by_luck:0 "\nThe ship will be taken out of the sea and put into repair and development operations. The repair time for the ship to be put back into service will vary depending on the condition of the ship."
  Ernest_Cox_Fired:0 "Ernest Cox Hired"
@@ -711,6 +747,12 @@
  GER_end_of_training_program:0 "End of Training Program."
  GER_ALLOW_KAISER_CIVILWAR:0 "Wilhelm Speaks Against German Government"
 
+ # SS vs Wehrmacht Anger
+ SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
+ Wehrmacht_Status_of_loyalty:0 "\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
+ Wehrmacht_Increase_anger:0 "The Wehrmacht is likely to react to this situation"
+ SS_Increase_anger:0 "SS is likely to react to this situation"
+
 #Wehrmacht Tank Side TT
 
  GER_wehrmacht_1_tt:0 "$armor_research$: §R-10%§!"
@@ -784,6 +826,7 @@
  dictator_pp_n:0 "Dictator"
  dictator_pp_new_rj:0 "Dictator"
  new_rj:0 "New Rejime"
+ new_rj_alt:0 "New Rejime"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
  armaments_organizer2:0 "Armaments Organizer"
@@ -891,10 +934,12 @@
  gerb.79.a:0 "If we work with the Germans, we may find the opportunity to reclaim other land."
  gerb.79.b:0 "We can count on British support, and they can count on us."
  gerb.79.c:0 "If these despots want to take our home, they have to fight for it."
+ ger_f_news.10.d:0 "In what can only be described as a daring and brilliant military operation, [From.GetNameDef] has succeeded in severing the vital commerce artery that is the Suez Canal. Through a combination of Custom Type Torpedos and demolitions, the destruction is quite complete, and will likely take months of extensive industrial effort to repair."
+ ger_f_news.11.d:0 "In what can only be described as a daring and brilliant military operation, [From.GetNameDef] has succeeded in severing the vital commerce artery that is the Panama Canal. Through a combination of Custom Type Torpedos and demolitions, the destruction is quite complete, and will likely take months of extensive industrial effort to repair."
 
  #Kaiser Rewrite
 
- ger_kaiser_in_exile.1.t:0 "Wilhelm II Speaks Against Government"
+ ger_kaiser_in_exile.1.t:0 "Wilhelm II in Exile"
  ger_kaiser_in_exile.1.d:0 "Wilhelm II, who has been in the Netherlands for a long time, creates problems in our country with his supporters as well as his criticism of the government, and it is time to do something about this problem. But even if he did not support us in 1931, we think that the time will come when he will be called to duty for his country. What should we do?"
 
  ger_kaiser_in_exile.1.a:0 "Just Prevent It From Causing Trouble"
@@ -915,7 +960,7 @@
  ger_f_news.12.d:0 "With the increase of resistance and potential rebellion in the region, SS soldiers were sent to the region and 90% of Warsaw's buildings were destroyed, causing great civilian casualties and losses in historical buildings."
  ger_f_news.6.d:0 "After a long period of agreements, peace was finally restored in Europe, and with the Peace Treaty signed by England and Germany, the short-lived World War II came to an end."
  ger_f_news.7.d:0 "The German Radio announced last night that Adolf Hitler had died. an emergency government took over and announced the new leader of Germany."
- ger_f_news.8.d:0 "Wilhelm II Exiled in the Netherlands, Speaks Out Against the German Government. He said that the recent atempt of militarisation of the Rhineland was foolish and put the country at risk of an unnecessary war, and also talked about the racism in the country. Although the German government has not taken the issue seriously, Wilhelm's supporters say that it could be a sign for a civil war." 
+ ger_f_news.8.d:0 "Wilhelm II Exiled in the Netherlands, Speaks Out Against the German Government. He said that the recent atempt of militarisation of the Rhineland was foolish and put the country at risk of an unnecessary war, and also talked about the racism in the country. Although the German government has not take him seriously. Wilhelm's supporters say that it could be a sign for a civil war." 
  ger_f_news.9.d:0 "After the outbreak of the civil war in Germany, the provisional German government and the Netherlands came to an agreement. It was agreed that Wilhelm II would be lifted from exile and allowed to return to his country. Wilhelm II soon crossed the German border and took over the government."
 
  GER_around_desc:0 "After the victory in Poland, our armies were moved to the French border and other areas. Meanwhile, our commanders began to plan for a war with France."
@@ -942,7 +987,61 @@
  GER_mol_rib_pact_a:0 "Molotov-Ribbentrop Pact"
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
-
+ 
+ GER_valkyrie_leader:0 "Military Junta"
+ GER_valkyrie_leader_desc:0 ""
+ GER_expand_civilian_industry:0 "Expand Civilian Industry"
+ GER_expand_civilian_industry_desc:0 ""
+ GER_expand_arms_industry:0 "Expand Arms Industry"
+ GER_expand_arms_industry_desc:0 ""
+ GER_expand_armed_forces:0 "Expand Armed Forces"
+ GER_expand_armed_forces_desc:0 ""
+ GER_Confederation_states:0 "a new Confederation"
+ GER_Confederation_states_desc:0 ""
+ GER_secure_lands_in_italy:0 "Secure Lands in Italy"
+ GER_secure_lands_in_italy_desc:0 ""
+ GER_secure_papal_state:0 "Secure Papal State"
+ GER_secure_papal_state_desc:0 ""
+ GER_Secure_claims:0 "Secure Claims"
+ GER_Secure_claims_desc:0 ""
+ GER_targets_in_south:0 "Targets in South"
+ GER_targets_in_south_desc:0 ""
+ GER_targets_in_west:0 "Targets in West"
+ GER_targets_in_west_desc:0 ""
+ GER_shadow_of_empire:0 "Shadow of Empire"
+ GER_shadow_of_empire_desc:0 ""
+ GER_restore_holly_roman_empire:0 "Claim Holly Roman Empire"
+ GER_restore_holly_roman_empire_desc:0 ""
+ GER_new_germany_is_riseing_dec:0 "The Rise of New Germany"
+ GER_new_germany_is_riseing_dec_desc:0 ""
+ GER_new_germany_is_riseing_com:0 "The Rise of New Germany"
+ GER_new_germany_is_riseing_com_desc:0 ""
+ GER_the_end_of_war:0 "End of War"
+ GER_the_end_of_war_desc:0 ""
+ GER_reach_to_Comitern:0 "Deal with Comintern"
+ GER_reach_to_Comitern_desc:0 ""
+ GER_reach_to_Allied_powers:0 "Deal with Allied Powers"
+ GER_reach_to_Allied_powers_desc:0 ""
+ GER_prison_ss:0 "Arrest the SS"
+ GER_prison_ss_desc:0 ""
+ GER_surrender:0 "The Defeat"
+ GER_surrender_desc:0 ""
+ GER_take_support_from_ss_karl:0 "Side With SS"
+ GER_take_support_from_ss_karl_desc:0 ""
+ GER_take_support_from_wehrmacht:0 "Side with Wehrmacht"
+ GER_take_support_from_wehrmacht_desc:0 ""
+ GER_the_Balance_of_Power:0 "The Balance of Power"
+ GER_the_Balance_of_Power_desc:0 ""
+ GER_the_Defeat:0 "Surrender"
+ GER_the_Defeat_desc:0 ""
+ GER_long_time_operations:0 "Long Term Plans"
+ GER_long_time_operations_desc:0 ""
+ GER_stratejic_operations:0 "Strategic Naval Operations"
+ GER_stratejic_operations_desc:0 ""
+ GER_switch_to_ship_production:0 "Emergency Conversions"
+ GER_switch_to_ship_production_desc:0 ""
+ GER_the_long_range_operations:0 "Long Range Operations"
+ GER_the_long_range_operations_desc:0 ""
  GER_revange:0 "For our Revenge"
  GER_revange_desc:0 ""
  GER_anti_fascist_diplomacy:0 "Eliminate Fascism in Europe"
@@ -1053,11 +1152,11 @@
  GER_Force_Anti_Jewish_desc:0 ""
  GER_fascism_take_over:0 "Force for the New Government"
  GER_fascism_take_over_desc:0 ""
- GER_Purge_in_low_countries:0 "Force Small Countries"
+ GER_Purge_in_low_countries:0 "Intervene in Internal Politics"
  GER_Purge_in_low_countries_desc:0 ""
  GER_assassinate_mussolini_a:0 "Fate of Mussolini"
  GER_assassinate_mussolini_a_desc:0 ""
- GER_Purge_in_Italy:0 "Purge Opposing in Italy"
+ GER_Purge_in_Italy:0 "Interference in Italy's internal politics"
  GER_Purge_in_Italy_desc:0 ""
  GER_Start_Operation:0 "Operation New Order"
  GER_Start_Operation_desc:0 ""
@@ -1320,7 +1419,7 @@
  GER_assassinate_adolf_hitler_desc:0 ""
  GER_the_German_Republic:0 "Secure the New State"
  GER_the_German_Republic_desc:0 ""
- GER_for_Greater_Reich:0 "Pro-Claim Greater Reich"
+ GER_for_Greater_Reich:0 "Claim Greater German Reich"
  GER_for_Greater_Reich_desc:0 ""
  GER_all_roads_to_berlin:0 "All Roads to Berlin"
  GER_all_roads_to_berlin_desc:0 ""
@@ -1662,22 +1761,38 @@
  #Wehrmacht
 
  Wehrmacht_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_1_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_Tank_2_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_1_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_2_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_3_dynamic_modifier:0 "Wehrmacht"
- Wehrmacht_INF_4_dynamic_modifier:0 "Wehrmacht"
+ Wehrmacht_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Tank_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Tank_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Tank_1_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Tank_1_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Tank_2_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Tank_2_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_INF_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_INF_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_INF_1_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_INF_1_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_INF_2_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_INF_2_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_INF_3_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_INF_3_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_INF_4_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_INF_4_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
 
- Wehrmacht_Main_inf:0 "Wehrmacht"
- Wehrmacht_Main_inf_1:0 "Wehrmacht"
- WehrmachtWarPlanb_h:0 "Wehrmacht"
- WehrmachtWarPlana_h:0 "Wehrmacht"
- Wehrmacht_Main_Tank:0 "Wehrmacht"
- Wehrmacht_Main_Tank_1:0 "Wehrmacht"
- Wehrmacht_Main_Tank_2:0 "Wehrmacht"
+ Wehrmacht_Main_inf:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Main_inf_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Main_inf_1:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Main_inf_1_desc:0 "[ROOT.wehrmacht_ss_status]"
+ WehrmachtWarPlanb_h:0 "$Wehrmacht_dynamic_modifier$"
+ WehrmachtWarPlanb_h_desc:0 "[ROOT.wehrmacht_ss_status]"
+ WehrmachtWarPlana_h:0 "$Wehrmacht_dynamic_modifier$"
+ WehrmachtWarPlana_h_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Main_Tank:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Main_Tank_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Main_Tank_1:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Main_Tank_1_desc:0 "[ROOT.wehrmacht_ss_status]"
+ Wehrmacht_Main_Tank_2:0 "$Wehrmacht_dynamic_modifier$"
+ Wehrmacht_Main_Tank_2_desc:0 "[ROOT.wehrmacht_ss_status]"
 
  GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
  GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon Conscription: §G+3.0§! \n£army_experience Army Experience Gain §R-10.0%§! \n\n"
@@ -1708,7 +1823,9 @@
 # SS
 
  SS_forces_dynamic_modifier:0 "Schutzstaffel Forces"
+ SS_forces_dynamic_modifier_desc:0 "[ROOT.ss_wehrmacht_status]"
  SS_forces_1_dynamic_modifier:0 "Schutzstaffel Forces"
+ SS_forces_1_dynamic_modifier_desc:0 "[ROOT.ss_wehrmacht_status]"
  GER_SS_Soldiers_tt:0 "Modify §Y$SS_forces_dynamic_modifier$§! by"
 
  GER_SS_Search_modify_tt:0 "$GER_SS_Soldiers_tt$ \n£recon_texticon Recon Factor §Y+5.0%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n\n"
@@ -1719,7 +1836,7 @@
 
  GER_SS_Field_Medic_tech:0 "SS Field Hospital"
  GER_unlock_ss_soldier:0 "Unlocks Schutzstaffel Trops"
- GER_SS_Field_Medic_tt:2 "Field Hospital Trickleback: §G+20%§!\nExp. Loss Factor: §G-20%§!"
+ GER_SS_Field_Medic_tt:2 "£trickleback_texticon Field Hospital Trickleback: §G+20%§! \n£experience_loss_texticon Exp. Loss Factor: §G-20%§!"
 
  #Luftwaffe
 
@@ -1787,5 +1904,6 @@
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
  GER_prepare_next_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£consumer_goods_texticon Consumer Goods Factories§!: §G-3%§!"
- GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nDockyard output§!: £dockyard_output §Y+20.0%§! \nFactory Output§!: £factory_output §R-10.0%§!"
- GER_focus_on_land_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nFactory Output§!: £factory_output §G+5.0%§!"
+ GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nDockyard output§!: £dockyard_output_texticon §Y+20.0%§! \nFactory Output§!: £factory_output_texticon §R-10.0%§!"
+ GER_focus_on_land_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nFactory Output§!: £factory_output_texticon §G+5.0%§!"
+ GER_the_long_range_operations_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£navy_anchor_texticon Naval Range §G+25.0%§! \n£fuel_consumption_texticon Naval Fuel Consumption §G-10.0%§!"

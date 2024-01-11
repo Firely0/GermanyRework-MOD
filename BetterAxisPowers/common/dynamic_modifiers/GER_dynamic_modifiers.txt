@@ -1203,12 +1203,15 @@ Kriegsmarine_dynamic_modifier = {
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
 
+	#Karl Donitz
+	navy_fuel_consumption_factor = GER_navy_fuel_consumption_factor
+	navy_max_range_factor = GER_navy_max_range_factor	
+
 	#Last Focus
 
 	consumer_goods_factor = GER_consumer_goods_factor #-0.03
 
 	custom_modifier_tooltip = GER_Kriegsmarine_tt #equipment bonus
-
 }
 
 Kriegsmarine_Carrier_dynamic_modifier = {
@@ -1247,6 +1250,10 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 	navy_intel_factor = GER_navy_intel_factor #0.1
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
+
+	#Karl Donitz
+	navy_fuel_consumption_factor = GER_navy_fuel_consumption_factor
+	navy_max_range_factor = GER_navy_max_range_factor		
 
 	#Last Focus
 
@@ -1293,6 +1300,10 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
 
+	#Karl Donitz
+	navy_fuel_consumption_factor = GER_navy_fuel_consumption_factor
+	navy_max_range_factor = GER_navy_max_range_factor		
+
 	#Last Focus
 
 	consumer_goods_factor = GER_consumer_goods_factor #-0.03
@@ -1338,10 +1349,13 @@ Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier = {
 	decryption_power_factor = GER_decryption_power_factor #0.05
 	production_speed_dockyard_factor = GER_production_speed_dockyard_factor #0.1
 
+	#Karl Donitz
+	navy_fuel_consumption_factor = GER_navy_fuel_consumption_factor
+	navy_max_range_factor = GER_navy_max_range_factor		
+
 	#Last Focus
 
 	consumer_goods_factor = GER_consumer_goods_factor #-0.03
-
 	custom_modifier_tooltip = GER_Kriegsmarine_final_mix_tt #equipment bonus
 
 }

@@ -4,7 +4,9 @@
 
  Kaiser_in_exile_bob:0 "Kaiser in Exile"
  GER_power_balance:0 "Health of Adolf Hitler"
+ GER_Karl_Donitz_BOP:0 "Balance of Influence"
 
+ # Health of Adolf Hitler BOP --->
  default_left_side:0 "Bad Condition"
  default_right_side:0 "Good Condition"
  mid_range:0 "Regular Physical and Mental Health "
@@ -16,11 +18,48 @@
  middle_right_side_range:0 "Fine Health Condition"
  far_right_side_range:0 "Good Health Condition of Fuhrer"
  good_ending_right_side_range:0 "Good Health Condition of Fuhrer"
+
+ # Karl Donitz BOP --->
+ SS_left_side:0 "SS"
+ Wehrmatch_right_side:0 "Wehrmacht"
+ KLD_mid_range:0 "Equal Influence of Wehrmacht and SS"
+ SS_left_side_range:0 "SS Influencing Army"
+ SS_middle_left_side_range:0 "SS Dominating Army"
+ SS_far_left_side_range:0 "SS in Control of Army"
+ SS_coup_left_side_range:0 "Case White"
+ Wehrmatch_right_side_range:0 "Wehrmacht Influencing Army"
+ Wehrmatch_middle_right_side_range:0 "Wehrmacht Dominating Army"
+ Wehrmatch_far_right_side_range:0 "Wehrmacht in Control of Army"
+ Wehrmatch_coup_right_side_range:0 "Case Black"
+
+ # General Meeting - Operation Valkyrie 
+ GER_very_low_increase_effect_3:0 "General Military Meeting"
+
+ GER_TALK_WITH_WEHRMACHT:0 "Discussed the War with the Wehrmacht"
+ GER_TALK_WITH_LUFTWAFFE:0 "Discussed the War with the Luftwaffe"
+ GER_TALK_WITH_KRIEGSMARINE:0 "Discussed the War with the Kriegsmarine"
+ GER_TALK_WITH_SS:0 "Discussed the War with the SS"
  
  #Army
  GER_very_low_increase_effect:0 "Get Wehrmacht Advice"
  GER_very_low_increase_effect_1:0 "Get Luftwaffe Advice"
  GER_very_low_increase_effect_2:0 "Get Kriegsmarine Advice"
+ GER_Wehrmacht_very_low_increase_effect:0 "Get Wehrmacht Advice"
+ GER_Luftwaffe_very_low_increase_effect_1:0 "Get Luftwaffe Advice"
+ GER_Kriegsmarine_very_low_increase_effect_2:0 "Get Kriegsmarine Advice"
+ blackout_tactics:0 "Blackout Tactics"
+
+ #SS
+ GER_very_low_decrease_effect:0 "Get SS Advice"
+ GER_SS_advice_very_low_decrease_effect:0 "Get SS Advice"
+ GER_Seize_low_decrease_effect:0 "Seize Civilian Property"
+ case_black:0 "Case Black"
+ no_time_for_warrules:0 "No Time for Warrules"
+ 
+ # Army Loyalty
+ GER_very_low_decrease_effect_1:0 "Test Wehrmacht Loyalty"
+ GER_very_low_decrease_effect_2:0 "Test SS Loyalty"
+ GER_gain_loyalty:0 "Earns a Certain Amount of Loyalty. \nUse if you have Negative Loyalty \n\n"
 
  #Navy 
  GER_Visit_Graf_Zeppelin:0 "Visit Graf Zeppelin"
@@ -44,14 +83,6 @@
  GER_low_increase_effect_7:0 "Visit Madrid"
  GER_low_increase_effect_8:0 "Visit Rome"
  GER_low_increase_effect_9:0 "Visit Franco" #So you join Axis right UwU
-
- #SS
- GER_very_low_decrease_effect:0 "Get SS Advice"
-
- # Army Loyalty
- GER_very_low_decrease_effect_1:0 "Test Wehrmacht Loyalty"
- GER_very_low_decrease_effect_2:0 "Test SS Loyalty"
- GER_gain_loyalty:0 "Earns a Certain Amount of Loyalty. \nUse if you have Negative Loyalty \n\n"
 
  #Balance of Power Lost Core
 

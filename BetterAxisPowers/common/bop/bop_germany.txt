@@ -40,7 +40,7 @@ GER_power_balance = {
 				}
 				if = { # Replace So Bad State with Bad!
 					limit = {
-						NOT = { has_idea = Kaiser_Idea }
+						NOT = { has_country_flag = GER_KAISER_TAKE_OVER }
 					}
 					set_power_balance_gfx = {
 						id = GER_power_balance
@@ -79,7 +79,7 @@ GER_power_balance = {
 				}
 				if = { # Replace Bad State with So Bad!
 					limit = {
-						NOT = { has_idea = Kaiser_Idea }
+						NOT = { has_country_flag = GER_KAISER_TAKE_OVER }
 					}
 					set_power_balance_gfx = {
 						id = GER_power_balance
@@ -136,7 +136,7 @@ GER_power_balance = {
 			on_activate = {
 				if = {
 					limit = {
-						has_idea = Kaiser_Idea
+						has_country_flag = GER_KAISER_TAKE_OVER
 					}
 					custom_effect_tooltip = GER_Fuhrer_Deposed_tt
 					hidden_effect = {
@@ -146,7 +146,7 @@ GER_power_balance = {
 				}
 				if = {
 					limit = {
-						NOT = { has_idea = Kaiser_Idea }
+						NOT = { has_country_flag = GER_KAISER_TAKE_OVER }
 					}
 					country_event = { id = GER_new_leader.2 hours = 6 }
 				}
@@ -229,5 +229,134 @@ GER_power_balance = {
 		}
 	}
 
+}
+
+GER_Karl_Donitz_BOP = {
+	initial_value = 0.05
+	left_side = SS_left_side
+	right_side = Wehrmatch_right_side
+	decision_category = GER_Karl_Donitz_BOP_category
+	range = {
+		id = KLD_mid_range
+		min = -0.1
+		max = 0.1
+		modifier = {
+		}
+	}
+	side = {
+		id = SS_left_side
+		icon = GFX_bop_GER_ss
+		range = {
+			id = SS_left_side_range
+			min = -0.5
+			max = -0.1
+			modifier = {
+				army_attack_factor = 0.05
+				initiative_factor = 0.03
+				army_defence_factor = -0.05
+				intelligence_agency_defense = 1
+			}
+		}
+		range = {
+			id = SS_middle_left_side_range
+			min = -0.8
+			max = -0.5
+			modifier = {
+				army_attack_factor = 0.1
+				initiative_factor = 0.05
+				army_defence_factor = -0.1
+				unit_upkeep_attrition_factor = 0.15
+				intelligence_agency_defense = 1
+			}
+		}
+		range = {
+			id = SS_far_left_side_range
+			min = -0.99
+			max = -0.8
+			modifier = {
+				army_attack_factor = 0.15
+				initiative_factor = 0.05
+				army_defence_factor = -0.15
+				unit_upkeep_attrition_factor = 0.25
+				intelligence_agency_defense = 1
+			}	
+		}
+		range = {
+			id = SS_coup_left_side_range
+			min = -1
+			max = -0.99
+			on_activate = {
+				set_global_flag = GER_KARL_DONITZ_WEHRMACHT_COUP
+				country_event = {
+					id = GER_new_leader.1
+				}
+				remove_power_balance = {
+					id = GER_Karl_Donitz_BOP
+				}
+			}
+		}
+	}
+
+	side = {
+		id = Wehrmatch_right_side
+		icon = GFX_bop_GER_balkenkreuz
+		range = {
+			id = Wehrmatch_right_side_range
+			min = 0.1
+			max = 0.5
+			modifier = {
+				experience_gain_army_factor = 0.03
+				experience_gain_navy_factor = 0.03
+				experience_gain_air_factor = 0.03
+				army_core_defence_factor = 0.05
+				dig_in_speed_factor = 0.1
+				recon_factor_while_entrenched = 0.1
+				
+			}
+		}
+		range = {
+			id = Wehrmatch_middle_right_side_range
+			min = 0.5
+			max = 0.8
+			modifier = {
+				experience_gain_army_factor = 0.03
+				experience_gain_navy_factor = 0.03
+				experience_gain_air_factor = 0.03
+				army_core_defence_factor = 0.1
+				dig_in_speed_factor = 0.1
+				recon_factor_while_entrenched = 0.1
+				cas_damage_reduction = 0.1
+			}
+		}
+		range = {
+			id = Wehrmatch_far_right_side_range
+			min = 0.8
+			max = 0.99
+			modifier = {					
+				experience_gain_army_factor = 0.03
+				experience_gain_navy_factor = 0.03
+				experience_gain_air_factor = 0.03
+				army_core_defence_factor = 0.15
+				dig_in_speed_factor = 0.1
+				recon_factor_while_entrenched = 0.1
+				cas_damage_reduction = 0.1
+			}
+		}
+		range = {
+			id = Wehrmatch_coup_right_side_range
+			min = 0.99
+			max = 1
+			on_activate = {
+				set_global_flag = GER_KARL_DONITZ_SS_COUP
+				country_event = {
+					id = GER_new_leader.1
+				}
+				remove_power_balance = {
+					id = GER_Karl_Donitz_BOP
+				}
+			}
+		}
+	}
+	
 }
 

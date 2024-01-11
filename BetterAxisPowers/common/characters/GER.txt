@@ -50,6 +50,15 @@ characters={
 		}
 	}
 
+	GER_valkyrie_leader ={
+		name= GER_valkyrie_leader
+		portraits={
+			civilian={
+				large=GFX_portrait_valkyrie_leader
+			}
+		}
+	}
+
 	GER_konrad_adenauer={
 		name=GER_konrad_adenauer
 		portraits={
@@ -647,6 +656,7 @@ characters={
 		}
 	}
 
+	# FROM Other Mods prob.
 
 
 	GER_gotthard_heinrici={
@@ -846,82 +856,6 @@ characters={
 			defense_skill = 1
 			maneuvering_skill = 2
 			coordination_skill = 3
-		}
-	}
-
-	GER_karl_donitz = {
-		name= GER_karl_donitz
-		
-		portraits={
-			army={
-				large=GFX_portrait_GER_karl_donitz
-				small=GFX_portrait_GER_karl_donitz_small
-			}
-			army={
-				small="GFX_idea_donitz"
-			}
-		}
-
-		advisor={
-			slot = navy_chief
-			idea_token = donitz
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_chief_commerce_raiding_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 0.100
-			}
-		}
-
-		navy_leader={
-			traits={ navy_career_officer seawolf }
-			skill=5
-			attack_skill=5
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=5
-			legacy_id=26
-		}
-	}
-
-	GER_erich_raeder={
-		name=GER_erich_raeder
-		portraits={
-			army={
-				large=GFX_portrait_GER_erich_raeder
-				small=GFX_portrait_GER_erich_raeder_small
-			}
-			army={
-				small="GFX_idea_raeder"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = raeder
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.100
-			}
-		}
-
-		navy_leader={
-			traits={ battleship_adherent naval_lineage }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=27
 		}
 	}
 
@@ -1196,6 +1130,9 @@ characters={
 			traits = {
 				army_chief_organizational_2
 			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 0.000
@@ -1221,7 +1158,9 @@ characters={
 					has_government = fascism
 					has_country_flag = GER_Fuhrer_in_Country
 				}
+				NOT = { has_character_flag = killed_by_bomb }
 			}
+
 			traits = {
 				army_chief_drill_2
 			}
@@ -1248,6 +1187,9 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
@@ -1270,6 +1212,7 @@ characters={
 			}
 			available = {
 				has_completed_focus = GER_army_innovation_a
+				NOT = { has_character_flag = killed_by_bomb }
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -1287,6 +1230,88 @@ characters={
 	# Dönitz up there
 
 	# Raeder up there
+
+	GER_karl_donitz = {
+		name= GER_karl_donitz
+		
+		portraits={
+			army={
+				large=GFX_portrait_GER_karl_donitz
+				small=GFX_portrait_GER_karl_donitz_small
+			}
+			army={
+				small="GFX_idea_donitz"
+			}
+		}
+
+		advisor={
+			slot = navy_chief
+			idea_token = donitz
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				navy_chief_commerce_raiding_3
+			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+
+		navy_leader={
+			traits={ navy_career_officer seawolf }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=5
+			legacy_id=26
+		}
+	}
+
+	GER_erich_raeder={
+		name=GER_erich_raeder
+		portraits={
+			army={
+				large=GFX_portrait_GER_erich_raeder
+				small=GFX_portrait_GER_erich_raeder_small
+			}
+			army={
+				small="GFX_idea_raeder"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = raeder
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+
+		navy_leader={
+			traits={ battleship_adherent naval_lineage }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=27
+		}
+	}
 
 
 	### AIR CHIEFS ###
@@ -1310,7 +1335,12 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				NOT = { has_country_flag = GER_GOERING_RETIRED }
+				NOT = { 
+					OR = {
+						has_character_flag = killed_by_bomb
+						has_country_flag = GER_GOERING_RETIRED 
+					}
+				}
 				or = {
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
@@ -1343,6 +1373,9 @@ characters={
 			available = {
 				has_completed_focus = GER_air_innovation_a
 			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
 			traits = {
 				air_chief_all_weather_2
 			}
@@ -1350,6 +1383,48 @@ characters={
 			ai_will_do = {
 				factor = 0.500
 			}
+		}
+	}
+
+	GER_albert_kesselring={
+		name=GER_albert_kesselring
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+			army={
+				small="GFX_idea_albert_kesselring"
+			}
+			army={
+				large=GFX_portrait_GER_albert_kesselring
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = albert_kesselring
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			available = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious war_hero }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=32
 		}
 	}
 
@@ -1870,12 +1945,20 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = heinrich_himmler
+			on_add = {
+				custom_effect_tooltip = Wehrmacht_Increase_anger
+				hidden_effect = {
+					subtract_from_variable = { var = SS_anger value = 10 }
+					add_to_variable = { var = wehrmacht_anger value = 5 }
+				}
+			}
 			allowed = {
 				original_tag = GER
 			}
 			available = {
 				NOT = {
 					has_country_flag = GER_HIMMLER_RETIRED
+					has_character_flag = killed_by_bomb
 					has_government = communism
 				}
 				OR = {
@@ -2492,45 +2575,6 @@ characters={
 			civilian={
 				large="GFX_portrait_ger_heinrich_brandler"
 			}
-		}
-	}	
-
-	GER_albert_kesselring={
-		name=GER_albert_kesselring
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_albert_kesselring
-			}
-			army={
-				small="GFX_idea_albert_kesselring"
-			}
-			army={
-				large=GFX_portrait_GER_albert_kesselring
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = albert_kesselring
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				air_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
-		corps_commander={
-			traits={ brilliant_strategist trait_cautious war_hero }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=32
 		}
 	}	
 

@@ -219,6 +219,17 @@ leader_traits = {
 		}
 	}
 
+	new_rj_alt = {
+		offensive_war_stability_factor = 0.1
+		defensive_war_stability_factor = 0.1
+		party_popularity_stability_factor = 0.1
+		political_power_gain = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	dictator_pp_v1 = {
 		random = no
 		political_power_gain = 0.15

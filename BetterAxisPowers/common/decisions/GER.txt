@@ -484,6 +484,123 @@ operations = {
 		remove_effect = {
 		}
 	}
+
+	Operation_Alexandria = {
+		priority = 98
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 0
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			any_enemy_country = {
+				controls_state = 446
+			}
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = GER_stratejic_operations
+			NOT = { has_global_flag = SUEZ_CANAL_BLOCKED }
+		}
+
+		days_remove = 60
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		modifier = {
+			naval_speed_factor = 0.15
+			navy_visibility = -0.1
+		}
+
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = ger_f_news.10 hours = 15 }
+					hidden_effect = {
+						set_country_flag = blew_up_suez
+						set_global_flag = SUEZ_CANAL_BLOCKED
+					}
+				}
+				50 = {
+				}
+			}
+		}
+	}
+
+	Operation_Colon = {
+		priority = 96
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		ai_will_do = {
+			base = 0
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			any_enemy_country = {
+				any_controlled_state = {
+					OR = {
+						region = 34
+						region = 124
+					}
+				}
+			}
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = GER_stratejic_operations
+			NOT = { has_global_flag = PANAMA_CANAL_BLOCKED }
+		}
+
+		days_remove = 60
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		modifier = {
+			naval_speed_factor = 0.15
+			navy_visibility = -0.1
+		}
+
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = ger_f_news.11 hours = 24 }
+					hidden_effect = {
+						set_country_flag = blew_up_panama
+						set_global_flag = PANAMA_CANAL_BLOCKED
+					}	
+				}
+				50 = {
+				}
+			}
+		}
+	}
 }
 
 political_actions = {
@@ -796,6 +913,185 @@ foreign_politics = {
 		}
 
 	}
+
+	GER_recall_generals_advisors = {
+
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = recall_generals_with_war_with_us
+				OR = {
+					AND = {
+						TUR = { 
+							has_completed_focus = TUR_invite_german_officers_to_izmir
+							OR = {
+								has_war_with = ROOT
+								has_wargoal_against = ROOT
+							}
+						}
+					}
+					AND = {
+						USA = {
+							has_country_flag = USA_fritz_kuhn
+							OR = {
+								has_war_with = ROOT
+								has_wargoal_against = ROOT
+							}
+						}
+					}
+					AND = {
+						SPA = {
+							has_completed_focus = SPA_the_condor_legion
+							OR = {
+								has_war_with = ROOT
+								has_wargoal_against = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					TUR = { 
+						has_completed_focus = TUR_invite_german_officers_to_izmir 
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
+						}
+					}
+				}
+				GER_hans_von_luck = {
+					set_nationality = GER
+				}
+				TUR = {
+					remove_advisor_role = {
+						character = GER_hans_von_luck
+						slot = theorist
+					}
+					remove_advisor_role = {
+						character = GER_hans_von_luck
+						slot = air_chief
+					}
+					remove_advisor_role = {
+						character = GER_hans_von_luck
+						slot = navy_chief
+					}
+					remove_advisor_role = {
+						character = GER_hans_von_luck
+						slot = army_chief
+					}
+					remove_advisor_role = {
+						character = GER_hans_von_luck
+						slot = high_command
+					}
+				}
+				if = {
+					limit = {
+						SPA = {
+							NOT = { has_completed_focus = SPA_the_condor_legion }
+						}
+					}
+					GER_wilhelm_ritter_von_thoma = {
+						set_nationality = GER
+					}
+					TUR = {
+						remove_advisor_role = {
+							character = GER_wilhelm_ritter_von_thoma
+							slot = theorist
+						}
+						remove_advisor_role = {
+							character = GER_wilhelm_ritter_von_thoma
+							slot = air_chief
+						}
+						remove_advisor_role = {
+							character = GER_wilhelm_ritter_von_thoma
+							slot = navy_chief
+						}
+						remove_advisor_role = {
+							character = GER_wilhelm_ritter_von_thoma
+							slot = army_chief
+						}
+						remove_advisor_role = {
+							character = GER_wilhelm_ritter_von_thoma
+							slot = high_command
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					USA = {
+						has_country_flag = USA_fritz_kuhn
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
+						}
+					}
+				}
+				USA_fritz_kuhn = {
+					set_nationality = GER
+				}
+				USA = {
+					remove_advisor_role = {
+						character = USA_fritz_kuhn
+						slot = theorist
+					}
+					remove_advisor_role = {
+						character = USA_fritz_kuhn
+						slot = air_chief
+					}
+					remove_advisor_role = {
+						character = USA_fritz_kuhn
+						slot = navy_chief
+					}
+					remove_advisor_role = {
+						character = USA_fritz_kuhn
+						slot = army_chief
+					}
+					remove_advisor_role = {
+						character = USA_fritz_kuhn
+						slot = high_command
+					}
+				}
+			}
+			if = {
+				limit = {
+					SPA = {
+						has_completed_focus = SPA_the_condor_legion
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
+						}
+					}
+				}
+				SPA_wilhelm_ritter_von_thoma = {
+					set_nationality = GER
+				}
+				remove_advisor_role = {
+					character = SPA_wilhelm_ritter_von_thoma
+					slot = high_command
+				}
+			}
+		}
+
+	}
 }
 
 GER_last_stand_of_germany = {
@@ -1092,17 +1388,18 @@ GER_Rhineland_demilitarized = {
 				}
 			}
 			hidden_effect = {
+				news_event = { id = ger_f_news.8 days = 15 }
 				add_days_mission_timeout = {
 					mission = GER_Rhineland_demilitarized_e
-					days = 30
+					days = 14
 				}
 				add_days_mission_timeout = {
 					mission = GER_Rhineland_demilitarized_a
-					days = 30
+					days = 14
 				}
 				add_days_mission_timeout = {
 					mission = GER_Rhineland_demilitarized_b
-					days = 30
+					days = 14
 				}
 			}
 		}
@@ -1137,6 +1434,9 @@ GER_Rhineland_demilitarized = {
 
 		complete_effect = {
 			complete_national_focus = GER_rhineland_demilitarized
+			hidden_effect = {
+				news_event = { id = ger_f_news.8 days = 7 }
+			}
 		}
 	}
 
@@ -1186,6 +1486,7 @@ health_of_adolf_category = {
 
 	GER_hitler_purge_leaders = {
 		icon = GFX_decision_generic_police_action
+
 		allowed = {
 			tag = GER
 		}
@@ -1260,6 +1561,8 @@ health_of_adolf_category = {
 				limit = {
 					NOT = { has_trait = purged_by_hitler }
 					NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
 				}
 				add_timed_unit_leader_trait = {
 					trait = purged_by_hitler
@@ -1275,6 +1578,8 @@ health_of_adolf_category = {
 				limit = {
 					NOT = { has_trait = purged_by_hitler }
 					NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
 				}
 				add_timed_unit_leader_trait = {
 					trait = purged_by_hitler
@@ -1287,6 +1592,71 @@ health_of_adolf_category = {
 				}
 			}
 		}
+		complete_effect = {
+		}
+	}
+
+	GER_eliminate_traitor = {
+		icon = GFX_decision_generic_police_action
+		
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 3
+		
+		timeout_effect = {
+			random_army_leader = {
+				limit = {
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				}
+				retire = yes
+			}
+			random_army_leader = {
+				limit = {
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				}
+				retire = yes
+			}
+			random_army_leader = {
+				limit = {
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				}
+				retire = yes
+			}
+			random_army_leader = {
+				limit = {
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				}
+				retire = yes
+			}
+			random_army_leader = {
+				limit = {
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+					NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				}
+				retire = yes
+			}
+			add_manpower = -15000
+		}
+
 		complete_effect = {
 		}
 	}
@@ -1575,6 +1945,206 @@ New_Laws_wilhelm_category = {
 				flag = recently_signed_law
 				value = 1
 				days = 90
+			}
+		}
+	}
+
+}
+
+Holy_Roman_Empire_mng_category = {
+
+	imperial_mng = {
+		icon = GFX_decision_eng_ally_imperialist_coup
+		cost = 0
+		targets = { HOL LUX FRA SWI SLO ITA SPM OCC }
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = HOL	
+					tag = FRA 
+					tag = SWI
+					tag = ITA 
+					tag = SPM
+					tag = OCC
+				} 
+			}
+		}
+		target_non_existing = yes
+
+		available = {
+			FROM = {
+				OR = {
+					is_puppet_of = GER
+					exists = no
+				}
+				NOT = { has_autonomy_state = autonomy_loyal_state }
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					FROM = { is_puppet_of = GER }
+				}
+				set_autonomy = {
+					target = FROM
+					autonomy_state = autonomy_loyal_state
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { exists = no }
+				}
+				release_on_controlled = FROM
+				GER = {
+					set_autonomy = {
+						target = FROM
+						autonomy_state = autonomy_loyal_state
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						every_state = {
+							limit = {
+								is_core_of = GER
+							}
+							transfer_state_to = GER
+						}
+					}
+				}
+			}
+		}
+	}
+
+	Empire_plan_civil_inds = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_global_flag = empire_working_on_project }
+		}
+
+		visible = {
+			has_completed_focus = GER_expand_civilian_industry
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_global_flag = empire_working_on_project
+			every_country = {
+				limit = {
+					is_puppet_of = GER
+					has_autonomy_state = autonomy_loyal_state
+				}
+				add_timed_idea = {
+					idea = GER_empire_focus_on_civil
+					days = 365
+				}
+			}
+		}
+	}
+
+	Empire_plan_army_inds = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_global_flag = empire_working_on_project }
+		}
+
+		visible = {
+			has_completed_focus = GER_expand_arms_industry
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_global_flag = empire_working_on_project
+			every_country = {
+				limit = {
+					is_puppet_of = GER
+					has_autonomy_state = autonomy_loyal_state
+				}
+				add_timed_idea = {
+					idea = GER_empire_focus_on_mil
+					days = 365
+				}
+			}
+		}
+	}
+
+	Empire_plan_army = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			NOT = { has_global_flag = empire_working_on_project }
+		}
+
+		visible = {
+			has_completed_focus = GER_expand_armed_forces
+		}
+
+		cost = 75
+
+		fire_only_once = no
+
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			set_global_flag = empire_working_on_project
+			every_country = {
+				limit = {
+					is_puppet_of = GER
+					has_autonomy_state = autonomy_loyal_state
+				}
+				add_timed_idea = {
+					idea = GER_empire_focus_on_army
+					days = 365
+				}
 			}
 		}
 	}

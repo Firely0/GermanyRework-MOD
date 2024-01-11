@@ -38,6 +38,93 @@ ideas = {
 
 	country = {
 
+		GER_empire_focus_on_civil = {
+			picture = SOV_third_five_year_plan_civilian
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor  = 0.1				
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = empire_working_on_project
+					}
+					clr_global_flag = empire_working_on_project
+				}
+			}
+		}
+
+		GER_empire_focus_on_mil = {
+			picture = SOV_third_five_year_plan_civilian
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05				
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = empire_working_on_project
+					}
+					clr_global_flag = empire_working_on_project
+				}
+			}
+		}
+
+		GER_empire_focus_on_army = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = 0.15
+				conscription = 0.015
+				experience_gain_army = 0.05
+				experience_gain_navy = 0.05
+				experience_gain_air = 0.05										
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = empire_working_on_project
+					}
+					clr_global_flag = empire_working_on_project
+				}
+			}
+		}
+
 		GER_underground_factories_idea = {
 			picture = man_five_year_plan_industry
 			removal_cost = -1
@@ -2482,6 +2569,10 @@ ideas = {
 				NOT = { has_government = neutrality }
 			}
 
+			cancel = {
+				has_idea = Fuhrer_idea
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -2500,6 +2591,10 @@ ideas = {
 
 			allowed_civil_war = {
 				NOT = { has_government = neutrality }
+			}
+
+			cancel = {
+				has_idea = Fuhrer_idea
 			}
 
 			removal_cost = -1
@@ -2610,6 +2705,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				tactic_breakthrough_preferred_weight_factor = 0.15
+				tactic_street_battle_breakthrough_preferred_weight_factor = 0.15
 				breakthrough_factor = 0.1
 				army_armor_speed_factor = 0.1
 				org_loss_at_low_org_factor = -0.2
@@ -6962,7 +7059,7 @@ ideas = {
 		}
 
 		fieseler_focus = {
-			icon = GFX_idea_fieseler
+			picture = GFX_idea_fieseler
 
 			allowed = {
 				original_tag = GER

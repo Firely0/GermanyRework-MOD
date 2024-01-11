@@ -6,6 +6,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_ss_texticon"
+		texturefile = "gfx/texticons/ss_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_wehrmacht_texticon"
+		texturefile = "gfx/texticons/wehrmacht_texticon.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_autonomy_texticon"
 		texturefile = "gfx/texticons/autonomy_texticon.dds"
 		legacy_lazy_load = no

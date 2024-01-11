@@ -165,3 +165,51 @@ defined_text = {
 		localization_key = "Trains and Trucks"
 	}
 }
+
+defined_text = {
+	name = Karl_Donitz_w_side
+	text = {
+		trigger = {
+			has_global_flag = GER_KARL_DONITZ_SS_COUP
+		}
+		localization_key = "SS leadership"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_KARL_DONITZ_WEHRMACHT_COUP
+		}
+		localization_key = "Wehrmacht"
+	}
+}
+
+defined_text = {
+	name = wehrmacht_ss_status
+	text = {
+		trigger = {
+			has_completed_focus = GER_SS
+		}
+		localization_key = Wehrmacht_Status_of_loyalty
+	}
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = ss_wehrmacht_status
+	text = {
+		trigger = {
+			has_completed_focus = GER_SS
+		}
+		localization_key = SS_Status_of_loyalty
+	}
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = GER_SS }
+		}
+		localization_key = ""
+	}
+}

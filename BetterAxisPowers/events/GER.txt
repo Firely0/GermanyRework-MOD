@@ -1444,6 +1444,145 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = ger_kaiser_in_exile.11
+	title = "Germany Offers Support For Coup"
+	desc = ""
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Fine"
+		ai_chance = {
+			factor = 100
+		}
+
+		GER = {
+			country_event = { id = ger_kaiser_in_exile.12 days = 1 random_days = 2 }
+		}
+	}
+
+	option = {
+		name = "No"
+		ai_chance = {
+			factor = 0
+		}
+
+		GER = {
+			country_event = { id = ger_kaiser_in_exile.13 days = 1 random_days = 2 }
+		}
+
+		hidden_effect = {
+			GER = {
+				set_country_flag = GER_italy_declined_assassination_of_mussolini_flag
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.12
+	title = wtt_germany.9.t
+	desc = "Elements in the Italian government and underground have accepted our proposal for a coup. They are making preparations for a swift siezure of power, as soon as the assassination has happened."
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_germany.9.a
+
+		hidden_effect = {
+			GER = {
+				set_autonomy = {
+					target = ITA
+					autonomy_state = autonomy_loyal_state
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			if = {
+				limit = {
+					ITA = { has_completed_focus = ITA_culto_del_duce }
+				}
+				ITA = {
+					uncomplete_national_focus = {
+						focus = ITA_culto_del_duce
+						uncomplete_children = yes
+						refund_political_power = no
+					}
+					complete_national_focus = ITA_convene_the_grand_council
+					unlock_national_focus = ITA_depose_mussolini
+					add_ideas = ITA_shadow_of_mussolini
+					complete_national_focus = ITA_monarchia_d_italia
+					set_politics = {
+						ruling_party = neutrality
+					}
+					complete_national_focus = ITA_power_to_the_king
+					complete_national_focus = ITA_seek_papal_support
+					country_event = { id = BBA_italy_interaction_events.38 hours = 1 }
+					complete_national_focus = ITA_agents_of_the_church
+					complete_national_focus = ITA_strengthen_the_papacy
+					complete_national_focus = ITA_the_papacy_reborn
+				}
+			}
+			if = {
+				limit = {
+					ITA = { has_completed_focus = ITA_convene_the_grand_council }
+					OR = {
+						has_completed_focus = ITA_italo_balbo_focus
+						has_completed_focus = ITA_dino_grandi_focus
+					}
+				}
+				ITA = {
+					unlock_national_focus = ITA_depose_mussolini
+					add_ideas = ITA_shadow_of_mussolini
+					if = {
+						limit = {
+							has_completed_focus = ITA_italo_balbo_focus
+						}
+						uncomplete_national_focus = {
+							focus = ITA_italo_balbo_focus
+							uncomplete_children = yes
+							refund_political_power = no
+						}
+					}
+					if = {
+						limit = {
+							has_completed_focus = ITA_dino_grandi_focus
+						}
+						uncomplete_national_focus = {
+							focus = ITA_dino_grandi_focus
+							uncomplete_children = yes
+							refund_political_power = no
+						}
+					}
+					complete_national_focus = ITA_monarchia_d_italia
+					set_politics = {
+						ruling_party = neutrality
+					}
+					complete_national_focus = ITA_power_to_the_king
+					complete_national_focus = ITA_seek_papal_support
+					country_event = { id = BBA_italy_interaction_events.38 hours = 1 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_kaiser_in_exile.13
+	title = wtt_germany.10.t
+	desc = wtt_germany.10.d
+	picture = GFX_report_event_french_resistance_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_germany.10.a
+	}
+}
+
 #Bad Ending for Fuhrer.
 country_event = {
 	id = ger_fuhrer_end.1
@@ -1458,7 +1597,7 @@ country_event = {
 		name = "Long Live Kaiser!"
 		custom_effect_tooltip = GER_Fuhrer_Deposed_tt
 		hidden_effect = {
-			remove_ideas = Kaiser_idea
+			remove_ideas = Kaiser_Idea
 			remove_ideas = Kaiser_Idea_king
 			add_ideas = Fuhrer_idea
 			set_country_flag = GER_Fuhrer_in_Country
@@ -1491,6 +1630,7 @@ country_event = {
 			set_country_leader_portrait = {
 				portrait = GFX_portrait_ger_wilhelm_II_r
 			}
+			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_neutrality
 			set_country_flag = kaiser_wilhelm_ii
 		}
@@ -5435,14 +5575,30 @@ country_event = {
 country_event = {
 	id = GER_new_leader.1
 	title = "The New Leader?"
-	desc = "Germany, which has been successfully guided by Karl Donitz's balancing policy, will finally have to choose its new leader. "
+	desc = "The [Karl_Donitz_w_side], uncomfortable with the policy of balance pursued by Karl Donitz, demanded a change of leadership or face the consequences of this style of leadership."
 	picture = GFX_report_event_generic_sign_treaty1
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = GER_SS
+				}
+				set_variable = { var = wehrmacht_anger value = 0 }
+				set_variable = { var = SS_anger value = 0 }				
+			}
+		}
+	}
 
 	is_triggered_only = yes
 
 	option = { # Himmler
 		name = germany.71.a
 		ai_chance = { factor = 100 }
+		trigger = {
+			has_global_flag = GER_KARL_DONITZ_SS_COUP
+		}
+
 		GER_heinrich_himmler = {
 			add_country_leader_role = {
 				promote_leader = yes
@@ -5459,6 +5615,7 @@ country_event = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
+			clr_country_flag = GER_SIDE_LEADERS
 			complete_national_focus = GER_Power_Heinrich_Himmler
 			mark_focus_tree_layout_dirty = yes
 			add_country_leader_trait = dictator_pp
@@ -5469,6 +5626,10 @@ country_event = {
 
 	option = { # Göring
 		name = germany.71.b
+		trigger = {
+			has_global_flag = GER_KARL_DONITZ_WEHRMACHT_COUP
+		}
+
 		GER_hermann_goring = {
 			add_country_leader_role = {
 				promote_leader = yes
@@ -5485,13 +5646,14 @@ country_event = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
+			clr_country_flag = GER_SIDE_LEADERS
 			complete_national_focus = GER_Power_hermann_goring
 			mark_focus_tree_layout_dirty = yes
 			add_country_leader_trait = dictator_pp
 			add_country_leader_trait = political_reformer_1
 			add_political_power = 100
 		}
-	}
+	}	
 }
 
 country_event = {
@@ -5514,7 +5676,13 @@ country_event = {
 				}
 				retire_character = GER_SUPREM_adolf_hitler
 			}
-			GER_fix_Volkssturm = yes
+			if = {
+				limit = {
+					has_idea = GER_SS
+				}
+				set_variable = { var = wehrmacht_anger value = 0 }
+				set_variable = { var = SS_anger value = 0 }				
+			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = no
@@ -5548,7 +5716,7 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = { # Karl Donitz
 		name = "Karl Dönitz is A Neutral Choice"
 		ai_chance = { factor = 100 }
 		retire_country_leader = yes
@@ -5564,10 +5732,18 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			set_country_flag = GER_SIDE_LEADERS
+			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = GER_Power_Karl_Donitz
 			add_popularity = {
 				ideology = fascism
 				popularity = -0.3
+			}
+			set_power_balance = {
+				id = GER_Karl_Donitz_BOP
+				left_side = SS_left_side
+				right_side = Wehrmatch_right_side
+				set_value = 0.05
 			}
 		}
 	}
@@ -5575,6 +5751,140 @@ country_event = {
 	option = { # Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany
+		retire_country_leader = yes
+		add_stability = 0.1
+		GER_hermann_goring = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			complete_national_focus = GER_Power_hermann_goring
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_new_leader.3
+	title = "Death of Adolf Hitler"
+	desc = "After the loss of our leader in the failed coup attempt by the traitors at the last General Meeting, it is time to select a new leader."
+	picture = GFX_event_hitler_bomb
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = Adolf_killed
+			remove_power_balance = {
+				id = GER_power_balance
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_the_Supreme_Commander
+				}
+				retire_character = GER_SUPREM_adolf_hitler
+			}
+			if = {
+				limit = {
+					has_idea = GER_SS
+				}
+				set_variable = { var = wehrmacht_anger value = 0 }
+				set_variable = { var = SS_anger value = 0 }				
+			}
+			uncomplete_national_focus = {
+				focus = GER_Fuhrer
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			complete_national_focus = GER_hitler_is_gone
+		}
+	}
+
+	option = { # Himmler
+		name = germany.71.a
+		# Himmler becomes the new Fascist leader of Germany
+		ai_chance = { factor = 1 }
+		trigger = {
+			GER_heinrich_himmler = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+		}
+		retire_country_leader = yes
+		add_stability = 0.05
+		GER_heinrich_himmler = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			complete_national_focus = GER_Power_Heinrich_Himmler
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+		}
+	}
+
+	option = { # Karl Donitz
+		name = "Karl Dönitz is A Neutral Choice"
+		ai_chance = { factor = 1 }
+		trigger = {
+			GER_karl_donitz = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+		}
+		retire_country_leader = yes
+		add_stability = 0.05
+		GER_karl_donitz = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = {}
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = GER_SIDE_LEADERS
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = GER_Power_Karl_Donitz
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			set_power_balance = {
+				id = GER_Karl_Donitz_BOP
+				left_side = SS_left_side
+				right_side = Wehrmatch_right_side
+				set_value = 0.05
+			}
+		}
+	}
+
+	option = { # Göring
+		name = germany.71.b
+		# Göring becomes the new Fascist leader of Germany
+		ai_chance = { factor = 1 }
+		trigger = {
+			GER_hermann_goring = {
+				NOT = { has_character_flag = killed_by_bomb }
+			}
+		}
 		retire_country_leader = yes
 		add_stability = 0.1
 		GER_hermann_goring = {
@@ -5777,7 +6087,6 @@ country_event = {
 				}
 				retire_character = GER_SUPREM_adolf_hitler
 			}
-			GER_fix_Volkssturm = yes
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
 				uncomplete_children = no

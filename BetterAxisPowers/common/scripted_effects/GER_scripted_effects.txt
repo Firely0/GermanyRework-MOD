@@ -1367,10 +1367,12 @@ GER_SOV_white_peace_check = {
 		limit = {
 			POL = {
 				has_capitulated = yes
-				has_war_with = SOV #Cap but Keep Fighting with SOV.
+				has_war_with = SOV				#Cap but Keep Fighting with SOV.
 			}
 		}
-		SOV = { white_peace = POL }
+		SOV = {
+			white_peace = POL
+		}
 	}
 	every_state = {
 		limit = {
@@ -1378,7 +1380,7 @@ GER_SOV_white_peace_check = {
 				has_state_flag = mr_pact_ger_reserved_state_special
 				has_state_flag = mr_pact_ger_reserved_state
 			}
-			is_controlled_by = GER # We Have it Remove Icon/s
+			is_controlled_by = GER			# We Have it Remove Icon/s
 		}
 		remove_dynamic_modifier = {
 			modifier = Germany_state_dynamic_modifier
@@ -1391,7 +1393,7 @@ GER_SOV_white_peace_check = {
 				has_state_flag = mr_pact_sov_reserved_state_special
 				has_state_flag = mr_pact_sov_reserved_state
 			}
-			is_controlled_by = SOV # We Have it Remove Icon/s
+			is_controlled_by = SOV			# We Have it Remove Icon/s
 		}
 		remove_dynamic_modifier = {
 			modifier = Soviet_state_dynamic_modifier
@@ -1399,13 +1401,13 @@ GER_SOV_white_peace_check = {
 	}
 	every_state = {
 		limit = {
-			state = 92 # Check 
+			state = 92			# Check 
 			OR = {
 				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
 				has_state_flag = mr_pact_sov_reserved_state_special
 				has_state_flag = mr_pact_sov_reserved_state
 			}
-			is_controlled_by = GER # Germans Have it Remove İcon.
+			is_controlled_by = GER			# Germans Have it Remove İcon.
 		}
 		remove_dynamic_modifier = {
 			modifier = Soviet_state_dynamic_modifier
@@ -1429,18 +1431,23 @@ GER_SOV_white_peace_check = {
 			modifier = Germany_state_dynamic_modifier
 		}
 	}
-	clr_global_flag = GER_SOV_WHITE_PEACE_1 # End of Checks
+	clr_global_flag = GER_SOV_WHITE_PEACE_1
 	set_global_flag = GER_SOV_END_OF_PACT_EVENT
-	 
 }
 
 GER_mr_pact_next_event = {
 	if = {
 		limit = {
 			country_exists = FIN
-			NOT = { FIN = { has_country_flag = mr_pact_sent_event } }
+			NOT = {
+				FIN = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
 		}
-		FIN = { set_country_flag = mr_pact_sent_event }
+		FIN = {
+			set_country_flag = mr_pact_sent_event
+		}
 		GER = {
 			country_event = mrpact_negociations_finland.1
 		}
@@ -1448,10 +1455,15 @@ GER_mr_pact_next_event = {
 	else_if = {
 		limit = {
 			country_exists = EST
-			NOT = { EST = { has_country_flag = mr_pact_sent_event } }
+			NOT = {
+				EST = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
 		}
-
-		EST = { set_country_flag = mr_pact_sent_event }
+		EST = {
+			set_country_flag = mr_pact_sent_event
+		}
 		GER = {
 			country_event = {
 				id = mrpact_negociations_estonia.1
@@ -1462,9 +1474,15 @@ GER_mr_pact_next_event = {
 	else_if = {
 		limit = {
 			country_exists = LAT
-			NOT = { LAT = { has_country_flag = mr_pact_sent_event } }
+			NOT = {
+				LAT = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
 		}
-		LAT = { set_country_flag = mr_pact_sent_event }
+		LAT = {
+			set_country_flag = mr_pact_sent_event
+		}
 		GER = {
 			country_event = {
 				id = mrpact_negociations_latvia.1
@@ -1475,10 +1493,15 @@ GER_mr_pact_next_event = {
 	else_if = {
 		limit = {
 			country_exists = LIT
-			NOT = { LIT = { has_country_flag = mr_pact_sent_event } }
+			NOT = {
+				LIT = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
 		}
-
-		LIT = { set_country_flag = mr_pact_sent_event }
+		LIT = {
+			set_country_flag = mr_pact_sent_event
+		}
 		GER = {
 			country_event = {
 				id = mrpact_negociations_lithuania.1
@@ -1489,10 +1512,15 @@ GER_mr_pact_next_event = {
 	else_if = {
 		limit = {
 			country_exists = POL
-			NOT = { POL = { has_country_flag = mr_pact_sent_event } }
+			NOT = {
+				POL = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
 		}
-
-		POL = { set_country_flag = mr_pact_sent_event }
+		POL = {
+			set_country_flag = mr_pact_sent_event
+		}
 		GER = {
 			country_event = {
 				id = mrpact_negociations_poland.1
@@ -1533,7 +1561,6 @@ GER_mr_pact_next_event = {
 				}
 			}
 		}
-
 		SOV = {
 			country_event = {
 				id = mrpact_final.1
@@ -1778,11 +1805,21 @@ GER_Give_fascism_effect = {
 		tree = german_better
 		keep_completed = yes
 	}
-	set_variable = { adolf_hitler_rest = 1 }
-	set_variable = { adolf_hitler_rest_bad = 1 }
-	set_variable = { theodor_morell = 1 }
-	set_variable = { best_doctors = 1 }
-	set_variable = { Adolf_Health_Year_TIME = 365 }
+	set_variable = {
+		adolf_hitler_rest = 1
+	}
+	set_variable = {
+		adolf_hitler_rest_bad = 1
+	}
+	set_variable = {
+		theodor_morell = 1
+	}
+	set_variable = {
+		best_doctors = 1
+	}
+	set_variable = {
+		Adolf_Health_Year_TIME = 365
+	}
 	add_opinion_modifier = {
 		target = SWE
 		modifier = oldtradeparterns
@@ -2720,51 +2757,6 @@ GER_end_of_himmler = {
 	set_country_flag = GER_HIMMLER_RETIRED
 }
 
-GER_fix_Volkssturm = {
-	if = {
-		limit = {
-			has_completed_focus = GER_Volkssturm
-		}
-		unlock_national_focus = GER_Volkssturm_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_minimize_training
-		}
-		unlock_national_focus = GER_minimize_training_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_Basic_Training
-		}
-		unlock_national_focus = GER_Basic_Training_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_No_Step_Back
-		}
-		unlock_national_focus = GER_No_Step_Back_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_reroute_supplies
-		}
-		unlock_national_focus = GER_reroute_supplies_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_volksopper
-		}
-		unlock_national_focus = GER_volksopper_hit_gone
-	}
-	if = {
-		limit = {
-			has_completed_focus = GER_Europe_in_flames
-		}
-		unlock_national_focus = GER_Europe_in_flames_hit_gone
-	}
-}
-
 GER_add_cost_of_forts = {
 	set_country_flag = GER_working_on_atlantikwall
 	if = {
@@ -2842,7 +2834,8 @@ GER_add_cost_of_forts = {
 }
 
 GER_supply_for_libya_effect = {
-	GER = { #Should Reactive Mission so yeah.
+	GER = {
+		#Should Reactive Mission so yeah.
 		activate_mission = GER_Supply_for_Africa
 	}
 	ITA = {
@@ -2853,7 +2846,9 @@ GER_supply_for_libya_effect = {
 			every_controlled_state = {
 				limit = {
 					has_state_flag = LIBYA_LOGISTICS_STATE
-					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						has_global_flag = NO_MORE_SUPPLY_REQ_LIB
+					}
 					NOT = {
 						OR = {
 							has_dynamic_modifier = {
@@ -2886,7 +2881,9 @@ GER_supply_for_libya_effect = {
 			every_controlled_state = {
 				limit = {
 					has_state_flag = LIBYA_LOGISTICS_STATE
-					NOT = { has_global_flag = NO_MORE_SUPPLY_REQ_LIB }
+					NOT = {
+						has_global_flag = NO_MORE_SUPPLY_REQ_LIB
+					}
 					NOT = {
 						OR = {
 							has_dynamic_modifier = {
@@ -2912,7 +2909,7 @@ GER_supply_for_libya_effect = {
 	}
 }
 
-GER_lower_supply_for_libya_effect = { #Just Lower
+GER_lower_supply_for_libya_effect = {
 	every_controlled_state = {
 		limit = {
 			has_dynamic_modifier = {
@@ -2954,7 +2951,7 @@ GER_lower_supply_for_libya_effect = { #Just Lower
 	}
 }
 
-GER_low_supply_for_libya_effect = { #Stop At Low Supply
+GER_low_supply_for_libya_effect = {
 	every_controlled_state = {
 		limit = {
 			has_dynamic_modifier = {
@@ -2970,7 +2967,6 @@ GER_low_supply_for_libya_effect = { #Stop At Low Supply
 	}
 	every_controlled_state = {
 		limit = {
-
 			has_dynamic_modifier = {
 				modifier = LOW_SUPPLY_STATE
 			}
@@ -3005,7 +3001,7 @@ GER_low_supply_for_libya_effect = { #Stop At Low Supply
 	}
 }
 
-GER_normal_supply_for_libya_effect = { #Stop at Normal Supply
+GER_normal_supply_for_libya_effect = {
 	every_controlled_state = {
 		limit = {
 			has_dynamic_modifier = {
@@ -3034,7 +3030,7 @@ GER_normal_supply_for_libya_effect = { #Stop at Normal Supply
 	}
 }
 
-GER_extra_supply_for_libya_effect = { # Cost you Something you know
+GER_extra_supply_for_libya_effect = {
 	every_controlled_state = {
 		limit = {
 			has_dynamic_modifier = {
@@ -3130,7 +3126,9 @@ GER_readd_barbarossa = {
 			has_global_flag = GER_Moscow_win
 			has_global_flag = GER_Stalingrad_win
 		}
-		GER = { add_ideas = GER_barbarossa }
+		GER = {
+			add_ideas = GER_barbarossa
+		}
 	}
 	else = {
 		set_global_flag = GER_Operation_Barbarossa_Failed_phase_1
@@ -3141,7 +3139,1072 @@ GER_readd_barbarossa = {
 				days = 180
 			}
 		}
-		GER = { country_event = { id = GER_health_adolf.2 hours = 6 } }
+		GER = {
+			country_event = {
+				id = GER_health_adolf.2
+				hours = 6
+			}
+		}
 	}
 }
 
+GER_general_meeting = {
+	clr_country_flag = GER_TALK_WITH_WEHRMACHT
+	clr_country_flag = GER_TALK_WITH_LUFTWAFFE
+	clr_country_flag = GER_TALK_WITH_KRIEGSMARINE
+	clr_country_flag = GER_TALK_WITH_SS
+	if = {
+		limit = {
+			check_variable = {
+				wehrmacht_anger > 35
+			}
+			NOT = {
+				has_country_flag = GER_KAISER_TAKE_OVER
+			}
+			NOT = {
+				has_global_flag = GER_OPERATION_VALKYRIE
+			}
+		}
+		random_list = {
+			25 = {
+				GER_bop_very_low_increase_effect = yes
+			}
+			35 = {
+				set_global_flag = GER_OPERATION_VALKYRIE
+				remove_ideas = heinrich_himmler
+				remove_ideas = goering
+				GER_heinrich_himmler = {
+					set_character_flag = killed_by_bomb
+					set_portraits = {
+						army = {
+							mall = "GFX_portrait_Germany_heinrich_himmler_death_small"
+						}
+					}
+				}
+				GER_hermann_goring = {
+					set_character_flag = killed_by_bomb
+					set_portraits = {
+						army = {
+							small = "GFX_portrait_Germany_hermann_goring_death_small"
+						}
+					}
+				}
+				# Chief of Army --->
+				if = {
+					limit = {
+						has_idea = ludwig_beck
+					}
+					remove_ideas = ludwig_beck
+					GER_ludwig_beck = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_ludwig_beck_death_small"
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = wilhelm_keitel
+					}
+					remove_ideas = wilhelm_keitel
+					GER_wilhelm_keitel = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = franz_halder
+					}
+					remove_ideas = franz_halder
+					GER_franz_halder = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_franz_halder_death_small"
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = walther_von_brauchitsch
+					}
+					remove_ideas = walther_von_brauchitsch
+					GER_walther_von_brauchitsch = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+							}
+						}
+					}
+				}
+				else = {
+					random_list = {
+						25 = {
+							remove_ideas = ludwig_beck
+							GER_ludwig_beck = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_ludwig_beck_death_small"
+									}
+								}
+							}
+						}
+						25 = {
+							remove_ideas = wilhelm_keitel
+							GER_wilhelm_keitel = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+									}
+								}
+							}
+						}
+						25 = {
+							remove_ideas = franz_halder
+							GER_franz_halder = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_franz_halder_death_small"
+									}
+								}
+							}
+						}
+						25 = {
+							remove_ideas = walther_von_brauchitsch
+							GER_walther_von_brauchitsch = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+									}
+								}
+							}
+						}
+					}
+				}
+				# Chief of Air --->
+				if = {
+					limit = {
+						has_idea = ritter_von_greim
+					}
+					remove_ideas = ritter_von_greim
+					GER_ritter_von_greim = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = albert_kesselring
+					}
+					remove_ideas = albert_kesselring
+					GER_albert_kesselring = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_albert_kesselring_death_small"
+							}
+						}
+					}
+				}
+				else = {
+					random_list = {
+						50 = {
+							remove_ideas = ritter_von_greim
+							GER_ritter_von_greim = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+									}
+								}
+							}
+						}
+						50 = {
+							remove_ideas = albert_kesselring
+							GER_albert_kesselring = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_albert_kesselring_death_small"
+									}
+								}
+							}
+						}
+					}
+				}
+				# Chief of Navy --->					
+				if = {
+					limit = {
+						has_idea = raeder
+					}
+					remove_ideas = raeder
+					GER_erich_raeder = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_erich_raeder_death_small"
+							}
+						}
+						retire = yes
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = donitz
+					}
+					remove_ideas = donitz
+					GER_karl_donitz = {
+						set_character_flag = killed_by_bomb
+						set_portraits = {
+							army = {
+								small = "GFX_portrait_Germany_karl_donitz_death_small"
+							}
+						}
+						retire = yes
+					}
+				}
+				else = {
+					random_list = {
+						50 = {
+							remove_ideas = raeder
+							GER_erich_raeder = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_erich_raeder_death_small"
+									}
+								}
+								retire = yes
+							}
+						}
+						50 = {
+							remove_ideas = donitz
+							GER_karl_donitz = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_karl_donitz_death_small"
+									}
+								}
+								retire = yes
+							}
+						}
+					}
+				}
+				#
+				add_stability = -0.25
+				add_war_support = -0.2
+				hidden_effect = {
+					kill_country_leader = yes
+					GER_valkyrie_leader = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism
+								expire = "1965.1.1.1"
+								traits = {
+								}
+							}
+						}
+					}
+					set_global_flag = GER_DEFEAT_TREE
+					remove_dynamic_modifier = {
+						modifier = SS_forces_dynamic_modifier
+					}
+					remove_dynamic_modifier = {
+						modifier = SS_forces_1_dynamic_modifier
+					}
+					set_global_flag = Adolf_killed
+					remove_power_balance = {
+						id = GER_power_balance
+					}
+					if = {
+						limit = {
+							has_completed_focus = GER_the_Supreme_Commander
+						}
+						retire_character = GER_SUPREM_adolf_hitler
+					}
+					uncomplete_national_focus = {
+						focus = GER_Fuhrer
+						uncomplete_children = no
+						refund_political_power = no
+					}
+					complete_national_focus = GER_hitler_is_gone
+					set_country_flag = GER_SIDE_LEADERS
+					complete_national_focus = GER_valkyrie_leader
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+			20 = {
+				set_global_flag = GER_OPERATION_VALKYRIE
+				hidden_effect = {
+					random_list = {
+						25 = {
+							random_list = {
+								50 = {
+									remove_ideas = heinrich_himmler
+									GER_heinrich_himmler = {
+										set_character_flag = killed_by_bomb
+										set_portraits = {
+											army = {
+												small = "GFX_portrait_Germany_heinrich_himmler_death_small"
+											}
+										}
+									}
+								}
+								50 = {
+									remove_ideas = goering
+									GER_hermann_goring = {
+										set_character_flag = killed_by_bomb
+										set_portraits = {
+											army = {
+												small = "GFX_portrait_Germany_hermann_goring_death_small"
+											}
+										}
+									}
+								}
+							}
+						}
+						25 = {
+							if = {
+								limit = {
+									has_idea = ludwig_beck
+								}
+								remove_ideas = ludwig_beck
+								GER_ludwig_beck = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_ludwig_beck_death_small"
+										}
+									}
+								}
+							}
+							else_if = {
+								limit = {
+									has_idea = wilhelm_keitel
+								}
+								remove_ideas = wilhelm_keitel
+								GER_wilhelm_keitel = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+										}
+									}
+								}
+							}
+							else_if = {
+								limit = {
+									has_idea = franz_halder
+								}
+								remove_ideas = franz_halder
+								GER_franz_halder = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_franz_halder_death_small"
+										}
+									}
+								}
+							}
+							else_if = {
+								limit = {
+									has_idea = walther_von_brauchitsch
+								}
+								remove_ideas = walther_von_brauchitsch
+								GER_walther_von_brauchitsch = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+										}
+									}
+								}
+							}
+							else = {
+								random_list = {
+									25 = {
+										remove_ideas = ludwig_beck
+										GER_ludwig_beck = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_ludwig_beck_death_small"
+												}
+											}
+										}
+									}
+									25 = {
+										remove_ideas = wilhelm_keitel
+										GER_wilhelm_keitel = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+												}
+											}
+										}
+									}
+									25 = {
+										remove_ideas = franz_halder
+										GER_franz_halder = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_franz_halder_death_small"
+												}
+											}
+										}
+									}
+									25 = {
+										remove_ideas = walther_von_brauchitsch
+										GER_walther_von_brauchitsch = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						25 = {
+							if = {
+								limit = {
+									has_idea = ritter_von_greim
+								}
+								remove_ideas = ritter_von_greim
+								GER_ritter_von_greim = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+										}
+									}
+								}
+							}
+							else_if = {
+								limit = {
+									has_idea = albert_kesselring
+								}
+								remove_ideas = albert_kesselring
+								GER_albert_kesselring = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_albert_kesselring_death_small"
+										}
+									}
+								}
+							}
+							else = {
+								random_list = {
+									# TODO
+									50 = {
+										remove_ideas = ritter_von_greim
+										GER_ritter_von_greim = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+												}
+											}
+										}
+									}
+									50 = {
+										remove_ideas = albert_kesselring
+										GER_albert_kesselring = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_albert_kesselring_death_small"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						25 = {
+							if = {
+								limit = {
+									has_idea = raeder
+								}
+								remove_ideas = raeder
+								GER_erich_raeder = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_erich_raeder_death_small"
+										}
+									}
+									retire = yes
+								}
+							}
+							else_if = {
+								limit = {
+									has_idea = donitz
+								}
+								remove_ideas = donitz
+								GER_karl_donitz = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_karl_donitz_death_small"
+										}
+									}
+									retire = yes
+								}
+							}
+							else = {
+								random_list = {
+									50 = {
+										remove_ideas = raeder
+										GER_erich_raeder = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_erich_raeder_death_small"
+												}
+											}
+											retire = yes
+										}
+									}
+									50 = {
+										remove_ideas = donitz
+										GER_karl_donitz = {
+											set_character_flag = killed_by_bomb
+											set_portraits = {
+												army = {
+													small = "GFX_portrait_Germany_karl_donitz_death_small"
+												}
+											}
+											retire = yes
+										}
+									}
+								}
+							}
+						}
+					}
+					add_stability = -0.2
+					add_war_support = -0.1
+					activate_mission = GER_eliminate_traitor
+					start_civil_war = {
+						ideology = neutrality
+						size = 0.1
+						set_country_flag = GER_CIVILWAR_VALKRIE_COUNTRY
+					}
+				}
+			}
+			20 = {
+				set_global_flag = GER_OPERATION_VALKYRIE
+				hidden_effect = {
+					# Death of Alt. Leader
+					random_list = {
+						50 = {
+							remove_ideas = heinrich_himmler
+							GER_heinrich_himmler = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_heinrich_himmler_death_small"
+									}
+								}
+							}
+						}
+						50 = {
+							remove_ideas = goering
+							GER_hermann_goring = {
+								set_character_flag = killed_by_bomb
+								set_portraits = {
+									army = {
+										small = "GFX_portrait_Germany_hermann_goring_death_small"
+									}
+								}
+							}
+						}
+					}
+					# Chief of Army --->
+					if = {
+						limit = {
+							has_idea = ludwig_beck
+						}
+						remove_ideas = ludwig_beck
+						GER_ludwig_beck = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_ludwig_beck_death_small"
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = wilhelm_keitel
+						}
+						remove_ideas = wilhelm_keitel
+						GER_wilhelm_keitel = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = franz_halder
+						}
+						remove_ideas = franz_halder
+						GER_franz_halder = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_franz_halder_death_small"
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = walther_von_brauchitsch
+						}
+						remove_ideas = walther_von_brauchitsch
+						GER_walther_von_brauchitsch = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+								}
+							}
+						}
+					}
+					else = {
+						random_list = {
+							25 = {
+								remove_ideas = ludwig_beck
+								GER_ludwig_beck = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_ludwig_beck_death_small"
+										}
+									}
+								}
+							}
+							25 = {
+								remove_ideas = wilhelm_keitel
+								GER_wilhelm_keitel = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_wilhelm_keitel_death_small"
+										}
+									}
+								}
+							}
+							25 = {
+								remove_ideas = franz_halder
+								GER_franz_halder = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_franz_halder_death_small"
+										}
+									}
+								}
+							}
+							25 = {
+								remove_ideas = walther_von_brauchitsch
+								GER_walther_von_brauchitsch = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_walther_von_brauchitsch_death_small"
+										}
+									}
+								}
+							}
+						}
+					}
+					# Chief of Air --->
+					if = {
+						limit = {
+							has_idea = ritter_von_greim
+						}
+						remove_ideas = ritter_von_greim
+						GER_ritter_von_greim = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = albert_kesselring
+						}
+						remove_ideas = albert_kesselring
+						GER_albert_kesselring = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_albert_kesselring_death_small"
+								}
+							}
+						}
+					}
+					else = {
+						random_list = {
+							# TODO
+							50 = {
+								remove_ideas = ritter_von_greim
+								GER_ritter_von_greim = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_ritter_von_greim_death_small"
+										}
+									}
+								}
+							}
+							50 = {
+								remove_ideas = albert_kesselring
+								GER_albert_kesselring = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_albert_kesselring_death_small"
+										}
+									}
+								}
+							}
+						}
+					}
+					# Chief of Navy --->					
+					if = {
+						limit = {
+							has_idea = raeder
+						}
+						remove_ideas = raeder
+						GER_erich_raeder = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_erich_raeder_death_small"
+								}
+							}
+							retire = yes
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = donitz
+						}
+						remove_ideas = donitz
+						GER_karl_donitz = {
+							set_character_flag = killed_by_bomb
+							set_portraits = {
+								army = {
+									small = "GFX_portrait_Germany_karl_donitz_death_small"
+								}
+							}
+							retire = yes
+						}
+					}
+					else = {
+						random_list = {
+							50 = {
+								remove_ideas = raeder
+								GER_erich_raeder = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_erich_raeder_death_small"
+										}
+									}
+									retire = yes
+								}
+							}
+							50 = {
+								remove_ideas = donitz
+								GER_karl_donitz = {
+									set_character_flag = killed_by_bomb
+									set_portraits = {
+										army = {
+											small = "GFX_portrait_Germany_karl_donitz_death_small"
+										}
+									}
+									retire = yes
+								}
+							}
+						}
+					}
+					#
+					add_stability = -0.25
+					add_war_support = -0.2
+					activate_mission = GER_eliminate_traitor
+					country_event = {
+						id = GER_new_leader.3
+						hours = 5
+					}
+				}
+			}
+		}
+	}
+	else = {
+		GER_bop_very_low_increase_effect = yes
+	}
+}
+
+GER_defeat_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = GER_SIDE_WITH_COMITERN
+			}
+		}
+		ENG = {
+			# Split Germany to Two
+			start_peace_conference = {
+				tag = GER
+				score_factor = 0
+				loser_scope = GER
+			}
+			puppet = GER
+			set_autonomy = {
+				target = GER
+				autonomy_state = autonomy_supervised_state
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+		DDR = {
+			add_state_core = 538
+			add_state_core = 65
+			add_state_core = 64
+			add_state_core = 61
+			add_state_core = 62
+			add_state_core = 63
+			add_state_core = 68
+			add_state_core = 66
+			transfer_state = 538
+			transfer_state = 65
+			transfer_state = 64
+			transfer_state = 61
+			transfer_state = 62
+			transfer_state = 63
+			transfer_state = 68
+			transfer_state = 66
+		}
+		SOV = {
+			puppet = DDR
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_SIDE_WITH_COMITERN
+		}
+		SOV = {
+			# Split Germany to Two
+			start_peace_conference = {
+				tag = GER
+				score_factor = 0
+				loser_scope = GER
+			}
+			puppet = GER
+		}
+		WGR = {
+			add_state_core = 909
+			add_state_core = 58
+			add_state_core = 59
+			add_state_core = 56
+			add_state_core = 57
+			add_state_core = 51
+			add_state_core = 42
+			add_state_core = 50
+			add_state_core = 55
+			add_state_core = 54
+			add_state_core = 53
+			add_state_core = 52
+			add_state_core = 935
+			transfer_state = 909
+			transfer_state = 58
+			transfer_state = 59
+			transfer_state = 56
+			transfer_state = 57
+			transfer_state = 51
+			transfer_state = 42
+			transfer_state = 50
+			transfer_state = 55
+			transfer_state = 54
+			transfer_state = 53
+			transfer_state = 52
+			transfer_state = 935
+		}
+		ENG = {
+			puppet = WGR
+			set_autonomy = {
+				target = WGR
+				autonomy_state = autonomy_supervised_state
+			}
+		}
+	}
+	if = {
+		limit = {
+			GER = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 69
+							state = 9
+							state = 75
+							state = 74
+						}
+					}
+				}
+				release_on_controlled = CZE
+			}
+		}
+	}
+	if = {
+		limit = {
+			GER = {
+				SLO = {
+					is_puppet_of = GER
+				}
+			}
+		}
+		GER = {
+			set_autonomy = {
+				target = SLO
+				autonomy_state = autonomy_free
+				end_wars = no
+				end_civil_wars = no
+			}
+			SLO = {
+				set_politics = {
+					ruling_party = democratic
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			GER = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 848
+							state = 153
+							state = 152
+							state = 4
+						}
+					}
+				}
+			}
+		}
+		GER = {
+			release_on_controlled = AUS
+			AUS = {
+				set_politics = {
+					ruling_party = democratic
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			POL = { exists = yes }
+			5 = {
+				is_owned_by = GER
+			}
+		}
+		5 = {
+			transfer_state_to = POL
+		}
+	}
+	if = {
+		limit = {
+			POL = { exists = yes }
+			every_state = {
+				limit = {
+					state = 63
+					state = 68
+					state = 66
+					state = 67
+				}
+				is_owned_by = GER
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 63
+					state = 68
+					state = 66
+					state = 67
+				}
+				is_owned_by = GER
+			}
+			transfer_state_to = POL
+		}
+
+	}
+	if = {
+		limit = {
+			763 = {
+				is_owned_by = GER
+			}
+		}
+		763 = {
+			transfer_state_to = SOV
+		}
+	}
+	if = {
+		limit = {
+			188 = {
+				is_owned_by = GER
+			}
+		}
+		if = {
+			limit = {
+				LIT = {
+					is_puppet_of = SOV
+				}
+			}
+			188 = {
+				transfer_state_to = LIT
+			}
+		}
+		else = {
+			188 = {
+				transfer_state_to = SOV
+			}
+		}
+	}
+}
