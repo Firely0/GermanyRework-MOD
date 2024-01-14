@@ -3876,6 +3876,7 @@ GER_military_buildup = {
 				NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_2 }
 				is_core_of = GER
 				is_coastal = yes
+				is_fully_controlled_by = ROOT
 				dockyard < 4
 			}
 		}

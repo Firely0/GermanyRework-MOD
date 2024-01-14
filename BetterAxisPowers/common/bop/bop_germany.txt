@@ -136,7 +136,10 @@ GER_power_balance = {
 			on_activate = {
 				if = {
 					limit = {
-						has_country_flag = GER_KAISER_TAKE_OVER
+						OR = {
+							has_country_flag = GER_KAISER_TAKE_OVER
+							has_completed_focus = GER_Kaiser	
+						}
 					}
 					custom_effect_tooltip = GER_Fuhrer_Deposed_tt
 					hidden_effect = {

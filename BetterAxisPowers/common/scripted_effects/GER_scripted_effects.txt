@@ -3177,7 +3177,7 @@ GER_general_meeting = {
 					set_character_flag = killed_by_bomb
 					set_portraits = {
 						army = {
-							mall = "GFX_portrait_Germany_heinrich_himmler_death_small"
+							small = "GFX_portrait_Germany_heinrich_himmler_death_small"
 						}
 					}
 				}
@@ -3417,7 +3417,7 @@ GER_general_meeting = {
 						add_country_leader_role = {
 							promote_leader = yes
 							country_leader = {
-								ideology = fascism
+								ideology = fascism_ideology
 								expire = "1965.1.1.1"
 								traits = {
 								}
@@ -3994,7 +3994,10 @@ GER_defeat_effect = {
 				tag = GER
 				score_factor = 0
 				loser_scope = GER
+				winner_scope = ALL
+				loser_scope = LIMITED
 			}
+			GER = { drop_cosmetic_tag = yes }
 			puppet = GER
 			set_autonomy = {
 				target = GER
@@ -4002,6 +4005,7 @@ GER_defeat_effect = {
 				end_wars = no
 				end_civil_wars = no
 			}
+			GER = { set_cosmetic_tag = WGR }
 		}
 		DDR = {
 			add_state_core = 538
@@ -4024,6 +4028,7 @@ GER_defeat_effect = {
 		SOV = {
 			puppet = DDR
 		}
+		DDR = { set_cosmetic_tag = DDR }
 	}
 	if = {
 		limit = {
@@ -4035,9 +4040,13 @@ GER_defeat_effect = {
 				tag = GER
 				score_factor = 0
 				loser_scope = GER
+				winner_scope = ALL
+				loser_scope = LIMITED
 			}
+			GER = { drop_cosmetic_tag = yes }
 			puppet = GER
 		}
+		DDR = { set_cosmetic_tag = DDR }
 		WGR = {
 			add_state_core = 909
 			add_state_core = 58
@@ -4073,22 +4082,19 @@ GER_defeat_effect = {
 				autonomy_state = autonomy_supervised_state
 			}
 		}
+		WGR = { set_cosmetic_tag = WGR }
 	}
 	if = {
 		limit = {
-			GER = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 69
-							state = 9
-							state = 75
-							state = 74
-						}
-					}
-				}
-				release_on_controlled = CZE
+			AND = {
+				69 = { is_owned_by = GER }
+				9 = { is_owned_by = GER }
+				75 = { is_owned_by = GER }
+				74 = { is_owned_by = GER }
 			}
+		}
+		GER = {
+			release_on_controlled = CZE
 		}
 	}
 	if = {
@@ -4115,18 +4121,10 @@ GER_defeat_effect = {
 	}
 	if = {
 		limit = {
-			GER = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 848
-							state = 153
-							state = 152
-							state = 4
-						}
-					}
-				}
-			}
+			848 = { is_owned_by = GER }
+			153 = { is_owned_by = GER }
+			152 = { is_owned_by = GER }
+			4 = { is_owned_by = GER }
 		}
 		GER = {
 			release_on_controlled = AUS
@@ -4151,14 +4149,11 @@ GER_defeat_effect = {
 	if = {
 		limit = {
 			POL = { exists = yes }
-			every_state = {
-				limit = {
-					state = 63
-					state = 68
-					state = 66
-					state = 67
-				}
-				is_owned_by = GER
+			OR = {
+				63 = { is_owned_by = GER }
+				68 = { is_owned_by = GER }
+				66 = { is_owned_by = GER }
+				67 = { is_owned_by = GER }
 			}
 		}
 		every_state = {
@@ -4173,7 +4168,6 @@ GER_defeat_effect = {
 			}
 			transfer_state_to = POL
 		}
-
 	}
 	if = {
 		limit = {
@@ -4207,4 +4201,30 @@ GER_defeat_effect = {
 			}
 		}
 	}
+}
+
+GER_abwehr_rd = {
+	if = {
+		limit = {
+			GER = { has_completed_focus = GER_GER_establish_abwehr }
+		}
+		if = {
+			limit = { GER = { has_idea = abwehr_agent }  }
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent
+					add_idea = abwehr_agent_r
+				}
+			}
+		}
+		if = {
+			limit = { GER = { has_idea = abwehr_agent }  }
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent_v
+					add_idea = abwehr_agent_v_r
+				}
+			}
+		}
+	}	
 }

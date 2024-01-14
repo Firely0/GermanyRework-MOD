@@ -1266,6 +1266,7 @@ country_event = {
 					gfx = GFX_bop_GER_kaiser_side
 				}
 				unlock_national_focus = GER_Kaiser
+				set_country_flag = GER_KAISER_TAKE_OVER
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
@@ -1318,6 +1319,7 @@ country_event = {
 					gfx = GFX_bop_GER_kaiser_side
 				}
 				unlock_national_focus = GER_Kaiser
+				set_country_flag = GER_KAISER_TAKE_OVER
 				mark_focus_tree_layout_dirty = yes
 			}
 		}

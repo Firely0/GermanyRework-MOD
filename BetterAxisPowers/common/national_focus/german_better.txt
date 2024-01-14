@@ -220,8 +220,19 @@ focus_tree = {
 			create_intelligence_agency = {
 				name = "Abwehr"
 				icon = GFX_intelligence_agency_logo_ger
+			}	
+			if = {
+				limit = {
+					ENG = { NOT = { has_completed_focus = crypto_bomb_focus } }
+				}
+				add_ideas = abwehr_agent
 			}
-			add_ideas = abwehr_agent
+			if = {
+				limit = {
+					ENG = { has_completed_focus = crypto_bomb_focus }
+				}
+				add_ideas = abwehr_agent_r
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -5340,9 +5351,20 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = abwehr_agent
-				add_idea = abwehr_agent_v
+			if = {
+				limit = {
+					has_idea = abwehr_agent
+				}
+				swap_ideas = {
+					remove_idea = abwehr_agent
+					add_idea = abwehr_agent_v
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = abwehr_agent_r
+					add_idea = abwehr_agent_v_r
+				}
 			}
 		}
 	}
@@ -5686,6 +5708,7 @@ focus_tree = {
 	focus = {
 		id = GER_long_time_operations
 		icon = GFX_goal_generic_navy_battleship
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		prerequisite = {
 			focus = GER_stratejic_operations
 		}
@@ -5718,6 +5741,7 @@ focus_tree = {
 	focus = {
 		id = GER_the_Balance_of_Power
 		icon = GFX_goal_generic_neutrality_focus
+		search_filters = {FOCUS_FILTER_STABILITY}
 		prerequisite = {
 			focus = GER_Power_Karl_Donitz
 		}
@@ -5739,6 +5763,7 @@ focus_tree = {
 	focus = {
 		id = GER_take_support_from_ss_karl
 		icon = GFX_goal_side_with_ss
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 		prerequisite = {
 			focus = GER_the_Balance_of_Power
 		}
@@ -5763,6 +5788,7 @@ focus_tree = {
 	focus = {
 		id = GER_take_support_from_wehrmacht
 		icon = GFX_goal_wehrmacht_design
+		search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 		prerequisite = {
 			focus = GER_the_Balance_of_Power
 		}
@@ -5809,6 +5835,7 @@ focus_tree = {
 	focus = {
 		id = GER_the_Defeat
 		icon = GFX_focus_hol_the_foundations_of_defense
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_New_Rejime_karl
 		}
@@ -5869,6 +5896,7 @@ focus_tree = {
 	focus = {
 		id = GER_prison_ss
 		icon = GFX_goal_prison_ss
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_valkyrie_leader
 		}
@@ -5898,6 +5926,7 @@ focus_tree = {
 	focus = {
 		id = GER_reach_to_Allied_powers
 		icon = GFX_focus_chi_british_cooperation
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_valkyrie_leader
 		}
@@ -5923,13 +5952,14 @@ focus_tree = {
 	focus = {
 		id = GER_reach_to_Comitern
 		icon = GFX_focus_chi_mission_to_the_soviet_union
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_valkyrie_leader
 		}
 		available = {
 		}
 		mutually_exclusive = {
-			focus = GER_reach_to_Allied_Powers
+			focus = GER_reach_to_Allied_powers
 		}
 		cancel_if_invalid = no
 		x = 0
@@ -5948,6 +5978,7 @@ focus_tree = {
 	focus = {
 		id = GER_the_end_of_war
 		icon = GFX_goal_gerflagdown
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_reach_to_Allied_powers focus = GER_reach_to_Comitern
 		}
@@ -5969,6 +6000,7 @@ focus_tree = {
 	focus = {
 		id = GER_new_germany_is_riseing_com
 		icon = GFX_goal_ger_com_flag
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_the_end_of_war
 		}
@@ -5993,6 +6025,7 @@ focus_tree = {
 	focus = {
 		id = GER_new_germany_is_riseing_dec
 		icon = GFX_goal_ger_dem_flag
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_the_end_of_war
 		}
@@ -11891,6 +11924,7 @@ focus_tree = {
 	focus = {
 		id = GER_shadow_of_empire
 		icon = GFX_focus_NOR_our_royal_claims
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_the_Supreme_Commander_Kaiser
 		}
@@ -11966,6 +12000,7 @@ focus_tree = {
 	focus = {
 		id = GER_Confederation_states
 		icon = GFX_focus_generic_diplomatic_treaty
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = {
 			focus = GER_shadow_of_empire
 		}
@@ -12035,6 +12070,7 @@ focus_tree = {
 	focus = {
 		id = GER_expand_armed_forces
 		icon = GFX_focus_chi_army_reform
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		prerequisite = {
 			focus = GER_Confederation_states
 		}
@@ -12054,6 +12090,7 @@ focus_tree = {
 	focus = {
 		id = GER_expand_arms_industry
 		icon = GFX_goal_focus_on_arms
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		prerequisite = {
 			focus = GER_Confederation_states
 		}
@@ -12073,6 +12110,7 @@ focus_tree = {
 	focus = {
 		id = GER_expand_civilian_industry
 		icon = GFX_goal_focus_on_civilian
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		prerequisite = {
 			focus = GER_Confederation_states
 		}
@@ -12092,6 +12130,7 @@ focus_tree = {
 	focus = {
 		id = GER_targets_in_west
 		icon = GFX_goal_GER_western_europe
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_shadow_of_empire
 		}
@@ -12144,6 +12183,7 @@ focus_tree = {
 	focus = {
 		id = GER_targets_in_south
 		icon = GFX_goal_GER_targets_south
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_shadow_of_empire
 		}
@@ -12182,6 +12222,7 @@ focus_tree = {
 	focus = {
 		id = GER_Secure_claims
 		icon = GFX_goal_generic_more_territorial_claims
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		prerequisite = {
 			focus = GER_targets_in_west
 		}
@@ -12211,6 +12252,7 @@ focus_tree = {
 	focus = {
 		id = GER_secure_papal_state
 		icon = GFX_focus_por_concordat
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		prerequisite = {
 			focus = GER_shadow_of_empire
 		}

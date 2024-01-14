@@ -1,6 +1,6 @@
 ideas = {
 
-	army_spirit = { # Should Work at Here
+	army_spirit = {
 
 		german_rapid_mobilization_spirit = {
 			ledger = army
@@ -788,6 +788,27 @@ ideas = {
 			}
 		}
 
+		abwehr_agent_r = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+				decryption_factor = -0.1
+			}
+		}
+
 		abwehr_agent_v = {
 
 			picture = generic_spy_intel
@@ -811,6 +832,29 @@ ideas = {
 				encryption_factor = 0.1
 			}
 		}
+
+		abwehr_agent_v_r = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+				intelligence_agency_defense = 0.5
+
+				encryption_factor = 0.1
+			}
+		}		
 
 		Japan_Side_Intel = {
 			picture = generic_the_london_naval_treaty
