@@ -238,6 +238,8 @@
  GER_rebuild_the_high_seas_fleet_project_desc:0 ""
  GER_offer_job_Ernest_Cox:0 "Offer Job to Ernest Cox"
  GER_offer_job_Ernest_Cox_desc:0 ""
+ GER_plan_z_category:0 "Plan-Z"
+ GER_plan_z_category_desc:0 "Admiral Raeder believes that the British can best be defeated through a policy of surface raiding. Constructing enough battleships and carriers to accomplish this will be a massive task, and will take time; perhaps too much time... On the other hand, our current surface navy is pathetically inadequate. \n\nWe are currently [GetStrengthRatioBritain] [GetRelevantNavalTreatyNation] in Capital Ship Strength."
 
  GER_buy_ship_SMS_Friedrich_der_GrosseE:0 "Buy Ship: Friedrich der Grosse"
  GER_buy_ship_SMS_Friedrich_der_GrosseE_desc:0 ""
@@ -286,6 +288,12 @@
  GER_raise_volksstrum_units:0 "Raise Volkssturm Unit in [FROM.GetName]"
  GER_Volkssturm_Training_Min:0 "It significantly reduces the training time of the Volkssturm Troops and reduces the training levels."
  GER_Volkssturm_Training_Basic:0 "Volkssturm Troops are trained in a shorter period of time with a sufficient level of training."
+
+ # SS vs Wehrmacht Anger
+ SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
+ Wehrmacht_Status_of_loyalty:0 "\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
+ Wehrmacht_Increase_anger:0 "£wehrmacht_texticon Wehrmacht is likely to react to this"
+ SS_Increase_anger:0 "£ss_texticon SS is likely to react to this"
 
  #Adolf Hitler Healht
  health_of_adolf_category:0 "Adolf Hitler`s Health Checkups"
@@ -749,12 +757,6 @@
  GER_end_of_training_program:0 "End of Training Program."
  GER_ALLOW_KAISER_CIVILWAR:0 "Wilhelm Speaks Against German Government"
 
- # SS vs Wehrmacht Anger
- SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
- Wehrmacht_Status_of_loyalty:0 "\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
- Wehrmacht_Increase_anger:0 "The Wehrmacht is likely to react to this situation"
- SS_Increase_anger:0 "SS is likely to react to this situation"
-
 #Wehrmacht Tank Side TT
 
  GER_wehrmacht_1_tt:0 "$armor_research$: §R-10%§!"
@@ -827,8 +829,8 @@
  dictator_pp_v1:0 "Dictator"
  dictator_pp_n:0 "Dictator"
  dictator_pp_new_rj:0 "Dictator"
- new_rj:0 "New Rejime"
- new_rj_alt:0 "New Rejime"
+ new_rj:0 "New Regime"
+ new_rj_alt:0 "New Regime"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
  armaments_organizer2:0 "Armaments Organizer"
@@ -1114,7 +1116,7 @@
  GER_Case_Black_desc:0 ""
  GER_End_Handicraft_Production:0 "End of Handcraft Air Production"
  GER_End_Handicraft_Production_desc:0 ""
- GER_New_Rejime:0 "Form New Rejime"
+ GER_New_Rejime:0 "Form New Regime"
  GER_New_Rejime_desc:0 ""
  GER_Interve_School:0 "Military Schools"
  GER_Interve_School_desc:0 ""

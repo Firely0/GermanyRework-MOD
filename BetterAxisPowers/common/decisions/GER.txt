@@ -1092,6 +1092,94 @@ foreign_politics = {
 		}
 
 	}
+
+	# Ultimatum to Lithuania
+	send_ultimatum_to_lithuania = {
+	
+		icon = hol_war_on_pacifism
+
+		available = {
+			NOT = {
+				has_war_with = LIT
+				is_in_faction_with = LIT
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {	
+			has_global_flag = end_of_hostilities_in_pol
+			POL = { has_capitulated = yes }
+			is_subject = no
+			has_civil_war = no
+			LIT = {
+				has_country_flag = mr_pact_into_german_sphere_of_influence
+				has_civil_war = no
+				has_war = no
+				is_subject = no
+				NOT = {
+					is_in_faction_with = SOV
+				}
+			}
+		}
+
+		complete_effect = {
+			GER = { 
+				country_event = ger_lithuania.1
+			}
+		}
+	}
+
+	offer_vilnius_to_lithuania = {
+	
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			OR = {
+				owns_state = 784
+				controls_state = 784
+			}
+			NOT = {
+				has_war_with = LIT
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+			POL = { has_capitulated = yes }
+			is_subject = no
+			has_civil_war = no
+			LIT = {
+				has_country_flag = mr_pact_into_german_sphere_of_influence
+				has_civil_war = no
+				has_war = no
+				#is_in_faction = no
+				is_subject = no
+				NOT = {
+					is_in_faction_with = SOV
+				}
+			}
+		}
+
+		complete_effect = {
+			LIT = { 
+				country_event = ger_lithuania.7
+			}
+		}
+	}
 }
 
 GER_last_stand_of_germany = {
@@ -3804,13 +3892,12 @@ GER_case_anton_category = {
 	}
 }
 
-GER_military_buildup = {
-
+GER_plan_z_category = {
 	GER_plan_z = {
 
 		icon = generic_naval
 		priority = 100
-
+	
 		available = {
 			has_navy_size = {
 				unit = battleship
@@ -3837,142 +3924,25 @@ GER_military_buildup = {
 				size > 99
 			}
 		}
-
+	
 		fire_only_once = yes
 		days_mission_timeout = 1800
 		is_good = no
 		activation = {
 			has_completed_focus = GER_plan_z_a
 		}
-
-
+	
+	
 		visible = {
 			has_completed_focus = GER_plan_z_a
 		}
-
+	
 		complete_effect = {
 			add_war_support = 0.05
 			navy_experience = 150
 		}
-
-
-	}
-
-	GER_plan_z_build = {
-		icon = GFX_decision_generic_construction
-		state_target = yes
-		on_map_mode = map_and_decisions_view
-
-		cost = 25
-		days_remove = 365
-		priority = 80
-
-		ai_will_do = {
-			base = 0
-		}
-
-		target_trigger = {
-			FROM = {
-				NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_2 }
-				is_core_of = GER
-				is_coastal = yes
-				is_fully_controlled_by = ROOT
-				dockyard < 4
-			}
-		}
-
-		target_root_trigger = {
-			has_active_mission = GER_plan_z
-		}
-
-		allowed = {
-			original_tag = GER
-		}
-
-		modifier = {
-			production_speed_buildings_factor = -0.05
-		}
-
-		available = {
-			FROM = {
-				is_core_of = GER
-				is_coastal = yes
-			}
-		}
-
-		remove_effect = {
-			FROM = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				if = {
-					limit = {
-						has_state_flag = GER_PLAN_Z_DEVELOPED_1
-					}
-					set_state_flag = GER_PLAN_Z_DEVELOPED_2
-				}
-				if = {
-					limit = {
-						NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_1 }
-					}
-					set_state_flag = GER_PLAN_Z_DEVELOPED_1
-				}
-			}
-		}
-
-	}
-
-	GER_jaegernotprogramm = {
-
-		icon = generic_air
-		priority = 95
-
-		available = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
-		}
-
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-		}
-
-		visible = {
-			has_war = yes
-			AND = {
-				has_deployed_air_force_size = {
-					type = fighter
-					size < 750
-				}
-				has_equipment = {
-					small_plane_airframe < 250
-				}
-			}
-			NOT = {
-				has_idea = GER_jaegernotprogramm
-			}
-		}
-
-		complete_effect = {
-			add_stability = -0.05
-			add_war_support = -0.05
-			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
-		}
+	
+	
 	}
 }
 
@@ -4344,6 +4314,111 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 	}
 
+	GER_buy_ship_SMS_Derfflinger = {
+		icon = GFX_decision_generic_buy_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 3 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+		remove_effect = {
+			create_equipment_variant = {
+				name = "Derfflinger Class"
+				type = ship_hull_pre_dreadnought
+				name_group = GER_BB_IMPERIAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bc_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = empty
+				}
+				design_team = mio:Cox_and_Danks_organization
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_pre_dreadnought
+								creator = "GER"
+								version_name = "Derfflinger Class"
+							}
+							name = "SMS Derfflinger"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
 	GER_buy_ship_SMS_Kaiserin = {
 		icon = GFX_decision_generic_buy_ship
 		fire_only_once = yes
@@ -4454,6 +4529,118 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 	}
 
+	GER_buy_ship_SMS_Brummer = {
+		icon = GFX_decision_generic_merge_plant_ship
+		fire_only_once = yes
+		days_remove = 40
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+		}
+
+		modifier = {
+			civilian_factory_use = 2 # Fine For Me
+		}
+
+		visible = {
+			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
+			has_country_flag = Ernest_Cox_Fired
+		}
+
+        complete_effect = {
+            GER_add_cost_of_ship_search = yes
+        }
+
+		remove_effect = {
+            GER_add_refund_of_ship_search = yes
+			create_equipment_variant = {
+				name = "Brummer Class"
+				type = ship_hull_cruiser_1
+				name_group = GER_CA_IMPERIAL
+				parent_version = 0
+				allow_without_tech = yes
+				obsolete = yes
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+					mid_1_custom_slot = ship_mine_layer_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_mine_layer_1
+				}
+			}
+			custom_effect_tooltip = GER_progress_chanced_by_luck
+			hidden_effect = {
+				random_list = {
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.3
+							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.25
+							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0.05
+							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
+						}
+					}
+					25 = {
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_cruiser_1
+								creator = "GER"
+								version_name = "Brummer Class"
+							}
+							name = "SMS Brummer"
+							requested_factories = 1
+							progress = 0
+							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
+						}
+					}
+				}
+			}
+		}
+	}
+
 	GER_buy_ship_SMS_Konig = {
 		icon = GFX_decision_generic_merge_plant_ship
 		fire_only_once = yes
@@ -4527,6 +4714,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4540,6 +4728,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4553,6 +4742,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4566,6 +4756,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -4646,6 +4837,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4659,6 +4851,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4672,6 +4865,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4685,6 +4879,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -4765,6 +4960,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4778,6 +4974,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4791,6 +4988,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -4804,220 +5002,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
-						}
-					}
-				}
-			}
-		}
-	}
-
-	GER_buy_ship_SMS_Derfflinger = {
-		icon = GFX_decision_generic_buy_ship
-		fire_only_once = yes
-		days_remove = 40
-		cost = 25
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-		}
-
-		modifier = {
-			civilian_factory_use = 3 # Fine For Me
-		}
-
-		visible = {
-			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-			has_country_flag = Ernest_Cox_Fired
-		}
-
-		remove_effect = {
-			create_equipment_variant = {
-				name = "Derfflinger Class"
-				type = ship_hull_pre_dreadnought
-				name_group = GER_BB_IMPERIAL
-				parent_version = 0
-				allow_without_tech = yes
-				obsolete = yes
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_1
-					fixed_ship_anti_air_slot = ship_anti_air_1
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-					fixed_ship_radar_slot = empty
-					fixed_ship_engine_slot = heavy_ship_engine_1
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bc_1
-					front_1_custom_slot = ship_anti_air_1
-					mid_1_custom_slot = empty
-					mid_2_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = empty
-				}
-				design_team = mio:Cox_and_Danks_organization
-			}
-			custom_effect_tooltip = GER_progress_chanced_by_luck
-			hidden_effect = {
-				random_list = {
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_pre_dreadnought
-								creator = "GER"
-								version_name = "Derfflinger Class"
-							}
-							name = "SMS Derfflinger"
-							requested_factories = 1
-							progress = 0.3
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_pre_dreadnought
-								creator = "GER"
-								version_name = "Derfflinger Class"
-							}
-							name = "SMS Derfflinger"
-							requested_factories = 1
-							progress = 0.25
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_pre_dreadnought
-								creator = "GER"
-								version_name = "Derfflinger Class"
-							}
-							name = "SMS Derfflinger"
-							requested_factories = 1
-							progress = 0.05
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_pre_dreadnought
-								creator = "GER"
-								version_name = "Derfflinger Class"
-							}
-							name = "SMS Derfflinger"
-							requested_factories = 1
-							progress = 0
-							amount = 1
-						}
-					}
-				}
-			}
-		}
-	}
-
-	GER_buy_ship_SMS_Brummer = {
-		icon = GFX_decision_generic_buy_ship
-		fire_only_once = yes
-		days_remove = 40
-		cost = 25
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-		}
-
-		modifier = {
-			civilian_factory_use = 2 # Fine For Me
-		}
-
-		visible = {
-			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
-			has_country_flag = Ernest_Cox_Fired
-		}
-
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
-
-		remove_effect = {
-            GER_add_refund_of_ship_search = yes
-			create_equipment_variant = {
-				name = "Brummer Class"
-				type = ship_hull_cruiser_1
-				name_group = GER_CA_IMPERIAL
-				parent_version = 0
-				allow_without_tech = yes
-				obsolete = yes
-				modules = {
-					fixed_ship_battery_slot = ship_light_battery_1
-					fixed_ship_anti_air_slot = empty
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-					fixed_ship_radar_slot = empty
-					fixed_ship_engine_slot = cruiser_ship_engine_1
-					fixed_ship_secondaries_slot = ship_secondaries_1
-					fixed_ship_armor_slot = ship_armor_cruiser_1
-					mid_1_custom_slot = ship_mine_layer_1
-					mid_2_custom_slot = ship_torpedo_1
-					rear_1_custom_slot = ship_mine_layer_1
-				}
-				design_team = mio:Cox_and_Danks_organization
-			}
-			custom_effect_tooltip = GER_progress_chanced_by_luck
-			hidden_effect = {
-				random_list = {
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_cruiser_1
-								creator = "GER"
-								version_name = "Brummer Class"
-							}
-							name = "SMS Brummer"
-							requested_factories = 1
-							progress = 0.3
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_cruiser_1
-								creator = "GER"
-								version_name = "Brummer Class"
-							}
-							name = "SMS Brummer"
-							requested_factories = 1
-							progress = 0.25
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_cruiser_1
-								creator = "GER"
-								version_name = "Brummer Class"
-							}
-							name = "SMS Brummer"
-							requested_factories = 1
-							progress = 0.05
-							amount = 1
-						}
-					}
-					25 = {
-						add_equipment_production = {
-							equipment = {
-								type = ship_hull_cruiser_1
-								creator = "GER"
-								version_name = "Brummer Class"
-							}
-							name = "SMS Brummer"
-							requested_factories = 1
-							progress = 0
-							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -5098,6 +5083,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5111,6 +5097,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5124,6 +5111,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5137,6 +5125,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -5217,6 +5206,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5230,6 +5220,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5243,6 +5234,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5256,6 +5248,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -5330,6 +5323,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.3
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5343,6 +5337,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.25
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5356,6 +5351,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0.05
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 					25 = {
@@ -5369,6 +5365,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 							requested_factories = 1
 							progress = 0
 							amount = 1
+							industrial_manufacturer = mio:Cox_and_Danks_organization
 						}
 					}
 				}
@@ -5376,6 +5373,126 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 	}
 
+}
+
+GER_military_buildup = {
+
+	GER_jaegernotprogramm = {
+
+		icon = generic_air
+		priority = 95
+
+		available = {
+			has_war = yes
+			AND = {
+				has_deployed_air_force_size = {
+					type = fighter
+					size < 750
+				}
+				has_equipment = {
+					small_plane_airframe < 250
+				}
+			}
+			NOT = {
+				has_idea = GER_jaegernotprogramm
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			has_war = yes
+			AND = {
+				has_deployed_air_force_size = {
+					type = fighter
+					size < 750
+				}
+				has_equipment = {
+					small_plane_airframe < 250
+				}
+			}
+			NOT = {
+				has_idea = GER_jaegernotprogramm
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
+		}
+	}
+
+	GER_plan_z_build = {
+		icon = GFX_decision_generic_construction
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		cost = 25
+		days_remove = 365
+		priority = 80
+
+		ai_will_do = {
+			base = 0
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_2 }
+				is_core_of = GER
+				is_coastal = yes
+				is_fully_controlled_by = ROOT
+				dockyard < 4
+			}
+		}
+
+		target_root_trigger = {
+			has_active_mission = GER_plan_z
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		modifier = {
+			production_speed_buildings_factor = -0.05
+		}
+
+		available = {
+			FROM = {
+				is_core_of = GER
+				is_coastal = yes
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						has_state_flag = GER_PLAN_Z_DEVELOPED_1
+					}
+					set_state_flag = GER_PLAN_Z_DEVELOPED_2
+				}
+				if = {
+					limit = {
+						NOT = { has_state_flag = GER_PLAN_Z_DEVELOPED_1 }
+					}
+					set_state_flag = GER_PLAN_Z_DEVELOPED_1
+				}
+			}
+		}
+
+	}
 }
 
 GER_aid_hun_rom_democratic_civil_war = {

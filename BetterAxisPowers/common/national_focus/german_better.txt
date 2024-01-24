@@ -286,6 +286,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_establish_abwehr
 		}
+		allow_branch = {
+			NOT = { has_global_flag = GER_SWITCH_TO_DEFEAT_TREE }
+		}
 		available = {
 			has_war = no
 			if = {
@@ -326,6 +329,9 @@ focus_tree = {
 		icon = GFX_focus_ETH_the_second_italo_ethiopian_war
 		prerequisite = {
 			focus = GER_establish_abwehr
+		}
+		allow_branch = {
+			NOT = { has_global_flag = GER_SWITCH_TO_DEFEAT_TREE }
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -2
@@ -4551,10 +4557,13 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_against_fuhrer
+				has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
 			}
 			NOT = {
+				OR = {
 				has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_against_fuhrer
+				}
 			}
 		}
 		available = {
@@ -4712,12 +4721,17 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_against_fuhrer
+				OR = {
+					has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_against_fuhrer
+				}
 			}
-			NOT = {
-				has_completed_focus = GER_Fuhrer
+			NOT = { 
+				OR = {
+					has_country_flag = GER_SIDE_LEADERS 
+					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+				}
 			}
-			NOT = { has_country_flag = GER_SIDE_LEADERS }
 		}
 		cancel_if_invalid = no
 		x = 4
@@ -5006,12 +5020,17 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_completed_focus = GER_against_fuhrer
+				OR = {
+					has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_against_fuhrer
+				}
 			}
-			NOT = {
-				has_completed_focus = GER_Fuhrer
+			NOT = { 
+				OR = {
+					has_country_flag = GER_SIDE_LEADERS 
+					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+				}
 			}
-			NOT = { has_country_flag = GER_SIDE_LEADERS }
 		}
 		cancel_if_invalid = no
 		x = -4
@@ -6008,6 +6027,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_country_flag = GER_SIDE_WITH_COMITERN
+			NOT = { has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE }
 		}
 		cancel_if_invalid = no
 		x = -1
@@ -6018,7 +6038,41 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			set_global_flag = GER_DEFEAT_TREE
+			set_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+			uncomplete_national_focus = {
+				focus = GER_hitler_is_gone
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			clr_country_flag = GER_SIDE_LEADERS
+			mark_focus_tree_layout_dirty = yes
+			unlock_national_focus = GER_new_germany_is_riseing_com_copy
+		}
+	}
+
+	focus = {
+		id = GER_new_germany_is_riseing_com_copy
+		icon = GFX_goal_ger_com_flag
+		text = GER_new_germany_is_riseing_com
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = GER_SIDE_WITH_COMITERN
+			has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		relative_position_id = GER_establish_abwehr
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
 		}
 	}
 
@@ -6033,11 +6087,47 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_country_flag = GER_SIDE_WITH_ALLIED
+			NOT = { has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE }
 		}
 		cancel_if_invalid = no
 		x = -1
 		y = 4
 		relative_position_id = GER_valkyrie_leader
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+			uncomplete_national_focus = {
+				focus = GER_hitler_is_gone
+				uncomplete_children = no
+				refund_political_power = no
+			}
+			clr_country_flag = GER_SIDE_LEADERS 
+			mark_focus_tree_layout_dirty = yes 
+			unlock_national_focus = GER_new_germany_is_riseing_dec_copy
+		}
+	}
+
+	focus = {
+		id = GER_new_germany_is_riseing_dec_copy
+		icon = GFX_goal_ger_dem_flag
+		text = GER_new_germany_is_riseing_dec
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {
+			focus = GER_establish_abwehr
+		}
+		available = {
+		}
+		allow_branch = {
+			has_country_flag = GER_SIDE_WITH_ALLIED
+			has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+		}
+		cancel_if_invalid = no
+		x = 0
+		y = 2
+		relative_position_id = GER_establish_abwehr
 		cost = 3
 		ai_will_do = {
 			factor = 10
@@ -10465,10 +10555,11 @@ focus_tree = {
 		}
 		relative_position_id = GER_establish_abwehr
 		allow_branch = {
+			NOT = { has_global_flag = GER_DEFEAT_TREE }
 			NOT = {
 				has_completed_focus = GER_against_fuhrer
 			}
-			NOT = {
+			NOT = { 
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
@@ -11011,6 +11102,11 @@ focus_tree = {
 					has_completed_focus = GER_shadow_of_empire
 				}
 				
+			}
+			NOT = { 
+				OR = {
+					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -12406,6 +12502,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_betterreich
 		available = {
+			is_puppet = no
 			custom_trigger_tooltip = {
 				tooltip = GER_improve_national_spirit_tooltip
 				OR = {
@@ -12531,9 +12628,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			unlock_decision_category_tooltip = GER_colonial_management_category
 			custom_effect_tooltip = GER_wehrmacht_tt
 			show_ideas_tooltip = GER_military_governor_occupation_idea
-			unlock_decision_category_tooltip = GER_colonial_management_category
 		}
 	}
 	focus = {
@@ -12543,14 +12640,6 @@ focus_tree = {
 		}
 		icon = GFX_goal_Kaiserinaxile
 		search_filters = { FOCUS_FILTER_POLITICAL}
-		allow_branch = {
-			NOT = {
-				has_completed_focus = GER_against_fuhrer
-			}
-			NOT = {
-				has_completed_focus = GER_hitler_is_gone
-			}
-		}
 		available = {
 			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
 			HOL = {

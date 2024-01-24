@@ -149,7 +149,12 @@ GER_power_balance = {
 				}
 				if = {
 					limit = {
-						NOT = { has_country_flag = GER_KAISER_TAKE_OVER }
+						NOT = {
+							OR = {
+								has_country_flag = GER_KAISER_TAKE_OVER
+								has_completed_focus = GER_Kaiser	
+							}
+						}
 					}
 					country_event = { id = GER_new_leader.2 hours = 6 }
 				}

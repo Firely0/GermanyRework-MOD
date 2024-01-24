@@ -10710,12 +10710,10 @@ country_event = {
 		}
 		add_political_power = 40
 		add_war_support = 0.05
-		GER = {
-			puppet = LIT
-			set_autonomy = {
-				target = LIT
-				autonomy_state = autonomy_integrated_puppet
-			}
+		puppet = LIT
+		set_autonomy = {
+			target = LIT
+			autonomy_state = autonomy_integrated_puppet
 		}
 	}
 	option = {
@@ -10725,22 +10723,20 @@ country_event = {
 		}
 		add_political_power = 40
 		add_war_support = 0.05
-		GER = {
-			transfer_state = 814
-			if = {
-				limit = {
-					188 = {
-						is_owned_by = LIT
-					}
+		transfer_state = 814
+		if = {
+			limit = {
+				188 = {
+					is_owned_by = LIT
 				}
-				transfer_state = 188
-				add_state_core = 188
 			}
-			puppet = LIT
-			set_autonomy = {
-				target = LIT
-				autonomy_state = autonomy_integrated_puppet
-			}
+			transfer_state = 188
+			add_state_core = 188
+		}
+		puppet = LIT
+		set_autonomy = {
+			target = LIT
+			autonomy_state = autonomy_integrated_puppet
 		}
 	}
 	option = {
@@ -10750,11 +10746,9 @@ country_event = {
 		}
 		add_political_power = 50
 		add_war_support = 0.1
-		GER = {
-			annex_country = {
-				target = LIT
-				transfer_troops = yes
-			}
+		annex_country = {
+			target = LIT
+			transfer_troops = yes
 		}
 	}
 }

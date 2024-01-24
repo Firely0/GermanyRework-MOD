@@ -1962,19 +1962,25 @@ shared_focus = {
 		factor = 9
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
+	completion_reward = {	
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = krupp_nofocusver
+			swap_ideas = {
+				remove_idea = krupp_starter_ver
+				add_idea = krupp_nofocusver
+			}
 			custom_effect_tooltip = available_designer
 			show_mio_tooltip = GER_Krupp_tank_organization 
 		}
 		else = {
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = krupp_nofocusver
+			swap_ideas = {
+				remove_idea = krupp_starter_ver
+				add_idea = krupp_nofocusver
+			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = krupp_tank_idea
 		}
@@ -3339,10 +3345,16 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = siemens_focus
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = krupp_idea_focus
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = krupp_nofocusver
+				add_idea = krupp_idea_focus
+			}
+			swap_ideas = {
+				remove_idea = siemens
+				add_idea = siemens_focus
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {

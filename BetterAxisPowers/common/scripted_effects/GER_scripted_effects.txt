@@ -4029,6 +4029,10 @@ GER_defeat_effect = {
 			puppet = DDR
 		}
 		DDR = { set_cosmetic_tag = DDR }
+		DDR = {
+			load_focus_tree = { tree = german_better keep_completed = yes }
+			set_country_flag = GER_SIDE_WITH_COMITERN
+		}
 	}
 	if = {
 		limit = {
@@ -4046,7 +4050,7 @@ GER_defeat_effect = {
 			GER = { drop_cosmetic_tag = yes }
 			puppet = GER
 		}
-		DDR = { set_cosmetic_tag = DDR }
+		GER = { set_cosmetic_tag = DDR }
 		WGR = {
 			add_state_core = 909
 			add_state_core = 58
@@ -4083,6 +4087,10 @@ GER_defeat_effect = {
 			}
 		}
 		WGR = { set_cosmetic_tag = WGR }
+		WGR = {
+			load_focus_tree = { tree = german_better keep_completed = yes }
+			set_country_flag = GER_SIDE_WITH_ALLIED
+		}
 	}
 	if = {
 		limit = {
@@ -4205,25 +4213,20 @@ GER_defeat_effect = {
 
 GER_abwehr_rd = {
 	if = {
-		limit = {
-			GER = { has_completed_focus = GER_GER_establish_abwehr }
-		}
-		if = {
-			limit = { GER = { has_idea = abwehr_agent }  }
-			GER = {
-				swap_ideas = {
-					remove_idea = abwehr_agent
-					add_idea = abwehr_agent_r
-				}
+		limit = { GER = { has_idea = abwehr_agent }  }
+		GER = {
+			swap_ideas = {
+				remove_idea = abwehr_agent
+				add_idea = abwehr_agent_r
 			}
 		}
-		if = {
-			limit = { GER = { has_idea = abwehr_agent }  }
-			GER = {
-				swap_ideas = {
-					remove_idea = abwehr_agent_v
-					add_idea = abwehr_agent_v_r
-				}
+	}
+	if = {
+		limit = { GER = { has_idea = abwehr_agent }  }
+		GER = {
+			swap_ideas = {
+				remove_idea = abwehr_agent_v
+				add_idea = abwehr_agent_v_r
 			}
 		}
 	}	
