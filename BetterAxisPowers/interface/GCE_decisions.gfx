@@ -1,29 +1,24 @@
 spriteTypes = {
-	
-# Birmingham Trials
- spriteType = { 
- name = "decision_birmingham_trials"
- texturefile = "gfx/interface/decisions/decision_birmingham_trials.dds"
- }
-
-# Operation Weißkopfseeadler
- spriteType = { 
- name = "decision_GFX_operation_wksa"
- texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa.tga"
- }
- spriteType = { 
- name = "decision_GFX_operation_wksa_north"
- texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_north.tga"
- }
-
- spriteType = { 
- name = "decision_GFX_operation_wksa_middle"
- texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_middle.tga"
- }
-
- spriteType = { 
- name = "decision_GFX_operation_wksa_south"
- texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_south.tga"
- }
-
+	# Birmingham Trials
+	spriteType = {
+		name = "decision_birmingham_trials"
+		texturefile = "gfx/interface/decisions/decision_birmingham_trials.dds"
+	}
+	# Operation Weißkopfseeadler
+	spriteType = {
+		name = "decision_GFX_operation_wksa"
+		texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa.tga"
+	}
+	spriteType = {
+		name = "decision_GFX_operation_wksa_north"
+		texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_north.tga"
+	}
+	spriteType = {
+		name = "decision_GFX_operation_wksa_middle"
+		texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_middle.tga"
+	}
+	spriteType = {
+		name = "decision_GFX_operation_wksa_south"
+		texturefile = "gfx/interface/decisions/decision_GFX_operation_wksa_south.tga"
+	}
 }

@@ -359,6 +359,7 @@ SOV_great_patriotic_war_Orders = {
 			hidden_effect = {
 				add_command_power = -50
 				add_political_power = -50
+				play_song = "GR_Not_One_Step_Back"
 			}
 			set_country_flag = SOV_order_227_flag
 			custom_effect_tooltip = SOV_order_227_decisions_tt
@@ -367,9 +368,6 @@ SOV_great_patriotic_war_Orders = {
 					NOT = { has_dlc = "No Step Back" }
 				}
 				custom_effect_tooltip = SOV_order_227_scorched_earth_decisions_tt
-			}
-			hidden_effect = {
-				play_song = "GR_Not_One_Step_Back"
 			}
 		}
 	}

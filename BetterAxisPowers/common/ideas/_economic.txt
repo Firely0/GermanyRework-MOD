@@ -449,7 +449,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					NOT = { has_country_flag = GER_BLOCKED_TOTAL_WAR }
+					NOT = { has_idea = kinder_kuche_kirche }
 				}
 				if = {
 					limit = {

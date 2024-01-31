@@ -439,6 +439,7 @@ focus_tree = {
 					}
 					complete_national_focus = GER_scandinavia_policy
 				}
+				play_song = "GR_Main_Theme"
 			}
 		}
 	}
@@ -927,22 +928,19 @@ focus_tree = {
 				has_global_flag = GER_civil_war
 			}
 			is_subject = no
-			has_army_manpower = {
-				size > 499999
+			has_army_manpower = { size > 499999 }
+			check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
+			custom_trigger_tooltip = {
+			 	tooltip = GER_anschluss_eq_trigger_tt
+			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
 			}
-			NOT = {
-				has_idea = rhineland_challenge_met
-			}
+			NOT = { has_idea = rhineland_challenge_met }
 			if = {
 				limit = {
-					SWI = {
-						has_completed_focus = SWI_gotthard_union
-					}
+					SWI = { has_completed_focus = SWI_gotthard_union }
 				}
-				NOT = {
-					AUS = {
-						has_idea = SWI_swiss_democratic_propaganda
-					}
+				NOT = { 
+					AUS = { has_idea = SWI_swiss_democratic_propaganda }
 				}
 			}
 		}
@@ -996,6 +994,7 @@ focus_tree = {
 					country_exists = AUS
 					AUS = {
 						has_civil_war = no
+						NOT = { has_war_with = ROOT }
 						OR = {
 							owns_state = 4
 							owns_state = 152
@@ -1004,9 +1003,7 @@ focus_tree = {
 						}
 					}
 				}
-				GER = {
-					country_event = austria.1
-				}
+				country_event = aov_austria.1				
 			}
 			if = {
 				limit = {
@@ -1019,6 +1016,7 @@ focus_tree = {
 							owns_state = 153
 							owns_state = 848
 						}
+						
 					}
 				}
 				custom_effect_tooltip = germany.126.warning
@@ -1044,13 +1042,11 @@ focus_tree = {
 										has_government = neutrality
 									}
 								}
-							}
+							}							
 						}
+						
 					}
-					country_event = {
-						id = austria.1
-						days = 1
-					}
+					country_event = { id = germany.126 days = 1 }
 				}
 			}
 		}
@@ -1653,6 +1649,9 @@ focus_tree = {
 						id = news.234
 					}
 				}
+			}
+			hidden_effect = {
+				play_song = "GR_Western_Front_Armies"
 			}
 		}
 	}
@@ -10867,37 +10866,39 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = {
-					64
-				}
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				custom_effect_tooltip = available_designer
 				show_mio_tooltip = GER_Volkswagen_organization
-				show_mio_tooltip = GER_Volkswagen_motorized_organization
+				mio:GER_Volkswagen_motorized_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.2
+				}
 			}
 			else = {
 				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = GER_Volkswagen
 				show_ideas_tooltip = GER_Volkswagen_t
 				add_ideas = GER_volkswagen_idea
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					64
+				}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -12056,6 +12057,9 @@ focus_tree = {
 					add_state_core = 70
 					add_state_core = 664
 					add_state_core = 73
+				}
+				OCC = {
+					add_state_core = 806
 				}
 			}
 			add_state_claim = 32

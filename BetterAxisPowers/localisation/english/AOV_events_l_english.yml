@@ -1,70 +1,69 @@
 ﻿l_english:
- MINIMIZE_EVENT:0 "§GClick§! to Minimize. Event will be placed in the Event Queue under §HEvents and Decisions§!."
 
  ############################################ AUSTRIAN EVENTS (ANSCHLUSS) #####################################
  
- austria.1.t:0 "Hitler Puts Pressure on [AUS.GetLeader]"
- austria.1.d:0 "The Führer's main plan for the early expansion of the German Reich was always the integration of his native land, Austria, to the united Germany he dreams of; the Nazi party having definitely secured its foothold in Germany, it is now time to take this crucial next step. \n\nHitler invited the Austrian chancellor to a meeting in Bavaria, who will be received not only by him but also by a number of high-ranking Nazis and german commanders some of them "conveniently happening to be in the area", meeting during which [AUS.GetLeader] will be "proposed" projects aiming to secure the foothold of the Austrian Nazi party on the country."
- austria.1.a:0 "The Anschluss will come soon enough now."
+ aov_austria.1.t:0 "[GER.GetLeader] Puts Pressure on [AUS.GetLeader]"
+ aov_austria.1.d:0 "The Führer's main plan for the early expansion of the German Reich was always the integration of his native land, Austria, to the united Germany he dreams of; the Nazi party having definitely secured its foothold in Germany, it is now time to take this crucial next step. \n\nHitler invited the Austrian chancellor to a meeting in Bavaria, who will be received not only by him but also by a number of high-ranking Nazis and german commanders some of them "conveniently happening to be in the area", meeting during which [AUS.GetLeader] will be "proposed" projects aiming to secure the foothold of the Austrian Nazi party on the country."
+ aov_austria.1.a:0 "The Anschluss will come soon enough now."
  
- austria.2.t:0 "Germany Puts Pressure on us"
- austria.2.d:0 "Summoned to an meeting in Bavaria a few days ago by the Führer of the German Reich himself, [AUS.GetLeader] attended and was greeted, with minimal courtesy, not only by Hitler but also by many high ranking German commanders. The meeting had hardly begun when the chancellor found himself already under the invective of his counterpart, Hitler making no secret of his desire to unite his native country with the rest of Germany. \n\nIn the afternoon [AUS.GetLeader] was utlimately presented with a "non-negotiable agreement": among other things the Austrian Nazi party is to be made legal, a general amnesty for imprisoned Nazis is to be declared and several prominent Austrian Nazis are to be appointed to key positions." 
- austria.2.a:0 "Looks like we don't really have a choice..."
- austria.2.b:0 "Who does they think they are to dictate our own politics?"
+ aov_austria.2.t:0 "Germany Puts Pressure on us"
+ aov_austria.2.d:0 "Summoned to an meeting in Bavaria a few days ago by the Führer of the German Reich himself, [AUS.GetLeader] attended and was greeted, with minimal courtesy, not only by [GER.GetLeader] but also by many high ranking German commanders. The meeting had hardly begun when the chancellor found himself already under the invective of his counterpart, [GER.GetLeader] making no secret of his desire to unite his native country with the rest of Germany. \n\nIn the afternoon [AUS.GetLeader] was utlimately presented with a "non-negotiable agreement": among other things the Austria Nazi party is to be made legal, a general amnesty for imprisoned Nazis is to be declared and several prominent Austria Nazis are to be appointed to key positions." 
+ aov_austria.2.a:0 "Looks like we don't really have a choice..."
+ aov_austria.2.b:0 "Who does they think they are to dictate our own politics?"
  
- austria.3.t:0 "[AUS.GetLeader] Bends"
- austria.3.d:0 "Austria seems to have kindly accepted and implemented our conditions. But we are still far from our goal, we must harden the pressure and rally the Austrian population, another of his notorious speeches by the Führer would be perfect."
- austria.3.a:0 "This was just the first step."
+ aov_austria.3.t:0 "[AUS.GetLeader] Bends"
+ aov_austria.3.d:0 "Austria seems to have kindly accepted and implemented our conditions. But we are still far from our goal, we must harden the pressure and rally the Austria population, another of his notorious speeches by the Führer would be perfect."
+ aov_austria.3.a:0 "This was just the first step."
  
- austria.4.t:0 "[AUS.GetLeader] Resists"
- austria.4.d:0 "Despite the show of force made to the Austrian Chancellor, it seems that he has not implemented any of our demands. On the contrary, he has strengthened the measures against the Austrian Nazi party. \n\nThe Führer is furious, and has called for a final ultimatum to be issued to Vienna and for the army to prepare to cross the border."
- austria.4.a:0 "They shall see what it costs to stand up to us!"
+ aov_austria.4.t:0 "[AUS.GetLeader] Resists"
+ aov_austria.4.d:0 "Despite the show of force made to the Austrian Chancellor, it seems that he has not implemented any of our demands. On the contrary, he has strengthened the measures against the Austrian Nazi party. \n\nThe Führer is furious, and has called for a final ultimatum to be issued to Vienna and for the army to prepare to cross the border."
+ aov_austria.4.a:0 "They shall see what it costs to stand up to us!"
  
- austria.5.t:0 "Hitler Further Hardens German Claims"
- austria.5.d:0 "Despite the fact that we have acceded to their demands, the Germans still continue to pressure us and in a speech in the Reichstag Hitler once again reiterated his claims on our country. It now seems quite clear that the Nazis will only be satisfied with the complete loss of Austria's sovereignty to Germany..."
- austria.5.a:0 "That's it, we can't just stand by and do nothing!"
- austria.5.b:0 "That's it, we can't just stand by and do nothing!"
+ aov_austria.5.t:0 "[GER.GetLeader] Further Hardens German Claims"
+ aov_austria.5.d:0 "Despite the fact that we have acceded to their demands, the Germans still continue to pressure us and in a speech in the Reichstag [GER.GetLeader] once again reiterated his claims on our country. It now seems quite clear that the Nazis will only be satisfied with the complete loss of Austria's sovereignty to Germany..."
+ aov_austria.5.a:0 "That's it, we can't just stand by and do nothing!"
+ aov_austria.5.b:0 "That's it, we can't just stand by and do nothing!"
  
  
- austria.6.t:0 "[AUS.GetLeader] Organizes a Referendum"
- austria.6.d:0 "The past 2 weeks have been trying for the the Austrian Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats. Meanwhile the actions of the Austrian Nazis have only escalated in violence and the German pressure has been getting stronger day by day. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and without the approval of his ministers, to organise a referendum among the population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
- austria.6.a:0 "This is our final hope."
+ aov_austria.6.t:0 "[AUS.GetLeader] Organizes a Referendum"
+ aov_austria.6.d:0 "The past 2 weeks have been trying for the the Austria Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats. Meanwhile the actions of the Austria Nazis have only escalated in violence and the German pressure has been getting stronger day by day. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and without the approval of his ministers, to organise a referendum among the population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
+ aov_austria.6.a:0 "This is our final hope."
  
- austria.7.t:0 "[AUS.GetLeader] Organizes a Referendum"
- austria.7.d:0 "The past 2 weeks have been trying for the the Austrian Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats while we continue to pressure him. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and to the general surprise, to organise a referendum among the austrian population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
- austria.7.a:0 "How dare he?! Send an ultimatum to cancel this joke!"
+ aov_austria.7.t:0 "[AUS.GetLeader] Organizes a Referendum"
+ aov_austria.7.d:0 "The past 2 weeks have been trying for the the Austria Chancellor, who has been desperately struggling to find support, even to the point of approaching the social-democrats while we continue to pressure him. \n\nIn a last desperate move, [AUS.GetLeader] decided in a speech and to the general surprise, to organise a referendum among the Austria population about the approval of the Anschluss while setting the minimum age to vote at 25 in the hope of obtaining a majority, the youngest being the most committed to Nazism."
+ aov_austria.7.a:0 "How dare he?! Send an ultimatum to cancel this joke!"
  
- austria.8.t:0 "German Ultimatum - Cancel The Referendum!"
- austria.8.d:0 "On hearing the news, Berlin went into a rage and quickly sent us an ultimatum demanding the cancellation of the referendum, or otherwise we would face "serious consequences"."
- austria.8.a:0 "Me must avoid an invasion at all cost."
- austria.8.b:0 "Austria is a sovereign nation, and will do what must be done to remain one!"
+ aov_austria.8.t:0 "German Ultimatum - Cancel The Referendum!"
+ aov_austria.8.d:0 "On hearing the news, Berlin went into a rage and quickly sent us an ultimatum demanding the cancellation of the referendum, or otherwise we would face "serious consequences"."
+ aov_austria.8.a:0 "Me must avoid an invasion at all cost."
+ aov_austria.8.b:0 "Austria is a sovereign nation, and will do what must be done to remain one!"
  
- austria.9.t:0 "Austria Complies"
- austria.9.d:0 "Faced with the threat of arms, the Austrians had no choice but to cancel the referendum. But the affront is total and furthermore measures have to be taken to finally achieve the Anschluss. We will therefore modify our ultimatum, this time demanding the resignation of [AUS.GetLeader] and his replacement as Austrian Chancellor by Herr Seyss-Inquart, an eminent Nazi devoted to our cause."
- austria.9.a:0 "Austrian brothers, your liberation is near!"
+ aov_austria.9.t:0 "Austria Complies"
+ aov_austria.9.d:0 "Faced with the threat of arms, the Austrias had no choice but to cancel the referendum. But the affront is total and furthermore measures have to be taken to finally achieve the Anschluss. We will therefore modify our ultimatum, this time demanding the resignation of [AUS.GetLeader] and his replacement as Austria Chancellor by Herr Seyss-Inquart, an eminent Nazi devoted to our cause."
+ aov_austria.9.a:0 "Austria brothers, your liberation is near!"
  
- austria.10.t:0 "Austria Resists"
- austria.10.d:0 "The Austrian government publicly refused and denied everything, appealing to their rights as a sovereign nation "to prevent any external shenanigans harmful to the nation"! These fools leave us with no other choice, we will launch a coup that will quickly put an end to this ridiculous situation."
- austria.10.a:0 "Seyss-Inquart will do what is necessary to serve the interests of the german people."
+ aov_austria.10.t:0 "Austria Resists"
+ aov_austria.10.d:0 "The Austria government publicly refused and denied everything, appealing to their rights as a sovereign nation "to prevent any external shenanigans harmful to the nation"! These fools leave us with no other choice, we will launch a coup that will quickly put an end to this ridiculous situation."
+ aov_austria.10.a:0 "Seyss-Inquart will do what is necessary to serve the interests of the german people."
  
  austrian_coup.1.t:0 "Austria Presses For Anschluss"
  austrian_coup.1.d:0 "Although the coup did not take place under perfect conditions, it was a resounding victory and was supported by the vast majority of the Austrian population. Now that the position of the Nazi party in Vienna is consolidated, the final step can be made for the completion of the Anschluss."
  austrian_coup.1.a:0 "Who can say that Austria is not German?"
  
- austria.11.t:0 "Germany Reformulates It's Ultimatum"
- austria.11.d:0 "It would appear that the Germans did not take the Chancellor's actions very well. Clearly determined this time to get it over with once and for all, the Germans sent us a final ultimatum; [AUS.GetLeader] must resign from office and Arthur Seyss-Inquart, one of the leading Austrian Nazis, must be appointed at his post. This is an obvious and crude coup d'état, but we knew that it would happen sooner or later anyway."
- austria.11.a:0 "It is the only thing to do to avoid an unnecessary bloodshed..."
- austria.11.b:0 "We shall give them a proper welcome if they dare to cross the border."
+ aov_austria.11.t:0 "Germany Reformulates It's Ultimatum"
+ aov_austria.11.d:0 "It would appear that the Germans did not take the Chancellor's actions very well. Clearly determined this time to get it over with once and for all, the Germans sent us a final ultimatum; [AUS.GetLeader] must resign from office and Arthur Seyss-Inquart, one of the leading Austrian Nazis, must be appointed at his post. This is an obvious and crude coup d'état, but we knew that it would happen sooner or later anyway."
+ aov_austria.11.a:0 "It is the only thing to do to avoid an unnecessary bloodshed..."
+ aov_austria.11.b:0 "We shall give them a proper welcome if they dare to cross the border."
  
  
- austria.14.t:0 "The Anschluss of Austria"
- austria.14.d:0 "Despite the Chancellors's willingness to resign the Austrian President initially refused, but under peaking pressure from us finally agreed, and the Chancellor retired after a final speech. \n\nUpon hearing this news, Vienna immediately descended into chaos, with the mob spontaneously turning against jewish citizens, molesting them and destroying their businesses, while the Austrian Nazis were effectively taking over public buildings throughout the country. \n\nMeanwhile, the President, who was now refusing to appoint [AUS.GetLeader], finally came to realise that all was lost and proceded. A few hours later the Wehrmacht crossed the border under the cheers; in the early hours of the morning Austria as a country had ceased to exist."
- austria.14.a:0 "Who can say that Austria is not German?"
+ aov_austria.14.t:0 "The Anschluss of Austria"
+ aov_austria.14.d:0 "Despite the Chancellors's willingness to resign the Austrian President initially refused, but under peaking pressure from us finally agreed, and the Chancellor retired after a final speech. \n\nUpon hearing this news, Vienna immediately descended into chaos, with the mob spontaneously turning against jewish citizens, molesting them and destroying their businesses, while the Austrian Nazis were effectively taking over public buildings throughout the country. \n\nMeanwhile, the President, who was now refusing to appoint [AUS.GetLeader], finally came to realise that all was lost and proceded. A few hours later the Wehrmacht crossed the border under the cheers; in the early hours of the morning Austria as a country had ceased to exist."
+ aov_austria.14.a:0 "Who can say that Austria is not German?"
  
  
- austria.15.t:0 "The Anschluss of Austria"
- austria.15.d:0 "After the ultimatum had passed without any reaction from [AUS.GetLeader], the Wehrmacht was ordered to cross the border while the Austrian Nazis quickly took over many public buildings throughout the country. The German army was welcomed without a single shot despite direct orders from Vienna to repel the invasion and was even cheered by the population. \n\nFurthermore, on the announcement of the takeover and as the Wehrmacht was rapidly approaching it, the Austrian capital suddenly descended into complete chaos with mobs  lynching the remnants of the Austrian government and spontaneously turning against Jewish citizens, molesting them and destroying their businesses. \n\nThe next morning we controlled the entire territory and Austria as a country had ceased to exist."
- austria.15.a:0 "Who can say that Austria is not German?"
+ aov_austria.15.t:0 "The Anschluss of Austria"
+ aov_austria.15.d:0 "After the ultimatum had passed without any reaction from [AUS.GetLeader], the Wehrmacht was ordered to cross the border while the Austrian Nazis quickly took over many public buildings throughout the country. The German army was welcomed without a single shot despite direct orders from Vienna to repel the invasion and was even cheered by the population. \n\nFurthermore, on the announcement of the takeover and as the Wehrmacht was rapidly approaching it, the Austrian capital suddenly descended into complete chaos with mobs  lynching the remnants of the Austrian government and spontaneously turning against Jewish citizens, molesting them and destroying their businesses. \n\nThe next morning we controlled the entire territory and Austria as a country had ceased to exist."
+ aov_austria.15.a:0 "Who can say that Austria is not German?"
  
  
  #############################################################
@@ -156,8 +155,6 @@
  frankfurt_conference.2.b:0 "Well WE do not agree!"
  frankfurt_conference.2.c:0 "Very well, let's also give our approval."
  frankfurt_conference.2.d:0 "Well WE do not agree!"
- 
- must_be_a_majority_tt: "
  
  frankfurt_conference.3.t:0 "The Frankfurt Conference - Germany Ask For a Plebiscite To Be Held"
  frankfurt_conference.3.desc:0 "As the Austrian crisis was escalating a conference has been organized in Frankfurt between the concerned nations to try and settle it diplomatically, at the end of wich the germans issued a final demand: they want a plebiscite to be held under our supervision in Austria on the Anschluss question. \n\nThis would make it possible to settle the conflict without bloodshed, but there is every reason to believe that such a plebiscite would be largely in Germany's favour anyway, and furthermore this union remains completely forbidden by the two treaties, regardless of whether the Austrian people are for or against it. \n\nThe British have already refused, declaring that their decision on the matter is final and irrevocable, how should we react?"
@@ -332,7 +329,7 @@
  AOV_news.408.e:0 "The Germans were thaught a lesson they will remember."
  AOV_news.408.f:0 "Long live independent Austria!"
  
- AOV_news.409.title:0 "The Austrian Crisis Escalates" #Mediation Option refused, germany goes to war with austria
+ AOV_news.409.title:0 "The Austrian Crisis Escalates" #Mediation Option refused, germany goes to war with Austria
  AOV_news.409.desc:0 "As the Reich's claims on Austria were growing increasingly stronger in recent times, the different nations guaranteeing Austrian integrity in the hope of being able to resolve diplomatically what was now called the Austrian crisis, initiated calls for negotiations, which unfortunately went unanswered. \n\nAs Germany is looking like it will not back down despite the theats, a new war in Europe now seems imminent."
  AOV_news.409.a:0 "Worrying."
  AOV_news.409.b:0 "Austria is rightfull German land and we will get it one way or another!"
