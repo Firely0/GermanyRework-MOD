@@ -155,6 +155,7 @@ country_event = {
 			country_event = { days = 15 id = aov_austria.6 }
 		}
 	}
+
 	option = {
 		name = aov_austria.5.b #we must fight back! (alt)
 		trigger = {
@@ -189,7 +190,7 @@ country_event = {
 	option = {
 		name = aov_austria.6.a #the people will give us reason! (his)
 		GER = {
-			country_event = { id = aov_austria.7 }
+			country_event = { id = aov_austria.7 hours = 2 }
 		}
 	}
 }
@@ -206,7 +207,7 @@ country_event = {
 	option = {
 		name = aov_austria.7.a #wtf ur doing Austria
 		AUS = {
-			country_event = { id = aov_austria.8 }
+			country_event = { id = aov_austria.8 hours = 2 }
 		}
 	}
 }
@@ -238,7 +239,7 @@ country_event = {
 		}
 		add_stability = -0.10
 		GER = {
-			country_event = { id = aov_austria.9 }
+			country_event = { id = aov_austria.9 hours = 2 }
 		}
 	}
 	option = {
@@ -251,7 +252,7 @@ country_event = {
 			}
 		}
 		GER = {
-			country_event = { id = aov_austria.10 }
+			country_event = { id = aov_austria.10 hours = 2 }
 		}
 	}
 }
@@ -268,7 +269,7 @@ country_event = {
 	option = {
 		name = aov_austria.9.a
 		AUS = {
-			country_event = { id = aov_austria.11 }
+			country_event = { id = aov_austria.11 hours = 2 }
 		}
 	}
 }
@@ -373,7 +374,7 @@ country_event = {
 		}
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		GER = {
-			country_event = { id = aov_austria.14 }
+			country_event = { id = aov_austria.14 hours = 2 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
@@ -387,7 +388,7 @@ country_event = {
 			}
 		}
 		GER = {
-			country_event = { id = aov_austria.10 }
+			country_event = { id = aov_austria.10 hours = 2 }
 		}
 	}
 }

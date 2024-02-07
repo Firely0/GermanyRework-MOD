@@ -161,7 +161,6 @@ foreign_civilian_oversight = {
 	}
 }
 
-
 local_police_force_garrison = {
 	icon = 11
 	sound_effect = "Martial_Law_Interface_Local_Police_Force_Garrison"
@@ -273,6 +272,46 @@ military_governor_occupation = {
 
 		#	add = 150
 		#}
+		modifier = {
+			check_variable  = { resistance_target_without_law > 0.24}
+			add = 400
+		}
+		
+		modifier = {
+			check_variable  = { resistance_target_without_law > 0.34}
+
+			set_temp_variable = { requirement_limit = 0.25 }
+			if = {
+				limit = { occupation_law = military_governor_occupation }
+				set_temp_variable = { requirement_limit = 0.45 }
+			}
+			check_variable = { garrison_min_support_ratio < requirement_limit }
+
+			add = 400
+		}
+		
+	}
+}
+
+GER_military_governor_occupation = {
+	icon = 6
+	sound_effect = "Martial_Law_Interface_Military_Governor_Occupation"
+	visible = {
+		original_tag = GER
+		has_completed_focus = GER_Military_Police
+	}
+	
+	state_modifier = {
+		resistance_target 			= -0.45
+		compliance_gain 			= -0.04
+		required_garrison_factor 	= 0.0
+		local_factories 			= 0.05
+		local_resources 			= 0.10
+		local_manpower 				= 0.08
+	}
+	ai_will_do = {
+		base = 0
+
 		modifier = {
 			check_variable  = { resistance_target_without_law > 0.24}
 			add = 400
@@ -760,48 +799,6 @@ ss_police_final_sov = {
 
 	ai_will_do = {
 		base = 1000
-	}
-}
-
-#Ger Custom Military Governor
-
-GER_military_governor_occupation = {
-	icon = 6
-	sound_effect = "Martial_Law_Interface_Military_Governor_Occupation"
-	visible = {
-		original_tag = GER
-		has_completed_focus = GER_Military_Police
-	}
-	
-	state_modifier = {
-		resistance_target 			= -0.45
-		compliance_gain 			= -0.04
-		required_garrison_factor 	= 0.0
-		local_factories 			= 0.05
-		local_resources 			= 0.10
-		local_manpower 				= 0.08
-	}
-	ai_will_do = {
-		base = 0
-
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.24}
-			add = 400
-		}
-		
-		modifier = {
-			check_variable  = { resistance_target_without_law > 0.34}
-
-			set_temp_variable = { requirement_limit = 0.25 }
-			if = {
-				limit = { occupation_law = military_governor_occupation }
-				set_temp_variable = { requirement_limit = 0.45 }
-			}
-			check_variable = { garrison_min_support_ratio < requirement_limit }
-
-			add = 400
-		}
-		
 	}
 }
 

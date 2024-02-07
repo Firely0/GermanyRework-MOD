@@ -6297,7 +6297,7 @@ focus_tree = {
 			add_political_power = 25
 			every_country = {
 				limit = {
-					is_faction_leader = yes
+					is_faction_leader = yes NOT = { tag = GER }
 				}
 				add_opinion_modifier = {
 					target = GER
@@ -6620,7 +6620,7 @@ focus_tree = {
 			add_political_power = 25
 			every_country = {
 				limit = {
-					is_faction_leader = yes
+					is_faction_leader = yes NOT = { tag = GER }
 				}
 				add_opinion_modifier = {
 					target = GER
@@ -7205,7 +7205,7 @@ focus_tree = {
 			add_political_power = 50
 			every_country = {
 				limit = {
-					is_faction_leader = yes
+					is_faction_leader = yes NOT = { tag = GER }
 				}
 				add_opinion_modifier = {
 					target = GER
@@ -7436,6 +7436,7 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			unlock_decision_category_tooltip = GER_Africa_Operations
 			if = {
 				limit = {
 					448 = {
@@ -7530,7 +7531,6 @@ focus_tree = {
 				}
 				set_state_flag = LIBYA_LOGISTICS_STATE
 			}
-			unlock_decision_category_tooltip = GER_Africa_Operations
 			449 = {
 				add_building_construction = {
 					type = radar_station
@@ -9607,7 +9607,7 @@ focus_tree = {
 			add_political_power = 50
 			every_country = {
 				limit = {
-					is_faction_leader = yes
+					is_faction_leader = yes NOT = { tag = GER }
 				}
 				add_opinion_modifier = {
 					target = GER
@@ -9939,21 +9939,6 @@ focus_tree = {
 					}
 					if = {
 						limit = {
-							has_dlc = "Together for Victory"
-							NOT = {
-								has_dlc = "Death or Dishonor"
-							}
-						}
-						set_autonomy = {
-							target = HUN
-							autonomy_state = autonomy_Overthrown_Government
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_dlc = "Together for Victory"
-							}
 							NOT = {
 								has_dlc = "Death or Dishonor"
 							}
@@ -10051,18 +10036,6 @@ focus_tree = {
 					if = {
 						limit = {
 							has_dlc = "Death or Dishonor"
-						}
-						set_autonomy = {
-							target = ROM
-							autonomy_state = autonomy_Overthrown_Government
-						}
-					}
-					if = {
-						limit = {
-							has_dlc = "Together for Victory"
-							NOT = {
-								has_dlc = "Death or Dishonor"
-							}
 						}
 						set_autonomy = {
 							target = ROM
@@ -10179,21 +10152,6 @@ focus_tree = {
 					}
 					if = {
 						limit = {
-							has_dlc = "Together for Victory"
-							NOT = {
-								has_dlc = "Death or Dishonor"
-							}
-						}
-						set_autonomy = {
-							target = BUL
-							autonomy_state = autonomy_Overthrown_Government
-						}
-					}
-					if = {
-						limit = {
-							NOT = {
-								has_dlc = "Together for Victory"
-							}
 							NOT = {
 								has_dlc = "Death or Dishonor"
 							}
@@ -10874,13 +10832,11 @@ focus_tree = {
 				show_mio_tooltip = GER_Volkswagen_organization
 				mio:GER_Volkswagen_motorized_organization = {
 					add_mio_size = 2
-					add_mio_funds_gain_factor = 0.2
 				}
 			}
 			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = GER_Volkswagen_t
-				add_ideas = GER_volkswagen_idea
 			}
 			random_owned_controlled_state = {
 				prioritize = {
@@ -11896,6 +11852,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = GER_allow_reforms_in_laws
+			unlock_decision_category_tooltip = New_Laws_fuhrer_category
+			unlock_decision_category_tooltip = New_Laws_wilhelm_category
 			unlock_decision_tooltip = GER_demand_netherlands_puppet
 		}
 	}
@@ -12633,8 +12591,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_category_tooltip = GER_colonial_management_category
-			custom_effect_tooltip = GER_wehrmacht_tt
-			show_ideas_tooltip = GER_military_governor_occupation_idea
+			swap_ideas = {
+				remove_idea = GER_military_governor_occupation_base_idea
+				add_idea = GER_military_governor_occupation_idea
+			}
 		}
 	}
 	focus = {
