@@ -13959,6 +13959,11 @@ focus_tree = {
 						modifier = hostile_status
 					}
 				}
+				diplomatic_relation = {
+					country = SOV
+					relation = non_aggression_pact
+					active = no
+				}
 				add_opinion_modifier = {
 					target = SOV
 					modifier = hostile_status
@@ -13974,10 +13979,6 @@ focus_tree = {
 				remove_opinion_modifier = {
 					target = SOV
 					modifier = improve_relation
-				}
-				remove_opinion_modifier = {
-					target = SOV
-					modifier = SOV_strengthened_relations_with_us
 				}
 				remove_opinion_modifier = {
 					target = SOV
@@ -14000,6 +14001,7 @@ focus_tree = {
 			focus = GER_establish_abwehr
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = {
 				has_completed_focus = GER_establish_abwehr
 			}
@@ -20220,6 +20222,7 @@ focus_tree = {
 			is_subject = no
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = { 
 				OR = {
 					has_completed_focus = GER_establish_abwehr
@@ -20486,6 +20489,7 @@ focus_tree = {
 			focus = GER_expatriate_the_communists
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = {
 				has_completed_focus = GER_expatriate_the_communists
 			}
@@ -21172,6 +21176,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = {
 				OR = {
 					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
@@ -22158,6 +22163,7 @@ focus_tree = {
 			is_subject = no
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = { 
 				OR = {
 					has_completed_focus = GER_establish_abwehr
@@ -22254,6 +22260,7 @@ focus_tree = {
 			has_war = no
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = {
 				has_completed_focus = GER_the_great_red_menace
 			}
@@ -22296,6 +22303,7 @@ focus_tree = {
 			has_added_tension_amount < 15
 		}
 		allow_branch = {
+			has_dlc = "Waking the Tiger"
 			NOT = {
 				has_completed_focus = GER_revange
 			}

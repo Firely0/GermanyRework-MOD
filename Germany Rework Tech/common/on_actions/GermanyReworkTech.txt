@@ -18,6 +18,56 @@ on_actions = {
 				}
 				set_technology = { winter_clothes_gw = 1 popup = no }
 			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = ITA
+						tag = BEL
+						tag = SAU
+						tag = BRA
+						tag = VEN
+						tag = COL
+						tag = ECU
+						tag = PERU
+						tag = BOL
+						tag = CHL
+						tag = ARG
+						tag = URG
+						tag = PAR
+					}
+				}
+				set_technology = { jngdst_clothes_gw = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = ITA
+						tag = GER
+						tag = FIN
+					}
+				}
+				set_technology = { camo = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = ITA
+						tag = GER
+						tag = SOV
+						tag = FIN
+						tag = TUR
+						tag = GRE
+						tag = BUL
+					}
+				}
+				set_technology = { sniper_rifle = 1 popup = no }
+			}
 		}
 	}
 }

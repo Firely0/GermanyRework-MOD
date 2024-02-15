@@ -414,11 +414,12 @@ GER_Operation_Barbarossa_V = {
 GER_Operation_Barbarossa_High_Command = {
 
 	The_Soviet_Winter = {
-		icon = GFX_decision_generic_army_support
+		icon = GFX_decision_generic_cold
 		cancel_if_not_visible = yes
 		days_mission_timeout = 7
 		selectable_mission = no
 		is_good = no
+		priority = 100
 
 		allowed = {
 			tag = GER
@@ -520,7 +521,7 @@ GER_Operation_Barbarossa_High_Command = {
 					limit = {
 						date > 1942.01.01
 						OR = {
-							NOT = { has_tech = winter_clothes_1940 }
+							NOT = { has_tech = winter_clothes_1941 }
 						}
 					}
 					set_country_flag = problems_with_infantry
@@ -568,7 +569,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 	High_Command_Tank_Warfare = {
 		icon = GFX_decision_generic_tank
-		priority = 100 # First
+		priority = 98 # First
 		days_remove = 90
 
 		custom_cost_trigger = {
