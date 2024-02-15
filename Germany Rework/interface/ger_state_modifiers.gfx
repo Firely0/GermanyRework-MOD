@@ -1,0 +1,68 @@
+spriteTypes = {	
+
+	spriteType = {
+        name = "GFX_modifiers_gerflagstate"
+        texturefile = "gfx/interface/state_modifiers/modifiers_gerflagstate.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_sovflagstate"
+        texturefile = "gfx/interface/state_modifiers/modifiers_sovflagstate.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_gerflagcomstate"
+        texturefile = "gfx/interface/state_modifiers/modifiers_gerflagcomstate.dds"
+    }
+    
+    spriteType = {
+        name = "GFX_modifiers_gerflagnonstate"
+        texturefile = "gfx/interface/state_modifiers/modifiers_gerflagnonstate.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_generic_low_supply"
+        texturefile = "gfx/interface/state_modifiers/modifiers_generic_low_supply.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_modifiers_destroyed_city"
+        texturefile = "gfx/interface/state_modifiers/modifiers_destroyed_city.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_burn_state"
+        texturefile = "gfx/interface/state_modifiers/modifiers_burn_state.dds"
+    }
+
+    spriteType = {
+        name = "GFX_modifiers_vichy_state"
+        texturefile = "gfx/interface/state_modifiers/modifiers_vichy_state.dds"
+    }
+
+    spriteType = {
+		name = "GFX_autonomy_africa_colony_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_africa_colony_icon.dds"
+	}
+
+    spriteType = {
+		name = "GFX_autonomy_Overthrown_Government_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
+
+    spriteType = {
+		name = "GFX_autonomy_Overthrown_Government_ITA_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
+
+    spriteType = {
+		name = "GFX_autonomy_loyal_state_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
+
+    spriteType = {
+		name = "GFX_autonomy_reichskommissariat_custom_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichskommissariat_icon.dds"
+	}
+
+}	

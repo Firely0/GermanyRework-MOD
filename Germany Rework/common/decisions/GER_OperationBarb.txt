@@ -1,0 +1,721 @@
+GER_Operation_Barbarossa_V = {
+
+	GER_conquer_Leningrad = {
+		icon = GFX_decision_SOV_lenin
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			OR = {
+				195 = { is_controlled_by_ROOT_or_ally = yes }
+				AND = {
+					FIN = {
+						NOT = { has_war_with = GER }
+						has_war_with = SOV
+						has_completed_focus = FIN_cooperation_with_germany
+					}
+					195 = { is_controlled_by = FIN }
+				}
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195 #Leningrad
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Leningrad_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Misk = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			97 = { is_controlled_by_ROOT_or_ally = yes }
+			206 = { is_controlled_by_ROOT_or_ally = yes }
+			242 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206 #Minsk
+				state = 97 #Bialystok
+				state = 242 #Smolensk
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+	GER_conquer_Moscow = {
+		icon = GFX_decision_SOV_moscow
+
+		allowed = {
+			tag = GER
+		}
+
+		available = { #GOAL
+			219 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219 #Moscow
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Moscow_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.05
+				add_stability = -0.05
+			}
+		}
+	}
+
+	GER_conquer_Kiev = {
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = { #GOAL
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202 #Kiev
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+	GER_conquer_Stalingrad = {
+		icon = GFX_decision_SOV_stalin
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			217 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217 #Stalingrad
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			complete_national_focus = GER_Stalingrad_mission
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_war_support = -0.05
+				add_stability = -0.1
+			}
+		}
+	}
+
+	GER_conquer_Sevastopol = {
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			137 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 137 #Sevastopol
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+		}
+	}
+
+	GER_end_of_phase_one = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			hidden_effect = {
+				GER_readd_barbarossa = yes
+			}
+		}
+
+		complete_effect = {
+		}
+	}
+
+}
+
+GER_Operation_Barbarossa_High_Command = {
+
+	The_Soviet_Winter = {
+		icon = GFX_decision_generic_cold
+		cancel_if_not_visible = yes
+		days_mission_timeout = 7
+		selectable_mission = no
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			has_global_flag = GER_Operation_Barbarossa_running
+			OR = {
+				AND = {
+					date > 1936.12.01
+					date < 1937.03.01
+				}
+				AND = {
+					date > 1937.12.01
+					date < 1938.03.01
+				}
+				AND = {
+					date > 1938.12.01
+					date < 1939.03.01
+				}
+				AND = {
+					date > 1939.12.01
+					date < 1940.03.01
+				}
+				AND = {
+					date > 1940.12.01
+					date < 1941.03.01
+				}
+				AND = {
+					date > 1941.12.01
+					date < 1942.03.01
+				}
+				AND = {
+					date > 1942.12.01
+					date < 1943.03.01
+				}
+				AND = {
+					date > 1943.12.01
+					date < 1944.03.01
+				}
+				AND = {
+					date > 1944.12.01
+					date < 1945.03.01
+				}
+				AND = {
+					date > 1945.12.01
+					date < 1946.03.01
+				}
+			}
+			NOT = {
+				OR = {
+					has_idea = GER_winter_war_harsh_winter
+					has_idea = GER_winter_war_logistics
+					has_idea = GER_winter_war_infantry
+				}
+			}
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_winter_war_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						date < 1942.01.01
+						OR = {
+							NOT = { has_tech = mechanised_infantry }
+							NOT = { has_tech = tech_logistics_company2 }
+						}
+					}
+					set_country_flag = problems_with_logistics
+				}
+				if = {
+					limit = {
+						date < 1942.01.01
+						OR = {
+							NOT = { has_tech = winter_clothes_1939 }
+						}
+					}
+					set_country_flag = problems_with_infantry
+				}
+				if = {
+					limit = {
+						date > 1942.01.01
+						OR = {
+							NOT = { has_tech = mechanised_infantry2 }
+							NOT = { has_tech = tech_logistics_company3 }
+						}
+					}
+					set_country_flag = problems_with_logistics
+				}
+				if = {
+					limit = {
+						date > 1942.01.01
+						OR = {
+							NOT = { has_tech = winter_clothes_1941 }
+						}
+					}
+					set_country_flag = problems_with_infantry
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = problems_with_logistics
+					has_country_flag = problems_with_infantry
+				}
+				add_timed_idea = {
+					idea = GER_winter_war_harsh_winter
+					days = 90
+				}
+				clr_country_flag = problems_with_logistics
+				clr_country_flag = problems_with_infantry
+			}
+			if = {
+				limit = {
+					has_country_flag = problems_with_logistics
+					NOT = { has_country_flag = problems_with_infantry }
+				}
+				add_timed_idea = {
+					idea = GER_winter_war_logistics
+					days = 90
+				}
+				clr_country_flag = problems_with_logistics
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = problems_with_logistics }
+					has_country_flag = problems_with_infantry
+				}
+				add_timed_idea = {
+					idea = GER_winter_war_infantry
+					days = 90
+				}
+				clr_country_flag = problems_with_infantry
+			}
+		}
+
+		complete_effect = {
+		}
+	}
+
+	High_Command_Tank_Warfare = {
+		icon = GFX_decision_generic_tank
+		priority = 98 # First
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 40 # Small Chance for AI
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+			has_completed_focus = GER_Lighting_Strike
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		modifier = { # Use Tank Warfare
+			army_armor_speed_factor = 0.05
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			breakthrough_bonus_against = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+	High_Command_land_combat = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		priority = 95
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.05
+		}
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+	High_Command_prio_Luftwaffe = {
+		icon = GFX_decision_generic_air
+		priority = 90
+		days_remove = 90
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_19
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+			NOT = { has_country_flag = High_Command_Issued_Orders }
+			OR = {
+				has_completed_focus = GER_Strategic_Des
+				has_completed_focus = GER_CAS
+				has_completed_focus = GER_Operational_Integratiy
+			}
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+		}
+
+		modifier = { # Trust Luftwaffe Again..
+			ace_effectiveness_factor = 0.1
+			air_close_air_support_attack_factor = 0.1
+			air_cas_efficiency = 0.05
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				set_country_flag = High_Command_Issued_Orders
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = High_Command_Issued_Orders
+			}
+		}
+	}
+
+}
