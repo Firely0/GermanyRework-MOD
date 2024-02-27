@@ -34,42 +34,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		path = {
-			leads_to_tech = sniper_rifle
 			leads_to_tech = sniper_rifle
 			research_cost_coeff = 1
 		}
-		
 		
 		research_cost = 1.5
 		start_year = 1918
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = -1 }
-		}
-		
-		categories = {
-			infantry_weapons
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	sniper_rifle = {
-
-		category_all_infantry = {
-			soft_attack = 0.01
-			recon = 0.05
-		}
-		
-		research_cost = 1.5
-		start_year = 1918
-		folder = {
-			name = infantry_folder
-			position = { x = 2 y = @1918 }
 		}
 		
 		categories = {
@@ -497,15 +471,11 @@ technologies = {
 	}
 	
 
-	infantry_at = {
+	winter_clothes_gw = {
 
-		category_all_infantry = {
-			hard_attack = 0.25
-			ap_attack = 1
-		}
-		
+
 		path = {
-			leads_to_tech = infantry_at2
+			leads_to_tech = winter_clothes_1939
 			research_cost_coeff = 1
 		}		
 
@@ -515,10 +485,10 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1942
+		start_year = 1918
 		folder = {
 			name = infantry_folder
-			position = { x = 2 y = @1942 }
+			position = { x = 0 y = @1918 }
 		}
 		
 		categories = {
@@ -542,9 +512,9 @@ technologies = {
 			acclimatization_cold_climate_gain_factor = 0.05
 			winter_attrition_factor = -0.1
 		}
-		
+
 		research_cost = 1.5
-		start_year = 1943
+		start_year = 1939
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1939 }
@@ -557,20 +527,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
-				factor = 2
-				date > "1943.1.6"
+				factor = 0
+				tag = GER
+				date < "1942.06.01"
 			}
 			
 			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
+				factor = 0
+				date < "1941.01.01"
 			}
 		}
 	}
@@ -616,10 +581,8 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1944
-		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1944 }
 			position = { x = 0 y = @1944 }
 		}
 		
@@ -650,7 +613,6 @@ technologies = {
 		start_year = 1918
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1918 }
 			position = { x = 0 y = @1918 }
 		}
 		

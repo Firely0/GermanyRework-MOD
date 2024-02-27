@@ -1415,9 +1415,9 @@ GER_Rhineland_demilitarized = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 5
 			modifier = {
-				factor = 10000
+				factor = 95
 				has_idea = hjalmar_schacht
 			}
 		}
@@ -1453,9 +1453,9 @@ GER_Rhineland_demilitarized = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 5
 			modifier = {
-				factor = 10000
+				factor = 95
 				has_idea = hjalmar_schacht
 			}
 		}

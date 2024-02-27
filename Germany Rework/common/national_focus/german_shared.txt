@@ -1568,7 +1568,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_crossing_the_atlantic_a
-	icon = GFX_goal_prepare_for_the_next_blockade
+	icon = GFX_focus_spa_the_war_of_vengeance
 	text = GER_crossing_the_atlantic
 	prerequisite = { focus = GER_naval_air_effort_a focus = GER_pride_of_the_modern_germany_a }
 	relative_position_id = GER_plan_z_a
@@ -1705,6 +1705,21 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 	completion_reward = {
 		navy_experience = 25
+		if = {
+			limit = {
+				has_idea = Landon_Treaty
+			}
+			swap_ideas = {
+				remove_idea = Landon_Treaty
+				add_idea = Landon_Treaty_sub_focus
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			set_technology = { cruiser_submarines = 1 popup = no }
+		}
 		random_owned_controlled_state = {
 			limit = {
 				dockyard > 0
@@ -1721,21 +1736,6 @@ shared_focus = {
 				instant_build = yes
 			}
 			set_state_flag = GER_u_boat_effort_2dockyards
-		}
-		if = {
-			limit = {
-				has_idea = Landon_Treaty
-			}
-			swap_ideas = {
-				remove_idea = Landon_Treaty
-				add_idea = Landon_Treaty_sub_focus
-			}
-		}
-		if = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
-			set_technology = { cruiser_submarines = 1 popup = no }
 		}
 	}
 }
@@ -1998,6 +1998,7 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		add_ideas = GER_technocracy_idea
 		add_tech_bonus = {
 			name = GER_technocracy
 			bonus = 1.0
@@ -2005,7 +2006,6 @@ shared_focus = {
 			uses = 1
 			category = electronics
 		}
-		add_ideas = GER_technocracy_idea
 	}
 }
 
@@ -4196,12 +4196,6 @@ shared_focus = {
 			uses = 1
 			category = cas_bomber
 		}
-		add_doctrine_cost_reduction = {
-			name = op_dest_bonus
-			cost_reduction = 0.25
-			uses = 2
-			category = battlefield_support_tree
-		}
 	}
 }
 
@@ -5248,7 +5242,6 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 		hidden_effect = {
 			set_technology = { masterful_blitz_GERV = 1 popup = no }
 		}
@@ -5294,6 +5287,7 @@ shared_focus = {
 				design_team = mio:GER_Mercedes_benz_organization
 			}
 		}
+		custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 	}
 }
 
@@ -6026,70 +6020,72 @@ shared_focus = {
 				# Trade influence with the USSR? Or simply let the opinion mod do the work
 				give_SOV_armor_research_bonuses = yes
 			}
-		}
-		if = {
-			limit = {
-				has_dlc = "No Step Back"
-			}
-			effect_tooltip = {
-				create_equipment_variant = {
-					name = "Panzer III Ausf. A"
-					type = medium_tank_chassis_1
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-						special_type_slot_2 = smoke_launchers
+			GER = {
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
 					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 3
+					effect_tooltip = {
+						create_equipment_variant = {
+							name = "Panzer III Ausf. A"
+							type = medium_tank_chassis_1
+							parent_version = 0
+							modules = {
+								main_armament_slot = tank_high_velocity_cannon
+								turret_type_slot = tank_medium_three_man_tank_turret
+								suspension_type_slot = tank_bogie_suspension
+								armor_type_slot = tank_welded_armor
+								engine_type_slot = tank_gasoline_engine
+								special_type_slot_1 = tank_radio_1
+								special_type_slot_2 = smoke_launchers
+							}
+							upgrades = {
+								tank_nsb_engine_upgrade = 6
+								tank_nsb_armor_upgrade = 3
+							}
+							icon = "GFX_GER_basic_medium_tank_medium"
+						}
+						create_equipment_variant = {
+							name = "Panzer IV Ausf. A"
+							type = medium_tank_chassis_1
+							parent_version = 1
+							modules = {
+								main_armament_slot = tank_close_support_gun
+								turret_type_slot = tank_medium_three_man_tank_turret
+								suspension_type_slot = tank_bogie_suspension
+								armor_type_slot = tank_welded_armor
+								engine_type_slot = tank_gasoline_engine
+								special_type_slot_1 = tank_radio_1
+								special_type_slot_2 = smoke_launchers
+							}
+							upgrades = {
+								tank_nsb_engine_upgrade = 6
+								tank_nsb_armor_upgrade = 2
+							}
+							icon = "GFX_GER_basic_medium_tank_medium"
+						}
+						add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 2
+							category = armor
+						}
 					}
-					icon = "GFX_GER_basic_medium_tank_medium"
 				}
-				create_equipment_variant = {
-					name = "Panzer IV Ausf. A"
-					type = medium_tank_chassis_1
-					parent_version = 1
-					modules = {
-						main_armament_slot = tank_close_support_gun
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-						special_type_slot_2 = smoke_launchers
+				else = {
+					effect_tooltip = {
+						add_tech_bonus = {
+							name = med_armor_bonus
+							ahead_reduction = 1
+							category = cat_medium_armor
+						}
+						add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 2
+							category = armor
+						}
 					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 2
-					}
-					icon = "GFX_GER_basic_medium_tank_medium"
-				}
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 1.0
-					uses = 2
-					category = armor
-				}
-			}
-		}
-		else = {
-			effect_tooltip = {
-				add_tech_bonus = {
-					name = med_armor_bonus
-					ahead_reduction = 1
-					category = cat_medium_armor
-				}
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 1.0
-					uses = 2
-					category = armor
 				}
 			}
 		}

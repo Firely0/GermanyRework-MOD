@@ -19,7 +19,7 @@ GER_reichskommissariats = {
 
 SS_recruitment = {
 	icon = GFX_decision_category_ger_reichskommissariats
-	priority = 23
+	priority = 24
 	visible_when_empty = yes
 	
 	allowed = {
@@ -43,7 +43,7 @@ SS_recruitment = {
 }
 
 SS_loot = {
-	priority = 24
+	priority = 23
 	allowed = {
 		original_tag = GER
 	}

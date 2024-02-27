@@ -247,7 +247,7 @@
  
  #German Training Program
  
- GER_training_program:0 "German Military Training Programs"
+ GER_training_program:0 "Military Training Programs"
  GER_SOV_TRAINING:0 "German-Soviet Air Training Program"
  GER_ITA_TRAINING:0 "German-Italian Naval Training Program"
 
@@ -1781,7 +1781,7 @@
  Wehrmacht_Main_Tank_2:0 "$Wehrmacht_dynamic_modifier$"
  Wehrmacht_Main_Tank_2_desc:0 "[ROOT.wehrmacht_ss_status]"
 
- GER_Wehrmacht_tt:0 "Modify §Y$Wehrmacht_dynamic_modifier$§! by"
+ GER_Wehrmacht_tt:0 "Modify £wehrmacht_texticon §Y$Wehrmacht_dynamic_modifier$§! by"
  GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon Conscription: §G+3.0§! \n£army_experience Army Experience Gain §R-10.0%§! \n\n"
  GER_Basic_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-5.0%§! \n£manpower_texticon Conscription Factor: §Y+20.0%§! \n\n"
  GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.0%§! \n£training_speed_texticon Minimum Training Level: §R-10.0%§! \n£manpower_texticon Conscription Factor: §Y+10.0%§! \n\n"
@@ -1813,7 +1813,7 @@
  SS_forces_dynamic_modifier_desc:0 "[ROOT.ss_wehrmacht_status]"
  SS_forces_1_dynamic_modifier:0 "Schutzstaffel Forces"
  SS_forces_1_dynamic_modifier_desc:0 "[ROOT.ss_wehrmacht_status]"
- GER_SS_Soldiers_tt:0 "Modify §Y$SS_forces_dynamic_modifier$§! by"
+ GER_SS_Soldiers_tt:0 "Modify £ss_texticon §Y$SS_forces_dynamic_modifier$§! by"
 
  GER_SS_Search_modify_tt:0 "$GER_SS_Soldiers_tt$ \n£recon_texticon Recon Factor §Y+5.0%§! \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n\n"
  GER_SS_Field_modify_tt:0 "$GER_SS_Soldiers_tt$ \n£trickleback_texticon Field Hospital Trickleback: §G+20%§!\n£experience_loss_texticon Exp. Loss Factor: §G-20%§!! \n\n"
