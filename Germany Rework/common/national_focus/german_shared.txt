@@ -37,31 +37,29 @@ shared_focus = {
 		50 = {
 			if = {
 				limit = { is_controlled_by = ROOT }
-				hidden_effect = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11640
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 6712
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 6542
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3530
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11640
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6712
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6542
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3530
+					instant_build = yes
 				}
 			}
 		}
@@ -1354,37 +1352,65 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Flugzeugträger B"
-			type = ship_hull_carrier_conversion_bb
-			name_group = GER_CV_HISTORICAL
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = carrier_ship_engine_1
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				mid_1_custom_slot = ship_deck_space
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
 			}
-		}
-		add_equipment_production = {
-			equipment = {
+			create_equipment_variant = {
+				name = "Flugzeugträger B"
 				type = ship_hull_carrier_conversion_bb
-				creator = "GER"
-				version_name = "Flugzeugträger B"
+				name_group = GER_CV_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = carrier_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					mid_1_custom_slot = ship_deck_space
+				}
 			}
-			name = "Flugzeugträger B"
-			requested_factories = 1
-			progress = 0
-			amount = 1
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_conversion_bb
+					creator = "GER"
+					version_name = "Flugzeugträger B"
+				}
+				name = "Flugzeugträger B"
+				requested_factories = 1
+				progress = 0
+				amount = 1
+			}
 		}
+		else = {
+			create_equipment_variant = {
+				name = "Flugzeugträger B"
+				type = carrier_2
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					ship_deckspace_upgrade = 2
+					ship_engine_upgrade = 2
+				}
+			}
+			add_equipment_production = {
+				equipment = {
+					type = carrier_2
+					creator = "GER"
+					version_name = "Flugzeugträger B"
+				}
+				name = "Flugzeugträger B"
+				requested_factories = 5
+				progress = 0.80
+				amount = 1
+			}
+		}
+		custom_effect_tooltip = GER_Graf_Zeppelin_Modify
 		set_variable = { GER_navy_carrier_air_attack_factor = 0.05 }
 		add_to_variable = { GER_navy_carrier_air_agility_factor = 0.05 }
 		set_variable = { GER_navy_carrier_air_targetting_factor = 0.05 }
-		custom_effect_tooltip = GER_Graf_Zeppelin_Modify
 	}
 }
 
@@ -1436,37 +1462,68 @@ shared_focus = {
 	}
 	completion_reward = {
 		unlock_decision_tooltip = Operation_Rheinubung
-		create_equipment_variant = {
-			name = "Bismarck Class"
-			type 	= ship_hull_heavy_2
-			name_group = GER_BB_HISTORICAL
-			allow_without_tech = yes
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_3
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = heavy_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				fixed_ship_armor_slot = ship_armor_bb_2
-				front_1_custom_slot = ship_anti_air_1
-				mid_1_custom_slot = ship_airplane_launcher_1
-				mid_2_custom_slot = ship_secondaries_2
-				rear_1_custom_slot = ship_heavy_battery_3
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
 			}
-			design_team = mio:GER_blohm_und_voss_organization
+			create_equipment_variant = {
+				name = "Bismarck Class"
+				type 	= ship_hull_heavy_2
+				name_group = GER_BB_HISTORICAL
+				allow_without_tech = yes
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_2
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_airplane_launcher_1
+					mid_2_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_heavy_battery_3
+				}
+				design_team = mio:GER_blohm_und_voss_organization
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "GER"
+					version_name = "Bismarck Class"
+				}
+				name = "Bismarck"
+				requested_factories = 5
+				progress = 0.80
+				amount = 1
+			}
 		}
-		add_equipment_production = {
-			equipment = {
-				type = ship_hull_heavy_2
-				creator = "GER"
-				version_name = "Bismarck Class"
+		else = {
+			create_equipment_variant = {
+				name = "Bismarck Class"
+				type = battleship_3
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					ship_reliability_upgrade = 2
+					ship_engine_upgrade = 3
+					ship_armor_upgrade = 2
+					ship_gun_upgrade = 2
+				}
+				design_team = mio:GER_blohm_und_voss_organization
 			}
-			name = "Bismarck"
-			requested_factories = 5
-			progress = 0.80
-			amount = 1
+			add_equipment_production = {
+				equipment = {
+					type = battleship_3
+					creator = "GER"
+					version_name = "Bismarck Class"
+				}
+				name = "Bismarck"
+				requested_factories = 5
+				progress = 0.80
+				amount = 1
+			}
 		}
 		custom_effect_tooltip = GER_Bismarck_Modify
 		set_variable = {
@@ -1648,7 +1705,6 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 	completion_reward = {
 		navy_experience = 25
-		set_technology = { cruiser_submarines = 1 popup = no }
 		random_owned_controlled_state = {
 			limit = {
 				dockyard > 0
@@ -1674,6 +1730,12 @@ shared_focus = {
 				remove_idea = Landon_Treaty
 				add_idea = Landon_Treaty_sub_focus
 			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			set_technology = { cruiser_submarines = 1 popup = no }
 		}
 	}
 }
@@ -2108,9 +2170,9 @@ shared_focus = {
 			show_mio_tooltip = GER_Volkswagen_motorized_organization
 		}
 		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen
 			add_ideas = GER_volkswagen_idea
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GER_fake_tooltip_motorized
 		}
 		every_state = {
 			limit = { has_state_flag = GER_industrial_effort_2_2IC }
@@ -2267,6 +2329,7 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
+		add_stability = -0.05
 		random_owned_controlled_state = {
 			prioritize = { 64 60 59 54 }
 			add_extra_state_shared_building_slots = 2
@@ -3786,29 +3849,39 @@ shared_focus = {
 
 	available_if_capitulated = no
 	available = {
+		55 = {
+			is_controlled_by = ROOT
+			industrial_complex > 1
+		}
+		54 = {
+			is_controlled_by = ROOT
+			industrial_complex > 1
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		add_ideas = GER_convert_war_eco
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
+		add_stability = -0.05
+		55 = {
+			remove_building = {
+				type = industrial_complex
+				level = 2
 			}
-			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
+		54 = {
+			remove_building = {
+				type = industrial_complex
+				level = 2
 			}
-			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -3994,12 +4067,27 @@ shared_focus = {
 		add_to_variable = {
 			GER_naval_doctrine_cost_factor = -0.05
 		}
-		add_tech_bonus = {
-			name = nav_bomber_bonus
-			bonus = 1.0
-			uses = 2
-			technology = air_torpedoe_2
-			technology = air_torpedoe_3
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = air_torpedoe_2
+				technology = air_torpedoe_3
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = naval_bomber1
+				technology = naval_bomber2
+				technology = naval_bomber3
+			}
 		}
 	}
 }
@@ -4785,28 +4873,47 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Tiger I"
-			type = heavy_tank_chassis_2
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_heavy_cannon_2
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = additional_machine_guns
-				special_type_slot_3 = smoke_launchers
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 11
-				tank_nsb_armor_upgrade = 14
+			create_equipment_variant = {
+				name = "Tiger I"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_heavy_cannon_2
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = additional_machine_guns
+					special_type_slot_3 = smoke_launchers
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 11
+					tank_nsb_armor_upgrade = 14
+				}
+				design_team = mio:GER_porsche_organization
+				icon = "GFX_GER_improved_heavy_tank_medium"
+				model = "GER_heavy_armor_entity"
 			}
-			design_team = mio:GER_porsche_organization
-			icon = "GFX_GER_improved_heavy_tank_medium"
-			model = "GER_heavy_armor_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Tiger I"
+				type = heavy_tank_equipment_2
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_gun_upgrade = 4
+					tank_armor_upgrade = 4
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }
@@ -4830,29 +4937,48 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Panzerjäger Tiger"
-			type = heavy_tank_destroyer_chassis_2
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_heavy_cannon_2
-				turret_type_slot = tank_heavy_fixed_superstructure_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = smoke_launchers
-				special_type_slot_4 = extra_ammo_storage
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 9
-				tank_nsb_armor_upgrade = 10
+			create_equipment_variant = {
+				name = "Panzerjäger Tiger"
+				type = heavy_tank_destroyer_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_heavy_cannon_2
+					turret_type_slot = tank_heavy_fixed_superstructure_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = sloped_armor
+					special_type_slot_3 = smoke_launchers
+					special_type_slot_4 = extra_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 10
+				}
+				design_team = mio:GER_porsche_organization
+				icon = "GFX_GER_improved_heavy_tank_td"
+				model = "GER_heavy_tank_destroyer_brigade_1_entity"
 			}
-			design_team = mio:GER_porsche_organization
-			icon = "GFX_GER_improved_heavy_tank_td"
-			model = "GER_heavy_tank_destroyer_brigade_1_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Panzerjäger Tiger"
+				type = heavy_tank_destroyer_equipment_2
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_gun_upgrade = 5
+					tank_armor_upgrade = 2
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }
@@ -4877,29 +5003,48 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Panzer VIII Maus"
-			type = super_heavy_tank_chassis_1
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_super_heavy_cannon
-				turret_type_slot = tank_super_heavy_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = armor_skirts
-				special_type_slot_4 = squeezebore_adaptor
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 20
-				tank_nsb_armor_upgrade = 12
+			create_equipment_variant = {
+				name = "Panzer VIII Maus"
+				type = super_heavy_tank_chassis_1
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_super_heavy_cannon
+					turret_type_slot = tank_super_heavy_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = sloped_armor
+					special_type_slot_3 = armor_skirts
+					special_type_slot_4 = squeezebore_adaptor
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 20
+					tank_nsb_armor_upgrade = 12
+				}
+				design_team = mio:GER_porsche_organization
+				icon = "GFX_GER_super_heavy_tank_medium"
+				model = "GER_super_heavy_armor_entity"
 			}
-			design_team = mio:GER_porsche_organization
-			icon = "GFX_GER_super_heavy_tank_medium"
-			model = "GER_super_heavy_armor_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Panzer VIII Maus"
+				type = super_heavy_tank_equipment_1
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_gun_upgrade = 5
+					tank_armor_upgrade = 5
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }
@@ -4971,28 +5116,47 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Sturmgeschütz IV"
-			type = medium_tank_artillery_chassis_2
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_medium_howitzer_2
-				turret_type_slot = tank_medium_fixed_superstructure_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = sloped_armor
-				special_type_slot_2 = secondary_turret_hmg
-				special_type_slot_3 = secondary_turret_hmg
-				special_type_slot_4 = additional_machine_guns
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 14
-				tank_nsb_armor_upgrade = 10
+			create_equipment_variant = {
+				name = "Sturmgeschütz IV"
+				type = medium_tank_artillery_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_medium_howitzer_2
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = sloped_armor
+					special_type_slot_2 = secondary_turret_hmg
+					special_type_slot_3 = secondary_turret_hmg
+					special_type_slot_4 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 10
+				}
+				icon = "GFX_GER_medium_BCC"
+				model = "GER_medium_tank_destroyer_brigade_0_entity"
 			}
-			icon = "GFX_GER_medium_BCC"
-			model = "GER_medium_tank_destroyer_brigade_0_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Sturmgeschütz IV"
+				type = medium_tank_artillery_equipment_2
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_art_upgrade = 2
+					tank_armor_upgrade = 2
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }
@@ -5017,29 +5181,50 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "PzKpfw Panther"
-			type = medium_tank_chassis_3
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_medium_cannon_2
-				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = armor_skirts
-				special_type_slot_3 = additional_machine_guns
-				special_type_slot_4 = smoke_launchers
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 7
-				tank_nsb_armor_upgrade = 13
-			}
-			design_team = mio:GER_man_organization
-			icon = "GFX_GER_medium_CBC"
-			model = "GER_medium_armor_2_entity"
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
+			}	
+			create_equipment_variant = {
+				name = "PzKpfw Panther"
+				type = medium_tank_chassis_3
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_medium_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = armor_skirts
+					special_type_slot_3 = additional_machine_guns
+					special_type_slot_4 = smoke_launchers
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 7
+					tank_nsb_armor_upgrade = 13
+				}
+				design_team = mio:GER_man_organization
+				icon = "GFX_GER_medium_CBC"
+				model = "GER_medium_armor_2_entity"
+			} 
+		}
+		else = {
+			create_equipment_variant = {
+				name = "PzKpfw Panther"
+				type = medium_tank_equipment_3
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_gun_upgrade = 4
+					tank_armor_upgrade = 3
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_man_organization
+				icon = "GFX_GER_medium_CBC"
+				model = "GER_medium_armor_2_entity"
+			} 
 		}
 	}
 }
@@ -5067,28 +5252,47 @@ shared_focus = {
 		hidden_effect = {
 			set_technology = { masterful_blitz_GERV = 1 popup = no }
 		}
-		create_equipment_variant = {
-			name = "Tiger II"
-			type = heavy_tank_chassis_3
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_high_velocity_cannon_3
-				turret_type_slot = tank_heavy_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = sloped_armor
-				special_type_slot_3 = smoke_launchers
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 8
-				tank_nsb_armor_upgrade = 8
+			create_equipment_variant = {
+				name = "Tiger II"
+				type = heavy_tank_chassis_3
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_3
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = sloped_armor
+					special_type_slot_3 = smoke_launchers
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 8
+					tank_nsb_armor_upgrade = 8
+				}
+				design_team = mio:GER_henschel_organization
+				icon = "GFX_GER_advanced_heavy_tank_medium"
+				model = "GER_heavy_armor_2_entity"
 			}
-			design_team = mio:GER_henschel_organization
-			icon = "GFX_GER_advanced_heavy_tank_medium"
-			model = "GER_heavy_armor_2_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Tiger II"
+				type = heavy_tank_equipment_3
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_gun_upgrade = 4
+					tank_armor_upgrade = 4
+					tank_engine_upgrade = 1
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }
@@ -5113,29 +5317,50 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Jagdpanther"
-			type = medium_tank_destroyer_chassis_3
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_high_velocity_cannon_3
-				turret_type_slot = tank_medium_fixed_superstructure_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
-				special_type_slot_2 = additional_machine_guns
-				special_type_slot_3 = extra_ammo_storage
-				special_type_slot_4 = smoke_launchers
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 6
-				tank_nsb_armor_upgrade = 12
+			create_equipment_variant = {
+				name = "Jagdpanther"
+				type = medium_tank_destroyer_chassis_3
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_3
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = additional_machine_guns
+					special_type_slot_3 = extra_ammo_storage
+					special_type_slot_4 = smoke_launchers
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 6
+					tank_nsb_armor_upgrade = 12
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+				icon = "GFX_GER_advanced_medium_td_medium"
+				model = "GER_medium_tank_destroyer_brigade_2_entity"
 			}
-			design_team = mio:GER_Mercedes_benz_organization
-			icon = "GFX_GER_advanced_medium_td_medium"
-			model = "GER_medium_tank_destroyer_brigade_2_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Jagdpanther"
+				type = medium_tank_destroyer_equipment_3
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_at_upgrade = 4
+					tank_armor_upgrade = 2
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+				icon = "GFX_GER_advanced_medium_td_medium"
+				model = "GER_medium_tank_destroyer_brigade_2_entity"
+			}
 		}
 	}
 }
@@ -5350,7 +5575,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GER_Better_SUP
-	icon = GFX_goal_generic_axis_build_infantry
+	icon = GFX_goal_generic_small_arms
 	prerequisite = { focus = GER_better_supply }
 	relative_position_id = GER_army_innovation_a
 	x = 7
@@ -5364,7 +5589,13 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		add_tech_bonus = {
-			name = JAP_support
+			name = "Improve Infantry Equipment"
+			bonus = 1.0
+			uses = 2
+			category = clothing
+		}
+		add_tech_bonus = {
+			name = "Improve Infantry Equipment"
 			bonus = 1.0
 			uses = 1
 			category = support_tech
@@ -5449,8 +5680,8 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		custom_effect_tooltip = GER_harsh_training_methods_modify_tt
-		set_variable = { GER_acclimatization_hot_climate_gain_factor = 0.2 }
-		set_variable = { GER_acclimatization_cold_climate_gain_factor = 0.2 }
+		set_variable = { GER_acclimatization_hot_climate_gain_factor = 0.1 }
+		set_variable = { GER_acclimatization_cold_climate_gain_factor = 0.1 }
 		set_variable = { GER_terrain_penalty_reduction = 0.1 }
 	}
 }
@@ -5925,26 +6156,45 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		create_equipment_variant = {
-			name = "Flakpanzer IV Wirbelwind"
-			type = medium_tank_aa_chassis_2
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				main_armament_slot = tank_anti_air_cannon_2
-				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_2
-				special_type_slot_2 = secondary_turret_hmg
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
 			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 9
+			create_equipment_variant = {
+				name = "Flakpanzer IV Wirbelwind"
+				type = medium_tank_aa_chassis_2
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					main_armament_slot = tank_anti_air_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+					special_type_slot_2 = secondary_turret_hmg
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 2
+					tank_nsb_armor_upgrade = 9
+				}
+				icon = "GFX_GER_improved_medium_spaa"
+				model = "GER_medium_sp_anti_air_brigade_2_entity"
 			}
-			icon = "GFX_GER_improved_medium_spaa"
-			model = "GER_medium_sp_anti_air_brigade_2_entity"
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Flakpanzer IV Wirbelwind"
+				type = medium_tank_aa_equipment_2
+				parent_version = 0
+				allow_without_tech = yes
+				upgrades = {
+					tank_aa_upgrade = 2
+					tank_armor_upgrade = 2
+					tank_engine_upgrade = 2
+				}
+				design_team = mio:GER_Mercedes_benz_organization
+			}
 		}
 	}
 }

@@ -54,9 +54,15 @@ focus_tree = {
 			x = -35
 			y = 0
 			trigger = {
-				OR = {
-					has_completed_focus = GER_establish_abwehr
-				}
+				has_completed_focus = GER_establish_abwehr
+				has_dlc = "Waking the Tiger"
+			}
+		}
+		offset = {
+			x = -35
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Waking the Tiger" }
 			}
 		}
 		offset = {
@@ -128,9 +134,15 @@ focus_tree = {
 			x = -35
 			y = 0
 			trigger = {
-				OR = {
-					has_completed_focus = GER_establish_abwehr
-				}
+				has_completed_focus = GER_establish_abwehr
+				has_dlc = "Waking the Tiger"
+			}
+		}
+		offset = {
+			x = -35
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Waking the Tiger" }
 			}
 		}
 		offset = {
@@ -204,6 +216,14 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_completed_focus = GER_establish_abwehr
+				has_dlc = "Waking the Tiger"
+			}
+		}
+		offset = {
+			x = -35
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Waking the Tiger" }
 			}
 		}
 		available = {
@@ -217,22 +237,39 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
-			create_intelligence_agency = {
-				name = "Abwehr"
-				icon = GFX_intelligence_agency_logo_ger
-			}	
 			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				create_intelligence_agency = {
+					name = "Abwehr"
+					icon = GFX_intelligence_agency_logo_ger
+				}	
+				if = {
+					limit = {
+						ENG = { NOT = { has_completed_focus = crypto_bomb_focus } }
+					}
+					add_ideas = abwehr_agent
+				}
+				if = {
+					limit = {
+						ENG = { has_completed_focus = crypto_bomb_focus }
+					}
+					add_ideas = abwehr_agent_r
+				}
+			}
+			else_if = {
 				limit = {
 					ENG = { NOT = { has_completed_focus = crypto_bomb_focus } }
 				}
-				add_ideas = abwehr_agent
+				add_ideas = abwehr_agent_non_dlc
 			}
-			if = {
+			else_if = {
 				limit = {
 					ENG = { has_completed_focus = crypto_bomb_focus }
 				}
-				add_ideas = abwehr_agent_r
-			}
+				add_ideas = abwehr_agent_non_dlc_r
+			}	
 			hidden_effect = {
 				if = {
 					limit = {
@@ -345,6 +382,7 @@ focus_tree = {
 			}
 		}
 		available = {
+			has_dlc = "By Blood Alone"
 			ITA = {
 				has_war_with = ETH
 				NOT = {
@@ -2625,7 +2663,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_war_with_france
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -2685,32 +2723,11 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_war_with_france
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			add_state_core = 8
-			add_state_core = 28
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 28
-					}
-				}
-				transfer_state = 28
-			}
-			28 = {
-				set_state_name = "Elsass-Lothringen"
-			}
-			set_province_name = {
-				id = 9503
-				name = "Strassburg"
-			}
-			set_province_name = {
-				id = 678
-				name = "Mulhausen"
-			}
 			if = {
 				limit = {
 					has_global_flag = flag_franco_british_union
@@ -2746,6 +2763,27 @@ focus_tree = {
 						id = wtt_germany.64
 					}
 				}
+			}
+			add_state_core = 8
+			add_state_core = 28
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 28
+					}
+				}
+				transfer_state = 28
+			}
+			28 = {
+				set_state_name = "Elsass-Lothringen"
+			}
+			set_province_name = {
+				id = 9503
+				name = "Strassburg"
+			}
+			set_province_name = {
+				id = 678
+				name = "Mulhausen"
 			}
 		}
 	}
@@ -3032,13 +3070,13 @@ focus_tree = {
 		ai_will_do = {
 		}
 		completion_reward = {
+			custom_effect_tooltip = GER_challenge_royal_navy_modify
 			ENG = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = challenged_royal_navy
 				}
 			}
-			custom_effect_tooltip = GER_challenge_royal_navy_modify
 			set_variable = {
 				GER_industrial_capacity_factory = -0.1
 			}
@@ -5128,23 +5166,31 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_equipment_variant = {
-				name = "Me 262"
-				type = small_plane_airframe_4
-				parent_version = 0
-				design_team = GER_messerschmitt_organization
-				allow_without_tech = yes
-				modules = {
-					fixed_main_weapon_slot = heavy_mg_4x
-					fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-					fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-					fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
-					engine_type_slot = jet_engine_2x
-					special_type_slot_1 = armor_plate_small
-					special_type_slot_2 = armor_plate_small
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
 				}
-				design_team = mio:GER_messerschmitt_organization
-				icon = "GFX_GER_jet_plane_1_medium"
+				create_equipment_variant = {
+					name = "Me 262"
+					type = small_plane_airframe_4
+					parent_version = 0
+					design_team = GER_messerschmitt_organization
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+						fixed_auxiliary_weapon_slot_3 = heavy_mg_4x
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = armor_plate_small
+					}
+					design_team = mio:GER_messerschmitt_organization
+					icon = "GFX_GER_jet_plane_1_medium"
+				}
+			}
+			else = {
+				set_technology = { jet_fighter1 = 1 popup = yes }
 			}
 		}
 	}
@@ -5371,17 +5417,45 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = abwehr_agent
+					has_dlc = "La Resistance"
 				}
-				swap_ideas = {
-					remove_idea = abwehr_agent
-					add_idea = abwehr_agent_v
+				if = {
+					limit = {
+						has_idea = abwehr_agent
+					}
+					swap_ideas = {
+						remove_idea = abwehr_agent
+						add_idea = abwehr_agent_v
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = abwehr_agent_r
+					}
+					swap_ideas = {
+						remove_idea = abwehr_agent_r
+						add_idea = abwehr_agent_v_r
+					}
 				}
 			}
 			else = {
-				swap_ideas = {
-					remove_idea = abwehr_agent_r
-					add_idea = abwehr_agent_v_r
+				if = {
+					limit = {
+						has_idea = abwehr_agent_non_dlc
+					}
+					swap_ideas = {
+						remove_idea = abwehr_agent_non_dlc
+						add_idea = abwehr_agent_non_dlc_v
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = abwehr_agent_r
+					}
+					swap_ideas = {
+						remove_idea = abwehr_agent_non_dlc_r
+						add_idea = abwehr_agent_non_dlc_v_r
+					}
 				}
 			}
 		}
@@ -6478,6 +6552,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			IRQ = {
+				country_event = {
+					id = GER_offer_support_irq.1
+					hours = 6
+				}
 				if = {
 					limit = {
 						GER = {
@@ -6487,9 +6565,6 @@ focus_tree = {
 					add_timed_idea = {
 						idea = fascist_influence
 						days = 1095
-					}
-					country_event = {
-						id = generic.1
 					}
 				}
 				if = {
@@ -6502,15 +6577,6 @@ focus_tree = {
 						idea = neutrality_influence
 						days = 1095
 					}
-					country_event = {
-						id = generic.1
-					}
-				}
-			}
-			IRQ = {
-				country_event = {
-					id = GER_offer_support_irq.1
-					hours = 6
 				}
 			}
 		}
@@ -7340,28 +7406,6 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			447 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 1071
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 4145
-				}
-			}
-			902 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 992
-				}
-			}
 			every_state = {
 				limit = {
 					OR = {
@@ -7388,6 +7432,28 @@ focus_tree = {
 						scope = ITA
 						days = 90
 					}
+				}
+			}
+			447 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 1071
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4145
+				}
+			}
+			902 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 992
 				}
 			}
 		}
@@ -7437,6 +7503,54 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			unlock_decision_category_tooltip = GER_Africa_Operations
+			449 = {
+				add_building_construction = {
+					type = radar_station
+					instant_build = yes
+					level = 3
+				}
+				add_building_construction = {
+					type = anti_air_building
+					instant_build = yes
+					level = 3
+				}
+			}
+			451 = {
+				add_building_construction = {
+					type = air_base
+					instant_build = yes
+					level = 3
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					instant_build = yes
+					level = 3
+					province = 1130
+				}
+			}
+			663 = {
+				add_building_construction = {
+					type = air_base
+					instant_build = yes
+					level = 3
+				}
+			}
+			448 = {
+				add_building_construction = {
+					type = coastal_bunker
+					instant_build = yes
+					level = 3
+					province = 1149
+				}
+			}
+			450 = {
+				add_building_construction = {
+					type = coastal_bunker
+					instant_build = yes
+					level = 3
+					province = 11954
+				}
+			}
 			if = {
 				limit = {
 					448 = {
@@ -7530,54 +7644,6 @@ focus_tree = {
 					}
 				}
 				set_state_flag = LIBYA_LOGISTICS_STATE
-			}
-			449 = {
-				add_building_construction = {
-					type = radar_station
-					instant_build = yes
-					level = 3
-				}
-				add_building_construction = {
-					type = anti_air_building
-					instant_build = yes
-					level = 3
-				}
-			}
-			451 = {
-				add_building_construction = {
-					type = air_base
-					instant_build = yes
-					level = 3
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					instant_build = yes
-					level = 3
-					province = 1130
-				}
-			}
-			663 = {
-				add_building_construction = {
-					type = air_base
-					instant_build = yes
-					level = 3
-				}
-			}
-			448 = {
-				add_building_construction = {
-					type = coastal_bunker
-					instant_build = yes
-					level = 3
-					province = 1149
-				}
-			}
-			450 = {
-				add_building_construction = {
-					type = coastal_bunker
-					instant_build = yes
-					level = 3
-					province = 11954
-				}
 			}
 		}
 	}
@@ -7724,9 +7790,6 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			ITA = {
-				add_ideas = GER_ITA_Afrika_Korps
-			}
 			if = {
 				limit = {
 					ITA = {
@@ -7755,6 +7818,9 @@ focus_tree = {
 						days = 1
 					}
 				}
+			}
+			ITA = {
+				add_ideas = GER_ITA_Afrika_Korps
 			}
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -7888,6 +7954,28 @@ focus_tree = {
 							has_global_flag = GER_LIB_SIDE_PLAN
 						}
 					}
+					custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
+					661 = {
+						add_building_construction = {
+							type = air_base
+							instant_build = yes
+							level = 2
+						}
+					}
+					663 = {
+						add_building_construction = {
+							type = air_base
+							instant_build = yes
+							level = 2
+						}
+					}
+					449 = {
+						add_building_construction = {
+							type = radar_station
+							instant_build = yes
+							level = 3
+						}
+					}
 					custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
 					271 = {
 						add_building_construction = {
@@ -7915,29 +8003,9 @@ focus_tree = {
 							level = 2
 						}
 					}
-					custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
-					661 = {
-						add_building_construction = {
-							type = air_base
-							instant_build = yes
-							level = 2
-						}
-					}
-					663 = {
-						add_building_construction = {
-							type = air_base
-							instant_build = yes
-							level = 2
-						}
-					}
-					449 = {
-						add_building_construction = {
-							type = radar_station
-							instant_build = yes
-							level = 3
-						}
-					}
 				}
+			}
+			hidden_effect = {
 				if = {
 					limit = {
 						has_global_flag = GER_LIB_SIDE_PLAN
@@ -8421,43 +8489,6 @@ focus_tree = {
 							has_global_flag = GER_LIB_SIDE_PLAN
 						}
 					}
-					custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
-					841 = {
-						add_building_construction = {
-							type = supply_node
-							instant_build = yes
-							level = 1
-							province = 1984
-						}
-					}
-					836 = {
-						add_building_construction = {
-							type = supply_node
-							instant_build = yes
-							level = 1
-							province = 10775
-						}
-					}
-					build_railway = {
-						level = 1
-						start_province = 12991
-						target_province = 10775
-					}
-					build_railway = {
-						level = 1
-						start_province = 12766
-						target_province = 1984
-					}
-					build_railway = {
-						level = 2
-						start_province = 1984
-						target_province = 5010
-					}
-					build_railway = {
-						level = 2
-						start_province = 12991
-						target_province = 5010
-					}
 					custom_effect_tooltip = GER_LIB_SIDE_PLAN_tt
 					449 = {
 						add_building_construction = {
@@ -8495,93 +8526,132 @@ focus_tree = {
 						start_province = 12079
 						target_province = 1130
 					}
+					custom_effect_tooltip = GER_ETH_SIDE_PLAN_tt
+					841 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 1984
+						}
+					}
+					836 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 10775
+						}
+					}
+					build_railway = {
+						level = 1
+						start_province = 12991
+						target_province = 10775
+					}
+					build_railway = {
+						level = 1
+						start_province = 12766
+						target_province = 1984
+					}
+					build_railway = {
+						level = 2
+						start_province = 1984
+						target_province = 5010
+					}
+					build_railway = {
+						level = 2
+						start_province = 12991
+						target_province = 5010
+					}
 				}
 			}
-			if = {
-				limit = {
-					has_global_flag = GER_ETH_SIDE_PLAN
-				}
-				841 = {
-					add_building_construction = {
-						type = supply_node
-						instant_build = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_global_flag = GER_ETH_SIDE_PLAN
+					}
+					841 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 1984
+						}
+					}
+					836 = {
+						add_building_construction = {
+							type = supply_node
+							instant_build = yes
+							level = 1
+							province = 10775
+						}
+					}
+					build_railway = {
 						level = 1
-						province = 1984
+						start_province = 12991
+						target_province = 10775
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 12766
+						target_province = 1984
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 2
+						start_province = 1984
+						target_province = 5010
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 2
+						start_province = 12991
+						target_province = 5010
+						build_only_on_allied = yes
 					}
 				}
-				836 = {
-					add_building_construction = {
-						type = supply_node
-						instant_build = yes
-						level = 1
-						province = 10775
+				if = {
+					limit = {
+						has_global_flag = GER_LIB_SIDE_PLAN
 					}
-				}
-				build_railway = {
-					level = 1
-					start_province = 12991
-					target_province = 10775
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 1
-					start_province = 12766
-					target_province = 1984
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 2
-					start_province = 1984
-					target_province = 5010
-					build_only_on_allied = yes
-				}
-				build_railway = {
-					level = 2
-					start_province = 12991
-					target_province = 5010
-					build_only_on_allied = yes
-				}
-			}
-			if = {
-				limit = {
-					has_global_flag = GER_LIB_SIDE_PLAN
-				}
-				449 = {
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 10117
+					449 = {
+						add_building_construction = {
+							type = naval_base
+							level = 1
+							instant_build = yes
+							province = 10117
+						}
 					}
-				}
-				663 = {
-					add_building_construction = {
-						type = supply_node
-						level = 1
-						instant_build = yes
-						province = 12079
+					663 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							instant_build = yes
+							province = 12079
+						}
 					}
-				}
-				build_railway = {
-					level = 1
-					start_province = 11954
-					target_province = 12079
-				}
-				build_railway = {
-					level = 1
-					start_province = 11954
-					target_province = 10117
-				}
-				build_railway = {
-					level = 1
-					start_province = 10117
-					target_province = 1149
-				}
-				build_railway = {
-					level = 1
-					start_province = 12079
-					target_province = 1130
-				}
+					build_railway = {
+						level = 1
+						start_province = 11954
+						target_province = 12079
+					}
+					build_railway = {
+						level = 1
+						start_province = 11954
+						target_province = 10117
+					}
+					build_railway = {
+						level = 1
+						start_province = 10117
+						target_province = 1149
+					}
+					build_railway = {
+						level = 1
+						start_province = 12079
+						target_province = 1130
+					}
+				}	
 			}
 		}
 	}
@@ -9523,16 +9593,22 @@ focus_tree = {
 		completion_reward = {
 			SPA = {
 				add_tech_bonus = {
-					name = armor_bonus
+					name = "Improve Spanish Army"
 					bonus = 0.5
 					uses = 1
 					category = armor
 				}
 				add_tech_bonus = {
-					name = JAP_support
+					name = "Improve Spanish Army"
 					bonus = 1
 					uses = 1
 					category = support_tech
+				}
+				add_tech_bonus = {
+					name = "Improve Spanish Army"
+					bonus = 1
+					uses = 2
+					category = clothing
 				}
 			}
 		}
@@ -10293,7 +10369,6 @@ focus_tree = {
 	focus = {
 		id = GER_Tur_Expand_Army
 		icon = GFX_focus_chi_army_reform
-		text = GER_Spa_Tur_Expand_Army
 		relative_position_id = GER_turkey_friend
 		prerequisite = {
 			focus = GER_turkey_friend
@@ -10318,16 +10393,22 @@ focus_tree = {
 		completion_reward = {
 			TUR = {
 				add_tech_bonus = {
-					name = armor_bonus
+					name = "Improve Turkey`s Army"
 					bonus = 0.5
 					uses = 1
 					category = armor
 				}
 				add_tech_bonus = {
-					name = JAP_support
+					name = "Improve Turkey`s Army"
 					bonus = 1
 					uses = 1
 					category = support_tech
+				}
+				add_tech_bonus = {
+					name = "Improve Turkey`s Army"
+					bonus = 1
+					uses = 2
+					category = clothing
 				}
 			}
 		}
@@ -10677,6 +10758,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			unlock_decision_category_tooltip = GER_reichskommissariats
 			custom_effect_tooltip = GER_reichskommissariats_tt
 			custom_effect_tooltip = GER_SS_tt
 			show_ideas_tooltip = SS_Fake_tooltip_idea_1
@@ -10702,9 +10784,20 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = GER_SS
-				add_idea = GER_SS_V1
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				swap_ideas = {
+					remove_idea = GER_SS
+					add_idea = GER_SS_V1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GER_SS
+					add_idea = GER_SS_V1_non_dlc
+				}
 			}
 		}
 	}
@@ -10762,9 +10855,20 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = GER_SS_V1
-				add_idea = GER_SS_Final
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				swap_ideas = {
+					remove_idea = GER_SS_V1
+					add_idea = GER_SS_Final
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GER_SS_V1_non_dlc
+					add_idea = GER_SS_Final_non_dlc
+				}
 			}
 			custom_effect_tooltip = GER_SS_Final_tt
 		}
@@ -10836,7 +10940,7 @@ focus_tree = {
 			}
 			else = {
 				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = GER_Volkswagen_t
+				show_ideas_tooltip = GER_Volkswagen_tank
 			}
 			random_owned_controlled_state = {
 				prioritize = {
@@ -10944,7 +11048,7 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			add_ideas = GER_underground_factories_idea
+			set_technology = { underground_factories = 1 popup = yes }
 			64 = {
 				remove_building = {
 					type = arms_factory
@@ -11568,13 +11672,26 @@ focus_tree = {
 			factor = 0
 		}
 		completion_reward = {
-			GER = {
-				set_autonomy = {
-					target = ITA
-					autonomy_state = autonomy_Overthrown_Government_ITA
-					end_wars = no
-					end_civil_wars = no
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
 				}
+				GER = {
+					set_autonomy = {
+						target = ITA
+						autonomy_state = autonomy_Overthrown_Government_ITA
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Death or Dishonor"
+					}
+				}
+				puppet = HUN
 			}
 		}
 	}
@@ -12605,6 +12722,7 @@ focus_tree = {
 		icon = GFX_goal_Kaiserinaxile
 		search_filters = { FOCUS_FILTER_POLITICAL}
 		available = {
+			has_dlc = "Waking the Tiger"
 			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
 			HOL = {
 				is_puppet = no
@@ -13317,21 +13435,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
+			SOV = {
+				country_event = germany.89
+				custom_effect_tooltip = needs_approval
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_sov_alliance_focus
+				}
+				add_ideas = soviet_german_friendship
+			}
 			if = {
 				limit = {
 					is_faction_leader = yes
 				}
 				custom_effect_tooltip = ger_sov_buddies_tooltip_2
 			}
-			custom_effect_tooltip = ger_sov_buddies_tooltip
-			add_ideas = soviet_german_friendship
-			SOV = {
-				add_opinion_modifier = {
-					target = GER
-					modifier = ger_sov_alliance_focus
-				}
+			else = {
+				custom_effect_tooltip = ger_sov_buddies_tooltip
+			}
+			hidden_effect = {
 				add_ideas = soviet_german_friendship
-				country_event = germany.89
 			}
 		}
 	}
@@ -13496,6 +13619,7 @@ focus_tree = {
 		id = GER_Russia_Glory_Army
 		icon = GFX_goal_andreyvlasov
 		available = {
+			has_dlc = "No Step Back"
 			has_country_flag = vlasov_in_ss_flag
 		}
 		allow_branch = {

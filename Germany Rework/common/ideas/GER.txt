@@ -125,24 +125,6 @@ ideas = {
 			}
 		}
 
-		GER_underground_factories_idea = {
-			picture = man_five_year_plan_industry
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			modifier = {
-				industry_air_damage_factor = -0.25
-				production_speed_arms_factory_factor = -0.15
-			}
-		}
-
 		fascist_influence_cs = {
 
 			allowed = {
@@ -854,7 +836,94 @@ ideas = {
 
 				encryption_factor = 0.1
 			}
-		}		
+		}
+		
+		abwehr_agent_non_dlc = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.25
+				decryption_factor = 0.05
+			}
+		}
+
+		abwehr_agent_non_dlc_r = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.25
+				decryption_factor = -0.05
+			}
+		}
+
+		abwehr_agent_non_dlc_v = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.25
+
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+			}
+		}
+
+		abwehr_agent_non_dlc_v_r = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.25
+
+				encryption_factor = 0.05
+			}
+		}
 
 		Japan_Side_Intel = {
 			picture = generic_the_london_naval_treaty
@@ -6182,6 +6251,29 @@ ideas = {
 			}
 		}
 
+		GER_SS_V1_non_dlc = {
+			picture = SS_idea
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.09
+
+				foreign_subversive_activites = -0.1
+			}
+		}
+
 		GER_SS_Final = {
 			picture = SS_idea
 
@@ -6205,6 +6297,30 @@ ideas = {
 				agency_upgrade_time = -0.05
 				root_out_resistance_effectiveness_factor = 0.1
 				occupied_operative_recruitment_chance = 0.1
+			}
+		}
+
+		GER_SS_Final_non_dlc = {
+			picture = SS_idea
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+
+				foreign_subversive_activites = -0.15
+				subversive_activites_upkeep = -0.15
 			}
 		}
 
@@ -6400,7 +6516,7 @@ ideas = {
 			}
 		}
 
-		GER_Volkswagen = {
+		GER_Volkswagen_tank = {
 
 			picture = volkswagen_tank
 
@@ -7614,7 +7730,7 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 		}
 
-		GER_Volkswagen_t = {
+		GER_volkswagen_motorized = {
 
 			picture = volkswagen
 
@@ -7626,7 +7742,32 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = GER_the_peoples_car
+				has_completed_focus = GER_kdf_wagen_a
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+
+			traits = { Volkswagen_trait }
+
+			ai_will_do = {
+				factor = 15
+			}
+		}
+
+		GER_fake_tooltip_motorized = {
+
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+				always = no
+			}
+
+			available = {
+				has_completed_focus = GER_kdf_wagen_a
 			}
 
 			research_bonus = {

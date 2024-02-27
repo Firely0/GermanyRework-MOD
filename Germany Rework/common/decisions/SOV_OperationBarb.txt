@@ -391,7 +391,6 @@ SOV_Development_and_Deployment = {
 		}
 
 		visible = {
-			has_dlc = "No Step Back"
 			has_completed_focus = SOV_found_the_pcdi #
 			has_war = yes
 			has_war_with = GER
@@ -418,24 +417,32 @@ SOV_Development_and_Deployment = {
 
 		timeout_effect = {
 			set_country_flag = USSR_T34_85_DEPLOYED # REQ For SU-85
-			create_equipment_variant = {
-				name = "T-34-85"
-				type = medium_tank_chassis_2
-				parent_version = 0
-				design_team = mio:SOV_morozov_design_bureau_organization
-				allow_without_tech = yes
-				modules = {
-					main_armament_slot = tank_medium_cannon_2
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
 				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 9
-					tank_nsb_armor_upgrade = 9
+				create_equipment_variant = {
+					name = "T-34-85"
+					type = medium_tank_chassis_2
+					parent_version = 0
+					design_team = mio:SOV_morozov_design_bureau_organization
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_medium_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = tank_radio_2
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 9
+						tank_nsb_armor_upgrade = 9
+					}
 				}
+			}
+			else = {
+				set_technology = { improved_medium_tank = 1 popup = yes }
 			}
 		}
 
@@ -456,7 +463,6 @@ SOV_Development_and_Deployment = {
 		}
 
 		visible = {
-			has_dlc = "No Step Back"
 			has_completed_focus = SOV_found_the_pcdi #
 			has_war = yes
 			has_war_with = GER
@@ -483,23 +489,31 @@ SOV_Development_and_Deployment = {
 		}
 
 		timeout_effect = {
-			create_equipment_variant = { #Same as T-34 VER. Just Cost More
-				name = "IS-1"
-				type = heavy_tank_chassis_2
-				parent_version = 0
-				allow_without_tech = yes
-				modules = {
-					main_armament_slot = tank_medium_cannon_2
-					turret_type_slot = tank_heavy_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
 				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 9
-					tank_nsb_armor_upgrade = 9
+				create_equipment_variant = { #Same as T-34 VER. Just Cost More
+					name = "IS-1"
+					type = heavy_tank_chassis_2
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_medium_cannon_2
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = tank_radio_2
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 9
+						tank_nsb_armor_upgrade = 9
+					}
 				}
+			}
+			else = {
+				set_technology = { improved_heavy_tank = 1 popup = yes }
 			}
 		}
 
@@ -520,7 +534,6 @@ SOV_Development_and_Deployment = {
 		}
 
 		visible = {
-			has_dlc = "No Step Back"
 			has_completed_focus = SOV_found_the_pcdi #
 			has_war = yes
 			has_war_with = GER
@@ -546,23 +559,31 @@ SOV_Development_and_Deployment = {
 		}
 
 		timeout_effect = {
-			create_equipment_variant = {
-				name = "SU-85M"
-				type = medium_tank_destroyer_chassis_2
-				parent_version = 0
-				allow_without_tech = yes
-				modules = {
-					main_armament_slot = tank_heavy_cannon_2
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = sloped_armor
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
 				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 10
-					tank_nsb_armor_upgrade = 9
+				create_equipment_variant = {
+					name = "SU-85M"
+					type = medium_tank_destroyer_chassis_2
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_heavy_cannon_2
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = sloped_armor
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 10
+						tank_nsb_armor_upgrade = 9
+					}
 				}
+			}
+			else = {
+				set_technology = { improved_medium_td = 1 popup = yes }
 			}
 		}
 
@@ -2291,7 +2312,7 @@ SOV_export_guns = {
 		icon = GFX_decision_SWE_set_navy_budget
 		days_mission_timeout = 60
 		is_good = yes
-		
+
 		allowed = {
 			original_tag = SOV
 		}
@@ -2365,7 +2386,7 @@ SOV_export_guns = {
 		available = {
 			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
 			USA = {
-				has_capitulated = no 
+				has_capitulated = no
 				OR = {
 					has_war_with = GER
 					has_completed_focus = USA_lend_lease_act
@@ -2397,7 +2418,7 @@ SOV_export_guns = {
 		available = {
 			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
 			ENG = {
-				has_capitulated = no 
+				has_capitulated = no
 				has_war_with = GER
 				NOT = {
 					has_war_with = SOV
@@ -2423,7 +2444,7 @@ SOV_export_guns = {
 		available = {
 			NOT = { has_country_flag = SOV_LEND_LEASE_REQ }
 			FRA = {
-				has_capitulated = no 
+				has_capitulated = no
 				has_war_with = GER
 				NOT = {
 					has_war_with = SOV

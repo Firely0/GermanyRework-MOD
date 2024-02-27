@@ -103,4 +103,18 @@ technologies = {
 			irregular_infantry 
 		}
 	}
+
+	underground_factories = {
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1942
+
+		industry_air_damage_factor = -0.25
+		production_speed_arms_factory_factor = -0.15
+
+	}
 }

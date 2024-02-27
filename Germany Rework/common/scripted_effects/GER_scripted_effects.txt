@@ -4213,21 +4213,54 @@ GER_defeat_effect = {
 
 GER_abwehr_rd = {
 	if = {
-		limit = { GER = { has_idea = abwehr_agent }  }
-		GER = {
-			swap_ideas = {
-				remove_idea = abwehr_agent
-				add_idea = abwehr_agent_r
+		limit = {
+			has_dlc = "La Resistance"
+		}
+		if = {
+			limit = { GER = { has_idea = abwehr_agent }  }
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent
+					add_idea = abwehr_agent_r
+				}
+			}
+		}
+		if = {
+			limit = { GER = { has_idea = abwehr_agent_v }  }
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent_v
+					add_idea = abwehr_agent_v_r
+				}
 			}
 		}
 	}
-	if = {
-		limit = { GER = { has_idea = abwehr_agent }  }
-		GER = {
-			swap_ideas = {
-				remove_idea = abwehr_agent_v
-				add_idea = abwehr_agent_v_r
+	else = {
+		if = {
+			limit = {
+				GER = { 
+					has_idea = abwehr_agent_non_dlc
+				}
+			}
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent_non_dlc
+					add_idea = abwehr_agent_non_dlc_r
+				}
 			}
 		}
-	}	
+		if = {
+			limit = { 
+				GER = { 
+					has_idea = abwehr_agent_non_dlc_v 
+				}  
+			}
+			GER = {
+				swap_ideas = {
+					remove_idea = abwehr_agent_non_dlc_v
+					add_idea = abwehr_agent_non_dlc_v_r
+				}
+			}
+		}
+	}
 }

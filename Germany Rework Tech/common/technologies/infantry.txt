@@ -492,6 +492,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -520,6 +521,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -559,6 +561,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -584,6 +587,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -613,6 +617,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -641,6 +646,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -670,6 +676,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -695,6 +702,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -712,7 +720,7 @@ technologies = {
 
 		category_all_infantry = {
 			defense = 0.01
-			breakthrough = 0.01
+			breakthrough = 0.04
 		}
 
 		modifier = {
@@ -728,6 +736,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -756,6 +765,7 @@ technologies = {
 		}
 		
 		categories = {
+			clothing
 			infantry_weapons
 		}
 		
@@ -1152,7 +1162,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1938 }
+			position = { x = 12 y = @1938 }
 		}
 		
 		categories = {
@@ -1166,7 +1176,6 @@ technologies = {
 			factor = 0.7
 		}
 	}
-
 
 	advanced_special_forces = {
 		xor={
@@ -1189,7 +1198,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 3 y = @1940 }
+			position = { x = 11 y = @1940 }
 		}
 		
 		categories = {
@@ -1221,7 +1230,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1940 }
+			position = { x = 13 y = @1940 }
 		}
 		
 		categories = {
@@ -1236,16 +1245,15 @@ technologies = {
 		}
 	}
 
-
 	extreme_environment_training = {
 
 		category_special_forces = {
-			acclimatization_hot_climate_gain_factor = 0.20
-			acclimatization_cold_climate_gain_factor = 0.20
+			acclimatization_hot_climate_gain_factor = 0.1
+			acclimatization_cold_climate_gain_factor = 0.1
 		}
 		
 		special_forces_no_supply_grace = 24
-		special_forces_training_time_factor = 0.1
+		special_forces_training_time_factor = 0.05
 		
 		path = {
 			leads_to_tech = elite_forces
@@ -1256,7 +1264,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 3 y = @1942 }
+			position = { x = 11 y = @1942 }
 		}
 		
 		categories = {
@@ -1271,12 +1279,11 @@ technologies = {
 		}
 	}
 
-
 	survival_training = {
 
 		category_special_forces = {
-			acclimatization_hot_climate_gain_factor = 0.10
-			acclimatization_cold_climate_gain_factor = 0.10
+			acclimatization_hot_climate_gain_factor = 0.05
+			acclimatization_cold_climate_gain_factor = 0.05
 		}
 		
 		special_forces_out_of_supply_factor = -0.1
@@ -1290,7 +1297,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = infantry_folder
-			position = { x = 5 y = @1942 }
+			position = { x = 13 y = @1942 }
 		}
 		
 		categories = {
@@ -1305,7 +1312,6 @@ technologies = {
 		}
 	}
 
-
 	elite_forces = {
 		category_special_forces = {
 			max_organisation = 5
@@ -1318,7 +1324,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = infantry_folder
-			position = { x = 4 y = @1944 }
+			position = { x = 12 y = @1944 }
 		}
 		
 		categories = {

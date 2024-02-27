@@ -135,8 +135,6 @@ focus_tree = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
 				}
-				hidden_effect = {
-				}
 				add_tech_bonus = {
 					name = codebreaking_bonus
 					bonus = 1.0
@@ -151,9 +149,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = lar_decryption_bonus_tt
 			}
-			hidden_effect = {
-				GER_abwehr_rd = yes
-			}
+			GER_abwehr_rd = yes
 		}
 	}
 	
@@ -2100,6 +2096,12 @@ focus_tree = {
 			navy_experience = 25
 			air_experience = 25
 			add_ideas = ENG_service_overseas_idea
+			add_tech_bonus = {
+				name = "Service Overseas"
+				bonus = 1.0
+				uses = 2
+				category = clothing
+			}
 		}
 	}
 	focus = {

@@ -213,3 +213,147 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+defined_text = {
+	name = GermanvsBritain
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+			}
+		}
+		localization_key = GER_plan_z_naval_text
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = {  is_in_faction_with = GER } }
+			}
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetStrengthRatioBritainvsGermany
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_90
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_75
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_lower_than_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { NOT = { is_in_faction_with = GER } } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_over_100
+	}
+}
