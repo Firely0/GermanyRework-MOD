@@ -9,8 +9,187 @@
 # that'll be used if trigger passes
 
 defined_text = {
-	name = OperationBarbarossa_targets
-	text = { # Kicking the Door
+	name = OperationBarbarossa_text
+	text = { # Kicking the Door -- Show for 30 day/s
+		trigger = {
+			has_global_flag = OperationBarbarossa_kicking_door_30_days
+		}
 		localization_key = Operation_barbarossa_start
+	}
+	text = { # Allied Invasion of Italy - Show for 14 day/s
+		trigger = {
+			ITA = { is_in_faction_with = GER has_civil_war = no }
+			has_active_mission = Allied_Invasion_of_Italy
+		}
+		localization_key = "Allied_Invasion_of_Italy_text"
+	}
+	text = { # Allied Invasion of Italy - Fall of Rome - Show for 14 day/s
+		trigger = {
+			ITA = { is_in_faction_with = GER has_civil_war = no }
+			has_active_mission = Allied_Invasion_of_Italy_2
+		}
+		localization_key = "Allied_Invasion_of_Italy_text_2"
+	}
+	text = { # Winter Info - Ready for Winter - 1936-1940 Show for 7 day/s
+		trigger = {
+			has_active_mission = The_Soviet_Winter
+			has_tech = mechanised_infantry
+			has_tech = winter_clothes_1939
+			has_tech = tech_logistics_company2
+			OR = {
+				AND = {
+					date > 1936.12.01
+					date < 1937.03.01
+				}
+				AND = {
+					date > 1937.12.01
+					date < 1938.03.01
+				}
+				AND = {
+					date > 1938.12.01
+					date < 1939.03.01
+				}
+				AND = {
+					date > 1939.12.01
+					date < 1940.03.01
+				}
+			}
+		}
+		localization_key = "Operation_barbarossa_winter_ready_40"
+	}
+	text = { # Winter Info - Ready for Winter - 1936-1947
+		trigger = {
+			has_active_mission = The_Soviet_Winter
+			has_tech = mechanised_infantry2
+			has_tech = winter_clothes_1941
+			has_tech = tech_logistics_company3
+			OR = {
+				AND = {
+					date > 1940.12.01
+					date < 1941.03.01
+				}
+				AND = {
+					date > 1941.12.01
+					date < 1942.03.01
+				}
+				AND = {
+					date > 1942.12.01
+					date < 1943.03.01
+				}
+				AND = {
+					date > 1943.12.01
+					date < 1944.03.01
+				}
+				AND = {
+					date > 1944.12.01
+					date < 1945.03.01
+				}
+				AND = {
+					date > 1945.12.01
+					date < 1946.03.01
+				}
+			}
+		}
+		localization_key = "Operation_barbarossa_winter_ready_47"
+	}
+	text = { # Winter Info - NOT Ready for Winter - 1936-1940
+		trigger = {
+			has_active_mission = The_Soviet_Winter
+			OR = {
+				NOT = {
+					has_tech = mechanised_infantry
+				}
+				NOT = {
+					has_tech = winter_clothes_1939
+				}
+				NOT = {
+					has_tech = tech_logistics_company2
+				}
+			}
+			OR = {
+				AND = {
+					date > 1936.12.01
+					date < 1937.03.01
+				}
+				AND = {
+					date > 1937.12.01
+					date < 1938.03.01
+				}
+				AND = {
+					date > 1938.12.01
+					date < 1939.03.01
+				}
+				AND = {
+					date > 1939.12.01
+					date < 1940.03.01
+				}
+			}
+		}
+		localization_key = Operation_barbarossa_winter_not_ready_40
+	}
+	text = { # Winter Info - NOT Ready for Winter - 1936-1947
+		trigger = {
+			has_active_mission = The_Soviet_Winter
+			OR = {
+				NOT = {
+					has_tech = mechanised_infantry2
+				}
+				NOT = {
+					has_tech = winter_clothes_1941
+				}
+				NOT = {
+					has_tech = tech_logistics_company3
+				}
+			}
+			OR = {
+				AND = {
+					date > 1940.12.01
+					date < 1941.03.01
+				}
+				AND = {
+					date > 1941.12.01
+					date < 1942.03.01
+				}
+				AND = {
+					date > 1942.12.01
+					date < 1943.03.01
+				}
+				AND = {
+					date > 1943.12.01
+					date < 1944.03.01
+				}
+				AND = {
+					date > 1944.12.01
+					date < 1945.03.01
+				}
+				AND = {
+					date > 1945.12.01
+					date < 1946.03.01
+				}
+			}
+		}
+		localization_key = Operation_barbarossa_winter_not_ready_47
+	}
+}
+
+defined_text = {
+	name = OperationBarbarossa_mojor_target_text
+	text = {
+		trigger = {
+			has_active_mission = GER_conquer_Moscow
+		}
+		localization_key = "Moscow"
+	}
+	text = {
+		trigger = {
+			has_active_mission = GER_conquer_Stalingrad
+		}
+		localization_key = "Stalingrad"
+	}
+	text = {
+		trigger = {
+			has_active_mission = GER_conquer_Leningrad
+		}
+		localization_key = "Leningrad"
 	}
 }

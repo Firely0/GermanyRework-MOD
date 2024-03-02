@@ -1,6 +1,6 @@
 GER_Operation_Barbarossa_V = {
 
-	GER_conquer_Leningrad = {
+	GER_conquer_Leningrad = { # PHASE - 3
 		icon = GFX_decision_SOV_lenin
 
 		allowed = {
@@ -41,24 +41,38 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase_2
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 			ROOT = {
 				add_stability = -0.05
 				add_war_support = -0.05
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.05
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
 		complete_effect = {
 			complete_national_focus = GER_Leningrad_mission
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
 			SOV = {
 				add_popularity = {
 					ideology = neutrality
@@ -67,10 +81,170 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.05
 				add_stability = -0.05
 			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
-	GER_conquer_Misk = {
+	GER_conquer_Pskow = { # PHASE - 2
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			209 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 209
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_phase1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
+		}
+	}
+
+	GER_conquer_Lithuania = { # PHASE - 1
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			815 = { is_controlled_by_ROOT_or_ally = yes }
+			189 = { is_controlled_by_ROOT_or_ally = yes }
+			188 = { is_controlled_by_ROOT_or_ally = yes }
+			11 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 815
+				state = 189
+				state = 188
+				state = 11
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_phase1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_stability = -0.025
+				add_war_support = -0.025
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
+		}
+	}
+
+	GER_conquer_Misk = { # PHASE - 1
 		icon = GFX_decision_generic_tank
 
 		allowed = {
@@ -78,7 +252,85 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-			97 = { is_controlled_by_ROOT_or_ally = yes }
+			206 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206 #Minsk
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_phase1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
+		}
+	}
+
+	GER_conquer_Misk_2 = { # PHASE - 2 - 3
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
 			206 = { is_controlled_by_ROOT_or_ally = yes }
 			242 = { is_controlled_by_ROOT_or_ally = yes }
 		}
@@ -93,9 +345,8 @@ GER_Operation_Barbarossa_V = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 206 #Minsk
-				state = 97 #Bialystok
-				state = 242 #Smolensk
+				state = 206 
+				state = 242
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -105,19 +356,29 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase1
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 			ROOT = {
 				add_stability = -0.025
 				add_war_support = -0.025
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.05
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
@@ -130,10 +391,20 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.025
 				add_stability = -0.025
 			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
-	GER_conquer_Moscow = {
+	GER_conquer_Moscow = { # PHASE - 3
 		icon = GFX_decision_SOV_moscow
 
 		allowed = {
@@ -164,19 +435,29 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase_2
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.1
+			}
 			ROOT = {
 				add_stability = -0.05
 				add_war_support = -0.05
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.1
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
@@ -190,10 +471,20 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.05
 				add_stability = -0.05
 			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
-	GER_conquer_Kiev = {
+	GER_conquer_Kiev = { # PHASE - 1
 		icon = GFX_decision_SOV_place_hq
 
 		allowed = {
@@ -224,19 +515,29 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase1
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 			ROOT = {
 				add_stability = -0.025
 				add_war_support = -0.025
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.05
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
@@ -249,10 +550,99 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.025
 				add_stability = -0.025
 			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
-	GER_conquer_Stalingrad = {
+	GER_conquer_Orel = { # PHASE - 2
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = GER
+		}
+
+		available = { #GOAL
+			222 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 222
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_phase1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
+			ROOT = {
+				add_stability = -0.025
+				add_war_support = -0.025
+			}
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_war_support = -0.025
+				add_stability = -0.025
+			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
+		}
+	}
+
+	GER_conquer_Stalingrad = { # PHASE - 3
 		icon = GFX_decision_SOV_stalin
 
 		allowed = {
@@ -283,19 +673,29 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase_2
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 			ROOT = {
 				add_stability = -0.05
 				add_war_support = -0.05
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.05
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
@@ -309,10 +709,20 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.05
 				add_stability = -0.1
 			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
-	GER_conquer_Sevastopol = {
+	GER_conquer_Sevastopol = { # PHASE - 3
 		icon = GFX_decision_SOV_place_hq
 
 		allowed = {
@@ -343,19 +753,29 @@ GER_Operation_Barbarossa_V = {
 		is_good = no
 		fire_only_once = yes
 		selectable_mission = no
-		days_mission_timeout = GER_Operation_Barb_time
+		days_mission_timeout = GER_Operation_Barb_time_phase_2
 
 		cancel_effect = {
 		}
 
 		timeout_effect = {
+			add_power_balance_value = {
+				id = GER_power_balance
+				value = -0.05
+			}
 			ROOT = {
 				add_stability = -0.025
 				add_war_support = -0.025
 			}
-			add_power_balance_value = {
-				id = GER_power_balance
-				value = -0.05
+			add_to_variable = {
+				var = GER_failures
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_success
+					value = 1
+				}
 			}
 		}
 
@@ -368,6 +788,16 @@ GER_Operation_Barbarossa_V = {
 				add_war_support = -0.025
 				add_stability = -0.025
 			}
+			add_to_variable = {
+				var = GER_success
+				value = 1
+			}
+			SOV = {
+				add_to_variable = {
+					var = SOV_failures
+					value = 1
+				}
+			}
 		}
 	}
 
@@ -379,7 +809,9 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-			always = no
+			check_variable = {
+				GER_success > 2
+			}
 		}
 
 		activation = {
@@ -401,7 +833,93 @@ GER_Operation_Barbarossa_V = {
 		timeout_effect = {
 			custom_effect_tooltip = GER_end_of_phase_one_tooltip
 			hidden_effect = {
-				GER_readd_barbarossa = yes
+				GER_next_plans_effect = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				GER_next_plans_effect = yes
+			}
+		}
+	}
+
+	GER_end_of_phase_two = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			check_variable = {
+				GER_success > 4
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_time_1
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			hidden_effect = {
+				GER_next_plans_effect = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				GER_next_plans_effect = yes
+			}
+		}
+	}
+
+	GER_end_of_phase_three = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			check_variable = {
+				GER_success > 9
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		cancel_if_not_visible = yes
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = GER_Operation_Barb_timer_phase_2
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			hidden_effect = {
+				GER_next_plans_effect = yes
 			}
 		}
 
@@ -567,6 +1085,141 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 	}
 
+	Allied_Invasion_of_Italy = {
+		icon = GFX_decision_generic_police_action
+		days_mission_timeout = 14
+		selectable_mission = no
+		fire_only_once = yes
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			ITA = {
+				any_owned_state = {
+					is_core_of = ITA
+					has_state_flag = ITA_main_land
+					NOT = { is_controlled_by = ITA }
+				}
+			}
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
+	}
+
+	Allied_Invasion_of_Italy_2 = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 14
+		selectable_mission = no
+		fire_only_once = yes
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			2 = {
+				is_owned_by = ITA
+				NOT = { is_controlled_by = ITA }
+			}
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
+	}
+
+	Invade_baltics = {
+		icon = GFX_decision_generic_operation
+		priority = 90
+		days_remove = 28
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+			has_global_flag = GER_Operation_Barbarossa_running
+			OR = {
+				LIT = {
+					exists = yes
+					is_puppet = no
+				}
+				LAT = {
+					exists = yes
+					is_puppet = no
+				}
+				EST = {
+					exists = yes
+					is_puppet = no
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					LIT = { exists = yes is_puppet = no }
+				}
+				declare_war_on = {
+					target = LIT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					LAT = { exists = yes is_puppet = no }
+				}
+				declare_war_on = {
+					target = LAT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					EST = { exists = yes is_puppet = no }
+				}
+				declare_war_on = {
+					target = EST
+					type = annex_everything
+				}
+			}
+		}
+	}
+
 	High_Command_Tank_Warfare = {
 		icon = GFX_decision_generic_tank
 		priority = 98 # First
@@ -596,7 +1249,10 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		modifier = { # Use Tank Warfare
-			army_armor_speed_factor = 0.05
+			tactic_blitz_preferred_weight_factor = 0.1
+			tactic_masterful_blitz_ger_preferred_weight_factor = 0.1
+			tactic_breakthrough_preferred_weight_factor = 0.05
+			tactic_street_battle_breakthrough_preferred_weight_factor = 0.05
 		}
 
 		targeted_modifier = {
@@ -645,7 +1301,10 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		modifier = {
-			army_artillery_attack_factor = 0.05
+			tactic_smoke_and_fire_preferred_weight_factor = 0.1
+			tactic_assault_preferred_weight_factor = 0.1
+			tactic_overwhelming_fire_preferred_weight_factor = 0.1
+			tactic_shock_preferred_weight_factor = 0.05
 		}
 
 		targeted_modifier = {

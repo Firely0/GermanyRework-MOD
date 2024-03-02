@@ -82,7 +82,6 @@ on_actions = {
 			}
 		}
 	}
-	
 	on_weekly = {
 		effect = {
 			if = {
@@ -106,7 +105,6 @@ on_actions = {
 			}
 		}
 	}
-
 	on_state_control_changed = {
 		effect = {
 			if = {
@@ -568,7 +566,9 @@ on_actions = {
 								is_owned_and_controlled_by = SOV
 							}
 						}
-						set_state_flag = GER_Claim_lands
+						92 = {
+							set_state_flag = GER_Claim_lands
+						}
 					}
 					every_country = {
 						limit = {
@@ -578,6 +578,11 @@ on_actions = {
 					}
 					SOV = {
 						add_ideas = SOV_Great_Patriotic_War
+						add_timed_idea = {
+							idea = GER_unexpected_attack
+							days = 30
+						}
+						set_global_flag = OperationBarbarossa_kicking_door_30_days
 						if = {
 							limit = {
 								is_ai = yes
@@ -586,22 +591,23 @@ on_actions = {
 						}
 					}
 					GER = {
-						add_timed_idea = {
-							idea = GER_barbarossa
-							days = 180
+						add_ideas = GER_barbarossa
+						set_variable = {
+							GER_Operation_Barb_time_phase1 = 90
 						}
 						set_variable = {
-							GER_Operation_Barb_time = 180
+							GER_Operation_Barb_time_1 = 91
 						}
 						set_variable = {
-							GER_Operation_Barb_time_1 = 181
+							GER_Operation_Barb_time_phase_2 = 180
 						}
-						activate_mission = GER_conquer_Leningrad
+						set_variable = {
+							GER_Operation_Barb_timer_phase_2 = 181
+						}
+						# PHASE - 1
+						activate_mission = GER_conquer_Lithuania
 						activate_mission = GER_conquer_Misk
-						activate_mission = GER_conquer_Moscow
 						activate_mission = GER_conquer_Kiev
-						activate_mission = GER_conquer_Stalingrad
-						activate_mission = GER_conquer_Sevastopol
 						activate_mission = GER_end_of_phase_one
 						if = {
 							limit = {
@@ -609,12 +615,23 @@ on_actions = {
 							}
 							add_command_power = 21
 						}
-						if = {
-							limit = {
-								SOV = { is_ai = yes }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 771
+								state = 162
+								state = 2
+								state = 117
+								state = 156
+								state = 115
+								state = 849
+								state = 157
+								state = 161
+								state = 160
 							}
-							SOV = { add_command_power = 21 }
 						}
+						set_state_flag = ITA_main_land
 					}
 					play_song = "GR_Western_Front_Armies"
 				}

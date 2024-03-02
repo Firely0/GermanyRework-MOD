@@ -3118,6 +3118,99 @@ GER_add_refund_of_ship_search = {
 	}
 }
 
+GER_next_plans_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				GER_success > 2
+			}
+			check_variable = {
+				GER_success < 4
+			}
+		}
+		# PHASE - 2
+		activate_mission = GER_conquer_Pskow
+		activate_mission = GER_conquer_Misk_2
+		activate_mission = GER_conquer_Orel
+		activate_mission = GER_end_of_phase_two
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GER_failures > 0
+			}
+		}
+		set_global_flag = GER_Operation_Barbarossa_Failed_phase_1
+		GER = {
+			remove_ideas = GER_barbarossa
+			add_ideas = GER_barbarossa_war
+			add_timed_idea = {
+				idea = GER_War_Exhaustion
+				days = 90
+			}
+		}
+		GER = {
+			country_event = {
+				id = GER_health_adolf.2
+				hours = 6
+			}
+		}
+	}	
+	if = {
+		limit = {	
+			check_variable = {
+				GER_success > 4
+			}
+			check_variable = {
+				GER_success < 7
+			}
+		}
+		# PHASE - 2
+		activate_mission = GER_conquer_Leningrad
+		activate_mission = GER_conquer_Moscow
+		activate_mission = GER_conquer_Stalingrad
+		activate_mission = GER_conquer_Sevastopol
+		activate_mission = GER_end_of_phase_three
+		hidden_effect = {
+			if = {
+				limit = {
+					has_active_mission = GER_conquer_Misk_2
+					NOT = {
+						has_active_mission = GER_conquer_Pskow
+						has_active_mission = GER_conquer_Orel
+					}
+				}
+				add_days_mission_timeout = {
+					mission = GER_conquer_Misk_2
+					days = 90
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GER_failures > 1
+			}
+		}
+		set_global_flag = GER_Operation_Barbarossa_Failed_phase_2
+		GER = {
+			remove_ideas = GER_barbarossa
+			add_ideas = GER_barbarossa_war
+			add_timed_idea = {
+				idea = GER_War_Exhaustion
+				days = 180
+			}
+		}
+		GER = {
+			country_event = {
+				id = GER_health_adolf.2
+				hours = 6
+			}
+		}
+	}	
+}	
+
 GER_readd_barbarossa = {
 	if = {
 		limit = {
@@ -3131,12 +3224,12 @@ GER_readd_barbarossa = {
 		}
 	}
 	else = {
-		set_global_flag = GER_Operation_Barbarossa_Failed_phase_1
+		set_global_flag = GER_Operation_Barbarossa_Failed_phase_3
 		GER = {
 			add_ideas = GER_barbarossa_war
 			add_timed_idea = {
 				idea = GER_War_Exhaustion
-				days = 180
+				days = 90
 			}
 		}
 		GER = {

@@ -188,6 +188,15 @@ ideas = {
 			modifier = {
 				army_defence_factor = -0.1
 			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_global_flag = OperationBarbarossa_kicking_door_30_days
+					}
+					clr_global_flag = OperationBarbarossa_kicking_door_30_days
+				}
+			}
 		}
 
 		GER_new_laws_idea = {
@@ -3711,7 +3720,6 @@ ideas = {
 			on_remove = {
 				clr_global_flag = Operation_barb_run_global
 			}
-
 		}
 
 		GER_winter_war_harsh_winter = {

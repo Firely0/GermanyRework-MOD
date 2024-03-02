@@ -1,5 +1,17 @@
 ﻿l_english:
 
+ # Tactics 
+
+ tactic_smoke_and_fire_preferred_weight_factor:1 "Additional §YGas Attack§! Tactic Chance if it is Preferred tactic"
+ tactic_assault_preferred_weight_factor:0 "Additional §YAssault§! Tactic Chance if it is Preferred tactic"
+ tactic_barrage_fire_preferred_weight_factor:0 "Additional §YSuppressive Barrage§! Tactic Chance if it is Preferred tactic"
+ tactic_shock_preferred_weight_factor:0 "Additional §YShock§! Tactic Chance if it is Preferred tactic"
+
+ tactic_masterful_blitz_ger_preferred_weight_factor:0 "Additional §YMasterful Blitz§! Tactic Chance if it is Preferred tactic"
+ tactic_street_battle_breakthrough_preferred_weight_factor:0 "Additional §YUrban Breakthrough§! Tactic Chance if it is Preferred tactic"
+ tactic_blitz_preferred_weight_factor:0 "Additional §YBlitz§! Tactic Chance if it is Preferred tactic"
+ tactic_breakthrough_preferred_weight_factor:0 "Additional §YBreakthrough§! Tactic Chance if it is Preferred tactic"
+
  #MIO`s 
   # Land - Air - Naval
  GER_Mercedes_benz_organization:0 "Mercedes-Benz Armor"
@@ -679,6 +691,7 @@
 
  GER_hitler_is_gone_tt:0 "This Focus Only Unlocked by Events or Death of Adolf Hitler"
  GER_hitler_focus_unlock:0 "This Focus Unlocked Upon completion of Establish Abwehr Focus"
+ GER_unlock_soviet_focus:0 "This Focus Unlocked Upon completion of Treaty with the USSR Focus"
 
  trotsky_dead:0 "Trotsky has been killed by agents"
 
@@ -717,8 +730,8 @@
  GER_Rhineland_demilitarized_b:0 "§RMoselland§! Still Demilitarized"
  GER_Rhineland_demilitarized_e:0 "§RBaden§! Still Demilitarized"
  GER_Rhineland_demilitarized_c:0 "Militarize §RRhineland§!"
- GER_Rhineland_demilitarized_d:0 "Let's Test the French Response"
- GER_Rhineland_demilitarized_back:0 "We Must Back Down"
+ GER_Rhineland_demilitarized_d:0 "Test the French Response"
+ GER_Rhineland_demilitarized_back:0 "Back Down"
  GER_rhineland_focus:0 "Remilitarization of Rhineland"
  GER_communism_near_me:0 "Any Neighbor Country Ruled by Communism"
  GER_fascism_is_wrong:0 "Failure in Attempt of Militarize Rhineland"
@@ -727,7 +740,6 @@
  GER_CHI_Accepted_our_co-op:0 "The Deal Must Be going"
  ger_sov_treaty_in_berlin:0 "§RPeace Deal Completed in Berlin§!"
  GER_Fate_of_SOV:0 "Fate of Soviet Union"
- GER_Keep_occpy_land:0 "if Soviet Union Accepts, We Gain §RArkhangelsk–Astrakhan line§! Lands! and Potential Lands for our Allies"
  GER_london_naval_treaty:0 "Our Navy Still Limited by Anglo-German Agreement"
  GER_trade_on_going_uk:0 "Trade Agreement with United Kingdom Must Be Ongoing"
 
@@ -973,6 +985,8 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
  
+ GER_Mojor_Diplomacy:0 "Mojor Diplomacy"
+ GER_Mojor_Diplomacy_desc:0 ""
  GER_valkyrie_leader:0 "Military Junta"
  GER_valkyrie_leader_desc:0 ""
  GER_expand_civilian_industry:0 "Expand Civilian Industry"

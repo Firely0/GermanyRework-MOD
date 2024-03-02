@@ -958,6 +958,42 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = GER_Mojor_Diplomacy
+		icon = GFX_goal_generic_major_alliance
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		prerequisite = {
+			focus = GER_foregin_affairs
+		}
+		relative_position_id = GER_foregin_affairs
+		x = 9
+		y = 1
+		cost = 3
+		available = {
+			NOT = {
+				has_global_flag = GER_civil_war
+			}
+		}
+		bypass = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_strengthened_relations_with_us
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_strengthened_relations_with_us
+				}
+			}
+		}
+	}
+	focus = {
 		id = GER_anschluss
 		icon = GFX_goal_Anschlus_1
 		text = GER_anschluss
@@ -2894,59 +2930,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_uk_friend
-		icon = GFX_focus_chi_british_cooperation
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {
-			focus = GER_foregin_affairs
-		}
-		available = {
-			NOT = {
-				has_global_flag = GER_civil_war
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-			ENG = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-				exists = yes
-			}
-		}
-		cancel = {
-			OR = {
-				NOT = {
-					country_exists = ENG
-				}
-				has_war_with = ENG
-			}
-		}
-		bypass = {
-			has_war_with = ENG
-		}
-		cancel_if_invalid = no
-		x = 12
-		y = 1
-		relative_position_id = GER_foregin_affairs
-		cost = 3
-		ai_will_do = {
-		}
-		completion_reward = {
-			ENG = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = SOV_strengthened_relations_with_us
-				}
-			}
-		}
-	}
-	focus = {
 		id = GER_anglo_german_agreemet
 		icon = GFX_focus_generic_treaty
 		prerequisite = {
-			focus = GER_uk_friend
+			focus = GER_Mojor_Diplomacy
 		}
 		allow_branch = {
 			NOT = {
@@ -2985,9 +2972,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = 2
+		x = 6
 		y = 1
-		relative_position_id = GER_uk_friend
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		ai_will_do = {
 		}
@@ -3083,7 +3070,7 @@ focus_tree = {
 		id = GER_operation_sealion
 		icon = GFX_goal_r56_goal_GER_operation_sealion
 		prerequisite = {
-			focus = GER_uk_friend
+			focus = GER_Mojor_Diplomacy
 		}
 		allow_branch = {
 			has_completed_focus = GER_war_with_britain
@@ -3106,9 +3093,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 0
-		y = 2
-		relative_position_id = GER_uk_friend
+		x = 4
+		y = 3
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 3
 		ai_will_do = {
 		}
@@ -3346,7 +3333,7 @@ focus_tree = {
 		id = GER_uk_trade_agreements
 		icon = GFX_focus_generic_british_trade
 		prerequisite = {
-			focus = GER_uk_friend
+			focus = GER_Mojor_Diplomacy
 		}
 		allow_branch = {
 			NOT = {
@@ -3384,9 +3371,9 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = 2
 		y = 1
-		relative_position_id = GER_uk_friend
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		ai_will_do = {
 		}
@@ -13116,43 +13103,16 @@ focus_tree = {
 	}
 	#SOV
 	focus = {
-		id = GER_Sleep_Well_SOV
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		dynamic = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		prerequisite = {
-			focus = GER_foregin_affairs
-		}
-		relative_position_id = GER_foregin_affairs
-		x = 5
-		y = 1
-		cost = 3
-		available = {
-			has_government = fascism
-			NOT = {
-				has_global_flag = GER_civil_war
-			}
-		}
-		bypass = {
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
 		id = GER_Attack_SOV
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = {
-			focus = GER_Sleep_Well_SOV
+			focus = GER_Mojor_Diplomacy
 		}
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Mojor_Diplomacy
 		allow_branch = {
 			has_completed_focus = GER_ussr_war_goal
 		}
-		x = 0
+		x = -4
 		y = 3
 		cost = 3
 		available = {
@@ -13167,6 +13127,9 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			unlock_decision_category_tooltip = GER_Operation_Barbarossa_V
+			unlock_decision_category_tooltip = GER_Operation_Barbarossa_High_Command
+			unlock_decision_category_tooltip = GER_Operation_Barbarossa_Operations
 		}
 	}
 	focus = {
@@ -13192,6 +13155,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = GER_Leningrad_win
+			effect_tooltip = {
+				SOV = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.1
+					}
+					add_war_support = -0.05
+					add_stability = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -13217,6 +13190,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = GER_Moscow_win
+			effect_tooltip = {
+				SOV = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.05
+					}
+					add_war_support = -0.05
+					add_stability = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -13242,6 +13225,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_global_flag = GER_Stalingrad_win
+			effect_tooltip = {
+				SOV = {
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.1
+					}
+					add_stability = -0.1
+					add_war_support = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -13274,8 +13267,11 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			custom_effect_tooltip = GER_Keep_occpy_land
-			set_country_flag = GER_SOV_Demanded
+			set_country_flag = GER_SOV_Demanded	
+			SOV = {
+				custom_effect_tooltip = needs_approval
+				custom_effect_tooltip = GER_Keep_occpy_land
+			}
 			GER = {
 				country_event = {
 					id = GER_SOV_ultimatom.1
@@ -13286,7 +13282,11 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Approach_Soviet
-		icon = GFX_focus_chi_mission_to_the_soviet_union
+		icon = GFX_goal_GER_soviet_treaty
+		text = GER_soviet_treaty
+		prerequisite = {
+			focus = GER_Mojor_Diplomacy
+		}
 		allow_branch = {
 			NOT = {
 				has_completed_focus = GER_ussr_war_goal
@@ -13297,39 +13297,22 @@ focus_tree = {
 			}
 		}
 		available = {
-			SOV = {
-				NOT = {
-					has_war_with = GER
-				}
-				country_exists = SOV
-				has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = GER_unlock_soviet_focus
+				always = no
 			}
 		}
-		cancel = {
-			OR = {
-				has_war_with = SOV
-				NOT = {
-					country_exists = SOV
-				}
-			}
-		}
-		prerequisite = {
-			focus = GER_Sleep_Well_SOV
-		}
-		x = 2
+		bypass = {
+			has_completed_focus = GER_soviet_treaty_a
+		}	
+		x = -2
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			SOV = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = SOV_strengthened_relations_with_us
-				}
-			}
 		}
 	}
 	focus = {
@@ -13493,11 +13476,11 @@ focus_tree = {
 			has_completed_focus = GER_ussr_war_goal
 		}
 		prerequisite = {
-			focus = GER_Sleep_Well_SOV
+			focus = GER_Mojor_Diplomacy
 		}
-		x = 2
+		x = -2
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -13651,11 +13634,11 @@ focus_tree = {
 			has_completed_focus = GER_ussr_war_goal
 		}
 		prerequisite = {
-			focus = GER_Sleep_Well_SOV
+			focus = GER_Mojor_Diplomacy
 		}
-		x = -2
+		x = -6
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -13684,9 +13667,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_Russia_Glory_Army
 		}
-		x = -1
-		y = 2
-		relative_position_id = GER_Sleep_Well_SOV
+		x = 1
+		y = 1
+		relative_position_id = GER_Russia_Glory_Army
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -13757,9 +13740,9 @@ focus_tree = {
 			focus = GER_Russia_Glory_Army
 		}
 		search_filters = {FOCUS_FILTER_HISTORICAL}
-		x = -3
-		y = 2
-		relative_position_id = GER_Sleep_Well_SOV
+		x = -1
+		y = 1
+		relative_position_id = GER_Russia_Glory_Army
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -13851,7 +13834,7 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_communists_a
 		text = GER_anti_comitern_pact
 		prerequisite = {
-			focus = GER_Sleep_Well_SOV
+			focus = GER_Mojor_Diplomacy
 		}
 		allow_branch = {
 			NOT = {
@@ -13862,9 +13845,9 @@ focus_tree = {
 				has_completed_focus = GER_against_fuhrer
 			}
 		}
-		x = -2
+		x = -6
 		y = 1
-		relative_position_id = GER_Sleep_Well_SOV
+		relative_position_id = GER_Mojor_Diplomacy
 		cost = 5
 		available = {
 			is_subject = no

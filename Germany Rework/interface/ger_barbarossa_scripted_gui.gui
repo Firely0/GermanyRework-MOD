@@ -1,0 +1,90 @@
+@FACTION_TEXT_X = 55
+@SUCCESS_TEXT_X = 240
+@FAILURES_TEXT_X = 380
+@NAMES_X = 55
+@HEADERS_Y = 0
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "ger_barbarossa_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 140 }
+
+		instantTextBoxType = {
+			name ="ger_name_text"
+			position = { x = @NAMES_X y = 40 }
+			font = "hoi_18mbs"
+			text = "GER_name_text"
+			format = left
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="SOV_name_text"
+			position = { x = @NAMES_X y = 85 }
+			font = "hoi_18mbs"
+			text = "SOV_name_text"
+			format = left
+			maxHeight = 24
+		}
+
+		#Header - Success
+		instantTextBoxType = {
+			name ="Success_header"
+			position = { x = @SUCCESS_TEXT_X y = @HEADERS_Y }
+			font = "hoi_18mbs"
+			text = "GER_ui_Success_header"
+			format = center
+			maxHeight = 24
+			maxwidth = 110
+		}
+
+		instantTextBoxType = {
+			name ="GER_success_status"
+			position = { x = @SUCCESS_TEXT_X y = 40 }
+			font = "hoi_18mbs"
+			text = GER_success
+			format = center
+			maxwidth = 110
+		}
+
+		instantTextBoxType = {
+			name ="SOV_success_status"
+			position = { x = @SUCCESS_TEXT_X y = 85 }
+			font = "hoi_18mbs"
+			text = SOV_success
+			format = center
+			maxwidth = 110
+		}
+
+		#Header - Failures
+		instantTextBoxType = {
+			name ="Failures_header"
+			position = { x = @FAILURES_TEXT_X y = @HEADERS_Y }
+			font = "hoi_18mbs"
+			text = "GER_ui_Failures_header"
+			format = center
+			maxHeight = 24
+			maxwidth = 120
+		}
+
+		instantTextBoxType = {
+			name ="GER_failures_status"
+			position = { x = @FAILURES_TEXT_X y = 40 }
+			font = "hoi_18mbs"
+			text = GER_failures
+			format = center
+			maxwidth = 120
+		}
+
+		instantTextBoxType = {
+			name ="SOV_failures_status"
+			position = { x = @FAILURES_TEXT_X y = 85 }
+			font = "hoi_18mbs"
+			text = SOV_failures
+			format = center
+			maxwidth = 120
+		}
+	}
+}

@@ -27,6 +27,12 @@ activate_mission = GER_Rhineland_demilitarized_e
 #Allowed with Focus
 set_rule = { can_send_volunteers = no }
 
+#Operation Barbarossa
+set_variable = { GER_failures = 0 }
+set_variable = { GER_success = 0 }
+set_variable = { SOV_failures = 0 }
+set_variable = { SOV_success = 0 }
+
 #Training Programs 
 activate_mission = GER_SOV_TRAINING
 activate_mission = GER_ITA_TRAINING
