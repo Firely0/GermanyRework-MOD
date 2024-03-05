@@ -70,6 +70,7 @@ German_historical = {
 		GER_hermann_goring_werke_a
 		GER_kdf_wagen_a
 		GER_extra_tech_slot_a
+		GER_west_wall
 		GER_fascism_for_our_glory
 		#1937
 		GER_foregin_affairs
@@ -99,17 +100,22 @@ German_historical = {
 		GER_around_maginot
 		GER_war_with_france
 		GER_synthetic_rubber_a # Prio
+		GER_second_vienna_award
 		GER_air_innovation_a
 		GER_CAS
 		GER_Operational_Integratiy
 		GER_Strategic_Des
-		GER_Improve_Des
 		GER_german_war_economy_a
 		GER_Finish
-		GER_second_vienna_award
 		#1941
 		GER_army_innovation_2_a
 		GER_Beaten_but_not_defeated
+		GER_Improve_CAS_Range
+		GER_Improve_TAC
+		GER_Improve_Des
+		GER_reintegrate_luxemburg_and_alsace_lorraine
+		GER_Befriend_Sweden
+		GER_Renew_Sweden_Steel_Trade
 		GER_ussr_war_goal
 		GER_SS
 		GER_SS_A
@@ -138,8 +144,6 @@ German_historical = {
 		GER_naval_rearmament_a
 		#1942
 		GER_plan_z_a
-		GER_Improve_CAS_Range
-		GER_Improve_TAC
 		GER_air_innovation_2_a
 		GER_west_wall
 		GER_atlantikwall
@@ -271,7 +275,8 @@ German_fuhrer_death_historical = {
 		GER_hermann_goring_werke_a
 		GER_kdf_wagen_a
 		GER_extra_tech_slot_a
-		GER_Fuhrer
+		GER_west_wall
+		GER_fascism_for_our_glory
 		#1937
 		GER_foregin_affairs
 		GER_anschluss
@@ -284,7 +289,7 @@ German_fuhrer_death_historical = {
 		GER_Axis_Powers
 		GER_soviet_treaty_a
 		GER_staff
-		GER_Sleep_Well_SOV
+		GER_Mojor_Diplomacy
 		GER_anti_comitern_pact
 		GER_demand_sudetenland
 		GER_first_vienna_award
@@ -299,24 +304,29 @@ German_fuhrer_death_historical = {
 		#1940
 		GER_around_maginot
 		GER_war_with_france
+		GER_synthetic_rubber_a # Prio
+		GER_second_vienna_award
 		GER_air_innovation_a
-		GER_german_war_economy_a
 		GER_CAS
 		GER_Operational_Integratiy
 		GER_Strategic_Des
-		GER_Improve_Des
-		GER_synthetic_rubber_a
+		GER_german_war_economy_a
 		GER_Finish
-		GER_second_vienna_award
 		#1941
 		GER_army_innovation_2_a
 		GER_Beaten_but_not_defeated
+		GER_Improve_CAS_Range
+		GER_Improve_TAC
+		GER_Improve_Des
+		GER_reintegrate_luxemburg_and_alsace_lorraine
+		GER_Befriend_Sweden
+		GER_Renew_Sweden_Steel_Trade
 		GER_ussr_war_goal
 		GER_SS
 		GER_SS_A
+		GER_FIN_war_with_sov
 		GER_follow_wehrmacht_design
 		GER_for_our_revange
-		GER_form_the_reichskommissariats
 		GER_SS_Trops
 		GER_SS_B
 		GER_SS_Final_Focus
@@ -335,11 +345,10 @@ German_fuhrer_death_historical = {
 		GER_Eco_Plan_B_Main_B
 		GER_anti_air_tank
 		GER_Glory_of_Wehrmacht
+		GER_underground_factories
 		GER_naval_rearmament_a
 		#1942
 		GER_plan_z_a
-		GER_Improve_CAS_Range
-		GER_Improve_TAC
 		GER_air_innovation_2_a
 		GER_west_wall
 		GER_atlantikwall

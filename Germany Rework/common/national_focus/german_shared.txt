@@ -6090,7 +6090,18 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			unlock_national_focus = GER_Approach_Soviet
+			if = {
+				limit = {
+					NOT = { has_completed_focus = GER_Mojor_Diplomacy }
+				}
+				set_country_flag = GER_UNLOCK_SOVIET_FOCUS_UPON_COMPLETED_DIPLOMACY_FOCUS
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_Mojor_Diplomacy
+				}
+				unlock_national_focus = GER_Approach_Soviet
+			}
 		}
 	}
 }
@@ -6214,16 +6225,6 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		air_experience = 50
-
-		add_ideas = GER_air_innovations_2_idea
-		# Balance research bonus to next tech among radio, radio_detection, decimetric_radar, improved_decimetric_radar, centimetric_radar, improved_centimetric_radar, advanced_centimetric_radar
-		add_tech_bonus = {
-			name = radar_tech_bonus
-			bonus = 1.0
-			uses = 1
-			category = radar_tech
-		}
 		if = {
 			limit = {
 				has_opinion_modifier = sov_ger_treaty
@@ -6232,6 +6233,13 @@ shared_focus = {
 			SOV = {
 				country_event = { id = germany.78 days = 1 }
 			}
+		}
+		add_ideas = GER_air_innovations_2_idea
+		add_tech_bonus = {
+			name = radar_tech_bonus
+			bonus = 1.0
+			uses = 1
+			category = radar_tech
 		}
 	}
 }

@@ -1,9 +1,10 @@
 
-SOV_hold_key_of_union = {
+SOV_great_patriotic_war = {
 	
-	priority = 100
+	priority = 105
 
 	icon = sov_great_patriotic_war
+	picture = GFX_decision_cat_picture_FIN_motti_tactics
 
 	allowed = {
 		original_tag = SOV
@@ -21,9 +22,10 @@ SOV_hold_key_of_union = {
 
 SOV_great_patriotic_war_Orders = {
 	
-	priority = 90
+	priority = 104
 
-	icon = GFX_decision_category_military_operation
+	icon = GFX_decision_category_SOV_civil_puppet_interaction
+	scripted_gui = ger_barbarossa_decision_ui
 
 	allowed = {
 		original_tag = SOV
@@ -36,12 +38,12 @@ SOV_great_patriotic_war_Orders = {
 		}
 	}
 	
-	visible_when_empty = no
+	visible_when_empty = yes
 }
 
 SOV_Development_and_Deployment = {
 	
-	priority = 88
+	priority = 103
 
 	icon = GFX_decision_category_SOV_merge_designers
 
@@ -61,7 +63,7 @@ SOV_Development_and_Deployment = {
 
 SOV_Local_offensive = {
 	
-	priority = 88
+	priority = 102
 
 	icon = GFX_decision_category_ger_military_buildup
 
@@ -81,7 +83,7 @@ SOV_Local_offensive = {
 
 SOV_Local_Defense = {
 	
-	priority = 88
+	priority = 101
 
 	icon = GFX_decision_setup_forts_with_art
 

@@ -110,7 +110,22 @@ ideas = {
 				weekly_manpower = 250
 				fascism_drift = 0.05
 			}
+		}
 
+		a_side_with_germany = {
+
+			picture = DEN_occupation_laws
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+						
+			modifier = {
+				weekly_manpower = 300
+				fascism_drift = 0.05
+			}
 		}
 
 		a_farm_village = {

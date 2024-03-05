@@ -27,6 +27,7 @@ GER_reichskommissariats = {
 					original_tag = RMK
 					original_tag = RTK
 					original_tag = RKS
+					original_tag = RGV
 				}
 			}
 		}
@@ -72,7 +73,7 @@ GER_reichskommissariats = {
 				factor = 5
 				FROM = {
 					has_manpower < 5000
- 				}
+				}
 			}
 		}
 
@@ -84,6 +85,7 @@ GER_reichskommissariats = {
 					original_tag = RMK
 					original_tag = RTK
 					original_tag = RKS
+					original_tag = RGV
 				}
 			}
 		}
@@ -276,9 +278,9 @@ GER_reichskommissariats = {
 						set_state_controller = 35
 						set_state_controller = 36
 					}
-				}
-				HOL = {
-					start_civil_war = { ideology = fascism size = 1 }
+					HOL = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
 				}
 				random_country = {
 					limit = {
@@ -310,7 +312,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-				}	
+				}
 			}
 			else = {
 				HOL = {
@@ -373,9 +375,9 @@ GER_reichskommissariats = {
 						set_state_controller = 6
 						set_state_controller = 34
 					}
-				}
-				BEL = {
-					start_civil_war = { ideology = fascism size = 1 }
+					BEL = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
 				}
 				random_country = {
 					limit = {
@@ -435,6 +437,134 @@ GER_reichskommissariats = {
 		}
 	}
 
+	GER_reichskommissariat_poland = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			controls_state = 10
+			controls_state = 87 
+			controls_state = 88
+			controls_state = 90
+			controls_state = 98
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			has_completed_focus = GER_SS_A
+			has_government = fascism
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = POL
+						is_controlled_by = GER
+					}
+					set_state_flag = SS_Country_Core_State_4
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 10
+							state = 87
+							state = 88
+							state = 90
+							state = 98
+						}
+					}
+					RGV = {
+						transfer_state = PREV
+					}
+					add_compliance = 0.15
+				}
+				if = {
+					limit = {
+						92 = { is_controlled_by = GER }
+					}
+					92 = { transfer_state_to = RGV add_compliance = 0.15 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Death or Dishonor" }
+				}
+				set_autonomy = { target = RGV autonomy_state = autonomy_integrated_puppet end_wars = no end_civil_wars = no }
+			}
+			else = {
+				set_autonomy = { target = RGV autonomy_state = autonomy_reichskommissariat end_wars = no end_civil_wars = no }
+			}
+			hidden_effect = {
+				RGV = { 
+					set_cosmetic_tag = RGV_reichskommissariat 
+					add_ideas = a_side_with_germany
+					add_offsite_building = { type = arms_factory level = 3 }
+				}
+			}
+		}
+	}
+
+	GER_reichsprotektorat_czechoslovakia = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			controls_state = 9
+			controls_state = 75
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_completed_focus = GER_SS_A
+			has_government = fascism
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 9
+							state = 75
+						}
+					}
+					RBM = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+					add_compliance = 0.15
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Death or Dishonor" }
+				}
+				set_autonomy = { target = RBM autonomy_state = autonomy_integrated_puppet end_wars = no end_civil_wars = no }
+			}
+			else = {
+				set_autonomy = { target = RBM autonomy_state = autonomy_reichskommissariat end_wars = no end_civil_wars = no }
+			}
+			hidden_effect = {
+				RBM = { set_cosmetic_tag = RBM_reichsprotektorat }
+			}
+		}
+	}
+
 	GER_reichskommissariat_ostland = {
 
 		icon = ger_reichskommissariats
@@ -484,7 +614,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			hidden_effect = {	
+			hidden_effect = {
 				release_on_controlled = BLR
 				SOV = { add_core_of = BLR }
 				every_state = {
@@ -492,7 +622,7 @@ GER_reichskommissariats = {
 						is_core_of = BLR
 					}
 					remove_core_of = BLR
-				}			
+				}
 				BLR = {
 					every_state = {
 						limit = {
@@ -536,7 +666,7 @@ GER_reichskommissariats = {
 								state = 810
 								state = 813
 								state = 812
-								state = 811							
+								state = 811
 							}
 						}
 						clr_state_flag = GER_Claim_lands
@@ -674,7 +804,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			hidden_effect = {	
+			hidden_effect = {
 				release_on_controlled = UKR
 				SOV = { add_core_of = UKR }
 				every_state = {
@@ -683,7 +813,7 @@ GER_reichskommissariats = {
 					}
 					set_state_flag = SS_Country_Core_State_2
 					remove_core_of = UKR
-				}	
+				}
 				UKR = {
 					every_state = {
 						limit = {
@@ -707,7 +837,7 @@ GER_reichskommissariats = {
 								state = 221
 								state = 228
 								state = 227
-								state = 834						
+								state = 834
 							}
 						}
 						set_state_flag = SS_Country_Core_State_2
@@ -2108,7 +2238,7 @@ SS_loot = {
 		}
 
 		available = {
-			controls_state = 10
+			10 = { is_controlled_by_GER_or_subject = yes }
 		}
 
 		ai_will_do = {
@@ -2126,7 +2256,7 @@ SS_loot = {
 		fire_only_once = yes
 
 		complete_effect = {
-			random_controlled_state = {
+			every_state = {
 				limit = {
 					state = 10
 				}
@@ -2216,7 +2346,7 @@ wehrmacht_demands = {
 						character = GER_heinrich_himmler
 						ruling_only = yes
 					}
-				}	
+				}
 			}
 		}
 
@@ -2268,6 +2398,7 @@ political_actions = {
 					has_state_flag = SS_Country_Core_State
 					has_state_flag = SS_Country_Core_State_2
 					has_state_flag = SS_Country_Core_State_3
+					has_state_flag = SS_Country_Core_State_4
 				}
 			}
 		}
@@ -2283,6 +2414,7 @@ political_actions = {
 				original_tag = BLR
 				original_tag = UKR
 				original_tag = RMK
+				original_tag = RGV
 			}
 		}
 

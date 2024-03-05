@@ -61,7 +61,7 @@ spriteTypes = {
 		name = GFX_portrait_GER_Erwin_Rommel_africa
 		texturefile = "gfx/leaders/GER/Portrait_GER_Erwin_Rommel_africa.dds"
 	}
-	
+
 	spriteType = {
 		name = GFX_portrait_Germany_Otto_Ciliax_AGA
 		texturefile = "gfx/leaders/GER/Portrait_Germany_Otto_Ciliax_AGA.dds"
@@ -91,10 +91,20 @@ spriteTypes = {
 		name = "GFX_Portrait_Siegfried_Kasche"
 		texturefile = "gfx/leaders/GER/Portrait_Siegfried_Kasche.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_Portrait_Alfred_Rosenberg"
 		texturefile = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Konstantin_von_Neurath_rkplus"
+		texturefile = "gfx/leaders/GER/Portrait_Konstantin_von_Neurath_rkplus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_RGV_Hans_Frank"
+		texturefile = "gfx/leaders/GER/Portrait_RGV_Hans_Frank.dds"
 	}
 
 }

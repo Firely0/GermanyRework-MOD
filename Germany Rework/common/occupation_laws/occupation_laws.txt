@@ -773,6 +773,37 @@ ss_police_final = {
 	}
 }
 
+ss_police_final_puppets = {	
+	icon = 4
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	fallback_law = secret_police_oversight
+
+	visible = {
+		original_tag = RGV
+		RGV = {
+			is_puppet_of = GER
+		}
+		NOT = { FROM = { capital_scope = { is_on_continent = africa } } }
+	}
+
+	state_modifier = {
+		resistance_target 				= -0.3
+		compliance_gain 				= -0.03
+		required_garrison_factor 		= -0.3
+		local_factories 				= 0.1
+		local_resources 				= 0.1
+		resistance_damage_to_garrison	= -0.3
+		enemy_operative_detection_chance_over_occupied_tag = 1
+		enemy_intel_network_gain_factor_over_occupied_tag = -0.35 
+	}
+
+
+	ai_will_do = {
+		base = 500
+	}
+}
+
 ss_police_final_sov = {
 	icon = 4
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
@@ -783,6 +814,44 @@ ss_police_final_sov = {
 		original_tag = GER
 		has_completed_focus = GER_SS
 		has_completed_focus = GER_Local_Police_force_in_soviet
+		NOT = { FROM = { capital_scope = { is_on_continent = africa } } }
+		FROM = { original_tag = SOV }
+	}
+
+	state_modifier = {
+		resistance_target 				= -0.25
+		compliance_gain 				= -0.03
+		required_garrison_factor 		= -0.2
+		local_factories 				= 0.1
+		local_resources 				= 0.15
+		resistance_damage_to_garrison	= -0.4
+	}
+
+
+	ai_will_do = {
+		base = 1000
+	}
+}
+
+ss_police_final_sov_puppets = {
+	icon = 4
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	fallback_law = secret_police_oversight
+
+	visible = {
+		OR = {
+			original_tag = BLR
+			original_tag = UKR
+			original_tag = RMK
+			original_tag = RKS
+			original_tag = RTK
+		}
+		ROOT = { is_puppet_of = GER }
+		GER = {
+			has_completed_focus = GER_SS
+			has_completed_focus = GER_Local_Police_force_in_soviet
+		}
 		NOT = { FROM = { capital_scope = { is_on_continent = africa } } }
 		FROM = { original_tag = SOV }
 	}

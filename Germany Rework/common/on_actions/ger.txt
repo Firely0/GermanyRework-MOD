@@ -582,14 +582,9 @@ on_actions = {
 							idea = GER_unexpected_attack
 							days = 30
 						}
-						set_global_flag = OperationBarbarossa_kicking_door_30_days
-						if = {
-							limit = {
-								is_ai = yes
-							}
-							add_command_power = 21
-						}
 					}
+					set_global_flag = Great_Patriotic_War_30_days
+					set_global_flag = OperationBarbarossa_kicking_door_30_days
 					GER = {
 						add_ideas = GER_barbarossa
 						set_variable = {
@@ -609,12 +604,6 @@ on_actions = {
 						activate_mission = GER_conquer_Misk
 						activate_mission = GER_conquer_Kiev
 						activate_mission = GER_end_of_phase_one
-						if = {
-							limit = {
-								is_ai = yes
-							}
-							add_command_power = 21
-						}
 					}
 					every_state = {
 						limit = {
@@ -686,8 +675,6 @@ on_actions = {
 				}
 			}
 		}
-	}
-	on_declare_war = {
 		effect = {
 			if = {
 				limit = {
@@ -699,6 +686,45 @@ on_actions = {
 				}
 				GER = {
 					complete_national_focus = GER_war_with_britain
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					FROM = {
+						tag = YUG
+					}
+				}
+				hidden_effect = {
+					109 = { set_state_owner_to = CRO }
+					CRO = {
+						declare_war_on = {
+							target = YUG
+							type = annex_everything
+						}
+						add_offsite_building = { type = arms_factory level = 3 }
+					}
+					GER = { add_to_faction = CRO }
+					YUG = { remove_core_of = CRO }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					FROM = {
+						tag = ENG
+					}
+					has_completed_focus = GER_operation_sealion
+					has_idea = Operation_Sea_Lion
+				}
+				GER = {
+					activate_mission = GER_plan_working_fine_or_not
+					activate_mission = GER_dover_portsmouth_subtraction
+					activate_mission = GER_plymouth_subtraction
 				}
 			}
 		}
@@ -715,25 +741,6 @@ on_actions = {
 				}
 				GER = {
 					complete_national_focus = GER_war_with_britain
-				}
-			}
-		}
-	}
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = {
-					tag = GER
-					FROM = {
-						tag = ENG
-					}
-					has_completed_focus = GER_operation_sealion
-					has_idea = Operation_Sea_Lion
-				}
-				GER = {
-					activate_mission = GER_plan_working_fine_or_not
-					activate_mission = GER_dover_portsmouth_subtraction
-					activate_mission = GER_plymouth_subtraction
 				}
 			}
 		}

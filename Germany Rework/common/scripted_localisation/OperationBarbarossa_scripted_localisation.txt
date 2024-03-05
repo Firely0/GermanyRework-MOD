@@ -176,6 +176,18 @@ defined_text = {
 	name = OperationBarbarossa_mojor_target_text
 	text = {
 		trigger = {
+			NOT = {
+				OR = {
+					has_active_mission = GER_conquer_Moscow
+					has_active_mission = GER_conquer_Stalingrad
+					has_active_mission = GER_conquer_Leningrad
+				}
+			}
+		}
+		localization_key = "Moscow"
+	}
+	text = {
+		trigger = {
 			has_active_mission = GER_conquer_Moscow
 		}
 		localization_key = "Moscow"
@@ -191,5 +203,15 @@ defined_text = {
 			has_active_mission = GER_conquer_Leningrad
 		}
 		localization_key = "Leningrad"
+	}
+}
+
+defined_text = {
+	name = Great_Patriotic_War_text
+	text = { # Germans Kicking the Door -- Show for 30 day/s
+		trigger = {
+			has_global_flag = Great_Patriotic_War_30_days
+		}
+		localization_key = SOV_Operation_barbarossa_start
 	}
 }

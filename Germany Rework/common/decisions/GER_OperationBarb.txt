@@ -128,7 +128,6 @@ GER_Operation_Barbarossa_V = {
 
 		timeout_effect = {
 			ROOT = {
-				add_stability = -0.025
 				add_war_support = -0.025
 			}
 			add_to_variable = {
@@ -154,7 +153,6 @@ GER_Operation_Barbarossa_V = {
 					popularity = 0.05
 				}
 				add_war_support = -0.025
-				add_stability = -0.025
 			}
 			SOV = {
 				add_to_variable = {
@@ -526,7 +524,6 @@ GER_Operation_Barbarossa_V = {
 				value = -0.05
 			}
 			ROOT = {
-				add_stability = -0.025
 				add_war_support = -0.025
 			}
 			add_to_variable = {
@@ -548,7 +545,6 @@ GER_Operation_Barbarossa_V = {
 					popularity = 0.05
 				}
 				add_war_support = -0.025
-				add_stability = -0.025
 			}
 			add_to_variable = {
 				var = GER_success
@@ -831,13 +827,14 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		timeout_effect = {
-			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			custom_effect_tooltip = GER_end_of_phase_fail_text
 			hidden_effect = {
 				GER_next_plans_effect = yes
 			}
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = GER_end_of_phase_text
 			hidden_effect = {
 				GER_next_plans_effect = yes
 			}
@@ -874,13 +871,14 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		timeout_effect = {
-			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			custom_effect_tooltip = GER_end_of_phase_fail_text
 			hidden_effect = {
 				GER_next_plans_effect = yes
 			}
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = GER_end_of_phase_text
 			hidden_effect = {
 				GER_next_plans_effect = yes
 			}
@@ -917,13 +915,14 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		timeout_effect = {
-			custom_effect_tooltip = GER_end_of_phase_one_tooltip
+			custom_effect_tooltip = GER_end_of_phase_fail_text
 			hidden_effect = {
 				GER_next_plans_effect = yes
 			}
 		}
 
 		complete_effect = {
+			custom_effect_tooltip = GER_end_of_phase_final
 		}
 	}
 
@@ -1103,6 +1102,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 		activation = {
 			ITA = {
+				has_civil_war = no
 				any_owned_state = {
 					is_core_of = ITA
 					has_state_flag = ITA_main_land
@@ -1138,6 +1138,7 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		activation = {
+			ITA = { has_civil_war = no }
 			2 = {
 				is_owned_by = ITA
 				NOT = { is_controlled_by = ITA }
@@ -1177,14 +1178,17 @@ GER_Operation_Barbarossa_High_Command = {
 				LIT = {
 					exists = yes
 					is_puppet = no
+					NOT = { is_in_faction_with = GER }
 				}
 				LAT = {
 					exists = yes
 					is_puppet = no
+					NOT = { is_in_faction_with = GER }
 				}
 				EST = {
 					exists = yes
 					is_puppet = no
+					NOT = { is_in_faction_with = GER }
 				}
 			}
 		}
@@ -1192,7 +1196,7 @@ GER_Operation_Barbarossa_High_Command = {
 		complete_effect = {
 			if = {
 				limit = {
-					LIT = { exists = yes is_puppet = no }
+					LIT = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = LIT
@@ -1201,7 +1205,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 			if = {
 				limit = {
-					LAT = { exists = yes is_puppet = no }
+					LAT = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = LAT
@@ -1210,7 +1214,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 			if = {
 				limit = {
-					EST = { exists = yes is_puppet = no }
+					EST = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = EST
@@ -1226,9 +1230,9 @@ GER_Operation_Barbarossa_High_Command = {
 		days_remove = 90
 
 		custom_cost_trigger = {
-			command_power > 19
+			command_power > 9
 		}
-		custom_cost_text = decision_cost_CP_19
+		custom_cost_text = decision_cost_CP_10
 
 		ai_will_do = {
 			factor = 40 # Small Chance for AI
@@ -1239,6 +1243,16 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GER_winter_ready_army_tooltip
+				NOT = {
+					OR = {
+						has_idea = GER_winter_war_infantry
+						has_idea = GER_winter_war_logistics
+						has_idea = GER_winter_war_harsh_winter
+					}
+				}
+			}
 			NOT = { has_country_flag = High_Command_Issued_Orders }
 			has_completed_focus = GER_Lighting_Strike
 		}
@@ -1262,7 +1276,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -20
+				add_command_power = -10
 				set_country_flag = High_Command_Issued_Orders
 			}
 		}
@@ -1280,9 +1294,9 @@ GER_Operation_Barbarossa_High_Command = {
 		days_remove = 90
 
 		custom_cost_trigger = {
-			command_power > 19
+			command_power > 9
 		}
-		custom_cost_text = decision_cost_CP_19
+		custom_cost_text = decision_cost_CP_10
 
 		ai_will_do = {
 			factor = 50
@@ -1293,6 +1307,16 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GER_winter_ready_army_tooltip
+				NOT = {
+					OR = {
+						has_idea = GER_winter_war_infantry
+						has_idea = GER_winter_war_logistics
+						has_idea = GER_winter_war_harsh_winter
+					}
+				}
+			}
 			NOT = { has_country_flag = High_Command_Issued_Orders }
 		}
 
@@ -1303,7 +1327,7 @@ GER_Operation_Barbarossa_High_Command = {
 		modifier = {
 			tactic_smoke_and_fire_preferred_weight_factor = 0.1
 			tactic_assault_preferred_weight_factor = 0.1
-			tactic_overwhelming_fire_preferred_weight_factor = 0.1
+			tactic_barrage_preferred_weight_factor = 0.1
 			tactic_shock_preferred_weight_factor = 0.05
 		}
 
@@ -1314,7 +1338,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -20
+				add_command_power = -10
 				set_country_flag = High_Command_Issued_Orders
 			}
 		}
@@ -1332,9 +1356,9 @@ GER_Operation_Barbarossa_High_Command = {
 		days_remove = 90
 
 		custom_cost_trigger = {
-			command_power > 19
+			command_power > 14
 		}
-		custom_cost_text = decision_cost_CP_19
+		custom_cost_text = decision_cost_CP_15
 
 		ai_will_do = {
 			factor = 10
@@ -1345,6 +1369,16 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GER_winter_ready_army_tooltip
+				NOT = {
+					OR = {
+						has_idea = GER_winter_war_infantry
+						has_idea = GER_winter_war_logistics
+						has_idea = GER_winter_war_harsh_winter
+					}
+				}
+			}
 			NOT = { has_country_flag = High_Command_Issued_Orders }
 			OR = {
 				has_completed_focus = GER_Strategic_Des
@@ -1365,7 +1399,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -20
+				add_command_power = -15
 				set_country_flag = High_Command_Issued_Orders
 			}
 		}

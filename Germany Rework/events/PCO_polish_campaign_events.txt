@@ -2617,6 +2617,7 @@ country_event = {
 				}
 				92 = {
 					set_state_flag = mr_pact_ger_reserved_state
+					set_state_flag = mr_pact_ger_reserved_state_debug
 				}
 			}
 			if = {
@@ -2979,6 +2980,7 @@ country_event = {
 				}
 				92 = {
 					set_state_flag = mr_pact_ger_reserved_state
+					set_state_flag = mr_pact_ger_reserved_state_debug
 				}
 			}
 			if = {
@@ -3344,6 +3346,7 @@ country_event = {
 				}
 				92 = {
 					set_state_flag = mr_pact_ger_reserved_state
+					set_state_flag = mr_pact_ger_reserved_state_debug
 				}
 			}
 			if = {
@@ -5842,35 +5845,6 @@ country_event = {
 	title = pol_partitionning.1.t
 	desc = pol_partitionning.1.d
 	picture = GFX_report_event_german_troops
-	#fire_only_once = yes
-	#trigger = {
-	#	OR = {
-	#		tag = GER
-	#		AND = {
-	#			tag = LIT
-	#			has_global_flag = LIT_occupies_POL
-	#		}
-	#	}
-	#	has_global_flag = sov_yes_pact
-	#	has_global_flag = sov_invade_poland
-	#	SOV = { exists = yes }
-	#	GER =  { has_war_with = POL }
-	#	GER =  {
-	#		NOT = { has_war_with = SOV }
-	#	}
-	#	SOV = { has_war_with = POL }
-	#	POL = { has_capitulated = yes }
-	#	is_historical_focus_on = yes
-	#	SOV = {
-	#		is_ai = yes
-	#	}
-	#	GER = {
-	#		is_ai = yes
-	#	}
-	#}
-	#mean_time_to_happen = {
-	#	days = 1
-	#}
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -6053,16 +6027,11 @@ country_event = {
 					add_state_claim = 815					#AUKSTAITIJA (LIT)
 				}
 			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 97
-				transfer_state = 89
-				transfer_state = 784
-				white_peace = POL
+			92 = {
+				clr_state_flag = mr_pact_sov_reserved_state
+				clr_state_flag = mr_pact_sov_reserved_state_special
+				clr_country_flag = mr_pact_sov_reserved_state_unnegotiable
+				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -6617,17 +6586,6 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			SOV = {
-				transfer_state = 97
-				transfer_state = 92
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -6834,9 +6792,6 @@ country_event = {
 					transfer_state = 784
 				}
 			}
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -7041,15 +6996,6 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -7259,9 +7205,6 @@ country_event = {
 					transfer_state = 784
 				}
 			}
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -7441,25 +7384,11 @@ country_event = {
 					transfer_state = 97
 				}
 			}
-			if = {
-				limit = {
-					SOV = {
-						controls_state = 92
-					}
-				}
-				SOV = {
-					transfer_state = 92
-				}
-			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				transfer_state = 784
-				white_peace = POL
+			92 = {
+				clr_state_flag = mr_pact_sov_reserved_state
+				clr_state_flag = mr_pact_sov_reserved_state_special
+				clr_country_flag = mr_pact_sov_reserved_state_unnegotiable
+				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -7562,17 +7491,6 @@ country_event = {
 		#	}
 		#}
 		hidden_effect = {
-			SOV = {
-				transfer_state = 97
-				transfer_state = 92
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -7780,9 +7698,6 @@ country_event = {
 				SOV = {
 					transfer_state = 784
 				}
-			}
-			SOV = {
-				white_peace = POL
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -8045,9 +7960,6 @@ country_event = {
 					transfer_state = 89
 				}
 			}
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -8156,15 +8068,6 @@ country_event = {
 				SOV = {
 					transfer_state = 92
 				}
-			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				white_peace = POL
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -8368,15 +8271,6 @@ country_event = {
 				SOV = {
 					transfer_state = 92
 				}
-			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				white_peace = POL
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -8639,10 +8533,6 @@ country_event = {
 					transfer_state = 87
 				}
 			}
-			#MODIFIER
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -8867,9 +8757,6 @@ country_event = {
 					transfer_state = 87
 				}
 			}
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -8997,19 +8884,6 @@ country_event = {
 				SOV = {
 					transfer_state = 92
 				}
-			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-				#transfer_state = 784
-				white_peace = POL
-			}
-			GER = {
-				transfer_state = 784
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
@@ -9271,10 +9145,6 @@ country_event = {
 					transfer_state = 87
 				}
 			}
-			#MODIFIER
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -9533,9 +9403,6 @@ country_event = {
 					transfer_state = 87
 				}
 			}
-			SOV = {
-				white_peace = POL
-			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
 			GER_SOV_white_peace_check = yes
 			every_other_country = {
@@ -9615,17 +9482,6 @@ country_event = {
 				SOV = {
 					transfer_state = 92
 				}
-			}
-			SOV = {
-				transfer_state = 96
-				transfer_state = 95
-				transfer_state = 94
-				transfer_state = 93
-				transfer_state = 91
-				transfer_state = 89
-			}
-			SOV = {
-				white_peace = POL
 			}
 			if = {
 				limit = {

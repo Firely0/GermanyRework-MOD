@@ -196,6 +196,12 @@ ideas = {
 					}
 					clr_global_flag = OperationBarbarossa_kicking_door_30_days
 				}
+				if = {
+					limit = {
+						has_global_flag = Great_Patriotic_War_30_days
+					}
+					clr_global_flag = Great_Patriotic_War_30_days
+				}
 			}
 		}
 

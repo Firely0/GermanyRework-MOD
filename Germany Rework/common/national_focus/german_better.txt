@@ -979,6 +979,14 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = GER_UNLOCK_SOVIET_FOCUS_UPON_COMPLETED_DIPLOMACY_FOCUS
+					}
+					unlock_national_focus = GER_Approach_Soviet
+				}
+			}
 			SOV = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -10768,8 +10776,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			unlock_decision_category_tooltip = GER_reichskommissariats
 			custom_effect_tooltip = GER_reichskommissariats_tt
+			unlock_decision_category_tooltip = GER_reichskommissariats
 			custom_effect_tooltip = GER_SS_tt
 			show_ideas_tooltip = SS_Fake_tooltip_idea_1
 		}
@@ -11206,6 +11214,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = GER_CALLED_AS_Greater
+			set_province_name = {
+				id = 6521
+				name = "Germania"
+			}
 			hidden_effect = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = GER_greater_german_reich
@@ -11722,10 +11734,6 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			set_province_name = {
-				id = 6521
-				name = "Germania"
-			}
 			add_ideas = GER_all_roads_to_berlin_idea
 			hidden_effect = {
 				add_victory_points = {
@@ -13313,6 +13321,85 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			effect_tooltip = {
+				SOV = {
+					country_event = { id = germany.75 days = 1 }
+					custom_effect_tooltip = needs_approval
+					# Actual reward effects added in event if Soviets approve
+					effect_tooltip = {
+						# Trade influence with the USSR? Or simply let the opinion mod do the work
+						give_SOV_armor_research_bonuses = yes
+					}
+					GER = {
+						if = {
+							limit = {
+								has_dlc = "No Step Back"
+							}
+							effect_tooltip = {
+								create_equipment_variant = {
+									name = "Panzer III Ausf. A"
+									type = medium_tank_chassis_1
+									parent_version = 0
+									modules = {
+										main_armament_slot = tank_high_velocity_cannon
+										turret_type_slot = tank_medium_three_man_tank_turret
+										suspension_type_slot = tank_bogie_suspension
+										armor_type_slot = tank_welded_armor
+										engine_type_slot = tank_gasoline_engine
+										special_type_slot_1 = tank_radio_1
+										special_type_slot_2 = smoke_launchers
+									}
+									upgrades = {
+										tank_nsb_engine_upgrade = 6
+										tank_nsb_armor_upgrade = 3
+									}
+									icon = "GFX_GER_basic_medium_tank_medium"
+								}
+								create_equipment_variant = {
+									name = "Panzer IV Ausf. A"
+									type = medium_tank_chassis_1
+									parent_version = 1
+									modules = {
+										main_armament_slot = tank_close_support_gun
+										turret_type_slot = tank_medium_three_man_tank_turret
+										suspension_type_slot = tank_bogie_suspension
+										armor_type_slot = tank_welded_armor
+										engine_type_slot = tank_gasoline_engine
+										special_type_slot_1 = tank_radio_1
+										special_type_slot_2 = smoke_launchers
+									}
+									upgrades = {
+										tank_nsb_engine_upgrade = 6
+										tank_nsb_armor_upgrade = 2
+									}
+									icon = "GFX_GER_basic_medium_tank_medium"
+								}
+								add_tech_bonus = {
+									name = armor_bonus
+									bonus = 1.0
+									uses = 2
+									category = armor
+								}
+							}
+						}
+						else = {
+							effect_tooltip = {
+								add_tech_bonus = {
+									name = med_armor_bonus
+									ahead_reduction = 1
+									category = cat_medium_armor
+								}
+								add_tech_bonus = {
+									name = armor_bonus
+									bonus = 1.0
+									uses = 2
+									category = armor
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {

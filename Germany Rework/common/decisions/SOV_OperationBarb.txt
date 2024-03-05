@@ -1,4 +1,4 @@
-SOV_hold_key_of_union = {
+SOV_great_patriotic_war = {
 
 	#195 "Leningrad"
 	SOV_hold_leningrad = {
@@ -192,6 +192,169 @@ SOV_hold_key_of_union = {
 		}
 	}
 
+	SOV_operation_iskra_ongoing = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+		days_mission_timeout = 30
+
+		is_good = no
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_war = no
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				SOV_clean_military_offensive_effect = yes
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_order_227_flag
+			has_war = yes
+			has_country_flag = SOV_military_offensive_in_progress_flag
+		}
+
+		available = { #You succeed by having Leningrad being connected to the rest of the country at the end of the mission
+			custom_trigger_tooltip = {
+				tooltip = SOV_operation_iskra_ongoing_objective_tt
+				195 = { is_in_home_area = yes }
+			}
+		}
+
+		timeout_effect = {  #FAIL
+			custom_effect_tooltip = SOV_operation_iskra_ongoing_success_effects_tt
+			effect_tooltip = {
+				add_war_support = 0.1
+				add_political_power = 50
+			}
+			custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_effects_tt
+			effect_tooltip = {
+				add_war_support = -0.1
+				add_political_power = -75
+			}
+
+			if = {
+				limit = {
+					195 = { is_in_home_area = yes }
+				}
+				custom_effect_tooltip = SOV_operation_iskra_ongoing_success_tt
+				hidden_effect = {
+					add_war_support = 0.1
+					add_political_power = 50
+				}
+			}
+			else = {
+				custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_tt
+				hidden_effect = {
+					add_war_support = -0.1
+					add_political_power = -75
+				}
+			}
+			SOV_clean_military_offensive_effect = yes
+		}
+
+		complete_effect = {
+			SOV_clean_military_offensive_effect = yes
+		}
+	}
+
+	SOV_military_offensive_ongoing = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		fire_only_once = yes
+
+		days_mission_timeout = 30
+
+		is_good = no
+
+		activation = {
+			always = no
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_war = no
+			}
+		}
+
+		cancel_effect = {
+			#log = "Mission cancelled"
+			hidden_effect = {
+				SOV_clean_military_offensive_effect = yes
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_order_227_flag
+			has_war = yes
+			has_country_flag = SOV_military_offensive_in_progress_flag
+		}
+
+		available = { #Conditions to succeed in the offensive
+			custom_trigger_tooltip = {
+				tooltip = SOV_military_offensive_ongoing_trigger_tt
+				all_of_scopes = {
+					array = SOV_military_offensive_states
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		timeout_effect = { #FAIL
+			#log = "Var = [?SOV_offensive_main_objective.GetName] // Array = [?SOV_military_offensive_states^0.GetName]" #Debug
+			if = {
+				limit = {
+					#var:SOV.SOV_military_offensive_states^0 = {
+					var:SOV_offensive_main_objective = {
+						is_controlled_by = ROOT
+					}
+				}
+				custom_effect_tooltip = SOV_military_offensive_ongoing_holding_main_objective_tt
+			}
+			else = {
+				custom_effect_tooltip = SOV_military_offensive_ongoing_not_holding_main_objective_tt
+				hidden_effect = {
+					add_war_support = -0.1
+					add_political_power = -75
+				}
+			}
+
+			custom_effect_tooltip = SOV_military_offensive_ongoing_failing_main_objective_tt
+			effect_tooltip = {
+				add_war_support = -0.1
+				add_political_power = -75
+			}
+
+			SOV_clean_military_offensive_effect = yes
+		}
+
+		complete_effect = { #SUCCESS
+			SOV_clean_military_offensive_effect = yes
+
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+
 }
 
 SOV_great_patriotic_war_Orders = {
@@ -286,10 +449,9 @@ SOV_great_patriotic_war_Orders = {
 
 		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
-			command_power > 19
-			has_political_power > 14
+			command_power > 14
 		}
-		custom_cost_text = decision_cost_CP_20_pp_15
+		custom_cost_text = decision_cost_CP_15
 
 		days_remove = 90
 
@@ -299,8 +461,7 @@ SOV_great_patriotic_war_Orders = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -20
-				add_political_power = -15
+				add_command_power = -15
 			}
 		}
 
@@ -332,12 +493,10 @@ SOV_great_patriotic_war_Orders = {
 			surrender_progress > 0.15
 		}
 
-		ai_hint_pp_cost = 15
 		custom_cost_trigger = {
 			command_power > 19
-			has_political_power > 14
 		}
-		custom_cost_text = decision_cost_CP_20_pp_15
+		custom_cost_text = decision_cost_CP_20
 
 		fire_only_once = yes
 		visible = {
@@ -357,8 +516,7 @@ SOV_great_patriotic_war_Orders = {
 
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -50
-				add_political_power = -50
+				add_political_power = -20
 				play_song = "GR_Not_One_Step_Back"
 			}
 			set_country_flag = SOV_order_227_flag
@@ -369,6 +527,77 @@ SOV_great_patriotic_war_Orders = {
 				}
 				custom_effect_tooltip = SOV_order_227_scorched_earth_decisions_tt
 			}
+		}
+	}
+
+	SOV_Allied_Invasion_of_Italy = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		days_mission_timeout = 14
+		selectable_mission = no
+		fire_only_once = yes
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			ITA = {
+				has_civil_war = no
+				any_owned_state = {
+					is_core_of = ITA
+					has_state_flag = ITA_main_land
+					NOT = { is_controlled_by = ITA }
+				}
+			}
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
+	}
+
+	SOV_Allied_Invasion_of_Italy_2 = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		days_mission_timeout = 14
+		selectable_mission = no
+		fire_only_once = yes
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			ITA = { has_civil_war = no }
+			2 = {
+				is_owned_by = ITA
+				NOT = { is_controlled_by = ITA }
+			}
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
 		}
 	}
 
@@ -732,7 +961,7 @@ SOV_Development_and_Deployment = {
 		state_target = yes
 		on_map_mode = map_and_decisions_view
 		ai_hint_pp_cost = 19
-		custom_cost_text = decision_cost_CP_19
+		custom_cost_text = decision_cost_CP_20
 		custom_cost_trigger = {
 			command_power > 19
 		}
@@ -784,6 +1013,7 @@ SOV_Development_and_Deployment = {
 }
 
 SOV_Local_offensive = {
+	
 	SOV_operation_iskra = { #SPECIAL OFFENSIVE - LENINGRAD HAS NOT FALLEN BUT IT IS SURROUNDED
 		priority = 85
 
@@ -867,169 +1097,6 @@ SOV_Local_offensive = {
 				activate_mission = SOV_operation_iskra_ongoing
 			}
 			custom_effect_tooltip = SOV_operation_iskra_activate_decision_tt
-		}
-	}
-
-	SOV_operation_iskra_ongoing = {
-
-		icon = hol_draw_up_staff_plans
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		fire_only_once = yes
-
-		days_mission_timeout = 30
-
-		is_good = no
-
-		activation = {
-			always = no
-		}
-
-		cancel_trigger = {
-			hidden_trigger = {
-				has_war = no
-			}
-		}
-
-		cancel_effect = {
-			hidden_effect = {
-				SOV_clean_military_offensive_effect = yes
-			}
-		}
-
-		visible = {
-			has_country_flag = SOV_order_227_flag
-			has_war = yes
-			has_country_flag = SOV_military_offensive_in_progress_flag
-		}
-
-		available = { #You succeed by having Leningrad being connected to the rest of the country at the end of the mission
-			custom_trigger_tooltip = {
-				tooltip = SOV_operation_iskra_ongoing_objective_tt
-				195 = { is_in_home_area = yes }
-			}
-		}
-
-		timeout_effect = {  #FAIL
-			custom_effect_tooltip = SOV_operation_iskra_ongoing_success_effects_tt
-			effect_tooltip = {
-				add_war_support = 0.1
-				add_political_power = 50
-			}
-			custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_effects_tt
-			effect_tooltip = {
-				add_war_support = -0.1
-				add_political_power = -75
-			}
-
-			if = {
-				limit = {
-					195 = { is_in_home_area = yes }
-				}
-				custom_effect_tooltip = SOV_operation_iskra_ongoing_success_tt
-				hidden_effect = {
-					add_war_support = 0.1
-					add_political_power = 50
-				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_operation_iskra_ongoing_failure_tt
-				hidden_effect = {
-					add_war_support = -0.1
-					add_political_power = -75
-				}
-			}
-			SOV_clean_military_offensive_effect = yes
-		}
-
-		complete_effect = {
-			SOV_clean_military_offensive_effect = yes
-		}
-	}
-
-	SOV_military_offensive_ongoing = {
-
-		icon = hol_draw_up_staff_plans
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		fire_only_once = yes
-
-		days_mission_timeout = 30
-
-		is_good = no
-
-		activation = {
-			always = no
-		}
-
-		cancel_trigger = {
-			hidden_trigger = {
-				has_war = no
-			}
-		}
-
-		cancel_effect = {
-			#log = "Mission cancelled"
-			hidden_effect = {
-				SOV_clean_military_offensive_effect = yes
-			}
-		}
-
-		visible = {
-			has_country_flag = SOV_order_227_flag
-			has_war = yes
-			has_country_flag = SOV_military_offensive_in_progress_flag
-		}
-
-		available = { #Conditions to succeed in the offensive
-			custom_trigger_tooltip = {
-				tooltip = SOV_military_offensive_ongoing_trigger_tt
-				all_of_scopes = {
-					array = SOV_military_offensive_states
-					is_controlled_by = ROOT
-				}
-			}
-		}
-
-		timeout_effect = { #FAIL
-			#log = "Var = [?SOV_offensive_main_objective.GetName] // Array = [?SOV_military_offensive_states^0.GetName]" #Debug
-			if = {
-				limit = {
-					#var:SOV.SOV_military_offensive_states^0 = {
-					var:SOV_offensive_main_objective = {
-						is_controlled_by = ROOT
-					}
-				}
-				custom_effect_tooltip = SOV_military_offensive_ongoing_holding_main_objective_tt
-			}
-			else = {
-				custom_effect_tooltip = SOV_military_offensive_ongoing_not_holding_main_objective_tt
-				hidden_effect = {
-					add_war_support = -0.1
-					add_political_power = -75
-				}
-			}
-
-			custom_effect_tooltip = SOV_military_offensive_ongoing_failing_main_objective_tt
-			effect_tooltip = {
-				add_war_support = -0.1
-				add_political_power = -75
-			}
-
-			SOV_clean_military_offensive_effect = yes
-		}
-
-		complete_effect = { #SUCCESS
-			SOV_clean_military_offensive_effect = yes
-
-			add_war_support = 0.1
-			add_political_power = 50
 		}
 	}
 
@@ -2380,7 +2447,7 @@ SOV_export_guns = {
 
 	SOV_ask_for_lend_lease_usa = {
 		icon = GFX_decision_ger_military_buildup
-		days_remove = 7
+		days_remove = 2
 		cost = 15
 
 		available = {
@@ -2413,6 +2480,7 @@ SOV_export_guns = {
 
 	SOV_ask_for_lend_lease_eng = {
 		icon = GFX_decision_ger_military_buildup
+		days_remove = 2
 		cost = 15
 
 		available = {
@@ -2439,6 +2507,7 @@ SOV_export_guns = {
 
 	SOV_ask_for_lend_lease_fra = {
 		icon = GFX_decision_ger_military_buildup
+		days_remove = 2
 		cost = 15
 
 		available = {

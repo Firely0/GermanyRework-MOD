@@ -11,6 +11,7 @@ phases = { # phase = no is the standard phase
 	street_battle
 }
 
+### Basic tactics
 tactic_basic_attack = {
 
 	is_attacker = yes
@@ -28,7 +29,6 @@ tactic_basic_attack = {
 
 	attacker = 0.05
 }
-
 tactic_basic_defend = {
 	is_attacker = no
 	trigger = {
@@ -43,7 +43,6 @@ tactic_basic_defend = {
 
 	defender = 0.05
 }
-
 tactic_counterattack = { # counters basic attack, assault
 	is_attacker = no
 	trigger = {
@@ -65,8 +64,6 @@ tactic_counterattack = { # counters basic attack, assault
 
 	defender = 0.25
 }
-
-
 tactic_assault = {
 	is_attacker = yes
 	trigger = {
@@ -99,6 +96,7 @@ tactic_assault = {
 
 	attacker = 0.25			#attacker gets a bonus to doing damage
 }
+
 ###close combat tactics here
 tactic_cc_attack = {
 	is_attacker = yes
@@ -182,7 +180,6 @@ tactic_cc_withdraw = {
 	defender = -0.05
 }
 
-
 tactic_encirclement = {
 	is_attacker = yes
 	trigger = {
@@ -217,7 +214,6 @@ tactic_encirclement = {
 	attacker = 0.25
 	defender = 0.05
 }
-
 tactic_delay = {
 	is_attacker = no
 	trigger = {
@@ -237,7 +233,6 @@ tactic_delay = {
 	attacker = -0.25
 	defender = -0.15
 }
-
 tactic_shock = { #counters delay
 	is_attacker = yes
 	trigger = {
@@ -259,7 +254,6 @@ tactic_shock = { #counters delay
 
 	defender = -0.25
 }
-
 tactic_tactical_withdrawal = { #counters encirclement
 	is_attacker = no
 	trigger = {
@@ -284,6 +278,7 @@ tactic_tactical_withdrawal = { #counters encirclement
 	attacker = -0.25
 	defender = -0.05
 }
+
 ###tactical withdrawal tactics
 tactic_tw_attack = {
 	is_attacker = yes
@@ -364,8 +359,6 @@ tactic_tw_intercept = {
 	defender = -0.1
 }
 
-
-
 tactic_breakthrough = { #counters ambush
 	is_attacker = yes
 	trigger = {
@@ -388,7 +381,6 @@ tactic_breakthrough = { #counters ambush
 	attacker = 0.25
 	defender = -0.15
 }
-
 tactic_ambush = { #counters shock
 	is_attacker = no
 	trigger = {
@@ -409,7 +401,6 @@ tactic_ambush = { #counters shock
 
 	attacker = -0.25
 }
-
 tactic_blitz = {
 	is_attacker = yes
 	trigger = {
@@ -449,7 +440,6 @@ tactic_blitz = {
 	defender = -0.15
 }
 
-
 tactic_elastic_defense = { #counters blitz
 	is_attacker = no
 	trigger = {
@@ -473,7 +463,6 @@ tactic_elastic_defense = { #counters blitz
 	attacker = -0.15
 	defender = 0.10
 }
-
 tactic_backhand_blow = { #counters breakthrough
 	is_attacker = no
 	trigger = {
@@ -497,7 +486,6 @@ tactic_backhand_blow = { #counters breakthrough
 	attacker = -0.2
 	defender = 0.25
 }
-
 tactic_seize_bridge = {
 	is_attacker = yes
 	trigger = {
@@ -525,6 +513,7 @@ tactic_seize_bridge = {
 	attacker = 0.2
 	defender = -0.05
 }
+
 tactic_attacker_sb_hold = {
 	is_attacker = yes
 	trigger = {

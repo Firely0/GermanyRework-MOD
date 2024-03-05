@@ -1,11 +1,22 @@
 ﻿l_english:
 
+ #CP Tooltip
+ decision_cost_CP_20: "£command_power  §Y20§!"
+ decision_cost_CP_20_blocked: "£command_power  §R20§!"
+ decision_cost_CP_20_tooltip: "It costs £command_power  §Y20§! to take the decision" 
+ decision_cost_CP_15: "£command_power  §Y15§!"
+ decision_cost_CP_15_blocked: "£command_power  §R15§!"
+ decision_cost_CP_15_tooltip: "It costs £command_power  §Y15§! to take the decision"
+ decision_cost_CP_10: "£command_power  §Y10§!"
+ decision_cost_CP_10_blocked: "£command_power  §R10§!"
+ decision_cost_CP_10_tooltip: "It costs £command_power  §Y10§! to take the decision"
+
  # Tactics 
 
  tactic_smoke_and_fire_preferred_weight_factor:1 "Additional §YGas Attack§! Tactic Chance if it is Preferred tactic"
  tactic_assault_preferred_weight_factor:0 "Additional §YAssault§! Tactic Chance if it is Preferred tactic"
- tactic_barrage_fire_preferred_weight_factor:0 "Additional §YSuppressive Barrage§! Tactic Chance if it is Preferred tactic"
  tactic_shock_preferred_weight_factor:0 "Additional §YShock§! Tactic Chance if it is Preferred tactic"
+ tactic_barrage_preferred_weight_factor:0 "Additional §YBarrage§! Tactic Chance if it is Preferred tactic"
 
  tactic_masterful_blitz_ger_preferred_weight_factor:0 "Additional §YMasterful Blitz§! Tactic Chance if it is Preferred tactic"
  tactic_street_battle_breakthrough_preferred_weight_factor:0 "Additional §YUrban Breakthrough§! Tactic Chance if it is Preferred tactic"
@@ -128,9 +139,11 @@
  underground_factories:0 "Underground Factories"
 
  #Occupation Laws
- ss_police_final:0 "Schutzstaffel"
  ss_police:0 "Schutzstaffel"
+ ss_police_final:0 "Schutzstaffel"
+ ss_police_final_puppets:0 "Schutzstaffel"
  ss_police_final_sov:0 "Schutzstaffel"
+ ss_police_final_sov_puppets:0 "Schutzstaffel"
  GER_colonial_police:0 "Colonial Police"
  GER_military_governor_occupation:0 "Military Governor"
 
@@ -146,11 +159,20 @@
  Wehrmacht_retaire_ss_generals:0 "Retire SS Generals"
 
  #Reichskommissariat
- GER_reichskommissariat_turkestan:0 "Establish Reichskommissariat Turkestan"
- GER_reichskommissariat_moscow:0 "Establish Reichskommissariat Moskowien"
- GER_reichskommissariat_caucasus:0 "Establish Reichskommissariat Kaukasien"
- GER_expand_reichskommissariat_moscow:0 "Expand Reichskommissariat Moskowien"
- GER_expand_reichskommissariat_ukraine:0 "Expand Reichskommissariat Ukraine"
+ GER_reichskommissariats:0 "Reichskommissariats"
+ GER_reichskommissariats_desc:0 "Enables creation of certain Reichskommissariat subjects out of controlled territory.\n\n"
+ GER_reichskommissariat_norwegen:0 "Reichskommissariat §YNorwegen§!"
+ GER_reichskommissariat_niederlande:0 "Reichskommissariat §YNiederlande§!"
+ GER_reichskommissariat_belgien_nordfrankreich:0 "Reichskommissariat §YBelgien-Nordfrankreich§!"
+ GER_reichskommissariat_ostland:0 "Reichskommissariat §YOstland§!"
+ GER_reichskommissariat_ukraine:0 "Reichskommissariat §YUkraine§!"
+ GER_reichskommissariat_turkestan:0 "Establish Reichskommissariat §YTurkestan§!"
+ GER_reichskommissariat_moscow:0 "Establish Reichskommissariat §YMoskowien§!"
+ GER_reichskommissariat_caucasus:0 "Establish Reichskommissariat §YKaukasien§!"
+ GER_reichsprotektorat_czechoslovakia:0 "Establish Reichskommissariat §YBöhmen und Mähren§!"
+ GER_reichskommissariat_poland:0 "Establish Reichskommissariat §YGeneralgouvernement§!"
+ GER_expand_reichskommissariat_moscow:0 "Expand Reichskommissariat §YMoskowien§!"
+ GER_expand_reichskommissariat_ukraine:0 "Expand Reichskommissariat §YUkraine§!"
  GER_send_guns:0 "Send Guns to [FROM.GetName]" 
  GER_send_manpower:0 "Send Manpower to [FROM.GetName]"
  GER_suppress_the_resistance:0 "Suppress the Resistance in [FROM.GetName]"
@@ -260,8 +282,8 @@
  #German Training Program
  
  GER_training_program:0 "Military Training Programs"
- GER_SOV_TRAINING:0 "German-Soviet Air Training Program"
- GER_ITA_TRAINING:0 "German-Italian Naval Training Program"
+ GER_SOV_TRAINING:0 "German - Soviet Air Training Program"
+ GER_ITA_TRAINING:0 "German - Italian Naval Training Program"
 
  #Last Stand of Germany
  GER_last_stand_of_germany:0 "Last Stand of Germany"
@@ -340,6 +362,8 @@
  GER_empire_focus_on_mil_desc:0 ""
  a_hope_in_independence:0 "A Hope in Independence"
  a_hope_in_independence_desc:0 ""
+ a_side_with_germany:0 "Fascist Militia"
+ a_side_with_germany_desc:0 ""
  a_farm_village:0 "Farm Village"
  a_farm_village_desc:0 ""
  reds_in_resistance:0 "Reds in Resistance"
@@ -350,10 +374,6 @@
  GER_underground_factories_idea_desc:0 ""
  fascist_influence_cs:0 "Fascist Influence"
  fascist_influence_cs_desc:0 ""
- GER_War_Exhaustion:0 "War Exhaustion"
- GER_War_Exhaustion_desc:0 "After our plan to quickly seize strategic locations against the Soviet Union did not pay off, our exhausted army will have to recover over a period of time.The effects are permanent if the Surrender Limit exceeds §R15%§! or the War Support is below §R50%§!."
- GER_barbarossa_war:0 "Unternehmen Barbarossa"
- GER_barbarossa_war_desc:0 ""
  GER_unexpected_attack:0 "Unexpected Attack"
  GER_unexpected_attack_desc:0 ""
  GER_rebuild_the_nation_fascm:0 "Rebuild the Nation"
@@ -665,10 +685,6 @@
  GER_progress_chanced_by_luck:0 "\nThe ship will be taken out of the sea and put into repair and development operations. The repair time for the ship to be put back into service will vary depending on the condition of the ship."
  Ernest_Cox_Fired:0 "Ernest Cox Hired"
  Disabled_for_rework_or_else:0 "Disabled for Rework or Bugfix"
- High_Command_Issued_Orders:0 "High Command Issued Orders"
- decision_cost_CP_19: "£command_power  §Y20§!"
- decision_cost_CP_19_blocked: "£command_power  §R20§!"
- decision_cost_CP_19_tooltip: "It costs £command_power  §Y20§! to take the decision"
  GER_civil_war:0 "Ongoing Civil War"
  GER_NOT_LIMITED_NAVAL:0 "This Ship Design Beyond the Limits of the Naval Treaty"
  GER_four_year_plan_active:0 "§YFour Year Plan§! Active"
@@ -726,10 +742,10 @@
  GER_rhineland_problem:0 "Focus Auto-Complate After Our Approach of §RRemilitarization of Rhineland§!"
  GER_Rhineland_demilitarized:0 "Remilitarization of Rhineland"
  GER_Rhineland_demilitarized_desc:0 "After the Nazi regime took power in January 1933, Germany began working towards rearmament and the remilitarization of the Rhineland."
- GER_Rhineland_demilitarized_a:0 "§RRhineland§! Still Demilitarized"
- GER_Rhineland_demilitarized_b:0 "§RMoselland§! Still Demilitarized"
- GER_Rhineland_demilitarized_e:0 "§RBaden§! Still Demilitarized"
- GER_Rhineland_demilitarized_c:0 "Militarize §RRhineland§!"
+ GER_Rhineland_demilitarized_a:0 "§YRhineland§! Still Demilitarized"
+ GER_Rhineland_demilitarized_b:0 "§YMoselland§! Still Demilitarized"
+ GER_Rhineland_demilitarized_e:0 "§YBaden§! Still Demilitarized"
+ GER_Rhineland_demilitarized_c:0 "Militarize §YRhineland§!"
  GER_Rhineland_demilitarized_d:0 "Test the French Response"
  GER_Rhineland_demilitarized_back:0 "Back Down"
  GER_rhineland_focus:0 "Remilitarization of Rhineland"
