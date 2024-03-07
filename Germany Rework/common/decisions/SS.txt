@@ -440,6 +440,7 @@ GER_reichskommissariats = {
 	GER_reichskommissariat_poland = {
 
 		icon = ger_reichskommissariats
+		cost = 0
 
 		available = {
 			has_government = fascism
@@ -450,7 +451,6 @@ GER_reichskommissariats = {
 			controls_state = 98
 		}
 
-		cost = 0
 		ai_will_do = {
 			factor = 10
 		}
@@ -459,8 +459,6 @@ GER_reichskommissariats = {
 			has_completed_focus = GER_SS_A
 			has_government = fascism
 		}
-
-		fire_only_once = yes
 
 		complete_effect = {
 			hidden_effect = {
@@ -507,6 +505,7 @@ GER_reichskommissariats = {
 					set_cosmetic_tag = RGV_reichskommissariat 
 					add_ideas = a_side_with_germany
 					add_offsite_building = { type = arms_factory level = 3 }
+					add_offsite_building = { type = industrial_complex level = 3 }
 				}
 			}
 		}

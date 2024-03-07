@@ -457,7 +457,15 @@ SOV_paranoia_system = {
 		}
 
 		available = {
-			has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
+			if = {
+				limit = {
+					has_country_flag = SOV_assassinated_stalin_flag
+				}
+				has_country_flag = SOV_assassinated_stalin_flag
+			}
+			else = {
+				has_country_flag = { flag = SOV_third_moscow_trial_flag days > 365 }
+			}
 		}
 
 		visible = {
@@ -466,7 +474,10 @@ SOV_paranoia_system = {
 				has_idea = SOV_anti_soviet_military_thinking_banned_navy
 				has_idea = SOV_anti_soviet_military_thinking_banned_airforce
 			}
-			SOV_is_stalinist = yes
+			OR = {
+				SOV_is_stalinist = yes
+				has_country_flag = SOV_assassinated_stalin_flag
+			}
 		}
 
 		days_remove = 30
@@ -5275,6 +5286,8 @@ SOV_diplomacy_baltic_decision_category = {
 
 		available = {
 			FROM = {
+				exists = yes
+				has_capitulated = no
 				NOT = { has_war_with = ROOT }
 				is_subject = no
 				NOT = { has_country_flag = mr_pact_into_german_sphere_of_influence }
@@ -6325,7 +6338,7 @@ SOV_diplomacy_middle_east_decision_category = {
 						type = puppet_wargoal_focus
 					}
 					ENG = {
-						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join }
+						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join single_target_only = yes}
 					}
 				}
 				else = { #ENG only sees a fake
@@ -6336,7 +6349,7 @@ SOV_diplomacy_middle_east_decision_category = {
 								type = puppet_wargoal_focus
 							}
 						}
-						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join }
+						add_to_war = { targeted_alliance = SOV enemy = PER hostility_reason = asked_to_join single_target_only = yes}
 					}
 
 					hidden_effect = { news_event = { id = nsb_news.104 days = 4 random_days = 2 } } #Only ENG sends the news event.
@@ -11652,6 +11665,7 @@ SOV_soviet_civil_war_dec_cat = {
 							}
 							subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
 							SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
+							set_country_flag = SOV_assassinated_stalin_flag
 						}
 						20 = {
 							SOV_paranoia_very_high_increase_effect = yes
@@ -11674,6 +11688,7 @@ SOV_soviet_civil_war_dec_cat = {
 							news_event = {
 								id = NSB_soviet_communist_civil_war.009
 							}
+							set_country_flag = SOV_assassinated_stalin_flag
 						}
 						50 = {
 							SOV_paranoia_very_high_increase_effect = yes

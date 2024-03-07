@@ -123,8 +123,9 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				weekly_manpower = 300
+				weekly_manpower = 1000
 				fascism_drift = 0.05
+				required_garrison_factor = -0.15
 			}
 		}
 
