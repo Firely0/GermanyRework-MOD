@@ -1,0 +1,66 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					tag = ENG
+				}
+				set_technology = { aa_cannon_1 = 1 popup = no }
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = FRA
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = GER
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+				set_technology = { radial_engines_2 = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = ITA
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+				set_technology = { radial_engines_2 = 1 popup = no }
+				set_technology = { aa_hmg = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = JAP
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+				set_technology = { radial_engines_2 = 1 popup = no }
+				set_technology = { aa_cannon_1 = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = SOV
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+				set_technology = { radial_engines_2 = 1 popup = no }
+				set_technology = { aa_hmg = 1 popup = no }
+			}
+			every_country = {
+				limit = {
+					tag = USA
+				}
+				set_technology = { range_improvements = 1 popup = no }
+				set_technology = { survivability_studies = 1 popup = no }
+				set_technology = { radial_engines_2 = 1 popup = no }
+				set_technology = { aa_hmg = 1 popup = no }
+			}
+
+		}
+	}
+}

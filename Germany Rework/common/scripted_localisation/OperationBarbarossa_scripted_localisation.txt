@@ -21,14 +21,14 @@ defined_text = {
 			ITA = { is_in_faction_with = GER has_civil_war = no }
 			has_active_mission = Allied_Invasion_of_Italy
 		}
-		localization_key = "Allied_Invasion_of_Italy_text"
+		localization_key = Allied_Invasion_of_Italy_text
 	}
 	text = { # Allied Invasion of Italy - Fall of Rome - Show for 14 day/s
 		trigger = {
 			ITA = { is_in_faction_with = GER has_civil_war = no }
 			has_active_mission = Allied_Invasion_of_Italy_2
 		}
-		localization_key = "Allied_Invasion_of_Italy_text_2"
+		localization_key = Allied_Invasion_of_Italy_text_2
 	}
 	text = { # Winter Info - Ready for Winter - 1936-1940 Show for 7 day/s
 		trigger = {
@@ -55,7 +55,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "Operation_barbarossa_winter_ready_40"
+		localization_key = Operation_barbarossa_winter_ready_40
 	}
 	text = { # Winter Info - Ready for Winter - 1936-1947
 		trigger = {
@@ -90,7 +90,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "Operation_barbarossa_winter_ready_47"
+		localization_key = Operation_barbarossa_winter_ready_47
 	}
 	text = { # Winter Info - NOT Ready for Winter - 1936-1940
 		trigger = {
