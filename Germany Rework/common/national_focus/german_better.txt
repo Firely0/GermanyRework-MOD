@@ -14572,7 +14572,7 @@ focus_tree = {
 		allow_branch = {
 			has_completed_focus = GER_against_fuhrer
 			has_global_flag = GER_civil_war
-			NOT = { has_global_flag = GER_ALLOW_KAISER_CIVILWAR }
+			NOT = { has_completed_focus = GER_prepare_for_innovative }
 		}
 		ai_will_do = {
 			factor = 10
@@ -15086,6 +15086,7 @@ focus_tree = {
 			has_completed_focus = GER_against_fuhrer
 			has_global_flag = GER_civil_war
 			has_global_flag = GER_ALLOW_KAISER_CIVILWAR
+			has_completed_focus = GER_prepare_for_innovative
 		}
 		ai_will_do = {
 			factor = 10
