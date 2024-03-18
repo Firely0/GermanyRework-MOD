@@ -684,6 +684,30 @@ country_event = {
 }
 
 country_event = {
+	id = gerb.80
+	title = gerb.80
+	desc = gerb.80.d
+	picture = GFX_report_event_german_turkish_pact
+	is_triggered_only = yes
+
+	option = {
+		name = "Keep Hjalmar Schacht"
+
+		ai_chance = {
+			factor = 100
+		}
+
+		add_ideas = hjalmar_schacht
+	}
+
+	option = {
+		name = "Appoint Walther Funk"
+
+		add_ideas = walther_funk
+	}
+}
+
+country_event = {
 	id = ger_around_maginot_event.1
 	title = "Victory in Poland"
 	desc = "[Root.GetFrancedesc]"

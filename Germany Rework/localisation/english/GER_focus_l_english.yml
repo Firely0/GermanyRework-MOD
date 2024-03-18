@@ -470,9 +470,6 @@
  Operation_Sea_Lion:0 "Prepare for Inavasion"
  Operation_Sea_Lion_desc:0 ""
 
- Operation_Weserubung:0 "Operation Weserübung"
- Operation_Weserubung_desc:0 ""
-
  GER_sealion:0 "Operation Sea Lion"
  GER_sealion_desc:0 ""
 
@@ -567,9 +564,14 @@
  kinder_kuche_kirche:0 "Kinder, Küche, Kirche"
  kinder_kuche_kirche_desc:0 ""
 
+ Operation_Weserubung:0 "Operation Weserübung"
+ Operation_Weserubung_desc:0 "Operation Buffs will end when the following targets are completed; \nCountry Targets; \n@DEN§YDenmark§! \n@NOR§YNorway§!"
  GER_BLITZ:0 "Blitzkrieg"
+ GER_BLITZ_desc:0 "Operation Buffs will end when the following targets are completed; \nFall of @FRA§YParis§! \n\nCountry Targets; \n@BEL§YBelgium§! \n@HOL§YNetherlands§! \n@LUX§YLuxembourg§!"
  GER_OLD_PLAN_IDEA:0 "Central Planning"
+ GER_OLD_PLAN_IDEA_desc:0 "Operation Buffs will end when the following targets are completed; \nFall of @FRA§YParis§! \n\nCountry Targets; \n@BEL§YBelgium§! \n@LUX§YLuxembourg§!"
  GER_Last_Strike:0 "Victory or Death"
+ GER_Last_Strike_desc:0 "Steiner is following orders. It's a good day for @GERGermany."
  GER_battle_el_alamein:0 "Battle of El-Alamein"
  BismarcksLastDance:0 "Bismarck's Last Dance"
  El_Alamein_Atack_dynamic_modifier:0 "Battle of El-Alamein"
@@ -629,6 +631,7 @@
  nohelp_denmark:0 "On Our Own"
  nohelp_denmark_desc:0 ""
 
+ GER_Four_Year_Plan_dynamic_modifier:0 "Four Year Plan"
  Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms:0 "Four Year Plan"
  Four_Year_Plan_Civilian_Mobilization_autarky:0 "Four Year Plan"
  Four_Year_Plan_Civilian_Mobilization_hide_arms:0 "Four Year Plan"
@@ -674,6 +677,7 @@
  German_Eco_Plan_B_C_OIL:0 "German Economy Plan"
 
  #TT
+ GER_war_eco_development_buildings_tt:0 "Per Extra Budget We Allocated to Companies Adds Two §YBuilding Slot§! and §Y$arms_factory$§! in states.\n"
  GER_smoke_and_fire_tactic_tt:0 "Enables Tactic: §HGas Attack§!"
  recall_generals_with_war_with_us:0 "Call back our advisors and generals in countries that are likely to go to war with us"
  killed_by_bomb:0 "Victim of Assassination"
@@ -706,8 +710,8 @@
  no_help_comming:0 "Without support from France and Britain, the Netherlands will be on its own for a while in a possible war."
 
  GER_hitler_is_gone_tt:0 "This Focus Only Unlocked by Events or Death of Adolf Hitler"
- GER_hitler_focus_unlock:0 "This Focus Unlocked Upon completion of Establish Abwehr Focus"
- GER_unlock_soviet_focus:0 "This Focus Unlocked Upon completion of Treaty with the USSR Focus"
+ GER_hitler_focus_unlock:0 "This Focus Unlocked Upon completion of §YEstablish Abwehr§! Focus"
+ GER_unlock_soviet_focus:0 "This Focus Unlocked Upon completion of §YTreaty with the USSR§! Focus"
 
  trotsky_dead:0 "Trotsky has been killed by agents"
 
@@ -854,6 +858,8 @@
  supported_us:0 "Supported us"
  Signed_Axis_Pact:0 "Signed Axis Pact"
  Not_Signed_Axis_Pact:0 "Not Signed Axis Pact"
+ suspended_franco_belgian_relations:0 "Suspended Franco-Belgian relations"
+ permitted_german_expansionism:0 "Permitted German expansionism"
 
  #Expanding Axis to Glory right?
  expand_faction_to_eu:0 "Expanding Faction to Europe"
@@ -879,6 +885,7 @@
  GER_skoda_armor:0 "Skoda Armor"
  GER_skoda_shipyards:0 "Skoda Shipyards"
  krupp_starter_ver:0 "Krupp"
+ krupp_starter_ver_inds:0 "Krupp"
  krupp_idea_focus:0 "Krupp"
  krupp_nofocusver:0 "Krupp"
  krupp_tank_idea:0 "Krupp Armor"
@@ -940,6 +947,8 @@
  GER_bloch_a:0 "Bloch"
 
  #Event
+ gerb.80:0 "Appointing Economic Positions"
+ gerb.80.d:0 "We have to decide whether to continue with Hjalmar after we have not developed militarily as fast as Adolf Hitler wanted"
  GER_News.44.d:0 "Deputy Führer Rudolf Hess was arrested by Home Guard soldiers in Scotland yesterday after parachuting from a heavy fighter. \n\nAn accomplished pilot, he apparently flew alone across the North Sea, taking care stay out of radar range before veering west towards Britain.\nHess appears to have taken it upon himself to negotiate a peace treaty between Britain and Germany."
  GER_rudolf_hess.1.d:0 "Rudolf Hess, who flew alone from France to England, stated that he was going to negotiate peace in England and successfully reached the location despite being unauthorized to do so, He stated that he was waiting for official authorization to negotiate the terms of peace."
  gerb.79.t:0 "Ultimatum from Germany"
@@ -1001,7 +1010,21 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
  
- GER_Mojor_Diplomacy:0 "Mojor Diplomacy"
+ GER_Gustav_project:0 "Gustav Project"
+ GER_Gustav_project_desc:0 ""
+ GER_rocket_launch_in_air_bases:0 "Rocket Site Buildup"
+ GER_rocket_launch_in_air_bases_desc:0 ""
+ GER_naval_designers:0 "Funds for Naval Designers"
+ GER_naval_designers_desc:0 ""
+ GER_arms_designers:0 "Funds for Equipment Designers"
+ GER_arms_designers_desc:0 ""
+ GER_deploy_flanks_in_air_bases:0 "Deploy AA"
+ GER_deploy_flanks_in_air_bases_desc:0 ""
+ GER_expand_air_base_in_rhineland:0 "Expand Air Bases"
+ GER_expand_air_base_in_rhineland_desc:0 ""
+ GER_end_of_new_plan:0 "Reappoint the Minister of Economy"
+ GER_end_of_new_plan_desc:0 ""
+ GER_Mojor_Diplomacy:0 "Major Diplomacy"
  GER_Mojor_Diplomacy_desc:0 ""
  GER_valkyrie_leader:0 "Military Junta"
  GER_valkyrie_leader_desc:0 ""
@@ -1739,7 +1762,7 @@
  GER_Mixed_Bombing_desc:0 ""
  GER_Hide_Arms_Industrialization:0 "Hide Military Industrialization"
  GER_Hide_Arms_Industrialization_desc:0 ""
- GER_Small_Arms:0 "Fund Small Gun Factories"
+ GER_Small_Arms:0 "Large Funds for Designers"
  GER_Small_Arms_desc:0 ""
  GER_Arms_Mobilization:0 "Focus On Military Industry"
  GER_Arms_Mobilization_desc:0 ""

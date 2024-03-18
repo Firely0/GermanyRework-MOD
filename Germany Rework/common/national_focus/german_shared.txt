@@ -17,7 +17,7 @@ shared_focus = {
 	id = GER_west_wall
 	icon = GFX_goal_generic_construct_military
 	x = -30
-	y = 8
+	y = 9
 	cost = 5
 	ai_will_do = {
 		factor = 8
@@ -1117,10 +1117,9 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = GER_four_year_plan_a
-	icon = GFX_goal_GER_industry
-	text = GER_four_year_plan
-	x = -30
+	id = GER_end_of_new_plan
+	icon = GFX_goal_r56_goal_generic_bills
+	x = -29
 	y = 0
 	cost = 5
 	ai_will_do = {
@@ -1128,24 +1127,7 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 	completion_reward = {
-		custom_effect_tooltip = GER_Four_Year_Plan_Start_tt
-		add_tech_bonus = {
-			name = GER_four_year_plan
-			bonus = 1.0
-			uses = 2
-			category = industry
-		}
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = hjalmar_schacht
-		set_global_flag = GER_FOUR_PLAN_FLAG_1
-		set_global_flag = {
-			flag = GER_FOUR_PLAN_FLAG
-			days = 1460
-			value = 1
-		}
-		hidden_effect = {
-			add_timed_idea = { idea = Four_Year_Plan_1 days = 1460 }
-		}
+		country_event = { id = gerb.80 hours = 4 }
 	}
 }
 
@@ -1153,13 +1135,18 @@ shared_focus = {
 	id = GER_grosraumwirtschaft_a
 	text = GER_grosraumwirtschaft
 	icon = GFX_goal_generic_construct_infrastructure
-	prerequisite = { focus = GER_four_year_plan_a }
-	x = -5
-	y = 1
-	relative_position_id = GER_four_year_plan_a
+	prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
+	x = 0
+	y = 2
+	relative_position_id = GER_end_of_new_plan
 	cost = 10
 	available = {
-		GER_four_year_plan_available = yes
+		OR = {
+			has_full_control_of_state = 64
+			has_full_control_of_state = 59
+			has_full_control_of_state = 60
+			has_full_control_of_state = 54
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -1167,6 +1154,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
+			custom_effect_tooltip = GER_autobahn_tt
 			swap_ideas = {
 				remove_idea = Four_Year_Plan_1
 				add_idea = Four_Year_Plan_2
@@ -1207,6 +1195,47 @@ shared_focus = {
 				swap_ideas = {
 					remove_idea = Four_Year_Plan_1
 					add_idea = Four_Year_Plan_2
+				}
+			}
+			64 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			59 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			60 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			54 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -1795,14 +1824,13 @@ shared_focus = {
 	id = GER_autarky_a
 	text = GER_autarky
 	icon = GFX_goal_GER_autarky
-	prerequisite = { focus = GER_four_year_plan_a }
 	mutually_exclusive = { focus = GER_technocracy }
+	relative_position_id = GER_end_of_new_plan
+	prerequisite = { focus = GER_end_of_new_plan }
 	x = 1
 	y = 1
-	relative_position_id = GER_four_year_plan_a
 	cost = 10
 	available = {
-		GER_four_year_plan_available = yes
 	}
 
 	ai_will_do = {
@@ -1827,158 +1855,9 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_1_Hide_ARMS
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1_Hide_ARMS
-					add_idea = Four_Year_Plan_1_autarky_hide_arms
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_Small_Arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_Small_Arms
-					add_idea = Four_Year_Plan_2_autarky_small_arms
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_1
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1
-					add_idea = Four_Year_Plan_1_autarky
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_2_autarky
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-					add_idea = Four_Year_Plan_Arms_Mobilization_autarky_hide_arms
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Arms_Mobilization
-					add_idea = Four_Year_Plan_Arms_Mobilization_autarky
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Civilian_Mobilization
-					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms
-				}
-				add_tech_bonus = {
-					name = GER_autarky
-					bonus = 1.0
-					uses = 2
-					technology = excavation1
-					technology = excavation2
-					technology = excavation3
-					technology = excavation4
-					technology = excavation5
-				}
-			}
+			add_to_variable = { GER_FR_production_speed_arms_factory_factor = 0.05 }
+			add_to_variable = { GER_FR_production_speed_dockyard_factor = 0.05 }
+			add_to_variable = { GER_FR_production_speed_industrial_complex_factor = 0.05 }
 		}
 	}
 }
@@ -1986,13 +1865,14 @@ shared_focus = {
 shared_focus = {
 	id = GER_technocracy
 	icon = GFX_goal_Technocracy
-	prerequisite = { focus = GER_four_year_plan_a }
+	relative_position_id = GER_grosra
 	mutually_exclusive = { focus = GER_autarky_a }
+	relative_position_id = GER_end_of_new_plan
+	prerequisite = { focus = GER_end_of_new_plan }
+	cost = 10
 	x = -1
 	y = 1
-	relative_position_id = GER_four_year_plan_a
-	cost = 10
-
+	
 	ai_will_do = {
 		factor = 9
 	}
@@ -2006,6 +1886,12 @@ shared_focus = {
 			uses = 1
 			category = electronics
 		}
+		add_tech_bonus = {
+			name = GER_technocracy
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
 	}
 }
 
@@ -2013,7 +1899,8 @@ shared_focus = {
 	id = GER_krupp_eco_focus
 	icon = GFX_goal_krupp
 	prerequisite = { focus = GER_autarky_a }
-	x = -1
+	prerequisite = { focus = GER_hermann_goring_werke_a }
+	x = 1
 	y = 1
 	relative_position_id = GER_autarky_a
 	cost = 5
@@ -2049,10 +1936,10 @@ shared_focus = {
 	icon = GFX_goal_generic_construct_civ_factory
 	text = GER_hermann_goring_werke
 	dynamic = yes
-	prerequisite = { focus = GER_autarky_a focus = GER_technocracy }
-	x = -3
+	prerequisite = { focus = GER_end_of_new_plan }
+	x = 3
 	y = 1
-	relative_position_id = GER_autarky_a
+	relative_position_id = GER_end_of_new_plan
 	cost = 10
 	ai_will_do = {
 		factor = 9
@@ -2151,9 +2038,9 @@ shared_focus = {
 	text = GER_kdf_wagen
 	dynamic = yes
 	prerequisite = { focus = GER_hermann_goring_werke_a }
-	x = -3
-	y = 3
-	relative_position_id = GER_autarky_a
+	x = 0
+	y = 2
+	relative_position_id = GER_hermann_goring_werke_a
 	cost = 10
 	ai_will_do = {
 		factor = 5
@@ -2250,13 +2137,74 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_Eco_Plan_Side_A_2
+	icon = GFX_focus_generic_industry_3
+	prerequisite = { focus = GER_Arms_Mobilization focus = GER_Civlian_Mobilization }
+	prerequisite = { focus = GER_extra_tech_slot_a }
+	relative_position_id = GER_grosraumwirtschaft_a
+	x = 0
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = krupp_nofocusver
+				add_idea = krupp_idea_focus
+			}
+			swap_ideas = {
+				remove_idea = siemens
+				add_idea = siemens_focus
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = siemens
+				}
+				swap_ideas = {
+					remove_idea = siemens
+					add_idea = siemens_focus
+				}
+			}
+			if = {
+				limit = {
+					has_idea = krupp_nofocusver
+				}
+				swap_ideas = {
+					remove_idea = krupp_nofocusver
+					add_idea = krupp_idea_focus
+				}
+			}
+			if = {
+				limit = {
+					has_idea = krupp_starter_ver
+				}
+				swap_ideas = {
+					remove_idea = krupp_starter_ver
+					add_idea = krupp_starter_ver_inds
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_coal_liquidization_a
 	icon = GFX_goal_generic_oil_refinery
 	text = GER_coal_liquidization
 	prerequisite = { focus = GER_autarky_a }
-	x = 1
-	y = 1
-	relative_position_id = GER_autarky_a
+	x = 5
+	y = 2
+	relative_position_id = GER_end_of_new_plan
 	cost = 10
 	ai_will_do = {
 		factor = 4
@@ -2317,11 +2265,11 @@ shared_focus = {
 shared_focus = {
 	id = GER_extra_build_slot
 	icon = GFX_goal_r56_goal_generic_bills
-	prerequisite = { focus = GER_Civlian_Mobilization focus = GER_Arms_Mobilization }
+	prerequisite = { focus = GER_extra_tech_slot_a }
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	x = 0
-	y = 4
-	relative_position_id = GER_grosraumwirtschaft_a
+	y = 1
+	relative_position_id = GER_extra_tech_slot_a
 	cost = 3
 	ai_will_do = {
 		factor = 1
@@ -2329,14 +2277,17 @@ shared_focus = {
 
 	available_if_capitulated = yes
 	completion_reward = {
-		add_stability = -0.05
 		random_owned_controlled_state = {
-			prioritize = { 64 60 59 54 }
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 		}
 		random_owned_controlled_state = {
-			prioritize = { 60 64 59 54 }
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
 		}
 	}
 }
@@ -2345,10 +2296,10 @@ shared_focus = {
 	id = GER_extra_tech_slot_a
 	icon = GFX_focus_research
 	text = extra_tech_slot
-	prerequisite = { focus = GER_synthetic_rubber_a focus = GER_kdf_wagen_a }
-	x = -1
-	y = 4
-	relative_position_id = GER_autarky_a
+	prerequisite = { focus = GER_kdf_wagen_a }
+	x = 0
+	y = 1
+	relative_position_id = GER_kdf_wagen_a
 	cost = 10
 	ai_will_do = {
 		factor = 1
@@ -2364,124 +2315,6 @@ shared_focus = {
 shared_focus = {
 	id = GER_Civlian_Mobilization
 	icon = GFX_goal_focus_on_civilian
-	mutually_exclusive = { focus = GER_Arms_Mobilization }
-	prerequisite = { focus = GER_grosraumwirtschaft_a }
-	x = -1
-	y = 1
-	relative_position_id = GER_grosraumwirtschaft_a
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-	available = {
-		GER_four_year_plan_available = yes
-		OR = {
-			has_full_control_of_state = 64
-			has_full_control_of_state = 59
-			has_full_control_of_state = 60
-			has_full_control_of_state = 54
-		}
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				custom_effect_tooltip = GER_autobahn_tt
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Civilian_Mobilization
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Civilian_Mobilization
-				}
-			}
-
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_autarky
-					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_Small_Arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_Small_Arms
-					add_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_autarky_small_arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_autarky_small_arms
-					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms
-				}
-			}
-			64 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-			59 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-
-					add_building_construction = {
-						type = infrastructure
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-			60 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-			54 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Arms_Mobilization
-	icon = GFX_goal_focus_on_arms
-	mutually_exclusive = { focus = GER_Civlian_Mobilization }
 	prerequisite = { focus = GER_grosraumwirtschaft_a }
 	x = 1
 	y = 1
@@ -2490,11 +2323,42 @@ shared_focus = {
 	ai_will_do = {
 		factor = 1
 	}
+	mutually_exclusive = { focus = GER_Arms_Mobilization }
 	available = {
-		GER_four_year_plan_available = yes
-		has_completed_focus = GER_Hide_Arms_Industrialization
 	}
 
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		effect_tooltip = {
+			GER = {
+				swap_ideas = {
+					remove_idea = Four_Year_Plan_2
+					add_idea = Four_Year_Plan_Civilian_Mobilization
+				}
+			}
+		}
+		hidden_effect = {
+			add_to_variable = { GER_FR_production_speed_industrial_complex_factor = 0.15 }
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_Arms_Mobilization
+	icon = GFX_goal_focus_on_arms
+	x = -1
+	y = 1
+	prerequisite = { focus = GER_grosraumwirtschaft_a }
+	relative_position_id = GER_grosraumwirtschaft_a
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	available = {
+		has_completed_focus = GER_Hide_Arms_Industrialization
+	}
+	mutually_exclusive = { focus = GER_Civlian_Mobilization }
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
@@ -2505,86 +2369,10 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_Arms_Mobilization
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_autarky
-					add_idea = Four_Year_Plan_Arms_Mobilization_autarky
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_Small_Arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_Small_Arms
-					add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_autarky_small_arms
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_autarky_small_arms
-					add_idea = Four_Year_Plan_Arms_Mobilization_autarky_hide_arms
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Finish
-	icon = GFX_goal_endoffouryearplan
-	prerequisite = { focus = GER_extra_tech_slot_a focus = GER_extra_build_slot focus = GER_switch_to_war_economy }
-	x = 0
-	y = 6
-	relative_position_id = GER_four_year_plan_a
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	complete_tooltip = {
-		custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
-		add_ideas = German_Eco_Plan_B
-		hidden_effect = {
-			complete_national_focus = GER_Finish_COPY
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	available = {
-		custom_trigger_tooltip = {
-			tooltip = GER_Four_Year_Plan_Finish_tt
-			has_global_flag =  {
-				flag = GER_FOUR_PLAN_FLAG_1
-				days > 1460
-			}
-		}
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
-		add_ideas = German_Eco_Plan_B
-		hidden_effect = {
-			complete_national_focus = GER_Finish_COPY
-			mark_focus_tree_layout_dirty = yes
+			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
+			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { GER_FR_production_speed_arms_factory_factor = 0.05 }
+			add_to_variable = { GER_FR_production_speed_dockyard_factor = 0.05 }
 		}
 	}
 }
@@ -2593,10 +2381,10 @@ shared_focus = {
 	id = GER_Finish_COPY
 	text = GER_Finish
 	icon = GFX_goal_endoffouryearplan
-	allow_branch = { has_completed_focus = GER_Finish }
-	x = -14
+	allow_branch = { has_global_flag = GER_END_OF_FOUR_YEAR_PLAN_FLAG }
+	x = -18
 	y = 0
-	relative_position_id = GER_four_year_plan_a
+	relative_position_id = GER_end_of_new_plan
 	cost = 10
 	ai_will_do = {
 		factor = 1
@@ -3313,13 +3101,46 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_naval_designers
+	icon = GFX_focus_POL_develop_polish_shipbuilding
+	prerequisite = { focus = GER_Small_Arms  }
+	x = 3
+	y = 1
+	relative_position_id = GER_Small_Arms
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			mio:GER_germaniawerft_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_blohm_und_voss_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:Deschimag_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:Cox_and_Danks_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_Eco_Plan_Side_A_1
-	icon = GFX_focus_generic_air_bases
-	prerequisite = { focus = GER_Eco_Plan_A_Main_A focus = GER_Eco_Plan_B_Main_A }
-	x = 0
-	y = 6
-	relative_position_id = GER_Finish_COPY
-	cost = 10
+	icon = GFX_focus_generic_aircraft_production
+	prerequisite = { focus = GER_Small_Arms  }
+	x = 1
+	y = 1
+	relative_position_id = GER_Small_Arms
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -3389,64 +3210,13 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = GER_Eco_Plan_Side_A_2
-	icon = GFX_focus_generic_modernize_industry
-	prerequisite = { focus = GER_Eco_Plan_A_Main_A }
-	x = -2
-	y = 6
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = krupp_nofocusver
-				add_idea = krupp_idea_focus
-			}
-			swap_ideas = {
-				remove_idea = siemens
-				add_idea = siemens_focus
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = siemens
-				}
-				swap_ideas = {
-					remove_idea = siemens
-					add_idea = siemens_focus
-				}
-			}
-			if = {
-				limit = {
-					has_idea = krupp_nofocusver
-				}
-				swap_ideas = {
-					remove_idea = krupp_nofocusver
-					add_idea = krupp_idea_focus
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
 	id = GER_Eco_Plan_Side_A_3
 	icon = GFX_focus_generic_tank_production
-	prerequisite = { focus = GER_Eco_Plan_B_Main_A }
-	x = 2
-	y = 6
-	relative_position_id = GER_Finish_COPY
-	cost = 10
+	prerequisite = { focus = GER_Small_Arms }
+	x = -1
+	y = 1
+	relative_position_id = GER_Small_Arms
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -3464,6 +3234,8 @@ shared_focus = {
 			mio:GER_man_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_henschel_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_porsche_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_Volkswagen_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_Krupp_tank_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -3506,6 +3278,39 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_arms_designers
+	icon = GFX_focus_generic_combined_arms
+	prerequisite = { focus = GER_Small_Arms }
+	x = -3
+	y = 1
+	relative_position_id = GER_Small_Arms
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			mio:GER_rheinmetall_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_mauser_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_opel_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_Volkswagen_motorized_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_Eco_Plan_Main
 	icon = GFX_goal_endoffouryearplan
 	prerequisite = { focus = GER_Eco_Plan_B_Main_B focus = GER_Eco_Plan_A_Main_B }
@@ -3531,16 +3336,14 @@ shared_focus = {
 shared_focus = {
 	id = GER_Hide_Arms_Industrialization
 	icon = GFX_focus_renounce_the_treaty_of_trianon
-	prerequisite = { focus = GER_four_year_plan_a }
-	x = 5
-	y = 1
-	relative_position_id = GER_four_year_plan_a
+	x = -10
+	y = 0
+	relative_position_id = GER_end_of_new_plan
 	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
 	available = {
-		GER_four_year_plan_available = yes
 	}
 
 	available_if_capitulated = yes
@@ -3553,78 +3356,8 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_1_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1_autarky
-					add_idea = Four_Year_Plan_1_autarky_hide_arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2
-					add_idea = Four_Year_Plan_2_Small_Arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Arms_Mobilization
-					add_idea = Four_Year_Plan_Arms_Mobilization_Hide_Arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Arms_Mobilization_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Arms_Mobilization_autarky
-					add_idea = Four_Year_Plan_Arms_Mobilization_autarky_hide_arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_1
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_1
-					add_idea = Four_Year_Plan_1_Hide_ARMS
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_2_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_2_autarky
-					add_idea = Four_Year_Plan_2_autarky_small_arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Civilian_Mobilization
-					add_idea = Four_Year_Plan_Civilian_Mobilization_hide_arms
-				}
-			}
-			if = {
-				limit = {
-					has_idea = Four_Year_Plan_Civilian_Mobilization_autarky
-				}
-				swap_ideas = {
-					remove_idea = Four_Year_Plan_Civilian_Mobilization_autarky
-					add_idea = Four_Year_Plan_Civilian_Mobilization_autarky_hide_arms
-				}
-			}
+			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
+			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
 		}
 	}
 }
@@ -3633,10 +3366,11 @@ shared_focus = {
 	id = GER_Small_Arms
 	icon = GFX_goal_small_arms
 	prerequisite = { focus = GER_Hide_Arms_Industrialization }
-	x = -1
+	prerequisite = { focus = GER_end_of_new_plan }
+	x = 5
 	y = 1
 	relative_position_id = GER_Hide_Arms_Industrialization
-	cost = 5
+	cost = 3
 	ai_will_do = {
 		factor = 1
 	}
@@ -3737,13 +3471,203 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_expand_air_base_in_rhineland
+	icon = GFX_focus_generic_air_bases
+	prerequisite = { focus = GER_Hide_Arms_Industrialization }
+	available = {
+	}
+	x = -1
+	y = 1
+	relative_position_id = GER_Hide_Arms_Industrialization
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					any_owned_state = {
+						air_base > 3
+						air_base < 9
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 5
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 6
+					instant_build = yes
+				}
+				set_state_flag = GER_air_innovation_6air
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				air_base > 3
+				air_base < 9
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_air_innovation_2air
+		}
+		random_owned_controlled_state = {
+			limit = {
+				air_base > 3
+				air_base < 9
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_air_innovation_2air
+		}
+		random_owned_controlled_state = {
+			limit = {
+				air_base > 2
+				air_base < 9
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_air_innovation_2air
+		}
+		every_state = {
+			limit = { has_state_flag = GER_air_innovation_2air }
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		every_state = {
+			limit = { has_state_flag = GER_air_innovation_6air }
+			add_building_construction = {
+				type = air_base
+				level = 6
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_deploy_flanks_in_air_bases
+	icon = GFX_goal_z_goal_generic_support_AA
+	prerequisite = { focus = GER_expand_air_base_in_rhineland focus = GER_prepare_for_airwar }
+	available = {
+	}
+	x = 0
+	y = 3
+	relative_position_id = GER_Hide_Arms_Industrialization
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward = {
+		every_state = {
+			limit = {
+				is_owned_and_controlled_by = ROOT
+				air_base > 1
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_Gustav_project
+	icon = GFX_goal_z_goal_railway_gun_dora
+	prerequisite = { focus = GER_deploy_flanks_in_air_bases }
+	available = {
+	}
+	x = 1
+	y = 1
+	relative_position_id = GER_deploy_flanks_in_air_bases
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_tech = railway_gun
+			}
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+				name = "Schwerer Gustav"
+				location = 6521
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = GER_Gustav_project
+				bonus = 1.0
+				uses = 2
+				technology = railway_gun
+				technology = armored_train
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_rocket_launch_in_air_bases
+	icon = GFX_goal_GER_rocketry_focus
+	prerequisite = { focus = GER_deploy_flanks_in_air_bases }
+	available = {
+		has_tech = experimental_rockets
+	}
+	x = -1
+	y = 1
+	relative_position_id = GER_deploy_flanks_in_air_bases
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward = {
+		every_state = {
+			limit = {
+				is_owned_and_controlled_by = ROOT
+				anti_air_building > 2
+			}
+			add_building_construction = {
+				type = rocket_site
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_german_war_economy_a
 	icon = GFX_goal_r56_goal_generic_construct_war_factory
 	text = GER_german_war_economy
+	prerequisite = { focus = GER_Eco_Plan_Side_A_3 focus = GER_Eco_Plan_Side_A_1 focus = GER_arms_designers focus = GER_naval_designers }
 	x = 0
 	y = 2
-	relative_position_id = GER_Hide_Arms_Industrialization
-	prerequisite = { focus = GER_Small_Arms focus = GER_prepare_for_airwar }
+	relative_position_id = GER_Small_Arms
 	cost = 10
 	ai_will_do = {
 		factor = 1
@@ -3784,53 +3708,90 @@ shared_focus = {
 			}
 			add_ideas = war_economy
 		}
-		random_owned_controlled_state = {
+		custom_effect_tooltip = GER_war_eco_development_buildings_tt
+		if = {
 			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
+				has_completed_focus = GER_arms_designers
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
 			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_german_war_economy
 		}
-		random_owned_controlled_state = {
+		if = {
 			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
+				has_completed_focus = GER_Eco_Plan_Side_A_3
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
 			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_german_war_economy
 		}
-		random_owned_controlled_state = {
+		if = {
 			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
+				has_completed_focus = GER_Eco_Plan_Side_A_1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
 			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+		}
+		if = {
+			limit = {
+				has_completed_focus = GER_naval_designers
 			}
-			set_state_flag = GER_german_war_economy
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
+			}
 		}
 	}
 }
@@ -3838,10 +3799,10 @@ shared_focus = {
 shared_focus = {
 	id = GER_switch_to_war_economy
 	icon = GFX_goal_generic_production2
-	x = 0
-	y = 4
-	relative_position_id = GER_Hide_Arms_Industrialization
-	prerequisite = { focus = GER_german_war_economy_a }
+	x = 2
+	y = 3
+	relative_position_id = GER_Small_Arms
+	prerequisite = { focus = GER_german_war_economy_a focus = GER_Arms_Mobilization }
 	cost = 3
 	ai_will_do = {
 		factor = 1
@@ -3905,92 +3866,13 @@ shared_focus = {
 	available_if_capitulated = yes
 	complete_tooltip = {
 		air_experience = 50
-		every_state = {
-			limit = { has_state_flag = GER_air_innovation_2air }
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-		}
-		every_state = {
-			limit = { has_state_flag = GER_air_innovation_6air }
-			add_building_construction = {
-				type = air_base
-				level = 6
-				instant_build = yes
-			}
-		}
 		custom_effect_tooltip = available_chief_of_airforce
 		show_ideas_tooltip = ritter_von_greim
 	}
 	completion_reward = {
-
 		air_experience = 50
 		custom_effect_tooltip = available_chief_of_airforce
 		show_ideas_tooltip = ritter_von_greim
-
-		if = {
-			limit = {
-				NOT = {
-					any_owned_state = {
-						air_base > 3
-						air_base < 9
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 5
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 6
-					instant_build = yes
-				}
-				set_state_flag = GER_air_innovation_6air
-			}
-		}
-
-		random_owned_controlled_state = {
-			limit = {
-				air_base > 3
-				air_base < 9
-			}
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_air_innovation_2air
-		}
-		random_owned_controlled_state = {
-			limit = {
-				air_base > 3
-				air_base < 9
-			}
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_air_innovation_2air
-		}
-		random_owned_controlled_state = {
-			limit = {
-				air_base > 2
-				air_base < 9
-			}
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-			set_state_flag = GER_air_innovation_2air
-		}
 	}
 }
 

@@ -56,6 +56,12 @@ GER_porsche_organization = {
 			build_cost_ic = -0.05
 			reliability = -0.1
 		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
 	}
 }
 
@@ -138,6 +144,12 @@ GER_henschel_organization = {
 			build_cost_ic = -0.05
 			reliability = -0.1
 		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
 	}
 }
 
@@ -182,6 +194,12 @@ GER_man_organization = {
 			build_cost_ic = -0.05
 			reliability = -0.1
 		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
 	}
 }
 
@@ -200,6 +218,31 @@ GER_Krupp_tank_organization = {
 				krupp_used = yes
 			}
 			has_completed_focus = GER_krupp_eco_focus
+		}
+	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -291,6 +334,31 @@ GER_Volkswagen_organization = {
 			has_completed_focus = GER_the_peoples_car
 		}	
 	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
 }
 
 GER_skoda_armor_organization = {
@@ -317,6 +385,31 @@ GER_germaniawerft_organization = {
 	allowed = {	
 		tag = GER 
 	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
 }
 
 GER_blohm_und_voss_organization = {
@@ -325,6 +418,31 @@ GER_blohm_und_voss_organization = {
 	
 	allowed = {	
 		tag = GER 
+	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
 	}
 }
 
@@ -336,6 +454,30 @@ Deschimag_organization = {
 		tag = GER 
 	}
 
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
 }
 
 Cox_and_Danks_organization = {
@@ -352,6 +494,30 @@ Cox_and_Danks_organization = {
 		}	
 	}
 
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
 }
 
 GER_skoda_shipyards_organization = {
@@ -451,9 +617,15 @@ GER_messerschmitt_organization = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			armor_value = 0.05
 			build_cost_ic = -0.05
 			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -538,9 +710,15 @@ GER_junkers_organization = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			armor_value = 0.05
 			build_cost_ic = -0.05
 			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -627,9 +805,15 @@ GER_dornier_organization = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			armor_value = 0.05
 			build_cost_ic = -0.05
 			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -655,9 +839,15 @@ GER_fieseler_organization = {
 		}
 
 		equipment_bonus = {
-			fuel_consumption = -0.05
+			armor_value = 0.05
 			build_cost_ic = -0.05
 			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -684,6 +874,31 @@ GER_rheinmetall_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
+		}
+	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -728,6 +943,31 @@ GER_mauser_organization = {
 					has_country_flag = has_invited_GER_mauser_organization_flag
 				}
 			}
+		}
+	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
 		}
 	}
 }
@@ -781,6 +1021,31 @@ GER_opel_organization = {
 			FROM = { has_country_flag = GER_mot_chosen }
 		}	
 	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
 }
 
 GER_Volkswagen_motorized_organization = {
@@ -795,6 +1060,31 @@ GER_Volkswagen_motorized_organization = {
 		FROM = {
 			has_completed_focus = GER_kdf_wagen_a
 		}	
+	}
+
+	add_trait = {
+		token = GER_eco_plan_upgrade
+		name = GER_eco_plan_upgrade
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x= 10 y= 0 }
+		
+		available = {
+			always = no
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			build_cost_ic = -0.05
+			reliability = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = 0.2
+			military_industrial_organization_research_bonus = 0.02
+		}
 	}
 }
 

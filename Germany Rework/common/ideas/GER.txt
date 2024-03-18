@@ -1440,10 +1440,16 @@ ideas = {
 			cancel = {
 				AND = {
 					DEN = {
-						has_capitulated = yes
+						OR = {
+							is_puppet_of = GER
+							has_capitulated = yes
+						}
 					}
 					NOR	= {
-						has_capitulated = yes
+						OR = {
+							is_puppet_of = GER
+							has_capitulated = yes
+						}
 					}
 				}
 			}
@@ -2799,7 +2805,13 @@ ideas = {
 			}
 
 			cancel = {
-				FRA = {
+				16 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				BEL = {
+					has_capitulated = yes
+				} 
+				LUX = {
 					has_capitulated = yes
 				}
 			}
@@ -2824,7 +2836,16 @@ ideas = {
 			}
 
 			cancel = {
-				FRA = {
+				16 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				HOL = {
+					has_capitulated = yes
+				} 
+				BEL = {
+					has_capitulated = yes
+				} 
+				LUX = {
 					has_capitulated = yes
 				}
 			}
@@ -7552,7 +7573,10 @@ ideas = {
 			}
 
 			visible = {
-				NOT = { has_completed_focus = GER_krupp_eco_focus }
+				NOT = { 
+					has_completed_focus = GER_krupp_eco_focus 
+					has_completed_focus = GER_Eco_Plan_Side_A_2
+				}
 			}
 
 			available = {
@@ -7567,6 +7591,36 @@ ideas = {
 			}
 
 			traits = { industrial_concern }
+		}
+
+		krupp_starter_ver_inds = {
+			picture = krupp
+
+			allowed = {
+				original_tag = GER
+			}
+
+			cancel = {
+				has_completed_focus = GER_krupp_eco_focus
+			}
+
+			visible = {
+				NOT = { has_completed_focus = GER_krupp_eco_focus }
+				has_completed_focus = GER_Eco_Plan_Side_A_2
+			}
+
+			available = {
+			}
+
+			research_bonus = {
+				industry = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 2
+			}
+
+			traits = { krupp_inds_focus }
 		}
 
 		krupp_nofocusver = {
@@ -8431,10 +8485,16 @@ ideas = {
 			cancel = {
 				AND = {
 					DEN = {
-						has_capitulated = yes
+						OR = {
+							is_puppet_of = GER
+							has_capitulated = yes
+						}
 					}
 					NOR	= {
-						has_capitulated = yes
+						OR = {
+							is_puppet_of = GER
+							has_capitulated = yes
+						}
 					}
 				}
 			}

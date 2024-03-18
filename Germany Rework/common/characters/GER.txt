@@ -1719,10 +1719,6 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_four_year_plan_a
-				not = {
-					has_completed_focus = GER_demand_sudetenland
-				}
 				not = {
 					has_government = communism
 				}
@@ -1732,6 +1728,13 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1000
+				modifier = {
+					OR = {
+						has_completed_focus = GER_demand_sudetenland
+						has_war = yes
+					}
+					factor = 0
+				}
 			}
 		}
 	}
