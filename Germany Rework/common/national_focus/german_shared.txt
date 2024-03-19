@@ -3101,6 +3101,34 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_Small_Arms
+	icon = GFX_goal_small_arms
+	prerequisite = { focus = GER_Hide_Arms_Industrialization }
+	prerequisite = { focus = GER_end_of_new_plan }
+	x = 5
+	y = 1
+	relative_position_id = GER_Hide_Arms_Industrialization
+	cost = 3
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		random_state = {
+			limit = { is_owned_by = GER is_core_of = GER }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_naval_designers
 	icon = GFX_focus_POL_develop_polish_shipbuilding
 	prerequisite = { focus = GER_Small_Arms  }
@@ -3358,34 +3386,6 @@ shared_focus = {
 		hidden_effect = {
 			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
 			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Small_Arms
-	icon = GFX_goal_small_arms
-	prerequisite = { focus = GER_Hide_Arms_Industrialization }
-	prerequisite = { focus = GER_end_of_new_plan }
-	x = 5
-	y = 1
-	relative_position_id = GER_Hide_Arms_Industrialization
-	cost = 3
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		random_state = {
-			limit = { is_owned_by = GER is_core_of = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
 		}
 	}
 }

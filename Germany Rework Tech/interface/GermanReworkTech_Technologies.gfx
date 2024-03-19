@@ -6,6 +6,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_flamethrower_medium"
+		texturefile = "gfx/interface/technologies/flamethrower.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_winter_clothes_gw_medium"
 		texturefile = "gfx/interface/technologies/winter_clothes_gw.dds"
 	}
@@ -130,4 +135,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/camo.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_paratroopers4_medium"
+		texturefile = "gfx/interface/technologies/paratroopers4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_mountaineers4_medium"
+		texturefile = "gfx/interface/technologies/mountain4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_marines4_medium"
+		texturefile = "gfx/interface/technologies/marines4.dds"
+	}
+	
 }
