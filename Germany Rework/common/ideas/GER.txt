@@ -6522,6 +6522,32 @@ ideas = {
 			}
 		}
 
+		GER_Mercedes = {
+
+			picture = Mercedes_tank
+
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+			}
+
+			available = {
+
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { Mercedes_trait }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+
 		krupp_tank_idea = {
 
 			picture = krupp_tank_gfx
@@ -6549,7 +6575,7 @@ ideas = {
 			ai_will_do = {
 				factor = 15
 			}
-		}
+		}		
 
 		GER_Volkswagen_tank = {
 
@@ -6571,32 +6597,6 @@ ideas = {
 			}
 
 			traits = { Volkswagen_1_trait }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		GER_Mercedes = {
-
-			picture = Mercedes_tank
-
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-			}
-
-			available = {
-
-			}
-
-			research_bonus = {
-				armor = 0.15
-			}
-
-			traits = { Mercedes_trait }
 
 			ai_will_do = {
 				factor = 1
@@ -6848,7 +6848,38 @@ ideas = {
 
 			}
 
+			visible = {
+				NOT = { has_completed_focus = GER_naval_designers }
+			}
+
 			traits = { atlantic_fleet_naval_manufacturer }
+
+		}
+
+		germaniawerft_focus = {
+
+
+			allowed = {
+				original_tag = GER
+			}
+
+			visible = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			available = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			equipment_bonus = {
+
+			}
+
+			traits = { atlantic_fleet_naval_manufacturer_focus }
 
 		}
 
@@ -6863,6 +6894,10 @@ ideas = {
 				naval_equipment = 0.15
 			}
 
+			visible = {
+				NOT = { has_completed_focus = GER_naval_designers }
+			}
+
 			traits = { raiding_fleet_naval_manufacturer }
 
 			equipment_bonus = {
@@ -6870,6 +6905,32 @@ ideas = {
 			}
 
 		}
+
+		blohm_und_voss_focus = {
+
+			visible = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			available = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			allowed = {
+				original_tag = GER
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { raiding_fleet_naval_manufacturer_focus }
+
+			equipment_bonus = {
+
+			}
+
+		}		
 
 		Deschimag = {
 			picture = generic_naval_manufacturer_3
@@ -6882,12 +6943,42 @@ ideas = {
 				naval_equipment = 0.15
 			}
 
+			visible = {
+				NOT = { has_completed_focus = GER_naval_designers }
+			}
+
 			traits = { battlefleet_designer }
 
 			equipment_bonus = {
 			}
 
 		}
+
+		Deschimag_focus = {
+			picture = generic_naval_manufacturer_3
+
+			visible = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			available = {
+				has_completed_focus = GER_naval_designers
+			}
+
+			allowed = {
+				original_tag = GER
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { battlefleet_designer_focus }
+
+			equipment_bonus = {
+			}
+
+		}		
 
 		Cox_and_Danks = {
 			picture = generic_naval_manufacturer_1
@@ -7579,9 +7670,6 @@ ideas = {
 				}
 			}
 
-			available = {
-			}
-
 			research_bonus = {
 				industry = 0.05
 			}
@@ -7752,6 +7840,12 @@ ideas = {
 
 		rheinmetall = {
 
+			visible = {
+				NOT = {
+					has_completed_focus = GER_arms_designers
+				}
+			}
+
 			allowed = {
 				original_tag = GER
 			}
@@ -7767,7 +7861,42 @@ ideas = {
 			}
 		}
 
+		rheinmetall_focus = {
+			picture = rheinmetall
+
+			visible = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			available = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			allowed = {
+				original_tag = GER
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+
+			equipment_bonus = {
+                artillery = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+            }
+		}		
+
 		mauser = {
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_arms_designers
+				}
+			}
 
 
 			allowed = {
@@ -7785,7 +7914,46 @@ ideas = {
 			}
 		}
 
+		mauser_focus = {
+			picture = mauser
+
+			visible = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			available = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			allowed = {
+				original_tag = GER
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			equipment_bonus = {
+                infantry_equipment = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+            }
+
+			traits = { infantry_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 2
+			}
+		}		
+
 		opel = {
+
+			visible = {
+				NOT = {
+					has_completed_focus = GER_arms_designers
+				}
+			}
 
 			allowed = {
 				original_tag = GER
@@ -7797,6 +7965,36 @@ ideas = {
 
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		opel_focus = {
+			picture = opel
+
+			visible = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			available = {
+				has_completed_focus = GER_arms_designers
+			}
+
+			allowed = {
+				original_tag = GER
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+					reliability = 0.05
+				}
+			}
+
+			traits = { motorized_equipment_manufacturer }
+		}		
 
 		GER_volkswagen_motorized = {
 

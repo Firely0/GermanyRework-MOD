@@ -3153,10 +3153,51 @@ shared_focus = {
 			mio:GER_germaniawerft_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_blohm_und_voss_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:Deschimag_organization = { complete_mio_trait = GER_eco_plan_upgrade }
-			mio:Cox_and_Danks_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
-			custom_effect_tooltip = available_designer
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = germaniawerft
+					add_idea = germaniawerft_focus
+				}
+				swap_ideas = {
+					remove_idea = blohm_und_voss
+					add_idea = blohm_und_voss_focus
+				}
+				swap_ideas = {
+					remove_idea = Deschimag
+					add_idea = Deschimag_focus
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = germaniawerft
+					}
+					swap_ideas = {
+						remove_idea = germaniawerft
+						add_idea = germaniawerft_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = blohm_und_voss
+					}
+					swap_ideas = {
+						remove_idea = blohm_und_voss
+						add_idea = blohm_und_voss_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = Deschimag
+					}
+					swap_ideas = {
+						remove_idea = Deschimag
+						add_idea = Deschimag_focus
+					}
+				}
+			}
 		}
 	}
 }
@@ -3189,12 +3230,24 @@ shared_focus = {
 			mio:GER_fieseler_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = messerschmitt_focus
-			show_ideas_tooltip = junkers_focus
-			show_ideas_tooltip = dornier_focus
-			show_ideas_tooltip = fieseler_focus
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = messerschmitt
+					add_idea = messerschmitt_focus
+				}
+				swap_ideas = {
+					remove_idea = junkers
+					add_idea = junkers_focus
+				}
+				swap_ideas = {
+					remove_idea = dornier
+					add_idea = dornier_focus
+				}
+				swap_ideas = {
+					remove_idea = fieseler
+					add_idea = fieseler_focus
+				}
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -3262,16 +3315,22 @@ shared_focus = {
 			mio:GER_man_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_henschel_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_porsche_organization = { complete_mio_trait = GER_eco_plan_upgrade }
-			mio:GER_Volkswagen_organization = { complete_mio_trait = GER_eco_plan_upgrade }
-			mio:GER_Krupp_tank_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = porsche_focus
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = henschel_focus
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_MAN_Focus
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GER_MAN
+					add_idea = GER_MAN_Focus
+				}
+				swap_ideas = {
+					remove_idea = henschel
+					add_idea = henschel_focus
+				}
+				swap_ideas = {
+					remove_idea = porsche
+					add_idea = porsche_focus
+				}
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -3333,7 +3392,49 @@ shared_focus = {
 			mio:GER_Volkswagen_motorized_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
-			custom_effect_tooltip = available_designer
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = mauser
+					add_idea = mauser_focus
+				}
+				swap_ideas = {
+					remove_idea = rheinmetall
+					add_idea = rheinmetall_focus
+				}
+				swap_ideas = {
+					remove_idea = opel
+					add_idea = opel_focus
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = mauser
+					}
+					swap_ideas = {
+						remove_idea = mauser
+						add_idea = mauser_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = rheinmetall
+					}
+					swap_ideas = {
+						remove_idea = rheinmetall
+						add_idea = rheinmetall_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = opel
+					}
+					swap_ideas = {
+						remove_idea = opel
+						add_idea = opel_focus
+					}
+				}
+			}
 		}
 	}
 }
