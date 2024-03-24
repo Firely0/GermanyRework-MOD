@@ -235,9 +235,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ger_wilhelm_canaris
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -600,6 +602,7 @@ focus_tree = {
 	focus = {
 		id = GER_request_qingdao
 		icon = GFX_focus_por_luso_tropicalism
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		prerequisite = {
 			focus = GER_japan_friend
 			focus = GER_china_friend
@@ -875,7 +878,7 @@ focus_tree = {
 	focus = {
 		id = GER_foregin_affairs
 		icon = GFX_goal_generic_dangerous_deal
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 		allow_branch = {
 			NOT = {
 				OR = { has_global_flag = GER_DEFEAT_TREE }
@@ -4488,6 +4491,7 @@ focus_tree = {
 	focus = {
 		id = GER_for_our_revange
 		icon = GFX_goal_ForOurRevange
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		prerequisite = {
 			focus = GER_Beaten_but_not_defeated
 		}
@@ -4622,6 +4626,7 @@ focus_tree = {
 	focus = {
 		id = GER_purge_party
 		icon = GFX_focus_generic_conspiracy
+		search_filters = {FOCUS_FILTER_STABILITY}
 		prerequisite = {
 			focus = GER_hitler_is_gone
 		}

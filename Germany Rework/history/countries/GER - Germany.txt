@@ -2,6 +2,9 @@
 
 set_cosmetic_tag = GER_the_third_reich
 
+#Reminder
+activate_mission = GER_vanilla_reminder
+
 # Adolf, you just need to rest.
 set_variable = { adolf_hitler_rest = 1 }
 set_variable = { adolf_hitler_rest_bad = 1 }
@@ -61,11 +64,15 @@ ITA = {
 	}
 }
 
-#Old Friend Sweden.
+#Old Friend Sweden
 
 add_opinion_modifier = {
 	target = SWE
 	modifier = oldtradeparterns
+}
+add_opinion_modifier = {
+	target = SWE
+	modifier = oldtradeparterns_re
 }
 
 SWE = {
@@ -73,17 +80,9 @@ SWE = {
 		target = GER
 		modifier = oldtradeparterns
 	}
-}
-
-add_opinion_modifier = {
-	target = SWE
-	modifier = oldtradeparterns
-}
-
-SWE = {
 	add_opinion_modifier = {
 		target = GER
-		modifier = oldtradeparterns
+		modifier = oldtradeparterns_re
 	}
 }
 
@@ -592,6 +591,7 @@ add_ideas = {
 	Landon_Treaty
 	GER_SOV_TRAINING
 	GER_ITA_TRAINING
+	Four_Year_Plan_1
 	Wehrmacht
 	Luftwaffe
 	Kriegsmarine

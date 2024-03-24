@@ -1342,11 +1342,13 @@ ideas = {
 
 			removal_cost = -1
 
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
 			modifier = {
 				experience_gain_navy = 0.1
-				navy_submarine_attack_factor = 0.1
-				navy_submarine_defence_factor = 0.1
-				naval_accidents_chance = 0.2
+				experience_gain_submarine_training_factor = -1.0
 			}
 		}
 
@@ -1368,11 +1370,13 @@ ideas = {
 
 			removal_cost = -1
 
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+
 			modifier = {
 				experience_gain_navy = 0.1
-				navy_capital_ship_attack_factor = 0.1
-				navy_capital_ship_defence_factor = 0.1
-				naval_accidents_chance = 0.2
+				experience_gain_battleship_training_factor = -1.0
 			}
 		}
 
@@ -7659,10 +7663,6 @@ ideas = {
 				original_tag = GER
 			}
 
-			cancel = {
-				has_completed_focus = GER_krupp_eco_focus
-			}
-
 			visible = {
 				NOT = { 
 					has_completed_focus = GER_krupp_eco_focus 
@@ -7686,10 +7686,6 @@ ideas = {
 
 			allowed = {
 				original_tag = GER
-			}
-
-			cancel = {
-				has_completed_focus = GER_krupp_eco_focus
 			}
 
 			visible = {

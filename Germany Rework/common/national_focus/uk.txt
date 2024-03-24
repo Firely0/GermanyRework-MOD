@@ -148,6 +148,15 @@ focus_tree = {
 					set_technology = { lar_decryption_bonus_tech = 1 }
 				}
 				custom_effect_tooltip = lar_decryption_bonus_tt
+				If = {
+					limit = {
+						POL = { is_in_faction_with = ROOT }
+					}
+					add_decryption = {
+						target = GER
+						ratio = 1.0
+					}
+				}
 			}
 			GER_abwehr_rd = yes
 		}

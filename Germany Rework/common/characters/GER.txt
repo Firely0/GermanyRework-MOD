@@ -1627,83 +1627,6 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	GER_fritz_todt={
-		name=GER_fritz_todt
-		portraits={
-			army={
-				small="GFX_idea_todt"
-			}
-
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = todt
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				has_completed_focus = GER_west_wall
-			}
-			traits = {
-				fortification_engineer
-			}
-			ai_will_do = {
-				factor = 0.500
-			}
-		}
-	}
-
-	GER_albert_speer={
-		name=GER_albert_speer
-		portraits={
-			army={
-				small="GFX_idea_speer"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = speer
-			available = {
-				has_completed_focus = GER_german_war_economy_a
-			}
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				armaments_organizer2
-			}
-		}
-	}
-
-	GER_eva_braun ={
-		name= "Eva Braun"
-		portraits={
-			army={
-				small="GFX_idea_eva_braun"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = eva_braun
-			cost = 100
-			available = {
-				has_country_leader = {
-					character = GER_adolf_hitler
-					ruling_only = yes
-				}
-			}
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				eva_braun_trait
-			}
-			on_add = {
-				custom_effect_tooltip = GER_asign_eva_braun
-			}
-		}
-	}
-
 	GER_hjalmar_schacht={
 		name=GER_hjalmar_schacht
 		portraits={
@@ -1761,98 +1684,79 @@ characters={
 		}
 	}
 
-	GER_ernst_thalmann={
-		name=GER_ernst_thalmann
+	GER_fritz_todt={
+		name=GER_fritz_todt
 		portraits={
-			civilian={
-				large="GFX_portrait_ger_ernst_thalmann"
-			}
 			army={
-				small="GFX_idea_ernst_thalmann"
+				small="GFX_idea_todt"
 			}
-		}
-		country_leader={
-			ideology=stalinism
-			traits={ political_prisoner }
-			expire="1956.1.1.1"
-			id=-1
+
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = ernst_thalmann
-			cost = 75.000
+			idea_token = todt
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					not = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				OR = {
-					has_government = communism
-					has_completed_focus = GER_a_shadow_of_past
-				}
-				NOT = { has_country_flag = thalmann_killed }
+				has_completed_focus = GER_west_wall
 			}
 			traits = {
-				communist_revolutionary
-				political_prisoner 
-			}
-			do_effect = {
-				not = {
-					has_government = communism 
-				}
+				fortification_engineer
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 0.500
+			}
+		}
+	}
+
+	GER_albert_speer={
+		name=GER_albert_speer
+		portraits={
+			army={
+				small="GFX_idea_speer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = speer
+			available = {
+				has_completed_focus = GER_german_war_economy_a
+			}
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				armaments_organizer2
 			}
 		}
 	}	
 
-	GER_kurt_schumacher={
-		name=GER_kurt_schumacher
+	GER_eva_braun ={
+		name= "Eva Braun"
 		portraits={
 			army={
-				small="GFX_idea_kurt_schumacher"
+				small="GFX_idea_eva_braun"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = kurt_schumacher
+			idea_token = eva_braun
+			cost = 100
+			available = {
+				has_country_leader = {
+					character = GER_adolf_hitler
+					ruling_only = yes
+				}
+			}
 			allowed = {
 				original_tag = GER
 			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					has_completed_focus = GER_against_fuhrer
-				}
-			}
 			traits = {
-				democratic_reformer
+				eva_braun_trait
 			}
-			do_effect = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
+			on_add = {
+				custom_effect_tooltip = GER_asign_eva_braun
 			}
 		}
 	}
@@ -1883,7 +1787,7 @@ characters={
 				}
 			}
 			traits = {
-				fascist_demagogue propaganda_expert
+				fascist_demagogue propaganda_expert_ger
 			}
 			do_effect = {
 				NOT = {
@@ -1931,6 +1835,122 @@ characters={
 		}
 	}
 
+	GER_martin_bormann={
+		name=GER_martin_bormann
+		portraits={
+			army={
+				small="GFX_idea_martin_bormann"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = martin_bormann
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism
+					has_country_flag = GER_reinstated_nazi_leadership
+					has_country_flag = GER_Fuhrer_in_Country
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}	
+
+	GER_konstantin_von_neurath={
+		name=GER_konstantin_von_neurath
+		portraits={
+			army={
+				small="GFX_idea_konstantin_von_neurath"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = konstantin_von_neurath
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				smooth_talking_charmer_ger
+			}
+		}
+	}
+
+	GER_joachim_von_ribbentrop={
+		name=GER_joachim_von_ribbentrop
+		portraits={
+			army={
+				small="GFX_idea_joachim_von_ribbentrop"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = joachim_von_ribbentrop
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism 
+					has_country_flag = GER_reinstated_nazi_leadership 
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				backroom_backstabber_ger
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}	
+
+	GER_wilhelm_canaris={
+		name=GER_wilhelm_canaris
+		portraits={
+			army={
+				small="GFX_idea_ger_wilhelm_canaris"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ger_wilhelm_canaris
+			available = {
+				if = {
+					limit = {
+						NOT = { has_completed_focus = GER_against_fuhrer }
+					}
+					has_completed_focus = GER_establish_abwehr
+				}
+				has_intelligence_agency = yes
+			}
+			allowed = {
+				original_tag = GER
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				head_of_intelligence
+			}
+		}
+	}	
+
 	GER_heinrich_himmler={
 		name=GER_heinrich_himmler
 		portraits={
@@ -1973,94 +1993,106 @@ characters={
 				prince_of_terror
 			}
 		}
-	}
+	}	
 
-	GER_martin_bormann={
-		name=GER_martin_bormann
+	GER_ernst_thalmann={
+		name=GER_ernst_thalmann
 		portraits={
-			army={
-				small="GFX_idea_martin_bormann"
+			civilian={
+				large="GFX_portrait_ger_ernst_thalmann"
 			}
+			army={
+				small="GFX_idea_ernst_thalmann"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ political_prisoner }
+			expire="1956.1.1.1"
+			id=-1
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = martin_bormann
+			idea_token = ernst_thalmann
+			cost = 75.000
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = fascism
-					has_country_flag = GER_reinstated_nazi_leadership
-					has_country_flag = GER_Fuhrer_in_Country
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					not = {
+						has_autonomy_state = autonomy_supervised_state
+					}
 				}
-				NOT = {
-					has_government = communism
+				has_government = communism
+				NOT = { has_country_flag = thalmann_killed }
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
+			}
+			traits = {
+				communist_revolutionary
+				political_prisoner 
+			}
+			do_effect = {
+				not = {
+					has_government = communism 
 				}
 			}
 			ai_will_do = {
-				factor = 50
-			}
-			traits = {
-				silent_workhorse
+				factor = 1.000
 			}
 		}
-	}
+	}	
 
-	GER_joachim_von_ribbentrop={
-		name=GER_joachim_von_ribbentrop
+	GER_kurt_schumacher={
+		name=GER_kurt_schumacher
 		portraits={
 			army={
-				small="GFX_idea_joachim_von_ribbentrop"
+				small="GFX_idea_kurt_schumacher"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = joachim_von_ribbentrop
+			idea_token = kurt_schumacher
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
 				}
-				NOT = {
-					has_government = communism
+				if = {
+					limit = {
+						has_dlc = "Waking the Tiger"
+					}
+					has_completed_focus = GER_against_fuhrer
 				}
 			}
+			visible = {
+				has_completed_focus = GER_the_German_Republic
+			}
 			traits = {
-				backroom_backstabber 
+				democratic_reformer
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
 			}
 			ai_will_do = {
 				factor = 0.000
 			}
 		}
-	}
-
-	GER_konstantin_von_neurath={
-		name=GER_konstantin_von_neurath
-		portraits={
-			army={
-				small="GFX_idea_konstantin_von_neurath"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = konstantin_von_neurath
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			traits = {
-				smooth_talking_charmer 
-			}
-		}
-	}
+	}	
 
 	GER_hans_oster={
 		name=GER_hans_oster
@@ -2077,6 +2109,9 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
+				has_completed_focus = GER_the_German_Republic
+			}
+			visible = {
 				has_completed_focus = GER_the_German_Republic
 			}
 			traits = {
@@ -2111,6 +2146,9 @@ characters={
 					}
 				}
 			}
+			visible = {
+				has_completed_focus = GER_the_German_Republic
+			}
 			traits = {
 				monarchist_media_mogul
 			}
@@ -2143,6 +2181,9 @@ characters={
 					}
 				}
 			}
+			visible = {
+				has_completed_focus = GER_the_German_Republic
+			}
 			traits = {
 				economist_1
 			}
@@ -2168,6 +2209,9 @@ characters={
 			}
 			available = {
 				has_completed_focus = GER_reestablish_free_elections
+			}
+			visible = {
+				has_completed_focus = GER_the_German_Republic
 			}
 			traits = {
 				connected_citizen
@@ -2195,34 +2239,14 @@ characters={
 			available = {
 				has_completed_focus = GER_reestablish_free_elections
 			}
+			visible = {
+				has_completed_focus = GER_the_German_Republic
+			}
 			traits = {
 				liberal_journalist
 			}
 			ai_will_do = {
 				factor = 0.000
-			}
-		}
-	}
-
-	GER_wilhelm_canaris={
-		name=GER_wilhelm_canaris
-		portraits={
-			army={
-				small="GFX_idea_ger_wilhelm_canaris"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ger_wilhelm_canaris
-			available = {
-				has_intelligence_agency = yes
-			}
-			allowed = {
-				original_tag = GER
-				has_dlc = "La Resistance"
-			}
-			traits = {
-				head_of_intelligence
 			}
 		}
 	}
@@ -2537,15 +2561,15 @@ characters={
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				OR = {
-					has_government = communism
-					has_completed_focus = GER_a_shadow_of_past
-				}
+				has_government = communism
 				NOT = {
 					has_completed_focus = GER_radical_left
 					has_completed_focus = GER_right_wing
 					has_completed_focus = GER_criticise_soviet
 				}
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			traits = {
 				silent_workhorse
@@ -2617,6 +2641,9 @@ characters={
 			available = {
 				has_completed_focus = GER_NVA
 			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
+			}
 			
 			traits = {
 				mobilization_staff
@@ -2664,10 +2691,10 @@ characters={
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				OR = {
-					has_government = communism
-					has_completed_focus = GER_a_shadow_of_past
-				}
+				has_government = communism
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			traits = {
 				propaganda_expert
@@ -2713,6 +2740,9 @@ characters={
 					has_completed_focus = GER_rot_front
 				}
 			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
+			}
 			traits = {
 				prince_of_terror
 			}
@@ -2751,11 +2781,11 @@ characters={
 						has_autonomy_state = autonomy_supervised_state
 					}
 				}
-				OR = {
-					has_government = communism
-					has_completed_focus = GER_a_shadow_of_past
-				}
+				has_government = communism
 				has_country_flag = thalmann_killed
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			traits = {
 				communist_revolutionary
@@ -2785,10 +2815,10 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				OR = {
-					has_government = communism
-					has_completed_focus = GER_a_shadow_of_past
-				}
+				has_government = communism
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			traits = {
 				socialist_novelist
@@ -2815,6 +2845,9 @@ characters={
 			}
 			available = {
 				has_completed_focus = GER_NVA
+			}
+			visible = {
+				has_completed_focus = GER_a_shadow_of_past
 			}
 			traits = {
 				navy_chief_reform_1

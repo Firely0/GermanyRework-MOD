@@ -1,5 +1,8 @@
 ﻿l_english:
 
+ # Temp fix -- Broken Modifier - check later
+ modifier_experience_gain_fighter_training_factor:0 "£experience_neutral_training_texticon Fighter Training Experience Gain"
+
  #CP Tooltip
  decision_cost_CP_20: "£command_power  §Y20§!"
  decision_cost_CP_20_blocked: "£command_power  §R20§!"
@@ -298,8 +301,8 @@
  # SS vs Wehrmacht Anger
  SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
  Wehrmacht_Status_of_loyalty:0 "\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
- Wehrmacht_Increase_anger:0 "£wehrmacht_texticon Wehrmacht is likely to react to this"
- SS_Increase_anger:0 "£ss_texticon SS is likely to react to this"
+ Wehrmacht_Increase_anger:0 "The £wehrmacht_texticon Wehrmacht will be §Rangry§! about this"
+ SS_Increase_anger:0 "£ss_texticon SS will be §Rangry§! about this"
 
  #Adolf Hitler Healht
  health_of_adolf_category:0 "Health Checkups"
@@ -347,6 +350,12 @@
 
  #Recall Advisors
  GER_recall_generals_advisors:0 "Recall Generals or Advisors"
+
+ #Vanilla Reminder
+ GER_vanilla_look:0 "Visual Preference"
+ GER_vanilla_reminder:0 "Reminder Timer"
+ GER_revert_to_vanilla_germany:0 "Optional - Vanilla Appearance"
+ GER_revert_to_vanilla_germany_desc:0 "Flag and Name Return to Normal. \nForming a Nation Changes Name and Flag \nGFXs of things like Focus etc. Still the same*"
 
 
  #Army Ideas
@@ -681,6 +690,7 @@
  GER_smoke_and_fire_tactic_tt:0 "Enables Tactic: §HGas Attack§!"
  recall_generals_with_war_with_us:0 "Call back our advisors and generals in countries that are likely to go to war with us"
  killed_by_bomb:0 "Victim of Assassination"
+ GER_CALLED_AS_Vanilla:0 "§HDeutsches Reich§! will be known as §HGerman Reich§!"
  GER_CALLED_AS_Greater:0 "§HDeutsches Reich§! will be known as §HGroßgermanisches Reich§!"
  GER_CALLED_AS_HOLY:0 "§HThe German Empire§! will be known as §HHoly Roman Empire§!"
  focus_chance_to_defeat_tree:0 "Replaces the Focus Tree with the Surrender Tree."
@@ -743,7 +753,7 @@
  GER_auto_our_advance_tt:0 "§YFocus§! Auto-Complete Based on Our §RMission§! Success"
  GER_req_our_advance_tt:0 "§YFocus§! Unlocks Based on Our §RMission§! Success"
 
- GER_rhineland_problem:0 "Focus Auto-Complate After Our Approach of §RRemilitarization of Rhineland§!"
+ GER_rhineland_problem:0 "Auto Complate After Our \nApproach of §RRemilitarization of Rhineland§! \n\nCheck "Decisions" section \n\n"
  GER_Rhineland_demilitarized:0 "Remilitarization of Rhineland"
  GER_Rhineland_demilitarized_desc:0 "After the Nazi regime took power in January 1933, Germany began working towards rearmament and the remilitarization of the Rhineland."
  GER_Rhineland_demilitarized_a:0 "§YRhineland§! Still Demilitarized"
@@ -830,7 +840,8 @@
  speaked_against_us:0 "Spoken Against Us"
  challenged_royal_navy:0 "Challenged Royal Navy"
  gertrainingprogram:0 "Training Programs"
- oldtradeparterns:0 "Old Trade Partners"
+ oldtradeparterns:0 "Trade Partners"
+ oldtradeparterns_re:0 "Trade Partners"
  request_help:0 "Requested Help"
  GER_ITA_JAP_TRIPLE:0 "Signed Tripartite Pact"
  GER_END_OF_FOUR_YEAR_PLAN_tt:0 "Unlocks §YLong Term Economic Plan§!"
@@ -845,6 +856,9 @@
  new_rj_alt:0 "New Regime"
  DealBraker:0 "Deal Breaker"
  ReDrawBorders:0 "Redraw Borders"
+ smooth_talking_charmer_ger:0 "Smooth Talking Charmer"
+ backroom_backstabber_ger:0 "Backroom Backstabber"
+ propaganda_expert_ger:0 "Propaganda Expert"
  armaments_organizer2:0 "Armaments Organizer"
  armaments_organizer3:0 "Armaments Organizer"
  eva_braun_trait:0 "First Lady"
@@ -1674,7 +1688,7 @@
  GER_LIB_front_war_logistics_desc:0 ""
  GER_TUR_Grant_Claims:0 "Grant Turkish Claims"
  GER_TUR_Grant_Claims_desc:0 ""
- GER_request_qingdao:0 "Request Qingdao"
+ GER_request_qingdao:0 "Demand Qingdao"
  GER_request_qingdao_desc:0 ""
  GER_naval_intel_cooperation:0 "German - Japan Naval Intel Cooperation"
  GER_naval_intel_cooperation_desc:0 ""

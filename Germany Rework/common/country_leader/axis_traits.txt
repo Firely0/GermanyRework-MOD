@@ -318,6 +318,36 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	smooth_talking_charmer_ger  = {
+		random = no
+		sprite = 13
+		improve_relations_maintain_cost_factor = -0.5
+		trade_opinion_factor = 0.10
+		opinion_gain_monthly_same_ideology_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	backroom_backstabber_ger = {
+		sprite = 13
+		justify_war_goal_time = -0.1
+		subversive_activites_upkeep = -0.25
+		drift_defence_factor = 0.25
+
+		ai_will_do = {
+			factor = 0.25
+		}
+	}
+	propaganda_expert_ger = {
+		sprite = 13
+		offensive_war_stability_factor = 0.15
+		war_support_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	armaments_organizer2 = {
 		random = no
 		sprite = 10

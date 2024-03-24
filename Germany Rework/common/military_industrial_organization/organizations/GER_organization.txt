@@ -203,25 +203,6 @@ GER_man_organization = {
 	}
 }
 
-GER_Krupp_tank_organization = {
-	include = generic_krupp_tank_organization
-	icon = GFX_idea_krupp_tank_gfx
-	
-	allowed = {	
-		tag = GER 
-	}
-	
-	available = {
-		FROM = {
-			custom_trigger_tooltip = {
-				tooltip = krupp_used_tt
-				krupp_used = yes
-			}
-			has_completed_focus = GER_krupp_eco_focus
-		}
-	}
-}
-
 GER_Mercedes_benz_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_Mercedes_tank
@@ -294,6 +275,25 @@ GER_Mercedes_benz_organization = {
 		}
 	}
 
+}
+
+GER_Krupp_tank_organization = {
+	include = generic_krupp_tank_organization
+	icon = GFX_idea_krupp_tank_gfx
+	
+	allowed = {	
+		tag = GER 
+	}
+	
+	available = {
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = krupp_used_tt
+				krupp_used = yes
+			}
+			has_completed_focus = GER_krupp_eco_focus
+		}
+	}
 }
 
 GER_Volkswagen_organization = {
