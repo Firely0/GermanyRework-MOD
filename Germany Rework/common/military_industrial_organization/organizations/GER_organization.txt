@@ -208,7 +208,32 @@ GER_Mercedes_benz_organization = {
 	icon = GFX_idea_Mercedes_tank
 	
 	allowed = {	
-		tag = GER 
+		OR = {
+			tag = GER 
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+	}
+
+	available = {
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+		IF = {
+			limit = {
+				FROM = {
+					original_tag = BRA
+				}
+			}
+			FROM = {
+				has_completed_focus = BRA_german_tanks
+			}
+		}
 	}
 
 	tree_header_text = {

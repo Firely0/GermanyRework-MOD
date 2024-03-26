@@ -231,3 +231,96 @@ GER_four_year_plan_available = {
 	}
 }
 
+is_literally_japan = {
+	OR = {
+		original_tag = JAP
+		original_tag = MAN
+		original_tag = MEN
+	}
+}
+
+any_state_is_norwegen = {
+	NOT = { NOR = { is_puppet_of = GER } }
+	any_controlled_state = {
+		OR = {
+			is_core_of = NOR
+			is_owned_by = NOR
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_niederlande = {
+	NOT = { HOL = { is_puppet_of = GER } } 
+	any_controlled_state = {
+		OR = {
+			is_core_of = HOL
+			is_owned_by = HOL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_belgien_nordfrankreich_states = {
+	NOT = { BEL = { is_puppet_of = GER } }
+	any_controlled_state = {
+		OR = {
+			is_core_of = BEL
+			is_owned_by = BEL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_poland = {
+	NOT = { RGV = { is_puppet_of = GER } }
+	any_controlled_state = {
+		OR = {
+			is_core_of = POL
+			is_owned_by = POL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_ostland = {
+	NOT = { BLR = { is_puppet_of = GER } }
+	OR = {
+		any_controlled_state = {
+			has_state_flag = SS_Country_Core_State
+		}
+	}
+}
+
+any_state_is_UKR = {
+	NOT = { UKR = { is_puppet_of = GER } }
+	any_controlled_state = {
+		is_core_of = UKR
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_moscow = {
+	NOT = { RMK = { is_puppet_of = GER } }
+	any_controlled_state = {
+		is_core_of = RMK
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_caucasus = {
+	NOT = { RKS = { is_puppet_of = GER } }
+	any_controlled_state = {
+		is_core_of = RKS
+		NOT = { is_core_of = GER }
+	}
+}
+
+any_state_is_turkestan = {
+	NOT = { RTK = { is_puppet_of = GER } }
+	any_controlled_state = {
+		is_core_of = RTK
+		NOT = { is_core_of = GER }
+	}
+}
+

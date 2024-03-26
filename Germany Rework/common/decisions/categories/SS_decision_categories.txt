@@ -19,6 +19,7 @@ GER_reichskommissariats = {
 
 SS_recruitment = {
 	icon = GFX_decision_category_ger_reichskommissariats
+	scripted_gui = ss_ui
 	priority = 24
 	visible_when_empty = yes
 	

@@ -52,6 +52,7 @@
 
  #Game Rules
 
+ RULE_VOLUNTEERS_Germany_TT:0 "§RGermany cannot send Volunteers to a [From.Getname] faction that it does not support.§!"
  GERMANY_REWORK_TEST:0 "TESTING - CONFIG"
  GERMANY_REWORK_TEST_ITALY_AI:0 "Germany Rework - Italy Test AI Config"
  RULE_OPTION_GERMANY_REWORK_TEST_ITALY_AI_OFF:0 "Expert Config - Disabled"
@@ -227,7 +228,7 @@
  transfer_state_to_MLA:0 "Transfer Lands"
  sent_rommel_to_mla:0 "Sent Erwin Rommel to Mittelafrica"
  recall_rommel_to_ger:0 "Recall Erwin Rommel from Mittelafrica"
- GER_SENT_ROMMEL_MLA:0 "Serving in Mittelafrica"
+ GER_SENT_ROMMEL_MLA:0 "Serving in @MLAMittelafrica"
 
  GER_Africa_Operations:0 "Africa Korps: Africa Operations"
  GER_Africa_Operations_desc:0 "Africa Korps' HQ in Libya is an important location for our future operations, and we will have to rely on Italy's navy in the Central Mediterranean to provide equipment and reinforcements on a regular basis."
@@ -348,8 +349,8 @@
  SPM_autonomy_loyal_state:0 "Kingdom of Sardinia"
  OCC_autonomy_loyal_state:0 "Duchy of Savoy"
 
- #Recall Advisors
- GER_recall_generals_advisors:0 "Recall Generals or Advisors"
+ #Recall Generals
+ GER_recall_generals_advisors:0 "Recall Generals"
 
  #Vanilla Reminder
  GER_vanilla_look:0 "Visual Preference"
@@ -816,6 +817,7 @@
  GER_Wilhelm_II_back_tt:0 "Wilhelm II Returns to Germany."
  GER_Fuhrer_Deposed_tt:0 "Wilhelm II Takes Control of Country, And Balance of Power Ends."
 
+ USA_fritz_kuhn:0 "Fritz Kuhn on Active Service"
  GER_CAN_RISE_VOLKSSTURM:0 "Can Raise Volkssturm Units"
  GER_Fin_help_y:0 "Finland Accepted our Help"
  GER_Swe_Trade:0 "Sweden Renewed our Trade Pact"

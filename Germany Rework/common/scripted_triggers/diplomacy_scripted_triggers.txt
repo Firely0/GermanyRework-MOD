@@ -1161,7 +1161,7 @@ DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
 		}
 	}
 }
- DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
+DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
 	if = {
 		limit = {
 			has_game_rule = {
@@ -1524,16 +1524,77 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				}
 			}
 		}
-		#else_if = { #Can only send Volunteers to Ethiopia while having the National Spirit to do so)
-		#	limit = {
-		#		has_dlc = "By Blood Alone"
-		#		has_idea = ETH_support_for_ethiopia_idea
-		#	}
-		#	custom_trigger_tooltip = {
-		#		tooltip = RULE_VOLUNTEERS_ETHIOPIA_ONLY_ONE_TT
-		#		FROM = { tag = ETH } 
-		#	}
-		#}
+		else_if = { #German volunteers in Japan with Japan Focus
+			limit = {
+				tag = GER
+				has_government = fascism
+				has_completed_focus = GER_japan_friend
+				FROM = { is_literally_china = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = RULE_VOLUNTEERS_Germany_TT
+				NOT = {
+					FROM = {
+						is_literally_china = yes
+					}
+				}
+			}
+		}		
+		else_if = { #German volunteers in China without Japan Focus
+			limit = {
+				original_tag = GER
+				has_government = fascism
+				FROM = { is_literally_japan = yes }
+				NOT = { has_completed_focus = GER_japan_friend }
+			}
+			custom_trigger_tooltip = {
+				tooltip = RULE_VOLUNTEERS_Germany_TT
+				NOT = {
+					FROM = {
+						is_literally_japan = yes
+					}
+				}
+			}
+		}		
+		else_if = { #German volunteers in SCW (with La Resistance)
+			limit = {
+				tag = GER
+				has_government = fascism
+				has_dlc = "La Resistance"
+				FROM = { original_tag = SPR }
+				NOT = { has_global_flag = scw_over }
+			}
+			custom_trigger_tooltip = {
+				tooltip = RULE_VOLUNTEERS_Germany_TT
+				NOT = {
+					AND = {
+						FROM = { NOT = { tag = SPA } }
+					}
+				}
+			}
+		}
+		else_if = { #German volunteers in SCW (without La Resistance)
+			limit = {
+				tag = GER
+				NOT = { has_dlc = "La Resistance" }
+				FROM = { original_tag = SPR }	
+				any_country = {
+					original_tag = SPR
+					has_civil_war = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = RULE_VOLUNTEERS_Germany_TT
+				NOT = {
+					AND = {
+						FROM = {
+							NOT = { has_government = fascism }
+							NOT = { has_government = neutrality }
+						}
+					}
+				}
+			}
+		}					
 		else = {
 			always = yes
 		}
@@ -1563,7 +1624,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				FROM = {
 					tag = SPC
 					has_completed_focus = SPR_regional_defense_council_of_aragon
-	}
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_NOT_ANARCHISTS_TT

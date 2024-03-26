@@ -17,7 +17,7 @@ shared_focus = {
 	id = GER_west_wall
 	icon = GFX_goal_generic_construct_military
 	search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
-	x = -30
+	x = -29
 	y = 9
 	cost = 5
 	ai_will_do = {
@@ -1155,11 +1155,11 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		effect_tooltip = {
-			custom_effect_tooltip = GER_autobahn_tt
 			swap_ideas = {
 				remove_idea = Four_Year_Plan_1
 				add_idea = Four_Year_Plan_2
 			}
+			custom_effect_tooltip = GER_autobahn_tt
 		}
 		hidden_effect = {
 			if = {
@@ -2263,6 +2263,26 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_extra_tech_slot_a
+	icon = GFX_focus_research
+	text = extra_tech_slot
+	prerequisite = { focus = GER_kdf_wagen_a }
+	x = 0
+	y = 1
+	relative_position_id = GER_kdf_wagen_a
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+
+shared_focus = {
 	id = GER_extra_build_slot
 	icon = GFX_goal_r56_goal_generic_bills
 	prerequisite = { focus = GER_extra_tech_slot_a }
@@ -2289,26 +2309,6 @@ shared_focus = {
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 1
 		}
-	}
-}
-
-shared_focus = {
-	id = GER_extra_tech_slot_a
-	icon = GFX_focus_research
-	text = extra_tech_slot
-	prerequisite = { focus = GER_kdf_wagen_a }
-	x = 0
-	y = 1
-	relative_position_id = GER_kdf_wagen_a
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
-	completion_reward = {
-		add_research_slot = 1
 	}
 }
 
@@ -2378,724 +2378,30 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = GER_Finish_COPY
-	text = GER_Finish
-	icon = GFX_goal_endoffouryearplan
-	allow_branch = { has_global_flag = GER_END_OF_FOUR_YEAR_PLAN_FLAG }
-	x = -18
+	id = GER_Hide_Arms_Industrialization
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	x = -10
 	y = 0
 	relative_position_id = GER_end_of_new_plan
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	complete_tooltip = {
-		custom_effect_tooltip = GER_END_OF_FOUR_YEAR_PLAN_tt
-		add_ideas = German_Eco_Plan_B
-		hidden_effect = {
-			complete_national_focus = GER_Finish_COPY
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-	}
-}
-
-shared_focus = {
-	id = GER_Finish_Civilian
-	icon = GFX_goal_generic_construct_civ_factory
-	prerequisite = { focus = GER_Finish_COPY }
-	x = 2
-	y = 1
-	relative_position_id = GER_Finish_COPY
 	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
-
 	available = {
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		random_state = {
-			limit = { is_fully_controlled_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_state = {
-			limit = { is_fully_controlled_by = GER }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Finish_Ins
-	icon = GFX_goal_generic_construct_infrastructure
-	prerequisite = { focus = GER_Finish_COPY }
-	x = -2
-	y = 1
-	relative_position_id = GER_Finish_COPY
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		random_owned_state = {
-			limit = {
-				infrastructure > 2
-				is_controlled_by = ROOT
-				is_core_of = ROOT
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 5
-				instant_build = yes
-			}
-		}
-		random_owned_state = {
-			limit = {
-				infrastructure > 2
-				is_controlled_by = ROOT
-				is_core_of = ROOT
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 5
-				instant_build = yes
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_A
-	icon = GFX_focus_generic_industry_1
-	prerequisite = { focus = GER_Finish_Ins }
-	prerequisite = {focus = GER_Finish_Civilian  }
-	mutually_exclusive = { focus = GER_Eco_Plan_B }
-	x = -4
-	y = 2
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		set_country_flag = GER_ECO_1
-		GER = {
+		effect_tooltip = {
 			swap_ideas = {
-				remove_idea = German_Eco_Plan_B
-				add_idea = German_Eco_Plan_A
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_A_Railroads
-	icon = GFX_goal_generic_construct_infrastructure
-	prerequisite = { focus = GER_Eco_Plan_A }
-	x = -2
-	y = 1
-	relative_position_id = GER_Eco_Plan_A
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_Supply
-				}
+				remove_idea = Four_Year_Plan_1
+				add_idea = Four_Year_Plan_1_Hide_ARMS
 			}
 		}
 		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_B_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C
-					add_idea = German_Eco_Plan_A_C_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL
-					add_idea = German_Eco_Plan_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL
-					add_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C_OIL
-					add_idea = German_Eco_Plan_A_C_OIL_Supply
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_A_Main_A
-	icon = GFX_focus_generic_industry_2
-	prerequisite = { focus = GER_Eco_Plan_A }
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 0
-	y = 3
-	relative_position_id = GER_Eco_Plan_A
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		has_country_flag =  {
-			flag = GER_ECO_1
-			days > 140
-		}
-		custom_trigger_tooltip = {
-			tooltip = GER_ECO_1_tt
-			has_country_flag = {
-				flag = GER_ECO_1
-				days > 140
-			}
-		}
-	}
-
-	available_if_capitulated = yes
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_A_B
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_A_B
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL
-					add_idea = German_Eco_Plan_A_B_OIL
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_Supply
-					add_idea = German_Eco_Plan_A_B_Supply
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_OIL_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_OIL_Supply
-					add_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_A_Main_B
-	icon = GFX_focus_generic_industry_3
-	prerequisite = { focus = GER_Eco_Plan_A_Main_A }
-	x = 0
-	y = 6
-	relative_position_id = GER_Eco_Plan_A
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		has_country_flag =  {
-			flag = GER_ECO_1
-			days > 140
-		}
-		custom_trigger_tooltip = {
-			tooltip = GER_ECO_1_tt
-			has_country_flag = {
-				flag = GER_ECO_1
-				days > 140
-			}
-		}
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_C
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_C
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL
-					add_idea = German_Eco_Plan_A_C_OIL
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_Supply
-					add_idea = German_Eco_Plan_A_C_Supply
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_OIL_Supply
-					add_idea = German_Eco_Plan_A_C_OIL_Supply
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_B
-	icon = GFX_focus_generic_combined_arms
-	prerequisite = { focus = GER_Finish_Ins }
-	prerequisite = {focus = GER_Finish_Civilian  }
-	mutually_exclusive = { focus = GER_Eco_Plan_A }
-	x = 4
-	y = 2
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		set_country_flag = GER_ECO_1
-		GER = {
-			swap_ideas = {
-				remove_idea = German_Eco_Plan_B
-				add_idea = German_Eco_Plan_B_A
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_B_Main_A
-	icon = GFX_goal_generic_production2
-	prerequisite = { focus = GER_Eco_Plan_B }
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 4
-	y = 5
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		has_country_flag =  {
-			flag = GER_ECO_1
-			days > 140
-		}
-		custom_trigger_tooltip = {
-			tooltip = GER_ECO_1_tt
-			has_country_flag = {
-				flag = GER_ECO_1
-				days > 140
-			}
-		}
-	}
-
-	available_if_capitulated = yes
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A
-					add_idea = German_Eco_Plan_B_B
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A
-					add_idea = German_Eco_Plan_B_B
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_A_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A_OIL
-					add_idea = German_Eco_Plan_B_B_OIL
-				}
-				clr_country_flag = GER_ECO_1
-				set_country_flag = GER_ECO_1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_B_Main_B
-	icon = GFX_goal_Focus_Military_Mobilisation
-	prerequisite = { focus = GER_Eco_Plan_B_Main_A }
-	x = 4
-	y = 8
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		has_country_flag =  {
-			flag = GER_ECO_1
-			days > 140
-		}
-		custom_trigger_tooltip = {
-			tooltip = GER_ECO_1_tt
-			has_country_flag = {
-				flag = GER_ECO_1
-				days > 140
-			}
-		}
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B
-					add_idea = German_Eco_Plan_B_C
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B
-					add_idea = German_Eco_Plan_B_C
-				}
-				clr_country_flag = GER_ECO_1
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_B_OIL
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B_OIL
-					add_idea = German_Eco_Plan_B_C_OIL
-				}
-				clr_country_flag = GER_ECO_1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_Side_1
-	text = extra_tech_slot
-	icon = GFX_focus_research
-	prerequisite = { focus = GER_Eco_Plan_B focus = GER_Eco_Plan_A }
-	x = 0
-	y = 3
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
-	completion_reward = {
-		add_research_slot = 1
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_Side_2
-	icon = GFX_goal_generic_oil_refinery
-	prerequisite = { focus = GER_Eco_Plan_Side_1 }
-	x = -1
-	y = 4
-	relative_position_id = GER_Finish_COPY
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			GER = {
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_OIL
-				}
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A
-					add_idea = German_Eco_Plan_OIL
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B
-					add_idea = German_Eco_Plan_A_B_OIL
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C
-					add_idea = German_Eco_Plan_A_C_OIL
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_Supply
-					add_idea = German_Eco_Plan_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_B_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_B_Supply
-					add_idea = German_Eco_Plan_A_B_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_A_C_Supply
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_A_C_Supply
-					add_idea = German_Eco_Plan_A_C_OIL_Supply
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_A
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_A
-					add_idea = German_Eco_Plan_B_A_OIL
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_B
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_B
-					add_idea = German_Eco_Plan_B_B_OIL
-				}
-			}
-			if = {
-				limit = {
-					has_idea = German_Eco_Plan_B_C
-				}
-				swap_ideas = {
-					remove_idea = German_Eco_Plan_B_C
-					add_idea = German_Eco_Plan_B_C_OIL
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_Side_3
-	icon = GFX_goal_generic_oil_refinery
-	prerequisite = { focus = GER_Eco_Plan_Side_1 }
-	x = 1
-	y = 4
-	relative_position_id = GER_Finish_COPY
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		64 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = synthetic_refinery
-				level = 3
-				instant_build = yes
-			}
+			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
+			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
 		}
 	}
 }
@@ -3467,58 +2773,6 @@ shared_focus = {
 					}
 				}
 			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_Eco_Plan_Main
-	icon = GFX_goal_endoffouryearplan
-	prerequisite = { focus = GER_Eco_Plan_B_Main_B focus = GER_Eco_Plan_A_Main_B }
-	text = GER_Working_on
-	x = 0
-	y = 10
-	relative_position_id = GER_Finish_COPY
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-		always = no
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-	}
-}
-
-shared_focus = {
-	id = GER_Hide_Arms_Industrialization
-	icon = GFX_focus_renounce_the_treaty_of_trianon
-	x = -10
-	y = 0
-	relative_position_id = GER_end_of_new_plan
-	cost = 5
-	ai_will_do = {
-		factor = 1
-	}
-	available = {
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = Four_Year_Plan_1
-				add_idea = Four_Year_Plan_1_Hide_ARMS
-			}
-		}
-		hidden_effect = {
-			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
-			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
 		}
 	}
 }

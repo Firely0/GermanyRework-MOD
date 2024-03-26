@@ -6030,7 +6030,7 @@ country_event = {
 			92 = {
 				clr_state_flag = mr_pact_sov_reserved_state
 				clr_state_flag = mr_pact_sov_reserved_state_special
-				clr_country_flag = mr_pact_sov_reserved_state_unnegotiable
+				clr_state_flag = mr_pact_sov_reserved_state_unnegotiable
 				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
@@ -7387,7 +7387,7 @@ country_event = {
 			92 = {
 				clr_state_flag = mr_pact_sov_reserved_state
 				clr_state_flag = mr_pact_sov_reserved_state_special
-				clr_country_flag = mr_pact_sov_reserved_state_unnegotiable
+				clr_state_flag = mr_pact_sov_reserved_state_unnegotiable
 				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1

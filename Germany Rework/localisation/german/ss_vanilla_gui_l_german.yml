@@ -1,0 +1,7 @@
+﻿l_german:
+ SS_recruitment_desc:0 ""
+ nazi_recruitment_desc:1 "Die SS unter Himmler glaubt, dass sie für die Rekrutierung ausländischer Freiwilliger für den Kampf gegen den weltweiten Bolschewismus verantwortlich sein sollte. Die Wehrmacht lehnt das strikt ab und duldet keine parallele Befehlsstruktur. Es könnte schwere Konsequenzen haben, wenn eine der beiden Seiten zu stark unter Druck gesetzt wird."
+ ss_loyalty_output_text:0 "[?GER.SS_anger|-0]"
+ ss_loyalty_tooltip:0 "Aktuelle §YStimmung§! in der £ss_texticon SS-Führung: [Root.GetSSAngerLevel]"
+ heer_loyalty_tooltip:0 "Aktuelle §YStimmung§! im £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel]"
+ heer_loyalty_output_text:0 "[?GER.wehrmacht_anger|-0]"

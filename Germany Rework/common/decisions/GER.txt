@@ -1,7 +1,8 @@
 GER_vanilla_look = {
+	
 	GER_vanilla_reminder = {
 
-		icon = GFX_decision_revolt
+		icon = GFX_decision_generic_political_discourse
 		priority = 100
 	
 		available = {
@@ -12,12 +13,14 @@ GER_vanilla_look = {
 		days_mission_timeout = 3
 		is_good = yes
 	
-	
 		visible = {
 			NOT = { has_global_flag = GER_END_OF_VANILLA_LOOK }
 		}
 	
 		complete_effect = {
+		}
+
+		timeout_effect = {
 			set_global_flag = GER_END_OF_VANILLA_LOOK
 		}
 	}
@@ -5294,34 +5297,31 @@ foreign_politics = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = recall_generals_with_war_with_us
-				OR = {
-					AND = {
-						TUR = { 
-							has_completed_focus = TUR_invite_german_officers_to_izmir
-							OR = {
-								has_war_with = ROOT
-								has_wargoal_against = ROOT
-							}
+			OR = {
+				AND = {
+					TUR = { 
+						has_completed_focus = TUR_invite_german_officers_to_izmir
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
 						}
 					}
-					AND = {
-						USA = {
-							has_country_flag = USA_fritz_kuhn
-							OR = {
-								has_war_with = ROOT
-								has_wargoal_against = ROOT
-							}
+				}
+				AND = {
+					USA = {
+						has_country_flag = USA_fritz_kuhn
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
 						}
 					}
-					AND = {
-						SPA = {
-							has_completed_focus = SPA_the_condor_legion
-							OR = {
-								has_war_with = ROOT
-								has_wargoal_against = ROOT
-							}
+				}
+				AND = {
+					SPA = {
+						has_completed_focus = SPA_the_condor_legion
+						OR = {
+							has_war_with = ROOT
+							has_wargoal_against = ROOT
 						}
 					}
 				}
@@ -5348,8 +5348,12 @@ foreign_politics = {
 						}
 					}
 				}
-				GER_hans_von_luck = {
-					set_nationality = GER
+				every_possible_country = {
+					limit = { has_character = GER_hans_von_luck }
+					random_character = {
+						limit = { is_character = GER_hans_von_luck }
+						set_nationality = GER
+					}
 				}
 				TUR = {
 					remove_advisor_role = {
@@ -5379,10 +5383,14 @@ foreign_politics = {
 							NOT = { has_completed_focus = SPA_the_condor_legion }
 						}
 					}
-					GER_wilhelm_ritter_von_thoma = {
-						set_nationality = GER
+					every_possible_country = {
+						limit = { has_character = GER_wilhelm_ritter_von_thoma }
+						random_character = {
+							limit = { is_character = GER_wilhelm_ritter_von_thoma }
+							set_nationality = GER
+						}
 					}
-					TUR = {
+					SPA = {
 						remove_advisor_role = {
 							character = GER_wilhelm_ritter_von_thoma
 							slot = theorist
@@ -5416,8 +5424,12 @@ foreign_politics = {
 						}
 					}
 				}
-				USA_fritz_kuhn = {
-					set_nationality = GER
+				every_possible_country = {
+					limit = { has_character = USA_fritz_kuhn }
+					random_character = {
+						limit = { is_character = USA_fritz_kuhn }
+						set_nationality = GER
+					}
 				}
 				USA = {
 					remove_advisor_role = {
@@ -5452,12 +5464,18 @@ foreign_politics = {
 						}
 					}
 				}
-				SPA_wilhelm_ritter_von_thoma = {
-					set_nationality = GER
+				every_possible_country = {
+					limit = { has_character = SPA_wilhelm_ritter_von_thoma }
+					random_character = {
+						limit = { is_character = SPA_wilhelm_ritter_von_thoma }
+						set_nationality = GER
+					}
 				}
-				remove_advisor_role = {
-					character = SPA_wilhelm_ritter_von_thoma
-					slot = high_command
+				SPA = {
+					remove_advisor_role = {
+						character = SPA_wilhelm_ritter_von_thoma
+						slot = high_command
+					}	
 				}
 			}
 		}

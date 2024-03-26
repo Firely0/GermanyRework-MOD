@@ -2036,11 +2036,10 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			every_other_country = {
-				limit = {
-					has_character = CHI_alexander_von_falkenhausen
-				}
-				CHI_alexander_von_falkenhausen = {
+			every_possible_country = {
+				limit = { has_character = CHI_alexander_von_falkenhausen }
+				random_character = {
+					limit = { is_character = CHI_alexander_von_falkenhausen }
 					set_nationality = GER
 				}
 			}

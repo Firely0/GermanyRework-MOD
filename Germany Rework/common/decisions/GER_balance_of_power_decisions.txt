@@ -605,6 +605,12 @@ GER_balance_of_power_category = {
 		priority = 90
 		icon = GFX_decision_ger_test_loyalty
 
+		available = {
+			check_variable = {
+				wehrmacht_anger < 10
+			}
+		}
+
 		allowed = {
 			original_tag = GER
 		}
@@ -634,6 +640,12 @@ GER_balance_of_power_category = {
 	GER_very_low_decrease_effect_2 = { #SS Loyalty
 		priority = 88
 		icon = GFX_decision_ger_ss_test_loyalty
+
+		available = {
+			check_variable = {
+				ss_anger < 10
+			}
+		}
 
 		allowed = {
 			original_tag = GER

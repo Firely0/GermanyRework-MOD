@@ -122,18 +122,7 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_completed_focus = GER_SS_A
-			has_government = fascism
-			controls_state = 110
-			controls_state = 142
-			controls_state = 143
-			controls_state = 144
-			controls_state = 920
-			controls_state = 921
-			controls_state = 922
-			controls_state = 923
-			controls_state = 924
-			controls_state = 925
+			any_state_is_norwegen = yes
 		}
 
 		cost = 0
@@ -157,17 +146,15 @@ GER_reichskommissariats = {
 					NOT = { NOR = { has_government = fascism } }
 				}
 				hidden_effect = {
-					NOR = {
-						set_state_controller = 110
-						set_state_controller = 142
-						set_state_controller = 143
-						set_state_controller = 144
-						set_state_controller = 920
-						set_state_controller = 921
-						set_state_controller = 922
-						set_state_controller = 923
-						set_state_controller = 924
-						set_state_controller = 925
+					every_state = {
+						limit = {
+							AND = {
+								is_owned_by = NOR
+								is_controlled_by = GER
+								NOT = { is_core_of = GER }
+							}
+						}
+						set_state_controller_to = NOR
 					}
 				}
 				NOR = {
@@ -182,16 +169,6 @@ GER_reichskommissariats = {
 							original_tag = NOR
 							has_government = fascism
 						}
-						transfer_state = 110
-						transfer_state = 142
-						transfer_state = 143
-						transfer_state = 144
-						transfer_state = 920
-						transfer_state = 921
-						transfer_state = 922
-						transfer_state = 923
-						transfer_state = 924
-						transfer_state = 925
 						GER = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
@@ -212,16 +189,16 @@ GER_reichskommissariats = {
 			else = {
 				NOR = {
 					hidden_effect = {
-						transfer_state = 110
-						transfer_state = 142
-						transfer_state = 143
-						transfer_state = 144
-						transfer_state = 920
-						transfer_state = 921
-						transfer_state = 922
-						transfer_state = 923
-						transfer_state = 924
-						transfer_state = 925
+						every_state = {
+							limit = {
+								AND = {
+									is_owned_by = NOR
+									is_controlled_by = GER
+									NOT = { is_core_of = GER }
+								}
+							}
+							set_state_controller_to = NOR
+						}
 						set_cosmetic_tag = NOR_reichskommissariat
 						create_country_leader = {
 							name = "Josef Terboven"
@@ -244,11 +221,7 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_completed_focus = GER_SS_A
-			has_government = fascism
-			controls_state = 7
-			controls_state = 35
-			controls_state = 36
+			any_state_is_niederlande = yes
 		}
 
 		cost = 0
@@ -273,10 +246,15 @@ GER_reichskommissariats = {
 					NOT = { HOL = { has_government = fascism } }
 				}
 				hidden_effect = {
-					HOL = {
-						set_state_controller = 7
-						set_state_controller = 35
-						set_state_controller = 36
+					every_state = {
+						limit = {
+							AND = {
+								is_owned_by = HOL
+								is_controlled_by = GER
+								NOT = { is_core_of = GER }
+							}
+						}
+						transfer_state_to = HOL
 					}
 					HOL = {
 						start_civil_war = { ideology = fascism size = 1 }
@@ -298,9 +276,16 @@ GER_reichskommissariats = {
 							original_tag = HOL
 							has_government = fascism
 						}
-						transfer_state = 7
-						transfer_state = 35
-						transfer_state = 36
+						every_state = {
+							limit = {
+								AND = {
+									is_owned_by = HOL
+									is_controlled_by = GER
+									NOT = { is_core_of = GER }
+								}
+							}
+							transfer_state_to = HOL
+						}
 						set_cosmetic_tag = HOL_reichskommissariat
 						create_country_leader = {
 							name = "Arthur Seyss-Inquart"
@@ -317,9 +302,16 @@ GER_reichskommissariats = {
 			else = {
 				HOL = {
 					hidden_effect = {
-						transfer_state = 7
-						transfer_state = 35
-						transfer_state = 36
+						every_state = {
+							limit = {
+								AND = {
+									is_owned_by = HOL
+									is_controlled_by = GER
+									NOT = { is_core_of = GER }
+								}
+							}
+							transfer_state_to = HOL
+						}
 						set_cosmetic_tag = HOL_reichskommissariat
 						create_country_leader = {
 							name = "Arthur Seyss-Inquart"
@@ -342,11 +334,7 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_completed_focus = GER_SS_A
-			has_government = fascism
-			controls_state = 6
-			controls_state = 29
-			controls_state = 34
+			any_state_is_belgien_nordfrankreich_states = yes
 		}
 
 		cost = 0
@@ -371,9 +359,22 @@ GER_reichskommissariats = {
 					NOT = { BEL = { has_government = fascism } }
 				}
 				hidden_effect = {
-					BEL = {
-						set_state_controller = 6
-						set_state_controller = 34
+					every_state = {
+						limit = {
+							AND = {
+								is_owned_by = BEL
+								is_controlled_by = GER
+								NOT = { is_core_of = GER }
+							}
+						}
+						transfer_state_to = BEL
+					}
+					if = {
+						limit = {
+							29 = { is_controlled_by = GER }
+						}
+						29 = { transfer_state_to = BEL }
+						BEL = { add_state_core = 29 }
 					}
 					BEL = {
 						start_civil_war = { ideology = fascism size = 1 }
@@ -395,9 +396,23 @@ GER_reichskommissariats = {
 							original_tag = BEL
 							has_government = fascism
 						}
-						transfer_state = 6
-						transfer_state = 29
-						transfer_state = 34
+						every_state = {
+							limit = {
+								AND = {
+									is_owned_by = BEL
+									is_controlled_by = GER
+									NOT = { is_core_of = GER }
+								}
+							}
+							transfer_state_to = BEL
+						}
+						if = {
+							limit = {
+								29 = { is_controlled_by = GER }
+							}
+							29 = { transfer_state_to = BEL }
+							BEL = { add_state_core = 29 }
+						}
 						set_cosmetic_tag = BEL_reichskommissariat
 						create_country_leader = {
 							name = "Josef Grohe"
@@ -417,9 +432,23 @@ GER_reichskommissariats = {
 			else = {
 				BEL = {
 					hidden_effect = {
-						transfer_state = 6
-						transfer_state = 29
-						transfer_state = 34
+						every_state = {
+							limit = {
+								AND = {
+									is_owned_by = BEL
+									is_controlled_by = GER
+									NOT = { is_core_of = GER }
+								}
+							}
+							transfer_state_to = BEL
+						}
+						if = {
+							limit = {
+								29 = { is_controlled_by = GER }
+							}
+							29 = { transfer_state_to = BEL }
+							BEL = { add_state_core = 29 }
+						}
 						set_cosmetic_tag = BEL_reichskommissariat
 						create_country_leader = {
 							name = "Josef Grohe"
@@ -443,12 +472,7 @@ GER_reichskommissariats = {
 		cost = 0
 
 		available = {
-			has_government = fascism
-			controls_state = 10
-			controls_state = 87 
-			controls_state = 88
-			controls_state = 90
-			controls_state = 98
+			any_state_is_poland = yes
 		}
 
 		ai_will_do = {
@@ -471,17 +495,13 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						OR = {
-							state = 10
-							state = 87
-							state = 88
-							state = 90
-							state = 98
+						AND = {
+							is_owned_by = POL
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 					}
-					RGV = {
-						transfer_state = PREV
-					}
+					transfer_state_to = RGV
 					add_compliance = 0.15
 				}
 				if = {
@@ -516,7 +536,6 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_government = fascism
 			controls_state = 9
 			controls_state = 75
 		}
@@ -569,32 +588,7 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_completed_focus = GER_Belarus
-			has_government = fascism
-			controls_state = 206
-			controls_state = 241
-			controls_state = 97
-			controls_state = 94
-			controls_state = 95
-			controls_state = 96
-			controls_state = 194
-			controls_state = 204
-			controls_state = 207
-			controls_state = 11
-			controls_state = 784
-			controls_state = 189
-			controls_state = 12
-			controls_state = 190
-			controls_state = 13
-			controls_state = 191
-			controls_state = 814
-			controls_state = 815
-			controls_state = 809
-			controls_state = 808
-			controls_state = 810
-			controls_state = 813
-			controls_state = 812
-			controls_state = 811
+			any_state_is_ostland = yes
 		}
 
 		cost = 0
@@ -615,63 +609,26 @@ GER_reichskommissariats = {
 		complete_effect = {
 			hidden_effect = {
 				release_on_controlled = BLR
-				SOV = { add_core_of = BLR }
 				every_state = {
 					limit = {
 						is_core_of = BLR
 					}
+					add_core_of = SOV
 					remove_core_of = BLR
 				}
 				BLR = {
 					every_state = {
 						limit = {
-							OR = {
-								state = 11
-								state = 189
-								state = 12
-								state = 190
-								state = 13
-								state = 191
-								state = 784
-								state = 97
-								state = 814
-								state = 815
-								state = 809
-								state = 808
-								state = 810
-								state = 813
-								state = 812
-								state = 811
-								state = 206
-								state = 241
-								state = 97
-								state = 94
-								state = 95
-								state = 96
-								state = 194
-								state = 204
-								state = 207
-								state = 11
-								state = 784
-								state = 189
-								state = 12
-								state = 190
-								state = 13
-								state = 191
-								state = 814
-								state = 815
-								state = 809
-								state = 808
-								state = 810
-								state = 813
-								state = 812
-								state = 811
-							}
+							has_state_flag = SS_Country_Core_State
 						}
 						clr_state_flag = GER_Claim_lands
 						transfer_state_to = BLR
-						add_compliance = 15
-						set_state_flag = SS_Country_Core_State
+					}
+					every_state = {
+						limit = {
+							is_core_of = BLR
+						}
+						remove_core_of = BLR
 					}
 					add_ideas = reds_in_resistance_1
 					set_variable = { SS_consumer_goods_factor = 0.1 }
@@ -690,12 +647,6 @@ GER_reichskommissariats = {
 					set_variable = { SS_BLR_defance_factor = -0.1 }
 					add_dynamic_modifier = { modifier = SS_BLR_Army_dynamic_modifier }
 					add_ideas = Block_WAR_ECO
-					every_state = {
-						limit = {
-							is_core_of = BLR
-						}
-						remove_core_of = BLR
-					}
 				}
 			}
 			GER = {
@@ -767,28 +718,7 @@ GER_reichskommissariats = {
 		icon = ger_reichskommissariats
 
 		available = {
-			has_completed_focus = GER_Ukraine
-			has_government = fascism
-			controls_state = 226
-			controls_state = 202
-			controls_state = 93
-			controls_state = 91
-			controls_state = 89
-			controls_state = 199
-			controls_state = 201
-			controls_state = 198
-			controls_state = 193
-			controls_state = 192
-			controls_state = 203
-			controls_state = 197
-			controls_state = 225
-			controls_state = 259
-			controls_state = 196
-			controls_state = 200
-			controls_state = 221
-			controls_state = 228
-			controls_state = 227
-			controls_state = 834
+			any_state_is_UKR = yes
 		}
 
 		cost = 0
@@ -805,11 +735,11 @@ GER_reichskommissariats = {
 		complete_effect = {
 			hidden_effect = {
 				release_on_controlled = UKR
-				SOV = { add_core_of = UKR }
 				every_state = {
 					limit = {
 						is_core_of = UKR
 					}
+					add_core_of = SOV
 					set_state_flag = SS_Country_Core_State_2
 					remove_core_of = UKR
 				}
@@ -817,31 +747,10 @@ GER_reichskommissariats = {
 					every_state = {
 						limit = {
 							OR = {
-								state = 226
-								state = 202
-								state = 93
-								state = 91
-								state = 89
-								state = 199
-								state = 201
-								state = 198
-								state = 193
-								state = 192
-								state = 203
-								state = 197
-								state = 225
-								state = 259
-								state = 196
-								state = 200
-								state = 221
-								state = 228
-								state = 227
-								state = 834
+								has_state_flag = SS_Country_Core_State_2
 							}
 						}
-						set_state_flag = SS_Country_Core_State_2
 						clr_state_flag = GER_Claim_lands
-						add_compliance = 15
 					}
 					add_ideas = reds_in_resistance
 					add_ideas = a_hope_in_independence
@@ -950,16 +859,6 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					137 = {
-						is_controlled_by = ROOT
-					}
-				}
-				137 = {
-					transfer_state_to = UKR
-				}
-			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -972,6 +871,16 @@ GER_reichskommissariats = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					137 = {
+						is_controlled_by = ROOT
+					}
+				}
+				137 = {
+					transfer_state_to = UKR
+				}
+			}
 		}
 	}
 
@@ -980,34 +889,7 @@ GER_reichskommissariats = {
 		cost = 0
 
 		available = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
-			has_government = fascism
-			controls_state = 195
-			controls_state = 208
-			controls_state = 209
-			controls_state = 263
-			controls_state = 264
-			controls_state = 244
-			controls_state = 210
-			controls_state = 246
-			controls_state = 247
-			controls_state = 219
-			controls_state = 242
-			controls_state = 243
-			controls_state = 224
-			controls_state = 205
-			controls_state = 223
-			controls_state = 254
-			controls_state = 222
-			controls_state = 220
-			controls_state = 258
-			controls_state = 257
-			controls_state = 240
-			controls_state = 260
-			controls_state = 265
-			controls_state = 217
-			controls_state = 245
-			controls_state = 218
+			any_state_is_moscow = yes
 		}
 
 		ai_will_do = {
@@ -1025,43 +907,15 @@ GER_reichskommissariats = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							state = 195
-							state = 208
-							state = 209
-							state = 263
-							state = 210
-							state = 264
-							state = 244
-							state = 246
-							state = 247
-							state = 219
-							state = 242
-							state = 243
-							state = 224
-							state = 205
-							state = 223
-							state = 254
-							state = 222
-							state = 220
-							state = 258
-							state = 257
-							state = 240
-							state = 260
-							state = 265
-							state = 217
-							state = 245
-							state = 218
+						AND = {
+							is_core_of = RMK
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 					}
-					RMK = {
-						transfer_state = PREV
-						hidden_effect = {
-							add_state_core = PREV
-						}
-					}
-					RMK = { set_cosmetic_tag = RMK_reichskommissariat }
+					transfer_state_to = RMK
 				}
+				RMK = { set_cosmetic_tag = RMK_reichskommissariat }
 			}
 			set_autonomy = { target = RMK autonomy_state = autonomy_reichskommissariat}
 		}
@@ -1111,22 +965,7 @@ GER_reichskommissariats = {
 		cost = 0
 
 		available = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
-			has_government = fascism
-			controls_state = 238
-			controls_state = 237
-			controls_state = 236
-			controls_state = 234
-			controls_state = 235
-			controls_state = 232
-			controls_state = 233
-			controls_state = 827
-			controls_state = 826
-			controls_state = 828
-			controls_state = 821
-			controls_state = 231
-			controls_state = 229
-			controls_state = 230
+			any_state_is_caucasus = yes
 		}
 
 		ai_will_do = {
@@ -1144,31 +983,15 @@ GER_reichskommissariats = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							state = 238
-							state = 237
-							state = 236
-							state = 234
-							state = 235
-							state = 232
-							state = 233
-							state = 827
-							state = 826
-							state = 828
-							state = 821
-							state = 231
-							state = 229
-							state = 230
+						AND = {
+							is_core_of = RKS
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 					}
-					RKS = {
-						transfer_state = PREV
-						hidden_effect = {
-							add_state_core = PREV
-						}
-					}
-					RKS = { set_cosmetic_tag = RKS_reichskommissariat }
+					transfer_state_to = RKS
 				}
+				RKS = { set_cosmetic_tag = RKS_reichskommissariat }
 			}
 			set_autonomy = { target = RKS autonomy_state = autonomy_reichskommissariat}
 		}
@@ -1180,29 +1003,7 @@ GER_reichskommissariats = {
 		cost = 0
 
 		available = {
-			has_completed_focus = GER_Local_Police_force_in_soviet
-			has_government = fascism
-			controls_state = 407
-			controls_state = 406
-			controls_state = 402
-			controls_state = 583
-			controls_state = 590
-			controls_state = 882
-			controls_state = 588
-			controls_state = 589
-			controls_state = 587
-			controls_state = 881
-			controls_state = 404
-			controls_state = 586
-			controls_state = 732
-			controls_state = 742
-			controls_state = 405
-			controls_state = 830
-			controls_state = 585
-			controls_state = 823
-			controls_state = 831
-			controls_state = 832
-			controls_state = 584
+			any_state_is_turkestan = yes
 		}
 
 		ai_will_do = {
@@ -1220,38 +1021,15 @@ GER_reichskommissariats = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							state = 407
-							state = 406
-							state = 402
-							state = 583
-							state = 590
-							state = 882
-							state = 588
-							state = 589
-							state = 587
-							state = 881
-							state = 404
-							state = 586
-							state = 732
-							state = 742
-							state = 405
-							state = 830
-							state = 585
-							state = 823
-							state = 831
-							state = 832
-							state = 584
+						AND = {
+							is_core_of = RTK
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 					}
-					RTK = {
-						transfer_state = PREV
-						hidden_effect = {
-							add_state_core = PREV
-						}
-					}
-					RTK = { set_cosmetic_tag = RTK_reichskommissariat }
+					transfer_state_to = RTK
 				}
+				RTK = { set_cosmetic_tag = RTK_reichskommissariat }
 			}
 			set_autonomy = { target = RTK autonomy_state = autonomy_reichskommissariat}
 			hidden_effect = {
@@ -1926,47 +1704,6 @@ SS_recruitment = {
 
 SS_loot = {
 
-	GER_SS_Loot_Arms = {
-		priority = 100
-		icon = GFX_decision_ger_military_buildup
-
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			any_controlled_state= {
-				NOT = { is_core_of = ROOT }
-			}
-		}
-
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 100
-				stockpile_ratio = {
-					archetype = infantry_equipment
-					ratio > 0.1
-				}
-			}
-		}
-
-		cost = 50
-
-		days_re_enable = 365
-
-		complete_effect = {
-			custom_effect_tooltip = add_equipment_effect
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1500
-			}
-		}
-
-		visible = { has_completed_focus = GER_SS }
-
-	}
-
 	GER_SS_Take_Over_Arms = {
 		priority = 99
 		icon = GFX_decision_generic_factory
@@ -2037,7 +1774,7 @@ SS_loot = {
 
 		visible = { has_completed_focus = GER_SS }
 
-	}
+	}	
 
 	GER_SS_Loot_France = {
 		priority = 95
@@ -2167,6 +1904,47 @@ SS_loot = {
 		visible = { has_global_flag = ITA_GER_VICHY_ESTABLISHED  NOT = { has_global_flag = GER_destroyed_eiffel } }
 
 	}
+
+	GER_SS_Loot_Arms = {
+		priority = 100
+		icon = GFX_decision_ger_military_buildup
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			any_controlled_state= {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 0.1
+				}
+			}
+		}
+
+		cost = 50
+
+		days_re_enable = 365
+
+		complete_effect = {
+			custom_effect_tooltip = add_equipment_effect
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+			}
+		}
+
+		visible = { has_completed_focus = GER_SS }
+
+	}	
 
 	GER_SS_Destroy_eifel_tower = {
 		priority = 96
