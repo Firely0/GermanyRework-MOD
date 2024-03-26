@@ -10838,6 +10838,12 @@ focus_tree = {
 				}
 				every_state = {
 					limit = {
+						is_core_of = UKR
+					}
+					set_state_flag = SS_Country_Core_State_2
+				}
+				every_state = {
+					limit = {
 						OR = {
 							state = 195
 							state = 208

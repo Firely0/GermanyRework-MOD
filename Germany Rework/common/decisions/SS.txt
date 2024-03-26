@@ -161,6 +161,7 @@ GER_reichskommissariats = {
 					start_civil_war = {
 						ideology = fascism
 						size = 1
+						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
 					}
 				}
 				hidden_effect = {
@@ -199,6 +200,7 @@ GER_reichskommissariats = {
 							}
 							set_state_controller_to = NOR
 						}
+						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
 						set_cosmetic_tag = NOR_reichskommissariat
 						create_country_leader = {
 							name = "Josef Terboven"
@@ -257,7 +259,7 @@ GER_reichskommissariats = {
 						transfer_state_to = HOL
 					}
 					HOL = {
-						start_civil_war = { ideology = fascism size = 1 }
+						start_civil_war = { ideology = fascism size = 1 save_global_event_target_as = HOL_GER_PUPPET_MOD_side }
 					}
 				}
 				random_country = {
@@ -312,6 +314,7 @@ GER_reichskommissariats = {
 							}
 							transfer_state_to = HOL
 						}
+						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
 						set_cosmetic_tag = HOL_reichskommissariat
 						create_country_leader = {
 							name = "Arthur Seyss-Inquart"
@@ -377,7 +380,7 @@ GER_reichskommissariats = {
 						BEL = { add_state_core = 29 }
 					}
 					BEL = {
-						start_civil_war = { ideology = fascism size = 1 }
+						start_civil_war = { ideology = fascism size = 1 save_global_event_target_as = BEL_GER_PUPPET_MOD_side }
 					}
 				}
 				random_country = {
@@ -449,6 +452,7 @@ GER_reichskommissariats = {
 							29 = { transfer_state_to = BEL }
 							BEL = { add_state_core = 29 }
 						}
+						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
 						set_cosmetic_tag = BEL_reichskommissariat
 						create_country_leader = {
 							name = "Josef Grohe"
@@ -608,28 +612,21 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 			hidden_effect = {
-				release_on_controlled = BLR
 				every_state = {
 					limit = {
-						is_core_of = BLR
+						AND = {
+							has_state_flag = SS_Country_Core_State
+							is_owned_by = BLR
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
 					}
+					set_state_controller_to = BLR
 					add_core_of = SOV
 					remove_core_of = BLR
+					clr_state_flag = GER_Claim_lands
 				}
 				BLR = {
-					every_state = {
-						limit = {
-							has_state_flag = SS_Country_Core_State
-						}
-						clr_state_flag = GER_Claim_lands
-						transfer_state_to = BLR
-					}
-					every_state = {
-						limit = {
-							is_core_of = BLR
-						}
-						remove_core_of = BLR
-					}
 					add_ideas = reds_in_resistance_1
 					set_variable = { SS_consumer_goods_factor = 0.1 }
 					set_variable = { SS_industrial_capacity_dockyard = -0.1 }
@@ -650,7 +647,6 @@ GER_reichskommissariats = {
 				}
 			}
 			GER = {
-				puppet = BLR
 				if = {
 					limit = {
 						NOT = { has_dlc = "Death or Dishonor" }
@@ -734,24 +730,20 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 			hidden_effect = {
-				release_on_controlled = UKR
 				every_state = {
 					limit = {
-						is_core_of = UKR
+						AND = {
+							has_state_flag = SS_Country_Core_State_2
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
 					}
+					set_state_controller_to = UKR
 					add_core_of = SOV
-					set_state_flag = SS_Country_Core_State_2
 					remove_core_of = UKR
+					clr_state_flag = GER_Claim_lands
 				}
 				UKR = {
-					every_state = {
-						limit = {
-							OR = {
-								has_state_flag = SS_Country_Core_State_2
-							}
-						}
-						clr_state_flag = GER_Claim_lands
-					}
 					add_ideas = reds_in_resistance
 					add_ideas = a_hope_in_independence
 					set_variable = { SS_consumer_goods_factor = 0.1 }
@@ -777,7 +769,6 @@ GER_reichskommissariats = {
 				}
 			}
 			GER = {
-				puppet = UKR
 				if = {
 					limit = {
 						NOT = { has_dlc = "Death or Dishonor" }
@@ -1043,6 +1034,173 @@ GER_reichskommissariats = {
 						traits = {
 						}
 					}
+				}
+			}
+		}
+	}
+
+	GER_expand_reichskommissariats = {
+		icon = ger_reichskommissariats
+		cost = 0
+
+		available = {
+			OR = {
+				can_expanded_turkestan = yes
+				can_expanded_caucasus = yes
+				can_expanded_moscow = yes
+				can_expanded_UKR = yes
+				can_expanded_ostland = yes
+				can_expanded_poland = yes
+				can_expanded_belgien_nordfrankreich_states = yes
+				can_expanded_niederlande = yes
+				can_expanded_norwegen = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = no
+
+		visible = {
+			has_completed_focus = GER_SS_A
+			has_government = fascism
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					event_target:NOR_GER_PUPPET_MOD_side = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_owned_by = event_target:NOR_GER_PUPPET_MOD_side
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = event_target:NOR_GER_PUPPET_MOD_side
+				}
+			}
+			if = {
+				limit = { 
+					event_target:HOL_GER_PUPPET_MOD_side = { is_puppet_of = ROOT } 
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_owned_by = event_target:HOL_GER_PUPPET_MOD_side
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = event_target:HOL_GER_PUPPET_MOD_side
+				}
+			}
+			if = {
+				limit = {
+					event_target:BEL_GER_PUPPET_MOD_side = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_owned_by = event_target:BEL_GER_PUPPET_MOD_side
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					set_state_controller_to = event_target:BEL_GER_PUPPET_MOD_side
+				}
+			}
+			if = {
+				limit = {
+					RTK = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_core_of = RTK
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = RTK
+				}
+			}
+			if = {
+				limit = {
+					RKS = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_core_of = RKS
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = RKS
+				}
+			}
+			if = {
+				limit = {
+					RMK = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_core_of = RMK
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = RMK
+				}
+			}
+			if = {
+				limit = {
+					BLR = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = GER
+						has_state_flag = SS_Country_Core_State
+					}
+					clr_state_flag = GER_Claim_lands
+					transfer_state_to = BLR
+				}
+			} 
+			if = {
+				limit = {
+					UKR = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = GER
+						is_core_of = UKR
+						has_state_flag = SS_Country_Core_State_2
+					}
+					add_core_of = SOV
+					remove_core_of = UKR
+					transfer_state_to = UKR
+					clr_state_flag = GER_Claim_lands
+				}
+			}
+			if = {
+				limit = {
+					RGV = { is_puppet_of = ROOT }
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_owned_by = POL
+							is_controlled_by = GER
+							NOT = { is_core_of = GER }
+						}
+					}
+					transfer_state_to = RGV
 				}
 			}
 		}

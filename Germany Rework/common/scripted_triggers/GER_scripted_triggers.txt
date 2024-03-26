@@ -240,7 +240,10 @@ is_literally_japan = {
 }
 
 any_state_is_norwegen = {
-	NOT = { NOR = { is_puppet_of = GER } }
+	OR = {
+		NOT = { event_target:NOR_GER_PUPPET_MOD_side = { is_puppet_of = GER } }
+		NOT = { NOR = { is_puppet_of = GER } }
+	}
 	any_controlled_state = {
 		OR = {
 			is_core_of = NOR
@@ -251,7 +254,10 @@ any_state_is_norwegen = {
 }
 
 any_state_is_niederlande = {
-	NOT = { HOL = { is_puppet_of = GER } } 
+	OR = {
+		NOT = { event_target:HOL_GER_PUPPET_MOD_side = { is_puppet_of = GER } }
+		NOT = { HOL = { is_puppet_of = GER } }
+	} 
 	any_controlled_state = {
 		OR = {
 			is_core_of = HOL
@@ -262,7 +268,10 @@ any_state_is_niederlande = {
 }
 
 any_state_is_belgien_nordfrankreich_states = {
-	NOT = { BEL = { is_puppet_of = GER } }
+	OR = {
+		NOT = { event_target:BEL_GER_PUPPET_MOD_side = { is_puppet_of = GER } }
+		NOT = { BEL = { is_puppet_of = GER } }
+	}
 	any_controlled_state = {
 		OR = {
 			is_core_of = BEL
@@ -318,6 +327,91 @@ any_state_is_caucasus = {
 
 any_state_is_turkestan = {
 	NOT = { RTK = { is_puppet_of = GER } }
+	any_controlled_state = {
+		is_core_of = RTK
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_norwegen = {
+	NOR = { is_puppet_of = GER }
+	any_controlled_state = {
+		OR = {
+			is_core_of = NOR
+			is_owned_by = NOR
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_niederlande = {
+	HOL = { is_puppet_of = GER }
+	any_controlled_state = {
+		OR = {
+			is_core_of = HOL
+			is_owned_by = HOL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_belgien_nordfrankreich_states = {
+	BEL = { is_puppet_of = GER }
+	any_controlled_state = {
+		OR = {
+			is_core_of = BEL
+			is_owned_by = BEL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_poland = {
+	RGV = { is_puppet_of = GER }
+	any_controlled_state = {
+		OR = {
+			is_core_of = POL
+			is_owned_by = POL
+		}
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_ostland = {
+	BLR = { is_puppet_of = GER }
+	OR = {
+		any_controlled_state = {
+			has_state_flag = SS_Country_Core_State
+		}
+	}
+}
+
+can_expanded_UKR = {
+	UKR = { is_puppet_of = GER }
+	any_controlled_state = {
+		is_core_of = UKR
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_moscow = {
+	RMK = { is_puppet_of = GER }
+	any_controlled_state = {
+		is_core_of = RMK
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_caucasus = {
+	RKS = { is_puppet_of = GER }
+	any_controlled_state = {
+		is_core_of = RKS
+		NOT = { is_core_of = GER }
+	}
+}
+
+can_expanded_turkestan = {
+	RTK = { is_puppet_of = GER }
 	any_controlled_state = {
 		is_core_of = RTK
 		NOT = { is_core_of = GER }
