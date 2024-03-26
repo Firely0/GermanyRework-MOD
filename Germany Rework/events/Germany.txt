@@ -574,6 +574,38 @@ country_event = {
 	}
 }
 
+#remove MEFO bills
+country_event = {
+	id = germany.1001
+	title = germany.1001.t
+	desc = germany.1001.desc
+	picture = GFX_report_event_german_reichstag_gathering
+
+	hidden = yes
+
+	trigger = {
+		original_tag = GER
+		GER_has_mefo_bills = yes
+		any_other_country = {
+			has_war_with = GER
+			NOT = { original_tag = GER }
+		}
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	option = { #remove MEFO
+		name = germany.1001.a
+		ai_chance = {
+			base = 100
+		}
+		ROOT = {
+			GER_remove_mefo_bills = yes
+			set_country_flag = mefo_bills_removed_through_war
+		}
+	}
+}
+
 #Event for allies signing MR pact
 country_event = {
 	id = germany.1002
@@ -2824,6 +2856,11 @@ country_event = {
 			limit = { has_global_flag = GER_HUN_CZE_split }
 			HUN = { country_event = DOD_hungary.106 }
 		}
+
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
+
 		hidden_effect = {
 			country_event = { hours = 6 id = news.60 }
 			every_state = {
@@ -2869,6 +2906,9 @@ country_event = {
 			}
 			POL = { transfer_state = 72 } # Give Poland Zaolzie
 		}
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 	option = {
 		name = germany.55.c
@@ -2892,6 +2932,9 @@ country_event = {
 		hidden_effect = {
 			country_event = { hours = 6 id = news.62 }
 		}
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 
 	option = {
@@ -2908,6 +2951,9 @@ country_event = {
 		}
 		HUN = { country_event = DOD_hungary.101 }
 		add_war_support = 0.1
+		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 }
 
@@ -5141,6 +5187,9 @@ country_event = {
 			add_named_threat = { threat = 5 name = GER_fate_of_yugoslavia }
 			annex_country = { target = YUG transfer_troops = no }
 		}
+		custom_effect_tooltip = yugoslavia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 
 	option = {
@@ -5184,6 +5233,9 @@ country_event = {
 			puppet = CRO
 			annex_country = { target = YUG transfer_troops = no }
 		}
+		custom_effect_tooltip = yugoslavia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 
 	option = {
@@ -5220,6 +5272,9 @@ country_event = {
 				news_event = { hours = 6 id = news.169 }
 			}
 		}
+		custom_effect_tooltip = yugoslavia_mefo_bills_tt
+		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		GER_mefo_bills_level_down = yes
 	}
 }
 

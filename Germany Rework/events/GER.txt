@@ -708,6 +708,24 @@ country_event = {
 }
 
 country_event = {
+	id = gerb.81
+	title = gerb.81
+	desc = gerb.81.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = "Fine"
+
+		ai_chance = {
+			factor = 100
+		}
+
+		remove_ideas = hjalmar_schacht
+	}
+}
+
+country_event = {
 	id = ger_around_maginot_event.1
 	title = "Victory in Poland"
 	desc = "[Root.GetFrancedesc]"

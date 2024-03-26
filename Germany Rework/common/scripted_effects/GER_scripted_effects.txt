@@ -1,3 +1,25 @@
+
+GER_mefo_bills_level_up = {
+	add_to_variable = {
+		GER_FR_political_power_gain = -0.1
+	}
+}
+
+GER_remove_mefo_bills = {
+	set_variable = {
+		GER_FR_political_power_gain = -0.2
+	}
+	set_variable = {
+		GER_FR_consumer_goods_factor = -0.01
+	}
+}
+
+GER_mefo_bills_level_down = {
+	add_to_variable = {
+		GER_FR_political_power_gain = 0.1
+	}
+}
+
 give_SOV_armor_research_bonuses = {
 	#this effect is run for the Soviets!
 	if = {
@@ -1626,6 +1648,13 @@ GER_AUS_annex = {
 	add_war_support = 0.1
 	add_stability = 0.05
 	army_experience = 10
+	custom_effect_tooltip = anschluss_mefo_bills_tt
+	hidden_effect = { # Having it appear twice might be confusing
+		GER_mefo_bills_level_down = yes
+		GER_mefo_bills_level_down = yes
+	}
+	custom_effect_tooltip = anschluss_mefo_bills_double_reduction
+	add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 }
 
 GER_AI_EQ_1 = {

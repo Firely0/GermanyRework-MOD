@@ -14,6 +14,16 @@
 # 
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE GER TAG
 
+GER_has_mefo_bills = {
+	NOT = { has_country_flag = GER_mefo_bills_ended }
+	NOT = { has_country_flag = ger_has_cancelled_mefo }
+	hidden_trigger = {
+	  	has_dynamic_modifier = {
+		    modifier = GER_Four_Year_Plan_dynamic_modifier
+	    }
+	}
+}
+
 is_friend_or_potential_friend_of_GER = {
 	OR = {
 		is_puppet_of = GER

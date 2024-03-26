@@ -36,6 +36,10 @@ set_variable = { GER_success = 0 }
 set_variable = { SOV_failures = 0 }
 set_variable = { SOV_success = 0 }
 
+#Four Year Plan
+activate_mission = GER_Four_Year_Plan
+activate_mission = GER_mefo_bills_mission
+
 #Training Programs 
 activate_mission = GER_SOV_TRAINING
 activate_mission = GER_ITA_TRAINING
@@ -141,13 +145,22 @@ set_variable = {
 }
 
 set_variable = {
+	GER_FR_political_power_gain = 0
+}
+set_variable = {
+	GER_FR_consumer_goods_factor = -0.01
+}
+set_variable = {
+	GER_FR_industrial_capacity_factory = -0.05
+}
+set_variable = {
+	GER_FR_industrial_capacity_dockyard = -0.05
+}
+set_variable = {
 	GER_FR_production_speed_arms_factory_factor = 0.1
 }
 set_variable = {
 	GER_FR_production_speed_dockyard_factor = 0.1
-}
-set_variable = {
-	GER_FR_consumer_goods_factor = -0.33
 }
 set_variable = {
 	GER_FR_production_speed_industrial_complex_factor = 0.1
@@ -171,13 +184,10 @@ set_variable = {
 	GER_FR_production_speed_coastal_bunker_factor = 0.05
 }
 set_variable = {
-	GER_FR_political_power_gain = -0.25
+	GER_FR_production_speed_infrastructure_factor = 0
 }
 set_variable = {
-	GER_FR_industrial_capacity_factory = -0.05
-}
-set_variable = {
-	GER_FR_industrial_capacity_dockyard = -0.05
+	GER_FR_production_speed_rail_way_factor = 0
 }
 
 # Four Year Plan - Army Navy Air 

@@ -269,6 +269,22 @@ GER_colonial_management_category = {
 	
 }
 
+GER_mefo_bills_category_r = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+	visible_when_empty = no
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+	}
+	
+	priority = 91
+}
+
 GER_training_program = {
 
 	icon = GFX_decision_category_army_reform

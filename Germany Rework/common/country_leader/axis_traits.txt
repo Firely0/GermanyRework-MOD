@@ -124,7 +124,35 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	Mercedes_trait_focus = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				maximum_speed = 0.15
+				hard_attack = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	Mercedes_1_trait = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.1
+				thrust = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.1
+				thrust = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Mercedes_1_focus_trait = {
 		random = no
 		equipment_bonus = {
 			small_plane_airframe = {
@@ -253,15 +281,31 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	GER_personal_agenda_adolf_hitler = {
+		random = no
+		custom_modifier_tooltip = GER_personal_agenda_adolf_hitler_tt
+	}
 	dictator_pp = {
 		random = no
-		political_power_gain = 0.15
-		communism_acceptance = -25
-		democratic_acceptance = -25
+		political_power_gain = 0.25
 		weekly_casualties_war_support = 0.001
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	dictator_pp_v1 = {
+		random = no
+		political_power_gain = 0.25
+		weekly_casualties_war_support = 0.001
+		weekly_convoys_war_support = 0.001
+		weekly_bombing_war_support = 0.001
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_usa = {
+		random = no
+		democratic_acceptance = -25
 	}
 	new_rj = {
 		party_popularity_stability_factor = 0.1
@@ -275,18 +319,6 @@ leader_traits = {
 		defensive_war_stability_factor = 0.1
 		party_popularity_stability_factor = 0.1
 		political_power_gain = 0.05
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	dictator_pp_v1 = {
-		random = no
-		political_power_gain = 0.15
-		communism_acceptance = -25
-		democratic_acceptance = -25
-		weekly_casualties_war_support = 0.001
-		weekly_convoys_war_support = 0.001
-		weekly_bombing_war_support = 0.001
 		ai_will_do = {
 			factor = 1
 		}

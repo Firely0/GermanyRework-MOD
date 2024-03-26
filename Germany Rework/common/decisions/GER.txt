@@ -426,7 +426,7 @@ health_of_adolf_category = {
 
 		cost = 50
 		cancel_if_not_visible = yes
-		is_good = no
+		is_good = yes
 		fire_only_once = no
 		selectable_mission = yes
 		days_mission_timeout = Adolf_Health_Year_TIME # 365
@@ -1498,6 +1498,488 @@ GER_expand_support = {
 	}
 }
 
+GER_mefo_bills_category_r = {
+
+	GER_Four_Year_Plan = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+		}
+
+		cancel_if_not_visible = yes
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 1460
+		priority = 100
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			effect_tooltip = {
+				remove_dynamic_modifier = { modifier = GER_Four_Year_Plan_dynamic_modifier }
+			}
+			set_country_flag = GER_FOUR_YEAR_PLAN_END
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = hjalmar_schacht
+					}
+					country_event = gerb.81
+				}
+				set_variable = {
+					GER_FR_production_speed_arms_factory_factor = 0.15
+				}
+				set_variable = {
+					GER_FR_production_speed_dockyard_factor = 0.15
+				}
+				set_variable = {
+					GER_FR_production_speed_industrial_complex_factor = 0.15
+				}
+				set_variable = {
+					GER_FR_production_speed_naval_base_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_radar_station_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_air_base_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_anti_air_building_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_bunker_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_coastal_bunker_factor = 0.05
+				}
+				set_variable = {
+					GER_FR_production_speed_infrastructure_factor = 0
+				}
+				set_variable = {
+					GER_FR_production_speed_rail_way_factor = 0
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+	}	
+
+	GER_mefo_bills_mission = {
+
+		allowed = { always = no }
+
+		icon = ger_mefo_bills
+
+		available = {
+			NOT = { has_government = democratic }
+			has_political_power > 0
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		priority = 80
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_idea = GER_mefo_bills_ended
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = ger_has_cancelled_mefo
+				}
+				GER_remove_mefo_bills = yes
+				set_country_flag = GER_mefo_bills_ended_flag
+				#1
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+					}
+					add_political_power = -20
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 60 }
+				}
+				#2
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 20 compare = equals }
+					}
+					add_political_power = -40
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 80 }
+				}
+				#3
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 30 compare = equals }
+					}
+					add_political_power = -60
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 100 }
+				}
+				#4
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 40 compare = equals }
+					}
+					add_political_power = -80
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
+				}
+				#5
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 50 compare = equals }
+					}
+					add_political_power = -100
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 140 }
+				}
+				#6
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 60 compare = equals }
+					}
+					add_political_power = -120
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
+				}
+				#7
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 70 compare = equals }
+					}
+					add_political_power = -140
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 180 }
+				}
+				#8
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 80 compare = equals }
+					}
+					add_political_power = -160
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
+				}
+				#9
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 90 compare = equals }
+					}
+					add_political_power = -180
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 220 }
+				}
+				#10
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 100 compare = equals }
+					}
+					add_political_power = -200
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
+				}
+				#11
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 110 compare = equals }
+					}
+					add_political_power = -220
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 260 }
+				}
+				#12
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 120 compare = equals }
+					}
+					add_political_power = -240
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
+				}
+				#13
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 130 compare = equals }
+					}
+					add_political_power = -260
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 300 }
+				}
+				#14
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 140 compare = equals }
+					}
+					add_political_power = -280
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
+				}
+				#15
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 150 compare = equals }
+					}
+					add_political_power = -300
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
+				}
+				#16
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 160 compare = equals }
+					}
+					add_political_power = -320
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 360 }
+				}
+				#17
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 170 compare = equals }
+					}
+					add_political_power = -340
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 380 }
+				}
+				#18
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 180 compare = equals }
+					}
+					add_political_power = -360
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
+				}
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 180 compare = greater_than }
+					}
+					add_political_power = -380
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
+				}
+			}
+			else = {
+				custom_effect_tooltip = GER_mefo_bills_mission_tt
+				custom_effect_tooltip = GER_mefo_bills_effect_in_days
+				hidden_effect = {
+					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+					set_country_flag = paid_for_mefo
+				}
+				GER_mefo_bills_level_up = yes
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = Four_Year_Plan_1_Hide_FAKE
+						add_idea = Four_Year_Plan_1_Hide_FAKE_mefo
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+					}
+					hidden_effect = { set_variable = { var = GER_mefo_bill_counter value = 10 } }
+				}
+				add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+				hidden_effect = {
+					activate_mission = GER_mefo_bills_mission
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	GER_pay_mefo_fee = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		days_remove = 30
+		priority = 78
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_idea = GER_mefo_bills_ended
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = ger_has_cancelled_mefo }
+			NOT = {
+				OR = {
+					NOT = { GER_has_mefo_bills = yes }
+					has_idea = GER_mefo_bills_ended
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = Four_Year_Plan_1_Hide_FAKE_mefo
+					add_idea = Four_Year_Plan_1_Hide_FAKE_pp_mefo
+				}
+			}
+			add_to_variable = { GER_FR_political_power_gain = 0.1 }
+		}
+	}	
+
+	GER_renew_mefos = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = ger_has_cancelled_mefo
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		priority = 10
+
+		visible = {
+			hidden_trigger = {
+				has_country_flag = ger_has_cancelled_mefo
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+			clr_country_flag = ger_has_cancelled_mefo
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = GER_arms_designers
+					}
+					add_to_variable = { GER_FR_political_power_gain = -0.05 }
+					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
+				}
+				if = {
+					limit = {
+						has_completed_focus = GER_Eco_Plan_Side_A_3
+					}
+					add_to_variable = { GER_FR_political_power_gain = -0.05 }
+					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
+				}
+				if = {
+					limit = {
+						has_completed_focus = GER_Eco_Plan_Side_A_1
+					}
+					add_to_variable = { GER_FR_political_power_gain = -0.05 }
+					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
+				}
+				if = {
+					limit = {
+						has_completed_focus = GER_naval_designers
+					}
+					add_to_variable = { GER_FR_political_power_gain = -0.05 }
+					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	GER_cancel_mefos = {
+
+		icon = GFX_decision_generic_break_treaty
+
+		available = {
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+
+		priority = 10
+
+		visible = {
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+			set_country_flag = ger_has_cancelled_mefo
+			hidden_effect = {
+				set_variable = {
+					GER_FR_political_power_gain = -0.2
+				}
+				set_variable = {
+					GER_FR_consumer_goods_factor = -0.01
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
 GER_training_program = {
 
 	GER_SOV_TRAINING = {
@@ -1519,7 +2001,7 @@ GER_training_program = {
 
 		cost = 25
 		cancel_if_not_visible = yes
-		is_good = no
+		is_good = yes
 		fire_only_once = yes
 		selectable_mission = yes
 		days_mission_timeout = 365
@@ -1581,7 +2063,7 @@ GER_training_program = {
 
 		cost = 25
 		cancel_if_not_visible = yes
-		is_good = no
+		is_good = yes
 		fire_only_once = yes
 		selectable_mission = yes
 		days_mission_timeout = 365

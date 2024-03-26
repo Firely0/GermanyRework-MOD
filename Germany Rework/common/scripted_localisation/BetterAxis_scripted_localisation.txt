@@ -9,6 +9,53 @@
 # that'll be used if trigger passes
 
 defined_text = {
+	name = GetFourYearPlanname
+	text = {
+		trigger = {
+			NOT = { has_country_flag = GER_FOUR_YEAR_PLAN_END }
+		}
+		localization_key = "Four Year Plan"
+	}
+	text = {
+		trigger = {
+			has_country_flag = GER_FOUR_YEAR_PLAN_END
+		}
+		localization_key = "Mefo Bills"
+	}
+	text = {
+		localization_key = GER_Set_HQ_in_front_1
+	}
+}
+
+defined_text = {
+	name = GetFourYearPlannamedecision
+	text = {
+		trigger = {
+			has_country_flag = GER_FOUR_YEAR_PLAN_END
+			NOT = { has_country_flag = GER_mefo_bills_ended_flag }
+		}
+		localization_key = "Mefo Bills"
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = GER_FOUR_YEAR_PLAN_END }
+			has_country_flag = GER_mefo_bills_ended_flag
+		}
+		localization_key = "Four Year Plan"
+	}
+	text = {
+		trigger = {
+			has_country_flag = GER_FOUR_YEAR_PLAN_END
+			has_country_flag = GER_mefo_bills_ended_flag
+		}
+		localization_key = "German Economic Plan"
+	}
+	text = {
+		localization_key = "Four Year Plan & Mefo Bills"
+	}
+}
+
+defined_text = {
 	name = GetAfricacorpsfront
 	text = {
 		trigger = {

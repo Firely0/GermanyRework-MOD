@@ -1122,7 +1122,7 @@ shared_focus = {
 	icon = GFX_goal_r56_goal_generic_bills
 	x = -29
 	y = 0
-	cost = 5
+	cost = 3
 	ai_will_do = {
 		factor = 12
 	}
@@ -1162,6 +1162,12 @@ shared_focus = {
 			custom_effect_tooltip = GER_autobahn_tt
 		}
 		hidden_effect = {
+			set_variable = {
+				GER_FR_production_speed_infrastructure_factor = 0.1
+			}
+			set_variable = {
+				GER_FR_production_speed_rail_way_factor = 0.1
+			}
 			if = {
 				limit = {
 					has_idea = Four_Year_Plan_1_Hide_ARMS
@@ -1829,7 +1835,7 @@ shared_focus = {
 	prerequisite = { focus = GER_end_of_new_plan }
 	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	available = {
 	}
 
@@ -1869,7 +1875,7 @@ shared_focus = {
 	mutually_exclusive = { focus = GER_autarky_a }
 	relative_position_id = GER_end_of_new_plan
 	prerequisite = { focus = GER_end_of_new_plan }
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	
@@ -2383,7 +2389,7 @@ shared_focus = {
 	x = -10
 	y = 0
 	relative_position_id = GER_end_of_new_plan
-	cost = 5
+	cost = 3
 	ai_will_do = {
 		factor = 1
 	}
@@ -2400,6 +2406,7 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
+			add_to_variable = { GER_FR_political_power_gain = -0.05 }
 			add_to_variable = { GER_FR_industrial_capacity_factory = 0.05 }
 			add_to_variable = { GER_FR_industrial_capacity_dockyard = 0.05 }
 		}
@@ -2414,9 +2421,21 @@ shared_focus = {
 	x = 5
 	y = 1
 	relative_position_id = GER_Hide_Arms_Industrialization
-	cost = 3
+	cost = 1
 	ai_will_do = {
 		factor = 1
+	}
+
+	available = {
+		GER_has_mefo_bills = yes
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = GER_mefo_bills_ended 
+			has_country_flag = ger_has_cancelled_mefo
+			has_idea = GER_mefo_bills_ended
+		}
 	}
 
 	available_if_capitulated = yes
@@ -2479,11 +2498,28 @@ shared_focus = {
 	}
 
 	available = {
+		GER_has_mefo_bills = yes
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = GER_mefo_bills_ended 
+			has_country_flag = ger_has_cancelled_mefo
+			has_idea = GER_mefo_bills_ended
+		}
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1_Hide_ARMS
+				add_idea = Four_Year_Plan_1_Hide_FAKE
+			}
+		}
+		add_to_variable = { GER_FR_political_power_gain = -0.05 }
+		add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
@@ -2553,16 +2589,34 @@ shared_focus = {
 	}
 
 	available = {
+		GER_has_mefo_bills = yes
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = GER_mefo_bills_ended 
+			has_country_flag = ger_has_cancelled_mefo
+			has_idea = GER_mefo_bills_ended
+		}
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1_Hide_ARMS
+				add_idea = Four_Year_Plan_1_Hide_FAKE
+			}
+		}
+		add_to_variable = { GER_FR_political_power_gain = -0.05 }
+		add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			mio:GER_messerschmitt_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_Mercedes_thrust = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_junkers_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_dornier_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_fieseler_organization = { complete_mio_trait = GER_eco_plan_upgrade }
@@ -2572,6 +2626,10 @@ shared_focus = {
 				swap_ideas = {
 					remove_idea = messerschmitt
 					add_idea = messerschmitt_focus
+				}
+				swap_ideas = {
+					remove_idea = GER_Mercedes_t
+					add_idea = GER_Mercedes_t_focus
 				}
 				swap_ideas = {
 					remove_idea = junkers
@@ -2641,11 +2699,28 @@ shared_focus = {
 	}
 
 	available = {
+		GER_has_mefo_bills = yes
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = GER_mefo_bills_ended 
+			has_country_flag = ger_has_cancelled_mefo
+			has_idea = GER_mefo_bills_ended
+		}
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1_Hide_ARMS
+				add_idea = Four_Year_Plan_1_Hide_FAKE
+			}
+		}
+		add_to_variable = { GER_FR_political_power_gain = -0.05 }
+		add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
@@ -2653,6 +2728,7 @@ shared_focus = {
 			mio:GER_man_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_henschel_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 			mio:GER_porsche_organization = { complete_mio_trait = GER_eco_plan_upgrade }
+			mio:GER_Mercedes_benz_organization = { complete_mio_trait = GER_eco_plan_upgrade }
 		}
 		else = {
 			effect_tooltip = {
@@ -2715,11 +2791,28 @@ shared_focus = {
 	}
 
 	available = {
+		GER_has_mefo_bills = yes
+	}
+
+	bypass = {
+		OR = {
+			has_country_flag = GER_mefo_bills_ended 
+			has_country_flag = ger_has_cancelled_mefo
+			has_idea = GER_mefo_bills_ended
+		}
 	}
 
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = Four_Year_Plan_1_Hide_ARMS
+				add_idea = Four_Year_Plan_1_Hide_FAKE
+			}
+		}
+		add_to_variable = { GER_FR_political_power_gain = -0.05 }
+		add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
@@ -3298,7 +3391,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = GER_air_innovation_a
 	prerequisite = { focus = GER_Operational_Integratiy }
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 0.25
 	}
@@ -3451,7 +3544,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = GER_CAS
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -3526,7 +3619,7 @@ shared_focus = {
 	x = -5
 	y = 2
 	relative_position_id = GER_air_innovation_a
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -3873,7 +3966,7 @@ shared_focus = {
 	prerequisite = { focus = GER_staff }
 	x = -3
 	y = 3
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
@@ -4782,7 +4875,7 @@ shared_focus = {
 	allow_branch = { NOT = { has_completed_focus = GER_tank_warfare } }
 	x = 3
 	y = 3
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
