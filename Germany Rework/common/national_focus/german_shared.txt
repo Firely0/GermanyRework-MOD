@@ -2427,15 +2427,11 @@ shared_focus = {
 	}
 
 	available = {
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = GER_mefo_bills_ended 
-			has_country_flag = ger_has_cancelled_mefo
-			has_idea = GER_mefo_bills_ended
-		}
+		GER_has_mefo_bills = yes
 	}
 
 	available_if_capitulated = yes
@@ -2498,15 +2494,11 @@ shared_focus = {
 	}
 
 	available = {
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = GER_mefo_bills_ended 
-			has_country_flag = ger_has_cancelled_mefo
-			has_idea = GER_mefo_bills_ended
-		}
+		GER_has_mefo_bills = yes
 	}
 
 	available_if_capitulated = yes
@@ -2531,16 +2523,16 @@ shared_focus = {
 		else = {
 			effect_tooltip = {
 				swap_ideas = {
-					remove_idea = germaniawerft
-					add_idea = germaniawerft_focus
-				}
-				swap_ideas = {
 					remove_idea = blohm_und_voss
 					add_idea = blohm_und_voss_focus
 				}
 				swap_ideas = {
 					remove_idea = Deschimag
 					add_idea = Deschimag_focus
+				}
+				swap_ideas = {
+					remove_idea = germaniawerft
+					add_idea = germaniawerft_focus
 				}
 			}
 			hidden_effect = {
@@ -2589,15 +2581,11 @@ shared_focus = {
 	}
 
 	available = {
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = GER_mefo_bills_ended 
-			has_country_flag = ger_has_cancelled_mefo
-			has_idea = GER_mefo_bills_ended
-		}
+		GER_has_mefo_bills = yes
 	}
 
 	available_if_capitulated = yes
@@ -2632,16 +2620,16 @@ shared_focus = {
 					add_idea = GER_Mercedes_t_focus
 				}
 				swap_ideas = {
-					remove_idea = junkers
-					add_idea = junkers_focus
-				}
-				swap_ideas = {
 					remove_idea = dornier
 					add_idea = dornier_focus
 				}
 				swap_ideas = {
 					remove_idea = fieseler
 					add_idea = fieseler_focus
+				}
+				swap_ideas = {
+					remove_idea = junkers
+					add_idea = junkers_focus
 				}
 			}
 			hidden_effect = {
@@ -2652,6 +2640,15 @@ shared_focus = {
 					swap_ideas = {
 						remove_idea = dornier
 						add_idea = dornier_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = GER_Mercedes_t
+					}
+					swap_ideas = {
+						remove_idea = GER_Mercedes_t
+						add_idea = GER_Mercedes_t_focus
 					}
 				}
 				else_if = {
@@ -2699,15 +2696,11 @@ shared_focus = {
 	}
 
 	available = {
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = GER_mefo_bills_ended 
-			has_country_flag = ger_has_cancelled_mefo
-			has_idea = GER_mefo_bills_ended
-		}
+		GER_has_mefo_bills = yes
 	}
 
 	available_if_capitulated = yes
@@ -2737,12 +2730,16 @@ shared_focus = {
 					add_idea = GER_MAN_Focus
 				}
 				swap_ideas = {
+					remove_idea = porsche
+					add_idea = porsche_focus
+				}
+				swap_ideas = {
 					remove_idea = henschel
 					add_idea = henschel_focus
 				}
 				swap_ideas = {
-					remove_idea = porsche
-					add_idea = porsche_focus
+					remove_idea = GER_Mercedes
+					add_idea = GER_Mercedes_focus_idea
 				}
 			}
 			hidden_effect = {
@@ -2773,6 +2770,15 @@ shared_focus = {
 						add_idea = GER_MAN_Focus
 					}
 				}
+				else_if = {
+					limit = {
+						has_idea = GER_Mercedes
+					}
+					swap_ideas = {
+						remove_idea = GER_Mercedes
+						add_idea = GER_Mercedes_focus_idea
+					}
+				}
 			}
 		}
 	}
@@ -2791,15 +2797,11 @@ shared_focus = {
 	}
 
 	available = {
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = GER_mefo_bills_ended 
-			has_country_flag = ger_has_cancelled_mefo
-			has_idea = GER_mefo_bills_ended
-		}
+		GER_has_mefo_bills = yes
 	}
 
 	available_if_capitulated = yes

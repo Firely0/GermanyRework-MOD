@@ -14145,6 +14145,14 @@ focus_tree = {
 					modifier = pact_against_us
 				}
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = GER_UNLOCK_USSR_WAR_GOAL
+					}
+					unlock_national_focus = GER_ussr_war_goal
+				}
+			}
 		}
 	}
 	focus = {

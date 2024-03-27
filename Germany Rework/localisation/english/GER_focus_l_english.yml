@@ -231,8 +231,8 @@
  recall_rommel_to_ger:0 "Recall Erwin Rommel from Mittelafrica"
  GER_SENT_ROMMEL_MLA:0 "Serving in @MLAMittelafrica"
 
- GER_Africa_Operations:0 "Africa Korps: Africa Operations"
- GER_Africa_Operations_desc:0 "Africa Korps' HQ in Libya is an important location for our future operations, and we will have to rely on Italy's navy in the Central Mediterranean to provide equipment and reinforcements on a regular basis."
+ GER_Africa_Operations:0 "£wehrmacht_texticon Africa Korps"
+ GER_Africa_Operations_desc:0 "Africa Korps Headquarters in Libya is an important location for our future operations, and we will have to rely on @ITAItaly's navy in the Central Mediterranean to provide equipment and reinforcements on a regular basis."
  GER_start_Battle_of_El_Alamein:0 "Start Operation EL-Alamein"
  GER_Battle_of_El_Alamein_decision:0 "Battle of El-Alamein"
  GER_extra_Supply_for_Africa:0 "Extra Supply for Libya"
@@ -360,13 +360,17 @@
  GER_revert_to_vanilla_germany_desc:0 "Flag and Name Return to Normal. \nForming a Nation Changes Name and Flag \nGFXs of things like Focus etc. Still the same*"
 
  #Four Year Plan
- GER_Four_Year_Plan_dynamic_modifier:0 "[GetFourYearPlanname]"
- GER_Four_Year_Plan:0 "End of Four Year Plan"
- ger_has_cancelled_mefo:0 "MEFO has been cancelled"
- GER_mefo_bills_ended:0 "MEFO has been Ended"
- GER_pay_mefo_fee:0 "Pay MEFO Bills Fee"
  GER_mefo_bills_category_r:0 "[GetFourYearPlannamedecision]"
  GER_mefo_bills_category_r_desc:0 "In order to fund our growing military industry, and to keep this secret from British and French eyes, we have been forced to use a balance sheet entity to route payments to in the form of promissory notes. \nIf we do not use our political connections to extend the due dates of these notes, we will be forced to repay them and will no longer receive their benefits."
+ GER_Four_Year_Plan_dynamic_modifier:0 "[GetFourYearPlanname]"
+ GER_Four_Year_Plan:0 "End of Four Year Plan"
+ ger_has_cancelled_mefo:0 "§YMEFO Bills§! has been cancelled"
+ GER_mefo_bills_ended:0 "§YMEFO Bills§! has been Ended"
+ GER_pay_mefo_fee:0 "Pay MEFO Bills Fee"
+ GER_MEFO_IS_ACTIVE_OR_NOT:0 "[mefoisactiveornot]"
+ GER_MEFO_IS_ACTIVE_OR_NOT_y:0 "§YMefo Bills§! Active"
+ GER_MEFO_IS_ACTIVE_OR_NOT_n:0 "§YMefo Bills§! Inactive"
+ GER_MEFO_cost_higher:0 "The political cost of §YMefo Bills§! should be higher than 0.25"
 
  #Army Ideas
  german_rapid_mobilization_spirit:0 "Rapid Mobilization"

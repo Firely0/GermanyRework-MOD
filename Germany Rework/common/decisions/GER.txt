@@ -1597,12 +1597,6 @@ GER_mefo_bills_category_r = {
 		fire_only_once = yes
 		priority = 80
 
-		cancel_trigger = {
-			hidden_trigger = {
-				has_idea = GER_mefo_bills_ended
-			}
-		}
-
 		days_remove = GER_extend_mefo_bills_days?0
 		remove_effect = {
 		}
@@ -1613,10 +1607,11 @@ GER_mefo_bills_category_r = {
 		timeout_effect = {
 			if = {
 				limit = {
-					has_country_flag = ger_has_cancelled_mefo
+					OR = {
+						has_country_flag = GER_mefo_bills_ended
+						has_country_flag = ger_has_cancelled_mefo 
+					}
 				}
-				GER_remove_mefo_bills = yes
-				set_country_flag = GER_mefo_bills_ended_flag
 				#1
 				if = {
 					limit = {
@@ -1768,6 +1763,7 @@ GER_mefo_bills_category_r = {
 					add_political_power = -380
 					add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
 				}
+				GER_remove_mefo_bills = yes
 			}
 			else = {
 				custom_effect_tooltip = GER_mefo_bills_mission_tt
@@ -1816,6 +1812,14 @@ GER_mefo_bills_category_r = {
 		}
 
 		available =  {
+			custom_trigger_tooltip = {
+				tooltip = GER_MEFO_cost_higher
+				check_variable = {
+					var = GER_FR_political_power_gain
+					value = -0.35
+					compare = less_than
+				}
+			}
 		}
 
 		cancel_trigger = {
@@ -1825,13 +1829,7 @@ GER_mefo_bills_category_r = {
 		}
 
 		visible = {
-			NOT = { has_country_flag = ger_has_cancelled_mefo }
-			NOT = {
-				OR = {
-					NOT = { GER_has_mefo_bills = yes }
-					has_idea = GER_mefo_bills_ended
-				}
-			}
+			GER_has_mefo_bills = no
 		}
 
 		modifier = {
@@ -1848,83 +1846,10 @@ GER_mefo_bills_category_r = {
 					add_idea = Four_Year_Plan_1_Hide_FAKE_pp_mefo
 				}
 			}
+			add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 			add_to_variable = { GER_FR_political_power_gain = 0.1 }
 		}
 	}	
-
-	GER_renew_mefos = {
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		available = {
-			hidden_trigger = {
-				has_country_flag = ger_has_cancelled_mefo
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cost = 0
-
-		fire_only_once = no
-		priority = 10
-
-		visible = {
-			hidden_trigger = {
-				has_country_flag = ger_has_cancelled_mefo
-				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
-				}
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		remove_effect = {
-			clr_country_flag = ger_has_cancelled_mefo
-			hidden_effect = {
-				if = {
-					limit = {
-						has_completed_focus = GER_arms_designers
-					}
-					add_to_variable = { GER_FR_political_power_gain = -0.05 }
-					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
-				}
-				if = {
-					limit = {
-						has_completed_focus = GER_Eco_Plan_Side_A_3
-					}
-					add_to_variable = { GER_FR_political_power_gain = -0.05 }
-					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
-				}
-				if = {
-					limit = {
-						has_completed_focus = GER_Eco_Plan_Side_A_1
-					}
-					add_to_variable = { GER_FR_political_power_gain = -0.05 }
-					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
-				}
-				if = {
-					limit = {
-						has_completed_focus = GER_naval_designers
-					}
-					add_to_variable = { GER_FR_political_power_gain = -0.05 }
-					add_to_variable = { GER_FR_consumer_goods_factor = -0.08 }
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 200
-		}
-	}
 
 	GER_cancel_mefos = {
 
@@ -1935,7 +1860,8 @@ GER_mefo_bills_category_r = {
 				NOT = { has_country_flag = ger_has_cancelled_mefo }
 				NOT = {
 					OR = {
-						NOT = { GER_has_mefo_bills = yes }
+						has_country_flag = GER_mefo_bills_ended
+						has_country_flag = ger_has_cancelled_mefo
 						has_idea = GER_mefo_bills_ended
 					}
 				}
@@ -1951,11 +1877,9 @@ GER_mefo_bills_category_r = {
 		visible = {
 			hidden_trigger = {
 				NOT = { has_country_flag = ger_has_cancelled_mefo }
+				GER_has_mefo_bills = no
 				NOT = {
-					OR = {
-						NOT = { GER_has_mefo_bills = yes }
-						has_idea = GER_mefo_bills_ended
-					}
+					has_idea = GER_mefo_bills_ended
 				}
 			}
 		}
@@ -1965,12 +1889,7 @@ GER_mefo_bills_category_r = {
 		remove_effect = {
 			set_country_flag = ger_has_cancelled_mefo
 			hidden_effect = {
-				set_variable = {
-					GER_FR_political_power_gain = -0.2
-				}
-				set_variable = {
-					GER_FR_consumer_goods_factor = -0.01
-				}
+				GER_remove_mefo_bills = yes
 			}
 		}
 

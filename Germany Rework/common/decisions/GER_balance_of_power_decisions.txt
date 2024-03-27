@@ -607,7 +607,10 @@ GER_balance_of_power_category = {
 
 		available = {
 			check_variable = {
-				wehrmacht_anger < 10
+				wehrmacht_anger < 15
+			}
+			check_variable = {
+				wehrmacht_anger > -15
 			}
 		}
 
@@ -643,7 +646,10 @@ GER_balance_of_power_category = {
 
 		available = {
 			check_variable = {
-				ss_anger < 10
+				ss_anger < 15
+			}
+			check_variable = {
+				ss_anger > -15
 			}
 		}
 

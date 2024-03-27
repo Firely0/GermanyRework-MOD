@@ -9,6 +9,19 @@
 # that'll be used if trigger passes
 
 defined_text = {
+	name = mefoisactiveornot
+	text = {
+		trigger = {
+			GER_has_mefo_bills = yes
+		}
+		localization_key = GER_MEFO_IS_ACTIVE_OR_NOT_n
+	}
+	text = {
+		localization_key = GER_MEFO_IS_ACTIVE_OR_NOT_y
+	}
+}
+
+defined_text = {
 	name = GetFourYearPlanname
 	text = {
 		trigger = {

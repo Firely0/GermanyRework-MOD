@@ -265,10 +265,30 @@ SOV_great_patriotic_war = {
 				}
 			}
 			SOV_clean_military_offensive_effect = yes
+			add_to_variable = {
+				var = SOV_failures
+				value = 1
+			}
+			GER = {
+				add_to_variable = {
+					var = GER_success
+					value = 1
+				}
+			}
 		}
 
 		complete_effect = {
 			SOV_clean_military_offensive_effect = yes
+			add_to_variable = {
+				var = SOV_success
+				value = 1
+			}
+			GER = {
+				add_to_variable = {
+					var = GER_failures
+					value = 1
+				}
+			}
 		}
 	}
 
@@ -345,10 +365,30 @@ SOV_great_patriotic_war = {
 			}
 
 			SOV_clean_military_offensive_effect = yes
+			add_to_variable = {
+				var = SOV_failures
+				value = 1
+			}
+			GER = {
+				add_to_variable = {
+					var = GER_success
+					value = 1
+				}
+			}
 		}
 
 		complete_effect = { #SUCCESS
 			SOV_clean_military_offensive_effect = yes
+			add_to_variable = {
+				var = SOV_success
+				value = 1
+			}
+			GER = {
+				add_to_variable = {
+					var = GER_failures
+					value = 1
+				}
+			}
 
 			add_war_support = 0.1
 			add_political_power = 50

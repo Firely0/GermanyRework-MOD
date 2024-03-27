@@ -585,7 +585,7 @@ country_event = {
 
 	trigger = {
 		original_tag = GER
-		GER_has_mefo_bills = yes
+		GER_has_mefo_bills = no
 		any_other_country = {
 			has_war_with = GER
 			NOT = { original_tag = GER }

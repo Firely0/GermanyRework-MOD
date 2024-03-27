@@ -15,12 +15,15 @@
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE GER TAG
 
 GER_has_mefo_bills = {
-	NOT = { has_country_flag = GER_mefo_bills_ended }
-	NOT = { has_country_flag = ger_has_cancelled_mefo }
-	hidden_trigger = {
-	  	has_dynamic_modifier = {
-		    modifier = GER_Four_Year_Plan_dynamic_modifier
-	    }
+	custom_trigger_tooltip = {
+		tooltip = GER_MEFO_IS_ACTIVE_OR_NOT
+		hidden_trigger = {
+			check_variable = {
+				var = GER_FR_consumer_goods_factor 
+				value = 0.01
+				compare = equals
+			}
+		}
 	}
 }
 
@@ -324,6 +327,7 @@ any_state_is_moscow = {
 	any_controlled_state = {
 		is_core_of = RMK
 		NOT = { is_core_of = GER }
+		NOT = { has_state_flag = GER_MOSKOW_IGNORE_STATES }
 	}
 }
 
