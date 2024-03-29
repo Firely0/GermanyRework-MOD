@@ -32,11 +32,19 @@ defined_text = {
 	text = {
 		trigger = {
 			has_country_flag = GER_FOUR_YEAR_PLAN_END
+			GER_has_mefo_bills = no
 		}
 		localization_key = "Mefo Bills"
 	}
 	text = {
-		localization_key = GER_Set_HQ_in_front_1
+		trigger = {
+			has_country_flag = GER_FOUR_YEAR_PLAN_END
+			GER_has_mefo_bills = yes
+		}
+		localization_key = "German Industry"
+	}
+	text = {
+		localization_key = ""
 	}
 }
 
@@ -45,23 +53,23 @@ defined_text = {
 	text = {
 		trigger = {
 			has_country_flag = GER_FOUR_YEAR_PLAN_END
-			NOT = { has_country_flag = GER_mefo_bills_ended_flag }
+			GER_has_mefo_bills = yes
+		}
+		localization_key = "German Industry"
+	}
+	text = {
+		trigger = {
+			has_country_flag = GER_FOUR_YEAR_PLAN_END
+			GER_has_mefo_bills = no
 		}
 		localization_key = "Mefo Bills"
 	}
 	text = {
 		trigger = {
 			NOT = { has_country_flag = GER_FOUR_YEAR_PLAN_END }
-			has_country_flag = GER_mefo_bills_ended_flag
+			GER_has_mefo_bills = yes
 		}
 		localization_key = "Four Year Plan"
-	}
-	text = {
-		trigger = {
-			has_country_flag = GER_FOUR_YEAR_PLAN_END
-			has_country_flag = GER_mefo_bills_ended_flag
-		}
-		localization_key = "German Economic Plan"
 	}
 	text = {
 		localization_key = "Four Year Plan & Mefo Bills"
