@@ -332,6 +332,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = { has_global_flag = GER_SWITCH_TO_DEFEAT_TREE }
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		available = {
 			has_war = no
@@ -376,6 +377,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = { has_global_flag = GER_SWITCH_TO_DEFEAT_TREE }
+			NOT = { has_completed_focus = GER_against_fuhrer }
 		}
 		relative_position_id = GER_establish_abwehr
 		x = -2
