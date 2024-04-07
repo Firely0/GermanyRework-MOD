@@ -6250,6 +6250,25 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = GER_health_adolf.4
+	title = GER_health_adolf.4.t
+	desc = GER_health_adolf.4.desc
+	picture = GFX_report_event_germany_victory
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_health_adolf.4.a
+		
+		custom_effect_tooltip = GER_health_intro_tt
+		unlock_decision_category_tooltip = GER_balance_of_power_category
+
+		custom_effect_tooltip = SOV_paranoia_system_intro_tt
+	}
+}
+
 country_event = { # Things Gone Bad
 	id = GER_spain_talks.1
 	title = "Adolf Hitler in Spain"

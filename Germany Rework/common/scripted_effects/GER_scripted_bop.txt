@@ -546,7 +546,7 @@ GER_bop_decrease_need_checkup_modifier = {
 			modifier = GER_power_balance_need_checkup_3
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_power_balance_modifier = {
 				id = GER_power_balance
@@ -558,7 +558,7 @@ GER_bop_decrease_need_checkup_modifier = {
 			modifier = GER_power_balance_need_checkup_2
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_power_balance_modifier = {
 				id = GER_power_balance

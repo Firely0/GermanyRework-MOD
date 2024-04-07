@@ -285,6 +285,7 @@ focus_tree = {
 					complete_national_focus = GER_Fuhrer
 					set_global_flag = GER_UNLOCK_HITLER_1
 				}
+				event = { id = GER_health_adolf.4 hours = 1 }
 			}
 		}
 	}
