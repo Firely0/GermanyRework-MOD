@@ -3158,13 +3158,11 @@ shared_focus = {
 	available = {
 	}
 	complete_tooltip = {
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = speer
+		custom_effect_tooltip = SOV_war_economy_stability_tt
 		if = {
 			limit = {
 				has_war = no
 			}
-			custom_effect_tooltip = SOV_war_economy_stability_tt
 			add_stability = -0.1
 		}
 		else = {
@@ -3186,6 +3184,8 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = speer
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 	completion_reward = {
