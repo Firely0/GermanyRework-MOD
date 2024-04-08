@@ -63,6 +63,26 @@ GER_start_to_build_states = {
 	}
 	ai_strategy = {
 		type = factory_build_score_factor
+		target = 971
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 972
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 973
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 974
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
 		target = 65
 		value = 300
 	}
@@ -116,6 +136,26 @@ GER_final_to_build_states = {
 	}
 	ai_strategy = {
 		type = factory_build_score_factor
+		target = 971
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 972
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 973
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 974
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
 		target = 65
 		value = 250
 	}
@@ -139,6 +179,11 @@ GER_final_to_build_states = {
 		target = 64
 		value = 300
 	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 973
+		value = 300
+	}
 }
 
 GER_do_civ_before_synth = {
@@ -154,7 +199,6 @@ GER_do_civ_before_synth = {
 		OR = {
 			has_war = yes
 			num_of_civilian_factories > 100 #Stop At 100
-			has_completed_focus = GER_demand_sudetenland #Lost Advisor
 			has_country_flag = GER_START_OF_SYNTH
 		}
 	}
@@ -170,19 +214,20 @@ GER_wants_synth = {
 	allowed = {
 		original_tag = GER
 	}
-
 	enable = {
-		has_idea = focus_on_liquidation
+		has_government = fascism
+		date > 1937.09.14
+		has_war = no
 	}
-
+	abort = {
+		has_country_flag = GER_END_OF_SYNTH
+	}
 	abort_when_not_enabled = yes
-
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 8
+		value = 15
 	}
-
 }
 
 GER_do_civ_after_synth_focus = {
@@ -199,7 +244,6 @@ GER_do_civ_after_synth_focus = {
 		OR = {
 			has_war = yes
 			num_of_civilian_factories > 99 #Stop At 100
-			has_completed_focus = GER_demand_sudetenland #Lost Advisor
 		}
 	}
 
@@ -263,43 +307,6 @@ GER_industry_we_are_the_baddies = {
 	ai_strategy = {
 		type = air_factory_balance
 		value = 100
-	}
-}
-
-GER_industry_we_are_the_baddies_2 = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		date > 1940.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 20
-	}
-}
-
-GER_industry_we_are_the_baddies_but_not_yet = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		date < 1936.8.1
-	}
-	abort={
-		date > 1937.8.1
-	}
-
-	ai_strategy = {
-		type = air_factory_balance
-		value = 110
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = -50 #because doctrine this = 3
 	}
 }
 
@@ -2281,20 +2288,6 @@ GER_around_the_maginot = {
 
 	abort_when_not_enabled = yes
 
-	# leave LUX for later
-	ai_strategy = {
-		type = declare_war
-		id = "LUX"
-		value = -2000
-	}
-
-	ai_strategy = {
-		type = diplo_action_desire
-		id = "LUX"
-		target = declare_war
-		value = -50000
-	}
-
 	ai_strategy = {
 		type = front_armor_score
 		id = "FRA"
@@ -2310,6 +2303,12 @@ GER_around_the_maginot = {
 	ai_strategy = {
 		type = front_armor_score
 		id = "BEL"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = "LUX"
 		value = 100
 	}
 

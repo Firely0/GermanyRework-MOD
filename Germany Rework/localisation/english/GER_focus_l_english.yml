@@ -297,8 +297,8 @@
  #Volkssturm
  GER_Volkssturm_category:0 "Volkssturm"
  GER_raise_volksstrum_units:0 "Raise Volkssturm Unit in [FROM.GetName]"
- GER_Volkssturm_Training_Min:0 "It significantly reduces the training time of the Volkssturm Troops and reduces the training levels."
- GER_Volkssturm_Training_Basic:0 "Volkssturm Troops are trained in a shorter period of time with a sufficient level of training."
+ GER_Volkssturm_Training_Min:0 "\nIt significantly reduces the training time of the Volkssturm Troops and reduces the training levels."
+ GER_Volkssturm_Training_Basic:0 "\nVolkssturm Troops are trained in a shorter period of time with a sufficient level of training."
 
  # SS vs Wehrmacht Anger
  SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
@@ -314,6 +314,9 @@
  GER_eliminate_traitor:0 "Eliminate Traitors"
 
  GER_sick_leader:0 "Sick Leader"
+
+ # Head of Abwehr
+ Head_of_abwehr:0 "Head of the Abwehr"
 
  #Eva Braun
 

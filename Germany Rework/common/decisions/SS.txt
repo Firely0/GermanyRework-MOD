@@ -150,7 +150,7 @@ GER_reichskommissariats = {
 						limit = {
 							AND = {
 								is_owned_by = NOR
-								is_controlled_by = GER
+								is_fully_controlled_by = GER
 								NOT = { is_core_of = GER }
 							}
 						}
@@ -194,7 +194,7 @@ GER_reichskommissariats = {
 							limit = {
 								AND = {
 									is_owned_by = NOR
-									is_controlled_by = GER
+									is_fully_controlled_by = GER
 									NOT = { is_core_of = GER }
 								}
 							}
@@ -252,7 +252,7 @@ GER_reichskommissariats = {
 						limit = {
 							AND = {
 								is_owned_by = HOL
-								is_controlled_by = GER
+								is_fully_controlled_by = GER
 								NOT = { is_core_of = GER }
 							}
 						}
@@ -282,7 +282,7 @@ GER_reichskommissariats = {
 							limit = {
 								AND = {
 									is_owned_by = HOL
-									is_controlled_by = GER
+									is_fully_controlled_by = GER
 									NOT = { is_core_of = GER }
 								}
 							}
@@ -308,7 +308,7 @@ GER_reichskommissariats = {
 							limit = {
 								AND = {
 									is_owned_by = HOL
-									is_controlled_by = GER
+									is_fully_controlled_by = GER
 									NOT = { is_core_of = GER }
 								}
 							}
@@ -366,7 +366,7 @@ GER_reichskommissariats = {
 						limit = {
 							AND = {
 								is_owned_by = BEL
-								is_controlled_by = GER
+								is_fully_controlled_by = GER
 								NOT = { is_core_of = GER }
 							}
 						}
@@ -374,7 +374,7 @@ GER_reichskommissariats = {
 					}
 					if = {
 						limit = {
-							29 = { is_controlled_by = GER }
+							29 = { is_fully_controlled_by = GER }
 						}
 						29 = { transfer_state_to = BEL }
 						BEL = { add_state_core = 29 }
@@ -403,7 +403,7 @@ GER_reichskommissariats = {
 							limit = {
 								AND = {
 									is_owned_by = BEL
-									is_controlled_by = GER
+									is_fully_controlled_by = GER
 									NOT = { is_core_of = GER }
 								}
 							}
@@ -411,7 +411,7 @@ GER_reichskommissariats = {
 						}
 						if = {
 							limit = {
-								29 = { is_controlled_by = GER }
+								29 = { is_fully_controlled_by = GER }
 							}
 							29 = { transfer_state_to = BEL }
 							BEL = { add_state_core = 29 }
@@ -439,7 +439,7 @@ GER_reichskommissariats = {
 							limit = {
 								AND = {
 									is_owned_by = BEL
-									is_controlled_by = GER
+									is_fully_controlled_by = GER
 									NOT = { is_core_of = GER }
 								}
 							}
@@ -447,7 +447,7 @@ GER_reichskommissariats = {
 						}
 						if = {
 							limit = {
-								29 = { is_controlled_by = GER }
+								29 = { is_fully_controlled_by = GER }
 							}
 							29 = { transfer_state_to = BEL }
 							BEL = { add_state_core = 29 }
@@ -493,7 +493,7 @@ GER_reichskommissariats = {
 				every_state = {
 					limit = {
 						is_core_of = POL
-						is_controlled_by = GER
+						is_fully_controlled_by = GER
 					}
 					set_state_flag = SS_Country_Core_State_4
 				}
@@ -501,7 +501,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_owned_by = POL
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -510,7 +510,7 @@ GER_reichskommissariats = {
 				}
 				if = {
 					limit = {
-						92 = { is_controlled_by = GER }
+						92 = { is_fully_controlled_by = GER }
 					}
 					92 = { transfer_state_to = RGV add_compliance = 0.15 }
 				}
@@ -616,7 +616,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							has_state_flag = SS_Country_Core_State
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -734,7 +734,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							has_state_flag = SS_Country_Core_State_2
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -836,10 +836,10 @@ GER_reichskommissariats = {
 			UKR = { is_puppet_of = ROOT }
 			OR = {
 				203 = {
-					is_controlled_by = ROOT
+					is_fully_controlled_by = ROOT
 				}
 				137 = {
-					is_controlled_by = ROOT
+					is_fully_controlled_by = ROOT
 				}
 			}
 		}
@@ -860,7 +860,7 @@ GER_reichskommissariats = {
 				if = {
 					limit = {
 						137 = {
-							is_controlled_by = ROOT
+							is_fully_controlled_by = ROOT
 						}
 					}
 					137 = {
@@ -870,7 +870,7 @@ GER_reichskommissariats = {
 				if = {
 					limit = {
 						203 = {
-							is_controlled_by = ROOT
+							is_fully_controlled_by = ROOT
 						}
 					}
 					203 = {
@@ -881,7 +881,7 @@ GER_reichskommissariats = {
 			if = {
 				limit = {
 					137 = {
-						is_controlled_by = ROOT
+						is_fully_controlled_by = ROOT
 					}
 				}
 				137 = {
@@ -891,7 +891,7 @@ GER_reichskommissariats = {
 			if = {
 				limit = {
 					203 = {
-						is_controlled_by = ROOT
+						is_fully_controlled_by = ROOT
 					}
 				}
 				203 = {
@@ -927,7 +927,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RMK
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -947,7 +947,7 @@ GER_reichskommissariats = {
 			RMK = { exists = yes }
 			any_controlled_state = {
 				is_core_of = SOV
-				is_controlled_by = GER
+				is_fully_controlled_by = GER
 				NOT = { has_state_flag = GER_MOSKOW_IGNORE_STATES }
 			}
 		}
@@ -967,7 +967,7 @@ GER_reichskommissariats = {
 			every_state = {
 				limit = {
 					is_core_of = SOV
-					is_controlled_by = GER
+					is_fully_controlled_by = GER
 					NOT = { has_state_flag = GER_MOSKOW_IGNORE_STATES }
 				}
 				RMK = {
@@ -1005,7 +1005,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RKS
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1044,7 +1044,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RTK
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1107,7 +1107,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_owned_by = event_target:NOR_GER_PUPPET_MOD_side
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1122,7 +1122,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_owned_by = event_target:HOL_GER_PUPPET_MOD_side
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1137,7 +1137,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_owned_by = event_target:BEL_GER_PUPPET_MOD_side
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1152,7 +1152,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RTK
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1167,7 +1167,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RKS
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1182,7 +1182,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_core_of = RMK
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 							NOT = { has_state_flag = GER_MOSKOW_IGNORE_STATES }
 						}
@@ -1196,7 +1196,7 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						is_controlled_by = GER
+						is_fully_controlled_by = GER
 						has_state_flag = SS_Country_Core_State
 					}
 					add_core_of = SOV
@@ -1212,7 +1212,7 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						is_controlled_by = GER
+						is_fully_controlled_by = GER
 						is_core_of = UKR
 						has_state_flag = SS_Country_Core_State_2
 					}
@@ -1231,7 +1231,7 @@ GER_reichskommissariats = {
 					limit = {
 						AND = {
 							is_owned_by = POL
-							is_controlled_by = GER
+							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
 					}
@@ -1780,10 +1780,10 @@ SS_recruitment = {
 			}
 			OR = {
 				AND = {
-					121 = { is_controlled_by = GER }
-					133 = { is_controlled_by = GER }
-					136 = { is_controlled_by = GER }
-					120 = { is_controlled_by = GER }
+					121 = { is_fully_controlled_by = GER }
+					133 = { is_fully_controlled_by = GER }
+					136 = { is_fully_controlled_by = GER }
+					120 = { is_fully_controlled_by = GER }
 				}
 				AND = {
 					121 = { CONTROLLER = { is_subject_of = GER } }
@@ -1800,10 +1800,10 @@ SS_recruitment = {
 			}
 			OR = {
 				AND = {
-					121 = { is_controlled_by = GER }
-					133 = { is_controlled_by = GER }
-					136 = { is_controlled_by = GER }
-					120 = { is_controlled_by = GER }
+					121 = { is_fully_controlled_by = GER }
+					133 = { is_fully_controlled_by = GER }
+					136 = { is_fully_controlled_by = GER }
+					120 = { is_fully_controlled_by = GER }
 				}
 				AND = {
 					121 = { CONTROLLER = { is_subject_of = GER } }
@@ -2208,7 +2208,7 @@ SS_loot = {
 		}
 
 		available = {
-			10 = { is_controlled_by_GER_or_subject = yes }
+			10 = { is_fully_controlled_by =_GER_or_subject = yes }
 		}
 
 		ai_will_do = {
@@ -2363,7 +2363,7 @@ political_actions = {
 		target_trigger = {
 			FROM = {
 				has_resistance = yes
-				is_controlled_by = ROOT
+				is_fully_controlled_by = ROOT
 				OR = {
 					has_state_flag = SS_Country_Core_State
 					has_state_flag = SS_Country_Core_State_2

@@ -1,0 +1,27 @@
+state={
+	id=64
+	name="Berlin"
+	provinces={
+		6521 
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GER
+		
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+				dockyard = 3
+			}
+		}
+	}
+
+	manpower=4242501
+	state_category=megalopolis
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -947,6 +947,7 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		activation = {
+			NOT = { has_idea = GER_barbarossa_war }
 			has_global_flag = GER_Operation_Barbarossa_running
 			OR = {
 				AND = {

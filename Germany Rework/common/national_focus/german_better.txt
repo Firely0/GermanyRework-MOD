@@ -101,6 +101,15 @@ focus_tree = {
 				50 = {
 					set_demilitarized_zone = no
 				}
+				972 = {
+					set_demilitarized_zone = no
+				}
+				971 = {
+					set_demilitarized_zone = no
+				}
+				974 = {
+					set_demilitarized_zone = no
+				}
 			}
 			hidden_effect = {
 				if = {
@@ -236,6 +245,18 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 		completion_reward = {
+			hidden_effect = {
+				remove_trait = {
+					character = ger_wilhelm_canaris
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					character = ger_wilhelm_canaris
+					slot = political_advisor
+					trait = Head_of_abwehr
+				}
+			}
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ger_wilhelm_canaris
@@ -13026,8 +13047,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			custom_effect_tooltip = GER_Volkssturm_Training_Min
 			custom_effect_tooltip = GER_Minimizes_Training_tt
+			custom_effect_tooltip = GER_Volkssturm_Training_Min
 			set_country_flag = VOLKSSTURM_LESS_TRAINING
 			set_variable = {
 				GER_DEPLOY_TIME_OF_VOLKSSTURM = 30
@@ -13071,8 +13092,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			custom_effect_tooltip = GER_Volkssturm_Training_Basic
 			custom_effect_tooltip = GER_Basic_Training_tt
+			custom_effect_tooltip = GER_Volkssturm_Training_Basic
 			set_variable = {
 				GER_DEPLOY_TIME_OF_VOLKSSTURM = 60
 			}

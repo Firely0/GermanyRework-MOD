@@ -1147,6 +1147,7 @@ shared_focus = {
 			has_full_control_of_state = 59
 			has_full_control_of_state = 60
 			has_full_control_of_state = 54
+			has_full_control_of_state = 973
 		}
 	}
 	ai_will_do = {
@@ -1245,6 +1246,16 @@ shared_focus = {
 					}
 				}
 			}
+			973 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 }
@@ -1268,6 +1279,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_NAVY_XP }
 	completion_reward = {
 		navy_experience = 50
+		country_event = { id = GER_eng_naval_agreement.1 hours = 3 }
 	}
 }
 
@@ -1286,6 +1298,7 @@ shared_focus= {
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		hidden_effect = {
+			remove_ideas = Landon_Treaty
 			GER_upgrade_kriegsmarine_effect = yes
 			set_variable = {
 				GER_positioning = 0.1
@@ -1740,14 +1753,8 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		if = {
-			limit = {
-				has_idea = Landon_Treaty
-			}
-			swap_ideas = {
-				remove_idea = Landon_Treaty
-				add_idea = Landon_Treaty_sub_focus
-			}
+		hidden_effect = {
+			remove_ideas = Landon_Treaty
 		}
 		if = {
 			limit = {
@@ -3191,6 +3198,16 @@ shared_focus = {
 	completion_reward = {
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = speer
+		custom_effect_tooltip = SOV_war_economy_stability_tt
+		if = {
+			limit = {
+				has_war = no
+			}
+			add_stability = -0.1
+		}
+		else = {
+			custom_effect_tooltip = SOV_war_economy_stability_war_tt
+		}
 		if = {
 			limit = {
 				NOT = { has_idea = war_economy }

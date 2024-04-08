@@ -15,7 +15,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 	raiding_fleet_naval_manufacturer_focus = {
 		random = no
 		equipment_bonus = {
@@ -38,7 +37,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 	battlefleet_designer_focus = {
 		random = no
 		equipment_bonus = {
@@ -56,7 +54,6 @@ leader_traits = {
 			factor = 1
 		}
 	}	
-
 	repair_and_refurbishment = {
 		# Just For Looks prob.
 		random = no
@@ -76,7 +73,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
 	krupp_tank = {
 		random = no
 		equipment_bonus = {
@@ -350,6 +346,19 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	Head_of_abwehr = {
+		random = no
+		sprite = 13
+
+		intel_network_gain_factor = 0.05
+		diplomatic_pressure_mission_factor = 0.1 
+		civilian_intel_decryption_bonus = 5
+		civilian_intel_to_others = -10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 	smooth_talking_charmer_ger  = {
 		random = no
 		sprite = 13
