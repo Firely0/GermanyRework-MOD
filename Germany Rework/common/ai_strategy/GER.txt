@@ -3572,6 +3572,67 @@ ENG_keep_peace_with_Germany = {
 	}
 }
 
+# Danzig
+
+DNZ_befrinend = {
+	allowed = {
+		original_tag = DNZ
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort = {
+		has_war = GER
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = 25
+	}
+
+	ai_strategy = {
+		type = protect
+		id = "GER"
+		value = 25
+	}
+}
+
+GER_DNZ_befriend = {
+	allowed = {
+		original_tag = GER
+	}
+	
+	enable = {
+		always = yes
+	}
+
+	abort = {
+		has_war = DNZ
+		has_war = POL
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "GER"
+		value = 75
+	}
+
+	ai_strategy = {
+		type = protect
+		id = "DNZ"
+		value = 75
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "DNZ"
+		value = 25
+	}
+}
+
 # Sweden
 
 GER_protect_swedish_ore = {

@@ -35,3 +35,15 @@ SOV_state_bombed_modifier = {
 	org_loss_when_moving = 0.1
 	army_morale_factor = -0.1
 }
+SOV_state_naval_blockade = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_low_supply
+
+	supply_factor = -0.5
+	out_of_supply_factor = -0.5
+	no_supply_grace = 24
+}
+SOV_state_no_naval_blockade = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_supply
+}

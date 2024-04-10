@@ -4,6 +4,10 @@ GER = {
 	color = HSV { 0 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
+DNZ	= {
+	color = rgb { 175 0 42 }
+	color_ui = rgb { 175 0 42 }
+}
 WGR = {
     color = rgb { 0 128 255 }
     color_ui = rgb { 0 128 255 }
@@ -36,14 +40,17 @@ LUX = {
 	color = rgb { 65 175 179 }
 	color_ui = rgb { 85 228 233 }
 }
-BEL = { color 	 = rgb { 193 171 8  }
-		color_ui = rgb { 251 222 10 }
-	  }
-HOL = {	color = rgb { 203 138 74 }
-		color_ui = rgb { 255 179 96 }
+BEL = { 
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 251 222 10 }
 }
-CZE = {	color = rgb { 54 167 156 }
-		color_ui = rgb { 70 217 203 }
+HOL = {	
+	color = rgb { 203 138 74 }
+	color_ui = rgb { 255 179 96 }
+}
+CZE = {	
+	color = rgb { 54 167 156 }
+	color_ui = rgb { 70 217 203 }
 }
 POL = {
 	color = rgb { 214 102 139 }

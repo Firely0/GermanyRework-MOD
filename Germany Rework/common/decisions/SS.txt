@@ -2208,7 +2208,7 @@ SS_loot = {
 		}
 
 		available = {
-			10 = { is_fully_controlled_by =_GER_or_subject = yes }
+			10 = { is_controlled_by_GER_or_subject = yes }
 		}
 
 		ai_will_do = {

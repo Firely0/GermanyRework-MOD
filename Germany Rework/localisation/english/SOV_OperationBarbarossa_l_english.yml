@@ -7,7 +7,8 @@
  SOV_great_patriotic_war_Orders:0 "@SOV High Command" # ---> Main Decision
  SOV_great_patriotic_war_Orders_desc:0 ""
 
- # Allied Invasion of Italy
+ # Allied Invasions
+ SOV_Allied_Invasion_of_Germany:0 "@USA @ENG @FRA Allied Forces landed in @GER Germany"
  SOV_Allied_Invasion_of_Italy:0 "@USA @ENG @FRA Allied Forces landed in @ITA Italy"
  SOV_Allied_Invasion_of_Italy_2:0 "@ITA Fall of §YRome§!"
 
@@ -61,6 +62,10 @@
  SOV_Great_Patriotic_War_desc:0 ""
  SOV_Great_Patriotic_War_v2:0 "Great Patriotic War"
  SOV_Great_Patriotic_War_v2_desc:0 ""
+
+ #Sevastopol Naval Blockade
+ SOV_state_no_naval_blockade:0 "Naval Blockade is Not Effective"
+ SOV_state_naval_blockade:0 "Naval Blockade is Effective"
 
  # Allied Support
  SOV_export_guns:0 "Allied Support"

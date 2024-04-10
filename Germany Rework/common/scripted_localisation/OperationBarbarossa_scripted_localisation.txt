@@ -16,6 +16,12 @@ defined_text = {
 		}
 		localization_key = Operation_barbarossa_start
 	}
+	text = { # Allied Invasion of Germany - Show for 14 day/s
+		trigger = {
+			has_active_mission = Allied_Invasion_of_Germany
+		}
+		localization_key = Allied_Invasion_of_Germany_text
+	}
 	text = { # Allied Invasion of Italy - Show for 14 day/s
 		trigger = {
 			ITA = { is_in_faction_with = GER has_civil_war = no }

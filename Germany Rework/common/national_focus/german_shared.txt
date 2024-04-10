@@ -3434,8 +3434,6 @@ shared_focus = {
 	}
 }
 
-
-
 shared_focus = {
 	id = GER_naval_air_effort_a
 	text = naval_air_effort
@@ -3716,6 +3714,98 @@ shared_focus = {
 	}
 }
 
+shared_focus = {
+	id = GER_air_innovation_2_a
+	icon = GFX_goal_r56_goal_generic_air_fighter2_new
+	text = GER_air_innovation_2
+	prerequisite = { focus = GER_Improve_Des focus = GER_Improve_CAS_Range focus = GER_Improve_TAC }
+	x = 5
+	y = 2
+	relative_position_id = GER_strategic_air_effort_a
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		if = {
+			limit = {
+				has_opinion_modifier = sov_ger_treaty
+				NOT = { has_war_with = SOV }
+			}
+			SOV = {
+				country_event = { id = germany.78 days = 1 }
+			}
+		}
+		add_ideas = GER_air_innovations_2_idea
+		add_tech_bonus = {
+			name = radar_tech_bonus
+			bonus = 1.0
+			uses = 1
+			category = radar_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_rocketry_focus_a
+	icon = GFX_goal_GER_rocketry_focus
+	text = GER_rocketry_focus
+	relative_position_id = GER_air_innovation_2_a
+	prerequisite = { focus = GER_air_innovation_2_a }
+	x = -1
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		add_ideas = GER_rocketry_idea
+		add_tech_bonus = {
+			name = GER_rocketry_focus
+			bonus = 1.0
+			uses = 2
+			category = rocketry
+		}
+		add_tech_bonus = {
+			name = GER_rocketry_focus
+			bonus = 1.0
+			uses = 2
+			category = jet_technology
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_wunderwaffe_a
+	text = GER_wunderwaffe
+	icon = GFX_focus_wonderweapons
+	prerequisite = { focus = GER_air_innovation_2_a }
+	x = 2
+	y = 0
+	relative_position_id = GER_rocketry_focus_a
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 1.0
+			uses = 1
+			category = nuclear
+			category = rocketry
+		}
+	}
+}
 
 # Wehrmacht
 
@@ -4028,10 +4118,7 @@ shared_focus = {
 		NOT = { has_completed_focus = GER_Battle_Plan }
 		OR = {
 			has_completed_focus = GER_a_shadow_of_past
-			AND = {
-				has_completed_focus = GER_soviet_ally
-				SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
-			}
+			SOV = { has_country_flag = SOV_GER_ALIANCE_Y }
 		}
 	}
 	x = -2
@@ -4204,7 +4291,7 @@ shared_focus = {
 	mutually_exclusive = { focus = GER_follow_wehrmacht_design }
 	search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
 	allow_branch = {
-		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_a_shadow_of_past has_completed_focus = GER_soviet_ally } }
+		NOT = { OR = { has_completed_focus = GER_Battle_Plan has_completed_focus = GER_a_shadow_of_past SOV = { has_country_flag = SOV_GER_ALIANCE_Y } } }
 	}
 	x = -2
 	y = 4
@@ -5594,99 +5681,6 @@ shared_focus = {
 				}
 				design_team = mio:GER_Mercedes_benz_organization
 			}
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_air_innovation_2_a
-	icon = GFX_goal_r56_goal_generic_air_fighter2_new
-	text = GER_air_innovation_2
-	prerequisite = { focus = GER_Improve_Des focus = GER_Improve_CAS_Range focus = GER_Improve_TAC }
-	x = 5
-	y = 2
-	relative_position_id = GER_strategic_air_effort_a
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
-	completion_reward = {
-		if = {
-			limit = {
-				has_opinion_modifier = sov_ger_treaty
-				NOT = { has_war_with = SOV }
-			}
-			SOV = {
-				country_event = { id = germany.78 days = 1 }
-			}
-		}
-		add_ideas = GER_air_innovations_2_idea
-		add_tech_bonus = {
-			name = radar_tech_bonus
-			bonus = 1.0
-			uses = 1
-			category = radar_tech
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_rocketry_focus_a
-	icon = GFX_goal_GER_rocketry_focus
-	text = GER_rocketry_focus
-	relative_position_id = GER_air_innovation_2_a
-	prerequisite = { focus = GER_air_innovation_2_a }
-	x = -1
-	y = 1
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
-	completion_reward = {
-		add_ideas = GER_rocketry_idea
-		add_tech_bonus = {
-			name = GER_rocketry_focus
-			bonus = 1.0
-			uses = 2
-			category = rocketry
-		}
-		add_tech_bonus = {
-			name = GER_rocketry_focus
-			bonus = 1.0
-			uses = 2
-			category = jet_technology
-		}
-	}
-}
-
-shared_focus = {
-	id = GER_wunderwaffe_a
-	text = GER_wunderwaffe
-	icon = GFX_focus_wonderweapons
-	prerequisite = { focus = GER_air_innovation_2_a }
-	x = 2
-	y = 0
-	relative_position_id = GER_rocketry_focus_a
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-
-	available_if_capitulated = yes
-	search_filters = { FOCUS_FILTER_RESEARCH }
-	completion_reward = {
-		add_tech_bonus = {
-			name = secret_bonus
-			bonus = 1.0
-			uses = 1
-			category = nuclear
-			category = rocketry
 		}
 	}
 }

@@ -742,6 +742,88 @@ country_event = {
 }
 
 country_event = {
+	id = gerb.83
+	title = "Free City is Under Attack!"
+	desc = ""
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes # Triggered with on_actions
+
+	option = {
+		name = "We Must Honour the Agreement"
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_civil_war = yes
+					is_puppet = yes
+					original_tag = SPR
+					has_government = fascism
+					has_government = neutrality
+					has_government = communism
+					is_in_faction_with = event_target:league_of_nations_protected_aggressor
+					has_non_aggression_pact_with = event_target:league_of_nations_protected_aggressor
+				}
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					POL = {
+						is_in_faction = no
+					}
+				}
+				POL = {
+					set_rule = {
+						can_create_factions = yes
+					}
+					create_faction = "League of Nations"
+					add_to_faction = DNZ
+				}
+			}
+			add_to_war = {
+				targeted_alliance = DNZ
+				enemy = event_target:league_of_nations_protected_aggressor
+				hostility_reason = ally
+			}
+			POL = {
+				add_to_faction = ROOT
+			}
+		}
+
+	}
+
+	option = {
+		name = "There's nothing we can do."
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 100
+				OR = {
+					has_civil_war = yes
+					is_puppet = yes
+					original_tag = SPR
+					has_government = fascism
+					has_government = neutrality
+					has_government = communism
+					is_in_faction_with = event_target:league_of_nations_protected_aggressor
+					has_non_aggression_pact_with = event_target:league_of_nations_protected_aggressor
+				}
+			}
+		}
+
+		hidden_effect = {
+			remove_ideas = league_of_nations_member_idea
+		}
+		
+	}
+
+}
+
+country_event = {
 	id = ger_around_maginot_event.1
 	title = "Victory in Poland"
 	desc = "[Root.GetFrancedesc]"

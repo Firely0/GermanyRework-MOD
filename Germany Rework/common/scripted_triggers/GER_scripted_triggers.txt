@@ -254,8 +254,15 @@ is_literally_japan = {
 
 any_state_is_norwegen = {
 	OR = {
-		NOT = { event_target:NOR_GER_PUPPET_MOD_side = { is_puppet_of = GER } }
-		NOT = { NOR = { is_puppet_of = GER } }
+		if = {
+			limit = {
+				NOT = { has_dlc "Arms Against Tyranny" }
+			}
+			NOT = { event_target:NOR_GER_PUPPET_MOD_side = { is_puppet_of = GER } }
+		}
+		else = {
+			NOT = { NOR = { is_puppet_of = GER } }
+		}
 	}
 	any_controlled_state = {
 		OR = {

@@ -343,8 +343,8 @@ GER_Operation_Barbarossa_V = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 206 
 				state = 242
+				state = 206 
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -1156,6 +1156,36 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 	}
 
+	Allied_Invasion_of_Germany = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 14
+		selectable_mission = no
+		fire_only_once = yes
+		is_good = no
+		priority = 100
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
+	}	
+
 	Invade_baltics = {
 		icon = GFX_decision_generic_operation
 		priority = 90
@@ -1173,22 +1203,18 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		visible = {
-			has_idea = GER_barbarossa
 			has_global_flag = GER_Operation_Barbarossa_running
 			OR = {
 				LIT = {
 					exists = yes
-					is_puppet = no
 					NOT = { is_in_faction_with = GER }
 				}
 				LAT = {
 					exists = yes
-					is_puppet = no
 					NOT = { is_in_faction_with = GER }
 				}
 				EST = {
 					exists = yes
-					is_puppet = no
 					NOT = { is_in_faction_with = GER }
 				}
 			}
@@ -1197,7 +1223,7 @@ GER_Operation_Barbarossa_High_Command = {
 		complete_effect = {
 			if = {
 				limit = {
-					LIT = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
+					LIT = { exists = yes NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = LIT
@@ -1206,7 +1232,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 			if = {
 				limit = {
-					LAT = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
+					LAT = { exists = yes NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = LAT
@@ -1215,7 +1241,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 			if = {
 				limit = {
-					EST = { exists = yes is_puppet = no NOT = { is_in_faction_with = GER } }
+					EST = { exists = yes NOT = { is_in_faction_with = GER } }
 				}
 				declare_war_on = {
 					target = EST

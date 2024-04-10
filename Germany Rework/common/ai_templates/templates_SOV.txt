@@ -537,7 +537,7 @@ infantry_SOV = {
 
 			regiments = {
 				infantry = 9
-				artillery_brigade = 2
+				artillery_brigade = 1
 			}
 		}
 
@@ -570,7 +570,6 @@ infantry_SOV = {
 				factor = 5
 				OR = {
 					has_completed_focus = SOV_lessons_of_war
-					has_completed_focus = SOV_military_modernization
 				}
 			}
 

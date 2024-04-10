@@ -38,6 +38,23 @@ ideas = {
 
 	country = {
 
+		league_of_nations_protected = {
+			picture = generic_victors_of_ww1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+
 		GER_four_year_plan_fake = {
 			picture = FourYearPlan
 			allowed = {
@@ -1516,7 +1533,6 @@ ideas = {
 				naval_invasion_prep_speed = 0.1
 				naval_invasion_capacity = 10
 				amphibious_invasion = 0.1
-				extra_marine_supply_grace = 96
 			}
 		}
 

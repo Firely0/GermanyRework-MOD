@@ -12,7 +12,7 @@
  GER_conquer_Lithuania:0 "Conquer @LITLithuania"
  GER_conquer_Misk:0 "Conquer Minsk"
  GER_conquer_Misk_2:0 "Conquer Minsk"
- GER_conquer_Moscow:0 "Conquer Moscow"
+ GER_conquer_Moscow:0 "Conquer @SOVMoscow"
  GER_conquer_Orel:0 "Conquer Orel"
  GER_conquer_Stalingrad:0 "Conquer Stalingrad"
  GER_conquer_Kiev:0 "Canquer Kiev"
@@ -39,7 +39,8 @@
  GER_winter_war_tooltip:0 "Our Army will continue as normal according to our preparations for the winter or you will have to deal with additional problems until we find definite solutions for the harsh winter conditions."
  GER_winter_ready_army_tooltip:0 "£wehrmacht_texticon Not Affected by Winter Conditions"
  
- # Allied Invasion of Italy
+ # Allied Invasions
+ Allied_Invasion_of_Germany:0 "@USA @ENG @FRA Allied Forces landed in @GER Germany"
  Allied_Invasion_of_Italy:0 "@USA @ENG @FRA Allied Forces landed in @ITA Italy"
  Allied_Invasion_of_Italy_2:0 "@ITA Fall of §YRome§!"
 
@@ -65,7 +66,8 @@
  #Scripted Localization ---->
  Operation_barbarossa_start:0 "@GER [ROOT.GetLeader]: We only have to kick in the door and the whole rotten structure will come crashing down. \n\n@GER Unknown General: Ah shit here we go again"
 
- # Allied Invasion of Italy
+ # Allied Invasions
+ Allied_Invasion_of_Germany_text:0 "@GER (Sleeping) [ROOT.GetLeader]: ....Greater Germany....London...Kebab.....(Waking up)..  \n\n@GER Unknown General: Hey you finally awake you trying to cro.. We must send the Reserve Army to the region and destroy it before the reinforcements arrive"
  Allied_Invasion_of_Italy_text:0 "@GER [ROOT.GetLeader]: What Are You Doing [ITA.GetLeader] You're Ruining All Plans! \n\n@GER Unknown General: We must send our reserve army to stop further occupation of the region"
  Allied_Invasion_of_Italy_text_2:0 "@GER [ROOT.GetLeader]: Send in the SS and the Wehrmacht. Get the upper ranks out safely. \n\n@ITA Unknown General: Needing Support ASAP!"
 
@@ -83,7 +85,7 @@
  GER_winter_war_infantry:0 "Harsh Winter Conditions"
  GER_winter_war_infantry_desc:0 ""
  GER_War_Exhaustion:0 "War Exhaustion"
- GER_War_Exhaustion_desc:0 "After our plan to quickly seize strategic locations against the @SOV [SOV.getname] did not pay off, our exhausted army will have to recover over a period of time.The effects are permanent if the Surrender Limit exceeds §R15%§! or the War Support is below §R50%§!."
+ GER_War_Exhaustion_desc:0 "After our plan to quickly seize strategic locations against the @SOV [SOV.getname] did not pay off, our exhausted army will have to recover over a period of time. \nThe effects are permanent if the Surrender Limit exceeds §R15%§! or the War Support is below §R50%§!"
  GER_barbarossa_war:0 "Unternehmen Barbarossa"
  GER_barbarossa_war_desc:0 ""
 

@@ -245,21 +245,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 		completion_reward = {
-			hidden_effect = {
-				remove_trait = {
-					character = ger_wilhelm_canaris
-					slot = political_advisor
-					trait = head_of_intelligence
-				}
-				add_trait = {
-					character = ger_wilhelm_canaris
-					slot = political_advisor
-					trait = Head_of_abwehr
-				}
-			}
 			mark_focus_tree_layout_dirty = yes
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = ger_wilhelm_canaris
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -285,6 +271,8 @@ focus_tree = {
 					}
 					add_ideas = abwehr_agent_r
 				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = ger_wilhelm_canaris
 			}
 			else_if = {
 				limit = {
@@ -1236,31 +1224,23 @@ focus_tree = {
 		}
 		will_lead_to_war_with = POL
 		available = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				OR = {
-					NOT = {
-						has_war_with = CZE
-					}
-					CZE = {
-						has_capitulated = yes
-					}
-				}
-			}
 			is_subject = no
 			has_army_manpower = {
 				size > 949999
 			}
 			#100 div			
 			#Make custom trigger tooltip here
-			85 = {
-				owner = {
-					original_tag = POL
+			OR = {
+				DNZ = {
+					is_puppet_of = POL
 				}
-				controller = {
-					original_tag = POL
+				85 = {
+					owner = {
+						original_tag = POL
+					}
+					controller = {
+						original_tag = POL
+					}
 				}
 			}
 			OR = {
@@ -1290,12 +1270,17 @@ focus_tree = {
 				has_war_with = POL
 				is_in_faction_with = POL
 				NOT = {
-					85 = {
-						controller = {
-							original_tag = POL
+					OR = {
+						DNZ = {
+							is_puppet_of = POL
 						}
-						owner = {
-							original_tag = POL
+						85 = {
+							controller = {
+								original_tag = POL
+							}
+							owner = {
+								original_tag = POL
+							}
 						}
 					}
 				}
@@ -1356,10 +1341,18 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					85 = {
-						controller = {
-							tag = POL
-							has_civil_war = no
+					OR = {
+						DNZ = {
+							is_puppet_of = POL
+						}
+						85 = {
+							controller = {
+								original_tag = POL
+								has_civil_war = no
+							}
+							owner = {
+								original_tag = POL
+							}
 						}
 					}
 				}
@@ -1422,11 +1415,16 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					85 = {
-						owner = {
-							OR = {
-								original_tag = POL
-								tag = POL
+					OR = {
+						DNZ = {
+							is_puppet_of = POL
+						}
+						85 = {
+							owner = {
+								OR = {
+									original_tag = POL
+									tag = POL
+								}
 							}
 						}
 					}
@@ -11365,8 +11363,22 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				AND = {
-					has_full_control_of_state = 195
-					has_full_control_of_state = 217
+					195 = {
+						CONTROLLER = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					217 = {
+						CONTROLLER = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
 					all_owned_state = {
 						is_fully_controlled_by = ROOT
 					}
@@ -14381,6 +14393,7 @@ focus_tree = {
 					target = SOV
 					modifier = SOV_strengthened_relations_with_us
 				}
+				army_experience = 25
 			}
 		}
 	}

@@ -1098,7 +1098,7 @@ focus_tree = {
 
 	focus = {
 		id = army_rearmament_focus
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_generic_commonwealth_build_infantry
 
         relative_position_id = general_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }

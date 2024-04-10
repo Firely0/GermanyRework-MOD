@@ -31,6 +31,123 @@ on_actions = {
 					add_ideas = i_dont_use_wargoal
 				}
 			}
+			POL = {
+				set_autonomy = {
+					target = DNZ
+					autonomous_state = autonomy_dnz_free_city
+				}
+			}
+			GER = {
+				diplomatic_relation = {
+					country = DNZ
+					relation = guarantee
+					active = yes
+				}
+				add_opinion_modifier = {
+					target = DNZ
+					modifier = danzigisgerman
+				}
+			}
+			DNZ = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = danzigisgerman
+				}
+				country_lock_all_division_template = yes
+				set_popularities = {
+					democratic = 22
+					fascism = 62
+					communism = 6
+					neutrality = 10
+				}				
+			}
+			85 = {
+				remove_dynamic_modifier = {
+					modifier = international_city
+				}
+			}
+			effect = {
+				# League of Nations Members
+				IF = {
+					limit = {
+						date < 1939.1.1 # don't bother with LoN after 1939
+					}
+					every_country = {
+						limit = {
+							OR = {
+								### Original Members
+								tag = ARG
+								tag = BEL
+								tag = BOL
+								tag = ENG
+								tag = AST
+								tag = CAN
+								tag = RAJ
+								tag = NZL
+								tag = SAF
+								tag = CHI
+								tag = COL
+								tag = CUB
+								tag = CZE
+								tag = DEN
+								tag = FRA
+								tag = GRE
+								tag = HAI
+								tag = ITA
+								tag = LIB
+								tag = HOL
+								tag = NOR
+								tag = PAN
+								tag = PER
+								tag = PRU
+								tag = POL
+								tag = POR
+								tag = ROM
+								tag = SIA
+								tag = SPR
+								tag = SWE
+								tag = SWI
+								tag = URU
+								tag = VEN
+								tag = YUG
+								### 1920
+								tag = AUS
+								tag = BUL
+								tag = COS
+								tag = FIN
+								tag = LUX
+								tag = ALB
+								### 1921
+								tag = EST
+								tag = LAT
+								tag = LIT
+								### 1922
+								tag = HUN
+								### 1923
+								tag = IRE
+								tag = ETH
+								### 1924
+								tag = DOM
+								### 1931
+								tag = MEX
+								### 1932
+								tag = TUR
+								tag = IRQ
+								### 1934
+								tag = SOV
+								tag = AFG
+								tag = ECU
+							}
+						}
+						add_ideas = league_of_nations_member_idea
+					}
+	
+				}
+			}
 			set_global_flag = SOV_NOT_HIDE_ALWAYS
 		}
 	}
@@ -224,6 +341,28 @@ on_actions = {
 					}
 				}
 				country_event = { id = ger_kaiser_in_exile.7 }
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = GER_STOP_CHECKING_LANDING }
+					FROM = {
+						original_tag = GER
+						has_war = yes
+					}
+					FROM.FROM = {
+						has_state_flag = GER_COSTAL_STATE_MAIN_LAND
+						controller = {
+							has_civil_war = no
+						}
+					}
+				}
+				GER = { activate_mission = Allied_Invasion_of_Germany }
+				SOV = { activate_mission = SOV_Allied_Invasion_of_Germany }
+				set_global_flag = GER_STOP_CHECKING_LANDING
 			}
 		}
 	}
@@ -641,7 +780,54 @@ on_actions = {
 						}
 						set_state_flag = ITA_main_land
 					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 806
+								state = 19
+								state = 23
+								state = 30
+								state = 14
+								state = 15
+								state = 785
+								state = 29
+								state = 6
+								state = 35
+								state = 7
+								state = 36
+								state = 56
+								state = 59
+								state = 58
+								state = 909
+								state = 61
+								state = 62
+								state = 63
+								state = 5
+								state = 763
+								state = 85
+								state = 807
+								state = 188
+							}
+						}
+						set_state_flag = GER_COSTAL_STATE_MAIN_LAND
+					}
 					play_song = "GR_Western_Front_Armies"
+				}
+			}
+			if = {
+				limit = {
+					FROM = { has_idea = league_of_nations_protected }
+				}
+				ROOT = {
+					save_global_event_target_as = league_of_nations_protected_aggressor
+					every_country = {
+						limit = {
+							has_idea = league_of_nations_member_idea
+						}
+						country_event = {
+							id = gerb.83 hours = 1
+						}
+					}
 				}
 			}
 		}
@@ -713,6 +899,23 @@ on_actions = {
 				limit = {
 					tag = GER
 					FROM = {
+						tag = ENG
+					}
+					has_completed_focus = GER_operation_sealion
+					has_idea = Operation_Sea_Lion
+				}
+				GER = {
+					activate_mission = GER_plan_working_fine_or_not
+					activate_mission = GER_dover_portsmouth_subtraction
+					activate_mission = GER_plymouth_subtraction
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+					FROM = {
 						tag = YUG
 					}
 				}
@@ -735,15 +938,36 @@ on_actions = {
 				limit = {
 					tag = GER
 					FROM = {
-						tag = ENG
+						tag = POL
 					}
-					has_completed_focus = GER_operation_sealion
-					has_idea = Operation_Sea_Lion
 				}
-				GER = {
-					activate_mission = GER_plan_working_fine_or_not
-					activate_mission = GER_dover_portsmouth_subtraction
-					activate_mission = GER_plymouth_subtraction
+				hidden_effect = {
+					if = {
+						limit = {
+							DNZ = {
+								is_puppet_of = POL
+							}
+						}
+						85 = { transfer_state_to = GER }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POL
+					FROM = {
+						tag = GER
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							DNZ = {
+								is_puppet_of = POL
+							}
+						}
+						85 = { transfer_state_to = GER }
+					}
 				}
 			}
 		}
