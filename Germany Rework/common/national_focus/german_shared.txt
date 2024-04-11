@@ -3388,7 +3388,7 @@ shared_focus = {
 	icon = GFX_focus_generic_armored_air_support
 	prerequisite = { focus = GER_Operational_Integratiy }
 	relative_position_id = GER_air_innovation_a
-	x = 3
+	x = 5
 	y = 2
 	cost = 5
 	
@@ -3414,7 +3414,7 @@ shared_focus = {
 	icon = GFX_goal_r56_goal_generic_air_heavy_fighter_new
 	text = GER_tactical_air_effort
 	search_filters = { FOCUS_FILTER_RESEARCH }
-	x = 5
+	x = 3
 	y = 2
 	relative_position_id = GER_air_innovation_a
 	prerequisite = { focus = GER_Operational_Integratiy }

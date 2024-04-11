@@ -43,9 +43,6 @@ peace_ai_desires = {
             has_global_flag = yalta_agreed_flag
             ROOT = {
                 NOT = { original_tag = FRA }
-               #has_government = democratic
-               #is_in_faction_with = FRA
-                FRA = { has_war_with = GER }
             }
             FROM.FROM = {
                 original_tag = GER
@@ -91,11 +88,6 @@ peace_ai_desires = {
             has_global_flag = yalta_agreed_flag
             ROOT = {
                 NOT = { original_tag = USA }
-               # has_government = democratic
-               # is_in_faction_with = USA
-                USA = {
-                    has_war_with = GER 
-                }
             }
             FROM.FROM = {
                 original_tag = GER
@@ -147,9 +139,6 @@ peace_ai_desires = {
             has_global_flag = yalta_agreed_flag
             ROOT = {
                 NOT = { original_tag = ENG }
-                #has_government = democratic
-                #is_in_faction_with = ENG 
-                ENG = { has_war_with = GER }
             }
             FROM.FROM = {
                 original_tag = GER
@@ -171,16 +160,53 @@ peace_ai_desires = {
         }
         ai_desire = -200
     }
-    ENG_liberate_aus = {
-        peace_action_type = liberate
-		enable = {
+    # Soviet Yalta wants
+    SOV_yalta_puppet = {
+        peace_action_type = puppet
+        enable = {
             has_global_flag = yalta_agreed_flag
-            original_tag = ENG
-			has_government = democratic
-			ROOT.FROM = {
-				tag = AUS
-			}
-		}
-		ai_desire = 2000
+            ROOT = {
+                original_tag = SOV
+            }
+            FROM = {
+                original_tag = GER
+            }
+            FROM.FROM.FROM = {
+                OR = {
+                    state = 60
+                    state = 65
+                    state = 973
+                    state = 64
+                    state = 61
+                    state = 62
+                }
+            }
+        }
+        ai_desire = 250
+    }
+    # Don't interfere with Soviet areas
+    Comitern_SOV_yalta_puppet = {
+        peace_action_type = puppet
+        enable = {
+            has_global_flag = yalta_agreed_flag
+            ROOT = {
+                NOT = { original_tag = SOV }
+            }
+            FROM.FROM = {
+                original_tag = GER
+            }
+           
+            FROM.FROM.FROM = {
+                OR = {
+                    state = 60
+                    state = 65
+                    state = 973
+                    state = 64
+                    state = 61
+                    state = 62
+                }
+            }
+        }
+        ai_desire = -200
     }
 }

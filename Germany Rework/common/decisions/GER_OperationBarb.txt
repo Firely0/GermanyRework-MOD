@@ -1188,7 +1188,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 	Invade_baltics = {
 		icon = GFX_decision_generic_operation
-		priority = 90
+		priority = 99
 		days_remove = 28
 
 		ai_will_do = {
@@ -1220,7 +1220,7 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 		}
 
-		complete_effect = {
+		remove_effect = {
 			if = {
 				limit = {
 					LIT = { exists = yes NOT = { is_in_faction_with = GER } }
@@ -1248,6 +1248,9 @@ GER_Operation_Barbarossa_High_Command = {
 					type = annex_everything
 				}
 			}
+		}
+
+		complete_effect = {
 		}
 	}
 
