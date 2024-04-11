@@ -16,26 +16,6 @@ defined_text = {
 		}
 		localization_key = Operation_barbarossa_start
 	}
-	text = { # Allied Invasion of Germany - Show for 14 day/s
-		trigger = {
-			has_active_mission = Allied_Invasion_of_Germany
-		}
-		localization_key = Allied_Invasion_of_Germany_text
-	}
-	text = { # Allied Invasion of Italy - Show for 14 day/s
-		trigger = {
-			ITA = { is_in_faction_with = GER has_civil_war = no }
-			has_active_mission = Allied_Invasion_of_Italy
-		}
-		localization_key = Allied_Invasion_of_Italy_text
-	}
-	text = { # Allied Invasion of Italy - Fall of Rome - Show for 14 day/s
-		trigger = {
-			ITA = { is_in_faction_with = GER has_civil_war = no }
-			has_active_mission = Allied_Invasion_of_Italy_2
-		}
-		localization_key = Allied_Invasion_of_Italy_text_2
-	}
 	text = { # Winter Info - Ready for Winter - 1936-1940 Show for 7 day/s
 		trigger = {
 			has_active_mission = The_Soviet_Winter
@@ -176,6 +156,67 @@ defined_text = {
 		}
 		localization_key = Operation_barbarossa_winter_not_ready_47
 	}
+	text = { # Germans Offensive Targets -- Show for 7 day/s
+		trigger = {
+			has_active_mission = German_offensive_targets
+		}
+		localization_key = German_offensive_targets_text
+	}
+	text = { # Next Phase -- Show for 7 day/s
+		trigger = {
+			OR = {
+				has_global_flag = GER_Operation_Barbarossa_at_phase_2_text
+				has_global_flag = GER_Operation_Barbarossa_at_phase_3_text
+			}
+		}
+		localization_key = OperationBarbarossa_next_phase
+	}
+	text = { # Allied Invasion of Germany - Show for 14 day/s
+		trigger = {
+			has_active_mission = Allied_Invasion_of_Germany
+		}
+		localization_key = Allied_Invasion_of_Germany_text
+	}
+	text = { # Allied Invasion of Italy - Show for 14 day/s
+		trigger = {
+			ITA = { is_in_faction_with = GER has_civil_war = no }
+			has_active_mission = Allied_Invasion_of_Italy
+		}
+		localization_key = Allied_Invasion_of_Italy_text
+	}
+	text = { # Allied Invasion of Italy - Fall of Rome - Show for 14 day/s
+		trigger = {
+			ITA = { is_in_faction_with = GER has_civil_war = no }
+			has_active_mission = Allied_Invasion_of_Italy_2
+		}
+		localization_key = Allied_Invasion_of_Italy_text_2
+	}
+}
+
+defined_text = {
+	name = Great_Patriotic_War_text
+	text = { # Germans Kicking the Door -- Show for 30 day/s
+		trigger = {
+			has_global_flag = Great_Patriotic_War_30_days
+		}
+		localization_key = SOV_Operation_barbarossa_start
+	}
+}
+
+defined_text = {
+	name = OperationBarbarossa_next_phase_scp
+	text = {
+		trigger = {
+			has_global_flag = GER_Operation_Barbarossa_at_phase_2_text
+		}
+		localization_key = GER_Operation_Barbarossa_at_phase_2_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Operation_Barbarossa_at_phase_3_text
+		}
+		localization_key = GER_Operation_Barbarossa_at_phase_3_text
+	}
 }
 
 defined_text = {
@@ -213,11 +254,77 @@ defined_text = {
 }
 
 defined_text = {
-	name = Great_Patriotic_War_text
-	text = { # Germans Kicking the Door -- Show for 30 day/s
+	name = OperationBarbarossa_active_mojor_target
+	text = {
 		trigger = {
-			has_global_flag = Great_Patriotic_War_30_days
+			NOT = {
+				OR = {
+					has_global_flag = GER_Target_195
+					has_global_flag = GER_Target_217
+					has_global_flag = GER_Target_219
+				}
+			}
 		}
-		localization_key = SOV_Operation_barbarossa_start
+		localization_key = ""
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_195
+		}
+		localization_key = "Leningrad"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_195
+			has_global_flag = GER_Target_219
+		}
+		localization_key = "Leningrad and Moscow"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_195
+			has_global_flag = GER_Target_217
+		}
+		localization_key = "Leningrad and Stalingrad"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_217
+		}
+		localization_key = "Stalingrad"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_217
+			has_global_flag = GER_Target_195
+		}
+		localization_key = "Stalingrad and Leningrad"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_217
+			has_global_flag = GER_Target_219
+		}
+		localization_key = "Stalingrad and Moscow"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_219
+		}
+		localization_key = "Moscow"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_219
+			has_global_flag = GER_Target_195
+		}
+		localization_key = "Moscow and Leningrad"
+	}
+	text = {
+		trigger = {
+			has_global_flag = GER_Target_219
+			has_global_flag = GER_Target_217
+		}
+		localization_key = "Moscow and Stalingrad"
 	}
 }

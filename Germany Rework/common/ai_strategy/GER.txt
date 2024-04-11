@@ -3576,7 +3576,7 @@ ENG_keep_peace_with_Germany = {
 
 DNZ_befrinend = {
 	allowed = {
-		original_tag = DNZ
+		tag = DNZ
 	}
 	
 	enable = {
@@ -3598,11 +3598,17 @@ DNZ_befrinend = {
 		id = "GER"
 		value = 25
 	}
+
+	ai_strategy = {
+		type = ignore
+		id = "POL"
+		value = 35
+	}
 }
 
 GER_DNZ_befriend = {
 	allowed = {
-		original_tag = GER
+		tag = GER
 	}
 	
 	enable = {
@@ -3616,14 +3622,14 @@ GER_DNZ_befriend = {
 
 	ai_strategy = {
 		type = befriend
-		id = "GER"
-		value = 75
+		id = "DNZ"
+		value = 25
 	}
 
 	ai_strategy = {
 		type = protect
 		id = "DNZ"
-		value = 75
+		value = 25
 	}
 
 	ai_strategy = {

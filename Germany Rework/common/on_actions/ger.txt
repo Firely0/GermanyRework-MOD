@@ -19,18 +19,6 @@ on_actions = {
 				set_research_slots = 4
 				set_variable = { SOV_TANK_DEVELOP_TIME = 180 }
 			}
-			if = {
-				limit = {
-					GER = {
-						is_ai = yes
-					}
-				}
-				GER = {
-					set_technology = { mobile_warfare = 1 popup = no }
-					set_technology = { formation_flying = 1 popup = no }
-					add_ideas = i_dont_use_wargoal
-				}
-			}
 			POL = {
 				set_autonomy = {
 					target = DNZ
@@ -43,19 +31,11 @@ on_actions = {
 					relation = guarantee
 					active = yes
 				}
-				add_opinion_modifier = {
-					target = DNZ
-					modifier = danzigisgerman
-				}
 			}
 			DNZ = {
 				set_politics = {
 					ruling_party = fascism
 					elections_allowed = no
-				}
-				add_opinion_modifier = {
-					target = GER
-					modifier = danzigisgerman
 				}
 				country_lock_all_division_template = yes
 				set_popularities = {
@@ -70,83 +50,80 @@ on_actions = {
 					modifier = international_city
 				}
 			}
-			effect = {
-				# League of Nations Members
-				IF = {
-					limit = {
-						date < 1939.1.1 # don't bother with LoN after 1939
-					}
-					every_country = {
-						limit = {
-							OR = {
-								### Original Members
-								tag = ARG
-								tag = BEL
-								tag = BOL
-								tag = ENG
-								tag = AST
-								tag = CAN
-								tag = RAJ
-								tag = NZL
-								tag = SAF
-								tag = CHI
-								tag = COL
-								tag = CUB
-								tag = CZE
-								tag = DEN
-								tag = FRA
-								tag = GRE
-								tag = HAI
-								tag = ITA
-								tag = LIB
-								tag = HOL
-								tag = NOR
-								tag = PAN
-								tag = PER
-								tag = PRU
-								tag = POL
-								tag = POR
-								tag = ROM
-								tag = SIA
-								tag = SPR
-								tag = SWE
-								tag = SWI
-								tag = URU
-								tag = VEN
-								tag = YUG
-								### 1920
-								tag = AUS
-								tag = BUL
-								tag = COS
-								tag = FIN
-								tag = LUX
-								tag = ALB
-								### 1921
-								tag = EST
-								tag = LAT
-								tag = LIT
-								### 1922
-								tag = HUN
-								### 1923
-								tag = IRE
-								tag = ETH
-								### 1924
-								tag = DOM
-								### 1931
-								tag = MEX
-								### 1932
-								tag = TUR
-								tag = IRQ
-								### 1934
-								tag = SOV
-								tag = AFG
-								tag = ECU
-							}
-						}
-						add_ideas = league_of_nations_member_idea
-					}
-	
+			IF = {
+				limit = {
+					date < 1939.1.1 # don't bother with LoN after 1939
 				}
+				every_country = {
+					limit = {
+						OR = {
+							### Original Members
+							tag = ARG
+							tag = BEL
+							tag = BOL
+							tag = ENG
+							tag = AST
+							tag = CAN
+							tag = RAJ
+							tag = NZL
+							tag = SAF
+							tag = CHI
+							tag = COL
+							tag = CUB
+							tag = CZE
+							tag = DEN
+							tag = FRA
+							tag = GRE
+							tag = HAI
+							tag = ITA
+							tag = LIB
+							tag = HOL
+							tag = NOR
+							tag = PAN
+							tag = PER
+							tag = PRU
+							tag = POL
+							tag = POR
+							tag = ROM
+							tag = SIA
+							tag = SPR
+							tag = SWE
+							tag = SWI
+							tag = URU
+							tag = VEN
+							tag = YUG
+							### 1920
+							tag = AUS
+							tag = BUL
+							tag = COS
+							tag = FIN
+							tag = LUX
+							tag = ALB
+							### 1921
+							tag = EST
+							tag = LAT
+							tag = LIT
+							### 1922
+							tag = HUN
+							### 1923
+							tag = IRE
+							tag = ETH
+							### 1924
+							tag = DOM
+							### 1931
+							tag = MEX
+							### 1932
+							tag = TUR
+							tag = IRQ
+							### 1934
+							tag = SOV
+							tag = AFG
+							tag = ECU
+						}
+					}
+					add_ideas = league_of_nations_member_idea
+				}
+
 			}
 			set_global_flag = SOV_NOT_HIDE_ALWAYS
 		}
@@ -941,44 +918,6 @@ on_actions = {
 				}
 			}
 		}
-		effect = {
-			if = {
-				limit = {
-					tag = GER
-					FROM = {
-						tag = POL
-					}
-				}
-				hidden_effect = {
-					if = {
-						limit = {
-							DNZ = {
-								is_puppet_of = POL
-							}
-						}
-						85 = { transfer_state_to = GER }
-					}
-				}
-			}
-			if = {
-				limit = {
-					tag = POL
-					FROM = {
-						tag = GER
-					}
-				}
-				hidden_effect = {
-					if = {
-						limit = {
-							DNZ = {
-								is_puppet_of = POL
-							}
-						}
-						85 = { transfer_state_to = GER }
-					}
-				}
-			}
-		}
 	}
 	on_war_relation_added = {
 		effect = {
@@ -1018,7 +957,7 @@ on_actions = {
 				every_country = {
 					limit = {
 						original_tag = GER
-						has_government = democracy
+						has_government = democratic
 						is_puppet_of = ENG
 					}
 					save_global_event_target_as = ENG_GERMAN_PUPPET #
@@ -1026,7 +965,7 @@ on_actions = {
 				every_country = {
 					limit = {
 						original_tag = GER
-						has_government = democracy
+						has_government = democratic
 						is_puppet_of = FRA
 					}
 					save_global_event_target_as = FRA_GERMAN_PUPPET #
@@ -1034,7 +973,7 @@ on_actions = {
 				every_country = {
 					limit = {
 						original_tag = GER
-						has_government = democracy
+						has_government = democratic
 						is_puppet_of = USA
 					}
 					save_global_event_target_as = USA_GERMAN_PUPPET #

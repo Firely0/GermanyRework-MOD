@@ -5359,6 +5359,9 @@ focus_tree = {
 						state = 59
 						state = 60
 						state = 909
+						state = 972
+						state = 974
+						state = 971
 					}
 				}
 				add_dynamic_modifier = {
@@ -5389,6 +5392,7 @@ focus_tree = {
 					is_core_of = GER
 					OR = {
 						state = 64
+						state = 973
 					}
 				}
 				add_dynamic_modifier = {
@@ -8397,11 +8401,12 @@ focus_tree = {
 			focus = GER_Set_HQ_in_front
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = GER_Afrika_Corps_Follow_Italy
-			}
-			NOT = {
-				has_completed_focus = GER_against_fuhrer
+			OR = {
+				NOT = {
+					has_completed_focus = GER_against_fuhrer
+					has_completed_focus = GER_Afrika_Corps_Follow_Italy
+					has_global_flag = GER_SWITCH_TO_DEFEAT_TREE
+				}
 			}
 		}
 		available = {
@@ -14413,7 +14418,10 @@ focus_tree = {
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
 			NOT = {
-				has_completed_focus = GER_establish_abwehr
+				OR = {
+					has_completed_focus = GER_establish_abwehr
+					has_global_flag = GER_DEFEAT_TREE
+				}
 			}
 		}
 		relative_position_id = GER_rhineland_demilitarized
@@ -20638,6 +20646,7 @@ focus_tree = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
 					has_completed_focus = GER_a_shadow_of_past  
+					has_global_flag = GER_DEFEAT_TREE
 				}
 			}
 		}
@@ -20909,6 +20918,9 @@ focus_tree = {
 			}
 			NOT = {
 				has_completed_focus = GER_a_shadow_of_past
+			}
+			NOT = {
+				has_global_flag = GER_DEFEAT_TREE
 			}
 		}
 		offset = {
@@ -21592,6 +21604,7 @@ focus_tree = {
 				OR = {
 					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
 					has_completed_focus = GER_focus_on_the_true_enemy
+					has_global_flag = GER_DEFEAT_TREE
 				}	
 			}
 			NOT = {
@@ -22578,7 +22591,8 @@ focus_tree = {
 			NOT = { 
 				OR = {
 					has_completed_focus = GER_establish_abwehr
-					has_completed_focus = GER_a_shadow_of_past  
+					has_completed_focus = GER_a_shadow_of_past 
+					has_global_flag = GER_DEFEAT_TREE 
 				}
 			}
 		}
@@ -22681,6 +22695,9 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = GER_a_shadow_of_past
 			}
+			NOT = {
+				has_global_flag = GER_DEFEAT_TREE
+			}
 		}
 		cancel_if_invalid = yes
 		x = 3
@@ -22723,6 +22740,9 @@ focus_tree = {
 			}
 			NOT = {
 				has_completed_focus = GER_a_shadow_of_past
+			}
+			NOT = {
+				has_global_flag = GER_DEFEAT_TREE
 			}
 		}
 		offset = {

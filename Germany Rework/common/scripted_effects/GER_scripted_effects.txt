@@ -1615,7 +1615,9 @@ GER_AUS_annex = {
 			limit = {
 				is_owned_by = AUS
 			}
-			add_core_of = GER
+			GER = {
+				add_state_core = 4
+			}
 		}
 	}
 	152 = {
@@ -1623,7 +1625,9 @@ GER_AUS_annex = {
 			limit = {
 				is_owned_by = AUS
 			}
-			add_core_of = GER
+			GER = {
+				add_state_core = 152
+			}
 		}
 	}
 	153 = {
@@ -1631,7 +1635,9 @@ GER_AUS_annex = {
 			limit = {
 				is_owned_by = AUS
 			}
-			add_core_of = GER
+			GER = {
+				add_state_core = 153
+			}
 		}
 	}
 	848 = {
@@ -1639,7 +1645,9 @@ GER_AUS_annex = {
 			limit = {
 				is_owned_by = AUS
 			}
-			add_core_of = GER
+			GER = {
+				add_state_core = 848
+			}
 		}
 	}
 	AUS = {
@@ -2370,16 +2378,20 @@ rudolf_hess_GER_POL_states = {
 		release_on_controlled = POL
 		puppet = POL
 	}
-	every_state = {
-		limit = {
-			OR = {
-				state = 86
-				state = 807
-				state = 85
+	GER = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 86
+					state = 807
+					state = 85
+				}
 			}
+			transfer_state_to = GER
 		}
-		add_core_of = GER
-		transfer_state_to = GER
+		add_state_core = 86
+		add_state_core = 807
+		add_state_core = 85
 	}
 }
 
@@ -3176,6 +3188,11 @@ GER_next_plans_effect = {
 			}
 		}
 		# PHASE - 2
+		set_global_flag = {
+			flag = GER_Operation_Barbarossa_at_phase_2_text
+			days = 14
+			value = 1
+		}
 		set_global_flag = GER_Operation_Barbarossa_at_phase_2
 		activate_mission = GER_conquer_Pskow
 		activate_mission = GER_conquer_Misk_2
@@ -3221,6 +3238,11 @@ GER_next_plans_effect = {
 		activate_mission = GER_conquer_Sevastopol
 		activate_mission = GER_end_of_phase_three
 		set_global_flag = GER_Operation_Barbarossa_at_phase_3
+		set_global_flag = {
+			flag = GER_Operation_Barbarossa_at_phase_3_text
+			days = 14
+			value = 1
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -4136,7 +4158,6 @@ GER_defeat_effect = {
 			start_peace_conference = {
 				tag = GER
 				score_factor = 0
-				loser_scope = GER
 				winner_scope = ALL
 				loser_scope = LIMITED
 			}
@@ -4186,7 +4207,6 @@ GER_defeat_effect = {
 			start_peace_conference = {
 				tag = GER
 				score_factor = 0
-				loser_scope = GER
 				winner_scope = ALL
 				loser_scope = LIMITED
 			}
@@ -4710,6 +4730,51 @@ yalta_setup_related = {
 		}
 		set_global_flag = YALTA_FIN
 	}
+	if = {
+		limit = {
+			EST = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					AND = {
+						is_in_faction_with = GER
+						has_war_together_with = GER
+					}
+				}
+			}
+		}
+		set_global_flag = YALTA_EST
+	}
+	if = {
+		limit = {
+			LIT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					AND = {
+						is_in_faction_with = GER
+						has_war_together_with = GER
+					}
+				}
+			}
+		}
+		set_global_flag = YALTA_LIT	
+	}
+	if = {
+		limit = {
+			LAT = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					AND = {
+						is_in_faction_with = GER
+						has_war_together_with = GER
+					}
+				}
+			}
+		}
+		set_global_flag = YALTA_LAT
+	}
 	set_global_flag = YALTA_IS_READY
 	set_global_flag = yalta_agreed_flag
 	log = "Yalta is Ready Flag"
@@ -4857,6 +4922,108 @@ FORCE_YALTA = {
 	}
 	if = {
 		limit = {
+			OR = {
+				SOV = {
+					has_country_flag = morgenthau_agreed_flag 
+				}
+				has_global_flag = morgenthau_agreed_flag 
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = YALTA_SOV_ALLOWED
+			}
+			GER = {
+				transfer_state = 60
+				transfer_state = 59
+				transfer_state = 58
+				transfer_state = 61
+				transfer_state = 973
+				transfer_state = 64
+				transfer_state = 65
+				transfer_state = 63
+				transfer_state = 68
+				transfer_state = 66
+				set_country_flag = GER_SOVIET_PUPPET
+			}
+			SOV = {
+				puppet = {
+					target = GER
+					end_wars = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = morgenthau_agreed_flag 
+				}
+				has_global_flag = morgenthau_agreed_flag 
+			}
+			SOV = {
+				transfer_state = 763
+				transfer_state = 89
+				transfer_state = 91
+				transfer_state = 93
+				transfer_state = 94
+				transfer_state = 97
+				transfer_state = 95
+				transfer_state = 96
+				transfer_state = 784
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = YALTA_ENG_ALLOWED
+				event_target:ENG_GERMAN_PUPPET = {
+					is_puppet_of = ENG
+				}
+			}
+			event_target:ENG_GERMAN_PUPPET = {
+				transfer_state = 50
+				transfer_state = 970
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+			}
+		}
+		else = {
+			WGR = {
+				transfer_state = 50
+				transfer_state = 970
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+			}
+			ENG = {
+				puppet = {
+					target = WGR
+					end_wars = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = YALTA_FRA_ALLOWED
+			}
+			FRA = {
+				transfer_state = 42
+				transfer_state = 971
+			}
+		}
+		DDR = {
+			transfer_state = 51
+			transfer_state = 972
+			transfer_state = 974
+			transfer_state = 55
+			transfer_state = 57
+			transfer_state = 56
+			set_country_flag = DDR_SHOULD_BE_INTERNATIONAL_ZONE
+		}
+	}
+	YALTA_HANDLE_NEW_GERMANY = yes
+	if = {
+		limit = {
 			has_global_flag = YALTA_FREE_AUS
 		}
 		AUS = {
@@ -4964,12 +5131,6 @@ FORCE_YALTA = {
 			has_global_flag = YALTA_POL
 		}
 		POL = {
-			transfer_state = 63
-			transfer_state = 68
-			transfer_state = 66
-			transfer_state = 63
-			transfer_state = 67
-			transfer_state = 5
 			transfer_state = 85
 			transfer_state = 807
 			transfer_state = 86
@@ -4991,6 +5152,28 @@ FORCE_YALTA = {
 			}
 			POL = {
 				transfer_state = 92
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = YALTA_HISTORICAL
+					has_global_flag = morgenthau_agreed_flag 
+				}
+			}
+			POL = {
+				transfer_state = 5
+				transfer_state = 67
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = YALTA_HISTORICAL
+			}
+			POL = {
+				transfer_state = 63
+				transfer_state = 68
+				transfer_state = 66
 			}
 		}
 		SOV = {
@@ -5133,5 +5316,176 @@ FORCE_YALTA = {
 			puppet = FIN
 		}
 	}
+	if = {
+		limit = {
+			has_global_flag = YALTA_LIT
+		}
+		SOV = {
+			transfer_state = 188
+			transfer_state = 189
+			transfer_state = 530
+			transfer_state = 11
+			transfer_state = 814
+			transfer_state = 815
+			transfer_state = 784
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = YALTA_LAT
+		}
+		SOV = {
+			transfer_state = 190
+			transfer_state = 809
+			transfer_state = 808
+			transfer_state = 12
+			transfer_state = 810
+			transfer_state = 784
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = YALTA_EST
+		}
+		SOV = {
+			transfer_state = 811
+			transfer_state = 13
+			transfer_state = 812
+			transfer_state = 813
+			transfer_state = 191
+		}
+	}
 	log = "Forced Yalta States and Puppets"
+}
+
+YALTA_HANDLE_NEW_GERMANY = {
+	log = "Switching Tag for German Player and Adding Things"
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = morgenthau_agreed_flag
+			}
+		}
+		if = {
+			limit = {
+				event_target:SOV_GERMAN_PUPPET = {
+					is_puppet_of = SOV
+				}
+			}
+			event_target:SOV_GERMAN_PUPPET = {
+				change_tag_from = GER
+				load_focus_tree = { tree = german_better keep_completed = yes }
+				every_owned_state = {
+					add_core_of = GER
+				}
+			}
+		}
+		else = {
+			DDR = {
+				change_tag_from = GER
+				inherit_technology = GER
+				load_focus_tree = { tree = german_better keep_completed = yes }
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = morgenthau_agreed_flag
+		}
+		GER = {
+			set_global_flag = GER_SWITCH_TO_DEFEAT_TREE
+			set_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+			set_global_flag = GER_DEFEAT_TREE
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_the_red_reich_r
+			if = {
+				limit = {
+					has_completed_focus = GER_ussr_war_goal
+				}
+				uncomplete_national_focus = {
+					focus = GER_ussr_war_goal
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_war_with_britain
+				}
+				uncomplete_national_focus = {
+					focus = GER_war_with_britain
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+			}
+		}
+		DDR = {
+			set_cosmetic_tag = GER_INTERNATIONAL_ZONE
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				neutrality = 100
+			}
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:FRA_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:FRA_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:USA_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:USA_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:ENG_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:ENG_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	else = {
+		WGR = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	every_country = {
+		limit = {
+			has_country_flag = DDR_SHOULD_BE_INTERNATIONAL_ZONE
+		}
+		set_cosmetic_tag = GER_INTERNATIONAL_ZONE
+	}
 }

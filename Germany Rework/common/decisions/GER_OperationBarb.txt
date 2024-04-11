@@ -1184,6 +1184,36 @@ GER_Operation_Barbarossa_High_Command = {
 
 		complete_effect = {
 		}
+	}
+	
+	German_offensive_targets = {
+		icon = GFX_decision_generic_operation
+		days_mission_timeout = 7
+		selectable_mission = no
+		fire_only_once = no
+		is_good = yes
+		priority = 100
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
 	}	
 
 	Invade_baltics = {

@@ -11,6 +11,10 @@ focus_tree = { #Override Defult
 	
 	country = {
 		factor = 0
+		modifier = {
+			add = 10
+			tag = DNZ
+		}
 	}
 
 	default = no

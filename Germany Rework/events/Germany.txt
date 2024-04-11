@@ -5091,17 +5091,16 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = { # Morgenthau
 		name = germany.118.c
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
-		#	OR = {
-		#		tag = USA
-		#		is_in_faction_with = USA
-		#	}
-		always = no
+			OR = {
+				tag = USA
+				is_in_faction_with = USA
+			}
 		}
 		hidden_effect = {
 			event_target:yalta_partner = {
@@ -5120,12 +5119,11 @@ country_event = {
 			factor = 0
 		}
 		trigger = {
-		#	tag = ENG 
-		#	has_country_leader = {
-		#		character = ENG_winston_churchill
-		#		ruling_only = yes
-		#	}
-		#	is_ai = no 
+			#tag = ENG 
+			#has_country_leader = {
+			#	character = ENG_winston_churchill
+			#	ruling_only = yes
+			#}
 			always = no
 		}
 		hidden_effect = {
@@ -5239,9 +5237,11 @@ country_event = {
 
 	option = {
 		name = germany.119.a
+
 		ai_chance = {
-			base = 2
+			base = 100
 		}
+
 		custom_effect_tooltip = morgenthau_division_tt
 		FRA = {
 			42 = { set_state_flag = morgenthau_france }
@@ -5256,40 +5256,42 @@ country_event = {
 			add_state_core = 763
 		}
 
-		#INTZ
-			51 = { set_state_flag = morgenthau_international }
-			52 = { set_state_flag = morgenthau_international }
-			56 = { set_state_flag = morgenthau_international }
-		
-		#NGS
-			58 = { set_state_flag = morgenthau_north_german } 	
-			59 = { set_state_flag = morgenthau_north_german } 	
-			51 = { set_state_flag = morgenthau_north_german } 	
-			61 = { set_state_flag = morgenthau_north_german } 	
-			62 = { set_state_flag = morgenthau_north_german } 	
-			63 = { set_state_flag = morgenthau_north_german } 	
-			68 = { set_state_flag = morgenthau_north_german } 	
-			66 = { set_state_flag = morgenthau_north_german } 	
-			65 = { set_state_flag = morgenthau_north_german } 	
-			64 = { set_state_flag = morgenthau_north_german } 	
-			60 = { set_state_flag = morgenthau_north_german } 	
-
-		#SGS
-			54 = { set_state_flag = morgenthau_SOVth_german } 
-			50 = { set_state_flag = morgenthau_SOVth_german } 
-			52 = { set_state_flag = morgenthau_SOVth_german } 
-			53 = { set_state_flag = morgenthau_SOVth_german } 		
+		51 = { set_state_flag = morgenthau_international }
+		52 = { set_state_flag = morgenthau_international }
+		56 = { set_state_flag = morgenthau_international }
+		58 = { set_state_flag = morgenthau_north_german } 	
+		59 = { set_state_flag = morgenthau_north_german } 	
+		51 = { set_state_flag = morgenthau_north_german } 	
+		61 = { set_state_flag = morgenthau_north_german } 	
+		62 = { set_state_flag = morgenthau_north_german } 	
+		63 = { set_state_flag = morgenthau_north_german } 	
+		68 = { set_state_flag = morgenthau_north_german } 	
+		66 = { set_state_flag = morgenthau_north_german } 	
+		65 = { set_state_flag = morgenthau_north_german } 	
+		64 = { set_state_flag = morgenthau_north_german } 	
+		60 = { set_state_flag = morgenthau_north_german } 
+		54 = { set_state_flag = morgenthau_SOVth_german } 
+		50 = { set_state_flag = morgenthau_SOVth_german } 
+		52 = { set_state_flag = morgenthau_SOVth_german } 
+		53 = { set_state_flag = morgenthau_SOVth_german } 		
 		
 		hidden_effect = {
+			set_global_flag = yalta_agreed_flag 
+			set_global_flag = morgenthau_agreed_flag 
+			SOV = { 
+				set_country_flag = yalta_agreed_flag 
+				set_country_flag = morgenthau_agreed_flag 
+			}
+			yalta_setup_related = yes
+			log = "Yalta Agreed"
 			news_event = { days = 1 id = news.236 }
 		}
-		set_global_flag = morgenthau_agreed_flag 
 	}
 
 	option = {
 		name = germany.119.b
 		ai_chance = {
-			base = 1
+			base = 0
 		}
 		
 		event_target:yalta_origin = {

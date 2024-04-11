@@ -28,6 +28,16 @@
  GER_end_of_phase_text:0 "After the successful completion of the objectives, we must mobilise for the continuation of the operation."
  GER_end_of_phase_final:0 "After the successful £wehrmacht_texticon §YOperation Barbarossa§!, the §YUltimatum Soviet Union§! Focus can be used."
 
+ # GUI
+ GER_ui_Success_header:0 "Success"
+ GER_ui_Failures_header:0 "Failures"
+ GER_name_text:0 "@GER [GER.GetName]:"
+ SOV_name_text:0 "@SOV [SOV.GetName]:"
+ GER_failures:0 "[?GER.GER_failures|0]"
+ SOV_failures:0 "[?SOV.SOV_failures|0]"
+ GER_success:0 "[?GER.GER_success|0]"
+ SOV_success:0 "[?SOV.SOV_success|0]"
+
  ### - High Command - ###
  High_Command_Issued_Orders:0 "£wehrmacht_texticon High Command Issued Orders"
  GER_Operation_Barbarossa_High_Command:0 "£wehrmacht_texticon High Command"
@@ -44,20 +54,13 @@
  Allied_Invasion_of_Italy:0 "@USA @ENG @FRA Allied Forces landed in @ITA Italy"
  Allied_Invasion_of_Italy_2:0 "@ITA Fall of §YRome§!"
 
+ #  Offensive Targets
+ German_offensive_targets:0 "£wehrmacht_texticon Combat - [OperationBarbarossa_active_mojor_target]"
+
  # Focus on ... 
  High_Command_Tank_Warfare:0 "Focus on Blitzkrieg"
  High_Command_land_combat:0 "Focus on Infantry Assault"
  High_Command_prio_Luftwaffe:0 "Focus on Air Supremacy"
-
- # GUI
- GER_ui_Success_header:0 "Success"
- GER_ui_Failures_header:0 "Failures"
- GER_name_text:0 "@GER [GER.GetName]:"
- SOV_name_text:0 "@SOV [SOV.GetName]:"
- GER_failures:0 "[?GER.GER_failures|0]"
- SOV_failures:0 "[?SOV.SOV_failures|0]"
- GER_success:0 "[?GER.GER_success|0]"
- SOV_success:0 "[?SOV.SOV_success|0]"
 
  #Military Operations - Blitzkrieg - Infantry Assault - Air Supremacy
  GER_Operation_Barbarossa_Operations:0 "Military Operations"
@@ -70,6 +73,14 @@
  Allied_Invasion_of_Germany_text:0 "@GER (Sleeping) [ROOT.GetLeader]: ....Greater Germany....London...Kebab.....(Waking up)..  \n\n@GER Unknown General: Hey you finally awake you trying to cro.. We must send the Reserve Army to the region and destroy it before the reinforcements arrive"
  Allied_Invasion_of_Italy_text:0 "@GER [ROOT.GetLeader]: What Are You Doing [ITA.GetLeader] You're Ruining All Plans! \n\n@GER Unknown General: We must send our reserve army to stop further occupation of the region"
  Allied_Invasion_of_Italy_text_2:0 "@GER [ROOT.GetLeader]: Send in the SS and the Wehrmacht. Get the upper ranks out safely. \n\n@ITA Unknown General: Needing Support ASAP!"
+
+ #Offensive Targets
+ German_offensive_targets_text:0 "@GER [ROOT.GetLeader]: Now [OperationBarbarossa_active_mojor_target] and then the rest of the country  \n\n@GER Unknown General: Unknown Status. It's possible he's given his final orders."
+
+ # Next Phase
+ OperationBarbarossa_next_phase:0 "OperationBarbarossa_next_phase_scp"
+ GER_Operation_Barbarossa_at_phase_2_text:0 "@GER [ROOT.GetLeader]: Another Step to Ultimate Victory \n\n@GER Unknown General: Another Victory of the Wehrmacht"
+ GER_Operation_Barbarossa_at_phase_3_text:0 "@GER [ROOT.GetLeader]: Soon Moscow, Stalingrad and Leningrad will be German Territory. \n\n@GER Unknown General: Another Victory of the Wehrmacht"
 
  # the Winter War
  Operation_barbarossa_winter_ready_40:0 "@GER [ROOT.GetLeader]: We are ready for Winther War \n\n@GER Unknown General: Maybe we'll be in [OperationBarbarossa_mojor_target_text] before Christmas."

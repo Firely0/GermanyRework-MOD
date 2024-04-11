@@ -570,6 +570,36 @@ SOV_great_patriotic_war_Orders = {
 		}
 	}
 
+	SOV_German_offensive_targets = {
+		icon = GFX_decision_FIN_stop_motti_tactics
+		days_mission_timeout = 7
+		selectable_mission = no
+		fire_only_once = no
+		is_good = yes
+		priority = 100
+
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+		}
+
+		complete_effect = {
+		}
+	}	
+
 	SOV_Allied_Invasion_of_Germany = {
 		icon = GFX_decision_revolt
 		days_mission_timeout = 14
