@@ -69,18 +69,18 @@
  #Scripted Localization ---->
  Operation_barbarossa_start:0 "@GER [ROOT.GetLeader]: We only have to kick in the door and the whole rotten structure will come crashing down. \n\n@GER Unknown General: Ah shit here we go again"
 
- # Allied Invasions
- Allied_Invasion_of_Germany_text:0 "@GER (Sleeping) [ROOT.GetLeader]: ....Greater Germany....London...Kebab.....(Waking up)..  \n\n@GER Unknown General: Hey you finally awake you trying to cro.. We must send the Reserve Army to the region and destroy it before the reinforcements arrive"
- Allied_Invasion_of_Italy_text:0 "@GER [ROOT.GetLeader]: What Are You Doing [ITA.GetLeader] You're Ruining All Plans! \n\n@GER Unknown General: We must send our reserve army to stop further occupation of the region"
- Allied_Invasion_of_Italy_text_2:0 "@GER [ROOT.GetLeader]: Send in the SS and the Wehrmacht. Get the upper ranks out safely. \n\n@ITA Unknown General: Needing Support ASAP!"
+ # Next Phase
+ OperationBarbarossa_next_phase:0 "[OperationBarbarossa_next_phase_scp]"
+ GER_Operation_Barbarossa_at_phase_2_text:0 "@GER [ROOT.GetLeader]: Another Step to Ultimate Victory \n\n@GER Unknown General: Another Victory of the Wehrmacht"
+ GER_Operation_Barbarossa_at_phase_3_text:0 "@GER [ROOT.GetLeader]: Soon Moscow, Stalingrad and Leningrad will be German Territory. \n\n@GER Unknown General: Another Victory of the Wehrmacht"
 
  #Offensive Targets
  German_offensive_targets_text:0 "@GER [ROOT.GetLeader]: Now [OperationBarbarossa_active_mojor_target] and then the rest of the country  \n\n@GER Unknown General: Unknown Status. It's possible he's given his final orders."
 
- # Next Phase
- OperationBarbarossa_next_phase:0 "OperationBarbarossa_next_phase_scp"
- GER_Operation_Barbarossa_at_phase_2_text:0 "@GER [ROOT.GetLeader]: Another Step to Ultimate Victory \n\n@GER Unknown General: Another Victory of the Wehrmacht"
- GER_Operation_Barbarossa_at_phase_3_text:0 "@GER [ROOT.GetLeader]: Soon Moscow, Stalingrad and Leningrad will be German Territory. \n\n@GER Unknown General: Another Victory of the Wehrmacht"
+ # Allied Invasions
+ Allied_Invasion_of_Germany_text:0 "@GER (Sleeping) [ROOT.GetLeader]: ....Greater Germany....London...Kebab.....(Waking up)..  \n\n@GER Unknown General: Hey you finally awake you trying to cro.. We must send the Reserve Army to the region and destroy it before the reinforcements arrive"
+ Allied_Invasion_of_Italy_text:0 "@GER [ROOT.GetLeader]: What Are You Doing [ITA.GetLeader] You're Ruining All Plans! \n\n@GER Unknown General: We must send our reserve army to stop further occupation of the region"
+ Allied_Invasion_of_Italy_text_2:0 "@GER [ROOT.GetLeader]: Send in the SS and the Wehrmacht. Get the upper ranks out safely. \n\n@ITA Unknown General: Needing Support ASAP!"
 
  # the Winter War
  Operation_barbarossa_winter_ready_40:0 "@GER [ROOT.GetLeader]: We are ready for Winther War \n\n@GER Unknown General: Maybe we'll be in [OperationBarbarossa_mojor_target_text] before Christmas."

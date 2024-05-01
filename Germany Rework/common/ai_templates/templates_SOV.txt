@@ -476,14 +476,17 @@ infantry_SOV = {
 	infantry_default_SOV = {
 
 		upgrade_prio = {
-			factor = 2
+			factor = 1
 
 			modifier = {
-				factor = 20
+				factor = 5
+				OR = {
+					has_completed_focus = SOV_lessons_of_war
+				}
 			}
 		}
 
-		target_width = 27.0
+		target_width = 21.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 
@@ -572,7 +575,6 @@ infantry_SOV = {
 					has_completed_focus = SOV_lessons_of_war
 				}
 			}
-
 		}
 
 		can_upgrade_in_field = {

@@ -1410,6 +1410,11 @@ SOV_dont_do_so_many_naval_invasions_please = {
 		tag = GER
 		value = -50
 	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = FIN
+		value = -50
+	}
 }
 
 ###########################
@@ -2068,7 +2073,6 @@ SOV_nothing_bad_could_possibly_happen_now = {
 		original_tag = SOV
 	}
 	enable = {
-		always = no #No longer necessary
 		is_historical_focus_on = yes
 		NOT = { has_war_with = GER }
 		date < 1942.2.1

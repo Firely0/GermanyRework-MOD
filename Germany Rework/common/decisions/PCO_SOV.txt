@@ -155,8 +155,8 @@ SOV_coinvasion_of_poland_decision_category = {
 		complete_effect = {
 			add_command_power = 50
 			add_war_support = 0.1
-			SOV = {
-				country_event = pol_par_initial.1
+			ROOT = {
+				country_event = { id = pol_par_initial.1 hours = 1 }
 			}
 		}
 	}
