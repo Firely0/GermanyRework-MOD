@@ -118,7 +118,7 @@ characters={
 				small=GFX_portrait_GER_gunther_von_kluge_small
 			}
 		}
-		field_marshal={
+		corps_commander={
 			traits={ armor_officer offensive_doctrine }
 			skill=3
 			attack_skill=3
@@ -214,7 +214,7 @@ characters={
 			logistics_skill=4
 			legacy_id=822
 		}
-	}	
+	}
 
 	GER_gerd_von_rundstedt={
 		name=GER_gerd_von_rundstedt
@@ -240,8 +240,8 @@ characters={
 			}
 		}
 
-		field_marshal={
-			traits={ old_guard urban_assault_specialist defensive_doctrine }
+		corps_commander={
+			traits={ old_guard urban_assault_specialist }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -249,7 +249,7 @@ characters={
 			logistics_skill=2
 			legacy_id=1
 		}
-	}	
+	}
 
 	GER_erich_von_manstein={
 		name=GER_erich_von_manstein
@@ -383,7 +383,7 @@ characters={
 				small=GFX_portrait_GER_walter_model_small
 			}
 		}
-		field_marshal={
+		corps_commander={
 			traits={ brilliant_strategist trait_cautious politically_connected defensive_doctrine }
 			skill=3
 			attack_skill=2
@@ -675,8 +675,37 @@ characters={
 		}
 	}
 
-	# FROM Other Mods prob.
+	GER_nikolaus_von_falkenhorst = { # USED IN FINLAND
+		name = GER_nikolaus_von_falkenhorst
+		portraits = {
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.tga"
+				small="gfx/interface/ideas/idea_GER_nikolaus_von_falkenhorst.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GER_nikolaus_von_falkenhorst
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			available = {
+				has_completed_focus = FIN_german_military_advisors
+				NOT = { has_war_with = GER }
+				NOT = { has_government = communism }
+			}
+			traits = {
+				army_german_ground_commander
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
+	# FROM Other Mods prob.
 
 	GER_gotthard_heinrici={
 		name=GER_gotthard_heinrici
@@ -1214,7 +1243,7 @@ characters={
 
 	GER_karl_donitz = {
 		name= GER_karl_donitz
-		
+
 		portraits={
 			army={
 				large=GFX_portrait_GER_karl_donitz
@@ -1316,10 +1345,10 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				NOT = { 
+				NOT = {
 					OR = {
 						has_character_flag = killed_by_bomb
-						has_country_flag = GER_GOERING_RETIRED 
+						has_country_flag = GER_GOERING_RETIRED
 					}
 				}
 				or = {
@@ -1588,7 +1617,7 @@ characters={
 			coordination_skill=4
 			legacy_id=31
 		}
-	}	
+	}
 
 	GER_viktor_schutze={
 		name=GER_viktor_schutze
@@ -1613,35 +1642,6 @@ characters={
 			}
 		}
 	}
-
-	GER_nikolaus_von_falkenhorst = { # USED IN FINLAND
-		name = GER_nikolaus_von_falkenhorst
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_nikolaus_von_falkenhorst_small #TODO_Manu: Check new portrait
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = GER_nikolaus_von_falkenhorst
-			ledger = army
-			allowed = {
-				original_tag = FIN
-			}
-			available = {
-				has_completed_focus = FIN_german_military_advisors
-				NOT = { has_war_with = GER }
-			}
-			traits = {
-				army_german_ground_commander
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-	
 
 	### POLITICAL ADVISORS ###
 
@@ -1748,7 +1748,7 @@ characters={
 				armaments_organizer2
 			}
 		}
-	}	
+	}
 
 	GER_eva_braun ={
 		name= "Eva Braun"
@@ -1834,7 +1834,10 @@ characters={
 			available = {
 				NOT = {
 					OR = {
-						has_character_flag = rudolf_aressted_by_uk
+						custom_trigger_tooltip = {
+							tooltip = rudolf_aressted_by_uk
+							has_character_flag = rudolf_aressted_by_uk
+						}
 						has_country_flag = flight_of_hess
 					}
 				}
@@ -1883,7 +1886,7 @@ characters={
 				silent_workhorse
 			}
 		}
-	}	
+	}
 
 	GER_konstantin_von_neurath={
 		name=GER_konstantin_von_neurath
@@ -1924,8 +1927,8 @@ characters={
 			}
 			available = {
 				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
+					has_government = fascism
+					has_country_flag = GER_reinstated_nazi_leadership
 				}
 				NOT = {
 					has_government = communism
@@ -1938,7 +1941,7 @@ characters={
 				factor = 0.000
 			}
 		}
-	}	
+	}
 
 	GER_wilhelm_canaris={
 		name=GER_wilhelm_canaris
@@ -1967,7 +1970,7 @@ characters={
 				Head_of_abwehr
 			}
 		}
-	}	
+	}
 
 	GER_heinrich_himmler={
 		name=GER_heinrich_himmler
@@ -2011,7 +2014,7 @@ characters={
 				prince_of_terror
 			}
 		}
-	}	
+	}
 
 	GER_ernst_thalmann={
 		name=GER_ernst_thalmann
@@ -2053,18 +2056,18 @@ characters={
 			}
 			traits = {
 				communist_revolutionary
-				political_prisoner 
+				political_prisoner
 			}
 			do_effect = {
 				not = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-	}	
+	}
 
 	GER_kurt_schumacher={
 		name=GER_kurt_schumacher
@@ -2110,7 +2113,7 @@ characters={
 				factor = 0.000
 			}
 		}
-	}	
+	}
 
 	GER_hans_oster={
 		name=GER_hans_oster
@@ -2306,25 +2309,6 @@ characters={
 			legacy_id=812
 		}
 	}
-
-	#GER_nikolaus_von_falkenhorst={ # Disabled for FINLAND & DLC
-	#	name="Nikolaus von Falkenhorst"
-	#	portraits={
-	#		army={
-	#			large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.tga"
-	#			small="gfx/interface/ideas/idea_GER_nikolaus_von_falkenhorst.tga"
-	#		}
-	#	}
-	#	corps_commander={
-	#		traits={ }
-	#		skill=2
-	#		attack_skill=2
-	#		defense_skill=2
-	#		planning_skill=1
-	#		logistics_skill=2
-	#		legacy_id=813
-	#	}
-	#}
 
 	GER_walter_von_reichenau={
 		name="Walter von Reichenau"
@@ -2576,7 +2560,7 @@ characters={
 			}
 			do_effect = {
 				NOT = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
@@ -2587,7 +2571,7 @@ characters={
 
 	GER_ruth_fischer={
 		name=GER_ruth_fischer
-		gender = female 
+		gender = female
 		portraits={
 			civilian={
 				large="GFX_portrait_ger_ruth_fischer"
@@ -2602,7 +2586,7 @@ characters={
 				large="GFX_portrait_ger_heinrich_brandler"
 			}
 		}
-	}	
+	}
 
 	GER_otto_korfes={
 		name = GER_otto_korfes
@@ -2613,7 +2597,7 @@ characters={
 		}
 	}
 
-	GER_hans_gunter_van_hooven={ 
+	GER_hans_gunter_van_hooven={
 		name = GER_hans_gunter_van_hooven
 		portraits = {
 			army = {
@@ -2622,7 +2606,7 @@ characters={
 		}
 	}
 
-	GER_vincenz_muller={ 
+	GER_vincenz_muller={
 		name = GER_vincenz_muller
 		portraits = {
 			army = {
@@ -2643,14 +2627,14 @@ characters={
 			visible = {
 				has_completed_focus = GER_a_shadow_of_past
 			}
-			
+
 			traits = {
 				mobilization_staff
 			}
 		}
 	}
 
-	GER_fritz_paul_schmenkel={ 
+	GER_fritz_paul_schmenkel={
 		name = GER_fritz_paul_schmenkel
 		portraits = {
 			army = {
@@ -2659,14 +2643,14 @@ characters={
 		}
 	}
 
-	GER_luitpold_steidle={ 
+	GER_luitpold_steidle={
 		name = GER_luitpold_steidle
 		portraits = {
 			army = {
 				large="GFX_portrait_ger_luitpold_steidle"
 			}
 		}
-	}	
+	}
 
 	GER_walter_ulbricht={
 		name=GER_walter_ulbricht
@@ -2702,14 +2686,14 @@ characters={
 			}
 			do_effect = {
 				NOT = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-	}	
+	}
 
 	GER_erich_mielke={
 		name=GER_erich_mielke
@@ -2747,7 +2731,7 @@ characters={
 			}
 			do_effect = {
 				NOT = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
@@ -2755,7 +2739,7 @@ characters={
 			}
 		}
 
-	}	
+	}
 
 	GER_karl_artelt={
 		name=GER_karl_artelt
@@ -2791,14 +2775,14 @@ characters={
 			}
 			do_effect = {
 				NOT = {
-					has_government = communism 
+					has_government = communism
 				}
 			}
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
-	}	
+	}
 
 	GER_erich_weinert={
 		name=GER_erich_weinert
@@ -2823,7 +2807,7 @@ characters={
 				socialist_novelist
 			}
 		}
-	}	
+	}
 
 	GER_felix_scheffler={
 		name=GER_felix_scheffler

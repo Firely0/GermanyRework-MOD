@@ -368,6 +368,8 @@ MR_pact_transfer_state_effect = {
 			}
 		}
 	}
+	set_global_flag = GER_SOV_WHITE_PEACE_1
+	log = "White Peace Check 1"
 }
 
 MR_pact_transfer_faction_state_effect = {
@@ -514,6 +516,251 @@ MR_pact_transfer_faction_state_effect = {
 		else = {
 			SOU = {
 				transfer_state = 784
+			}
+		}
+	}
+}
+
+GER_SOV_white_peace_check = {
+	log = "Started White Peace Check 1"
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				has_state_flag = mr_pact_sov_reserved_state_special
+				has_state_flag = mr_pact_sov_reserved_state
+			}
+			OR = {
+				is_controlled_by = GER
+				is_controlled_by = SOV
+			}
+		}
+		remove_claim_by = SOV
+		transfer_state_to = SOV
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+				has_state_flag = mr_pact_sov_reserved_state_special
+				has_state_flag = mr_pact_sov_reserved_state
+			}
+			is_controlled_by = SOV	# We Have it Remove Icon/s
+		}
+		remove_dynamic_modifier = {
+			modifier = Soviet_state_dynamic_modifier
+		}
+	}
+	if = {
+		limit = {
+			POL = {
+				has_capitulated = yes
+				has_war_with = SOV				#Cap but Keep Fighting with SOV.
+			}
+		}
+		SOV = {
+			white_peace = POL
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_ger_reserved_state_special
+				has_state_flag = mr_pact_ger_reserved_state
+			}
+			is_controlled_by = SOV
+		}
+		remove_claim_by = GER
+		set_state_controller_to = GER
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_ger_reserved_state_special
+				has_state_flag = mr_pact_ger_reserved_state
+			}
+			is_owned_by = SOV
+		}
+		remove_claim_by = GER
+		set_state_owner_to = GER
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = mr_pact_ger_reserved_state_special
+				has_state_flag = mr_pact_ger_reserved_state
+			}
+			is_controlled_by = GER			# We Have it Remove Icon/s
+		}
+		remove_dynamic_modifier = {
+			modifier = Germany_state_dynamic_modifier
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				has_dynamic_modifier = {
+					modifier = Soviet_state_dynamic_modifier
+				}
+				has_dynamic_modifier = {
+					modifier = Germany_state_dynamic_modifier
+				}
+			}
+		}
+		remove_dynamic_modifier = {
+			modifier = Soviet_state_dynamic_modifier
+		}
+		remove_dynamic_modifier = {
+			modifier = Germany_state_dynamic_modifier
+		}
+	}
+	if = {
+		limit = {
+			92 = { is_controlled_by = GER }
+		}
+		92 = { remove_claim_by = SOV }
+	}
+	if = {
+		limit = {
+			92 = { is_controlled_by = SOV }
+		}
+		92 = { remove_claim_by = GER }
+	}
+	clr_global_flag = GER_SOV_WHITE_PEACE_1
+	set_global_flag = GER_SOV_END_OF_PACT_EVENT
+	log = "End of White Peace Check 1"
+}
+
+GER_mr_pact_next_event = {
+	if = {
+		limit = {
+			country_exists = FIN
+			NOT = {
+				FIN = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
+		}
+		FIN = {
+			set_country_flag = mr_pact_sent_event
+		}
+		GER = {
+			country_event = mrpact_negociations_finland.1
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = EST
+			NOT = {
+				EST = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
+		}
+		EST = {
+			set_country_flag = mr_pact_sent_event
+		}
+		GER = {
+			country_event = {
+				id = mrpact_negociations_estonia.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = LAT
+			NOT = {
+				LAT = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
+		}
+		LAT = {
+			set_country_flag = mr_pact_sent_event
+		}
+		GER = {
+			country_event = {
+				id = mrpact_negociations_latvia.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = LIT
+			NOT = {
+				LIT = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
+		}
+		LIT = {
+			set_country_flag = mr_pact_sent_event
+		}
+		GER = {
+			country_event = {
+				id = mrpact_negociations_lithuania.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			country_exists = POL
+			NOT = {
+				POL = {
+					has_country_flag = mr_pact_sent_event
+				}
+			}
+		}
+		POL = {
+			set_country_flag = mr_pact_sent_event
+		}
+		GER = {
+			country_event = {
+				id = mrpact_negociations_poland.1
+				hours = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				FIN = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				LAT = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				LIT = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				EST = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+			OR = {
+				POL = {
+					has_country_flag = mr_pact_sent_event
+					exists = no
+				}
+			}
+		}
+		SOV = {
+			country_event = {
+				id = mrpact_final.1
+				hours = 5
 			}
 		}
 	}
@@ -1381,234 +1628,6 @@ GER_Vichy_state_modifier_remove = {
 	}
 }
 
-GER_SOV_white_peace_check = {
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
-				has_state_flag = mr_pact_sov_reserved_state_special
-				has_state_flag = mr_pact_sov_reserved_state
-			}
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = SOV
-			}
-		}
-		transfer_state_to = SOV
-	}
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = mr_pact_sov_reserved_state_unnegotiable
-				has_state_flag = mr_pact_sov_reserved_state_special
-				has_state_flag = mr_pact_sov_reserved_state
-			}
-			is_controlled_by = SOV			# We Have it Remove Icon/s
-		}
-		remove_dynamic_modifier = {
-			modifier = Soviet_state_dynamic_modifier
-		}
-	}
-	if = {
-		limit = {
-			POL = {
-				has_capitulated = yes
-				has_war_with = SOV				#Cap but Keep Fighting with SOV.
-			}
-		}
-		SOV = {
-			white_peace = POL
-		}
-	}
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = mr_pact_ger_reserved_state_special
-				has_state_flag = mr_pact_ger_reserved_state
-			}
-			is_controlled_by = SOV
-		}
-		set_state_controller_to = GER
-	}
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = mr_pact_ger_reserved_state_special
-				has_state_flag = mr_pact_ger_reserved_state
-			}
-			is_owned_by = SOV
-		}
-		set_state_owner_to = GER
-	}
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = mr_pact_ger_reserved_state_special
-				has_state_flag = mr_pact_ger_reserved_state
-			}
-			is_controlled_by = GER			# We Have it Remove Icon/s
-		}
-		remove_dynamic_modifier = {
-			modifier = Germany_state_dynamic_modifier
-		}
-	}
-	every_state = {
-		limit = {
-			OR = {
-				has_dynamic_modifier = {
-					modifier = Soviet_state_dynamic_modifier
-				}
-				has_dynamic_modifier = {
-					modifier = Germany_state_dynamic_modifier
-				}
-			}
-		}
-		remove_dynamic_modifier = {
-			modifier = Soviet_state_dynamic_modifier
-		}
-		remove_dynamic_modifier = {
-			modifier = Germany_state_dynamic_modifier
-		}
-	}
-	clr_global_flag = GER_SOV_WHITE_PEACE_1
-	set_global_flag = GER_SOV_END_OF_PACT_EVENT
-}
-
-GER_mr_pact_next_event = {
-	if = {
-		limit = {
-			country_exists = FIN
-			NOT = {
-				FIN = {
-					has_country_flag = mr_pact_sent_event
-				}
-			}
-		}
-		FIN = {
-			set_country_flag = mr_pact_sent_event
-		}
-		GER = {
-			country_event = mrpact_negociations_finland.1
-		}
-	}
-	else_if = {
-		limit = {
-			country_exists = EST
-			NOT = {
-				EST = {
-					has_country_flag = mr_pact_sent_event
-				}
-			}
-		}
-		EST = {
-			set_country_flag = mr_pact_sent_event
-		}
-		GER = {
-			country_event = {
-				id = mrpact_negociations_estonia.1
-				hours = 5
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			country_exists = LAT
-			NOT = {
-				LAT = {
-					has_country_flag = mr_pact_sent_event
-				}
-			}
-		}
-		LAT = {
-			set_country_flag = mr_pact_sent_event
-		}
-		GER = {
-			country_event = {
-				id = mrpact_negociations_latvia.1
-				hours = 5
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			country_exists = LIT
-			NOT = {
-				LIT = {
-					has_country_flag = mr_pact_sent_event
-				}
-			}
-		}
-		LIT = {
-			set_country_flag = mr_pact_sent_event
-		}
-		GER = {
-			country_event = {
-				id = mrpact_negociations_lithuania.1
-				hours = 5
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			country_exists = POL
-			NOT = {
-				POL = {
-					has_country_flag = mr_pact_sent_event
-				}
-			}
-		}
-		POL = {
-			set_country_flag = mr_pact_sent_event
-		}
-		GER = {
-			country_event = {
-				id = mrpact_negociations_poland.1
-				hours = 5
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			OR = {
-				FIN = {
-					has_country_flag = mr_pact_sent_event
-					exists = no
-				}
-			}
-			OR = {
-				LAT = {
-					has_country_flag = mr_pact_sent_event
-					exists = no
-				}
-			}
-			OR = {
-				LIT = {
-					has_country_flag = mr_pact_sent_event
-					exists = no
-				}
-			}
-			OR = {
-				EST = {
-					has_country_flag = mr_pact_sent_event
-					exists = no
-				}
-			}
-			OR = {
-				POL = {
-					has_country_flag = mr_pact_sent_event
-					exists = no
-				}
-			}
-		}
-		SOV = {
-			country_event = {
-				id = mrpact_final.1
-				hours = 5
-			}
-		}
-	}
-}
-
 GER_AUS_annex = {
 	4 = {
 		if = {
@@ -1658,6 +1677,19 @@ GER_AUS_annex = {
 	annex_country = {
 		target = AUS
 		transfer_troops = yes
+	}
+	hidden_effect = {
+		if = {
+			limit = {
+				AUS_karl_eglseer = {
+					is_field_marshal = yes
+				}
+			}
+			AUS_karl_eglseer = {
+				demote_leader = yes
+				remove_unit_leader_trait = recently_promoted
+			}		
+		}
 	}
 	add_political_power = 75
 	set_country_flag = AUS_annexed

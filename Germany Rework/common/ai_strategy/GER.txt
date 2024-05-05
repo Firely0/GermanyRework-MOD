@@ -1173,6 +1173,7 @@ ignore_vichy = { #No Need to Put Div. if AI and his on
 }
 
 war_with_soviets = {
+
 	allowed = {
 		original_tag = GER
 	}
@@ -1183,7 +1184,6 @@ war_with_soviets = {
 	abort = {
 		NOT = { country_exists = SOV }
 	}
-
 
 	ai_strategy = {
 		type = antagonize

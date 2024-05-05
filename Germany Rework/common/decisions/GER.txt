@@ -5950,9 +5950,8 @@ foreign_politics = {
 		icon = GFX_decision_eng_trade_unions_support
 
 		available = {
-			NOT = { has_war_with = DNZ }
-			OR = {
-				POL = { 
+			POL = { 
+				OR = {
 					has_capitulated = yes 
 					exists = no
 				}
@@ -5968,6 +5967,7 @@ foreign_politics = {
 		}
 
 		visible = {
+			DNZ = { exists = yes }
 			is_subject = no
 			NOT = { 
 				has_government = democratic 
@@ -5975,8 +5975,10 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			annex_country = {
-				target = DNZ
+			GER = {
+				annex_country = {
+					target = DNZ
+				}
 			}
 		}
 	}	

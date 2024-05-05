@@ -431,6 +431,102 @@ GER_balance_of_power_category = {
 				}
 			}
 		}
+	}
+
+	GER_very_low_increase_effect_4 = { #Promote Generals
+
+		icon = GFX_decision_ger_reichskommissariats
+		priority = 90
+		allowed = {
+			original_tag = GER
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			16 = { is_controlled_by_ROOT_or_ally = yes }
+			FRA = { has_capitulated = yes }
+		}
+
+		custom_cost_trigger = {
+			command_power > 19
+		}
+		custom_cost_text = decision_cost_CP_20
+
+		complete_effect = {
+			if = {
+				limit = {
+					GER_fedor_von_bock = {
+						is_field_marshal = no
+					}
+				}
+				GER_fedor_von_bock = {
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					GER_gunther_von_kluge = {
+						is_field_marshal = no
+					}
+				}
+				GER_gunther_von_kluge = {
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					GER_wilhelm_list = {
+						is_field_marshal = no
+					}
+				}
+				GER_wilhelm_list = {
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					GER_walter_von_reichenau = {
+						is_field_marshal = no
+					}
+				}
+				GER_walter_von_reichenau = {
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					GER_gerd_von_rundstedt = {
+						is_field_marshal = no
+					}
+				}
+				GER_gerd_von_rundstedt = {
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					GER_erwin_von_witzleben = {
+						is_field_marshal = no
+					}
+				}
+				GER_erwin_von_witzleben = {
+					promote_leader = yes
+				}
+			}
+			GER_bop_very_low_increase_effect = yes
+			
+			hidden_effect = {
+				add_command_power = -20
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = { has_completed_focus = GER_Fuhrer has_war_with_major = yes }
+
 	}	
 
 	GER_very_low_increase_effect = { #Wehrmacht

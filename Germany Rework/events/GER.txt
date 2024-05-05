@@ -826,6 +826,20 @@ country_event = {
 }
 
 country_event = {
+	id = gerb.84
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		has_global_flag = GER_SOV_WHITE_PEACE_1
+	}
+
+	immediate = {
+		GER_SOV_white_peace_check = yes
+	}
+}
+
+country_event = {
 	id = yalta_events.1
 	fire_only_once = yes
 

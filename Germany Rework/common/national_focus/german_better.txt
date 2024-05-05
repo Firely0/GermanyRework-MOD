@@ -14413,43 +14413,8 @@ focus_tree = {
 					limit = {
 						is_ai = yes
 					}
-					division_template = {
-						name = "Panzer Division"
-						regiments = {
-							medium_armor = { x = 0 y = 0 }
-							medium_armor = { x = 0 y = 1 }
-							medium_armor = { x = 0 y = 2 }
-							medium_armor = { x = 0 y = 3 }
-							medium_armor = { x = 1 y = 0 }
-							medium_armor = { x = 1 y = 1 }
-							medium_armor = { x = 1 y = 2 }
-							medium_armor = { x = 1 y = 3 }
-							medium_armor = { x = 2 y = 0 }
-							medium_armor = { x = 2 y = 1 }
-							medium_armor = { x = 2 y = 2 }
-							medium_armor = { x = 2 y = 3 }
-							motorized = { x = 3 y = 0 }
-							motorized = { x = 3 y = 1 }
-							motorized = { x = 3 y = 2 }
-							motorized = { x = 3 y = 3 }
-							motorized = { x = 4 y = 0 }
-							motorized = { x = 4 y = 1 }
-							motorized = { x = 4 y = 2 }
-							motorized = { x = 4 y = 3 }
-						}
-						support = {
-							armored_car_recon = { x = 0 y = 0 }
-							logistics_company = { x = 0 y = 1 }
-							signal_company = { x = 0 y = 2 }
-							engineer = { x = 0 y = 3 }
-						}
-					}
-					64 = {
-						create_unit = {
-							division = "name = \"Panzer Division\" division_template = \"Panzer Division\""
-							owner = GER
-						}
-					}
+					GER_AI_DIV = yes
+					GER_AI_EQ_1 = yes
 				}
 			}
 		}

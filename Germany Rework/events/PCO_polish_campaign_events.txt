@@ -5147,8 +5147,7 @@ country_event = {
 	desc = pol_soviet_retrayal.1.d
 	picture = GFX_report_event_generic_destroyed_vehicles
 	fire_only_once = yes
-	trigger = {
-	}
+
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
@@ -5848,19 +5847,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				AND = {
-					POL = {
-						is_ai = no
-						has_civil_war = no
-					}
-					is_in_faction_with = POL
-				}
-			}
+			base = 100
 		}
 		name = pol_partitionning.1.a
+		log = "AI - HISTORICAL PART. Start"
 		if = {
 			#MR Pact if ally has taken some of Poland
 			limit = {
@@ -6034,7 +6024,6 @@ country_event = {
 				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -6081,7 +6070,9 @@ country_event = {
 			LIT = {
 				clr_country_flag = mr_pact_into_german_sphere_of_influence
 			}
+			set_global_flag = GER_SOV_WHITE_PEACE_1
 		}
+		log = "AI - HISTORICAL PART. END"
 	}
 }
 
@@ -6101,7 +6092,8 @@ country_event = {
 			set_global_flag = poland_partitionned_flag
 		}
 	}
-	option = {
+
+	option = { # AI Only
 		name = pol_par_initial.1.a		#event 1 for historical ai
 		trigger = {
 			AND = {
@@ -6112,11 +6104,13 @@ country_event = {
 				GER = {
 					is_ai = yes
 				}
-				POL = {
-					is_ai = yes
-				}
 			}
 		}
+
+		ai_chance = {
+			factor = 100
+		}
+		
 		GER = {
 			country_event = {
 				days = 1
@@ -6124,7 +6118,8 @@ country_event = {
 			}
 		}
 	}
-	option = {
+
+	option = { # AI; no Ger Took Sov States
 		name = pol_par_initial.1.b		#event 2 ; IF GER TOOK SOV TERR
 		trigger = {
 			AND = {
@@ -6194,7 +6189,89 @@ country_event = {
 			}
 		}
 	}
-	option = {
+
+	option = { # AI; no Sov Took Ger States
+		name = pol_par_initial.1.d		#HIS EVENT IF SOV TOOK GERMAN TERR
+		trigger = {
+			OR = {
+				is_historical_focus_on = no
+				SOV = {
+					is_ai = no
+				}
+				GER = {
+					is_ai = no
+				}
+				POL = {
+					is_ai = no
+				}
+			}
+			has_global_flag = sov_yes_pact
+			any_state = {
+				has_state_flag = mr_pact_ger_reserved_state
+				controller = {
+					OR = {
+						original_tag = SOV
+						is_subject_of = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+			OR = {
+				any_state = {
+					has_state_flag = mr_pact_sov_reserved_state
+					controller = {
+						OR = {
+							original_tag = SOV
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
+					}
+				}
+				any_state = {
+					has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+					controller = {
+						OR = {
+							original_tag = SOV
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
+					}
+				}
+			}
+			NOT = {
+				OR = {
+					any_state = {
+						has_state_flag = mr_pact_sov_reserved_state
+						controller = {
+							OR = {
+								original_tag = GER
+								is_subject_of = GER
+								is_in_faction_with = GER
+							}
+						}
+					}
+					any_state = {
+						has_state_flag = mr_pact_sov_reserved_state_unnegotiable
+						controller = {
+							OR = {
+								original_tag = GER
+								is_subject_of = GER
+								is_in_faction_with = GER
+							}
+						}
+					}
+				}
+			}
+		}
+		GER = {
+			country_event = {
+				days = 1
+				id = pol_par_his_sov.1
+			}
+		}
+	}	
+
+	option = { # AI; no IF NOBODY CAPTURED THE OTHER'S TERRITORIES
 		name = pol_par_initial.1.c		#event 0 IF NOBODY CAPTURED THE OTHER'S TERRITORIES
 		trigger = {
 			AND = {
@@ -6288,87 +6365,8 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = pol_par_initial.1.d		#HIS EVENT IF SOV TOOK GERMAN TERR
-		trigger = {
-			OR = {
-				is_historical_focus_on = no
-				SOV = {
-					is_ai = no
-				}
-				GER = {
-					is_ai = no
-				}
-				POL = {
-					is_ai = no
-				}
-			}
-			has_global_flag = sov_yes_pact
-			any_state = {
-				has_state_flag = mr_pact_ger_reserved_state
-				controller = {
-					OR = {
-						original_tag = SOV
-						is_subject_of = SOV
-						is_in_faction_with = SOV
-					}
-				}
-			}
-			OR = {
-				any_state = {
-					has_state_flag = mr_pact_sov_reserved_state
-					controller = {
-						OR = {
-							original_tag = SOV
-							is_subject_of = SOV
-							is_in_faction_with = SOV
-						}
-					}
-				}
-				any_state = {
-					has_state_flag = mr_pact_sov_reserved_state_unnegotiable
-					controller = {
-						OR = {
-							original_tag = SOV
-							is_subject_of = SOV
-							is_in_faction_with = SOV
-						}
-					}
-				}
-			}
-			NOT = {
-				OR = {
-					any_state = {
-						has_state_flag = mr_pact_sov_reserved_state
-						controller = {
-							OR = {
-								original_tag = GER
-								is_subject_of = GER
-								is_in_faction_with = GER
-							}
-						}
-					}
-					any_state = {
-						has_state_flag = mr_pact_sov_reserved_state_unnegotiable
-						controller = {
-							OR = {
-								original_tag = GER
-								is_subject_of = GER
-								is_in_faction_with = GER
-							}
-						}
-					}
-				}
-			}
-		}
-		GER = {
-			country_event = {
-				days = 1
-				id = pol_par_his_sov.1
-			}
-		}
-	}
-	option = {
+
+	option = { # AI; no #IF THE TWO TOOK EACH OTHER'S TERRITORIES
 		name = pol_par_initial.1.e		#IF THE TWO TOOK EACH OTHER'S TERRITORIES
 		trigger = {
 			OR = {
@@ -6587,7 +6585,6 @@ country_event = {
 		}
 		hidden_effect = {
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -6793,7 +6790,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -6997,7 +6993,6 @@ country_event = {
 		}
 		hidden_effect = {
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -7206,7 +7201,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -7391,7 +7385,6 @@ country_event = {
 				set_state_flag = mr_pact_ger_reserved_state
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -7492,7 +7485,6 @@ country_event = {
 		#}
 		hidden_effect = {
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -7700,7 +7692,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -7961,7 +7952,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -8070,7 +8060,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -8273,7 +8262,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -8534,7 +8522,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -8758,7 +8745,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -8886,7 +8872,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -9146,7 +9131,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -9404,7 +9388,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -9504,7 +9487,6 @@ country_event = {
 				}
 			}
 			set_global_flag = GER_SOV_WHITE_PEACE_1
-			GER_SOV_white_peace_check = yes
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -10593,6 +10575,16 @@ country_event = {
 		set_autonomy = {
 			target = LIT
 			autonomy_state = autonomy_integrated_puppet
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					784 = {
+						is_controlled_by = GER
+					}
+					784 = { transfer_state_to = LIT }
+				}
+			}
 		}
 	}
 	option = {

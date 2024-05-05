@@ -107,9 +107,17 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GER/Portrait_RGV_Hans_Frank.dds"
 	}
 
+	#DNZ
+
 	SpriteType = {
 		name = "GFX_portrait_DNZ_Albert_Forster"
 		texturefile = "gfx/leaders/DNZ/portrait_DNZ_Albert_Forster.dds"
 	}
 
+	#AUS
+
+	spriteType = {
+		name = GFX_portrait_AUS_karl_eglseer_r
+		texturefile = "gfx/leaders/AUS/karl_eglseer.dds"
+	}
 }
