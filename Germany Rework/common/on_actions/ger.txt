@@ -177,6 +177,22 @@ on_actions = {
 				set_global_flag = DONT_ABUSE_ITA_FACTION
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					original_tag = DNZ
+					has_autonomy_state = autonomy_dnz_free_city
+				}
+				leave_faction = yes
+				every_country = {
+					limit = {
+						is_in_faction_with = DNZ
+						is_faction_leader = yes
+					}
+					remove_from_faction = DNZ
+				}
+			}
+		}
 	}
 	on_weekly = {
 		effect = {
@@ -332,9 +348,7 @@ on_actions = {
 					}
 					FROM.FROM = {
 						has_state_flag = GER_COSTAL_STATE_MAIN_LAND
-						controller = {
-							has_civil_war = no
-						}
+						has_civil_war = no
 					}
 				}
 				GER = { activate_mission = Allied_Invasion_of_Germany }

@@ -467,8 +467,11 @@ infantry_SOV = {
 		factor = 0
 
 		modifier = {
-			factor = 5
-			has_completed_focus = SOV_lessons_of_war
+			factor = 100
+			AND = {
+				has_completed_focus = SOV_desperate_measures
+				NOT = { has_idea = SOV_desperate_measures_ns }
+			}
 		}
 	}
 
@@ -480,9 +483,10 @@ infantry_SOV = {
 			factor = 0
 
 			modifier = {
-				factor = 5
-				OR = {
-					has_completed_focus = SOV_lessons_of_war
+				factor = 100
+				AND = {
+					has_completed_focus = SOV_desperate_measures
+					NOT = { has_idea = SOV_desperate_measures_ns }
 				}
 			}
 		}
@@ -572,8 +576,11 @@ infantry_SOV = {
 			factor = 0
 
 			modifier = {
-				factor = 5
-				has_completed_focus = SOV_lessons_of_war
+				factor = 100
+				AND = {
+					has_completed_focus = SOV_desperate_measures
+					NOT = { has_idea = SOV_desperate_measures_ns }
+				}
 			}
 		}
 

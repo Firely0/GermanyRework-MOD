@@ -3051,7 +3051,7 @@ GER_blitzkrieg_russia_hard  = { #STEINER, IT IS NOT TIME YET
 		date < 1942.8.1
 		date > 1941.7.1
 		has_war_with = SOV
-		has_active_mission = High_Command_land_combat
+		has_country_flag = High_Command_Issued_Orders
 		SOV = { has_idea = SOV_desperate_measures_ns }
 		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
 	}
@@ -3095,7 +3095,7 @@ GER_blitzkrieg_russia_soft  = { #Rolling incursions
 		date < 1942.4.1 #To space!
 		date > 1941.8.1
 		has_war_with = SOV
-		has_active_mission = High_Command_land_combat
+		has_country_flag = High_Command_Issued_Orders
 		SOV = { has_idea = SOV_desperate_measures_ns }
 		has_equipment = { infantry_equipment > 15000 } #WE NEED GUNS
 		set_temp_variable = { days = global.num_days }
@@ -3713,6 +3713,34 @@ GER_DNZ_befriend = {
 		type = befriend
 		id = "DNZ"
 		value = 25
+	}
+}
+
+we_can_annex_danzig_dont_declare_war = {
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_war_with = POL
+		DNZ = { 
+			exists = yes 
+			is_puppet_of = POL
+		}
+		POL = { has_capitulated = no }
+	}
+	
+	abort = {
+		POL = {
+			has_capitulated = yes
+			days_since_capitulated > 10
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "DNZ"
+		value = -2000
 	}
 }
 

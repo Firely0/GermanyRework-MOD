@@ -489,10 +489,10 @@ MR_pact_transfer_faction_state_effect = {
 		limit = {
 			784 = {
 				OR = {
-					is_controlled_by = ROOT
+					is_controlled_by = GER
 					any_other_country = {
 						controls_state = 784
-						is_in_faction_with = ROOT
+						is_in_faction_with = GER
 					}
 				}
 			}
@@ -514,7 +514,7 @@ MR_pact_transfer_faction_state_effect = {
 			}
 		}
 		else = {
-			SOU = {
+			SOV = {
 				transfer_state = 784
 			}
 		}
@@ -625,6 +625,33 @@ GER_SOV_white_peace_check = {
 			92 = { is_controlled_by = SOV }
 		}
 		92 = { remove_claim_by = GER }
+	}
+	if = {
+		limit = {
+			784 = {
+				NOT = {
+					OR = {
+						is_controlled_by = GER
+						is_controlled_by = SOV
+						is_controlled_by = LIT
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = LIT_gets_vilnius }
+				LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence }
+			}
+			784 = { transfer_state_to = GER }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = LIT_gets_vilnius }
+				NOT = { LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence } }  
+			}
+			784 = { transfer_state_to = SOV }
+		}
 	}
 	clr_global_flag = GER_SOV_WHITE_PEACE_1
 	set_global_flag = GER_SOV_END_OF_PACT_EVENT
