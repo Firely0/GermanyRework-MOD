@@ -270,6 +270,7 @@ any_state_is_norwegen = {
 			is_owned_by = NOR
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -284,6 +285,7 @@ any_state_is_niederlande = {
 			is_owned_by = HOL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -298,6 +300,7 @@ any_state_is_belgien_nordfrankreich_states = {
 			is_owned_by = BEL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -309,6 +312,7 @@ any_state_is_poland = {
 			is_owned_by = POL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -326,6 +330,7 @@ any_state_is_UKR = {
 	any_controlled_state = {
 		is_core_of = UKR
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -334,6 +339,7 @@ any_state_is_moscow = {
 	any_controlled_state = {
 		is_core_of = RMK
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 		NOT = { has_state_flag = GER_MOSKOW_IGNORE_STATES }
 	}
 }
@@ -343,6 +349,7 @@ any_state_is_caucasus = {
 	any_controlled_state = {
 		is_core_of = RKS
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -351,6 +358,7 @@ any_state_is_turkestan = {
 	any_controlled_state = {
 		is_core_of = RTK
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -362,6 +370,7 @@ can_expanded_norwegen = {
 			is_owned_by = NOR
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -373,6 +382,7 @@ can_expanded_niederlande = {
 			is_owned_by = HOL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -384,6 +394,7 @@ can_expanded_belgien_nordfrankreich_states = {
 			is_owned_by = BEL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -395,6 +406,7 @@ can_expanded_poland = {
 			is_owned_by = POL
 		}
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -403,6 +415,7 @@ can_expanded_ostland = {
 	OR = {
 		any_controlled_state = {
 			has_state_flag = SS_Country_Core_State
+            is_fully_controlled_by = GER
 		}
 	}
 }
@@ -412,6 +425,7 @@ can_expanded_UKR = {
 	any_controlled_state = {
 		is_core_of = UKR
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -420,6 +434,7 @@ can_expanded_moscow = {
 	any_controlled_state = {
 		is_core_of = RMK
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -428,6 +443,7 @@ can_expanded_caucasus = {
 	any_controlled_state = {
 		is_core_of = RKS
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 
@@ -436,6 +452,7 @@ can_expanded_turkestan = {
 	any_controlled_state = {
 		is_core_of = RTK
 		NOT = { is_core_of = GER }
+        is_fully_controlled_by = GER
 	}
 }
 

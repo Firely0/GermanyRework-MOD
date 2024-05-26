@@ -5959,6 +5959,7 @@ foreign_politics = {
 				OR = {
 					has_capitulated = yes 
 					exists = no
+					is_puppet_of = ROOT
 				}
 			}
 		}

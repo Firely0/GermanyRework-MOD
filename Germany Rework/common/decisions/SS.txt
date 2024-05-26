@@ -148,11 +148,12 @@ GER_reichskommissariats = {
 				hidden_effect = {
 					every_state = {
 						limit = {
-							AND = {
+							OR = {
 								is_owned_by = NOR
-								is_fully_controlled_by = GER
-								NOT = { is_core_of = GER }
+								is_core_of = NOR
 							}
+							is_fully_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 						transfer_state_to = NOR
 					}
@@ -192,11 +193,12 @@ GER_reichskommissariats = {
 					hidden_effect = {
 						every_state = {
 							limit = {
-								AND = {
+								OR = {
 									is_owned_by = NOR
-									is_fully_controlled_by = GER
-									NOT = { is_core_of = GER }
+									is_core_of = NOR
 								}
+								is_fully_controlled_by = GER
+								NOT = { is_core_of = GER }
 							}
 							transfer_state_to = NOR
 						}
@@ -280,11 +282,12 @@ GER_reichskommissariats = {
 						}
 						every_state = {
 							limit = {
-								AND = {
+								OR = {
 									is_owned_by = HOL
-									is_fully_controlled_by = GER
-									NOT = { is_core_of = GER }
+									is_core_of = HOL
 								}
+								is_fully_controlled_by = GER
+								NOT = { is_core_of = GER }
 							}
 							transfer_state_to = HOL
 						}
@@ -306,15 +309,16 @@ GER_reichskommissariats = {
 					hidden_effect = {
 						every_state = {
 							limit = {
-								AND = {
+								OR = {
 									is_owned_by = HOL
-									is_fully_controlled_by = GER
-									NOT = { is_core_of = GER }
+									is_core_of = HOL
 								}
+								is_fully_controlled_by = GER
+								NOT = { is_core_of = GER }
 							}
 							transfer_state_to = HOL
 						}
-						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
+						save_global_event_target_as = HOL_GER_PUPPET_MOD_side
 						set_cosmetic_tag = HOL_reichskommissariat
 						create_country_leader = {
 							name = "Arthur Seyss-Inquart"
@@ -364,11 +368,12 @@ GER_reichskommissariats = {
 				hidden_effect = {
 					every_state = {
 						limit = {
-							AND = {
+							OR = {
 								is_owned_by = BEL
-								is_fully_controlled_by = GER
-								NOT = { is_core_of = GER }
+								is_core_of = BEL
 							}
+							is_fully_controlled_by = GER
+							NOT = { is_core_of = GER }
 						}
 						transfer_state_to = BEL
 					}
@@ -377,6 +382,9 @@ GER_reichskommissariats = {
 							29 = { is_fully_controlled_by = GER }
 						}
 						29 = { transfer_state_to = BEL }
+						BEL = { add_state_core = 29 }
+					}
+					else = {
 						BEL = { add_state_core = 29 }
 					}
 					BEL = {
@@ -401,11 +409,12 @@ GER_reichskommissariats = {
 						}
 						every_state = {
 							limit = {
-								AND = {
+								OR = {
 									is_owned_by = BEL
-									is_fully_controlled_by = GER
-									NOT = { is_core_of = GER }
+									is_core_of = BEL
 								}
+								is_fully_controlled_by = GER
+								NOT = { is_core_of = GER }
 							}
 							transfer_state_to = BEL
 						}
@@ -437,11 +446,12 @@ GER_reichskommissariats = {
 					hidden_effect = {
 						every_state = {
 							limit = {
-								AND = {
+								OR = {
 									is_owned_by = BEL
-									is_fully_controlled_by = GER
-									NOT = { is_core_of = GER }
+									is_core_of = BEL
 								}
+								is_fully_controlled_by = GER
+								NOT = { is_core_of = GER }
 							}
 							transfer_state_to = BEL
 						}
@@ -452,7 +462,10 @@ GER_reichskommissariats = {
 							29 = { transfer_state_to = BEL }
 							BEL = { add_state_core = 29 }
 						}
-						save_global_event_target_as = NOR_GER_PUPPET_MOD_side
+						else = {
+							BEL = { add_state_core = 29 }
+						}
+						save_global_event_target_as = BEL_GER_PUPPET_MOD_side
 						set_cosmetic_tag = BEL_reichskommissariat
 						create_country_leader = {
 							name = "Josef Grohe"
@@ -499,11 +512,12 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						AND = {
+						OR = {
 							is_owned_by = POL
-							is_fully_controlled_by = GER
-							NOT = { is_core_of = GER }
+							is_core_of = POL
 						}
+						is_fully_controlled_by = GER
+						NOT = { is_core_of = GER }
 					}
 					transfer_state_to = RGV
 					add_compliance = 0.15
@@ -1105,11 +1119,12 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						AND = {
+						OR = {
+							is_core_of = event_target:NOR_GER_PUPPET_MOD_side
 							is_owned_by = event_target:NOR_GER_PUPPET_MOD_side
-							is_fully_controlled_by = GER
-							NOT = { is_core_of = GER }
 						}
+						is_fully_controlled_by = GER
+						NOT = { is_core_of = GER }
 					}
 					transfer_state_to = event_target:NOR_GER_PUPPET_MOD_side
 				}
@@ -1120,11 +1135,12 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						AND = {
+						OR = {
+							is_core_of = event_target:HOL_GER_PUPPET_MOD_side
 							is_owned_by = event_target:HOL_GER_PUPPET_MOD_side
-							is_fully_controlled_by = GER
-							NOT = { is_core_of = GER }
 						}
+						is_fully_controlled_by = GER
+						NOT = { is_core_of = GER }
 					}
 					transfer_state_to = event_target:HOL_GER_PUPPET_MOD_side
 				}
@@ -1135,11 +1151,12 @@ GER_reichskommissariats = {
 				}
 				every_state = {
 					limit = {
-						AND = {
+						OR = {
+							is_core_of = event_target:BEL_GER_PUPPET_MOD_side
 							is_owned_by = event_target:BEL_GER_PUPPET_MOD_side
-							is_fully_controlled_by = GER
-							NOT = { is_core_of = GER }
 						}
+						is_fully_controlled_by = GER
+						NOT = { is_core_of = GER }
 					}
 					transfer_state_to = event_target:BEL_GER_PUPPET_MOD_side
 				}
