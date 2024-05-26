@@ -1299,7 +1299,6 @@ shared_focus= {
 	completion_reward = {
 		hidden_effect = {
 			remove_ideas = Landon_Treaty
-			GER_upgrade_kriegsmarine_effect = yes
 			set_variable = {
 				GER_positioning = 0.1
 			}
@@ -1322,6 +1321,11 @@ shared_focus= {
 			uses = 1
 			category = bb_tech
 			category = shbb_tech
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
 		}
 	}
 }
@@ -1753,9 +1757,6 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		hidden_effect = {
-			remove_ideas = Landon_Treaty
-		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
@@ -1778,6 +1779,11 @@ shared_focus = {
 				instant_build = yes
 			}
 			set_state_flag = GER_u_boat_effort_2dockyards
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
 		}
 	}
 }
@@ -4888,6 +4894,49 @@ shared_focus = {
 		custom_effect_tooltip = GER_Staff_tank_modify_tt
 		custom_effect_tooltip = GER_staff_a_tt
 		custom_effect_tooltip = GER_staff_modify_tt
+
+		random_army_leader = {
+			limit = {
+				NOT = { has_trait = purged_by_hitler }
+				NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				NOT = { has_unit_leader_flag = officer_high_trait_flag }
+				is_field_marshal = no
+			}
+			add_unit_leader_trait = officer_high
+			set_unit_leader_flag = {
+				flag = officer_high_trait_flag
+			}
+		}
+		random_army_leader = {
+			limit = {
+				NOT = { has_trait = purged_by_hitler }
+				NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				NOT = { has_unit_leader_flag = officer_high_trait_flag }
+				is_field_marshal = no
+			}
+			add_unit_leader_trait = officer_high
+			set_unit_leader_flag = {
+				flag = officer_high_trait_flag
+			}
+		}
+		random_army_leader = {
+			limit = {
+				NOT = { has_trait = purged_by_hitler }
+				NOT = { has_unit_leader_flag = recently_purged_by_hitler }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE }
+				NOT = { has_unit_leader_flag = GER_NOT_PURGE_WILHELM }
+				NOT = { has_unit_leader_flag = officer_high_trait_flag }
+				is_field_marshal = no
+			}
+			add_unit_leader_trait = officer_high
+			set_unit_leader_flag = {
+				flag = officer_high_trait_flag
+			}
+		}
 
 		hidden_effect = {
 			remove_ideas = GER_reorg_in_army

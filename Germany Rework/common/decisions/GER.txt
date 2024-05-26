@@ -319,6 +319,7 @@ GER_Rhineland_demilitarized = {
 					}
 					set_technology = { mobile_warfare = 1 popup = no }
 					set_technology = { formation_flying = 1 popup = no }
+					set_technology = { trade_interdiction = 1 popup = no }
 					add_ideas = i_dont_use_wargoal
 				}
 			}
@@ -5949,6 +5950,10 @@ foreign_politics = {
 	
 		icon = GFX_decision_eng_trade_unions_support
 
+		allowed = {
+			original_tag = GER
+		}
+
 		available = {
 			POL = { 
 				OR = {
@@ -5987,6 +5992,10 @@ foreign_politics = {
 	send_ultimatum_to_lithuania = {
 	
 		icon = hol_war_on_pacifism
+
+		allowed = {
+			original_tag = GER
+		}
 
 		available = {
 			NOT = {
@@ -6029,6 +6038,10 @@ foreign_politics = {
 	offer_vilnius_to_lithuania = {
 	
 		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = GER
+		}
 
 		available = {
 			OR = {

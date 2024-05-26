@@ -1294,9 +1294,25 @@ GER_upgrade_kriegsmarine_effect = {
 	hidden_effect = {
 		if = {
 			limit = {
+				has_completed_focus = GER_modular_construction_a
+				has_completed_focus = GER_carrier_war
+			}
+			remove_dynamic_modifier = {
+				modifier = Kriegsmarine_Carrier_dynamic_modifier
+			}
+			remove_dynamic_modifier = {
+				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Kriegsmarine_mix_ver_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
 				has_dynamic_modifier = {
 					modifier = Kriegsmarine_dynamic_modifier
 				}
+				NOT = { has_completed_focus = GER_modular_construction_a }
 				has_completed_focus = GER_carrier_war
 			}
 			remove_dynamic_modifier = {
@@ -1306,11 +1322,12 @@ GER_upgrade_kriegsmarine_effect = {
 				modifier = Kriegsmarine_Carrier_dynamic_modifier
 			}
 		}
-		else_if = {
+		if = {
 			limit = {
 				has_dynamic_modifier = {
 					modifier = Kriegsmarine_dynamic_modifier
 				}
+				NOT = { has_completed_focus = GER_carrier_war }
 				has_completed_focus = GER_modular_construction_a
 			}
 			remove_dynamic_modifier = {
@@ -1318,32 +1335,6 @@ GER_upgrade_kriegsmarine_effect = {
 			}
 			add_dynamic_modifier = {
 				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
-			}
-		}
-		else_if = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-			}
-		}
-		else_if = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = Kriegsmarine_Carrier_dynamic_modifier
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = Kriegsmarine_Carrier_dynamic_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
 			}
 		}
 	}

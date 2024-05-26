@@ -106,6 +106,8 @@
  trait_GER_SS_desc:0 "The person is known to be registered in SS"
  country_leader_trait:0 "Supreme Leader"
  country_leader_trait_desc:0 "As both the leader of the country and the head of the army, he does not have to wait for orders, but he is not interested in learning something because he is the best."
+ officer_high:0 "High Rank Officer"
+ officer_high_desc:0 ""
 
  #leader
 
@@ -1082,6 +1084,20 @@
  GER_mol_rib_pact_a_desc:0 "A treaty of friendship and non-aggression with [GER.GetTheUSSRName] might turn the stomach, but it will allow their precious oil to keep flowing into Germany. The secret addendum will divide the territories of Romania, Poland, Lithuania, Latvia, Estonia and Finland into [GER.GetAdjective] and [SOV.GetAdjective] spheres of influence..."
  GER_mol_rib_pact_tt:0 "Enter into a §Ynon-aggression pact§! with §YSoviet Union§! and agree to §Ydivide Poland§! between [SOV.GetName] and Germany\n"
  
+ GER_Request_Military_Support:0 "Request Military Support"
+ GER_Request_Military_Support_desc:0 ""
+ GER_Unite_for_Democracy:0 "Unite For Democracy"
+ GER_Unite_for_Democracy_desc:0 ""
+ GER_end_of_time:0 "End of Time for them"
+ GER_end_of_time_desc:0 ""
+ GER_True_Democracy:0 "True Democracy"
+ GER_True_Democracy_desc:0 ""
+ GER_Agreements_with_Allies:0 "Agreements with Allies"
+ GER_Agreements_with_Allies_desc:0 ""
+ GER_ask_x_for_support:0 "Contact August von Mackensen"
+ GER_ask_x_for_support_desc:0 ""
+ GER_army_support:0 "Army Support"
+ GER_army_support_desc:0 ""
  GER_Gustav_project:0 "Gustav Project"
  GER_Gustav_project_desc:0 ""
  GER_rocket_launch_in_air_bases:0 "Rocket Site Buildup"
@@ -1523,7 +1539,7 @@
  GER_support_iran_desc:0 ""
  GER_iran_trade:0 "Trade Pact with Iran"
  GER_iran_trade_desc:0 ""
- GER_prepare_for_innovative:0 "The coup d'état of Wilhelm II"
+ GER_prepare_for_innovative:0 "The coup d'état"
  GER_prepare_for_innovative_desc:0 ""
  GER_assassinate_adolf_hitler:0 "Assassinate Adolf Hitler"
  GER_assassinate_adolf_hitler_desc:0 ""
@@ -1994,7 +2010,7 @@
  Kriegsmarine_PlanZ_dynamic_modifier:0 "Kriegsmarine"
  Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
  Kriegsmarine_Gloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
- Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_mix_ver_dynamic_modifier:0 "Kriegsmarine"
 
  Kriegsmarine_Debuff_Version:0 "Kriegsmarine"
  Kriegsmarine_buff_Version_No_Carrier:0 "Kriegsmarine"
@@ -2004,7 +2020,7 @@
  GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
  GER_Kriegsmarine_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_Kriegsmarine_Carrierfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
- GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
+ GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
  GER_Kriegsmarine_final_mix_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
 
  GER_PLAN_Z_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n£ships_contact_texticon Positioning: §Y+10.0%§! \n£armor_texticon Screening Efficiency §Y+10.0%§! \n\n"

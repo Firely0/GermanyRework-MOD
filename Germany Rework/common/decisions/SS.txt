@@ -1230,7 +1230,10 @@ GER_reichskommissariats = {
 				every_state = {
 					limit = {
 						AND = {
-							is_owned_by = POL
+							OR = {
+								is_core_of = POL
+								is_owned_by = POL
+							}
 							is_fully_controlled_by = GER
 							NOT = { is_core_of = GER }
 						}
