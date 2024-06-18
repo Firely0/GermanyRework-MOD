@@ -98,7 +98,17 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-			209 = { is_controlled_by_ROOT_or_ally = yes }
+				OR = {
+					209 = { is_controlled_by_ROOT_or_ally = yes }
+					AND = {
+						FIN = {
+							NOT = { has_war_with = GER }
+							has_war_with = SOV
+							has_completed_focus = FIN_cooperation_with_germany
+						}
+						209 = { is_controlled_by = FIN }
+					}
+				}
 		}
 
 		activation = {
@@ -344,7 +354,7 @@ GER_Operation_Barbarossa_V = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 242
-				state = 206 
+				state = 206
 			}
 			highlight_color_while_active = 3
 			highlight_color_before_active = 2
@@ -893,8 +903,17 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-			check_variable = {
-				GER_success > 9
+			hidden_trigger = {
+				OR = {
+					check_variable = {
+						GER_success > 9
+					}
+					AND = {
+						has_global_flag = GER_Leningrad_win
+						has_global_flag = GER_Moscow_win
+						has_global_flag = GER_Stalingrad_win
+					}
+				}
 			}
 		}
 
@@ -1185,7 +1204,7 @@ GER_Operation_Barbarossa_High_Command = {
 		complete_effect = {
 		}
 	}
-	
+
 	German_offensive_targets = {
 		icon = GFX_decision_generic_operation
 		days_mission_timeout = 7
@@ -1214,7 +1233,7 @@ GER_Operation_Barbarossa_High_Command = {
 
 		complete_effect = {
 		}
-	}	
+	}
 
 	Invade_baltics = {
 		icon = GFX_decision_generic_operation

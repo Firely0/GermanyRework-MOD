@@ -5969,7 +5969,7 @@ foreign_politics = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 
 		visible = {
@@ -5984,6 +5984,14 @@ foreign_politics = {
 			GER = {
 				annex_country = {
 					target = DNZ
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai
+					}
+					add_political_power = 25
 				}
 			}
 		}

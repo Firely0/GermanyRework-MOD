@@ -719,10 +719,6 @@ country_event = {
 		name = wtt_germany.18.a
 		add_stability = 0.05
 		add_popularity = { ideology = fascism popularity = -0.05 }
-		if = {
-			limit = { is_faction_leader = yes }
-			leave_faction = yes
-		}
 
 		custom_effect_tooltip = ger_aid
 		hidden_effect = {
@@ -753,10 +749,6 @@ country_event = {
 		add_political_power = 75
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		set_country_flag = GER_imprisoned_fascist_leadership
-		if = {
-			limit = { is_faction_leader = yes }
-			leave_faction = yes
-		}
 
 		custom_effect_tooltip = ger_aid
 		hidden_effect = {

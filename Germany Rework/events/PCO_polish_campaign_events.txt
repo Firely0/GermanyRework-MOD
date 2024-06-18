@@ -6023,7 +6023,6 @@ country_event = {
 				clr_state_flag = mr_pact_sov_reserved_state_unnegotiable
 				set_state_flag = mr_pact_ger_reserved_state
 			}
-			set_global_flag = GER_SOV_WHITE_PEACE_1
 			every_other_country = {
 				limit = {
 					has_idea = POL_passive_to_the_soviet_invasion_2
@@ -6070,7 +6069,7 @@ country_event = {
 			LIT = {
 				clr_country_flag = mr_pact_into_german_sphere_of_influence
 			}
-			set_global_flag = GER_SOV_WHITE_PEACE_1
+			GER_SOV_white_peace_check = yes
 		}
 		log = "AI - HISTORICAL PART. END"
 	}

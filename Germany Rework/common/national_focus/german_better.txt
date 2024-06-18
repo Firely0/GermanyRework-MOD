@@ -7699,6 +7699,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
+			447 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		x = 0
 		y = 1
@@ -12917,9 +12918,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_category_tooltip = GER_colonial_management_category
-			swap_ideas = {
-				remove_idea = GER_military_governor_occupation_base_idea
-				add_idea = GER_military_governor_occupation_idea
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = GER_military_governor_occupation_base_idea
+					add_idea = GER_military_governor_occupation_idea
+				}
 			}
 		}
 	}

@@ -313,60 +313,41 @@ MR_pact_transfer_state_effect = {
 		limit = {
 			784 = {
 				OR = {
-					is_controlled_by = ROOT
-					any_other_country = {
-						controls_state = 784
-						is_subject_of = ROOT
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 784
+							is_in_faction_with = GER
+						}
 					}
+					is_controlled_by = SOV
+					is_controlled_by = LIT
 				}
 			}
 		}
 		if = {
 			limit = {
+				LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence }
+			}
+			784 = { transfer_state_to = GER }
+		}
+		else_if = {
+			limit = {
+				NOT = { LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence } }
+				LIT = { exists = yes }
 				OR = {
 					has_global_flag = LIT_gets_vilnius
 					LIT = {
 						controls_state = 784
 					}
-					LIT = {
-						is_in_faction_with = SOU
-					}
-				}
-				LIT = {
-					exists = yes
 				}
 			}
-			LIT = {
-				transfer_state = 784
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOU
-						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
-					}
-				}
-			}
-			SOU = {
-				transfer_state = 784
-			}
+			784 = { transfer_state_to = LIT }
 		}
 		else = {
-			random_other_country = {
-				limit = {
-					is_in_faction_with = SOU
-					OR = {
-						has_cosmetic_tag = LIT_belarus
-						has_cosmetic_tag = LAT_belarus
-						has_cosmetic_tag = EST_belarus
-						has_cosmetic_tag = BAL_UNIFIED
-					}
-				}
-				transfer_state = 784
-			}
+			784 = { transfer_state_to = SOV }
 		}
+		log = "784 - If"
 	}
 	set_global_flag = GER_SOV_WHITE_PEACE_1
 	log = "White Peace Check 1"
@@ -629,29 +610,42 @@ GER_SOV_white_peace_check = {
 	if = {
 		limit = {
 			784 = {
-				NOT = {
+				OR = {
 					OR = {
 						is_controlled_by = GER
-						is_controlled_by = SOV
-						is_controlled_by = LIT
+						any_other_country = {
+							controls_state = 784
+							is_in_faction_with = GER
+						}
 					}
+					is_controlled_by = SOV
+					is_controlled_by = LIT
 				}
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = LIT_gets_vilnius }
 				LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence }
 			}
 			784 = { transfer_state_to = GER }
 		}
 		else_if = {
 			limit = {
-				NOT = { has_global_flag = LIT_gets_vilnius }
-				NOT = { LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence } }  
+				NOT = { LIT = { has_country_flag = mr_pact_into_german_sphere_of_influence } }
+				LIT = { exists = yes }
+				OR = {
+					has_global_flag = LIT_gets_vilnius
+					LIT = {
+						controls_state = 784
+					}
+				}
 			}
+			784 = { transfer_state_to = LIT }
+		}
+		else = {
 			784 = { transfer_state_to = SOV }
 		}
+		log = "784 - If"
 	}
 	clr_global_flag = GER_SOV_WHITE_PEACE_1
 	set_global_flag = GER_SOV_END_OF_PACT_EVENT
@@ -1706,7 +1700,7 @@ GER_AUS_annex = {
 			AUS_karl_eglseer = {
 				demote_leader = yes
 				remove_unit_leader_trait = recently_promoted
-			}		
+			}
 		}
 	}
 	add_political_power = 75
@@ -3270,7 +3264,7 @@ GER_next_plans_effect = {
 				hours = 6
 			}
 		}
-	}	
+	}
 	if = {
 		limit = {
 			NOT = { has_global_flag = GER_Operation_Barbarossa_at_phase_3 }
@@ -3330,8 +3324,8 @@ GER_next_plans_effect = {
 				hours = 6
 			}
 		}
-	}	
-}	
+	}
+}
 
 GER_readd_barbarossa = {
 	if = {
@@ -3564,7 +3558,7 @@ GER_general_meeting = {
 						}
 					}
 				}
-				# Chief of Navy --->					
+				# Chief of Navy --->
 				if = {
 					limit = {
 						has_idea = raeder
@@ -4120,7 +4114,7 @@ GER_general_meeting = {
 							}
 						}
 					}
-					# Chief of Navy --->					
+					# Chief of Navy --->
 					if = {
 						limit = {
 							has_idea = raeder
@@ -4457,7 +4451,7 @@ GER_abwehr_rd = {
 	else = {
 		if = {
 			limit = {
-				GER = { 
+				GER = {
 					has_idea = abwehr_agent_non_dlc
 				}
 			}
@@ -4469,10 +4463,10 @@ GER_abwehr_rd = {
 			}
 		}
 		if = {
-			limit = { 
-				GER = { 
-					has_idea = abwehr_agent_non_dlc_v 
-				}  
+			limit = {
+				GER = {
+					has_idea = abwehr_agent_non_dlc_v
+				}
 			}
 			GER = {
 				swap_ideas = {
@@ -4808,7 +4802,7 @@ yalta_setup_related = {
 				}
 			}
 		}
-		set_global_flag = YALTA_LIT	
+		set_global_flag = YALTA_LIT
 	}
 	if = {
 		limit = {
@@ -4974,9 +4968,9 @@ FORCE_YALTA = {
 		limit = {
 			OR = {
 				SOV = {
-					has_country_flag = morgenthau_agreed_flag 
+					has_country_flag = morgenthau_agreed_flag
 				}
-				has_global_flag = morgenthau_agreed_flag 
+				has_global_flag = morgenthau_agreed_flag
 			}
 		}
 		if = {
@@ -5007,9 +5001,9 @@ FORCE_YALTA = {
 		if = {
 			limit = {
 				SOV = {
-					has_country_flag = morgenthau_agreed_flag 
+					has_country_flag = morgenthau_agreed_flag
 				}
-				has_global_flag = morgenthau_agreed_flag 
+				has_global_flag = morgenthau_agreed_flag
 			}
 			SOV = {
 				transfer_state = 763
@@ -5084,7 +5078,7 @@ FORCE_YALTA = {
 			transfer_state = 4
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes 
+				elections_allowed = yes
 			}
 		}
 	}
@@ -5098,7 +5092,7 @@ FORCE_YALTA = {
 			transfer_state = 36
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes 
+				elections_allowed = yes
 			}
 		}
 	}
@@ -5111,7 +5105,7 @@ FORCE_YALTA = {
 			transfer_state = 34
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes 
+				elections_allowed = yes
 			}
 		}
 	}
@@ -5123,7 +5117,7 @@ FORCE_YALTA = {
 			transfer_state = 8
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes 
+				elections_allowed = yes
 			}
 		}
 	}
@@ -5139,7 +5133,7 @@ FORCE_YALTA = {
 			transfer_state = 151
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes 
+				elections_allowed = yes
 			}
 		}
 	}
@@ -5209,7 +5203,7 @@ FORCE_YALTA = {
 			limit = {
 				OR = {
 					has_global_flag = YALTA_HISTORICAL
-					has_global_flag = morgenthau_agreed_flag 
+					has_global_flag = morgenthau_agreed_flag
 				}
 			}
 			POL = {

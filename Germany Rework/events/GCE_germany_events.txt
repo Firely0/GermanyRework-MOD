@@ -1786,6 +1786,17 @@ country_event = {
 		add_stability = -0.05
 		add_war_support = -0.1
 	}
+
+	option = {
+		name = "No, the war goes on"
+		ai_chance = {
+			base = 0
+		}
+
+		ENG = {
+			add_stability = -0.1
+		}
+	}
 }
 
 ########################################################
@@ -1903,6 +1914,16 @@ country_event = {
 		}
 		add_stability = -0.05
 		add_war_support = -0.1
+	}
+	option = {
+		name = "No, the war goes on"
+		ai_chance = {
+			base = 0
+		}
+
+		USA = {
+			add_stability = -0.1
+		}
 	}
 }
 

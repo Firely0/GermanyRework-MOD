@@ -3193,6 +3193,10 @@ country_event = {
 				surrender_progress > 0.40
 				factor = 60
 			}
+			modifier = {
+				GER = { is_ai = yes }
+				factor = 100
+			}
 		}
 
 		GER = {
@@ -3204,6 +3208,18 @@ country_event = {
 	option = {
 		ai_chance = {
 			factor = 60
+			modifier = {
+				NOT = { has_completed_focus = SOV_desperate_measures }
+				factor = 0
+			}
+			modifier = {
+				surrender_progress < 0.40
+				factor = 60
+			}
+			modifier = {
+				GER = { is_ai = yes }
+				factor = 0
+			}
 		}
 		name = "No! We Keep Our Homeland!"
 
