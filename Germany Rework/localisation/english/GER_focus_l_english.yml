@@ -125,6 +125,7 @@
  LOW_SUPPLY_STATE:0 "Low Supply Reserved"
  NORMAL_SUPPLY_STATE:0 "Supply Reserved"
  EXTRA_SUPPLY_STATE:0 "Extra Supply Reserved"
+ Non_intervention_dynamic_modifier:0 "Non-intervention Zone"
 
  # Molotov-Ribbentrop
  Germany_state_dynamic_modifier:0 "Molotov-Ribbentrop Assigned Territory"
@@ -292,6 +293,14 @@
  GER_training_program:0 "Military Training Programs"
  GER_SOV_TRAINING:0 "German - Soviet Air Training Program"
  GER_ITA_TRAINING:0 "German - Italian Naval Training Program"
+
+ #Spain Intervation
+ GER_spain_volunteers:0 "Intervention in Spain"
+ GER_Non_intervention_zones:0 "Non-intervention Zones"
+ GER_Abandon_Non_Intervention:0 "Abandon Non-Intervention Agreement"
+ GER_try_experimental_prototypes:0 "Try New Prototypes"
+ GER_experimental_light_tank_prototypess:0 "Try Experimental Light-tank Prototypes"
+ GER_experimental_aircraft_prototypes:0 "Try Experimental Aircraft Prototypes"
 
  #Last Stand of Germany
  GER_last_stand_of_germany:0 "Last Stand of Germany"
@@ -634,8 +643,7 @@
  FundsforProject:0 "Special Project"
  FundsforProject_desc:0 ""
 
- GER_Trade_with_Sweden:0 "Trade Pact With Sweden"
- GER_Trade_with_Sweden_SWE:0 "Trade Pact With Sweden"
+ GER_Trade_with_Sweden_SWE:0 "Iron Trade With Germany"
 
  Japan_Side_Intel:0 "German Navy Cooperation"
  Japan_Side_Intel_build:0 "German Navy Cooperation"
@@ -723,7 +731,7 @@
  GER_personal_agenda_adolf_hitler:0 "\n£GFX_power_balance_texticon Personal Agenda"
  GER_personal_agenda_adolf_hitler_tt: "§GGerman Supremacy§!: Battlefield or technological superiority will increase £GFX_power_balance_texticon §YHealth of Adolf Hitler§!. \n  - §RSovereignty Threatened§!: Losing control over a core state will decrease £GFX_power_balance_texticon §YHealth of Adolf Hitler§!. \n  - §RV for Victory§!: Failure of Military Operations decrease £GFX_power_balance_texticon §YHealth of Adolf Hitler§!.§!" 
  
- GER_war_eco_development_buildings_tt:0 "Per Extra Budget We Allocated to Companies Adds Two §YBuilding Slot§! and §Y$arms_factory$§! in states.\n"
+ GER_war_eco_development_buildings_tt:0 "Per Extra Budget We Allocated to Companies Adds Two §YBuilding Slot§!, §Y$arms_factory$§! or §Y$dockyard$§! in states.\n"
  GER_smoke_and_fire_tactic_tt:0 "Enables Tactic: §HGas Attack§!"
  recall_generals_with_war_with_us:0 "Call back our advisors and generals in countries that are likely to go to war with us"
  killed_by_bomb:0 "Victim of Assassination"

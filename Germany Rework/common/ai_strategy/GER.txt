@@ -3661,7 +3661,7 @@ DNZ_befrinend = {
 	}
 
 	abort = {
-		has_war = GER
+		has_war_with = GER
 	}
 
 	ai_strategy = {
@@ -3693,8 +3693,8 @@ GER_DNZ_befriend = {
 	}
 
 	abort = {
-		has_war = DNZ
-		has_war = POL
+		has_war_with = DNZ
+		has_war_with = POL
 	}
 
 	ai_strategy = {

@@ -199,7 +199,7 @@ country_event = {
 
 	option = {
 		name = BBA_italy_bop.3.a
-		
+
 		GER_bop_medium_increase_effect = yes
 		GER_bop_decrease_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_reclaiming_cores_tt
@@ -820,7 +820,7 @@ country_event = {
 		hidden_effect = {
 			remove_ideas = league_of_nations_member_idea
 		}
-		
+
 	}
 
 }
@@ -836,6 +836,131 @@ country_event = {
 
 	immediate = {
 		GER_SOV_white_peace_check = yes
+	}
+}
+
+country_event = {
+	id = gerb.86
+	hidden = yes
+
+	trigger = {
+		has_country_flag = FRA_non_intervention_agreed
+		NOT = { has_country_flag = FRA_non_intervention_agreed_setup }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				ROOT = { tag = GER }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 168
+						state = 167
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Non_intervention_dynamic_modifier
+					scope = GER
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { tag = ENG }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 790
+						state = 740
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Non_intervention_dynamic_modifier
+					scope = ENG
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { tag = ITA }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 165
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = Non_intervention_dynamic_modifier
+					scope = ITA
+				}
+			}
+		}
+		set_country_flag = FRA_non_intervention_agreed_setup
+	}
+}
+
+country_event = {
+	id = gerb.87
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = scw_over
+	}
+
+	immediate = {
+		every_state = {
+			remove_dynamic_modifier = { modifier = Non_intervention_dynamic_modifier }
+		}
+	}
+}
+
+country_event = {
+	id = gerb.88
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SPA
+		has_civil_war = yes
+		has_war_with_major = yes
+	}
+
+	immediate = {
+		every_state = {
+			remove_dynamic_modifier = { modifier = Non_intervention_dynamic_modifier }
+		}
+	}
+}
+
+country_event = {
+	id = gerb.89
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_completed_focus = FRA_intervention_in_spain
+	}
+
+	immediate = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 169
+					state = 177
+					state = 171
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = Non_intervention_dynamic_modifier
+				scope = FRA
+			}
+		}
 	}
 }
 
@@ -913,7 +1038,7 @@ country_event = {
 
 	option = {
 		name = "Erich von Manstein's Plan"
-	
+
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -921,10 +1046,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-	
+
 		set_country_flag = GER_BLITZ
 		country_event = { id = ger_around_maginot_event.3 hours = 1 }
-		
+
 		hidden_effect = {
 			news_event = {
 				hours = 6
@@ -932,10 +1057,10 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "Franz Halder`s Plan"
-		
+
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -943,7 +1068,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-	
+
 		set_country_flag = GER_OLD_PLAN
 		complete_national_focus = GER_around_maginot
 
@@ -991,7 +1116,7 @@ country_event = {
 				}
 			}
 		}
-	
+
 		hidden_effect = {
 			news_event = {
 				hours = 6
@@ -1012,11 +1137,11 @@ country_event = {
 
 	option = {
 		name = "Erich von Manstein will command."
-	
+
 		ai_chance = {
 			base = 5
 		}
-	
+
 		GER_erich_von_manstein = {
 			promote_leader = yes
 			add_planning = 1
@@ -1120,12 +1245,12 @@ country_event = {
 				}
 			}
 		}
-	
+
 	}
-	
+
 	option = {
 		name = "We don't have time for this."
-	
+
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -1133,14 +1258,14 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-	
+
 		GER_erich_von_manstein = {
 			add_planning = 1
 		}
 
 		hidden_effect = {
 			complete_national_focus = GER_around_maginot
-						if = {
+			if = {
 				limit = {
 					country_exists = BEL
 					NOT = {
@@ -1236,7 +1361,7 @@ country_event = {
 				}
 			}
 		}
-		
+
 	}
 
 }
@@ -1536,7 +1661,7 @@ country_event = {
 		}
 
 		hidden_effect = {
-			GER = { 
+			GER = {
 				country_event = ger_kaiser_in_exile.9
 				create_faction = "GER_central_powers_faction"
 				add_to_faction = HOL
@@ -1591,7 +1716,7 @@ country_event = {
 }
 
 country_event = {
-	id = ger_kaiser_in_exile.9 
+	id = ger_kaiser_in_exile.9
 	title = "The Queen has honoured our request."
 	desc = ""
 	picture = GFX_report_event_czech_soldiers_01
@@ -1619,7 +1744,7 @@ country_event = {
 }
 
 country_event = {
-	id = ger_kaiser_in_exile.10 
+	id = ger_kaiser_in_exile.10
 	title = "Dutch Government Decides Not to Participate in the War"
 	desc = ""
 	picture = GFX_report_event_czech_soldiers_01
@@ -2115,9 +2240,9 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
+
 		hidden_effect = {
 			GER = {
-				add_ideas = GER_Trade_with_Sweden
 				give_guarantee = SWE
 			}
 			SWE = {
@@ -2524,7 +2649,7 @@ country_event = {
 	desc = "Germany wants us to join war Against Soviet Union!, They Promised Give our Lost Land Back to us"
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-	
+
 	option = {
 		ai_chance = {
 			factor = 60
@@ -2632,7 +2757,7 @@ country_event = {
 							is_in_faction_with = GER
 							NOT = { tag = FIN }
 						}
-					}		
+					}
 				}
 				FIN = {
 					transfer_state = PREV
@@ -2680,7 +2805,7 @@ country_event = {
 	desc = "What Should We Do With Andrey Vlasov?"
 	picture = GFX_report_event_german_italian_pact
 	is_triggered_only = yes
-	
+
 	option = {
 		ai_chance = {
 			factor = 100
@@ -3261,7 +3386,7 @@ country_event = {
 			JAP_Lands_in_Soviet = yes
 		}
 
-		if = { # via German Focus 
+		if = { # via German Focus
 			limit = {
 				has_country_flag = GER_SOV_FIN_Demanded
 				FIN = {
@@ -3272,7 +3397,7 @@ country_event = {
 			FIN_Lands_in_Soviet = yes
 		}
 
-		if = { # via Finland Focus 
+		if = { # via Finland Focus
 			limit = {
 				FIN = {
 					NOT = { has_war_with = GER }
@@ -3680,7 +3805,7 @@ country_event = { #Event For France
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -3837,7 +3962,7 @@ country_event = { #Event For France / Not Diplo Side
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "We Always Have Other Plans"
@@ -4000,7 +4125,7 @@ country_event = { #Event For UK
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -4104,7 +4229,7 @@ country_event = { #Event For UK - For Trade Ban
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -4153,7 +4278,7 @@ country_event = { #Event For UK - Security of Benelux
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -4240,7 +4365,7 @@ country_event = { #Event For UK isolate
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -4283,7 +4408,7 @@ country_event = { #Event For UK issue ultimatum
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-	
+
 
 	option = { #Historical
 		name = germany.60.b
@@ -4926,7 +5051,7 @@ country_event = {
 				defense_skill = 3
 				planning_skill = 2
 				logistics_skill = 5
-			}			
+			}
 			set_rule = {
 				can_send_volunteers = yes
 			}
@@ -5303,7 +5428,7 @@ country_event = {
 					transfer_troops = no
 				}
 			}
-			if = { # DLC Version - Civilwars 
+			if = { # DLC Version - Civilwars
 				limit = {
 					has_war_with = NOR
 					NOR = {
@@ -5311,7 +5436,7 @@ country_event = {
 						has_civil_war = yes
 					}
 				}
-				every_country = { 
+				every_country = {
 					limit = {
 						original_tag = NOR
 					}
@@ -5769,7 +5894,7 @@ country_event = {
 					has_idea = GER_SS
 				}
 				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }				
+				set_variable = { var = SS_anger value = 0 }
 			}
 		}
 	}
@@ -5837,7 +5962,7 @@ country_event = {
 			add_country_leader_trait = political_reformer_1
 			add_political_power = 100
 		}
-	}	
+	}
 }
 
 country_event = {
@@ -5865,7 +5990,7 @@ country_event = {
 					has_idea = GER_SS
 				}
 				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }				
+				set_variable = { var = SS_anger value = 0 }
 			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
@@ -5982,7 +6107,7 @@ country_event = {
 					has_idea = GER_SS
 				}
 				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }				
+				set_variable = { var = SS_anger value = 0 }
 			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
@@ -6395,13 +6520,13 @@ country_event = {
 	title = GER_health_adolf.4.t
 	desc = GER_health_adolf.4.desc
 	picture = GFX_report_event_germany_victory
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = GER_health_adolf.4.a
-		
+
 		custom_effect_tooltip = GER_health_intro_tt
 		custom_effect_tooltip = SOV_paranoia_system_intro_tt
 	}
@@ -6472,7 +6597,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		
+
 		create_equipment_variant = {
 			name = "Moltke Class"
 			type = ship_hull_cruiser_1

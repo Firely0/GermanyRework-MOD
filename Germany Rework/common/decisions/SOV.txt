@@ -4192,13 +4192,13 @@ SOV_propaganda_campaigns = {
 
 
 
- ######    #######   ######  ########  ########   #######  ##    ## ######## ##    ## ########  ######  ######## ########   #######  ##    ##
+######    #######   ######  ########  ########   #######  ##    ## ######## ##    ## ########  ######  ######## ########   #######  ##    ##
 ##    ##  ##     ## ##    ## ##     ## ##     ## ##     ##  ##  ##  ##       ##   ##     ##    ##    ##    ##    ##     ## ##     ##  ##  ##
 ##        ##     ## ##       ##     ## ##     ## ##     ##   ####   ##       ##  ##      ##    ##          ##    ##     ## ##     ##   ####
 ##   #### ##     ##  ######  ########  ########  ##     ##    ##    ######   #####       ##     ######     ##    ########  ##     ##    ##
 ##    ##  ##     ##       ## ##        ##   ##   ##     ##    ##    ##       ##  ##      ##          ##    ##    ##   ##   ##     ##    ##
 ##    ##  ##     ## ##    ## ##        ##    ##  ##     ##    ##    ##       ##   ##     ##    ##    ##    ##    ##    ##  ##     ##    ##
- ######    #######   ######  ##        ##     ##  #######     ##    ######## ##    ##    ##     ######     ##    ##     ##  #######     ##
+######    #######   ######  ##        ##     ##  #######     ##    ######## ##    ##    ##     ######     ##    ##     ##  #######     ##
 
 
 
@@ -5265,6 +5265,17 @@ SOV_diplomacy_baltic_decision_category = {
 				OR = {
 					is_in_faction_with = FROM
 					surrender_progress > 0.15
+				}
+			}
+			modifier = {
+				factor = 12
+				FROM = {
+					OR = {
+						tag = LAT
+						tag = EST
+					}
+					NOT = { is_in_faction_with = FROM }
+					surrender_progress < 0.15
 				}
 			}
 		}
@@ -7528,8 +7539,8 @@ SOV_diplomacy_asia_decision_category = {
 				}
 			}
 			strength_ratio = {
-			    tag = SIK
-			    ratio > 2
+				tag = SIK
+				ratio > 2
 			}
 		}
 
@@ -7571,13 +7582,13 @@ SOV_diplomacy_asia_decision_category = {
 }
 
 
- ######  #### ##    ## ##    ## ####    ###    ##    ##  ######   ####  ######     ########  ##     ## ##     ## ##     ## #### ########  ######
+######  #### ##    ## ##    ## ####    ###    ##    ##  ######   ####  ######     ########  ##     ## ##     ## ##     ## #### ########  ######
 ##    ##  ##  ###   ## ##   ##   ##    ## ##   ###   ## ##    ##  #### ##    ##    ##     ## ##     ## ###   ### ###   ###  ##  ##       ##    ##
 ##        ##  ####  ## ##  ##    ##   ##   ##  ####  ## ##         ##  ##          ##     ## ##     ## #### #### #### ####  ##  ##       ##
- ######   ##  ## ## ## #####     ##  ##     ## ## ## ## ##   #### ##    ######     ##     ## ##     ## ## ### ## ## ### ##  ##  ######    ######
-      ##  ##  ##  #### ##  ##    ##  ######### ##  #### ##    ##             ##    ##     ## ##     ## ##     ## ##     ##  ##  ##             ##
+######   ##  ## ## ## #####     ##  ##     ## ## ## ## ##   #### ##    ######     ##     ## ##     ## ## ### ## ## ### ##  ##  ######    ######
+##  ##  ##  #### ##  ##    ##  ######### ##  #### ##    ##             ##    ##     ## ##     ## ##     ## ##     ##  ##  ##             ##
 ##    ##  ##  ##   ### ##   ##   ##  ##     ## ##   ### ##    ##       ##    ##    ##     ## ##     ## ##     ## ##     ##  ##  ##       ##    ##
- ######  #### ##    ## ##    ## #### ##     ## ##    ##  ######         ######     ########   #######  ##     ## ##     ## #### ########  ######
+######  #### ##    ## ##    ## #### ##     ## ##    ##  ######         ######     ########   #######  ##     ## ##     ## #### ########  ######
 
 
 SOV_soviet_aid_decision_category = {
@@ -9630,9 +9641,9 @@ SOV_merge_designers_dec_cat = {
 
 
 
-   ###     ######     ###    ########  ######## ##     ## ##    ##     #######  ########     ######   ######  #### ######## ##    ##  ######  ########  ######
-  ## ##   ##    ##   ## ##   ##     ## ##       ###   ###  ##  ##     ##     ## ##          ##    ## ##    ##  ##  ##       ###   ## ##    ## ##       ##    ##
- ##   ##  ##        ##   ##  ##     ## ##       #### ####   ####      ##     ## ##          ##       ##        ##  ##       ####  ## ##       ##       ##
+###     ######     ###    ########  ######## ##     ## ##    ##     #######  ########     ######   ######  #### ######## ##    ##  ######  ########  ######
+## ##   ##    ##   ## ##   ##     ## ##       ###   ###  ##  ##     ##     ## ##          ##    ## ##    ##  ##  ##       ###   ## ##    ## ##       ##    ##
+##   ##  ##        ##   ##  ##     ## ##       #### ####   ####      ##     ## ##          ##       ##        ##  ##       ####  ## ##       ##       ##
 ##     ## ##       ##     ## ##     ## ######   ## ### ##    ##       ##     ## ######       ######  ##        ##  ######   ## ## ## ##       ######    ######
 ######### ##       ######### ##     ## ##       ##     ##    ##       ##     ## ##                ## ##        ##  ##       ##  #### ##       ##             ##
 ##     ## ##    ## ##     ## ##     ## ##       ##     ##    ##       ##     ## ##          ##    ## ##    ##  ##  ##       ##   ### ##    ## ##       ##    ##
@@ -10174,89 +10185,89 @@ SOV_national_academy_of_sciences_dec_cat = {
 	}
 
 	#Not gonna have these unless they're released, just like with the others
-#	SOV_build_national_academy_of_sciences_integrated_republic_DON = {
-#		priority = 1
-#
-#		icon = GFX_decision_SOV_academy_of_sciences
-#
-#		ai_will_do = { #Integrated republics go after puppets
-#			base = 0.5
-#		}
-#
-#		cosmetic_tag = DON
-#		cosmetic_ideology = communism
-#
-#		allowed = {
-#			original_tag = SOV
-#		}
-#
-#		available = {
-#			num_of_civilian_factories_available_for_projects > 0
-#		}
-#
-#		visible = {
-#			has_completed_focus = SOV_national_academies_of_sciences
-#			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_DON_flag }
-#			NOT = { country_exists = DON }
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = SOV_national_academy_of_sciences_construction_cost
-#
-#		days_remove = SOV_national_academy_of_sciences_construction_time
-#
-#		modifier = {
-#			civilian_factory_use = 1
-#		}
-#
-#		remove_effect = {
-#			DON = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
-#			set_country_flag = SOV_national_academy_of_sciences_built_DON_flag
-#		}
-#	}
-#
-#	SOV_build_national_academy_of_sciences_integrated_republic_KUB = {
-#		priority = 1
-#
-#		icon = GFX_decision_SOV_academy_of_sciences
-#
-#		ai_will_do = { #Integrated republics go after puppets
-#			base = 0.5
-#		}
-#
-#		cosmetic_tag = KUB
-#		cosmetic_ideology = communism
-#
-#		allowed = {
-#			original_tag = SOV
-#		}
-#
-#		available = {
-#			num_of_civilian_factories_available_for_projects > 0
-#		}
-#
-#		visible = {
-#			has_completed_focus = SOV_national_academies_of_sciences
-#			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_KUB_flag }
-#			NOT = { country_exists = KUB }
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = SOV_national_academy_of_sciences_construction_cost
-#
-#		days_remove = SOV_national_academy_of_sciences_construction_time
-#
-#		modifier = {
-#			civilian_factory_use = 1
-#		}
-#
-#		remove_effect = {
-#			KUB = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
-#			set_country_flag = SOV_national_academy_of_sciences_built_KUB_flag
-#		}
-#	}
+	#	SOV_build_national_academy_of_sciences_integrated_republic_DON = {
+	#		priority = 1
+	#
+	#		icon = GFX_decision_SOV_academy_of_sciences
+	#
+	#		ai_will_do = { #Integrated republics go after puppets
+	#			base = 0.5
+	#		}
+	#
+	#		cosmetic_tag = DON
+	#		cosmetic_ideology = communism
+	#
+	#		allowed = {
+	#			original_tag = SOV
+	#		}
+	#
+	#		available = {
+	#			num_of_civilian_factories_available_for_projects > 0
+	#		}
+	#
+	#		visible = {
+	#			has_completed_focus = SOV_national_academies_of_sciences
+	#			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_DON_flag }
+	#			NOT = { country_exists = DON }
+	#		}
+	#
+	#		fire_only_once = yes
+	#
+	#		cost = SOV_national_academy_of_sciences_construction_cost
+	#
+	#		days_remove = SOV_national_academy_of_sciences_construction_time
+	#
+	#		modifier = {
+	#			civilian_factory_use = 1
+	#		}
+	#
+	#		remove_effect = {
+	#			DON = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
+	#			set_country_flag = SOV_national_academy_of_sciences_built_DON_flag
+	#		}
+	#	}
+	#
+	#	SOV_build_national_academy_of_sciences_integrated_republic_KUB = {
+	#		priority = 1
+	#
+	#		icon = GFX_decision_SOV_academy_of_sciences
+	#
+	#		ai_will_do = { #Integrated republics go after puppets
+	#			base = 0.5
+	#		}
+	#
+	#		cosmetic_tag = KUB
+	#		cosmetic_ideology = communism
+	#
+	#		allowed = {
+	#			original_tag = SOV
+	#		}
+	#
+	#		available = {
+	#			num_of_civilian_factories_available_for_projects > 0
+	#		}
+	#
+	#		visible = {
+	#			has_completed_focus = SOV_national_academies_of_sciences
+	#			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_KUB_flag }
+	#			NOT = { country_exists = KUB }
+	#		}
+	#
+	#		fire_only_once = yes
+	#
+	#		cost = SOV_national_academy_of_sciences_construction_cost
+	#
+	#		days_remove = SOV_national_academy_of_sciences_construction_time
+	#
+	#		modifier = {
+	#			civilian_factory_use = 1
+	#		}
+	#
+	#		remove_effect = {
+	#			KUB = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
+	#			set_country_flag = SOV_national_academy_of_sciences_built_KUB_flag
+	#		}
+	#	}
 
 	SOV_build_national_academy_of_sciences_integrated_republic_EST = {
 		priority = 1
@@ -10799,11 +10810,11 @@ SOV_kill_trotsky_dec_cat = {
 
 
 #### ##    ## ########  ##     ##  ######  ######## ########  ##    ##    ########  ######## ##        #######   ######     ###    ######## ####  #######  ##    ##
- ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##  ##     ##     ## ##       ##       ##     ## ##    ##   ## ##      ##     ##  ##     ## ###   ##
- ##  ####  ## ##     ## ##     ## ##          ##    ##     ##   ####      ##     ## ##       ##       ##     ## ##        ##   ##     ##     ##  ##     ## ####  ##
- ##  ## ## ## ##     ## ##     ##  ######     ##    ########     ##       ########  ######   ##       ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ##
- ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##      ##       ##   ##   ##       ##       ##     ## ##       #########    ##     ##  ##     ## ##  ####
- ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##     ##       ##    ##  ##       ##       ##     ## ##    ## ##     ##    ##     ##  ##     ## ##   ###
+##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##  ##     ##     ## ##       ##       ##     ## ##    ##   ## ##      ##     ##  ##     ## ###   ##
+##  ####  ## ##     ## ##     ## ##          ##    ##     ##   ####      ##     ## ##       ##       ##     ## ##        ##   ##     ##     ##  ##     ## ####  ##
+##  ## ## ## ##     ## ##     ##  ######     ##    ########     ##       ########  ######   ##       ##     ## ##       ##     ##    ##     ##  ##     ## ## ## ##
+##  ##  #### ##     ## ##     ##       ##    ##    ##   ##      ##       ##   ##   ##       ##       ##     ## ##       #########    ##     ##  ##     ## ##  ####
+##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##     ##       ##    ##  ##       ##       ##     ## ##    ## ##     ##    ##     ##  ##     ## ##   ###
 #### ##    ## ########   #######   ######     ##    ##     ##    ##       ##     ## ######## ########  #######   ######  ##     ##    ##    ####  #######  ##    ##
 
 
@@ -11148,9 +11159,9 @@ SOV_industry_relocation = {
 }
 
 
-   ###    ########  #######  ##     ## ####  ######     ########  ########   #######        ## ########  ######  ########
-  ## ##      ##    ##     ## ###   ###  ##  ##    ##    ##     ## ##     ## ##     ##       ## ##       ##    ##    ##
- ##   ##     ##    ##     ## #### ####  ##  ##          ##     ## ##     ## ##     ##       ## ##       ##          ##
+###    ########  #######  ##     ## ####  ######     ########  ########   #######        ## ########  ######  ########
+## ##      ##    ##     ## ###   ###  ##  ##    ##    ##     ## ##     ## ##     ##       ## ##       ##    ##    ##
+##   ##     ##    ##     ## #### ####  ##  ##          ##     ## ##     ## ##     ##       ## ##       ##          ##
 ##     ##    ##    ##     ## ## ### ##  ##  ##          ########  ########  ##     ##       ## ######   ##          ##
 #########    ##    ##     ## ##     ##  ##  ##          ##        ##   ##   ##     ## ##    ## ##       ##          ##
 ##     ##    ##    ##     ## ##     ##  ##  ##    ##    ##        ##    ##  ##     ## ##    ## ##       ##    ##    ##
@@ -11256,13 +11267,13 @@ SOV_infiltrate_foreign_atomic_programs_dec_cat = {
 }
 
 
- ######   #######  ##     ## ########  ######   #######  ##    ##
+######   #######  ##     ## ########  ######   #######  ##    ##
 ##    ## ##     ## ###   ### ##       ##    ## ##     ## ###   ##
 ##       ##     ## #### #### ##       ##       ##     ## ####  ##
 ##       ##     ## ## ### ## ######   ##       ##     ## ## ## ##
 ##       ##     ## ##     ## ##       ##       ##     ## ##  ####
 ##    ## ##     ## ##     ## ##       ##    ## ##     ## ##   ###
- ######   #######  ##     ## ########  ######   #######  ##    ##
+######   #######  ##     ## ########  ######   #######  ##    ##
 
 
 SOV_comecon_dec_cat = {
@@ -11477,24 +11488,24 @@ SOV_comecon_dec_cat = {
 }
 
 
- ######   ########  ########    ###    ########    ########     ###    ######## ########  ####  #######  ######## ####  ######     ##      ##    ###    ########
+######   ########  ########    ###    ########    ########     ###    ######## ########  ####  #######  ######## ####  ######     ##      ##    ###    ########
 ##    ##  ##     ## ##         ## ##      ##       ##     ##   ## ##      ##    ##     ##  ##  ##     ##    ##     ##  ##    ##    ##  ##  ##   ## ##   ##     ##
 ##        ##     ## ##        ##   ##     ##       ##     ##  ##   ##     ##    ##     ##  ##  ##     ##    ##     ##  ##          ##  ##  ##  ##   ##  ##     ##
 ##   #### ########  ######   ##     ##    ##       ########  ##     ##    ##    ########   ##  ##     ##    ##     ##  ##          ##  ##  ## ##     ## ########
 ##    ##  ##   ##   ##       #########    ##       ##        #########    ##    ##   ##    ##  ##     ##    ##     ##  ##          ##  ##  ## ######### ##   ##
 ##    ##  ##    ##  ##       ##     ##    ##       ##        ##     ##    ##    ##    ##   ##  ##     ##    ##     ##  ##    ##    ##  ##  ## ##     ## ##    ##
- ######   ##     ## ######## ##     ##    ##       ##        ##     ##    ##    ##     ## ####  #######     ##    ####  ######      ###  ###  ##     ## ##     ##
+######   ##     ## ######## ##     ##    ##       ##        ##     ##    ##    ##     ## ####  #######     ##    ####  ######      ###  ###  ##     ## ##     ##
 
-# Great Patriotic War 
+# Great Patriotic War
 #  Moved to New File /SOV_OperationBarb.txt
 
 ################################################################################
 
-	 ##  ##  #   # ### ### ###      ##  ### #   # ### #       #   #  ##  ###
-	#   #  # #   #  #  #    #      #  #  #  #   #  #  #       #   # #  # #  #
-	 #  #  #  # #   #  ##   #      #     #   # #   #  #       # # # #### ###
-	  # #  #  # #   #  #    #      #  #  #   # #   #  #       # # # #  # #  #
-	##   ##    #   ### ###  #       ##  ###   #   ### ###      # #  #  # #  #
+##  ##  #   # ### ### ###      ##  ### #   # ### #       #   #  ##  ###
+#   #  # #   #  #  #    #      #  #  #  #   #  #  #       #   # #  # #  #
+#  #  #  # #   #  ##   #      #     #   # #   #  #       # # # #### ###
+# #  #  # #   #  #    #      #  #  #   # #   #  #       # # # #  # #  #
+##   ##    #   ### ###  #       ##  ###   #   ### ###      # #  #  # #  #
 
 
 ################################################################################
@@ -12442,7 +12453,7 @@ SOV_soviet_civil_war_dec_cat = {
 					}
 				}
 			}
-	    }
+		}
 	}
 
 
@@ -12523,7 +12534,7 @@ SOV_soviet_civil_war_dec_cat = {
 			}
 			SOV_get_centre_military_support = yes
 			add_to_variable = { SOV_influence_army_decision_cost = 20 }
-	    }
+		}
 	}
 
 	SOV_influence_navy_opposition = {
@@ -13245,8 +13256,8 @@ SOV_soviet_civil_war_dec_cat = {
 				OR = {
 					#region = 155 # Manchuria
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -13392,7 +13403,7 @@ SOV_soviet_civil_war_dec_cat = {
 		icon = {
 			key = SOV_place_hq
 			trigger = {
-				 NOT = { 192  = {has_state_flag = SOV_hq_state_selected } }
+				NOT = { 192  = {has_state_flag = SOV_hq_state_selected } }
 			}
 		}
 		icon = {
@@ -13925,8 +13936,8 @@ SOV_soviet_civil_war_dec_cat = {
 					region = 147
 					region = 263
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -14948,8 +14959,8 @@ SOV_soviet_civil_war_dec_cat = {
 					region = 147
 					region = 263
 					region = 151
-					region = 261 
-					region = 262 
+					region = 261
+					region = 262
 					region = 149
 					region = 256
 					region = 257
@@ -14972,8 +14983,8 @@ SOV_soviet_civil_war_dec_cat = {
 							region = 147
 							region = 263
 							region = 151
-							region = 261 
-							region = 262 
+							region = 261
+							region = 262
 							region = 149
 							region = 256
 							region = 257
@@ -15787,7 +15798,7 @@ SOV_permanent_revolution_dec_cat = {
 				}
 			}
 			has_equipment = {
-			    infantry_equipment > 19999
+				infantry_equipment > 19999
 			}
 		}
 
@@ -15807,8 +15818,8 @@ SOV_permanent_revolution_dec_cat = {
 
 		complete_effect = {
 			add_equipment_to_stockpile = {
-			    type = infantry_equipment
-			    amount = -20000
+				type = infantry_equipment
+				amount = -20000
 			}
 			hidden_effect = {
 				FROM = {
@@ -15962,9 +15973,9 @@ SOV_permanent_revolution_dec_cat = {
 ##     ##   ## ##   ###   ##  ##  ##       ##         ## ##
 ##     ##  ##   ##  ####  ##  ##  ##       ##        ##   ##
 ##     ## ##     ## ## ## ##  ##  ##       ##       ##     ##
- ##   ##  ######### ##  ####  ##  ##       ##       #########
-  ## ##   ##     ## ##   ###  ##  ##       ##       ##     ##
-   ###    ##     ## ##    ## #### ######## ######## ##     ##
+##   ##  ######### ##  ####  ##  ##       ##       #########
+## ##   ##     ## ##   ###  ##  ##       ##       ##     ##
+###    ##     ## ##    ## #### ######## ######## ##     ##
 
 
 operations = {
@@ -16090,7 +16101,7 @@ political_actions = {
 			base = 0
 			modifier = {
 				add = 150
-					#Has somewhat won against CHI and JAP
+				#Has somewhat won against CHI and JAP
 				count_triggers = {
 					amount = 10
 					595 = { is_controlled_by = FROM }

@@ -98,17 +98,17 @@ GER_Operation_Barbarossa_V = {
 		}
 
 		available = {
-				OR = {
-					209 = { is_controlled_by_ROOT_or_ally = yes }
-					AND = {
-						FIN = {
-							NOT = { has_war_with = GER }
-							has_war_with = SOV
-							has_completed_focus = FIN_cooperation_with_germany
-						}
-						209 = { is_controlled_by = FIN }
+			OR = {
+				209 = { is_controlled_by_ROOT_or_ally = yes }
+				AND = {
+					FIN = {
+						NOT = { has_war_with = GER }
+						has_war_with = SOV
+						has_completed_focus = FIN_cooperation_with_germany
 					}
+					209 = { is_controlled_by = FIN }
 				}
+			}
 		}
 
 		activation = {
@@ -1300,6 +1300,59 @@ GER_Operation_Barbarossa_High_Command = {
 		}
 
 		complete_effect = {
+		}
+	}
+
+	Winter_pervitin = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 99
+		days_remove = 60
+
+		custom_cost_trigger = {
+			command_power > 9
+		}
+		custom_cost_text = decision_cost_CP_10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available =  {
+		}
+
+		visible = {
+			has_idea = GER_barbarossa
+			OR = {
+				has_idea = GER_winter_war_infantry
+				has_idea = GER_winter_war_logistics
+				has_idea = GER_winter_war_harsh_winter
+			}
+		}
+
+		modifier = { # hmmmmmmmmmmmmmmmmm nice
+			supply_consumption_factor = 0.2
+			army_morale_factor = 0.15
+			acclimatization_cold_climate_gain_factor = 0.15
+			winter_attrition_factor = -0.25
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -10
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = {
+					var = GER_army_morale_factor
+					value = -0.05
+				}
+			}
 		}
 	}
 

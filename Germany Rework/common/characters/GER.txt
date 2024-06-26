@@ -1744,6 +1744,13 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 10
+					date > 1940.01.01
+				}
+			}
 			traits = {
 				armaments_organizer2
 			}
@@ -1904,6 +1911,13 @@ characters={
 			available = {
 				NOT = {
 					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					date > 1939.11.01
 				}
 			}
 			traits = {

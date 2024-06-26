@@ -10581,8 +10581,8 @@ country_event = {
 					784 = {
 						is_controlled_by = GER
 					}
-					784 = { transfer_state_to = LIT }
 				}
+				LIT = { transfer_state = 784 }
 			}
 		}
 	}

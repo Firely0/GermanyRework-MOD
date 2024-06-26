@@ -1891,7 +1891,7 @@ shared_focus = {
 	cost = 5
 	x = -1
 	y = 1
-	
+
 	ai_will_do = {
 		factor = 9
 	}
@@ -1927,13 +1927,13 @@ shared_focus = {
 		factor = 9
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {	
+	completion_reward = {
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			custom_effect_tooltip = available_designer
-			show_mio_tooltip = GER_Krupp_tank_organization 
+			show_mio_tooltip = GER_Krupp_tank_organization
 			swap_ideas = {
 				remove_idea = krupp_starter_ver
 				add_idea = krupp_nofocusver
@@ -2486,7 +2486,7 @@ shared_focus = {
 					}
 					mio:GER_Volkswagen_organization = { add_mio_funds = 500 }
 				}
-			}	
+			}
 		}
 		else = {
 			random_state = {
@@ -3205,6 +3205,15 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		every_state = {
+			limit = { has_state_flag = GER_german_war_economy_dockyard }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = speer
 	}
@@ -3300,18 +3309,26 @@ shared_focus = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = arms_factory
+						building = dockyard
 						size > 1
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = dockyard
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_german_war_economy
+				set_state_flag = GER_german_war_economy_dockyard
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				remove_ideas = konstantin_von_neurath
 			}
 		}
 	}
@@ -3405,7 +3422,7 @@ shared_focus = {
 	x = 5
 	y = 2
 	cost = 5
-	
+
 	ai_will_do = {
 		factor = 0.25
 	}
@@ -4102,7 +4119,7 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
-		has_tech = elastic_defence 
+		has_tech = elastic_defence
 	}
 
 	available_if_capitulated = yes
@@ -4668,7 +4685,7 @@ shared_focus = {
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
-			}	
+			}
 			create_equipment_variant = {
 				name = "PzKpfw Panther"
 				type = medium_tank_chassis_3
@@ -4692,7 +4709,7 @@ shared_focus = {
 				design_team = mio:GER_man_organization
 				icon = "GFX_GER_medium_CBC"
 				model = "GER_medium_armor_2_entity"
-			} 
+			}
 		}
 		else = {
 			create_equipment_variant = {
@@ -4708,7 +4725,7 @@ shared_focus = {
 				design_team = mio:GER_man_organization
 				icon = "GFX_GER_medium_CBC"
 				model = "GER_medium_armor_2_entity"
-			} 
+			}
 		}
 	}
 }

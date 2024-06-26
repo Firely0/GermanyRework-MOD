@@ -1,22 +1,22 @@
 GER_vanilla_look = {
-	
+
 	GER_vanilla_reminder = {
 
 		icon = GFX_decision_generic_political_discourse
 		priority = 100
-	
+
 		available = {
 			always = no
 		}
-	
+
 		fire_only_once = yes
 		days_mission_timeout = 3
 		is_good = yes
-	
+
 		visible = {
 			NOT = { has_global_flag = GER_END_OF_VANILLA_LOOK }
 		}
-	
+
 		complete_effect = {
 		}
 
@@ -578,7 +578,7 @@ health_of_adolf_category = {
 
 	GER_eliminate_traitor = {
 		icon = GFX_decision_generic_police_action
-		
+
 		allowed = {
 			tag = GER
 		}
@@ -597,7 +597,7 @@ health_of_adolf_category = {
 		is_good = no
 		selectable_mission = no
 		days_mission_timeout = 3
-		
+
 		timeout_effect = {
 			random_army_leader = {
 				limit = {
@@ -940,13 +940,13 @@ Holy_Roman_Empire_mng_category = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					tag = HOL	
-					tag = FRA 
+					tag = HOL
+					tag = FRA
 					tag = SWI
-					tag = ITA 
+					tag = ITA
 					tag = SPM
 					tag = OCC
-				} 
+				}
 			}
 		}
 		target_non_existing = yes
@@ -1225,9 +1225,9 @@ eva_braun_category = {
 		}
 
 		available = {
-			NOT = { 
+			NOT = {
 				has_country_flag = eva_braun_has_job
-				has_idea = kinder_kuche_kirche 
+				has_idea = kinder_kuche_kirche
 			}
 		}
 
@@ -1595,7 +1595,7 @@ GER_mefo_bills_category_r = {
 
 		complete_effect = {
 		}
-	}	
+	}
 
 	GER_mefo_bills_mission = {
 
@@ -1635,7 +1635,7 @@ GER_mefo_bills_category_r = {
 				limit = {
 					OR = {
 						has_country_flag = GER_mefo_bills_ended
-						has_country_flag = ger_has_cancelled_mefo 
+						has_country_flag = ger_has_cancelled_mefo
 					}
 				}
 				#1
@@ -1912,7 +1912,7 @@ GER_mefo_bills_category_r = {
 			add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 			add_to_variable = { GER_FR_political_power_gain = 0.1 }
 		}
-	}	
+	}
 
 	GER_cancel_mefos = {
 
@@ -2082,6 +2082,246 @@ GER_training_program = {
 
 }
 
+GER_spain_volunteers = {
+
+	GER_experimental_light_tank_prototypess = {
+		icon = GFX_decision_generic_tank
+		on_map_mode = map_and_decisions_view
+		priority = 96
+
+		allowed = {
+			tag = GER
+		}
+
+		activation = { always = no }
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = GER_test_prototypess
+			}
+		}
+
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 28
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+		}
+
+		complete_effect = {
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 0.05
+				uses = 1
+				category = cat_light_armor
+				name = "Prototype Tests"
+			}
+		}
+	}
+
+	GER_experimental_aircraft_prototypes = {
+		icon = GFX_decision_generic_air
+		on_map_mode = map_and_decisions_view
+		priority = 95
+
+		allowed = {
+			tag = GER
+		}
+
+		activation = { always = no }
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = GER_test_prototypess
+			}
+			OR = {
+				41 = {
+					NOT = { is_controlled_by = SPR }
+					days_since_last_strategic_bombing < 2
+				}
+				167 = {
+					NOT = { is_controlled_by = SPR }
+					days_since_last_strategic_bombing < 2
+				}
+				165 = {
+					NOT = { is_controlled_by = SPR }
+					days_since_last_strategic_bombing < 2
+				}
+				169 = {
+					NOT = { is_controlled_by = SPR }
+					days_since_last_strategic_bombing < 2
+				}
+				176 = {
+					NOT = { is_controlled_by = SPR }
+					days_since_last_strategic_bombing < 2
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 167
+				state = 165
+				state = 41
+				state = 169
+				state = 176
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 28
+
+		cancel_effect = {
+		}
+
+		timeout_effect = {
+			add_political_power = -25
+		}
+
+		complete_effect = {
+			air_experience = 25
+			add_tech_bonus = {
+				bonus = 0.05
+				uses = 1
+				category = heavy_air
+				name = "Prototype Tests"
+			}
+		}
+	}
+
+	GER_try_experimental_prototypes = {
+		icon = GFX_decision_generic_decision
+
+		allowed = {
+			tag = GER
+		}
+
+		available = {
+		}
+
+		visible = {
+			SPR = {
+				has_volunteers_amount_from = {
+					tag = GER
+					count > 0
+				}
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = GER_test_prototypess
+			activate_mission = GER_experimental_light_tank_prototypess
+			activate_mission = GER_experimental_aircraft_prototypes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	GER_Non_intervention_zones = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		visible = {
+			has_country_flag = FRA_non_intervention_agreed
+			NOT = { has_country_flag = abandon_non_intervention }
+			ROOT = {
+				any_country = {
+					original_tag = SPA
+					has_volunteers_amount_from = {
+						tag = PREV
+						count > 0
+					}
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				has_dynamic_modifier = {
+					modifier = Non_intervention_dynamic_modifier
+					scope = ROOT
+				}
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	GER_Abandon_Non_Intervention = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = FRA_non_intervention_agreed
+			NOT = { has_country_flag = abandon_non_intervention }
+			ROOT = {
+				any_country = {
+					original_tag = SPA
+					has_volunteers_amount_from = {
+						tag = PREV
+						count > 0
+					}
+				}
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = Non_intervention_dynamic_modifier
+						scope = ROOT
+					}
+				}
+				remove_dynamic_modifier = { modifier = Non_intervention_dynamic_modifier }
+			}
+			set_country_flag = abandon_non_intervention
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
 GER_Volkssturm_category = {
 
 	GER_raise_volksstrum_units = {
@@ -2181,52 +2421,6 @@ GER_Volkssturm_category = {
 }
 
 GER_colonial_management_category = {
-	transfer_state_to_MLA = {
-
-		cost = 10
-
-		days_re_enable = 1
-
-		icon = GFX_decision_infiltrate_state
-
-		allowed = {
-		}
-
-		available = {
-			MLA = {
-				exists = yes
-			}
-			GER = {
-				any_controlled_state = {
-					OR = {
-						is_claimed_by = MLA
-						is_core_of = MLA
-					}
-				}
-			}
-		}
-
-		visible = {
-		}
-
-		complete_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = MLA
-						is_claimed_by = MLA
-					}
-					is_controlled_by = GER
-				}
-				transfer_state_to = MLA
-			}
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-	}
-
 	sent_rommel_to_mla = {
 
 		cost = 30
@@ -2290,6 +2484,52 @@ GER_colonial_management_category = {
 
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+	transfer_state_to_MLA = {
+
+		cost = 10
+
+		days_re_enable = 1
+
+		icon = GFX_decision_infiltrate_state
+
+		allowed = {
+		}
+
+		available = {
+			MLA = {
+				exists = yes
+			}
+			GER = {
+				any_controlled_state = {
+					OR = {
+						is_claimed_by = MLA
+						is_core_of = MLA
+					}
+				}
+			}
+		}
+
+		visible = {
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = MLA
+						is_claimed_by = MLA
+					}
+					is_controlled_by = GER
+				}
+				transfer_state_to = MLA
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 	}
 
@@ -3229,7 +3469,7 @@ GER_plan_z_category = {
 
 		icon = generic_naval
 		priority = 100
-	
+
 		available = {
 			has_navy_size = {
 				unit = battleship
@@ -3256,7 +3496,7 @@ GER_plan_z_category = {
 				size > 99
 			}
 		}
-	
+
 		fire_only_once = yes
 		days_mission_timeout = 1800
 		is_good = yes
@@ -3271,17 +3511,17 @@ GER_plan_z_category = {
 				num_of_civilian_factories > 99
 			}
 		}
-	
+
 		visible = {
 			has_completed_focus = GER_plan_z_a
 		}
-	
+
 		complete_effect = {
 			add_war_support = 0.05
 			navy_experience = 150
 		}
-	
-	
+
+
 	}
 }
 
@@ -3890,12 +4130,12 @@ GER_rebuild_the_high_seas_fleet_project = {
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
 
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
 				name = "Brummer Class"
 				type = ship_hull_cruiser_1
@@ -3991,10 +4231,10 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
 
 		modifier = {
@@ -4006,12 +4246,12 @@ GER_rebuild_the_high_seas_fleet_project = {
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
 
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			if = { # Just Create König Class
 				limit = {
 					NOT = { has_country_flag = GER_Konig_1 }
@@ -4114,10 +4354,10 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
 
 		modifier = {
@@ -4129,12 +4369,12 @@ GER_rebuild_the_high_seas_fleet_project = {
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
 
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			if = { # Just Create König Class
 				limit = {
 					NOT = { has_country_flag = GER_Konig_1 }
@@ -4237,10 +4477,10 @@ GER_rebuild_the_high_seas_fleet_project = {
 		}
 
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
 
 		modifier = {
@@ -4252,12 +4492,12 @@ GER_rebuild_the_high_seas_fleet_project = {
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
 
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			if = { # Just Create König Class
 				limit = {
 					NOT = { has_country_flag = GER_Konig_1 }
@@ -4354,33 +4594,33 @@ GER_rebuild_the_high_seas_fleet_project = {
 		fire_only_once = yes
 		days_remove = 40
 		cost = 25
-	
+
 		ai_will_do = {
 			factor = 2
 		}
-	
+
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
-	
+
 		modifier = {
 			civilian_factory_use = 2 # Fine For Me
 		}
-	
+
 		visible = {
 			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
-	
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
+
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			if = { # Just Create Cöln Class
 				limit = {
 					NOT = { has_country_flag = GER_Coln_1 }
@@ -4407,7 +4647,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 					design_team = mio:Cox_and_Danks_organization
 				}
 				set_country_flag = GER_Coln_1
-			}	
+			}
 			custom_effect_tooltip = GER_progress_chanced_by_luck
 			hidden_effect = {
 				random_list = {
@@ -4477,33 +4717,33 @@ GER_rebuild_the_high_seas_fleet_project = {
 		fire_only_once = yes
 		days_remove = 40
 		cost = 25
-	
+
 		ai_will_do = {
 			factor = 2
 		}
-	
+
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
-	
+
 		modifier = {
 			civilian_factory_use = 2 # Fine For Me
 		}
-	
+
 		visible = {
 			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
 			has_country_flag = Ernest_Cox_Fired
 		}
 
-        complete_effect = {
-            GER_add_cost_of_ship_search = yes
-        }
-	
+		complete_effect = {
+			GER_add_cost_of_ship_search = yes
+		}
+
 		remove_effect = {
-            GER_add_refund_of_ship_search = yes
+			GER_add_refund_of_ship_search = yes
 			if = { # Just Create Cöln Class
 				limit = {
 					NOT = { has_country_flag = GER_Coln_1 }
@@ -4600,22 +4840,22 @@ GER_rebuild_the_high_seas_fleet_project = {
 		fire_only_once = yes
 		days_remove = 40
 		cost = 25
-	
+
 		ai_will_do = {
 			factor = 2
 		}
-	
+
 		available = {
-            has_manpower > 1500
-            has_equipment = {
-                convoy > 100
-            }
+			has_manpower > 1500
+			has_equipment = {
+				convoy > 100
+			}
 		}
-	
+
 		modifier = {
 			civilian_factory_use = 2 # Fine For Me
 		}
-	
+
 		visible = {
 			has_completed_focus = GER_rebuild_the_high_seas_fleet_a
 			has_country_flag = Ernest_Cox_Fired
@@ -4624,7 +4864,7 @@ GER_rebuild_the_high_seas_fleet_project = {
 		complete_effect = {
 			GER_add_cost_of_ship_search = yes
 		}
-	
+
 		remove_effect = {
 			GER_add_refund_of_ship_search = yes
 			create_equipment_variant = {
@@ -5432,7 +5672,7 @@ operations = {
 					hidden_effect = {
 						set_country_flag = blew_up_panama
 						set_global_flag = PANAMA_CANAL_BLOCKED
-					}	
+					}
 				}
 				50 = {
 				}
@@ -5583,7 +5823,7 @@ political_actions = {
 
 	GER_end_policy_kinder_kuche_kirche = {
 		icon = GFX_decision_eng_trade_unions_support
-		
+
 		allowed = {
 			original_tag = GER
 		}
@@ -5691,7 +5931,7 @@ foreign_politics = {
 			}
 			set_autonomy = {
 				target = HOL
-				 autonomy_state = autonomy_loyal_state
+				autonomy_state = autonomy_loyal_state
 				end_wars = no
 				end_civil_wars = no
 			}
@@ -5718,7 +5958,7 @@ foreign_politics = {
 				}
 			}
 		}
-	}	
+	}
 
 	GER_request_polish_war_participation = {
 
@@ -5763,7 +6003,7 @@ foreign_politics = {
 		available = {
 			OR = {
 				AND = {
-					TUR = { 
+					TUR = {
 						has_completed_focus = TUR_invite_german_officers_to_izmir
 						OR = {
 							has_war_with = ROOT
@@ -5804,8 +6044,8 @@ foreign_politics = {
 		complete_effect = {
 			if = {
 				limit = {
-					TUR = { 
-						has_completed_focus = TUR_invite_german_officers_to_izmir 
+					TUR = {
+						has_completed_focus = TUR_invite_german_officers_to_izmir
 						OR = {
 							has_war_with = ROOT
 							has_wargoal_against = ROOT
@@ -5939,7 +6179,7 @@ foreign_politics = {
 					remove_advisor_role = {
 						character = SPA_wilhelm_ritter_von_thoma
 						slot = high_command
-					}	
+					}
 				}
 			}
 		}
@@ -5947,7 +6187,7 @@ foreign_politics = {
 	}
 
 	annex_free_city_of_danzig = {
-	
+
 		icon = GFX_decision_eng_trade_unions_support
 
 		allowed = {
@@ -5955,9 +6195,9 @@ foreign_politics = {
 		}
 
 		available = {
-			POL = { 
+			POL = {
 				OR = {
-					has_capitulated = yes 
+					has_capitulated = yes
 					exists = no
 					is_puppet_of = ROOT
 				}
@@ -5975,8 +6215,8 @@ foreign_politics = {
 		visible = {
 			DNZ = { exists = yes }
 			is_subject = no
-			NOT = { 
-				has_government = democratic 
+			NOT = {
+				has_government = democratic
 			}
 		}
 
@@ -5986,20 +6226,18 @@ foreign_politics = {
 					target = DNZ
 				}
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai
-					}
-					add_political_power = 25
+			if = {
+				limit = {
+					is_ai = yes
 				}
+				add_political_power = 25
 			}
 		}
-	}	
+	}
 
 	# Ultimatum to Lithuania
 	send_ultimatum_to_lithuania = {
-	
+
 		icon = hol_war_on_pacifism
 
 		allowed = {
@@ -6021,7 +6259,7 @@ foreign_politics = {
 			factor = 2
 		}
 
-		visible = {	
+		visible = {
 			has_global_flag = end_of_hostilities_in_pol
 			POL = { has_capitulated = yes }
 			is_subject = no
@@ -6038,14 +6276,14 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			GER = { 
+			GER = {
 				country_event = ger_lithuania.1
 			}
 		}
 	}
 
 	offer_vilnius_to_lithuania = {
-	
+
 		icon = hol_draw_up_staff_plans
 
 		allowed = {
@@ -6087,7 +6325,7 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-			LIT = { 
+			LIT = {
 				country_event = ger_lithuania.7
 			}
 		}

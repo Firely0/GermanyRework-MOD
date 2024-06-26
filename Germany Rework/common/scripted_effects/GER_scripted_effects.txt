@@ -1093,19 +1093,6 @@ GER_upgrade_wehrmacht_effect = {
 				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
 			}
 		}
-		if = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-			}
-		}
 	}
 }
 
@@ -1266,19 +1253,6 @@ GER_upgrade_luftwaffe_effect = {
 			}
 			add_dynamic_modifier = {
 				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
-			}
-		}
-		if = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-				}
-			}
-			remove_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
-			}
-			add_dynamic_modifier = {
-				modifier = Kriegsmarine_CarrierGloryofmodernger_dynamic_modifier
 			}
 		}
 	}
@@ -4824,6 +4798,138 @@ yalta_setup_related = {
 	log = "Yalta is Ready Flag"
 }
 
+YALTA_HANDLE_NEW_GERMANY = {
+	log = "Switching Tag for German Player and Adding Things"
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = morgenthau_agreed_flag
+			}
+		}
+		if = {
+			limit = {
+				event_target:SOV_GERMAN_PUPPET = {
+					is_puppet_of = SOV
+				}
+			}
+			event_target:SOV_GERMAN_PUPPET = {
+				change_tag_from = GER
+				load_focus_tree = { tree = german_better keep_completed = yes }
+				every_owned_state = {
+					add_core_of = GER
+				}
+			}
+		}
+		else = {
+			DDR = {
+				change_tag_from = GER
+				inherit_technology = GER
+				load_focus_tree = { tree = german_better keep_completed = yes }
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_global_flag = morgenthau_agreed_flag
+		}
+		GER = {
+			set_global_flag = GER_SWITCH_TO_DEFEAT_TREE
+			set_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
+			set_global_flag = GER_DEFEAT_TREE
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_the_red_reich_r
+			if = {
+				limit = {
+					has_completed_focus = GER_ussr_war_goal
+				}
+				uncomplete_national_focus = {
+					focus = GER_ussr_war_goal
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_war_with_britain
+				}
+				uncomplete_national_focus = {
+					focus = GER_war_with_britain
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+			}
+		}
+		DDR = {
+			set_cosmetic_tag = GER_INTERNATIONAL_ZONE
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				neutrality = 100
+			}
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:FRA_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:FRA_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:USA_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:USA_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	if = {
+		limit = {
+			event_target:ENG_GERMAN_PUPPET = {
+				is_puppet_of = SOV
+			}
+		}
+		event_target:ENG_GERMAN_PUPPET = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	else = {
+		WGR = {
+			inherit_technology = GER
+			every_owned_state = {
+				add_core_of = GER
+			}
+		}
+	}
+	every_country = {
+		limit = {
+			has_country_flag = DDR_SHOULD_BE_INTERNATIONAL_ZONE
+		}
+		set_cosmetic_tag = GER_INTERNATIONAL_ZONE
+	}
+}
+
 FORCE_YALTA = {
 	if = {
 		limit = {
@@ -5318,6 +5424,7 @@ FORCE_YALTA = {
 			transfer_state = 144
 			transfer_state = 924
 			transfer_state = 925
+			transfer_state = 922
 		}
 	}
 	if = {
@@ -5401,136 +5508,4 @@ FORCE_YALTA = {
 		}
 	}
 	log = "Forced Yalta States and Puppets"
-}
-
-YALTA_HANDLE_NEW_GERMANY = {
-	log = "Switching Tag for German Player and Adding Things"
-	if = {
-		limit = {
-			NOT = {
-				has_global_flag = morgenthau_agreed_flag
-			}
-		}
-		if = {
-			limit = {
-				event_target:SOV_GERMAN_PUPPET = {
-					is_puppet_of = SOV
-				}
-			}
-			event_target:SOV_GERMAN_PUPPET = {
-				change_tag_from = GER
-				load_focus_tree = { tree = german_better keep_completed = yes }
-				every_owned_state = {
-					add_core_of = GER
-				}
-			}
-		}
-		else = {
-			DDR = {
-				change_tag_from = GER
-				inherit_technology = GER
-				load_focus_tree = { tree = german_better keep_completed = yes }
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_global_flag = morgenthau_agreed_flag
-		}
-		GER = {
-			set_global_flag = GER_SWITCH_TO_DEFEAT_TREE
-			set_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
-			set_global_flag = GER_DEFEAT_TREE
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = GER_the_red_reich_r
-			if = {
-				limit = {
-					has_completed_focus = GER_ussr_war_goal
-				}
-				uncomplete_national_focus = {
-					focus = GER_ussr_war_goal
-					uncomplete_children = yes
-					refund_political_power = no
-				}
-			}
-			if = {
-				limit = {
-					has_completed_focus = GER_war_with_britain
-				}
-				uncomplete_national_focus = {
-					focus = GER_war_with_britain
-					uncomplete_children = yes
-					refund_political_power = no
-				}
-			}
-		}
-		DDR = {
-			set_cosmetic_tag = GER_INTERNATIONAL_ZONE
-			set_politics = {
-				ruling_party = neutrality
-				last_election = "1933.3.5"
-				election_frequency = 48
-				elections_allowed = no
-			}
-			set_popularities = {
-				neutrality = 100
-			}
-			every_owned_state = {
-				add_core_of = GER
-			}
-		}
-	}
-	if = {
-		limit = {
-			event_target:FRA_GERMAN_PUPPET = {
-				is_puppet_of = SOV
-			}
-		}
-		event_target:FRA_GERMAN_PUPPET = {
-			inherit_technology = GER
-			every_owned_state = {
-				add_core_of = GER
-			}
-		}
-	}
-	if = {
-		limit = {
-			event_target:USA_GERMAN_PUPPET = {
-				is_puppet_of = SOV
-			}
-		}
-		event_target:USA_GERMAN_PUPPET = {
-			inherit_technology = GER
-			every_owned_state = {
-				add_core_of = GER
-			}
-		}
-	}
-	if = {
-		limit = {
-			event_target:ENG_GERMAN_PUPPET = {
-				is_puppet_of = SOV
-			}
-		}
-		event_target:ENG_GERMAN_PUPPET = {
-			inherit_technology = GER
-			every_owned_state = {
-				add_core_of = GER
-			}
-		}
-	}
-	else = {
-		WGR = {
-			inherit_technology = GER
-			every_owned_state = {
-				add_core_of = GER
-			}
-		}
-	}
-	every_country = {
-		limit = {
-			has_country_flag = DDR_SHOULD_BE_INTERNATIONAL_ZONE
-		}
-		set_cosmetic_tag = GER_INTERNATIONAL_ZONE
-	}
 }

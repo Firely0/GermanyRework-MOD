@@ -137,7 +137,7 @@ GER_september_plan_category = {
 					811 = { is_fully_controlled_by = LAT }
 				}
 				AND = {
-					LAT = { exists = NO }
+					LAT = { exists = no }
 					808 = { is_fully_controlled_by = GER }
 					809 = { is_fully_controlled_by = GER }
 					190 = { is_fully_controlled_by = GER }
@@ -303,7 +303,7 @@ GER_september_plan_category = {
 					96 = { is_fully_controlled_by = LIT }
 				}
 				AND = {
-					LIT = { exists = NO }
+					LIT = { exists = no }
 					11 = { is_fully_controlled_by = GER }
 					189 = { is_fully_controlled_by = GER }
 					815 = { is_fully_controlled_by = GER }
@@ -477,7 +477,7 @@ GER_september_plan_category = {
 					90 = { is_fully_controlled_by = GER }
 				}
 				AND = {
-					POL = { exists = NO }
+					POL = { exists = no }
 					98 = { is_fully_controlled_by = GER }
 					87 = { is_fully_controlled_by = GER }
 					10 = { is_fully_controlled_by = GER }
@@ -718,7 +718,7 @@ GER_september_plan_category = {
 					241 = { is_fully_controlled_by = BLR }
 				}
 				AND = {
-					BLR = { exists = NO }
+					BLR = { exists = no }
 					206 = { is_fully_controlled_by = GER }
 					207 = { is_fully_controlled_by = GER }
 					204 = { is_fully_controlled_by = GER }
@@ -844,7 +844,7 @@ GER_september_plan_category = {
 
 				}
 				AND = {
-					UKR = { exists = NO }
+					UKR = { exists = no }
 					259 = { is_fully_controlled_by = GER }
 					193 = { is_fully_controlled_by = GER }
 					196 = { is_fully_controlled_by = GER }

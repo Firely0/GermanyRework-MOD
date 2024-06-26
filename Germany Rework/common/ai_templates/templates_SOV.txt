@@ -464,14 +464,11 @@ infantry_SOV = {
 	}
 
 	upgrade_prio = {
-		base = 1
+		factor = 1
 
 		modifier = {
-			factor = 100
-			AND = {
-				has_completed_focus = SOV_desperate_measures
-				NOT = { has_idea = SOV_desperate_measures_ns }
-			}
+			factor = 0
+			NOT = { has_completed_focus = SOV_desperate_measures }
 		}
 	}
 
@@ -483,11 +480,8 @@ infantry_SOV = {
 			factor = 1
 
 			modifier = {
-				factor = 100
-				AND = {
-					has_completed_focus = SOV_desperate_measures
-					NOT = { has_idea = SOV_desperate_measures_ns }
-				}
+				factor = 0
+				NOT = { has_completed_focus = SOV_desperate_measures }
 			}
 		}
 
@@ -564,7 +558,7 @@ infantry_SOV = {
 			artillery_brigade
 			rocket_artillery_brigade
 		}
-		
+
 		replace_at_match = 0.9
 		replace_with = infantry_improved_SOV
 		target_min_match = 0.8
@@ -576,11 +570,8 @@ infantry_SOV = {
 			factor = 1
 
 			modifier = {
-				factor = 100
-				AND = {
-					has_completed_focus = SOV_desperate_measures
-					NOT = { has_idea = SOV_desperate_measures_ns }
-				}
+				factor = 0
+				NOT = { has_completed_focus = SOV_desperate_measures }
 			}
 		}
 
@@ -588,7 +579,7 @@ infantry_SOV = {
 			has_equipment = {artillery_equipment > 4000}
 		}
 
-		target_width = 27.0
+		target_width = 24.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 
@@ -640,12 +631,12 @@ infantry_SOV = {
 				anti_air = 1
 				logistics_company = 1
 				engineer = 1
-				
+
 			}
 
 			regiments = {
 				infantry = 9
-				artillery_brigade = 3
+				artillery_brigade = 2
 			}
 		}
 
@@ -1419,36 +1410,36 @@ anti_armor_SOV = {
 }
 
 
-	# REGIMENTS:
-	#infantry
-	#light_armor
-	#super_heavy_armor
-	#modern_armor
-	#heavy_armor
-	#medium_armor
-	#light_armor
-	#anti_tank
-	#cavalry
-	#motorized
-	#mechanized
-	#marine
-	#mountaineers
-	#paratrooper
-	#rocket_artillery
-	#light_tank_destroyer
-	#anti_air
-	#artillery
+# REGIMENTS:
+#infantry
+#light_armor
+#super_heavy_armor
+#modern_armor
+#heavy_armor
+#medium_armor
+#light_armor
+#anti_tank
+#cavalry
+#motorized
+#mechanized
+#marine
+#mountaineers
+#paratrooper
+#rocket_artillery
+#light_tank_destroyer
+#anti_air
+#artillery
 
-	# SUPPORT:
-	#engineer
-	#recon
-	#signal_company
-	#maintenance_company
-	#anti_tank_brigade
-	#anti_air_brigade
-	#artillery_brigade
-	#field_hospital
-	#logistics_company
-	#military_police
-	#light_sp_anti_air_brigade
-	#light_sp_artillery_brigade
+# SUPPORT:
+#engineer
+#recon
+#signal_company
+#maintenance_company
+#anti_tank_brigade
+#anti_air_brigade
+#artillery_brigade
+#field_hospital
+#logistics_company
+#military_police
+#light_sp_anti_air_brigade
+#light_sp_artillery_brigade

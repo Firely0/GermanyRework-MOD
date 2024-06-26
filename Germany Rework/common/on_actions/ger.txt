@@ -43,7 +43,7 @@ on_actions = {
 					fascism = 62
 					communism = 6
 					neutrality = 10
-				}				
+				}
 			}
 			85 = {
 				remove_dynamic_modifier = {
@@ -922,15 +922,23 @@ on_actions = {
 				hidden_effect = {
 					109 = { set_state_owner_to = CRO }
 					CRO = {
-						declare_war_on = {
-							target = YUG
-							type = annex_everything
-						}
 						add_offsite_building = { type = arms_factory level = 3 }
 					}
-					GER = { add_to_faction = CRO }
-					YUG = { remove_core_of = CRO }
+					every_state = {
+						limit = {
+							is_core_of = CRO
+						}
+						remove_core_of = YUG
+					}
+					YUG = { remove_ideas = YUG_idea_croats_suppressed }
 				}
+				CRO = {
+					declare_war_on = {
+						target = YUG
+						type = annex_everything
+					}
+				}
+				GER = { add_to_faction = CRO }
 			}
 		}
 	}

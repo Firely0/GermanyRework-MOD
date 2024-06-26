@@ -514,7 +514,6 @@ country_event = {
 		}
 		trigger = {
 			NOT = { has_war_with = GER }
-			is_puppet = no # can't do anything if puppet
 		}
 		set_global_flag = eng_ignore_anschluss
 		if = {
