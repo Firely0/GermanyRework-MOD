@@ -38,7 +38,7 @@ give_SOV_armor_research_bonuses = {
 		}
 		add_tech_bonus = {
 			name = med_armor_bonus
-			ahead_reduction = 2
+			ahead_reduction = 1
 			category = cat_medium_armor
 		}
 		add_tech_bonus = {
@@ -91,7 +91,7 @@ give_SOV_armor_research_bonuses = {
 		add_tech_bonus = {
 			name = armor_bonus
 			bonus = 1
-			uses = 2
+			uses = 1
 			category = armor
 		}
 	}
@@ -782,6 +782,343 @@ GER_mr_pact_next_event = {
 			country_event = {
 				id = mrpact_final.1
 				hours = 5
+			}
+		}
+	}
+}
+
+GER_upgrade_four_year_plan_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GER_Four_Year_Plan_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = GER_Four_Year_Plan_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = GER_Four_Year_Plan_v2_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_dynamic_modifier
+				}
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_Tank_dynamic_modifier
+				}
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_1_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_Tank_1_dynamic_modifier
+				}
+				has_completed_focus = GER_tank_warfare
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_1_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_2_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_Tank_2_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_2_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_Tank_2_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_dynamic_modifier
+				}
+				has_completed_focus = GER_Battle_Plan
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_INF_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_1_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_1_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_INF_1_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_2_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_2_dynamic_modifier
+				}
+				has_completed_focus = GER_Cheap_EQ
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_INF_2_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_3_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_3_dynamic_modifier
+				}
+				has_completed_focus = GER_Cheap_SUP
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_INF_3_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_4_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Wehrmacht_INF_4_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Wehrmacht_INF_4_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Wehrmacht_INF_4_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = SS_forces_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = SS_forces_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_dynamic_modifier
+				}
+				has_completed_focus = GER_SS_Search_and_Destroy
+			}
+			remove_dynamic_modifier = {
+				modifier = SS_forces_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = SS_forces_1_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = SS_forces_1_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = SS_forces_1_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = SS_forces_1_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_SD_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_SD_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_SD_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_SD_A_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_SD_A_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_SD_A_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_SD_B_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_SD_B_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_SD_B_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_CAS_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_CAS_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_CAS_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_CAS_A_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_CAS_A_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_CAS_A_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_OI_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_OI_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_OI_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Luftwaffe_OI_A_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Luftwaffe_OI_A_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Luftwaffe_OI_A_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Kriegsmarine_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Kriegsmarine_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Kriegsmarine_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Kriegsmarine_Carrier_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Kriegsmarine_Carrier_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Kriegsmarine_Carrier_dynamic_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
+			}
+			add_dynamic_modifier = {
+				modifier = Kriegsmarine_Gloryofmodernger_dynamic_modifier
 			}
 		}
 	}

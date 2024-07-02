@@ -258,7 +258,7 @@ focus_tree = {
 						name = "Abwehr"
 						icon = GFX_intelligence_agency_logo_ger
 					}
-				}	
+				}
 				if = {
 					limit = {
 						ENG = { NOT = { has_completed_focus = crypto_bomb_focus } }
@@ -285,7 +285,7 @@ focus_tree = {
 					ENG = { has_completed_focus = crypto_bomb_focus }
 				}
 				add_ideas = abwehr_agent_non_dlc_r
-			}	
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1032,15 +1032,15 @@ focus_tree = {
 			has_army_manpower = { size > 499999 }
 			check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
 			custom_trigger_tooltip = {
-			 	tooltip = GER_anschluss_eq_trigger_tt
-			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
+				tooltip = GER_anschluss_eq_trigger_tt
+				check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
 			}
 			NOT = { has_idea = rhineland_challenge_met }
 			if = {
 				limit = {
 					SWI = { has_completed_focus = SWI_gotthard_union }
 				}
-				NOT = { 
+				NOT = {
 					AUS = { has_idea = SWI_swiss_democratic_propaganda }
 				}
 			}
@@ -1104,7 +1104,7 @@ focus_tree = {
 						}
 					}
 				}
-				country_event = aov_austria.1				
+				country_event = aov_austria.1
 			}
 			if = {
 				limit = {
@@ -1117,7 +1117,7 @@ focus_tree = {
 							owns_state = 153
 							owns_state = 848
 						}
-						
+
 					}
 				}
 				custom_effect_tooltip = germany.126.warning
@@ -1143,9 +1143,9 @@ focus_tree = {
 										has_government = neutrality
 									}
 								}
-							}							
+							}
 						}
-						
+
 					}
 					country_event = { id = germany.126 days = 1 }
 				}
@@ -1228,7 +1228,7 @@ focus_tree = {
 			has_army_manpower = {
 				size > 949999
 			}
-			#100 div			
+			#100 div
 			#Make custom trigger tooltip here
 			OR = {
 				DNZ = {
@@ -1604,8 +1604,14 @@ focus_tree = {
 					}
 				}
 				OR = {
-					has_war_with = FRA
-					has_war_with = ENG
+					OR = {
+						has_war_with = FRA
+						has_war_with = ENG
+					}
+					AND = {
+						85 = { is_controlled_by = ROOT }
+						807 = { is_controlled_by = ROOT }
+					}
 				}
 			}
 		}
@@ -2003,7 +2009,7 @@ focus_tree = {
 			has_army_manpower = {
 				size > 724999
 			}
-			#80 div		
+			#80 div
 			NOT = {
 				AND = {
 					CZE = {
@@ -3331,7 +3337,7 @@ focus_tree = {
 						}
 					}
 				}
-			
+
 			}
 		}
 	}
@@ -4623,7 +4629,7 @@ focus_tree = {
 			}
 			NOT = {
 				OR = {
-				has_completed_focus = GER_Fuhrer
+					has_completed_focus = GER_Fuhrer
 					has_completed_focus = GER_against_fuhrer
 				}
 			}
@@ -4789,9 +4795,9 @@ focus_tree = {
 					has_completed_focus = GER_against_fuhrer
 				}
 			}
-			NOT = { 
+			NOT = {
 				OR = {
-					has_country_flag = GER_SIDE_LEADERS 
+					has_country_flag = GER_SIDE_LEADERS
 					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
 				}
 			}
@@ -5088,9 +5094,9 @@ focus_tree = {
 					has_completed_focus = GER_against_fuhrer
 				}
 			}
-			NOT = { 
+			NOT = {
 				OR = {
-					has_country_flag = GER_SIDE_LEADERS 
+					has_country_flag = GER_SIDE_LEADERS
 					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
 				}
 			}
@@ -5965,7 +5971,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_defeat_tt
 				OR = {
-					has_global_flag = yalta_agreed_flag 
+					has_global_flag = yalta_agreed_flag
 				}
 			}
 		}
@@ -6207,8 +6213,8 @@ focus_tree = {
 				uncomplete_children = no
 				refund_political_power = no
 			}
-			clr_country_flag = GER_SIDE_LEADERS 
-			mark_focus_tree_layout_dirty = yes 
+			clr_country_flag = GER_SIDE_LEADERS
+			mark_focus_tree_layout_dirty = yes
 			unlock_national_focus = GER_new_germany_is_riseing_dec_copy
 		}
 	}
@@ -8699,7 +8705,7 @@ focus_tree = {
 						start_province = 12079
 						target_province = 1130
 					}
-				}	
+				}
 			}
 		}
 	}
@@ -10396,10 +10402,10 @@ focus_tree = {
 					is_in_faction_with = GER
 					AND = {
 						NOT = { has_war_with = GER }
-						is_in_faction = no 
+						is_in_faction = no
 					}
 				}
-			}	
+			}
 		}
 		x = -1
 		y = 1
@@ -10433,7 +10439,7 @@ focus_tree = {
 					is_in_faction_with = GER
 					AND = {
 						NOT = { has_war_with = GER }
-						is_in_faction = no 
+						is_in_faction = no
 					}
 				}
 			}
@@ -10485,7 +10491,7 @@ focus_tree = {
 					is_in_faction_with = GER
 					AND = {
 						NOT = { has_war_with = GER }
-						is_in_faction = no 
+						is_in_faction = no
 					}
 				}
 			}
@@ -10654,7 +10660,7 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = GER_against_fuhrer
 			}
-			NOT = { 
+			NOT = {
 				has_completed_focus = GER_hitler_is_gone
 			}
 		}
@@ -10662,7 +10668,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_hitler_focus_unlock
 				always = no
-			}	
+			}
 		}
 		offset = {
 			x = -1
@@ -11357,9 +11363,9 @@ focus_tree = {
 					has_completed_focus = GER_against_fuhrer
 					has_completed_focus = GER_shadow_of_empire
 				}
-				
+
 			}
-			NOT = { 
+			NOT = {
 				OR = {
 					has_global_flag = GER_SWITCH_TO_WAR_AFTER_TREE
 				}
@@ -11387,9 +11393,6 @@ focus_tree = {
 								is_subject_of = ROOT
 							}
 						}
-					}
-					all_owned_state = {
-						is_fully_controlled_by = ROOT
 					}
 				}
 				has_completed_focus = GER_National_sprit
@@ -11826,7 +11829,7 @@ focus_tree = {
 		x = 0
 		y = 6
 		relative_position_id = GER_for_Greater_Reich
-		cost = 1000
+		cost = 10
 		ai_will_do = {
 			factor = 0
 		}
@@ -12116,7 +12119,7 @@ focus_tree = {
 		available = {
 		}
 		cancelable = no
-        search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		cancel_if_invalid = no
 		x = 1
 		y = 3
@@ -12392,28 +12395,28 @@ focus_tree = {
 			has_completed_focus = GER_shadow_of_empire
 		}
 		available = {
-			ITA = { 
-				is_puppet_of = GER 
+			ITA = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
-			SWI = { 
-				is_puppet_of = GER 
+			SWI = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
-			HOL = { 
-				is_puppet_of = GER 
+			HOL = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
-			FRA = { 
-				is_puppet_of = GER 
+			FRA = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
-			SPM = { 
-				is_puppet_of = GER 
+			SPM = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
-			OCC = { 
-				is_puppet_of = GER 
+			OCC = {
+				is_puppet_of = GER
 				has_autonomy_state = autonomy_loyal_state
 			}
 		}
@@ -12679,7 +12682,7 @@ focus_tree = {
 		completion_reward = {
 			ITA = { country_event = { id = ger_kaiser_in_exile.11 days = 1 } }
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_secure_lands_in_italy
@@ -12744,7 +12747,7 @@ focus_tree = {
 				GER_wilhelm_ii = {
 					set_character_name = {
 						name = GER_wilhelm_ii_emperor
-					}	
+					}
 				}
 				set_country_leader_portrait = {
 					portrait = GFX_portrait_ger_wilhelm_II_rr
@@ -12775,7 +12778,7 @@ focus_tree = {
 				add_state_core = 853
 			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_National_sprit
@@ -13278,7 +13281,7 @@ focus_tree = {
 		id = GER_Europe_in_flames
 		icon = GFX_goal_EUinFlames
 		prerequisite = {
-			focus = GER_No_Step_Back 
+			focus = GER_No_Step_Back
 			focus = GER_the_last_offensive
 		}
 		available = {
@@ -13468,7 +13471,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			set_country_flag = GER_SOV_Demanded	
+			set_country_flag = GER_SOV_Demanded
 			SOV = {
 				custom_effect_tooltip = needs_approval
 				custom_effect_tooltip = GER_Keep_occpy_land
@@ -13504,8 +13507,11 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			has_completed_focus = GER_soviet_treaty_a
-		}	
+			OR = {
+				has_completed_focus = GER_soviet_treaty_a
+				has_completed_focus = GER_Battle_Plan
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = GER_Mojor_Diplomacy
@@ -13570,7 +13576,7 @@ focus_tree = {
 								add_tech_bonus = {
 									name = armor_bonus
 									bonus = 1.0
-									uses = 2
+									uses = 1
 									category = armor
 								}
 							}
@@ -13585,7 +13591,7 @@ focus_tree = {
 								add_tech_bonus = {
 									name = armor_bonus
 									bonus = 1.0
-									uses = 2
+									uses = 1
 									category = armor
 								}
 							}
@@ -13656,9 +13662,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			GER = {
-				country_event = mrpact_initial.1
-			}
+			ROOT = { country_event = mrpact_initial.1 }
 			SOV = {
 				custom_effect_tooltip = needs_approval
 				custom_effect_tooltip = mrpact_non_aggression_tt
@@ -13853,9 +13857,9 @@ focus_tree = {
 							state = 823
 							state = 831
 							state = 832
-							state = 584	
-							state = 834	
-							state = 137		
+							state = 584
+							state = 834
+							state = 137
 						}
 					}
 					set_state_flag = GER_MOSKOW_IGNORE_STATES
@@ -14455,7 +14459,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = { 
+		search_filters = {
 			FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER
 		}
 		completion_reward = {
@@ -15897,7 +15901,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = { idea = GER_red_amnesties_idea days = 70 }
-			
+
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = wilhelm_pieck
 			show_ideas_tooltip = ernst_thalmann
@@ -15946,7 +15950,7 @@ focus_tree = {
 				}
 			}
 		}
-		
+
 		completion_reward = {
 			add_timed_idea = { idea = GER_rot_front_idea days = 105 }
 			add_corps_commander_role = {
@@ -15966,7 +15970,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = internationalism
 					days = 720
-				}	
+				}
 			}
 		}
 	}
@@ -15986,16 +15990,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-		custom_effect_tooltip = GER_second_civil_war_tt
-		country_event = { id = rot_germany.1 }
+			custom_effect_tooltip = GER_second_civil_war_tt
+			country_event = { id = rot_germany.1 }
 		}
 	}
 	focus = {
 		id = GER_rot_front_exp
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { 
+		prerequisite = {
 			focus = GER_second_civil_war
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
@@ -16010,18 +16014,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_ideas = GER_rot_front_exp_idea
-				swap_ideas = {
-					remove_idea = GER_unknown_general_loyality_idea
-					add_idea = GER_general_loyality_questioned_idea
-				}	
-			add_stability = 0.05	
+			swap_ideas = {
+				remove_idea = GER_unknown_general_loyality_idea
+				add_idea = GER_general_loyality_questioned_idea
+			}
+			add_stability = 0.05
 			hidden_effect = {
-				country_event = { 
-					id = rot_germany.34 
-					days = 1 
+				country_event = {
+					id = rot_germany.34
+					days = 1
 				}
 			}
 		}
@@ -16042,7 +16046,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = GER_rot_front_exp_idea
@@ -16051,9 +16055,9 @@ focus_tree = {
 			remove_ideas = GER_general_loyality_questioned_idea
 			add_stability = 0.05
 			hidden_effect = {
-				country_event = { 
-					id = rot_germany.36 
-					days = 1 
+				country_event = {
+					id = rot_germany.36
+					days = 1
 				}
 			}
 		}
@@ -16072,7 +16076,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = GER_vincenz_muller
@@ -16128,7 +16132,7 @@ focus_tree = {
 				logistics_skill=1
 				legacy_id=1005
 			}
-						
+
 			add_naval_commander_role = {
 				character = GER_felix_scheffler
 				traits={ politically_connected JAP_communist_sympathizer }
@@ -16157,11 +16161,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-		add_timed_idea = { idea = GER_nationalisation_idea days = 730 }
-		remove_ideas = GER_industry_wo_owner_idea
-		add_stability = 0.05
+			add_timed_idea = { idea = GER_nationalisation_idea days = 730 }
+			remove_ideas = GER_industry_wo_owner_idea
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -16180,11 +16184,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-		add_stability = 0.05
-		add_timed_idea = { idea = GER_supress_crev_idea days = 365 }
-		remove_ideas = GER_dissidents_idea
+			add_stability = 0.05
+			add_timed_idea = { idea = GER_supress_crev_idea days = 365 }
+			remove_ideas = GER_dissidents_idea
 		}
 	}
 	focus = {
@@ -16204,7 +16208,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_ideas = GER_new_culture_idea
 		}
@@ -16225,7 +16229,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			set_rule = {
 				can_send_volunteers = yes
@@ -16235,10 +16239,10 @@ focus_tree = {
 					is_neighbor_of = GER
 					NOT = { has_government = communism }
 				}
-				add_timed_idea = { 
-					idea = communist_pressure 
-					days = 730 
-				} 
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 730
+				}
 			}
 		}
 	}
@@ -16295,13 +16299,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
 					original_tag = AUS
 				}
-				country_event = rot_germany.2 
+				country_event = rot_germany.2
 			}
 			add_threat = 5
 		}
@@ -16316,7 +16320,7 @@ focus_tree = {
 				original_tag = AUS
 				has_government = communism
 				has_civil_war = no
-			}	
+			}
 		}
 		x = -1
 		y = 1
@@ -16326,7 +16330,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_state = {
 				limit = {
@@ -16355,12 +16359,12 @@ focus_tree = {
 		will_lead_to_war_with = ITA
 		will_lead_to_war_with = HUN
 		bypass = {
-			NOT = { 
+			NOT = {
 				any_country = {
 					capital_scope = {
-					is_on_continent = europe
+						is_on_continent = europe
 					}
-				has_government = fascism 
+					has_government = fascism
 				}
 			}
 		}
@@ -16372,7 +16376,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -16421,7 +16425,7 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		
+
 		available_if_capitulated = yes
 
 		available = {
@@ -16448,7 +16452,7 @@ focus_tree = {
 		}
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
-		
+
 		available_if_capitulated = yes
 
 
@@ -16468,7 +16472,7 @@ focus_tree = {
 				instant_build = yes
 			}
 		}
-		
+
 		completion_reward = {
 			navy_experience = 25
 			if = {
@@ -16564,10 +16568,10 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}	
+			}
 			add_ideas = {
 				GER_expand_the_red_navy_spirit
-			}		
+			}
 		}
 	}
 	focus = {
@@ -16584,7 +16588,7 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
-		
+
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -16601,7 +16605,7 @@ focus_tree = {
 		available = {
 			AND = {
 				country_exists = SOV
-				SOV = { 
+				SOV = {
 					has_government = communism
 				}
 			}
@@ -16624,21 +16628,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-				IF = {
-					limit = {
-						country_exists = SOV
-						SOV = { 
-							has_government = communism
-						}	
+			IF = {
+				limit = {
+					country_exists = SOV
+					SOV = {
+						has_government = communism
 					}
-					SOV = { add_to_faction = GER }
 				}
-				news_event = { hours = 24 id = rot_news.5 }
-				drop_cosmetic_tag = yes
-				set_cosmetic_tag = GER_ddr
-				mark_focus_tree_layout_dirty = yes
+				SOV = { add_to_faction = GER }
+			}
+			news_event = { hours = 24 id = rot_news.5 }
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = GER_ddr
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
@@ -16657,7 +16661,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_country_leader_trait = staunch_stalinist
 			add_stability = 0.05
@@ -16679,18 +16683,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_to_tech_sharing_group = comintern_research
 			IF = {
 				limit = {
 					country_exists = SOV
-					SOV = { 
+					SOV = {
 						has_government = communism
-					}	
+					}
 				}
-				SOV = { 
-					add_to_tech_sharing_group = comintern_research 
+				SOV = {
+					add_to_tech_sharing_group = comintern_research
 					modify_tech_sharing_bonus = {
 						id = comintern_research
 						bonus = 0.35
@@ -16699,8 +16703,8 @@ focus_tree = {
 			}
 
 			modify_tech_sharing_bonus = {
-			  	id = comintern_research
-			   	bonus = 0.15
+				id = comintern_research
+				bonus = 0.15
 			}
 
 			IF = {
@@ -16778,7 +16782,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_ideas = SAF_soviet_advisers
 			add_doctrine_cost_reduction = {
@@ -16842,19 +16846,19 @@ focus_tree = {
 			add_stability = -0.05
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
-			}	
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
-			}	
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
-			}	
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 			}
@@ -17024,7 +17028,7 @@ focus_tree = {
 		prerequisite = { focus = GER_accept_stalinism }
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 		available = {
-		POL = { communism > 0.3 }
+			POL = { communism > 0.3 }
 		}
 		bypass = {
 			OR = {
@@ -17034,9 +17038,9 @@ focus_tree = {
 						is_in_faction_with = GER
 						has_capitulated = yes
 						exists = no
-					}	
+					}
 				}
-			has_war_with = POL
+				has_war_with = POL
 			}
 		}
 		will_lead_to_war_with = POL
@@ -17048,13 +17052,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
-				original_tag = POL
+					original_tag = POL
 				}
-			country_event = rot_germany.5 
+				country_event = rot_germany.5
 			}
 			add_threat = 10
 		}
@@ -17068,16 +17072,16 @@ focus_tree = {
 		available = {
 
 		}
-	
+
 		bypass = {
 			NOT = {
 				any_country = {
 					capital_scope = {
-					is_on_continent = europe
+						is_on_continent = europe
+					}
+					has_government = fascism
 				}
-				has_government = fascism
-				}
-			}	
+			}
 		}
 		x = 0
 		y = 2
@@ -17087,31 +17091,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
 					original_tag = BUL
 				}
-			add_timed_idea = { idea = communist_influence days = 1095 }
+				add_timed_idea = { idea = communist_influence days = 1095 }
 			}
 		}
 	}
 	focus = {
 		id = GER_trial_fascism
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		prerequisite = { focus = GER_support_dimitrov }	
+		prerequisite = { focus = GER_support_dimitrov }
 		available = {
-			NOT = { 
+			NOT = {
 				any_country = {
 					capital_scope = {
 						is_on_continent = europe
 					}
 					has_government = fascism
 				}
-			}			
+			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }	
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
 
 		}
@@ -17123,20 +17127,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
 					OR = {
 						capital_scope = {
-								is_on_continent = europe
+							is_on_continent = europe
 						}
 						capital_scope = {
-								is_on_continent = asia
+							is_on_continent = asia
 						}
 					}
 				}
-			add_timed_idea = { idea = GER_antifa days = 730 }
+				add_timed_idea = { idea = GER_antifa days = 730 }
 			}
 			add_threat = -5
 		}
@@ -17163,7 +17167,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			unlock_decision_tooltip = GER_war_USA
 			unlock_decision_tooltip = GER_war_ENG
@@ -17174,7 +17178,7 @@ focus_tree = {
 	focus = {
 		id = GER_our_last_battle
 		icon = GFX_goal_tfv_burn_the_royal_portraits
-		prerequisite = { focus = GER_prepare_for_war } 
+		prerequisite = { focus = GER_prepare_for_war }
 		prerequisite = { focus = GER_pre_war_plan }
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = USA
@@ -17182,7 +17186,7 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		available = {
-		
+
 		}
 		x = 0
 		y = 2
@@ -17201,8 +17205,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		add_stability = 0.1
-		add_war_support = 0.1
+			add_stability = 0.1
+			add_war_support = 0.1
 			if = {
 				limit = {
 					USA = {
@@ -17210,7 +17214,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -17225,7 +17229,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -17240,7 +17244,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -17255,7 +17259,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -17272,7 +17276,7 @@ focus_tree = {
 		prerequisite = { focus = GER_a_shadow_of_past }
 		mutually_exclusive = { focus = GER_radical_left }
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		
+
 		available = {
 			has_country_flag = thalmann_killed
 			NOT = { has_civil_war = yes }
@@ -17306,9 +17310,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_country_leader_role = {
@@ -17325,9 +17329,9 @@ focus_tree = {
 			remove_ideas = GER_supress_crev_idea
 			SOV = {
 				add_ai_strategy = {
-				type = alliance
-				id = "GER"			
-				value = -300
+					type = alliance
+					id = "GER"
+					value = -300
 				}
 			}
 			IF = {
@@ -17400,7 +17404,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 		available = {
 			democratic > 0.25
-			has_completed_focus = GER_nationalisation			
+			has_completed_focus = GER_nationalisation
 		}
 		x = 0
 		y = 1
@@ -17410,9 +17414,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -17460,9 +17464,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_stability = 0.05	
+			add_stability = 0.05
 			add_ideas = liberty_ethos_focus
-			add_country_leader_trait = economic_reformer		
+			add_country_leader_trait = economic_reformer
 		}
 	}
 	focus = {
@@ -17481,13 +17485,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 5 }
-		remove_ideas = GER_nationalisation_idea
+			add_offsite_building = { type = industrial_complex level = 5 }
+			remove_ideas = GER_nationalisation_idea
 		}
 	}
 
@@ -17508,7 +17512,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			create_faction = "GER_eurocommunism_bloc"
 			set_rule = { can_create_factions = yes }
@@ -17573,11 +17577,11 @@ focus_tree = {
 				}
 			}
 			add_popularity = { ideology = communism popularity = -0.05 }
-				news_event = { hours = 24 id = rot_news.6 }
-				SOV = {
-					add_ai_strategy = {
+			news_event = { hours = 24 id = rot_news.6 }
+			SOV = {
+				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = -300
 				}
 				add_opinion_modifier = { target = GER modifier = faction_traitor }
@@ -17590,8 +17594,8 @@ focus_tree = {
 		prerequisite = { focus = GER_eurocommunism }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		available = {
-			
-			}
+
+		}
 		x = 4
 		y = 1
 		relative_position_id = GER_eurocommunism
@@ -17600,7 +17604,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_timed_idea = { idea = GER_help_for_peasants days = 365 }
 		}
@@ -17612,8 +17616,8 @@ focus_tree = {
 		prerequisite = { focus = GER_help_peasants }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = {
-			
-			}
+
+		}
 		x = 0
 		y = 1
 		relative_position_id = GER_help_peasants
@@ -17622,7 +17626,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			add_ideas = GER_equal_development
 		}
@@ -17633,8 +17637,8 @@ focus_tree = {
 		prerequisite = { focus = GER_wise_development }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = {
-			
-			}
+
+		}
 		x = 0
 		y = 2
 		relative_position_id = GER_help_peasants
@@ -17643,12 +17647,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-				swap_ideas = {
-					remove_idea = GER_equal_development
-					add_idea = GER_socialist_market
-				}
+			swap_ideas = {
+				remove_idea = GER_equal_development
+				add_idea = GER_socialist_market
+			}
 		}
 	}
 	focus = {
@@ -17657,7 +17661,7 @@ focus_tree = {
 		prerequisite = { focus = GER_social_market }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			
+
 		}
 		x = 0
 		y = 3
@@ -17667,14 +17671,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-				remove_country_leader_trait = social_reformer
-				add_country_leader_trait = popular_figurehead
-				add_country_leader_trait = economist
+			remove_country_leader_trait = social_reformer
+			add_country_leader_trait = popular_figurehead
+			add_country_leader_trait = economist
 		}
 	}
 
@@ -17704,26 +17708,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
 					original_tag = SPR
-					}
-					add_ai_strategy = {
-						type = alliance
-						id = "GER"			
-						value = 200
-						}
-					add_ai_strategy = {
-						type = alliance
-						id = "SOV"			
-						value = -500
-					}
-					add_timed_idea = { idea = communist_influence days = 730 }	
 				}
-			}	
+				add_ai_strategy = {
+					type = alliance
+					id = "GER"
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "SOV"
+					value = -500
+				}
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 		}
+	}
 	focus = {
 		id = GER_guarantees_for_influence
 		icon = GFX_focus_generic_polish_deal
@@ -17744,7 +17748,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			
+
 		}
 		x = 0
 		y = 1
@@ -17754,13 +17758,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			random_other_country = {
 				limit = {
 					original_tag = POL
 				}
-				country_event = rot_germany.43 
+				country_event = rot_germany.43
 			}
 			add_threat = -5
 		}
@@ -17795,7 +17799,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -17803,15 +17807,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 		}
 	}
@@ -17889,7 +17893,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -17897,15 +17901,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -17913,15 +17917,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -17929,15 +17933,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 		}
 	}
@@ -17966,7 +17970,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -17978,14 +17982,14 @@ focus_tree = {
 				}
 				GER = {
 					create_wargoal = {
-					type = puppet_wargoal_focus
-					target = PREV
-					}	
+						type = puppet_wargoal_focus
+						target = PREV
+					}
 				}
 			}
-			add_threat = 5		
+			add_threat = 5
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_align_balkans
@@ -18151,7 +18155,7 @@ focus_tree = {
 				}
 				any_country = {
 					original_tag = ALB
-						OR = {
+					OR = {
 						has_government = communism
 						communism > 0.4
 						has_opinion = { target = GER value > 69 }
@@ -18170,7 +18174,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -18178,15 +18182,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18194,15 +18198,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18210,15 +18214,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18226,15 +18230,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18242,130 +18246,130 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}		
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = SER
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BOS
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = CRO
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = SLV
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = ALB
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = MAC
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = MNT
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_align_scandinavia
@@ -18373,7 +18377,7 @@ focus_tree = {
 		prerequisite = { focus = GER_align_benilux focus = GER_crush_salazar }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = SWE
@@ -18388,7 +18392,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = NOR
@@ -18403,7 +18407,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = DEN
@@ -18418,7 +18422,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = FIN
@@ -18433,7 +18437,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = ICE
@@ -18460,7 +18464,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -18468,15 +18472,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18484,15 +18488,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18500,15 +18504,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18516,34 +18520,34 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = ICE
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_align_british_isles
@@ -18551,7 +18555,7 @@ focus_tree = {
 		prerequisite = { focus = GER_align_scandinavia focus = GER_align_balkans }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = ENG
@@ -18569,7 +18573,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = SCO
@@ -18587,7 +18591,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = IRE
@@ -18602,7 +18606,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = NIR
@@ -18617,7 +18621,7 @@ focus_tree = {
 					}
 				}
 			}
-			IF = { 
+			IF = {
 				limit = {
 					any_country = {
 						original_tag = WLS
@@ -18644,7 +18648,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -18652,15 +18656,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18668,15 +18672,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18684,15 +18688,15 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
+				add_timed_idea = { idea = communist_influence days = 730 }
 			}
 			every_other_country = {
 				limit = {
@@ -18700,34 +18704,34 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 			every_other_country = {
 				limit = {
 					original_tag = NIR
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = 200
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "SOV"			
+					id = "SOV"
 					value = -500
 				}
-				add_timed_idea = { idea = communist_influence days = 730 }	
-			}	
+				add_timed_idea = { idea = communist_influence days = 730 }
+			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_preventive_strike_at_USSR
@@ -18737,28 +18741,28 @@ focus_tree = {
 		available = {
 			OR = {
 				any_country = {
- 					original_tag = SOV
+					original_tag = SOV
 					has_government = communism
 				}
-#				any_country = {
-#					original_tag = RUS
-#					has_government = communism
-#				}
+				#				any_country = {
+				#					original_tag = RUS
+				#					has_government = communism
+				#				}
 			}
 		}
 		will_lead_to_war_with = SOV
-#		will_lead_to_war_with = RUS
+		#		will_lead_to_war_with = RUS
 
 		cancel = {
 			NOT = { country_exists = SOV }
-#			NOT = { country_exists = RUS }
+			#			NOT = { country_exists = RUS }
 		}
 
 		bypass = {
-#			OR = {
-				has_war_with = SOV
-#				has_war_with = RUS
-#			}
+			#			OR = {
+			has_war_with = SOV
+			#				has_war_with = RUS
+			#			}
 		}
 		x = 0
 		y = 1
@@ -18768,17 +18772,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		completion_reward = {
-#			IF = {
-#				limit = {
-#					country_exists = RUS
-#				}
-#				create_wargoal = {
-#					type = annex_everything
-#					target = RUS
-#				}
-#			}
+			#			IF = {
+			#				limit = {
+			#					country_exists = RUS
+			#				}
+			#				create_wargoal = {
+			#					type = annex_everything
+			#					target = RUS
+			#				}
+			#			}
 			IF = {
 				limit = {
 					country_exists = SOV
@@ -18789,7 +18793,7 @@ focus_tree = {
 				}
 			}
 		}
-	}	
+	}
 
 	focus = {
 		id = GER_radical_left
@@ -18831,24 +18835,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-				add_country_leader_role = {
-					character = GER_ruth_fischer
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = leninism
-						traits = {
-							devoted_trotskyist
-						}
+			add_country_leader_role = {
+				character = GER_ruth_fischer
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = leninism
+					traits = {
+						devoted_trotskyist
 					}
-					promote_leader = yes
 				}
-				SOV = {
-					add_ai_strategy = {
+				promote_leader = yes
+			}
+			SOV = {
+				add_ai_strategy = {
 					type = alliance
 					id = "GER"
 					value = -300
@@ -18869,8 +18873,8 @@ focus_tree = {
 			has_equipment = {
 				infantry_equipment > 4999
 			}
-				has_political_power > 100
-				has_completed_focus = GER_second_civil_war			
+			has_political_power > 100
+			has_completed_focus = GER_second_civil_war
 		}
 		continue_if_invalid = no
 		x = 0
@@ -18881,9 +18885,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-	
+
 		}
 
 		cancel_if_invalid = no
@@ -18906,19 +18910,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			NOT = { has_global_flag = flag_trotsky_dead }
-#			OR = {
-				any_country = {
-#					tag = SOV
-					original_tag = SOV
-					has_government = communism
-#				}
-#				any_country = {
-#					tag = RUS
-#					has_civil_war = no
-#					NOT = {
-#						has_government = communism
-#					}
-#				}
+			#			OR = {
+			any_country = {
+				#					tag = SOV
+				original_tag = SOV
+				has_government = communism
+				#				}
+				#				any_country = {
+				#					tag = RUS
+				#					has_civil_war = no
+				#					NOT = {
+				#						has_government = communism
+				#					}
+				#				}
 			}
 			NOT = {
 				MEX = {
@@ -18927,17 +18931,17 @@ focus_tree = {
 			}
 		}
 		bypass = {
-#			OR = {
-				SOV = {
-					has_country_leader = { character = SOV_lev_trotsky ruling_only = yes }
-				}
-#				AND = {
-#					country_exists = RUS
-#					RUS = {
-#						has_government = communism
-#					}
-#				}
-#			}
+			#			OR = {
+			SOV = {
+				has_country_leader = { character = SOV_lev_trotsky ruling_only = yes }
+			}
+			#				AND = {
+			#					country_exists = RUS
+			#					RUS = {
+			#						has_government = communism
+			#					}
+			#				}
+			#			}
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -18949,9 +18953,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -18959,24 +18963,24 @@ focus_tree = {
 					limit = {
 						country_exists = SOV
 					}
-					SOV = { 
+					SOV = {
 						country_event = {
 							id = rot_germany.38
 							days = 30
 						}
 					}
 				}
-#				IF = {
-#					limit = {
-#						country_exists = RUS
-#					}
-#					RUS = {
-#						start_civil_war = {
-#							ideology = communism
-#							size = 0.5
-#						}
-#					}
-#				}
+				#				IF = {
+				#					limit = {
+				#						country_exists = RUS
+				#					}
+				#					RUS = {
+				#						start_civil_war = {
+				#							ideology = communism
+				#							size = 0.5
+				#						}
+				#					}
+				#				}
 			}
 			custom_effect_tooltip = GER_trotsky_coup_tt
 			add_political_power = -200
@@ -18990,19 +18994,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		mutually_exclusive = { focus = GER_eurocommunism focus = GER_enter_comintern focus = GER_establish_fifth_internationale }
 		available = {
-#			OR = {
-				any_country = {
-					original_tag = SOV
-					has_civil_war = no
-					has_country_leader = { character = SOV_lev_trotsky ruling_only = yes }
-					has_completed_focus = SOV_long_live_the_workers_government
-				}
-#				any_country = {
-#					original_tag = RUS
-#					has_civil_war = no
-#					has_government = communism
-#				}
-#			}
+			#			OR = {
+			any_country = {
+				original_tag = SOV
+				has_civil_war = no
+				has_country_leader = { character = SOV_lev_trotsky ruling_only = yes }
+				has_completed_focus = SOV_long_live_the_workers_government
+			}
+			#				any_country = {
+			#					original_tag = RUS
+			#					has_civil_war = no
+			#					has_government = communism
+			#				}
+			#			}
 		}
 		x = 0
 		y = 1
@@ -19012,57 +19016,57 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {	#TODO: Check the operation
-#			hidden_effect = {
-#				every_other_country = {
-#					limit = {
-#						is_in_faction_with = SOV
-#					}
-#					set_country_flag = was_in_comintern
-#				}	
-#			}
+			#			hidden_effect = {
+			#				every_other_country = {
+			#					limit = {
+			#						is_in_faction_with = SOV
+			#					}
+			#					set_country_flag = was_in_comintern
+			#				}
+			#			}
 			IF = {
 				limit = {
 					country_exists = SOV
 				}
-				SOV = { 
-#					dismantle_faction = yes
-#					create_faction = "GER_fourth_internationale_faction" 
+				SOV = {
+					#					dismantle_faction = yes
+					#					create_faction = "GER_fourth_internationale_faction"
 					add_to_faction = GER
-#					hidden_effect = {
-#						every_other_country = {
-#							limit = { 
-#								has_country_flag = was_in_comintern
-#							}
-#							SOV = { add_to_faction = PREV }
-#							clr_country_flag = was_in_comintern
-#						}		
-#					}
+					#					hidden_effect = {
+					#						every_other_country = {
+					#							limit = {
+					#								has_country_flag = was_in_comintern
+					#							}
+					#							SOV = { add_to_faction = PREV }
+					#							clr_country_flag = was_in_comintern
+					#						}
+					#					}
 				}
 			}
-#			IF = {
-#				limit = {
-#					country_exists = RUS
-#				}
-#				RUS = { 
-#					dismantle_faction = yes
-#					create_faction = "GER_fourth_internationale_faction" 
-#					add_to_faction = GER
-#					hidden_effect = {
-#						every_other_country = {
-#							limit = { 
-#								has_country_flag = was_in_comintern
-#							}
-#							RUS = { add_to_faction = PREV }
-#							clr_country_flag = was_in_comintern
-#						}		
-#					}
-#				}
-#			}
+			#			IF = {
+			#				limit = {
+			#					country_exists = RUS
+			#				}
+			#				RUS = {
+			#					dismantle_faction = yes
+			#					create_faction = "GER_fourth_internationale_faction"
+			#					add_to_faction = GER
+			#					hidden_effect = {
+			#						every_other_country = {
+			#							limit = {
+			#								has_country_flag = was_in_comintern
+			#							}
+			#							RUS = { add_to_faction = PREV }
+			#							clr_country_flag = was_in_comintern
+			#						}
+			#					}
+			#				}
+			#			}
 			news_event = { hours = 6 id = rot_news.13 }
 		}
 	}
@@ -19083,9 +19087,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = no
@@ -19100,8 +19104,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = HOL
@@ -19109,8 +19113,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = LUX
@@ -19118,8 +19122,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = FRA
@@ -19127,8 +19131,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = ITA
@@ -19136,7 +19140,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19145,8 +19149,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = SWI
@@ -19154,7 +19158,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19163,8 +19167,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = IRE
@@ -19172,7 +19176,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19181,7 +19185,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19190,7 +19194,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19199,8 +19203,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = NIR
@@ -19208,9 +19212,9 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
-		}	
+		}
 	}
 
 	focus = {
@@ -19230,9 +19234,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = no
@@ -19247,8 +19251,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = CZE
@@ -19256,8 +19260,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = EST
@@ -19265,8 +19269,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = LAT
@@ -19274,8 +19278,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = LIT
@@ -19283,7 +19287,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19292,8 +19296,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BUL
@@ -19301,7 +19305,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19310,8 +19314,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = YUG
@@ -19319,8 +19323,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = GRE
@@ -19328,8 +19332,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = TUR
@@ -19337,7 +19341,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19346,8 +19350,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = SER
@@ -19355,8 +19359,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = CRO
@@ -19364,7 +19368,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19373,7 +19377,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19382,8 +19386,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BLR
@@ -19391,8 +19395,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BOS
@@ -19400,8 +19404,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = MAC
@@ -19409,7 +19413,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19418,7 +19422,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19427,7 +19431,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
+				}
 			}
 		}
 	}
@@ -19449,9 +19453,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = no
@@ -19466,8 +19470,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = NOR
@@ -19475,8 +19479,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = DEN
@@ -19484,8 +19488,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = ICE
@@ -19493,8 +19497,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = FIN
@@ -19502,8 +19506,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = comintern_influence
 					days = 1095
-				}     
-			}		
+				}
+			}
 		}
 	}
 	focus = {
@@ -19530,7 +19534,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
 			OR = {
 				any_country = {
@@ -19553,7 +19557,7 @@ focus_tree = {
 			add_political_power = -300
 			add_threat = 5
 			news_event = { hours = 4 id = rot_news.16 }
-		}		
+		}
 	}
 	focus = {
 		id = GER_world_revolution
@@ -19561,7 +19565,7 @@ focus_tree = {
 		prerequisite = { focus = GER_influence_on_eastern_europe }
 		prerequisite = { focus = GER_british_revolution }
 		available = {
-			
+
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 2
@@ -19572,13 +19576,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_ideas = GER_world_revolution_idea
-			add_political_power = 600 
+			add_political_power = 600
 			add_threat = 5
 		}
 	}
@@ -19598,15 +19602,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			swap_ideas = {
-					remove_idea = GER_new_culture_idea
-					add_idea = GER_trade_unions_1
-			}			
+				remove_idea = GER_new_culture_idea
+				add_idea = GER_trade_unions_1
+			}
 		}
 	}
 	focus = {
@@ -19625,14 +19629,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			swap_ideas = {
-					remove_idea = GER_trade_unions_1
-					add_idea = GER_trade_unions_2
+				remove_idea = GER_trade_unions_1
+				add_idea = GER_trade_unions_2
 			}
 		}
 	}
@@ -19653,15 +19657,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = GER_five_year_civil_idea
 				days = 1825
-			}  
+			}
 		}
 	}
 	focus = {
@@ -19679,9 +19683,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_ideas = GER_civil_resources_idea
@@ -19704,9 +19708,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = no
@@ -19720,8 +19724,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = CHL
@@ -19729,8 +19733,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = URG
@@ -19738,8 +19742,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = PAR
@@ -19747,8 +19751,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BOL
@@ -19756,8 +19760,8 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
-			}	
+				}
+			}
 			every_other_country = {
 				limit = {
 					original_tag = BRA
@@ -19765,7 +19769,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19774,7 +19778,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19783,7 +19787,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19792,7 +19796,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19801,7 +19805,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19810,7 +19814,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19819,7 +19823,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19828,7 +19832,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19837,7 +19841,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19846,7 +19850,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19855,7 +19859,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19864,7 +19868,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19873,7 +19877,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19882,7 +19886,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19891,7 +19895,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19900,7 +19904,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19909,7 +19913,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19918,7 +19922,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19927,7 +19931,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			every_other_country = {
 				limit = {
@@ -19936,7 +19940,7 @@ focus_tree = {
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 			}
 			add_political_power = -200
 		}
@@ -19962,7 +19966,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
 			any_country = {
 				original_tag = USA
@@ -19993,14 +19997,14 @@ focus_tree = {
 			random_other_country = {
 				limit = {
 					original_tag = USA
-					NOT = { 
+					NOT = {
 						has_government = communism
 					}
 				}
 				add_timed_idea = {
 					idea = communist_pressure
 					days = 1095
-				}     
+				}
 				add_stability = -0.25
 				add_war_support = -0.25
 			}
@@ -20008,7 +20012,7 @@ focus_tree = {
 				type = infantry_equipment
 				amount = -50000
 			}
-			add_political_power = -500	
+			add_political_power = -500
 			add_threat = 10
 		}
 	}
@@ -20051,15 +20055,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			SOV = {
 				add_ai_strategy = {
 					type = alliance
-					id = "GER"			
+					id = "GER"
 					value = -300
 				}
 				add_opinion_modifier = { target = GER modifier = faction_traitor }
@@ -20067,7 +20071,7 @@ focus_tree = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_sov_republic
 			mark_focus_tree_layout_dirty = yes
-			news_event = { hours = 6 id = rot_news.14 }	
+			news_event = { hours = 6 id = rot_news.14 }
 		}
 	}
 	focus = {
@@ -20076,7 +20080,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = GER_criticise_soviet }
 		prerequisite = { focus = GER_expand_the_revolution }
-		mutually_exclusive = { focus = GER_eurocommunism focus = GER_join_fourth_internationale focus = GER_enter_comintern }		
+		mutually_exclusive = { focus = GER_eurocommunism focus = GER_join_fourth_internationale focus = GER_enter_comintern }
 		available = {
 			is_in_faction = no
 		}
@@ -20088,22 +20092,22 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-				create_faction = "GER_fifth_internationale_faction"
-				set_rule = { can_create_factions = yes }
-				news_event = { hours = 12 id = rot_news.15 }
-				mark_focus_tree_layout_dirty = yes
+			create_faction = "GER_fifth_internationale_faction"
+			set_rule = { can_create_factions = yes }
+			news_event = { hours = 12 id = rot_news.15 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {
 		id = GER_revolution_by_force
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = GER_establish_fifth_internationale }
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }		
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 		available = {
 
 		}
@@ -20115,9 +20119,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_war_support = 0.1
@@ -20141,15 +20145,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = GER_focus_on_military_idea
 				days = 1095
-			}  			
+			}
 		}
 	}
 
@@ -20169,15 +20173,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_timed_idea = {
 				idea = GER_five_year_military_idea
 				days = 1825
-			}  			
+			}
 		}
 	}
 
@@ -20201,9 +20205,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_tech_bonus = { #TODO: Check the desc
@@ -20221,13 +20225,13 @@ focus_tree = {
 					type = oil
 					amount = 16
 				}
-			}	
+			}
 			51 = {
 				add_resource = {
 					type = steel
 					amount = 30
 				}
-			}	
+			}
 			53 = {
 				add_resource = {
 					type = oil
@@ -20278,19 +20282,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = CZE
-			}	
+			}
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = HUN
-			}	
+			}
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = POL
@@ -20331,30 +20335,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ROM
-			}	
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = YUG
-			}	
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ALB
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROM
 			}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = BUL
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YUG
 			}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = GRE
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ALB
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BUL
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRE
 			}
 			add_threat = 10
 		}
@@ -20363,18 +20367,18 @@ focus_tree = {
 		id = GER_alliance_with_FRA_and_ENG
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = GER_establish_fifth_internationale }
-		search_filters = { FOCUS_FILTER_POLITICAL }		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			OR = {
 				NOT = {
 					has_war_with = ENG
 				}
 				NOT = {
-					has_war_with = FRA 
+					has_war_with = FRA
 				}
 			}
-			ITA = { 
-				has_government = fascism 
+			ITA = {
+				has_government = fascism
 			}
 		}
 		x = -2
@@ -20385,13 +20389,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
 			OR = {
-				ITA = {  
-					NOT = {	
-						has_government = fascism 
-					}	
+				ITA = {
+					NOT = {
+						has_government = fascism
+					}
 				}
 				AND = {
 					has_war_with = ENG
@@ -20415,8 +20419,8 @@ focus_tree = {
 					}
 				}
 				FRA = { country_event = rot_germany.19 }
-			}	
-			add_threat = 5			
+			}
+			add_threat = 5
 		}
 	}
 	focus = {
@@ -20441,14 +20445,14 @@ focus_tree = {
 				}
 				NOT = { country_exists = ITA }
 				AND = {
-					NOT = { 
+					NOT = {
 						has_global_flag = ENG_accepted
 					}
 					NOT = {
 						has_global_flag = FRA_accepted
 					}
 				}
-			}			
+			}
 		}
 		x = 0
 		y = 2
@@ -20458,9 +20462,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			if = {
@@ -20470,7 +20474,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -20485,7 +20489,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -20500,7 +20504,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -20515,7 +20519,7 @@ focus_tree = {
 							has_government = communism
 						}
 					}
-				}	
+				}
 				GER = {
 					create_wargoal = {
 						type = puppet_wargoal_focus
@@ -20523,9 +20527,9 @@ focus_tree = {
 					}
 				}
 			}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ENG
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
 			}
 			add_threat = 10
 		}
@@ -20535,7 +20539,7 @@ focus_tree = {
 		icon = GFX_focus_attack_soviet
 		prerequisite = { focus = GER_red_eastern_europe }
 		will_lead_to_war_with = SOV
-#		will_lead_to_war_with = RUS
+		#		will_lead_to_war_with = RUS
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		available = {
 
@@ -20548,29 +20552,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-				IF = {
-					limit = {
-						country_exists = SOV
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = SOV
-					}	
+			IF = {
+				limit = {
+					country_exists = SOV
 				}
-#				IF = {
-#					limit = {
-#						country_exists = RUS
-#					}
-#					create_wargoal = {
-#						type = puppet_wargoal_focus
-#						target = RUS
-#					}	
-#				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SOV
+				}
+			}
+			#				IF = {
+			#					limit = {
+			#						country_exists = RUS
+			#					}
+			#					create_wargoal = {
+			#						type = puppet_wargoal_focus
+			#						target = RUS
+			#					}
+			#				}
 			add_threat = 10
 		}
 	}
@@ -20580,7 +20584,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = GER_red_europe }
 		prerequisite = { focus = GER_betrayed_october }
-		search_filters = { FOCUS_FILTER_POLITICAL }		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			OR = {
 				GER = { controls_state = 219 }
@@ -20605,9 +20609,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
 			add_ideas = GER_world_revolution_idea
@@ -20619,7 +20623,7 @@ focus_tree = {
 		id = GER_weltrepublic
 		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		prerequisite = { focus = GER_strike_at_the_heart_of_capitalism }
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		available = {
 
 		}
@@ -20631,12 +20635,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		
+
 		bypass = {
-			
+
 		}
 		completion_reward = {
-			unlock_decision_tooltip = GER_weltrepublik	
+			unlock_decision_tooltip = GER_weltrepublik
 			add_threat = 15
 		}
 	}
@@ -20655,10 +20659,10 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
-			NOT = { 
+			NOT = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
-					has_completed_focus = GER_a_shadow_of_past  
+					has_completed_focus = GER_a_shadow_of_past
 					has_global_flag = GER_DEFEAT_TREE
 				}
 			}
@@ -21618,7 +21622,7 @@ focus_tree = {
 					has_global_flag = GER_ALLOW_KAISER_CIVILWAR
 					has_completed_focus = GER_focus_on_the_true_enemy
 					has_global_flag = GER_DEFEAT_TREE
-				}	
+				}
 			}
 			NOT = {
 				has_completed_focus = GER_establish_abwehr
@@ -22601,11 +22605,11 @@ focus_tree = {
 		}
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
-			NOT = { 
+			NOT = {
 				OR = {
 					has_completed_focus = GER_establish_abwehr
-					has_completed_focus = GER_a_shadow_of_past 
-					has_global_flag = GER_DEFEAT_TREE 
+					has_completed_focus = GER_a_shadow_of_past
+					has_global_flag = GER_DEFEAT_TREE
 				}
 			}
 		}
@@ -22684,47 +22688,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_revange
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = {
-			focus = GER_the_monarchy_compromise
-		}
-		mutually_exclusive = {
-			focus = GER_the_great_red_menace
-		}
-		available = {
-			always = no
-			is_subject = no
-			has_war = no
-		}
-		allow_branch = {
-			has_dlc = "Waking the Tiger"
-			NOT = {
-				has_completed_focus = GER_the_great_red_menace
-			}
-			NOT = {
-				has_completed_focus = GER_establish_abwehr
-			}
-			NOT = {
-				has_completed_focus = GER_a_shadow_of_past
-			}
-			NOT = {
-				has_global_flag = GER_DEFEAT_TREE
-			}
-		}
-		cancel_if_invalid = yes
-		x = 3
-		y = 1
-		relative_position_id = GER_the_monarchy_compromise
-		cost = 10
-		ai_will_do = {
-			factor = 8
-		}
-		completion_reward = {
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	focus = {
 		id = GER_the_great_red_menace
 		icon = GFX_focus_ger_great_red_menace
 		prerequisite = {
@@ -22758,15 +22721,8 @@ focus_tree = {
 				has_global_flag = GER_DEFEAT_TREE
 			}
 		}
-		offset = {
-			x = -3
-			y = 0
-			trigger = {
-				has_completed_focus = GER_the_great_red_menace
-			}
-		}
 		cancel_if_invalid = yes
-		x = 8
+		x = 4
 		y = 1
 		relative_position_id = GER_the_monarchy_compromise
 		cost = 10
@@ -24372,7 +24328,7 @@ focus_tree = {
 							target = PREV
 							type = topple_government
 						}
-					}			
+					}
 				}
 			}
 		}

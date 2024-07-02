@@ -2,22 +2,6 @@
 #### GERMANY ####
 #################
 
-GER_vanilla_look = {
-	icon = GFX_decision_category_generic_propaganda
-
-	allowed = {
-		original_tag = GER
-	}
-
-	priority = 199
-
-	visible_when_empty = no
-
-	visible = {
-		NOT = { has_global_flag = GER_END_OF_VANILLA_LOOK }
-	}
-}
-
 GER_last_stand_of_germany = {
 
 	icon = GFX_decision_generic_intelligence_operation

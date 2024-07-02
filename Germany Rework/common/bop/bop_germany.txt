@@ -87,6 +87,12 @@ GER_power_balance = {
 						gfx = GFX_bop_GER_fuhrer_sobad_side
 					}
 				}
+				hidden_effect = {
+					set_country_leader_portrait = {
+						ideology = fascism
+						portrait = GFX_Portrait_Germany_Adolf_Hitler_health
+					}
+				}
 			}
 			on_deactivate = {
 			}

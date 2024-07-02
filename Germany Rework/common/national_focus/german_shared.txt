@@ -1785,6 +1785,9 @@ shared_focus = {
 			uses = 1
 			category = naval_doctrine
 		}
+		hidden_effect = {
+			remove_ideas = Landon_Treaty
+		}
 	}
 }
 
@@ -5617,7 +5620,7 @@ shared_focus = {
 						add_tech_bonus = {
 							name = armor_bonus
 							bonus = 1.0
-							uses = 2
+							uses = 1
 							category = armor
 						}
 					}

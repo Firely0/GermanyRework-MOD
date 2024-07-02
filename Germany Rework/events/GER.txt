@@ -4,29 +4,23 @@ add_namespace = GER_rhineland
 add_namespace = GER_rhineland_isolete
 add_namespace = GER_rhineland_remind_ger
 add_namespace = GER_rhineland_remind_fra
-
 # Health of Adolf Hitler
 add_namespace = GER_health_adolf
 add_namespace = ger_lost_core
 add_namespace = GER_new_leader
-
 # Victory is OURS!
 add_namespace = GER_rudolf_hess
 add_namespace = GER_Sign_Axis_Pact_event
 add_namespace = GER_force_anti_jewish
-
 # War with France.. #To Do Rework
 add_namespace = ger_around_maginot_event
-
 # Kaiser in Exile
 add_namespace = ger_kaiser_in_exile
 add_namespace = ger_fuhrer_end
-
 #Operation Barbarossa
 add_namespace = GER_fate_of_andrey
 add_namespace = GER_SOV_ultimatom
 add_namespace = GER_operations
-
 # the Axis
 add_namespace = GER_jap_coal_trade
 add_namespace = GER_CHI_Cooperation
@@ -42,17 +36,14 @@ add_namespace = ger_request_qingdao
 add_namespace = GER_Create_Afrika_Corps_event
 add_namespace = GER_ITA_HQ_LOC
 add_namespace = GER_spain_talks
-
 # Diplo with United Kingdom
 add_namespace = GER_eng_trade_agreement
 add_namespace = GER_eng_naval_agreement
-
 # Civil War/s
 add_namespace = GER_no_focus_ger_com_civilwar
 add_namespace = GER_no_focus_ger_com_adolf_retire
 add_namespace = GER_focus_civilwar
 add_namespace = GER_civil_war_end_fascm
-
 # Other
 add_namespace = gerb
 add_namespace = yalta_events
@@ -104,7 +95,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "No"
 		ai_chance = {
@@ -146,7 +136,6 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		name = "Prepare for War"
 		create_wargoal = {
@@ -179,10 +168,8 @@ country_event = {
 	desc = "According to the latest information from the Wehrmacht, [FROM.GetName] Army Begin Occupation of German Territories. Upon learning this information, Adolf Hitler had a nervous breakdown and immediately ordered the recapture of the lost territory."
 	picture = GFX_report_event_generic_soldiers_surrendering
 	is_triggered_only = yes
-
 	option = {
 		name = "We Will Together Again Soon.."
-
 		GER_bop_medium_decrease_effect = yes
 		GER_bop_increase_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
@@ -196,10 +183,8 @@ country_event = {
 	picture = GFX_report_event_german_troops
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = BBA_italy_bop.3.a
-
 		GER_bop_medium_increase_effect = yes
 		GER_bop_decrease_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_reclaiming_cores_tt
@@ -691,20 +676,15 @@ country_event = {
 	desc = gerb.80.d
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		name = "Keep Hjalmar Schacht"
-
 		ai_chance = {
 			factor = 100
 		}
-
 		add_ideas = hjalmar_schacht
 	}
-
 	option = {
 		name = "Appoint Walther Funk"
-
 		add_ideas = walther_funk
 	}
 }
@@ -715,14 +695,11 @@ country_event = {
 	desc = gerb.81.d
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine"
-
 		ai_chance = {
 			factor = 100
 		}
-
 		remove_ideas = hjalmar_schacht
 	}
 }
@@ -730,14 +707,12 @@ country_event = {
 country_event = {
 	id = gerb.82
 	fire_only_once = yes
-
 	hidden = yes
 	trigger = {
 		FRA = {
 			has_cosmetic_tag = FRA_FREE
 		}
 	}
-
 	immediate = {
 		GER_Vichy_state_modifier = yes
 	}
@@ -748,11 +723,9 @@ country_event = {
 	title = "Free City is Under Attack!"
 	desc = ""
 	picture = GFX_report_event_chinese_soldiers_fighting
-	is_triggered_only = yes # Triggered with on_actions
-
+	is_triggered_only = yes	# Triggered with on_actions
 	option = {
 		name = "We Must Honour the Agreement"
-
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -769,7 +742,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			if = {
 				limit = {
@@ -794,12 +766,9 @@ country_event = {
 				add_to_faction = ROOT
 			}
 		}
-
 	}
-
 	option = {
 		name = "There's nothing we can do."
-
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -816,24 +785,19 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			remove_ideas = league_of_nations_member_idea
 		}
-
 	}
-
 }
 
 country_event = {
 	id = gerb.84
 	fire_only_once = yes
 	hidden = yes
-
 	trigger = {
 		has_global_flag = GER_SOV_WHITE_PEACE_1
 	}
-
 	immediate = {
 		GER_SOV_white_peace_check = yes
 	}
@@ -842,16 +806,18 @@ country_event = {
 country_event = {
 	id = gerb.86
 	hidden = yes
-
 	trigger = {
 		has_country_flag = FRA_non_intervention_agreed
-		NOT = { has_country_flag = FRA_non_intervention_agreed_setup }
+		NOT = {
+			has_country_flag = FRA_non_intervention_agreed_setup
+		}
 	}
-
 	immediate = {
 		if = {
 			limit = {
-				ROOT = { tag = GER }
+				ROOT = {
+					tag = GER
+				}
 			}
 			every_state = {
 				limit = {
@@ -868,7 +834,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				ROOT = { tag = ENG }
+				ROOT = {
+					tag = ENG
+				}
 			}
 			every_state = {
 				limit = {
@@ -885,7 +853,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				ROOT = { tag = ITA }
+				ROOT = {
+					tag = ITA
+				}
 			}
 			every_state = {
 				limit = {
@@ -907,14 +877,14 @@ country_event = {
 	id = gerb.87
 	hidden = yes
 	fire_only_once = yes
-
 	trigger = {
 		has_global_flag = scw_over
 	}
-
 	immediate = {
 		every_state = {
-			remove_dynamic_modifier = { modifier = Non_intervention_dynamic_modifier }
+			remove_dynamic_modifier = {
+				modifier = Non_intervention_dynamic_modifier
+			}
 		}
 	}
 }
@@ -923,16 +893,16 @@ country_event = {
 	id = gerb.88
 	hidden = yes
 	fire_only_once = yes
-
 	trigger = {
 		original_tag = SPA
 		has_civil_war = yes
 		has_war_with_major = yes
 	}
-
 	immediate = {
 		every_state = {
-			remove_dynamic_modifier = { modifier = Non_intervention_dynamic_modifier }
+			remove_dynamic_modifier = {
+				modifier = Non_intervention_dynamic_modifier
+			}
 		}
 	}
 }
@@ -941,12 +911,10 @@ country_event = {
 	id = gerb.89
 	hidden = yes
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_completed_focus = FRA_intervention_in_spain
 	}
-
 	immediate = {
 		every_state = {
 			limit = {
@@ -965,17 +933,39 @@ country_event = {
 }
 
 country_event = {
+	id = gerb.90
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = GER
+		GER = {
+			GER_adolf_hitler = {
+				is_country_leader = yes
+			}
+		}
+		date > 1943.05.30
+	}
+
+	immediate = {
+		set_country_leader_portrait = {
+			ideology = fascism
+			portrait = GFX_Portrait_Germany_Adolf_Hitler_health
+		}
+	}
+}
+
+country_event = {
 	id = yalta_events.1
 	fire_only_once = yes
-
 	hidden = yes
 	trigger = {
 		SOV = {
 			has_country_flag = yalta_agreed_flag
-			NOT = { has_war_with = GER }
+			NOT = {
+				has_war_with = GER
+			}
 		}
 	}
-
 	immediate = {
 		FORCE_YALTA = yes
 		log = "Yalta Triggered"
@@ -986,9 +976,7 @@ country_event = {
 	id = yalta_events.2
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	hidden = yes
-
 	immediate = {
 		FORCE_YALTA = yes
 		log = "Yalta Triggered with Event"
@@ -1000,9 +988,8 @@ country_event = {
 	title = "Victory in Poland"
 	desc = "[Root.GetFrancedesc]"
 	picture = GFX_report_event_germany_victory
-	is_triggered_only = yes # Triggered with on_actions
+	is_triggered_only = yes	# Triggered with on_actions
 	fire_only_once = yes
-
 	immediate = {
 		hidden_effect = {
 			GER = {
@@ -1010,18 +997,17 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "Now it's France's turn.."
-
 		ai_chance = {
 			factor = 1
 		}
-
 		hidden_effect = {
-			country_event = { id = ger_around_maginot_event.2 hours = 3 }
+			country_event = {
+				id = ger_around_maginot_event.2
+				hours = 3
+			}
 		}
-
 	}
 }
 
@@ -1030,15 +1016,12 @@ country_event = {
 	title = "Plans for France"
 	desc = ger_around_maginot_event.2.d
 	picture = GFX_report_event_soldiers_marching
-	is_triggered_only = yes # Triggered with on_actions
+	is_triggered_only = yes	# Triggered with on_actions
 	fire_only_once = yes
-
 	immediate = {
 	}
-
 	option = {
 		name = "Erich von Manstein's Plan"
-
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -1046,10 +1029,11 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-
 		set_country_flag = GER_BLITZ
-		country_event = { id = ger_around_maginot_event.3 hours = 1 }
-
+		country_event = {
+			id = ger_around_maginot_event.3
+			hours = 1
+		}
 		hidden_effect = {
 			news_event = {
 				hours = 6
@@ -1057,10 +1041,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "Franz Halder`s Plan"
-
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -1068,10 +1050,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-
 		set_country_flag = GER_OLD_PLAN
 		complete_national_focus = GER_around_maginot
-
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1116,7 +1096,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			news_event = {
 				hours = 6
@@ -1124,7 +1103,6 @@ country_event = {
 			}
 		}
 	}
-
 }
 
 country_event = {
@@ -1132,21 +1110,17 @@ country_event = {
 	title = "Fall Gelb Ready to Launch"
 	desc = "After the plan against France has been agreed, our soldiers are waiting for orders to launch the operation. But before that, we must choose who will command the plan."
 	picture = GFX_report_event_military_planning
-	is_triggered_only = yes # Triggered with on_actions
+	is_triggered_only = yes	# Triggered with on_actions
 	fire_only_once = yes
-
 	option = {
 		name = "Erich von Manstein will command."
-
 		ai_chance = {
 			base = 5
 		}
-
 		GER_erich_von_manstein = {
 			promote_leader = yes
 			add_planning = 1
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_around_maginot
 			if = {
@@ -1245,12 +1219,9 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = "We don't have time for this."
-
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -1258,11 +1229,9 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-
 		GER_erich_von_manstein = {
 			add_planning = 1
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_around_maginot
 			if = {
@@ -1361,9 +1330,7 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 }
 
 country_event = {
@@ -1372,9 +1339,7 @@ country_event = {
 	desc = ger_kaiser_in_exile.1.d
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-
 	#Historical
-
 	option = {
 		name = ger_kaiser_in_exile.1.a
 		ai_chance = {
@@ -1384,13 +1349,11 @@ country_event = {
 			GER_bop_medium_increase_effect = yes
 		}
 	}
-
 	option = {
 		name = ger_kaiser_in_exile.1.b
 		ai_chance = {
 			factor = 0
 		}
-
 		if = {
 			limit = {
 				has_completed_focus = GER_anschluss
@@ -1401,10 +1364,16 @@ country_event = {
 			}
 			random_list = {
 				55 = {
-					country_event = { id = ger_kaiser_in_exile.2 days = 3 }
+					country_event = {
+						id = ger_kaiser_in_exile.2
+						days = 3
+					}
 				}
 				45 = {
-					country_event = { id = ger_kaiser_in_exile.3 days = 3 }
+					country_event = {
+						id = ger_kaiser_in_exile.3
+						days = 3
+					}
 				}
 			}
 		}
@@ -1412,15 +1381,20 @@ country_event = {
 			GER = {
 				random_list = {
 					50 = {
-						country_event = { id = ger_kaiser_in_exile.2 days = 3 }
+						country_event = {
+							id = ger_kaiser_in_exile.2
+							days = 3
+						}
 					}
 					50 = {
-						country_event = { id = ger_kaiser_in_exile.3 days = 3 }
+						country_event = {
+							id = ger_kaiser_in_exile.3
+							days = 3
+						}
 					}
 				}
 			}
 		}
-
 	}
 }
 
@@ -1430,16 +1404,18 @@ country_event = {
 	desc = "In a long conversation between Wilhelm II and Hermann Goring, Wilhelm II told Goring what he did not like about the regime and what needed to be done better. Goring says that the talks were fruitful and that Wilhelm was sincere."
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-
 	option = {
 		name = "Send Official Notice to the Netherlands for his Return."
 		ai_chance = {
 			factor = 100
 		}
-
-		HOL = { country_event = { id = ger_kaiser_in_exile.4 hours = 12 } }
+		HOL = {
+			country_event = {
+				id = ger_kaiser_in_exile.4
+				hours = 12
+			}
+		}
 	}
-
 	option = {
 		name = "All right. Let him know we're listening to his opinion."
 		ai_chance = {
@@ -1454,7 +1430,6 @@ country_event = {
 	desc = "The Dutch troops assigned to protect Wilhelm II did not allow Goring to see him. Probably Wilhelm told them not to let him in."
 	picture = GFX_report_event_generic_sign_treaty1
 	is_triggered_only = yes
-
 	option = {
 		name = "That Poor Fool."
 		ai_chance = {
@@ -1472,26 +1447,34 @@ country_event = {
 	desc = "In an unexpected announcement in the morning, Germany demands the extradition of Wilhelm II. With Britain and France remaining silent, our politicians suggest that we should extradite him without causing any trouble."
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "Start the Return Process"
 		ai_chance = {
 			factor = 80
 		}
-
-		GER = { country_event = { id = ger_kaiser_in_exile.6 hours = 12 } }
+		GER = {
+			country_event = {
+				id = ger_kaiser_in_exile.6
+				hours = 12
+			}
+		}
 	}
-
 	option = {
 		name = "No way!"
 		ai_chance = {
 			factor = 20
 		}
-
-		GER = { country_event = { id = ger_kaiser_in_exile.5 hours = 12 } }
-
+		GER = {
+			country_event = {
+				id = ger_kaiser_in_exile.5
+				hours = 12
+			}
+		}
 		hidden_effect = {
-			news_event = { id = ger_f_news.1 hours = 6 }
+			news_event = {
+				id = ger_f_news.1
+				hours = 6
+			}
 		}
 	}
 }
@@ -1502,13 +1485,11 @@ country_event = {
 	desc = "After the notification reached the Dutch government, the Netherlands stated that they would never give Wilhelm II back."
 	picture = GFX_report_event_soldiers_marching
 	is_triggered_only = yes
-
 	option = {
 		name = "Then fight!"
 		ai_chance = {
 			factor = 100
 		}
-
 		set_global_flag = GER_BLOCKED_KAISER
 		declare_war_on = {
 			target = HOL
@@ -1524,34 +1505,28 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "We will take care of you later"
-
 		ai_chance = {
 			factor = 0
 		}
-
 		set_global_flag = GER_BLOCKED_KAISER
 	}
 }
 
 country_event = {
-	id = ger_kaiser_in_exile.6 #Kaiser Return
+	id = ger_kaiser_in_exile.6	#Kaiser Return
 	title = "Netherlands Approved Our Request."
 	desc = "The Netherlands has started the extradition process. Wilhelm II will soon be on the German border."
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "Good News"
 		ai_chance = {
 			factor = 100
 		}
-
 		custom_effect_tooltip = GER_Wilhelm_II_back_tt
 		set_country_flag = GER_Kaiser_in_Country
-
 		hidden_effect = {
 			GER = {
 				add_ideas = Kaiser_Idea
@@ -1582,29 +1557,28 @@ country_event = {
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
-
 		hidden_effect = {
-			news_event = { id = ger_f_news.2 hours = 5 }
+			news_event = {
+				id = ger_f_news.2
+				hours = 5
+			}
 		}
 	}
 }
 
 country_event = {
-	id = ger_kaiser_in_exile.7 #Kaiser Return with WAR
+	id = ger_kaiser_in_exile.7	#Kaiser Return with WAR
 	title = "Wilhelm Returns to Germany"
 	desc = "With the conclusion of the war in the Netherlands, our soldiers safely brought Wilhelm II back to our country."
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "Good News"
 		ai_chance = {
 			factor = 100
 		}
-
 		custom_effect_tooltip = GER_Wilhelm_II_back_tt
 		set_country_flag = GER_Kaiser_in_Country
-
 		hidden_effect = {
 			GER = {
 				add_ideas = Kaiser_Idea
@@ -1635,9 +1609,11 @@ country_event = {
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
-
 		hidden_effect = {
-			news_event = { id = ger_f_news.3 hours = 5 }
+			news_event = {
+				id = ger_f_news.3
+				hours = 5
+			}
 		}
 	}
 }
@@ -1648,18 +1624,15 @@ country_event = {
 	desc = "In the ongoing civil war in Germany, Wilhelm is asking for our support to end the war. Although the Queen has stated that we should prepare to enter the war, the final decision is up to us"
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "There is a war to be won"
 		ai_chance = {
 			factor = 100
 		}
-
 		HOL = {
 			add_war_support = 0.1
 			HOL_shell_shocked_spectator_level_down = yes
 		}
-
 		hidden_effect = {
 			GER = {
 				country_event = ger_kaiser_in_exile.9
@@ -1699,16 +1672,14 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "No"
-
 		add_war_support = -0.1
-
 		hidden_effect = {
-			GER = { country_event = ger_kaiser_in_exile.10 }
+			GER = {
+				country_event = ger_kaiser_in_exile.10
+			}
 		}
-
 		ai_chance = {
 			factor = 0
 		}
@@ -1721,13 +1692,11 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "There is a war to be won"
 		ai_chance = {
 			factor = 100
 		}
-
 		effect_tooltip = {
 			HOL = {
 				add_war_support = 0.1
@@ -1739,7 +1708,6 @@ country_event = {
 				HOL_shell_shocked_spectator_level_down = yes
 			}
 		}
-
 	}
 }
 
@@ -1749,7 +1717,6 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_czech_soldiers_01
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine.."
 		ai_chance = {
@@ -1763,30 +1730,32 @@ country_event = {
 	title = "Germany Offers Support For Coup"
 	desc = ""
 	picture = GFX_report_event_french_resistance_02
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
-
 		GER = {
-			country_event = { id = ger_kaiser_in_exile.12 days = 1 random_days = 2 }
+			country_event = {
+				id = ger_kaiser_in_exile.12
+				days = 1
+				random_days = 2
+			}
 		}
 	}
-
 	option = {
 		name = "No"
 		ai_chance = {
 			factor = 0
 		}
-
 		GER = {
-			country_event = { id = ger_kaiser_in_exile.13 days = 1 random_days = 2 }
+			country_event = {
+				id = ger_kaiser_in_exile.13
+				days = 1
+				random_days = 2
+			}
 		}
-
 		hidden_effect = {
 			GER = {
 				set_country_flag = GER_italy_declined_assassination_of_mussolini_flag
@@ -1800,12 +1769,9 @@ country_event = {
 	title = wtt_germany.9.t
 	desc = "Elements in the Italian government and underground have accepted our proposal for a coup. They are making preparations for a swift siezure of power, as soon as the assassination has happened."
 	picture = GFX_report_event_french_resistance_02
-
 	is_triggered_only = yes
-
 	option = {
 		name = wtt_germany.9.a
-
 		hidden_effect = {
 			GER = {
 				set_autonomy = {
@@ -1817,7 +1783,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					ITA = { has_completed_focus = ITA_culto_del_duce }
+					ITA = {
+						has_completed_focus = ITA_culto_del_duce
+					}
 				}
 				ITA = {
 					uncomplete_national_focus = {
@@ -1834,7 +1802,10 @@ country_event = {
 					}
 					complete_national_focus = ITA_power_to_the_king
 					complete_national_focus = ITA_seek_papal_support
-					country_event = { id = BBA_italy_interaction_events.38 hours = 1 }
+					country_event = {
+						id = BBA_italy_interaction_events.38
+						hours = 1
+					}
 					complete_national_focus = ITA_agents_of_the_church
 					complete_national_focus = ITA_strengthen_the_papacy
 					complete_national_focus = ITA_the_papacy_reborn
@@ -1842,7 +1813,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					ITA = { has_completed_focus = ITA_convene_the_grand_council }
+					ITA = {
+						has_completed_focus = ITA_convene_the_grand_council
+					}
 					OR = {
 						has_completed_focus = ITA_italo_balbo_focus
 						has_completed_focus = ITA_dino_grandi_focus
@@ -1877,7 +1850,10 @@ country_event = {
 					}
 					complete_national_focus = ITA_power_to_the_king
 					complete_national_focus = ITA_seek_papal_support
-					country_event = { id = BBA_italy_interaction_events.38 hours = 1 }
+					country_event = {
+						id = BBA_italy_interaction_events.38
+						hours = 1
+					}
 				}
 			}
 		}
@@ -1889,9 +1865,7 @@ country_event = {
 	title = wtt_germany.10.t
 	desc = wtt_germany.10.d
 	picture = GFX_report_event_french_resistance_02
-
 	is_triggered_only = yes
-
 	option = {
 		name = wtt_germany.10.a
 	}
@@ -2151,16 +2125,24 @@ country_event = {
 			}
 		}
 		name = "Italy"
-
-		ITA = {country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }}
+		ITA = {
+			country_event = {
+				id = GER_ETH_ITA_Interve.2
+				hours = 6
+			}
+		}
 	}
 	option = {
 		ai_chance = {
 			factor = 50
 		}
 		name = "Etihopia"
-
-		ETH = {country_event = { id = GER_ETH_ITA_Interve.2 hours = 6 }}
+		ETH = {
+			country_event = {
+				id = GER_ETH_ITA_Interve.2
+				hours = 6
+			}
+		}
 	}
 }
 
@@ -2175,9 +2157,10 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
-		add_timed_idea = { idea = ITA_ETH_German_Generals days = 365 }
-
+		add_timed_idea = {
+			idea = ITA_ETH_German_Generals
+			days = 365
+		}
 	}
 	option = {
 		ai_chance = {
@@ -2240,16 +2223,24 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
 		hidden_effect = {
 			GER = {
 				give_guarantee = SWE
 			}
 			SWE = {
 				add_ideas = GER_Trade_with_Sweden_SWE
-				add_offsite_building = { type = industrial_complex level = 2 }
-				add_offsite_building = { type = arms_factory level = 1 }
-				give_resource_rights = { receiver = GER state = 666 }
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+				give_resource_rights = {
+					receiver = GER
+					state = 666
+				}
 			}
 			set_global_flag = GER_Swe_Trade
 		}
@@ -2559,7 +2550,6 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 100
@@ -2597,7 +2587,6 @@ country_event = {
 			set_global_flag = GER_Fin_help_y
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
@@ -2649,7 +2638,6 @@ country_event = {
 	desc = "Germany wants us to join war Against Soviet Union!, They Promised Give our Lost Land Back to us"
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 60
@@ -2680,7 +2668,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 40
@@ -2709,7 +2696,6 @@ country_event = {
 			factor = 100
 		}
 		name = "Good."
-
 		hidden_effect = {
 			146 = {
 				set_state_flag = GER_FIN_granted_lands_state
@@ -2743,10 +2729,9 @@ country_event = {
 	title = "Request from Finland"
 	desc = "Finland Request Control of Their Pre-Winter War lands."
 	picture = GFX_report_event_finnish_soldiers_snow
-
 	is_triggered_only = yes
-
-	immediate = { # Transfer State and Stop.
+	immediate = {
+		# Transfer State and Stop.
 		hidden_effect = {
 			every_state = {
 				limit = {
@@ -2755,7 +2740,9 @@ country_event = {
 						is_controlled_by = GER
 						controller = {
 							is_in_faction_with = GER
-							NOT = { tag = FIN }
+							NOT = {
+								tag = FIN
+							}
 						}
 					}
 				}
@@ -2768,7 +2755,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "Fine"
 		ai_chance = {
@@ -2805,7 +2791,6 @@ country_event = {
 	desc = "What Should We Do With Andrey Vlasov?"
 	picture = GFX_report_event_german_italian_pact
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 100
@@ -2813,7 +2798,9 @@ country_event = {
 		name = "Any ally against Bolshevism is welcome."
 		clr_country_flag = vlasov_in_ss_flag
 		SOV = {
-			SOV_andrey_vlasov = { set_nationality = GER }
+			SOV_andrey_vlasov = {
+				set_nationality = GER
+			}
 		}
 		SOV_andrey_vlasov = {
 			add_trait = {
@@ -2821,7 +2808,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
@@ -2842,24 +2828,26 @@ country_event = {
 			factor = 60
 		}
 		name = "Fine, They Cause Problem Anyway."
-
 		GER = {
-			country_event = { id = GER_VIC_Syria.2 hours = 6 }
+			country_event = {
+				id = GER_VIC_Syria.2
+				hours = 6
+			}
 		}
-
 	}
 	option = {
 		ai_chance = {
 			factor = 40
 		}
 		name = "No"
-
 		GER = {
-			country_event = { id = GER_VIC_Syria.3 hours = 6 }
+			country_event = {
+				id = GER_VIC_Syria.3
+				hours = 6
+			}
 		}
 	}
 }
-
 
 country_event = {
 	id = GER_VIC_Syria.2
@@ -2872,7 +2860,6 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
 		hidden_effect = {
 			GER = {
 				set_state_owner = 677
@@ -2909,13 +2896,17 @@ country_event = {
 			factor = 80
 		}
 		name = "Better Than Nothing."
-
 		GER = {
-			country_event = { id = GER_offer_support_irq.2 hours = 3 }
+			country_event = {
+				id = GER_offer_support_irq.2
+				hours = 3
+			}
 		}
-
 		ENG = {
-			country_event = { id = GER_offer_support_irq.4 hours = 3 }
+			country_event = {
+				id = GER_offer_support_irq.4
+				hours = 3
+			}
 		}
 	}
 	option = {
@@ -2923,9 +2914,11 @@ country_event = {
 			factor = 20
 		}
 		name = "No"
-
 		GER = {
-			country_event = { id = GER_offer_support_irq.3 hours = 3 }
+			country_event = {
+				id = GER_offer_support_irq.3
+				hours = 3
+			}
 		}
 	}
 }
@@ -2941,11 +2934,14 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
 		hidden_effect = {
 			give_guarantee = IRQ
-			ENG = { remove_resource_rights = 676 }
-			ENG = { remove_resource_rights = 291 }
+			ENG = {
+				remove_resource_rights = 676
+			}
+			ENG = {
+				remove_resource_rights = 291
+			}
 			IRQ = {
 				add_ai_strategy = {
 					type = alliance
@@ -2959,11 +2955,12 @@ country_event = {
 				give_resource_rights = {
 					receiver = GER
 					state = 676
-					resources = { oil }
+					resources = {
+						oil
+					}
 				}
 			}
 		}
-
 	}
 }
 
@@ -2992,22 +2989,18 @@ country_event = {
 			factor = 20
 		}
 		name = "Prepare for War!"
-
 		create_wargoal = {
 			target = IRQ
 			type = puppet_wargoal_focus
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 80
 		}
 		name = "We Will Deal With Them Later."
-
 		add_state_claim = 676
 		add_state_claim = 291
-
 	}
 }
 
@@ -3022,26 +3015,28 @@ country_event = {
 			factor = 60
 		}
 		name = "Fine"
-
 		GER = {
-			country_event = { id = GER_jap_coal_trade.2 hours = 6 }
+			country_event = {
+				id = GER_jap_coal_trade.2
+				hours = 6
+			}
 		}
-
 		add_tech_bonus = {
-			bonus = 1.0
+			bonus = 1
 			uses = 2
 			category = synth_resources
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 40
 		}
 		name = "No"
-
 		GER = {
-			country_event = { id = GER_jap_coal_trade.3 hours = 6 }
+			country_event = {
+				id = GER_jap_coal_trade.3
+				hours = 6
+			}
 		}
 	}
 }
@@ -3057,8 +3052,9 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
-		add_to_variable = { GER_navy_carrier_air_agility_factor = 0.1 }
+		add_to_variable = {
+			GER_navy_carrier_air_agility_factor = 0.1
+		}
 	}
 }
 
@@ -3082,17 +3078,17 @@ country_event = {
 	desc = "They want to do some of their production here, they will give economic support in return. In addition, we can learn about certain things.."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 60
 		}
 		name = "Fine"
-
 		GER = {
-			country_event = { id = GER_CHI_Cooperation.2 hours = 6 }
+			country_event = {
+				id = GER_CHI_Cooperation.2
+				hours = 6
+			}
 		}
-
 		if = {
 			limit = {
 				has_global_flag = GER_INF_REQ
@@ -3105,22 +3101,22 @@ country_event = {
 			}
 			add_ideas = CHI_tank_production_lines
 		}
-
 		add_ai_strategy = {
 			type = befriend
 			id = GER
 			value = 300
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 40
 		}
 		name = "No"
-
 		GER = {
-			country_event = { id = GER_CHI_Cooperation.3 hours = 6 }
+			country_event = {
+				id = GER_CHI_Cooperation.3
+				hours = 6
+			}
 		}
 	}
 }
@@ -3136,7 +3132,6 @@ country_event = {
 			factor = 100
 		}
 		name = "Good"
-
 		if = {
 			limit = {
 				has_global_flag = GER_INF_REQ
@@ -3172,8 +3167,8 @@ country_event = {
 	desc = "After Reaching Our Goals We Must Decide Fate of Soviet Union."
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
-
-	option = { #Japan
+	option = {
+		#Japan
 		name = "Grant Japan Claims"
 		ai_chance = {
 			base = 0
@@ -3185,28 +3180,28 @@ country_event = {
 				}
 			}
 		}
-
 		trigger = {
 			has_completed_focus = GER_japan_friend
 		}
-
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		country_event = {
+			id = GER_SOV_ultimatom.1
+			hours = 1
+		}
 		set_country_flag = GER_SOV_JAP_Demanded
-
 	}
-
-	option = { #Finland
+	option = {
+		#Finland
 		name = "We Must Keep our Promise"
-
 		trigger = {
 			FIN = {
 				is_in_faction_with = GER
 				has_war_with = SOV
 			}
 			has_global_flag = GER_FIN_granted_lands
-			NOT = { has_country_flag = GER_SOV_FIN_Demanded }
+			NOT = {
+				has_country_flag = GER_SOV_FIN_Demanded
+			}
 		}
-
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -3217,22 +3212,24 @@ country_event = {
 				}
 			}
 		}
-
 		set_country_flag = GER_SOV_FIN_Demanded
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		country_event = {
+			id = GER_SOV_ultimatom.1
+			hours = 1
+		}
 	}
-
-	option = { #Romania
+	option = {
+		#Romania
 		name = "Maybe Romania Wants Their Pre-War Borders "
-
 		trigger = {
 			ROM = {
 				is_in_faction_with = GER
 				has_war_with = SOV
 			}
-			NOT = { has_country_flag = GER_SOV_ROM_Demanded }
+			NOT = {
+				has_country_flag = GER_SOV_ROM_Demanded
+			}
 		}
-
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -3243,14 +3240,15 @@ country_event = {
 				}
 			}
 		}
-
 		set_country_flag = GER_SOV_ROM_Demanded
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		country_event = {
+			id = GER_SOV_ultimatom.1
+			hours = 1
+		}
 	}
-
-	option = { #Turkey
+	option = {
+		#Turkey
 		name = "Let's Give Turkey's Requests."
-
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -3261,7 +3259,6 @@ country_event = {
 				}
 			}
 		}
-
 		trigger = {
 			TUR = {
 				OR = {
@@ -3270,14 +3267,18 @@ country_event = {
 				}
 				has_war_with = SOV
 			}
-			NOT = { has_country_flag = GER_SOV_TUR_Demanded }
+			NOT = {
+				has_country_flag = GER_SOV_TUR_Demanded
+			}
 		}
-
 		set_country_flag = GER_SOV_TUR_Demanded
-		country_event = { id = GER_SOV_ultimatom.1 hours = 1 }
+		country_event = {
+			id = GER_SOV_ultimatom.1
+			hours = 1
+		}
 	}
-
-	option = { #END
+	option = {
+		#END
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -3291,12 +3292,13 @@ country_event = {
 			}
 		}
 		name = "We Should Sent Our Demands."
-
 		SOV = {
-			country_event = { id = GER_SOV_ultimatom.2 hours = 3 }
+			country_event = {
+				id = GER_SOV_ultimatom.2
+				hours = 3
+			}
 		}
 	}
-
 }
 
 country_event = {
@@ -3305,51 +3307,60 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine, "
 		ai_chance = {
 			base = 40
 			modifier = {
-				NOT = { has_completed_focus = SOV_desperate_measures }
+				NOT = {
+					has_completed_focus = SOV_desperate_measures
+				}
 				factor = 100
 			}
 			modifier = {
-				surrender_progress > 0.40
+				surrender_progress > 0.4
 				factor = 60
 			}
 			modifier = {
-				GER = { is_ai = yes }
+				GER = {
+					is_ai = yes
+				}
 				factor = 100
 			}
 		}
-
 		GER = {
-			country_event = { id = GER_SOV_ultimatom.3 hours = 12 }
+			country_event = {
+				id = GER_SOV_ultimatom.3
+				hours = 12
+			}
 		}
-
 	}
-
 	option = {
 		ai_chance = {
 			factor = 60
 			modifier = {
-				NOT = { has_completed_focus = SOV_desperate_measures }
+				NOT = {
+					has_completed_focus = SOV_desperate_measures
+				}
 				factor = 0
 			}
 			modifier = {
-				surrender_progress < 0.40
+				surrender_progress < 0.4
 				factor = 60
 			}
 			modifier = {
-				GER = { is_ai = yes }
+				GER = {
+					is_ai = yes
+				}
 				factor = 0
 			}
 		}
 		name = "No! We Keep Our Homeland!"
-
 		GER = {
-			country_event = { id = GER_SOV_ultimatom.4 hours = 12 }
+			country_event = {
+				id = GER_SOV_ultimatom.4
+				hours = 12
+			}
 		}
 	}
 }
@@ -3360,33 +3371,32 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			base = 100
 		}
 		name = "Good"
-
 		if = {
 			limit = {
 				has_country_flag = GER_SOV_Demanded
 			}
 			GER_Lands_in_Soviet = yes
 		}
-
 		if = {
 			limit = {
 				has_country_flag = GER_SOV_JAP_Demanded
 				JAP = {
-					NOT = { has_war_with = GER }
+					NOT = {
+						has_war_with = GER
+					}
 					is_in_faction_with = GER
 					has_war_with = SOV
 				}
 			}
 			JAP_Lands_in_Soviet = yes
 		}
-
-		if = { # via German Focus
+		if = {
+			# via German Focus
 			limit = {
 				has_country_flag = GER_SOV_FIN_Demanded
 				FIN = {
@@ -3396,18 +3406,24 @@ country_event = {
 			}
 			FIN_Lands_in_Soviet = yes
 		}
-
-		if = { # via Finland Focus
+		if = {
+			# via Finland Focus
 			limit = {
 				FIN = {
-					NOT = { has_war_with = GER }
+					NOT = {
+						has_war_with = GER
+					}
 					has_war_with = SOV
 					has_completed_focus = FIN_cooperation_with_germany
 				}
 			}
-			FIN = { country_event = { id = GER_SOV_ultimatom.5 hours = 8 } }
+			FIN = {
+				country_event = {
+					id = GER_SOV_ultimatom.5
+					hours = 8
+				}
+			}
 		}
-
 		if = {
 			limit = {
 				has_country_flag = GER_SOV_ROM_Demanded
@@ -3418,7 +3434,6 @@ country_event = {
 			}
 			ROM_Lands_in_Soviet = yes
 		}
-
 		if = {
 			limit = {
 				has_country_flag = GER_SOV_TUR_Demanded
@@ -3429,7 +3444,6 @@ country_event = {
 			}
 			TUR_Lands_in_Soviet = yes
 		}
-
 		hidden_effect = {
 			add_threat = 50
 			SOV = {
@@ -3441,7 +3455,6 @@ country_event = {
 			}
 			set_global_flag = SOV_Keep_peace_with_GER
 		}
-
 		GER = {
 			start_peace_conference = {
 				tag = SOV
@@ -3449,7 +3462,6 @@ country_event = {
 				message = ger_sov_treaty_in_berlin
 			}
 		}
-
 	}
 }
 
@@ -3459,7 +3471,6 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			base = 100
@@ -3474,20 +3485,18 @@ country_event = {
 	desc = "After the agreement between Germany and the Soviet Union, it was our turn to make peace. Although the Germans guaranteed us the territory of Greater Finland, they said they would not give up the territory they already controlled."
 	picture = GFX_report_event_FIN_finnish_german_pact
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			base = 100
 		}
 		name = "Deal is Deal"
-
 		hidden_effect = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 146 #Re-gain Lose Ter.
-						state = 147 #Re-gain Lose Ter.
-						state = 722 #Re-gain Lose Ter.
+						state = 146						#Re-gain Lose Ter.
+						state = 147						#Re-gain Lose Ter.
+						state = 722						#Re-gain Lose Ter.
 						state = 213
 						state = 215
 						state = 216
@@ -3508,7 +3517,6 @@ country_event = {
 			white_peace = SOV
 		}
 	}
-
 	option = {
 		ai_chance = {
 			base = 0
@@ -3523,7 +3531,6 @@ country_event = {
 	desc = "Our Soldiers Have Seen German Soldiers in the Rhineland and are Standing for Possible Intervention."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 50
@@ -3533,26 +3540,27 @@ country_event = {
 			}
 		}
 		name = "Not a Significant Problem."
-
 		set_global_flag = GER_RH_N_NP
 		hidden_effect = {
-			GER = { army_experience = 5 }
+			GER = {
+				army_experience = 5
+			}
 		}
-
 	}
 	option = {
 		ai_chance = {
 			factor = 50
 		}
 		name = "The British Should Be Aware Of This Situation"
-
-		ENG = { country_event = { id = GER_rhineland_n.2 hours = 6 } }
-
+		ENG = {
+			country_event = {
+				id = GER_rhineland_n.2
+				hours = 6
+			}
+		}
 		add_war_support = 0.05
-
 		add_stability = -0.05
 		add_political_power = -25
-
 	}
 }
 
@@ -3562,45 +3570,48 @@ country_event = {
 	desc = "France informed us that German soldiers appeared within the borders of the Rhineland and France Seeks Support for a Joint Response."
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
 	option = {
 		ai_chance = {
 			factor = 50
 			modifier = {
 				is_historical_focus_on = yes
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 100
 			}
 		}
 		name = "To Keep the Peace, We Must Prepare for Possible War."
-
-		FRA = { country_event = { id = GER_rhineland_n.4 hours = 6 } }
-
+		FRA = {
+			country_event = {
+				id = GER_rhineland_n.4
+				hours = 6
+			}
+		}
 		add_war_support = 0.1
-
 		add_stability = -0.15
 		add_political_power = -100
-
 	}
-
 	option = {
 		ai_chance = {
 			factor = 50
 			modifier = {
 				is_historical_focus_on = yes
-				FRA = { is_ai = yes }
+				FRA = {
+					is_ai = yes
+				}
 				factor = 100
 			}
 		}
-
 		name = "Not a Significant Problem."
-
 		add_stability = 0.05
-
-		FRA = { country_event = { id = GER_rhineland_n.3 hours = 6 } }
-
+		FRA = {
+			country_event = {
+				id = GER_rhineland_n.3
+				hours = 6
+			}
+		}
 	}
-
 }
 
 country_event = {
@@ -3614,23 +3625,19 @@ country_event = {
 			factor = 100
 		}
 		name = "We Must be back down "
-
 		set_global_flag = GER_RH_N_NP
-
 		hidden_effect = {
-			GER = { army_experience = 5 }
+			GER = {
+				army_experience = 5
+			}
 		}
-
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
 		}
 		name = "Let's Take Necessary Measures Against Germany"
-
 		set_global_flag = GER_NO_WAR
-
 		add_stability = 0.05
 		add_political_power = -5
 		send_embargo = GER
@@ -3638,22 +3645,20 @@ country_event = {
 			target = GER
 			modifier = protest_action
 		}
-
 		set_global_flag = GER_RH_N_NP
 		set_global_flag = FRA_RHINELAND_CUT_TRADE
 		hidden_effect = {
-			GER = { army_experience = 5 }
+			GER = {
+				army_experience = 5
+			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
 		}
 		name = "We Can Lead This War Alone."
-
 		add_stability = -0.1
-
 		ENG = {
 			add_ai_strategy = {
 				type = alliance
@@ -3661,25 +3666,25 @@ country_event = {
 				value = -20
 			}
 		}
-
 		declare_war_on = {
 			target = GER
 		}
-
 		FRA = {
 			add_stability = -0.1
 			add_war_support = 0.1
 			add_political_power = -100
 		}
-
 		hidden_effect = {
-			GER = { army_experience = 5 }
+			GER = {
+				army_experience = 5
+			}
 		}
-
 		if = {
 			limit = {
 				has_idea = FRA_disjointed_government
-				NOT = { has_government = communism }
+				NOT = {
+					has_government = communism
+				}
 			}
 			custom_effect_tooltip = germany.60.a.tt
 			effect_tooltip = {
@@ -3689,8 +3694,8 @@ country_event = {
 				}
 			}
 		}
-
-		if = { #you're not getting around that, comrade
+		if = {
+			#you're not getting around that, comrade
 			limit = {
 				has_idea = FRA_disjointed_government
 				has_government = communism
@@ -3703,7 +3708,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 }
 
@@ -3718,7 +3722,6 @@ country_event = {
 			factor = 0
 		}
 		name = "We Must Prepare for the Inevitable War!"
-
 		FRA = {
 			add_stability = -0.1
 			add_political_power = -100
@@ -3726,11 +3729,12 @@ country_event = {
 				target = GER
 			}
 		}
-
 		if = {
 			limit = {
 				has_idea = FRA_disjointed_government
-				NOT = { has_government = communism }
+				NOT = {
+					has_government = communism
+				}
 			}
 			custom_effect_tooltip = germany.60.a.tt
 			effect_tooltip = {
@@ -3740,8 +3744,8 @@ country_event = {
 				}
 			}
 		}
-
-		if = { #you're not getting around that, comrade
+		if = {
+			#you're not getting around that, comrade
 			limit = {
 				has_idea = FRA_disjointed_government
 				has_government = communism
@@ -3754,7 +3758,6 @@ country_event = {
 				}
 			}
 		}
-
 		ENG = {
 			add_to_faction = FRA
 			add_stability = -0.1
@@ -3763,17 +3766,13 @@ country_event = {
 				target = GER
 			}
 		}
-
 	}
-
 	option = {
 		ai_chance = {
 			factor = 100
 		}
 		name = "Let's Take Necessary Measures Against Germany"
-
 		set_global_flag = GER_NO_WAR
-
 		add_stability = 0.05
 		add_political_power = -5
 		send_embargo = GER
@@ -3781,7 +3780,6 @@ country_event = {
 			target = GER
 			modifier = protest_action
 		}
-
 		ENG = {
 			add_to_faction = FRA
 			add_stability = 0.05
@@ -3792,22 +3790,20 @@ country_event = {
 				modifier = protest_action
 			}
 		}
-
 		set_global_flag = GER_RH_N_NP
 		set_global_flag = FRA_RHINELAND_CUT_TRADE
-
 	}
 }
 
-country_event = { #Event For France
+country_event = {
+	#Event For France
 	id = GER_rhineland.1
 	title = "German Troops Enter Rhineland!"
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 99
@@ -3816,20 +3812,27 @@ country_event = { #Event For France
 				factor = 0
 			}
 		}
-		ENG = { country_event = { id = GER_rhineland.3 hours = 3 } }
-		add_opinion_modifier = { target = GER modifier = protest_action }
+		ENG = {
+			country_event = {
+				id = GER_rhineland.3
+				hours = 3
+			}
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 	}
-
 	option = {
 		name = "We Should Cut Trades With Germany"
 		ai_chance = {
 			factor = 0
 		}
-
 		trigger = {
-			NOT = { has_global_flag = FRA_RHINELAND_CUT_TRADE }
+			NOT = {
+				has_global_flag = FRA_RHINELAND_CUT_TRADE
+			}
 		}
-
 		add_stability = 0.05
 		add_political_power = -5
 		send_embargo = GER
@@ -3838,12 +3841,18 @@ country_event = { #Event For France
 			modifier = protest_action
 		}
 		set_global_flag = FRA_RHINELAND_CUT_TRADE
-
 		if = {
 			limit = {
-				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+				NOT = {
+					has_global_flag = GER_FRA_ENG_ENG_SAID_NO
+				}
 			}
-			ENG = { country_event = { id = GER_rhineland.4 hours = 3 } }
+			ENG = {
+				country_event = {
+					id = GER_rhineland.4
+					hours = 3
+				}
+			}
 			effect_tooltip = {
 				ENG = {
 					custom_effect_tooltip = needs_approval
@@ -3859,23 +3868,24 @@ country_event = { #Event For France
 			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
-			NOT = { has_global_flag = FRA_RHINELAND_SEC_OF_BEN }
+			NOT = {
+				has_global_flag = FRA_RHINELAND_SEC_OF_BEN
+			}
 		}
 		name = "We Must Ensure the Security of Benelux."
-
 		set_global_flag = FRA_RHINELAND_SEC_OF_BEN
-
 		HOL = {
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -3890,7 +3900,9 @@ country_event = { #Event For France
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -3905,7 +3917,9 @@ country_event = { #Event For France
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -3916,12 +3930,18 @@ country_event = { #Event For France
 				}
 			}
 		}
-
 		if = {
 			limit = {
-				NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+				NOT = {
+					has_global_flag = GER_FRA_ENG_ENG_SAID_NO
+				}
 			}
-			ENG = { country_event = { id = GER_rhineland.5 hours = 3 } }
+			ENG = {
+				country_event = {
+					id = GER_rhineland.5
+					hours = 3
+				}
+			}
 			effect_tooltip = {
 				ENG = {
 					custom_effect_tooltip = needs_approval
@@ -3945,65 +3965,77 @@ country_event = { #Event For France
 			}
 		}
 	}
-
 	option = {
 		name = "We Always Have Other Ways"
 		ai_chance = {
 			factor = 0
 		}
-		country_event = { id = GER_rhineland.2 }
+		country_event = {
+			id = GER_rhineland.2
+		}
 		add_political_power = -5
 	}
 }
 
-country_event = { #Event For France / Not Diplo Side
+country_event = {
+	#Event For France / Not Diplo Side
 	id = GER_rhineland.2
 	title = "German Troops Enter Rhineland Again!"
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
 	option = {
 		name = "We Always Have Other Plans"
 		ai_chance = {
 			factor = 0
 		}
-		country_event = { id = GER_rhineland.1 }
+		country_event = {
+			id = GER_rhineland.1
+		}
 		add_political_power = -5
 	}
-
 	option = {
 		name = "Let's isolate Germany"
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
-			NOT = { has_global_flag = ISO_GER_Y }
-			NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+			NOT = {
+				has_global_flag = ISO_GER_Y
+			}
+			NOT = {
+				has_global_flag = GER_FRA_ENG_ENG_SAID_NO
+			}
 		}
-		ENG = { country_event = { id = GER_rhineland.6 hours = 3 } }
+		ENG = {
+			country_event = {
+				id = GER_rhineland.6
+				hours = 3
+			}
+		}
 		add_stability = -0.1
 		add_war_support = -0.1
 		add_political_power = -350
 	}
-
 	option = {
 		name = "Issue Ultimatum"
 		ai_chance = {
 			factor = 0
 		}
-		ENG = { country_event = { id = GER_rhineland.7 hours = 3 } }
+		ENG = {
+			country_event = {
+				id = GER_rhineland.7
+				hours = 3
+			}
+		}
 		add_stability = -0.1
 		add_political_power = -200
 	}
-
 	option = {
 		name = "We Can Lead This War Alone"
 		trigger = {
 			has_global_flag = GER_FRA_ENG_ENG_SAID_NO
 		}
-
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -4012,20 +4044,27 @@ country_event = { #Event For France / Not Diplo Side
 					tag = GER
 					ratio > 0.7
 				}
-				NOT = { has_idea = FRA_disjointed_government }
+				NOT = {
+					has_idea = FRA_disjointed_government
+				}
 			}
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
 		}
-
-		GER = { country_event = { id = GER_rhineland_remind_ger.7 hours = 6 } }
-
+		GER = {
+			country_event = {
+				id = GER_rhineland_remind_ger.7
+				hours = 6
+			}
+		}
 		if = {
 			limit = {
 				has_idea = FRA_disjointed_government
-				NOT = { has_government = communism }
+				NOT = {
+					has_government = communism
+				}
 			}
 			custom_effect_tooltip = germany.60.a.tt
 			effect_tooltip = {
@@ -4035,7 +4074,8 @@ country_event = { #Event For France / Not Diplo Side
 				}
 			}
 		}
-		if = { #you're not getting around that, comrade
+		if = {
+			#you're not getting around that, comrade
 			limit = {
 				has_idea = FRA_disjointed_government
 				has_government = communism
@@ -4049,15 +4089,17 @@ country_event = { #Event For France / Not Diplo Side
 			}
 		}
 	}
-
-	option = { # This means war!
+	option = {
+		# This means war!
 		name = germany.60.a
-
 		trigger = {
-			NOT = { has_global_flag = ISO_GER_Y }
-			NOT = { has_global_flag = GER_FRA_ENG_ENG_SAID_NO }
+			NOT = {
+				has_global_flag = ISO_GER_Y
+			}
+			NOT = {
+				has_global_flag = GER_FRA_ENG_ENG_SAID_NO
+			}
 		}
-
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -4066,34 +4108,40 @@ country_event = { #Event For France / Not Diplo Side
 					tag = GER
 					ratio > 0.7
 				}
-				NOT = { has_idea = FRA_disjointed_government }
+				NOT = {
+					has_idea = FRA_disjointed_government
+				}
 			}
-
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
 		}
-
 		add_political_power = -150
 		add_stability = -0.1
 		if = {
 			limit = {
 				ENG = {
 					is_puppet = no
-					NOT = { has_war_with = FRA }
+					NOT = {
+						has_war_with = FRA
+					}
 				}
 			}
 			ENG = {
 				country_event = germany.61
 				custom_effect_tooltip = needs_approval
-				effect_tooltip = { add_to_faction = FRA }
+				effect_tooltip = {
+					add_to_faction = FRA
+				}
 			}
 		}
 		if = {
 			limit = {
 				has_idea = FRA_disjointed_government
-				NOT = { has_government = communism }
+				NOT = {
+					has_government = communism
+				}
 			}
 			custom_effect_tooltip = germany.60.a.tt
 			effect_tooltip = {
@@ -4103,7 +4151,8 @@ country_event = { #Event For France / Not Diplo Side
 				}
 			}
 		}
-		if = { #you're not getting around that, comrade
+		if = {
+			#you're not getting around that, comrade
 			limit = {
 				has_idea = FRA_disjointed_government
 				has_government = communism
@@ -4119,31 +4168,35 @@ country_event = { #Event For France / Not Diplo Side
 	}
 }
 
-country_event = { #Event For UK
+country_event = {
+	#Event For UK
 	id = GER_rhineland.3
 	title = "German Troops Enter Rhineland!"
 	desc = germany.60.d
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 0
 			}
 		}
-		add_opinion_modifier = { target = GER modifier = protest_action }
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 		hidden_effect = {
 			GER = {
 				country_event = GER_rhineland_remind_ger.1
 			}
 		}
 	}
-
 	option = {
 		name = "We Should Cut Trades With Germany"
 		ai_chance = {
@@ -4156,23 +4209,24 @@ country_event = { #Event For UK
 			target = GER
 			modifier = protest_action
 		}
-
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.2 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.2
+			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
 		}
 		name = "We Must Ensure the Security of Benelux."
-
 		HOL = {
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4183,12 +4237,13 @@ country_event = { #Event For UK
 				}
 			}
 		}
-
 		BEL = {
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4199,12 +4254,13 @@ country_event = { #Event For UK
 				}
 			}
 		}
-
 		LUX = {
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4215,45 +4271,53 @@ country_event = { #Event For UK
 				}
 			}
 		}
-
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.4 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.4
+			}
 		}
 	}
 }
 
-country_event = { #Event For UK - For Trade Ban
+country_event = {
+	#Event For UK - For Trade Ban
 	id = GER_rhineland.4
 	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is Trade Banning Germany.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 0
 			}
 		}
-		add_opinion_modifier = { target = GER modifier = protest_action }
-
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 		hidden_effect = {
 			set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-			FRA = { country_event = GER_rhineland_remind_fra.1 }
+			FRA = {
+				country_event = GER_rhineland_remind_fra.1
+			}
 		}
 	}
-
 	option = {
 		name = "We Agree"
 		ai_chance = {
 			factor = 0
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 100
 			}
 		}
@@ -4265,42 +4329,54 @@ country_event = { #Event For UK - For Trade Ban
 			modifier = protest_action
 		}
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.2 }
-			FRA = { country_event = GER_rhineland_remind_fra.2 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.2
+			}
+			FRA = {
+				country_event = GER_rhineland_remind_fra.2
+			}
 		}
 	}
 }
 
-country_event = { #Event For UK - Security of Benelux
+country_event = {
+	#Event For UK - Security of Benelux
 	id = GER_rhineland.5
 	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Make Sure Security of Benelux.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 0
 			}
 		}
-		add_opinion_modifier = { target = GER modifier = protest_action }
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 		hidden_effect = {
 			set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-			FRA = { country_event = GER_rhineland_remind_fra.1 }
+			FRA = {
+				country_event = GER_rhineland_remind_fra.1
+			}
 		}
 	}
-
 	option = {
 		ai_chance = {
 			factor = 0
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 100
 			}
 		}
@@ -4310,7 +4386,9 @@ country_event = { #Event For UK - Security of Benelux
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4325,7 +4403,9 @@ country_event = { #Event For UK - Security of Benelux
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4340,7 +4420,9 @@ country_event = { #Event For UK - Security of Benelux
 			if = {
 				limit = {
 					is_puppet = no
-					NOT = { has_war_with = ROOT }
+					NOT = {
+						has_war_with = ROOT
+					}
 				}
 				ROOT = {
 					diplomatic_relation = {
@@ -4352,91 +4434,119 @@ country_event = { #Event For UK - Security of Benelux
 			}
 		}
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.4 }
-			FRA = { country_event = GER_rhineland_remind_fra.2 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.4
+			}
+			FRA = {
+				country_event = GER_rhineland_remind_fra.2
+			}
 		}
 	}
 }
 
-country_event = { #Event For UK isolate
+country_event = {
+	#Event For UK isolate
 	id = GER_rhineland.6
 	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is The Isolation Of Germany.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 0
 			}
 		}
-		add_opinion_modifier = { target = GER modifier = protest_action }
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 		hidden_effect = {
 			set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-			FRA = { country_event = GER_rhineland_remind_fra.1 }
+			FRA = {
+				country_event = GER_rhineland_remind_fra.1
+			}
 		}
 	}
-
 	option = {
 		name = "We Agree"
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 100
 			}
 		}
 		GER_isolate_effect = yes
 		set_global_flag = ISO_GER_Y
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.3 }
-			FRA = { country_event = GER_rhineland_remind_fra.2 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.3
+			}
+			FRA = {
+				country_event = GER_rhineland_remind_fra.2
+			}
 		}
 	}
 }
 
-country_event = { #Event For UK issue ultimatum
+country_event = {
+	#Event For UK issue ultimatum
 	id = GER_rhineland.7
 	title = "German Troops Enter Rhineland!"
 	desc = "As France Notifies You of This Situation. The French Government Acted Quickly. What They Want Is Sending Ultimatum to Germany.
 	They are waiting for our reply."
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = germany.60.b
 		ai_chance = {
 			factor = 50
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 0
 			}
 		}
-		add_opinion_modifier = { target = GER modifier = protest_action }
+		add_opinion_modifier = {
+			target = GER
+			modifier = protest_action
+		}
 		hidden_effect = {
 			set_global_flag = GER_FRA_ENG_ENG_SAID_NO
-			FRA = { country_event = GER_rhineland_remind_fra.1 }
+			FRA = {
+				country_event = GER_rhineland_remind_fra.1
+			}
 		}
 	}
-
 	option = {
 		name = "Issue Ultimatum"
 		ai_chance = {
 			factor = 0
 			modifier = {
-				FRA = { is_ai = no }
+				FRA = {
+					is_ai = no
+				}
 				factor = 100
 			}
 		}
-		GER = { country_event = GER_rhineland_remind_ger.5 }
-		FRA = { country_event = GER_rhineland_remind_fra.2 }
+		GER = {
+			country_event = GER_rhineland_remind_ger.5
+		}
+		FRA = {
+			country_event = GER_rhineland_remind_fra.2
+		}
 	}
 }
 
@@ -4445,12 +4555,9 @@ country_event = {
 	title = "Request from Britain and France"
 	desc = "England and France want Germany to be isolated due to the militarization of the Rhineland, and they expect your support on this issue."
 	picture = GFX_report_event_czech_soldiers_01
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine"
-
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -4458,12 +4565,10 @@ country_event = {
 				factor = 0
 			}
 		}
-
 		if = {
 			limit = {
 				has_government = democratic
 			}
-
 			add_stability = 0.05
 			add_political_power = -5
 			send_embargo = GER
@@ -4472,19 +4577,18 @@ country_event = {
 				modifier = protest_action
 			}
 		}
-
 		if = {
 			limit = {
-				NOT = { has_government = democratic }
+				NOT = {
+					has_government = democratic
+				}
 			}
-
 			send_embargo = GER
 			add_opinion_modifier = {
 				target = GER
 				modifier = protest_action
 			}
 		}
-
 		hidden_effect = {
 			ENG = {
 				add_opinion_modifier = {
@@ -4500,10 +4604,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "No"
-
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -4511,7 +4613,6 @@ country_event = {
 				factor = 100
 			}
 		}
-
 		ENG = {
 			add_opinion_modifier = {
 				target = ROOT
@@ -4527,132 +4628,143 @@ country_event = {
 	}
 }
 
-country_event = { #Event For Germany Good News.
+country_event = {
+	#Event For Germany Good News.
 	id = GER_rhineland_remind_ger.1
 	title = "Remilitarization of Rhineland!"
 	desc = "After France and England did not respond, our soldiers entered the Rhineland Region and were greeted by the enthusiastic people."
 	picture = GFX_report_event_german_troops_march_rhineland
 	is_triggered_only = yes
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = "Good News"
 		ai_chance = {
 			factor = 100
 		}
 		hidden_effect = {
 			complete_national_focus = GER_rhineland
-			country_event = { hours = 6 id = news.25 }
+			country_event = {
+				hours = 6
+				id = news.25
+			}
 		}
 	}
 }
 
-country_event = { #Event For Germany Embargo But Good News.
+country_event = {
+	#Event For Germany Embargo But Good News.
 	id = GER_rhineland_remind_ger.2
 	title = "Remilitarization of Rhineland!"
 	desc = "Despite the actions of France and England against us, our troops entered the Rhineland Region and were greeted by the enthusiastic people."
 	picture = GFX_report_event_german_troops_march_rhineland
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_rhineland
-			country_event = { hours = 6 id = news.25 }
+			country_event = {
+				hours = 6
+				id = news.25
+			}
 		}
 	}
 }
 
-country_event = { #Event For Germany Isolated But Good News.
+country_event = {
+	#Event For Germany Isolated But Good News.
 	id = GER_rhineland_remind_ger.3
 	title = "Remilitarization of Rhineland!"
 	desc = "Our troops entered the Rhineland and were greeted by an enthusiastic public, despite the actions of France, Britain and other countries."
 	picture = GFX_report_event_german_troops_march_rhineland
 	is_triggered_only = yes
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_rhineland
-			country_event = { hours = 6 id = news.25 }
+			country_event = {
+				hours = 6
+				id = news.25
+			}
 		}
 	}
 }
 
-country_event = { #Event For Germany Secerutiy of Benelux But Good News.
+country_event = {
+	#Event For Germany Secerutiy of Benelux But Good News.
 	id = GER_rhineland_remind_ger.4
 	title = "Remilitarization of Rhineland!"
 	desc = "Despite the security agreements made by France and England, our troops entered the Rhineland and were greeted by an enthusiastic public."
 	picture = GFX_report_event_german_troops_march_rhineland
 	is_triggered_only = yes
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_rhineland
-			country_event = { hours = 6 id = news.25 }
+			country_event = {
+				hours = 6
+				id = news.25
+			}
 		}
 	}
 }
 
-country_event = { #Event For Germany Recive Ultimatum. Bad News.
+country_event = {
+	#Event For Germany Recive Ultimatum. Bad News.
 	id = GER_rhineland_remind_ger.5
 	title = "Ultimatum from France and United Kingdom!"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
-	option = { #Historical
+	option = {
+		#Historical
 		name = "Fine"
 		ai_chance = {
 			factor = 100
 		}
-
 		hidden_effect = {
 			complete_national_focus = GER_rhineland_demilitarized
 		}
 	}
-
 	option = {
 		name = "No"
 		ai_chance = {
 			factor = 0
 		}
 		hidden_effect = {
-			ENG = { country_event = GER_rhineland_remind_ger.6 }
+			ENG = {
+				country_event = GER_rhineland_remind_ger.6
+			}
 		}
 	}
 }
 
-country_event = { #Event For UK - Ultimatum Not Aceppted.
+country_event = {
+	#Event For UK - Ultimatum Not Aceppted.
 	id = GER_rhineland_remind_ger.6
 	title = "Germany Not Accepted our Ultimatum!"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
 	option = {
 		name = "War!"
 		ai_chance = {
 			factor = 100
 		}
-
 		declare_war_on = {
 			target = GER
 			type = puppet_wargoal_focus
 		}
-
 		FRA = {
 			declare_war_on = {
 				target = GER
@@ -4660,19 +4772,24 @@ country_event = { #Event For UK - Ultimatum Not Aceppted.
 			}
 		}
 		add_to_faction = FRA
-
 		hidden_effect = {
-			GER = { country_event = { id = news.26 hours = 6 } }
+			GER = {
+				country_event = {
+					id = news.26
+					hours = 6
+				}
+			}
 		}
 	}
-
 	option = {
 		name = "Fine"
 		ai_chance = {
 			factor = 0
 		}
 		hidden_effect = {
-			GER = { country_event = GER_rhineland_remind_ger.1 }
+			GER = {
+				country_event = GER_rhineland_remind_ger.1
+			}
 		}
 	}
 }
@@ -4682,9 +4799,7 @@ country_event = {
 	title = germany.66.t
 	desc = ""
 	picture = GFX_report_event_degaulle_inspect_troops
-
 	is_triggered_only = yes
-
 	option = {
 		name = "We cannot back down!"
 		complete_national_focus = GER_rhineland
@@ -4704,12 +4819,17 @@ country_event = {
 			declare_war_on = {
 				target = GER
 				type = take_state_focus
-				generator = { 42 51 }
+				generator = {
+					42
+					51
+				}
 			}
 			if = {
 				limit = {
 					has_idea = FRA_disjointed_government
-					NOT = { has_government = communism }
+					NOT = {
+						has_government = communism
+					}
 				}
 				start_civil_war = {
 					ideology = communism
@@ -4728,22 +4848,25 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "We must back down!"
 		complete_national_focus = GER_rhineland_demilitarized
-
-		FRA = { country_event = { id = GER_rhineland_remind_fra.3 hours = 6 } }
+		FRA = {
+			country_event = {
+				id = GER_rhineland_remind_fra.3
+				hours = 6
+			}
+		}
 	}
 }
 
-country_event = { #Event For France Bad News.
+country_event = {
+	#Event For France Bad News.
 	id = GER_rhineland_remind_fra.1
 	title = "United Kingdom Not Aceppted our Request"
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine"
 		ai_chance = {
@@ -4753,7 +4876,6 @@ country_event = { #Event For France Bad News.
 			country_event = GER_rhineland.1
 		}
 	}
-
 }
 
 country_event = {
@@ -4762,14 +4884,12 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
 	option = {
 		name = "Good"
 		ai_chance = {
 			factor = 100
 		}
 	}
-
 }
 
 country_event = {
@@ -4778,7 +4898,6 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_soldiers_in_france
 	is_triggered_only = yes
-
 	option = {
 		name = "Good News for France"
 		ai_chance = {
@@ -4792,21 +4911,43 @@ country_event = {
 	title = "Our Attempt Cause CivilWar!"
 	desc = ""
 	picture = GFX_report_event_ger_civil_war
-
 	is_triggered_only = yes
-
 	option = {
 		name = wtt_germany.1.a
 		hidden_effect = {
-			set_capital = { state = 974 }
+			set_capital = {
+				state = 974
+			}
 			start_civil_war = {
 				ruling_party = neutrality
 				ideology = fascism
 				size = 0.5
 				capital = 64
-				states = { 973 64 61 52 53 54 60 65 66 67 68 62 63 5 59 58 909 }
+				states = {
+					973
+					64
+					61
+					52
+					53
+					54
+					60
+					65
+					66
+					67
+					68
+					62
+					63
+					5
+					59
+					58
+					909
+				}
 			}
-			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
+			set_party_name = {
+				ideology = neutrality
+				long_name = GER_neutrality_party_civil_war
+				name = GER_neutrality_party_civil_war
+			}
 			load_oob = "GER_German_Civil_War_com"
 			add_popularity = {
 				ideology = communism
@@ -4814,7 +4955,7 @@ country_event = {
 			}
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.30
+				popularity = 0.3
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -4934,9 +5075,7 @@ country_event = {
 	title = "Assassination Successful"
 	desc = ""
 	picture = GFX_report_event_czech_soldiers_01
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Good"
 		hidden_effect = {
@@ -4955,7 +5094,11 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_provisional_gvt
-			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
+			set_party_name = {
+				ideology = neutrality
+				long_name = GER_neutrality_party_civil_war
+				name = GER_neutrality_party_civil_war
+			}
 			create_country_leader = {
 				name = GER_Non_Civilwar
 				desc = ""
@@ -4982,19 +5125,38 @@ country_event = {
 	title = "Wilhelm II Cause Civilwar!"
 	desc = ""
 	picture = GFX_report_event_ger_civil_war
-
 	is_triggered_only = yes
-
 	option = {
 		name = "For the Empire!"
 		hidden_effect = {
-			set_capital = { state = 51 }
+			set_capital = {
+				state = 51
+			}
 			start_civil_war = {
 				ruling_party = neutrality
 				ideology = fascism
 				size = 0.5
 				capital = 64
-				states = { 973 64 61 52 53 54 60 65 66 67 68 62 63 59 58 909 50 970 }
+				states = {
+					973
+					64
+					61
+					52
+					53
+					54
+					60
+					65
+					66
+					67
+					68
+					62
+					63
+					59
+					58
+					909
+					50
+					970
+				}
 			}
 			load_oob = "GER_German_Civil_War_neutrality"
 			add_popularity = {
@@ -5003,7 +5165,7 @@ country_event = {
 			}
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.30
+				popularity = 0.3
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -5017,7 +5179,11 @@ country_event = {
 			set_war_support = 0.8
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = GER_provisional_gvt
-			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_civil_war name = GER_neutrality_party_civil_war }
+			set_party_name = {
+				ideology = neutrality
+				long_name = GER_neutrality_party_civil_war
+				name = GER_neutrality_party_civil_war
+			}
 			activate_mission = GER_conquer_hamburg
 			activate_mission = GER_conquer_berlin
 			activate_mission = GER_conquer_munich
@@ -5044,7 +5210,12 @@ country_event = {
 			create_corps_commander = {
 				name = "Paul von Lettow-Vorbeck"
 				gfx = GFX_portrait_ger_von_lettow_vorbeck
-				traits = { trickster war_hero media_personality jungle_rat}
+				traits = {
+					trickster
+					war_hero
+					media_personality
+					jungle_rat
+				}
 				skill = 4
 				id = 499
 				attack_skill = 3
@@ -5086,7 +5257,10 @@ country_event = {
 					producer = GER
 				}
 			}
-			news_event = { id = ger_f_news.9 days = 30 }
+			news_event = {
+				id = ger_f_news.9
+				days = 30
+			}
 		}
 	}
 }
@@ -5096,9 +5270,7 @@ country_event = {
 	title = "End of Anglo-German Naval Agreement"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
-
 	is_triggered_only = yes
-
 	option = {
 		name = "AI Only"
 		trigger = {
@@ -5107,29 +5279,21 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-
 		complete_national_focus = GER_plan_z_a
 		complete_national_focus = GER_u_boat_effort_a
-
 	}
-
 	option = {
 		name = "Raeder`s Way"
-
 		ai_chance = {
 			factor = 0
 		}
-
 		complete_national_focus = GER_plan_z_a
 	}
-
 	option = {
 		name = "Dönitz`s Way"
-
 		ai_chance = {
 			factor = 0
 		}
-
 		complete_national_focus = GER_u_boat_effort_a
 	}
 }
@@ -5139,24 +5303,27 @@ country_event = {
 	title = "Agreements with Polish"
 	desc = "What Path Should We Follow to Take the Land of Danzig?"
 	picture = GFX_report_event_generic_read_write
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Danzig for Slovakia"
-
-		POL = { country_event = { id = germany.80 days = 1 } }
-
+		POL = {
+			country_event = {
+				id = germany.80
+				days = 1
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}
 	}
-
 	option = {
 		name = "Danzig for Guarantee"
-
-		POL = { country_event = { id = wtt_germany.14 days = 1 } }
-
+		POL = {
+			country_event = {
+				id = wtt_germany.14
+				days = 1
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -5168,9 +5335,7 @@ country_event = {
 	title = "End of War"
 	desc = ""
 	picture = GFX_report_event_fascists_posing
-
 	is_triggered_only = yes
-
 	immediate = {
 		set_global_flag = GER_civil_war_end
 		clr_global_flag = GER_civil_war
@@ -5181,15 +5346,19 @@ country_event = {
 			days = 30
 		}
 	}
-
 	option = {
 		name = "Time to Rebuild our Country"
 		ai_chance = {
 			base = 100
 		}
 		add_stability = 0.05
-		add_timed_idea = { idea = GER_rebuild_the_nation_fascm days = 180 }
-		delete_unit_template_and_units = { division_template = "SS-Sturmbrigade" }
+		add_timed_idea = {
+			idea = GER_rebuild_the_nation_fascm
+			days = 180
+		}
+		delete_unit_template_and_units = {
+			division_template = "SS-Sturmbrigade"
+		}
 	}
 }
 
@@ -5198,12 +5367,9 @@ country_event = {
 	title = "Negotiate Peace?"
 	desc = GER_rudolf_hess.1.d
 	picture = GFX_report_event_generic_read_write
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Victory Coming Soon."
-
 		ai_chance = {
 			base = 1
 			modifier = {
@@ -5211,82 +5377,87 @@ country_event = {
 				factor = 100
 			}
 		}
-
-		ENG = { country_event = { id = GER_rudolf_hess.2 hours = 5 } }
+		ENG = {
+			country_event = {
+				id = GER_rudolf_hess.2
+				hours = 5
+			}
+		}
 	}
-
 	option = {
 		name = "Shoot that fool on sight."
-
 		ai_chance = {
 			base = 1
-			modifier = { # Historical
+			modifier = {
+				# Historical
 				is_historical_focus_on = yes
 				factor = 100
 			}
 		}
-
-		country_event = { id = GER_rudolf_hess.4 hours = 5 }
+		country_event = {
+			id = GER_rudolf_hess.4
+			hours = 5
+		}
 	}
 }
 
 country_event = {
-	id = GER_rudolf_hess.2 #Event for UK
+	id = GER_rudolf_hess.2	#Event for UK
 	title = "Negotiate Peace?"
 	desc = "He stated that Rudolf Hess was sent by Germany to discuss peace negotiations after his statement was taken, and after the situation was approved by Germany, we can officially start peace negotiations. Of course you have the final word."
 	picture = GFX_report_event_generic_read_write
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Peace? Never! Victory Comes Home Soon.."
-
 		ai_chance = {
 			base = 30
-
 			modifier = {
 				has_war_support < 0.5
 				add = 10
 			}
-
 			modifier = {
 				has_stability > 0.5
 				add = 10
 			}
-
 			modifier = {
-				has_country_leader = { character = ENG_neville_chamberlain }
+				has_country_leader = {
+					character = ENG_neville_chamberlain
+				}
 				add = 20
 			}
 		}
-
-
-		GER = { country_event = { id = GER_rudolf_hess.4 hours = 5 } }
+		GER = {
+			country_event = {
+				id = GER_rudolf_hess.4
+				hours = 5
+			}
+		}
 	}
-
 	option = {
 		name = "We must do what is right for our people.."
-
 		ai_chance = {
 			base = 30
-
 			modifier = {
 				has_war_support > 0.5
 				add = 20
 			}
-
 			modifier = {
 				has_stability > 0.5
 				add = 20
 			}
-
 			modifier = {
-				has_country_leader = { character = ENG_winston_churchill }
+				has_country_leader = {
+					character = ENG_winston_churchill
+				}
 				add = 20
 			}
 		}
-
-		GER = { country_event = { id = GER_rudolf_hess.3 hours = 5 } }
+		GER = {
+			country_event = {
+				id = GER_rudolf_hess.3
+				hours = 5
+			}
+		}
 	}
 }
 
@@ -5295,16 +5466,12 @@ country_event = {
 	title = "United Kingdom Agreed"
 	desc = "After a long period of negotiations, an agreement on post-war borders and international zones has been reached and will soon become effective upon approval of the agreement by the parties."
 	picture = GFX_report_event_german_troops
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Another Victory for Fatherland"
-
 		ai_chance = {
 			base = 100
 		}
-
 		hidden_effect = {
 			if = {
 				limit = {
@@ -5415,7 +5582,8 @@ country_event = {
 					transfer_troops = no
 				}
 			}
-			if = { # Non DLC Version
+			if = {
+				# Non DLC Version
 				limit = {
 					has_war_with = NOR
 					NOR = {
@@ -5428,7 +5596,8 @@ country_event = {
 					transfer_troops = no
 				}
 			}
-			if = { # DLC Version - Civilwars
+			if = {
+				# DLC Version - Civilwars
 				limit = {
 					has_war_with = NOR
 					NOR = {
@@ -5487,10 +5656,14 @@ country_event = {
 							has_government = fascism
 							has_government = neutrality
 						}
-						NOT = { has_war_with = GER }
+						NOT = {
+							has_war_with = GER
+						}
 					}
 				}
-				118 = { transfer_state_to = SPR }
+				118 = {
+					transfer_state_to = SPR
+				}
 			}
 			if = {
 				limit = {
@@ -5624,7 +5797,9 @@ country_event = {
 				limit = {
 					ITA = {
 						is_in_faction_with = GER
-						NOT = { is_in_faction_with = BUL }
+						NOT = {
+							is_in_faction_with = BUL
+						}
 					}
 					OR = {
 						GER = {
@@ -5711,7 +5886,6 @@ country_event = {
 				clr_global_flag = GER_allow_france_comp_bad
 				clr_global_flag = ITA_GER_VICHY_ESTABLISHED
 			}
-
 			# END Time to Peace
 			clr_country_flag = flight_of_hess
 			complete_national_focus = GER_National_sprit
@@ -5730,7 +5904,10 @@ country_event = {
 				target = ENG
 				days = 365
 			}
-			news_event = { id = ger_f_news.6 hours = 6 }
+			news_event = {
+				id = ger_f_news.6
+				hours = 6
+			}
 		}
 	}
 }
@@ -5740,22 +5917,18 @@ country_event = {
 	title = "Rudolf Hess Arrested"
 	desc = "Rudolf Hess was detained in the UK after the parties failed to reach an agreement and will soon be transferred to prison."
 	picture = GFX_report_event_czech_soldiers_01
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Interesting."
-
 		ai_chance = {
 			base = 100
 		}
-
 		hidden_effect = {
 			GER_rudolf_hess = {
 				set_character_flag = rudolf_aressted_by_uk
 				set_portraits = {
-					army={
-						small="GFX_idea_rudolf_hess_prison"
+					army = {
+						small = "GFX_idea_rudolf_hess_prison"
 					}
 				}
 			}
@@ -5774,19 +5947,14 @@ country_event = {
 	title = "Axis Pact Proposal?"
 	desc = "The German government is inviting us to sign Axis Pact. With this agreement, relations with Axis will develop and will provide us with economic support."
 	picture = GFX_report_event_generic_sign_treaty1
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Sign."
-
 		ai_chance = {
 			base = 100
 		}
-
 		add_ideas = GER_Axis_Pact_idea
 		add_to_tech_sharing_group = Axis_Pact_research
-
 		hidden_effect = {
 			add_ai_strategy = {
 				type = alliance
@@ -5810,14 +5978,11 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "No."
-
 		ai_chance = {
 			base = 0
 		}
-
 		hidden_effect = {
 			add_ai_strategy = {
 				type = alliance
@@ -5839,18 +6004,13 @@ country_event = {
 	title = "The German government is pressurising us"
 	desc = "Germany is forcing us to enact anti-Jewish laws. Despite the laws that we have already implemented to some extent, Germany wants us to strictly pass new laws. "
 	picture = GFX_report_event_generic_sign_treaty1
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Fine."
-
 		ai_chance = {
 			base = 100
 		}
-
 		add_ideas = GER_Anti_jewish_idea
-
 		hidden_effect = {
 			add_ai_strategy = {
 				type = alliance
@@ -5863,14 +6023,11 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "No."
-
 		ai_chance = {
 			base = 0
 		}
-
 		hidden_effect = {
 			add_ai_strategy = {
 				type = alliance
@@ -5886,35 +6043,41 @@ country_event = {
 	title = "The New Leader?"
 	desc = "The [Karl_Donitz_w_side], uncomfortable with the policy of balance pursued by Karl Donitz, demanded a change of leadership or face the consequences of this style of leadership."
 	picture = GFX_report_event_generic_sign_treaty1
-
 	immediate = {
 		hidden_effect = {
 			if = {
 				limit = {
 					has_idea = GER_SS
 				}
-				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }
+				set_variable = {
+					var = wehrmacht_anger
+					value = 0
+				}
+				set_variable = {
+					var = SS_anger
+					value = 0
+				}
 			}
 		}
 	}
-
 	is_triggered_only = yes
-
-	option = { # Himmler
+	option = {
+		# Himmler
 		name = germany.71.a
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		trigger = {
 			has_global_flag = GER_KARL_DONITZ_SS_COUP
 		}
-
 		GER_heinrich_himmler = {
 			add_country_leader_role = {
 				promote_leader = yes
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -5932,20 +6095,20 @@ country_event = {
 			add_political_power = 100
 		}
 	}
-
-	option = { # Göring
+	option = {
+		# Göring
 		name = germany.71.b
 		trigger = {
 			has_global_flag = GER_KARL_DONITZ_WEHRMACHT_COUP
 		}
-
 		GER_hermann_goring = {
 			add_country_leader_role = {
 				promote_leader = yes
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -5970,9 +6133,7 @@ country_event = {
 	title = "The New Leader?"
 	desc = "With the further deterioration of Adolf Hitler's health problems, a new leader is needed to replace the retired Adolf Hitler."
 	picture = GFX_report_event_generic_sign_treaty1
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			set_global_flag = Adolf_retired
@@ -5989,8 +6150,14 @@ country_event = {
 				limit = {
 					has_idea = GER_SS
 				}
-				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }
+				set_variable = {
+					var = wehrmacht_anger
+					value = 0
+				}
+				set_variable = {
+					var = SS_anger
+					value = 0
+				}
 			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
@@ -6000,8 +6167,8 @@ country_event = {
 			complete_national_focus = GER_hitler_is_gone
 		}
 	}
-
-	option = { # Himmler
+	option = {
+		# Himmler
 		name = germany.71.a
 		# Himmler becomes the new Fascist leader of Germany
 		retire_country_leader = yes
@@ -6012,7 +6179,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6024,10 +6192,12 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Karl Donitz
+	option = {
+		# Karl Donitz
 		name = "Karl Dönitz is A Neutral Choice"
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		retire_country_leader = yes
 		add_stability = 0.05
 		GER_karl_donitz = {
@@ -6036,7 +6206,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6056,8 +6227,8 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Göring
+	option = {
+		# Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany
 		retire_country_leader = yes
@@ -6068,7 +6239,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6087,9 +6259,7 @@ country_event = {
 	title = "Death of Adolf Hitler"
 	desc = "After the loss of our leader in the failed coup attempt by the traitors at the last General Meeting, it is time to select a new leader."
 	picture = GFX_event_hitler_bomb
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			set_global_flag = Adolf_killed
@@ -6106,8 +6276,14 @@ country_event = {
 				limit = {
 					has_idea = GER_SS
 				}
-				set_variable = { var = wehrmacht_anger value = 0 }
-				set_variable = { var = SS_anger value = 0 }
+				set_variable = {
+					var = wehrmacht_anger
+					value = 0
+				}
+				set_variable = {
+					var = SS_anger
+					value = 0
+				}
 			}
 			uncomplete_national_focus = {
 				focus = GER_Fuhrer
@@ -6117,14 +6293,18 @@ country_event = {
 			complete_national_focus = GER_hitler_is_gone
 		}
 	}
-
-	option = { # Himmler
+	option = {
+		# Himmler
 		name = germany.71.a
 		# Himmler becomes the new Fascist leader of Germany
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			GER_heinrich_himmler = {
-				NOT = { has_character_flag = killed_by_bomb }
+				NOT = {
+					has_character_flag = killed_by_bomb
+				}
 			}
 		}
 		retire_country_leader = yes
@@ -6135,7 +6315,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6147,13 +6328,17 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Karl Donitz
+	option = {
+		# Karl Donitz
 		name = "Karl Dönitz is A Neutral Choice"
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			GER_karl_donitz = {
-				NOT = { has_character_flag = killed_by_bomb }
+				NOT = {
+					has_character_flag = killed_by_bomb
+				}
 			}
 		}
 		retire_country_leader = yes
@@ -6164,7 +6349,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6184,14 +6370,18 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Göring
+	option = {
+		# Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			GER_hermann_goring = {
-				NOT = { has_character_flag = killed_by_bomb }
+				NOT = {
+					has_character_flag = killed_by_bomb
+				}
 			}
 		}
 		retire_country_leader = yes
@@ -6202,7 +6392,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6221,20 +6412,18 @@ country_event = {
 	title = "Health Problems of Adolf Hitler"
 	desc = "Adolf Hitler is looking for a quick solution to his recent health problems. What should we do?"
 	picture = GFX_report_event_generic_sign_treaty1
-
 	is_triggered_only = yes
-
 	option = {
 		name = "He is Fine."
-
 		trigger = {
-			check_variable = { theodor_morell < 4 }
+			check_variable = {
+				theodor_morell < 4
+			}
 			power_balance_value = {
 				id = GER_power_balance
 				value > -0.01
 			}
 		}
-
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -6257,48 +6446,47 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			activate_mission = Adolf_Hitler_Yearly_Check_ups
 		}
-
 	}
-
 	option = {
 		name = "Seek Treatment with Europe`s Best Doctors"
-
 		trigger = {
-			check_variable = { theodor_morell < 4 }
+			check_variable = {
+				theodor_morell < 4
+			}
 			power_balance_value = {
 				id = GER_power_balance
 				value < -0.01
 			}
 		}
-
 		GER_adolf_search_costs_idea_effect = yes
 		GER_adolf_best_doctor_effect = yes
 		GER_bop_decrease_need_checkup_modifier = yes
 		GER_army_leader_convert_health = yes
-
 		hidden_effect = {
-			add_to_variable = { best_doctors = 1 }
-			subtract_from_variable = { theodor_morell = 2 }
-			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
+			add_to_variable = {
+				best_doctors = 1
+			}
+			subtract_from_variable = {
+				theodor_morell = 2
+			}
+			activate_mission = Adolf_Hitler_Yearly_Check_ups			#Re-Enable Mission
 		}
-
 	}
-
-	option = { #Theodor Morell
+	option = {
+		#Theodor Morell
 		name = "Adolf's Personal Doctor"
-
 		trigger = {
-			check_variable = { best_doctors < 4 }
+			check_variable = {
+				best_doctors < 4
+			}
 			power_balance_value = {
 				id = GER_power_balance
 				value < -0.01
 			}
 		}
-
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -6319,39 +6507,39 @@ country_event = {
 				}
 			}
 		}
-
 		GER_adolf_personal_doctor_idea_effect = yes
 		GER_adolf_personal_doctor_effect = yes
 		GER_bop_decrease_need_checkup_modifier = yes
 		GER_army_leader_convert_health = yes
-
-		hidden_effect = { # Adolf`s Health Getting Bad
-			add_to_variable = { adolf_hitler_rest_bad = 1 }
-			add_to_variable = { theodor_morell = 1 }
+		hidden_effect = {
+			# Adolf`s Health Getting Bad
+			add_to_variable = {
+				adolf_hitler_rest_bad = 1
+			}
+			add_to_variable = {
+				theodor_morell = 1
+			}
 		}
-
 	}
-
 	option = {
 		name = "He just needs to rest."
-
 		trigger = {
-			check_variable = { adolf_hitler_rest_bad < 5 }
+			check_variable = {
+				adolf_hitler_rest_bad < 5
+			}
 			power_balance_value = {
 				id = GER_power_balance
 				value < -0.01
 			}
 		}
-
 		GER_adolf_rest_effect = yes
-
 		hidden_effect = {
-			add_to_variable = { adolf_hitler_rest = 1 }
-			activate_mission = Adolf_Hitler_Yearly_Check_ups #Re-Enable Mission
+			add_to_variable = {
+				adolf_hitler_rest = 1
+			}
+			activate_mission = Adolf_Hitler_Yearly_Check_ups			#Re-Enable Mission
 		}
-
 	}
-
 }
 
 country_event = {
@@ -6359,18 +6547,14 @@ country_event = {
 	title = "Purge of Army"
 	desc = "After the failure of the last military operation, after a detailed presentation by the Wehrmacht and the SS, Adolf Hitler issued the new orders and changes in tasks that he considered necessary. We'll have to review some of our generals."
 	picture = GFX_report_event_hitler_parade
-
 	immediate = {
 		hidden_effect = {
 			activate_mission = GER_hitler_purge_leaders
 		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "For a better Germany!"
-
 		ai_chance = {
 			factor = 100
 		}
@@ -6382,9 +6566,7 @@ country_event = {
 	title = "Death of Adolf Hitler"
 	desc = "Adolf Hitler and his wife Eva Braun, who were in the Führerbunker when Berlin fell under enemy control, committed suicide. We have to choose a new leader to rule temporarily as an emergency government."
 	picture = GFX_report_event_bunker_01
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			remove_power_balance = {
@@ -6407,7 +6589,8 @@ country_event = {
 				id = ger_f_news.7
 			}
 			set_global_flag = Adolf_suicide
-			random_list = { #Should work at here idk.
+			random_list = {
+				#Should work at here idk.
 				1 = {
 					if = {
 						limit = {
@@ -6416,8 +6599,15 @@ country_event = {
 							}
 						}
 						ARG = {
-							add_timed_idea = { idea = fascism_drift_ARG days = 1460 }
-							country_event = { id = wtt_germany.1004 days = 1095 random_days = 365 }
+							add_timed_idea = {
+								idea = fascism_drift_ARG
+								days = 1460
+							}
+							country_event = {
+								id = wtt_germany.1004
+								days = 1095
+								random_days = 365
+							}
 						}
 					}
 				}
@@ -6426,19 +6616,28 @@ country_event = {
 				}
 				1 = {
 					if = {
-						limit = { has_dlc = "La Resistance" }
-						country_event = { id = wtt_germany.1005 days = 1095 random_days = 365 }
+						limit = {
+							has_dlc = "La Resistance"
+						}
+						country_event = {
+							id = wtt_germany.1005
+							days = 1095
+							random_days = 365
+						}
 					}
 				}
-				297 = {}
+				297 = {
+				}
 			}
 		}
 	}
-
-	option = { # Himmler
+	option = {
+		# Himmler
 		name = germany.71.a
 		# Himmler becomes the new Fascist leader of Germany
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		kill_country_leader = yes
 		add_stability = 0.05
 		GER_heinrich_himmler = {
@@ -6447,7 +6646,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6459,13 +6659,11 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "Karl Dönitz is A Neutral Choice"
 		trigger = {
-			has_civil_war = no # Karl Donitz Goes to Other Side so Disabled.
+			has_civil_war = no			# Karl Donitz Goes to Other Side so Disabled.
 		}
-
 		kill_country_leader = yes
 		add_stability = 0.05
 		GER_karl_donitz = {
@@ -6474,7 +6672,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6486,12 +6685,12 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Göring
+	option = {
+		# Göring
 		name = germany.71.b
 		# Göring becomes the new Fascist leader of Germany
 		trigger = {
-			has_civil_war = no # Karl Donitz Goes to Other Side so Disabled.
+			has_civil_war = no			# Karl Donitz Goes to Other Side so Disabled.
 		}
 		kill_country_leader = yes
 		add_stability = 0.1
@@ -6501,7 +6700,8 @@ country_event = {
 				country_leader = {
 					ideology = nazism
 					expire = "1965.1.1.1"
-					traits = {}
+					traits = {
+					}
 				}
 			}
 		}
@@ -6520,49 +6720,45 @@ country_event = {
 	title = GER_health_adolf.4.t
 	desc = GER_health_adolf.4.desc
 	picture = GFX_report_event_germany_victory
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = GER_health_adolf.4.a
-
 		custom_effect_tooltip = GER_health_intro_tt
 		custom_effect_tooltip = SOV_paranoia_system_intro_tt
 	}
 }
 
-country_event = { # Things Gone Bad
+country_event = {
+	# Things Gone Bad
 	id = GER_spain_talks.1
 	title = "Adolf Hitler in Spain"
 	desc = "Adolf Hitler, who met with Spanish President Franco, stated that he would not meet with Franco again."
 	picture = GFX_report_event_franco_adolf
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			set_country_flag = GER_MAD_TO_SPAIN
 			GER_bop_low_decrease_effect = yes
 		}
 	}
-
 	option = {
 		name = "Fine.."
 	}
 }
 
-country_event = { # Things Gone Good
+country_event = {
+	# Things Gone Good
 	id = GER_spain_talks.2
 	title = "Adolf Hitler in Spain"
 	desc = "Adolf Hitler met with Spanish President Franco and announced that Spain had become an official Axis member."
 	picture = GFX_report_event_franco_adolf
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
-			ROOT = { add_to_faction = SPR }
+			ROOT = {
+				add_to_faction = SPR
+			}
 			SPR = {
 				add_ai_strategy = {
 					type = alliance
@@ -6577,7 +6773,6 @@ country_event = { # Things Gone Good
 			}
 		}
 	}
-
 	option = {
 		name = "Welcome."
 	}
@@ -6588,16 +6783,12 @@ country_event = {
 	title = "Ernest Cox Offers Ship?"
 	desc = "Ernest Cox, who came to Germany after our job offer, suggested that the SMS Moltke, which had previously served in our Navy, be refitted and put back into service."
 	picture = GFX_report_event_merchant_ship_01
-
 	is_triggered_only = yes
-
 	option = {
 		name = "Another beautiful ship.."
-
 		ai_chance = {
 			factor = 100
 		}
-
 		create_equipment_variant = {
 			name = "Moltke Class"
 			type = ship_hull_cruiser_1
@@ -6630,10 +6821,8 @@ country_event = {
 			industrial_manufacturer = mio:Cox_and_Danks_organization
 		}
 	}
-
 	option = {
 		name = "Transfer Ship's Resources to New Projects."
-
 		every_state = {
 			limit = {
 				OR = {
@@ -6652,9 +6841,7 @@ country_event = {
 country_event = {
 	id = GER_operations.1
 	fire_only_once = yes
-
 	hidden = yes
-
 	trigger = {
 		tag = GER
 		has_war = yes
@@ -6663,6 +6850,7 @@ country_event = {
 			is_major = yes
 			original_tag = SOV
 		}
+		has_completed_focus = GER_Attack_SOV
 		195 = {
 			any_neighbor_state = {
 				CONTROLLER = {
@@ -6679,10 +6867,11 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		activate_mission = German_offensive_targets
-		SOV = { activate_mission = SOV_German_offensive_targets }
+		SOV = {
+			activate_mission = SOV_German_offensive_targets
+		}
 		set_global_flag = {
 			flag = GER_Target_195
 			days = 7
@@ -6694,13 +6883,12 @@ country_event = {
 country_event = {
 	id = GER_operations.2
 	fire_only_once = yes
-
 	hidden = yes
-
 	trigger = {
 		tag = GER
 		has_war = yes
 		has_civil_war = no
+		has_completed_focus = GER_Attack_SOV
 		any_enemy_country = {
 			is_major = yes
 			original_tag = SOV
@@ -6717,10 +6905,11 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		activate_mission = German_offensive_targets
-		SOV = { activate_mission = SOV_German_offensive_targets }
+		SOV = {
+			activate_mission = SOV_German_offensive_targets
+		}
 		set_global_flag = {
 			flag = GER_Target_217
 			days = 7
@@ -6732,13 +6921,12 @@ country_event = {
 country_event = {
 	id = GER_operations.3
 	fire_only_once = yes
-
 	hidden = yes
-
 	trigger = {
 		tag = GER
 		has_war = yes
 		has_civil_war = no
+		has_completed_focus = GER_Attack_SOV
 		any_enemy_country = {
 			is_major = yes
 			original_tag = SOV
@@ -6755,10 +6943,11 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		activate_mission = German_offensive_targets
-		SOV = { activate_mission = SOV_German_offensive_targets }
+		SOV = {
+			activate_mission = SOV_German_offensive_targets
+		}
 		set_global_flag = {
 			flag = GER_Target_219
 			days = 7
@@ -6766,13 +6955,3 @@ country_event = {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-

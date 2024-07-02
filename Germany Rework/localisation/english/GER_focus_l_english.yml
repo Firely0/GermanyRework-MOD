@@ -135,8 +135,11 @@
 
  #ui ideas
  Wehrmacht_UI:0 "Wehrmacht"
+ Wehrmacht_UI_desc:0 "$Wehrmacht_desc_tt$"
  Kriegsmarine_UI:0 "Kriegsmarine"
+ Kriegsmarine_UI_desc:0 "$Kriegsmarine_desc_tt$"
  Luftwaffe_UI:0 "Luftwaffe"
+ Luftwaffe_UI_desc:0 "$Luftwaffe_desc_tt$"
 
  #Tech
  masterful_blitz_GERV:0 "Masterful Blitz"
@@ -314,7 +317,7 @@
 
  # SS vs Wehrmacht Anger
  SS_Status_of_loyalty:0 "\nCurrent §YMood§! in the £ss_texticon SS Leadership: [Root.GetSSAngerLevel] ([?GER.SS_anger|-0])"
- Wehrmacht_Status_of_loyalty:0 "\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
+ Wehrmacht_Status_of_loyalty:0 "The German army, once restricted by the Treaty of Versailles, must now rise to meet the challenges of modern warfare. By embracing new tactics, incorporating advanced technology, and conducting rigorous training, we will transform our forces into a powerful and efficient military machine. Modernizing the Wehrmacht is essential to ensure our army's strength and preparedness, securing our nation's place on the world stage and guaranteeing victory in future conflicts. \n\nCurrent §YMood§! in the £wehrmacht_texticon OKW: [Root.GetWehrmachtAngerLevel] ([?GER.wehrmacht_anger|-0])"
  Wehrmacht_Increase_anger:0 "The £wehrmacht_texticon Wehrmacht will be §Rangry§! about this"
  SS_Increase_anger:0 "£ss_texticon SS will be §Rangry§! about this"
 
@@ -371,16 +374,11 @@
  # Free City of Danzig
  annex_free_city_of_danzig:0 "Annex Free City of Danzig"
 
- #Vanilla Reminder
- GER_vanilla_look:0 "Visual Preference"
- GER_vanilla_reminder:0 "Reminder Timer"
- GER_revert_to_vanilla_germany:0 "Optional - Vanilla Appearance"
- GER_revert_to_vanilla_germany_desc:0 "Flag and Name Return to Normal. \nForming a Nation Changes Name and Flag \nGFXs of things like Focus etc. Still the same*"
-
  #Four Year Plan
  GER_mefo_bills_category_r:0 "[GetFourYearPlannamedecision]"
- GER_mefo_bills_category_r_desc:0 "In order to fund our growing military industry, and to keep this secret from British and French eyes, we have been forced to use a balance sheet entity to route payments to in the form of promissory notes. \nIf we do not use our political connections to extend the due dates of these notes, we will be forced to repay them and will no longer receive their benefits."
+ GER_mefo_bills_category_r_desc:0 "The Four Year Plan, launched in 1936, aimed to prepare Germany's economy for war within four years. It focused on increasing production of steel, iron, and other essential materials, expanding infrastructure, and developing synthetic alternatives for rubber and oil.\n To finance this rapid industrial expansion, the plan introduced Mefo bills, a form of promissory note that allowed the government to secretly fund rearmament without immediate impact on the national budget. This initiative was critical in accelerating Germany's military readiness and economic mobilization"
  GER_Four_Year_Plan_dynamic_modifier:0 "[GetFourYearPlanname]"
+ GER_Four_Year_Plan_v2_dynamic_modifier:0 "German Industry"
  GER_Four_Year_Plan:0 "End of Four Year Plan"
  ger_has_cancelled_mefo:0 "§YMEFO Bills§! has been cancelled"
  GER_mefo_bills_ended:0 "§YMEFO Bills§! has been Ended"
@@ -798,9 +796,9 @@
  GER_auto_our_advance_tt:0 "§YFocus§! Auto-Complete Based on Our §RMission§! Success"
  GER_req_our_advance_tt:0 "§YFocus§! Unlocks Based on Our §RMission§! Success"
 
- GER_rhineland_problem:0 "Auto Complate After Our \nApproach of §RRemilitarization of Rhineland§! \n\nCheck "Decisions" section \n\n"
+ GER_rhineland_problem:0 "Auto Complate After Our \nApproach of §RRemilitarization of Rhineland§! \n\nCheck "Decisions" section, If you do not see a section related to Rhineland, it means there is a problem with the mods you are using, turn it off and try again. \n\n"
  GER_Rhineland_demilitarized:0 "Remilitarization of Rhineland"
- GER_Rhineland_demilitarized_desc:0 "After the Nazi regime took power in January 1933, Germany began working towards rearmament and the remilitarization of the Rhineland."
+ GER_Rhineland_demilitarized_desc:0 ""
  GER_Rhineland_demilitarized_a:0 "§YRhineland§! Still Demilitarized"
  GER_Rhineland_demilitarized_b:0 "§YMoselland§! Still Demilitarized"
  GER_Rhineland_demilitarized_e:0 "§YBaden§! Still Demilitarized"
@@ -820,7 +818,8 @@
 
  GER_killed_hitler_effect:0 "Assassination Successful "
  GER_SOV_WAR_START:0 "\nWhen We Declare War on Soviet Union. We Gain Fallowing Idea;"
- GER_Cancel_Training_Program:0 "Cancel Training Agreements."
+ GER_Cancel_Training_Program_Sov:0 "The breakdown of the treaty with the Soviets will affect both our Air Force and our relations with the Soviets"
+ GER_Cancel_Training_Program_Ita:0 "The breakdown of the agreement with the Italians will affect both our Naval Forces and our relations with the Italians"
  GER_end_of_training_program:0 "End of Training Program."
  GER_ALLOW_KAISER_CIVILWAR:0 "Wilhelm Speaks Against German Government"
 
@@ -1896,6 +1895,8 @@
 
  #Wehrmacht
 
+ Wehrmacht_desc_tt:0 "The German army, once restricted by the Treaty of Versailles, must now rise to meet the challenges of modern warfare. By embracing new tactics, incorporating advanced technology, and conducting rigorous training, we will transform our forces into a powerful and efficient military machine. Modernizing the Wehrmacht is essential to ensure our army's strength and preparedness, securing our nation's place on the world stage and guaranteeing victory in future conflicts."
+
  Wehrmacht_dynamic_modifier:0 "Wehrmacht"
  Wehrmacht_dynamic_modifier_desc:0 "[ROOT.wehrmacht_ss_status]"
  Wehrmacht_Tank_dynamic_modifier:0 "$Wehrmacht_dynamic_modifier$"
@@ -1977,13 +1978,23 @@
  #Luftwaffe
 
  Luftwaffe_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_SD_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_SD_A_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_A_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_SD_B_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_SD_B_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_CAS_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_CAS_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_CAS_A_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_CAS_A_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_OI_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_OI_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
  Luftwaffe_OI_A_dynamic_modifier:0 "Luftwaffe"
+ Luftwaffe_OI_A_dynamic_modifier_desc:0 "$Luftwaffe_desc_tt$"
+
+ Luftwaffe_desc_tt:0 "The Luftwaffe, once a symbol of aerial dominance, has faced challenges and stagnation in recent times. Through reforms, new doctrines, and cutting-edge technologies, we aim to revitalize our air force. Our goal is to reclaim our position as a leading force in global aviation, setting new standards and inspiring envy worldwide."
 
  Ger_Luftwaffe_Mod_tt:0 "Modify §Y$Luftwaffe_dynamic_modifier$§! by"
 
@@ -2014,11 +2025,19 @@
  GER_naval_expand_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£construction_speed_dockyard_texticon Dockyard Building Speed: §Y+10.0%§!"
 
  Kriegsmarine_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
  Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Carrier_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$" 
  Kriegsmarine_PlanZ_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_PlanZ_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
  Kriegsmarine_Carrier_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Carrier_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
  Kriegsmarine_Gloryofmodernger_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_Gloryofmodernger_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
  Kriegsmarine_mix_ver_dynamic_modifier:0 "Kriegsmarine"
+ Kriegsmarine_mix_ver_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
+
+ Kriegsmarine_desc_tt:0 "Embracing its legacy from World War I, the Kriegsmarine once symbolized formidable naval power in the face of international competition, particularly against England. Today, we strive to rejuvenate this legacy with a massive naval build-up, implementing new doctrines and advancements in naval technology. This ensures our maritime capabilities remain robust and adaptable to modern challenges."
 
  Kriegsmarine_Debuff_Version:0 "Kriegsmarine"
  Kriegsmarine_buff_Version_No_Carrier:0 "Kriegsmarine"
@@ -2040,6 +2059,6 @@
  GER_naval_air_effort_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YCarrier§!: £production_cost Production Cost: §G-20.0%§! \n\n"
  GER_rebuild_the_high_seas_fleet_a_modify:0 "$GER_Kriegsmarine_Mod_tt$ \n§YHeavy Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-20.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-20.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"
  GER_prepare_next_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£consumer_goods_texticon Consumer Goods Factories§!: §G-3%§!"
- GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ §!\n£dockyard_output_texticon Dockyard output: §G+20.0%§! \n£factory_output_texticon Factory Output§!: §R-10.0%§!"
+ GER_challenge_royal_navy_modify:0 "$GER_Kriegsmarine_Mod_tt$ §!\n£dockyard_output_texticon §!Dockyard output: §G+20.0%§! \n£factory_output_texticon Factory Output: §R-10.0%§!"
  GER_focus_on_land_modify:0 "$GER_Kriegsmarine_Mod_tt$ \nFactory Output§!: £factory_output_texticon §G+5.0%§!"
  GER_the_long_range_operations_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£navy_anchor_texticon Naval Range §G+25.0%§! \n£fuel_consumption_texticon Naval Fuel Consumption §G-10.0%§!"

@@ -1333,6 +1333,17 @@ GER_Operation_Barbarossa_High_Command = {
 			}
 		}
 
+		cancel_trigger = {
+			NOT = {
+				has_idea = GER_barbarossa
+				OR = {
+					has_idea = GER_winter_war_infantry
+					has_idea = GER_winter_war_logistics
+					has_idea = GER_winter_war_harsh_winter
+				}
+			}
+		}
+
 		modifier = { # hmmmmmmmmmmmmmmmmm nice
 			supply_consumption_factor = 0.2
 			army_morale_factor = 0.15
@@ -1392,6 +1403,12 @@ GER_Operation_Barbarossa_High_Command = {
 		visible = {
 			has_idea = GER_barbarossa
 			has_global_flag = GER_Operation_Barbarossa_running
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_idea = GER_barbarossa
+			}
 		}
 
 		modifier = { # Use Tank Warfare
@@ -1463,6 +1480,12 @@ GER_Operation_Barbarossa_High_Command = {
 			tactic_shock_preferred_weight_factor = 0.05
 		}
 
+		cancel_trigger = {
+			NOT = {
+				has_idea = GER_barbarossa
+			}
+		}
+
 		targeted_modifier = {
 			tag = SOV
 			attack_bonus_against = 0.1
@@ -1505,7 +1528,6 @@ GER_Operation_Barbarossa_High_Command = {
 				tooltip = GER_winter_ready_army_tooltip
 				NOT = {
 					OR = {
-						has_idea = GER_winter_war_infantry
 						has_idea = GER_winter_war_logistics
 						has_idea = GER_winter_war_harsh_winter
 					}
@@ -1516,6 +1538,12 @@ GER_Operation_Barbarossa_High_Command = {
 				has_completed_focus = GER_Strategic_Des
 				has_completed_focus = GER_CAS
 				has_completed_focus = GER_Operational_Integratiy
+			}
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_idea = GER_barbarossa
 			}
 		}
 
