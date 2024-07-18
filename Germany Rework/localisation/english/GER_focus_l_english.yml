@@ -791,7 +791,7 @@
 
  rhineland_remilitarized:0 "Rhineland is §RNOT§! Remilitarized"
 
- GER_Attack_SOV_Chance_tt:0 "Change Focus Tree to War With §RSoviet Union§!"
+ GER_Attack_SOV_Chance_tt:0 "£wehrmacht_texticon §YWehrmacht§!'s Operation Barbarossa Plans Ready for Execution.\nChange Main Focus to War With §RUSSR§!"
  GER_auto_our_operation_start_tt:0 "§YFocus§! Auto-Complete After Start of §ROperation Barbarossa§! "
  GER_auto_our_advance_tt:0 "§YFocus§! Auto-Complete Based on Our §RMission§! Success"
  GER_req_our_advance_tt:0 "§YFocus§! Unlocks Based on Our §RMission§! Success"
@@ -834,7 +834,6 @@
  GER_wehrmacht_inf_1_tt:0 "$armor_research$: §R-15%§!"
  GER_wehrmacht_inf_2_tt:0 "$armor_research$: §R-20%§!"
  GER_wehrmacht_inf_3_tt:0 "$armor_research$: §R-20%§!"
- 
 
  #Africa
  AfricaCorps_in_germany:0 "Africa Corps is Sub-Branch of Wehrmacht"
@@ -1799,6 +1798,20 @@
  GER_FIN_war_with_sov:0 "Request Finland to Join War"
  GER_FIN_war_with_sov_desc:0 ""
 
+ GER_american_bomber:0 "Amerikabomber"
+ GER_american_bomber_desc:0 ""
+ GER_extra_navy:0 "Extra Navy Budget"
+ GER_extra_navy_desc:0 ""
+ GER_the_master_plan:0 "The Master Plan"
+ GER_the_master_plan_desc:0 ""
+ GER_Rebuild_high_command:0 "Rebuild High Command"
+ GER_Rebuild_high_command_desc:0 ""
+ GER_High_Coordinated_Army:0 "High Coordinated Army"
+ GER_High_Coordinated_Army_desc:0 ""
+ GER_Wehrmacht_Elite_Trops:0 "Elite Armed Forces"
+ GER_Wehrmacht_Elite_Trops_desc:0 ""
+ GER_Elite_Troops:0 "Elite Troops"
+ GER_Elite_Troops_desc:0 ""
  GER_Bismarck:0 "Project; Bismarck"
  GER_Bismarck_desc:0 ""
  GER_carrier_war:0 "Carrier Primacy"
@@ -1893,6 +1906,10 @@
  GER_Working_on:0 "This Focus Not Ready / WIP "
  GER_Working_on_desc:0 "This Focus Not Ready OR Does Nothing."
 
+ #Shared Army Path
+ Wehrmacht_shared_unlocked_tt:0 "Shared £wehrmacht_texticon §YWehrmacht§! Tree Available"
+ Schutzstaffel_shared_unlocked_tt:0 "Shared £ss_texticon §YSchutzstaffel§! Tree Available"
+
  #Wehrmacht
 
  Wehrmacht_desc_tt:0 "The German army, once restricted by the Treaty of Versailles, must now rise to meet the challenges of modern warfare. By embracing new tactics, incorporating advanced technology, and conducting rigorous training, we will transform our forces into a powerful and efficient military machine. Modernizing the Wehrmacht is essential to ensure our army's strength and preparedness, securing our nation's place on the world stage and guaranteeing victory in future conflicts."
@@ -1932,9 +1949,11 @@
  Wehrmacht_Main_Tank_2_desc:0 "[ROOT.wehrmacht_ss_status]"
 
  GER_Wehrmacht_tt:0 "Modify £wehrmacht_texticon §Y$Wehrmacht_dynamic_modifier$§! by"
+ GER_Elite_Troops_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain §G+5.0%§! \n\n"
+ GER_High_Coordinated_army_tt:0 "$GER_Wehrmacht_tt$ \n£coordination_texticon Coordination Bonus §Y+5.0%§! \n\n"
  GER_Volkssturm_tt:0 "$GER_Wehrmacht_tt$ \n£manpower_texticon Conscription: §G+3.0§! \n£army_experience Army Experience Gain §R-10.0%§! \n\n"
  GER_Basic_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-5.0%§! \n£manpower_texticon Conscription Factor: §Y+20.0%§! \n\n"
- GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.0%§! \n£training_speed_texticon Minimum Training Level: §R-10.0%§! \n£manpower_texticon Conscription Factor: §Y+10.0%§! \n\n"
+ GER_Minimizes_Training_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain: §R-10.0%§! \n£training_speed_texticon Minimum Training Level: §Y-10.0%§! \n£manpower_texticon Conscription Factor: §Y+10.0%§! \n\n"
  GER_No_Step_Back_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+6.0%§! \n£army_morale_texticon Army Morale: §Y+10.00%§! \n\n"
 
  GER_Glory_of_wehrmacht_tt:0 "$GER_Wehrmacht_tt$ \n£organization_gain_texticon Army Org Regain: §Y+10.0%§! \n£medal_texticon Grant Medal Cost: §Y-100.0%§! \n\n"
@@ -1952,6 +1971,8 @@
  GER_Cheep_SUP_modify_tt:0 "$GER_Wehrmacht_tt$ \n£research_speed_tank_texticon Armor Search Speed Factor: §R+5.0%§! \n§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_harsh_training_methods_modify_tt:0 "$GER_Wehrmacht_tt$ \n£temperature_hot_texticon Hot Climate Gain Factor §Y+10.0%§! \n£temperature_cold_texticon Cold Climate Gain Factor §Y+10.0%§! \n£terrain_penalty_texticon Terrain Penalty Reduction §Y+10.0%§! \n\n"
  GER_experts_in_field_modify_tt:0 "$GER_Wehrmacht_tt$ \n£specops_training_speed_texticon Special Forces Training Speed §R+10.0%§! \n£specops_max_texticon Special Forces Capacity Multiplier §Y+15.0%§! \n\n"
+ GER_elite_troops_modify_tt:0 "$GER_Wehrmacht_tt$ \n£army_experience Army Experience Gain §G+5.0%§! \n£specops_training_speed_texticon Special Forces Training Speed §G-10.0%§! \n£training_speed_texticon Minimum Training Level: §R+15.0%§! \n\n"
+ GER_Rebuild_high_command_tt:0 "$GER_Wehrmacht_tt$ \n£army_advisor_cost_texticon  Army Advisor Cost §G-20.0%§!  \n£air_advisor_cost_texticon  Air Advisor Cost §G-20.0%§!  \n£navy_advisor_cost_texticon  Navy Advisor Cost §G-20.0%§! \n\n"
 
  GER_Cheep_sup_tt:0 "§YArtillery Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YAnti-Air Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
  GER_cheep_eq_tt:0 "§YInfantry Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n§YSupport Equipment§!: £production_cost Production Cost: §Y-10.0%§! \n\n"
@@ -1998,6 +2019,7 @@
 
  Ger_Luftwaffe_Mod_tt:0 "Modify §Y$Luftwaffe_dynamic_modifier$§! by"
 
+ GER_Luftwaffe_Elite_Troops_tt:0 "$Ger_Luftwaffe_Mod_tt$ \n£air_experience Air Experience Gain §G+5.0%§! \n\n"
  GER_Luftwaffe_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+10.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_SD_production_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+5.0%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §G-10.0%§! \n\n"
  GER_CAS_tt:0 "§YMedium Air Frame§!: £production_cost Production Cost: §R+5.00%§! \n§YHeavy Fighter§!: £production_cost Production Cost: §R+5.0%§! \n§YLarge Air Frame§!: £production_cost Production Cost: §R+15.0%§! \n\n"
@@ -2023,6 +2045,7 @@
  GER_JAP_Coal_Search_tt:0 "\n$GER_Kriegsmarine_Mod_tt$ \n£carrier_texticon Carrier Plane Agility: §Y+10.0%§!"
  GER_naval_intel_tt:0 "\n$GER_Kriegsmarine_Mod_tt$ \n£navy_intel_texticon Naval Intel Factor: §Y+10.0%§! \n£decryption_texticon Decryption Power Factor: §Y+5.0%§!"
  GER_naval_expand_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£construction_speed_dockyard_texticon Dockyard Building Speed: §Y+10.0%§!"
+ GER_naval_expand_shared_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£construction_speed_dockyard_texticon Dockyard Building Speed: §Y+10.0%§! \n£consumer_goods_texticon Consumer Goods Factories§!: §R+8.0%§!"
 
  Kriegsmarine_dynamic_modifier:0 "Kriegsmarine"
  Kriegsmarine_dynamic_modifier_desc:0 "$Kriegsmarine_desc_tt$"
@@ -2045,6 +2068,8 @@
  Kriegsmarine_Debuff_Version_Last_Version:0 "Kriegsmarine"
 
  GER_Kriegsmarine_Mod_tt:0 "Modify §Y$Kriegsmarine_dynamic_modifier$§! by"
+ GER_Kriegsmarine_Elite_Troops_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£navy_experience Navy Experience Gain §G+5.0%§! \n\n"
+ GER_Kriegsmarine_High_Coordinated_army_tt:0 "$GER_Kriegsmarine_Mod_tt$ \n£coordination_texticon Fleet Coordination §Y+5.0%§! \n\n"
  GER_Kriegsmarine_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_Kriegsmarine_Carrierfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §G-10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §R+10.0%§! \n§YCruiser§!: £production_cost Production Cost: §R+10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §R+10.0%§! \n\n"
  GER_Kriegsmarine_Glorygerarmyfocus_tt:0 "§YCarrier§!: £production_cost Production Cost: §R+10.0%§! \n§YHeavy Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YCruiser§!: £production_cost Production Cost: §G-10.0%§! \n§YLight Ships§!: £production_cost Production Cost: §G-10.0%§! \n§YSubmarine§!: £production_cost Production Cost: §G-10.0%§! \n\n"

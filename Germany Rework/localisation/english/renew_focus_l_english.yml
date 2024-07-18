@@ -41,7 +41,7 @@
 
  uk_south_africa_focus_req_tt:0 "§RDevelop South Africa is Required for this focus§!"
  uk_regional_development_buildings_tt:0 "Adds §YBuilding Slot§!, §Y$industrial_complex$§! in up to two states in previously developed regions. [GetAppropriatePeriodOrColon]\n"
- uk_production_tt:0 "Based on Pre-Focus We Gain Cheeper Production. \n\n"
+ uk_production_tt:0 "Based on Pre-Focus We Gain Cheeper Production. "
  anti_tank_dev_tt:0 "if we focused on Anti-Tank Development We Gain Following;"
  tank_production_dev_tt:0 "\n if we focused on Tank Development We Gain Following;"
 
@@ -52,8 +52,13 @@
  SOV_new_military_doctrine_desc:0 ""
 
   #Vanilla Reminder
- GER_vanilla_look:0 "Info & Visual Preference / V2.2 - 1.14.7"
- GER_vanilla_look_desc:0 "If you do not see a section related to Rhineland or error with Ideas, it means there is a problem with the mods you are using, turn it off and try again."
+ GER_vanilla_look:0 "Info & Visual Preference"
+ GER_vanilla_look_desc:0 "Welcome to §TGermany Rework Blitzkrieg§! Mod, This Mod is §Rnot compatible§! with other Germany-related Mods, if there is another Germany-related mod you are using, I recommend that you turn it off, otherwise there is nothing I can do for extra problems that may occur. [modcheck] \n\n Game Version: 1.14.17 \n Mod Version 2.3 BETA \n\n GLHF!"
+ GER_rhineland_error:0 "\n\n §RRhineland related missions are missing. Turn Off Other Mods and Try Again.§!"
+ GER_idea_error:0 "\n\n §RPotential Problem Present. Please turn off other mods and try again.§!"
+ GER_idea_rhineland_error:0 "\n\n §RThere are problems that will affect the functionality of the mod. Turn off other mods and try again.§!"
+ GER_idea_file_check:0 "DEBUG-IDEA"
+
  GER_vanilla_reminder:0 "Reminder Timer"
  GER_revert_to_vanilla_germany:0 "Optional - Vanilla Appearance"
  GER_revert_to_vanilla_germany_desc:0 "Flag and Name Return to Normal. \nForming a Nation Changes Name and Flag \nGFXs of things like Focus etc. Still the same*"

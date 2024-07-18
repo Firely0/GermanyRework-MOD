@@ -10755,6 +10755,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = Wehrmacht_shared_unlocked_tt
 			army_experience = 100
 			add_political_power = 25
 		}
@@ -10783,6 +10785,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = Schutzstaffel_shared_unlocked_tt
+			unlock_decision_category_tooltip = SS_loot
 			add_ideas = GER_SS
 			hidden_effect = {
 				if = {
@@ -14349,6 +14354,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = GER_Attack_SOV_Chance_tt
 			IF = {
 				limit = {
 					SOV = {
@@ -14375,7 +14381,6 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = GER_Attack_SOV_Chance_tt
 			hidden_effect = {
 				SOV = {
 					add_opinion_modifier = {

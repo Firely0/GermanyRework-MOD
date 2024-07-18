@@ -425,3 +425,49 @@ defined_text = {
 		localization_key = Naval_over_100
 	}
 }
+
+defined_text = {
+	name = modcheck
+	text = {
+		trigger = {
+			NOT = {
+				has_active_mission = GER_Rhineland_demilitarized_a
+				has_active_mission = GER_Rhineland_demilitarized_b
+				has_active_mission = GER_Rhineland_demilitarized_e
+			}
+			has_global_flag = GER_IDEA_CHECK_PASS
+		}
+		localization_key = GER_rhineland_error
+	}
+	text = {
+		trigger = {
+			has_active_mission = GER_Rhineland_demilitarized_a
+			has_active_mission = GER_Rhineland_demilitarized_b
+			has_active_mission = GER_Rhineland_demilitarized_e
+			NOT = {
+				has_global_flag = GER_IDEA_CHECK_PASS
+			}
+		}
+		localization_key = GER_idea_error
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_active_mission = GER_Rhineland_demilitarized_a
+				has_active_mission = GER_Rhineland_demilitarized_b
+				has_active_mission = GER_Rhineland_demilitarized_e
+				has_global_flag = GER_IDEA_CHECK_PASS
+			}
+		}
+		localization_key = GER_idea_rhineland_error
+	}
+	text = {
+		trigger = {
+			has_active_mission = GER_Rhineland_demilitarized_a
+			has_active_mission = GER_Rhineland_demilitarized_b
+			has_active_mission = GER_Rhineland_demilitarized_e
+			has_global_flag = GER_IDEA_CHECK_PASS
+		}
+		localization_key = ""
+	}
+}

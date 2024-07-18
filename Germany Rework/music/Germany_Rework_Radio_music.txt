@@ -16,9 +16,9 @@ music = {
 	}
 }
 music = {
-	song = "GR_Metro_Exodus_Race_Against_Fate"
+	song = "GR_The_Long_Winter"
 	chance = {
-		factor = 1
+		factor = 0
 	}
 }
 music = {
@@ -41,6 +41,18 @@ music = {
 			has_completed_focus = SOV_lessons_of_war
 			factor = 1
 		}
+	}
+}
+music = {
+	song = "GR_Tread_Softly"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "GR_Metro_Exodus_Race_Against_Fate"
+	chance = {
+		factor = 1
 	}
 }
 music = {
@@ -68,12 +80,6 @@ music = {
 }
 music = {
 	song = "GR_Wo_alle_Straben_enden"
-	chance = {
-		factor = 0
-	}
-}
-music = {
-	song = "GR_The_Long_Winter"
 	chance = {
 		factor = 0
 	}

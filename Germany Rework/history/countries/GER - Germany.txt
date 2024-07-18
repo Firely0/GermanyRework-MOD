@@ -2,9 +2,6 @@
 
 set_cosmetic_tag = GER_the_third_reich
 
-#Reminder
-activate_mission = GER_vanilla_reminder
-
 # Adolf, you just need to rest.
 set_variable = { adolf_hitler_rest = 1 }
 set_variable = { adolf_hitler_rest_bad = 1 }
@@ -101,6 +98,9 @@ if = {
 	}
 	add_ideas = german_rapid_mobilization_spirit
 }
+
+#Debug
+add_ideas = GER_idea_file_check
 
 #Wehrmacht
 set_variable = {

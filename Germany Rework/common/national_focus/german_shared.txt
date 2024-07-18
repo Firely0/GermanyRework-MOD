@@ -2103,9 +2103,9 @@ shared_focus = {
 			show_mio_tooltip = GER_Volkswagen_motorized_organization
 		}
 		else = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = GER_Volkswagen
 			add_ideas = GER_volkswagen_idea
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GER_fake_tooltip_motorized
 		}
 		random_owned_controlled_state = {
 			limit = {
@@ -3908,10 +3908,262 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = GER_Wehrmacht_Elite_Trops
+	icon = GFX_focus_generic_license_production
+	relative_position_id = GER_army_innovation_a
+	allow_branch = {
+		OR = { 
+			has_completed_focus = GER_tank_warfare 
+			has_completed_focus = GER_Battle_Plan 
+		} 
+		NOT = { has_country_flag = GER_UNLOCK_SS_ARMY_FOCUS } 
+	}
+	prerequisite = { focus = GER_staff }
+	x = 3
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+		if = {
+			limit = {
+				has_completed_focus = GER_Fuhrer
+			}
+			has_completed_focus = GER_trust_in_wehrmacht
+		}
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = GER_Elite_Troops_tt
+		custom_effect_tooltip = GER_Luftwaffe_Elite_Troops_tt
+		custom_effect_tooltip = GER_Kriegsmarine_Elite_Troops_tt
+
+		hidden_effect = {
+			add_to_variable = { GER_volkssturm_experience_gain_army_factor = 0.05 }
+			add_to_variable = { GER_experience_gain_air_factor = 0.05 }
+			add_to_variable = { GER_experience_gain_navy_factor = 0.05 }			
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_the_master_plan
+	icon = GFX_goal_betterreich
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_Wehrmacht_Elite_Trops }
+	mutually_exclusive = { focus = GER_High_Coordinated_Army }
+	x = 2
+	y = 4
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+	}
+
+	completion_reward = {
+		add_political_power = 150
+		add_command_power = 100
+		army_experience = 100
+		navy_experience = 100
+		air_experience = 100
+	}
+}
+
+shared_focus = {
+	id = GER_extra_navy
+	icon = GFX_goal_generic_neutrality_focus
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_the_master_plan }
+	x = 2
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+		has_completed_focus = GER_plan_z_a
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = GER_naval_expand_shared_tt
+		hidden_effect = {
+			add_to_variable = {
+				GER_production_speed_dockyard_factor = 0.1
+			}
+			add_to_variable = {
+				GER_consumer_goods_factor = 0.08
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_american_bomber
+	icon = GFX_goal_generic_air_bomber
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_extra_navy }
+	x = 2
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+		has_completed_focus = GER_Strategic_Des
+		has_completed_focus = GER_air_innovation_2_a
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			name = GER_american_bomber
+			technology = modern_large_airframe
+			technology = heavy_bombs
+			technology = range_improvements
+			technology = jet_engines
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_High_Coordinated_Army
+	icon = GFX_focus_generic_tank_air_support
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_Wehrmacht_Elite_Trops }
+	mutually_exclusive = { focus = GER_the_master_plan }
+	x = 4
+	y = 4
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = GER_High_Coordinated_army_tt
+		custom_effect_tooltip = GER_Kriegsmarine_High_Coordinated_army_tt
+
+		hidden_effect = {
+			add_to_variable = { GER_coordination_bonus = 0.05 }
+			add_to_variable = { GER_naval_coordination = 0.05 }
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_Elite_Troops
+	icon = GFX_goal_military_academy_1
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_High_Coordinated_Army }
+	x = 4
+	y = 5
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = GER_elite_troops_modify_tt
+
+		hidden_effect = {
+			add_to_variable = { GER_volkssturm_experience_gain_army_factor = 0.05 }
+			add_to_variable = { GER_special_forces_training_time_factor = -0.1 }
+			add_to_variable = { GER_minimum_training_level = 0.15 }
+		}
+	}
+}
+
+shared_focus = {
+	id = GER_Rebuild_high_command
+	icon = GFX_goal_generic_army_doctrines
+	relative_position_id = GER_army_innovation_a
+	prerequisite = { focus = GER_Elite_Troops }
+	x = 4
+	y = 6
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			has_completed_focus = GER_Battle_Plan
+		}
+	}
+	available = {
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = GER_Rebuild_high_command_tt
+
+		hidden_effect = {
+			add_to_variable = { GER_army_advisor_cost_factor = -0.2 }
+			add_to_variable = { GER_air_advisor_cost_factor = -0.2 }
+			add_to_variable = { GER_navy_advisor_cost_factor = -0.2 }
+		}
+	}
+}
+
+shared_focus = {
 	id = GER_SS_Trops
 	icon = GFX_goal_SS_division
 	relative_position_id = GER_army_innovation_a
-	allow_branch = { OR = { has_completed_focus = GER_tank_warfare has_completed_focus = GER_Battle_Plan } }
+	allow_branch = { 
+		OR = { 
+			has_completed_focus = GER_tank_warfare 
+			has_completed_focus = GER_Battle_Plan 
+		} 
+		has_country_flag = GER_UNLOCK_SS_ARMY_FOCUS
+	}
 	prerequisite = { focus = GER_staff }
 	x = 3
 	y = 3
@@ -4345,7 +4597,7 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		add_political_power = 100
+		add_political_power = 25
 		if = {
 			limit = {
 				has_completed_focus = GER_Fuhrer
@@ -4572,7 +4824,7 @@ shared_focus = {
 	available_if_capitulated = yes
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		add_political_power = 100
+		add_political_power = 25
 		if = {
 			limit = {
 				has_completed_focus = GER_a_shadow_of_past
@@ -5015,8 +5267,8 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		custom_effect_tooltip = GER_experts_in_field_modify_tt
-		set_variable = { GER_special_forces_training_time_factor = 0.1 }
-		set_variable = { GER_special_forces = 0.15 }
+		add_to_variable = { GER_special_forces_training_time_factor = 0.1 }
+		add_to_variable = { GER_special_forces = 0.15 }
 		custom_effect_tooltip = GER_experts_in_field_tt
 		hidden_effect = {
 			set_technology = { Gebirgsjager_mountaineers_tech = 1 popup = no }

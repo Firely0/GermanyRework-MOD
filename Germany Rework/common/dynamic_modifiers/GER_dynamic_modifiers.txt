@@ -428,6 +428,7 @@ Wehrmacht_dynamic_modifier = {
 
 	max_planning_factor = GER_max_planning_factor # Base -20
 	planning_speed = GER_planning_speed #Base -10
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	#For Fuhrer v7
 
@@ -504,6 +505,7 @@ Wehrmacht_Tank_dynamic_modifier = { #Selected Doctrine Mobile Warfare
 
 	max_planning_factor = GER_max_planning_factor # 0
 	planning_speed = GER_planning_speed # 0
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -577,6 +579,7 @@ Wehrmacht_Tank_1_dynamic_modifier = { #Tank Side Reorg in Army
 
 	max_planning_factor = GER_max_planning_factor # 0
 	planning_speed = GER_planning_speed # 0
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -638,6 +641,7 @@ Wehrmacht_Tank_2_dynamic_modifier = { #the Lighting Strike
 
 	max_planning_factor = GER_max_planning_factor # 0
 	planning_speed = GER_planning_speed # 0
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -699,6 +703,7 @@ Wehrmacht_INF_dynamic_modifier = { #Selected Trech Warfare
 
 	max_planning_factor = GER_max_planning_factor # -05
 	planning_speed = GER_planning_speed # 0
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -763,6 +768,7 @@ Wehrmacht_INF_1_dynamic_modifier = { #INF Side Reorg in Army
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -821,13 +827,13 @@ Wehrmacht_INF_2_dynamic_modifier = {
 
 	icon = GFX_idea_ger_army_1
 
-
 	#We Have Plans Right?
 
 	max_command_power = GER_max_command_power # 25
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -892,6 +898,7 @@ Wehrmacht_INF_3_dynamic_modifier = {
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -957,6 +964,7 @@ Wehrmacht_INF_4_dynamic_modifier = {
 
 	max_planning_factor = GER_max_planning_factor # 0.1
 	planning_speed = GER_planning_speed # 0.1
+	army_advisor_cost_factor = GER_army_advisor_cost_factor
 
 	army_speed_factor = GER_army_speed_factor
 
@@ -1022,6 +1030,7 @@ Luftwaffe_dynamic_modifier = {
 	air_accidents_factor  = GER_air_accidents_factor #0.1
 
 	air_doctrine_cost_factor = GER_air_doctrine_cost_factor #0.1
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	custom_modifier_tooltip = GER_Luftwaffe_tt #equipment bonus
 
@@ -1030,6 +1039,7 @@ Luftwaffe_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1045,6 +1055,7 @@ Luftwaffe_SD_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
 	air_home_defence_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	strategic_bomb_visibility = -0.05
 
@@ -1055,6 +1066,7 @@ Luftwaffe_SD_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1071,6 +1083,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_interception_detect_factor = 0.10
 	air_home_defence_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_strategic_bomber_bombing_factor = 0.05
 	strategic_bomb_visibility = -0.1
@@ -1080,6 +1093,7 @@ Luftwaffe_SD_A_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1097,6 +1111,7 @@ Luftwaffe_SD_B_dynamic_modifier = {
 	air_interception_detect_factor = 0.10
 	air_mission_efficiency = -0.05
 	air_home_defence_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_strategic_bomber_bombing_factor = 0.1
 	air_strategic_bomber_night_penalty = -0.1
@@ -1107,6 +1122,7 @@ Luftwaffe_SD_B_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1124,6 +1140,7 @@ Luftwaffe_CAS_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_home_defence_factor = 0.05
 	air_interception_detect_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_cas_efficiency = 0.05
 
@@ -1132,6 +1149,7 @@ Luftwaffe_CAS_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1151,6 +1169,7 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_home_defence_factor = 0.05
 	air_interception_detect_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_cas_efficiency = 0.05
 
@@ -1159,6 +1178,7 @@ Luftwaffe_CAS_A_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1178,6 +1198,7 @@ Luftwaffe_OI_dynamic_modifier = {
 	air_mission_efficiency = -0.05
 	air_accidents_factor  = 0.05
 	air_interception_detect_factor = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_bombing_targetting = 0.05
 	air_cas_efficiency = 0.05
@@ -1187,6 +1208,7 @@ Luftwaffe_OI_dynamic_modifier = {
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1208,10 +1230,12 @@ Luftwaffe_OI_A_dynamic_modifier = {
 	air_bombing_targetting = 0.05
 	air_cas_efficiency = 0.05
 	air_escort_efficiency = 0.05
+	air_advisor_cost_factor = GER_air_advisor_cost_factor
 
 	air_training_xp_gain_factor = GER_air_training_xp_gain_factor # 0.1
 	air_untrained_pilots_penalty_factor = GER_air_untrained_pilots_penalty_factor # -0.1
 	experience_gain_air = GER_experience_gain_air # 0.05
+	experience_gain_air_factor = GER_experience_gain_air_factor 
 	ace_effectiveness_factor = GER_ace_effectiveness_factor # 0.05
 	air_ace_generation_chance_factor = GER_air_ace_generation_chance_factor # 0.1
 	air_superiority_efficiency = GER_air_superiority_efficiency # 0.1
@@ -1232,6 +1256,9 @@ Kriegsmarine_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+	experience_gain_navy_factor = GER_experience_gain_navy_factor
+	naval_coordination = GER_naval_coordination
+	navy_advisor_cost_factor = GER_navy_advisor_cost_factor
 
 	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
@@ -1280,7 +1307,10 @@ Kriegsmarine_Carrier_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
-
+	experience_gain_navy_factor = GER_experience_gain_navy_factor
+	naval_coordination  = GER_naval_coordination 
+	navy_advisor_cost_factor = GER_navy_advisor_cost_factor
+	
 	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
 	#Plan Z
@@ -1329,6 +1359,9 @@ Kriegsmarine_Gloryofmodernger_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+	experience_gain_navy_factor = GER_experience_gain_navy_factor
+	naval_coordination  = GER_naval_coordination
+	navy_advisor_cost_factor = GER_navy_advisor_cost_factor
 
 	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
@@ -1378,6 +1411,9 @@ Kriegsmarine_mix_ver_dynamic_modifier = {
 	sub_retreat_speed = GER_sub_retreat_speed # 0.05
 	critical_receive_chance = GER_critical_receive_chance # 0.1
 	naval_doctrine_cost_factor = GER_naval_doctrine_cost_factor # 0.1
+	experience_gain_navy_factor = GER_experience_gain_navy_factor
+	naval_coordination  = GER_naval_coordination
+	navy_advisor_cost_factor = GER_navy_advisor_cost_factor
 
 	industrial_capacity_dockyard = GER_industrial_capacity_dockyard
 
